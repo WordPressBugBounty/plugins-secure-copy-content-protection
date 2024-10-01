@@ -1008,6 +1008,7 @@ class Secure_Copy_Content_Protection_Public {
         	$post_author_display_name = get_the_author_meta( 'display_name', $author_id );
         	$post_author_email = get_the_author_meta( 'email', $author_id );
         	$current_post_id = get_the_ID();
+        	$post_title = get_the_title();
         	$get_site_title = get_bloginfo('name');
 	        
 			$message_data = array(                    
@@ -1027,6 +1028,7 @@ class Secure_Copy_Content_Protection_Public {
                 'current_page_title'		=> $current_page_title,
                 'site_title'				=> $get_site_title,
                 'post_id'					=> $current_post_id,
+                'post_title'                => $post_title,
             );
 
 			$notf_text = $this->sccp_replace_message_variables($notf_text, $message_data);
