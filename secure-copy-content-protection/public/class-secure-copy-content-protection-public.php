@@ -1006,6 +1006,7 @@ class Secure_Copy_Content_Protection_Public {
         	$author_id = get_the_author_meta('ID');
         	$post_author_nickname = get_the_author_meta( 'nickname', $author_id );
         	$post_author_display_name = get_the_author_meta( 'display_name', $author_id );
+        	$post_author_first_name = get_the_author_meta( 'first_name', $author_id );
         	$post_author_last_name = get_the_author_meta( 'last_name', $author_id );
         	$post_author_email = get_the_author_meta( 'email', $author_id );
         	$current_post_id = get_the_ID();
@@ -1024,6 +1025,7 @@ class Secure_Copy_Content_Protection_Public {
                 'post_author_nickname'  	=> $post_author_nickname,
                 'post_author_email'			=> $post_author_email,
                 'post_author_display_name'	=> $post_author_display_name,
+                'post_author_first_name'	=> $post_author_first_name,
                 'post_author_last_name'		=> $post_author_last_name,
                 'user_id'              		=> $user_id,
                 'current_date'          	=> $current_date,
