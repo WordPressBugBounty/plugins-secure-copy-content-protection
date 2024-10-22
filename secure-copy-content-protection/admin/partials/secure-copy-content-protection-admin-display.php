@@ -36,7 +36,9 @@ $data_lastId = (array) $data_lastIds;
 
 $bc_last_id = $data_lastId['AUTO_INCREMENT'];
 
-$tooltip_padding = isset($data["styles"]["tooltip_padding"]) ? $data["styles"]["tooltip_padding"] : '5';
+$tooltip_padding_top_bottom = isset($data["styles"]["tooltip_padding_top_bottom"]) ? $data["styles"]["tooltip_padding_top_bottom"] : '5';
+
+$tooltip_padding_left_right = isset($data["styles"]["tooltip_padding_left_right"]) ? $data["styles"]["tooltip_padding_left_right"] : '5';
 
 global $wp_roles;
 $ays_users_roles = $wp_roles->roles;
@@ -2013,19 +2015,31 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="ays_tooltip_padding"><?= __('Tooltip padding', $this->plugin_name); ?></label>
+                                                <label for="ays_tooltip_padding_top_bottom"><?= __('Tooltip padding', $this->plugin_name); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
                                                    title="<?= __('Tooltip padding in pixels.', $this->plugin_name) ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left ays_sccp_display_flex">
-                                                <div>
-                                                   <input type="number" id="ays_tooltip_padding" name="ays_tooltip_padding" class="form-control"
-                                                       value="<?= $tooltip_padding; ?>"/>
+                                                <div class="col-sm-6 ays_sccp_display_flex" style="align-items: flex-end;">
+                                                    <div>
+                                                        <span class="ays_sccp_small_hint_text">Top / Bottom</span>
+                                                       <input type="number" id="ays_tooltip_padding_top_bottom" name="ays_tooltip_padding_top_bottom" class="form-control" value="<?php echo $tooltip_padding_top_bottom; ?>"/>
+                                                    </div>
+                                                    <div class="ays_sccp_dropdown_max_width">
+                                                        <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+                                                    </div>
                                                 </div>
-                                                <div class="ays_sccp_dropdown_max_width">
-                                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+                                                <div class="col-sm-6 ays_divider_left ays_sccp_display_flex" style="align-items: flex-end;">
+                                                    <div>
+                                                        <span class="ays_sccp_small_hint_text">Left / Right</span>
+                                                       <input type="number" id="ays_tooltip_padding_left_right" name="ays_tooltip_padding_left_right" class="form-control"
+                                                           value="<?php echo $tooltip_padding_left_right; ?>"/>
+                                                    </div>
+                                                    <div class="ays_sccp_dropdown_max_width">
+                                                        <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+                                                    </div>
                                                 </div>
                                             </div>                                    
                                         </div>
@@ -2225,7 +2239,7 @@ $sccp_accordion_svg_html = '
                                                     border-radius: <?= isset($data["styles"]["border_radius"]) ? $data["styles"]["border_radius"].'px' : '3px' ?>;
                                                     border-style: <?= isset($data["styles"]["border_style"]) ? $data["styles"]["border_style"] : 'solid' ?>;
                                                     color: <?= !empty($data["styles"]["text_color"]) ? stripslashes( esc_attr( $data["styles"]["text_color"] ) ) : '#ff0000' ?>;
-                                                    padding: <?= $tooltip_padding; ?>px;
+                                                    padding: <?php echo $tooltip_padding_top_bottom; ?>px <?php echo $tooltip_padding_left_right; ?>px;
                                                     opacity:<?php echo isset($data["styles"]['tooltip_opacity']) ? $data["styles"]['tooltip_opacity'] : '1'; ?> ;
                                                     box-sizing: border-box;
                                                     margin: 50px auto;

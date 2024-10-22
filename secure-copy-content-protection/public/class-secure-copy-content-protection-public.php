@@ -829,7 +829,8 @@ class Secure_Copy_Content_Protection_Public {
 				"border_radius"    => "3",
 				"border_style"     => "solid",
 				"tooltip_position" => "mouse",
-				"tooltip_padding"  => "5",
+				"tooltip_padding_top_bottom"  => "5",
+				"tooltip_padding_left_right"  => "5",
 				"tooltip_bg_image_position" => "center center",
 				"tooltip_bg_image_object_fit" => "cover",
 			);
@@ -863,7 +864,8 @@ class Secure_Copy_Content_Protection_Public {
 				"border_radius"    		=> isset($style['border_radius']) ? $style['border_radius'] : "3",
 				"border_style"     		=> isset($style['border_style']) ? $style['border_style'] : "solid",
 				"tooltip_position" 		=> isset($style['tooltip_position']) ? $style['tooltip_position'] : "mouse",
-				"tooltip_padding"  		=> isset($style['tooltip_padding']) ? $style['tooltip_padding'] : "5",
+				"tooltip_padding_top_bottom" => isset($style['tooltip_padding_top_bottom']) ? $style['tooltip_padding_top_bottom'] : "5",
+				"tooltip_padding_left_right" => isset($style['tooltip_padding_left_right']) ? $style['tooltip_padding_left_right'] : "5",
 				"ays_sccp_custom_class" => isset($style['ays_sccp_custom_class']) ? $style['ays_sccp_custom_class'] : "",
 				"tooltip_bg_image_position" => (isset($style['tooltip_bg_image_position']) && $style['tooltip_bg_image_position'] != "") ? $style['tooltip_bg_image_position'] : "center center",
 				"custom_css"       		=> isset($style['custom_css']) ? wp_unslash( stripslashes( htmlspecialchars_decode( $style['custom_css'] ) ) ) : "",
@@ -1055,7 +1057,7 @@ class Secure_Copy_Content_Protection_Public {
                             border-radius: ' . $styles["border_radius"] . 'px;
                             box-shadow: ' . $styles["boxshadow_color"] . ' ' . $box_shadow_offsets .' 1px;
                             color: ' . $styles["text_color"] . ';
-                            padding: ' . $styles["tooltip_padding"] . 'px;
+                            padding: ' . $styles["tooltip_padding_top_bottom"] . 'px ' . $styles["tooltip_padding_left_right"] . 'px;
                             text-transform: ' . $tooltip_text_transformation . ';
 							'.$tooltip_title_shadow.';
                         }

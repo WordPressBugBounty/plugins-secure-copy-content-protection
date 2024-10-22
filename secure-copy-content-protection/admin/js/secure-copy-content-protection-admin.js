@@ -392,7 +392,8 @@
             $(document).find('#tooltip_position').val('mouse').change();
             $(document).find('#ays_sccp_custom_class').val('');
             $(document).find('#sscp_timeout').val(1000);
-            $(document).find('#ays_tooltip_padding').val(5);
+            $(document).find('#ays_tooltip_padding_top_bottom').val(5);
+            $(document).find('#ays_tooltip_padding_left_right').val(5);
             $(document).find('#ays_sccp_tooltip_bg_image_position').val('center center').change();
             $(document).find('#ays_sccp_box_shadow_x_offset').val(0).change();
             $(document).find('#ays_sccp_box_shadow_y_offset').val(0).change();
@@ -610,9 +611,15 @@
             let val = $(this).val();
             $('#ays_tooltip').css('border-style', val)
         });
-        $('#ays_tooltip_padding').on('change', function () {
+        $('#ays_tooltip_padding_top_bottom').on('change', function () {
             let val = $(this).val();
-            $('#ays_tooltip').css('padding', val)
+            $('#ays_tooltip').css('padding-top', val+'px');
+            $('#ays_tooltip').css('padding-bottom', val+'px');
+        });   
+        $('#ays_tooltip_padding_left_right').on('change', function () {
+            let val = $(this).val();
+            $('#ays_tooltip').css('padding-left', val+'px');
+            $('#ays_tooltip').css('padding-right', val+'px');
         });        
 
         $('#ays_sccp_tooltip_bg_image_position').on('change', function () {
