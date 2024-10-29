@@ -387,6 +387,7 @@
             $(document).find('#sccp_tooltip_bg_blur').val('0').change();
             $(document).find('#font_size').val(12).change();
             $(document).find('#border_width').val(1).change();
+            $(document).find('#tooltip_letter_spacing').val(0).change();
             $(document).find('#border_radius').val(3).change();
             $(document).find('#border_style').val('solid').change();
             $(document).find('#tooltip_position').val('mouse').change();
@@ -602,6 +603,10 @@
         $('#border_width').on('change', function () {
             let val = $(this).val();
             $('#ays_tooltip').css('border-width', val + 'px')
+        });
+        $('#tooltip_letter_spacing').on('change', function () {
+            let val = $(this).val();
+            $('#ays_tooltip').css('letter-spacing', val + 'px')
         });
         $('#border_radius').on('change', function () {
             let val = $(this).val();

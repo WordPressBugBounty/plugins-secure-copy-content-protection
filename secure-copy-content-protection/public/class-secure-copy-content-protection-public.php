@@ -211,7 +211,7 @@ class Secure_Copy_Content_Protection_Public {
 		$sccp_sub_btn_radius = $ays_sccp_enable_sub_btn_style ? 'border-radius:'.$ays_sccp_sub_btn_radius.'px;' : '';
 
 		// Buttons border width
-		$ays_sccp_sub_btn_border_width = (isset($subscribe_settings['sub_btn_border_width']) && $subscribe_settings['sub_btn_border_width'] != '') ? $subscribe_settings['sub_btn_border_width'] : '1';		
+		$ays_sccp_sub_btn_border_width = (isset($subscribe_settings['sub_btn_border_width']) && $subscribe_settings['sub_btn_border_width'] != '') ? $subscribe_settings['sub_btn_border_width'] : '1';
 
 		$sccp_sub_btn_border_width = $ays_sccp_enable_sub_btn_style ? 'border-width:'.$ays_sccp_sub_btn_border_width.'px;' : '';
 
@@ -826,6 +826,7 @@ class Secure_Copy_Content_Protection_Public {
 			    'sccp_text_shadow_y_offset' => 2,
 			    'sccp_text_shadow_z_offset' => 3,
 				"border_width"     => "1",
+				"letter_spacing"   => "0",
 				"border_radius"    => "3",
 				"border_style"     => "solid",
 				"tooltip_position" => "mouse",
@@ -860,6 +861,7 @@ class Secure_Copy_Content_Protection_Public {
 				"sccp_text_shadow_y_offset"  	=> isset($style['sccp_text_shadow_y_offset']) ? $style['sccp_text_shadow_y_offset'] : 2,
 				"sccp_text_shadow_z_offset"  	=> isset($style['sccp_text_shadow_z_offset']) ? $style['sccp_text_shadow_z_offset'] : 3,
 
+				"letter_spacing"     	=> isset($style['letter_spacing']) ? $style['letter_spacing'] : "0",
 				"border_width"     		=> isset($style['border_width']) ? $style['border_width'] : "1",
 				"border_radius"    		=> isset($style['border_radius']) ? $style['border_radius'] : "3",
 				"border_style"     		=> isset($style['border_style']) ? $style['border_style'] : "solid",
@@ -1065,6 +1067,7 @@ class Secure_Copy_Content_Protection_Public {
                         #ays_tooltip > *, .ays_tooltip_class > * {
                             color: ' . $styles["text_color"] . ';
                             font-size: ' . (isset($styles["font_size"]) ? $styles["font_size"] : "12") . 'px;
+                            letter-spacing:' . $styles["letter_spacing"] . 'px;
                         }
 
                         #ays_tooltip_block {

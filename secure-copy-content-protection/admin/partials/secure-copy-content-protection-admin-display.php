@@ -202,6 +202,9 @@ $tooltip_bg_blur = (isset($data["styles"]['bg_blur']) && sanitize_text_field($da
 
 $loader_iamge = "<span class='ays_display_none ays_sccp_loader_box'><img src='". SCCP_ADMIN_URL ."/images/loaders/loading.gif'></span>";
 
+// Tooltip letter spacing
+$tooltip_letter_spacing = (isset($data["styles"][ 'letter_spacing' ]) && $data["styles"][ 'letter_spacing' ] != '') ? stripslashes ( absint( $data["styles"][ 'letter_spacing' ] ) ) : 0;
+
 $sccp_accordion_svg_html = '
 <div class="ays-sccp-accordion-arrow-box">
     <svg class="ays-sccp-accordion-arrow ays-sccp-accordion-arrow-down" version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible" preserveAspectRatio="none" viewBox="0 0 24 24" width="32" height="32">
@@ -1918,6 +1921,25 @@ $sccp_accordion_svg_html = '
                                             </div>
                                         </div>
                                         <hr>
+                                        <div class="copy_protection_container form-group row">
+                                            <div class="col-sm-6">
+                                                <label for="tooltip_letter_spacing"><?= __('Tooltip letter spacing', $this->plugin_name); ?></label>
+                                                <a class="ays_help" data-toggle="tooltip"
+                                                   title="<?= __('Define the space between the letters of the tooltip text in pixels. Note: The default value for this option is 0.', $this->plugin_name) ?>">
+                                                    <i class="ays_fa ays_fa_info_circle"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 ays_divider_left ays_sccp_display_flex">
+                                                <div>
+                                                   <input type="number" id="tooltip_letter_spacing" name="tooltip_letter_spacing" class="form-control"
+                                                       value="<?php echo $tooltip_letter_spacing; ?>"/>
+                                                </div>
+                                                <div class="ays_sccp_dropdown_max_width">
+                                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+                                                </div>
+                                            </div>                                    
+                                        </div>
+                                        <hr>
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="sccp_tooltip_bg_blur">
@@ -2235,6 +2257,7 @@ $sccp_accordion_svg_html = '
                                                     background-size: <?php echo $tooltip_bg_image_object_fit ?>;
                                                     border-color: <?= isset($data["styles"]["border_color"]) ? stripslashes( esc_attr($data["styles"]["border_color"] ) ) : '#b7b7b7' ?>;
                                                     box-shadow: <?= isset($data["styles"]["boxshadow_color"]) ? stripslashes( esc_attr(  $data["styles"]["boxshadow_color"] ) ). ' ' . $box_shadow_offsets .' 1px' : 'rgba(0,0,0,0)' ?>;
+                                                    letter-spacing: <?= isset($data["styles"]["letter_spacing"]) ? $data["styles"]["letter_spacing"].'px' : '0' ?>;
                                                     border-width: <?= isset($data["styles"]["border_width"]) ? $data["styles"]["border_width"].'px' : '1px' ?>;
                                                     border-radius: <?= isset($data["styles"]["border_radius"]) ? $data["styles"]["border_radius"].'px' : '3px' ?>;
                                                     border-style: <?= isset($data["styles"]["border_style"]) ? $data["styles"]["border_style"] : 'solid' ?>;
