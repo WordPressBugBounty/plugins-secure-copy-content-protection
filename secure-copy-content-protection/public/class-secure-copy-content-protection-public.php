@@ -161,6 +161,21 @@ class Secure_Copy_Content_Protection_Public {
             $sub_width = 'max-width: fit-content;';
         }
 
+        // Subscribe box width mobile
+        if(isset($subscribe_settings['sccp_sub_width_mobile']) && $subscribe_settings['sccp_sub_width_mobile'] != '' && absint( $subscribe_settings['sccp_sub_width_mobile'] ) > 0){
+            if (isset($subscribe_settings['sccp_sub_width_mobile_by_percentage_px']) && $subscribe_settings['sccp_sub_width_mobile_by_percentage_px'] == 'percentage') {
+                if (absint(intval($subscribe_settings['sccp_sub_width_mobile'])) > 100 ) {
+                    $sub_width_mobile = 'max-width: 100%';
+                }else{
+                    $sub_width_mobile = 'max-width: '. $subscribe_settings['sccp_sub_width_mobile'] . '%';
+                }
+            }else{
+                $sub_width_mobile = 'max-width: '. $subscribe_settings['sccp_sub_width_mobile'] . 'px';
+            }
+        }else{
+            $sub_width_mobile = 'max-width: fit-content';
+        }
+
         // Subscribe box text color
 		$sub_text_color = (isset($subscribe_settings['sccp_sub_text_color']) && $subscribe_settings['sccp_sub_text_color'] != '') ? 'color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_text_color']) ).';' : 'color: #000;';
 
@@ -318,9 +333,13 @@ class Secure_Copy_Content_Protection_Public {
 		$other_info = array();
 		$con ='
 			<style>
-				@media screen and (max-width: 768px){
-					.subscribe_form input[type="submit"]{
+				@media screen and (max-width: 768px) {
+					.subscribe_form input[type="submit"] {
 					    '.$sccp_sub_mobile_btn_size.'
+					}
+
+					div.consub_div {
+					    '.$sub_width_mobile.' !important;
 					}
 				}
 

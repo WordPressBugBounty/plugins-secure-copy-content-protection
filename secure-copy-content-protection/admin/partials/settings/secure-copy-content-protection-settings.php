@@ -104,6 +104,12 @@ $ays_sccp_sub_width = (isset($subscribe['sccp_sub_width']) && $subscribe['sccp_s
 // Subscribe box width by percentage or pixels
 $sccp_sub_width_by_percentage_px = (isset($subscribe['sccp_sub_width_by_percentage_px']) && $subscribe['sccp_sub_width_by_percentage_px'] != '') ? $subscribe['sccp_sub_width_by_percentage_px'] : 'pixels';
 
+// Subscribe box width mobile
+$ays_sccp_sub_width_mobile = (isset($subscribe['sccp_sub_width_mobile']) && $subscribe['sccp_sub_width_mobile'] != '' && $subscribe['sccp_sub_width_mobile'] != 0) ? absint( sanitize_text_field($subscribe['sccp_sub_width_mobile']) ) : '' ;
+
+// Subscribe box width mobile by percentage or pixels
+$sccp_sub_width_mobile_by_percentage_px = (isset($subscribe['sccp_sub_width_mobile_by_percentage_px']) && $subscribe['sccp_sub_width_by_percentage_px'] != '') ? $subscribe['sccp_sub_width_mobile_by_percentage_px'] : 'pixels';
+
 // Subscribe box title font size
 $sccp_sub_title_size = (isset($subscribe['sccp_sub_title_size']) && $subscribe['sccp_sub_title_size'] != '' && $subscribe['sccp_sub_title_size'] != 0) ? absint( sanitize_text_field($subscribe['sccp_sub_title_size']) ) : 18 ;
 
@@ -661,17 +667,53 @@ $sccp_sub_bg_image_position = (isset($subscribe["sub_bg_image_position"]) && $su
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
-                            </div>
-                            <div class="col-sm-8 ays_divider_left ays_sccp_display_flex">
-                                <div>   
-                                    <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_width' name='ays_sccp_sub_width' value="<?php echo $ays_sccp_sub_width; ?>"/>
+                            </div>                            
+                            <div class="col-sm-8 ays_divider_left">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for='ays_sccp_sub_width'>
+                                            <?php echo __('On PC', $this->plugin_name); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the width for desktop devices. If you put 0 or leave it blank, the width will be 100%. It accepts only numerical values and you can choose whether to define the value by percentage or in pixels.',$this->plugin_name); ?>">
+                                                <i class="ays_fa ays_fa_info_circle"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-9 ays_divider_left ays_sccp_display_flex">
+                                        <div>
+                                            <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_width' name='ays_sccp_sub_width' value="<?php echo $ays_sccp_sub_width; ?>"/>
+                                        </div>
+                                        <div class="ays_sccp_dropdown_max_width">
+                                            <select id="sccp_sub_width_by_percentage_px" name="ays_sccp_sub_width_by_percentage_px" class="ays-text-input ays-text-input-short" style="display:inline-block; width: 60px;">
+                                                <option value="pixels" <?php echo $sccp_sub_width_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo __( "px", $this->plugin_name ); ?></option>
+                                                <option value="percentage" <?php echo $sccp_sub_width_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo __( "%", $this->plugin_name ); ?></option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="ays_sccp_dropdown_max_width">
-                                    <select id="sccp_sub_width_by_percentage_px" name="ays_sccp_sub_width_by_percentage_px" class="ays-text-input ays-text-input-short" style="display:inline-block; width: 60px;">
-                                        <option value="pixels" <?php echo $sccp_sub_width_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo __( "px", $this->plugin_name ); ?></option>
-                                        <option value="percentage" <?php echo $sccp_sub_width_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo __( "%", $this->plugin_name ); ?></option>
-                                    </select>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label for='ays_sccp_sub_width_mobile'>
+                                            <?php echo __('On Mobile', $this->plugin_name); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the width for mobile devices in percentage. Note: This option works for the screens with less than 768 pixels width.',$this->plugin_name); ?>">
+                                                <i class="ays_fa ays_fa_info_circle"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-9 ays_divider_left ays_sccp_display_flex">
+                                        <div>
+                                            <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_width_mobile' name='ays_sccp_sub_width_mobile' value="<?php echo $ays_sccp_sub_width_mobile; ?>"/>
+                                        </div>
+                                        <div class="ays_sccp_dropdown_max_width">
+                                            <select id="sccp_sub_width_mobile_by_percentage_px" name="ays_sccp_sub_width_mobile_by_percentage_px" class="ays-text-input ays-text-input-short" style="display:inline-block; width: 60px;">
+                                                <option value="pixels" <?php echo $sccp_sub_width_mobile_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo __( "px", $this->plugin_name ); ?></option>
+                                                <option value="percentage" <?php echo $sccp_sub_width_mobile_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo __( "%", $this->plugin_name ); ?></option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                
                             </div>
                         </div>
                         <hr/>
@@ -1079,7 +1121,7 @@ $sccp_sub_bg_image_position = (isset($subscribe["sub_bg_image_position"]) && $su
                                                     <div class="ays_sccp_dropdown_max_width">
                                                         <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
                                                     </div>
-                                                </div>                                                
+                                                </div>
                                             </div>
                                         </div>                                        
                                     </div>

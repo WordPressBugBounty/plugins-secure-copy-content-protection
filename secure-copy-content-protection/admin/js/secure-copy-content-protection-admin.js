@@ -410,7 +410,9 @@
 
         $('#sub_reset_to_default').on('click', function () {
             $(document).find('#ays_sccp_sub_width').val('').change();
+            $(document).find('#ays_sccp_sub_width_mobile').val('').change();
             $(document).find('#sccp_sub_width_by_percentage_px').val('pixels').change();
+            $(document).find('#sccp_sub_width_mobile_by_percentage_px').val('pixels').change();
             $(document).find('#sub_text_color').val('#000').change();
             $(document).find('#sub_bg_color').val('#fff').change();
             $(document).find('#ays-sccp-sub-bg-img').attr('src', '').change();

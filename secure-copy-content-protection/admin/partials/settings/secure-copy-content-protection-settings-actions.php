@@ -31,6 +31,9 @@ class Sccp_Settings_Actions {
             // Subscribe box width
             $ays_sccp_sub_width = (isset($data['ays_sccp_sub_width']) && $data['ays_sccp_sub_width'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_width']) ) : '';
 
+            // Subscribe box width mobile
+            $ays_sccp_sub_width_mobile = (isset($data['ays_sccp_sub_width_mobile']) && $data['ays_sccp_sub_width_mobile'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_width_mobile']) ) : '';
+
             // Subscribe input width
             $ays_sccp_sub_input_width = (isset($data['ays_sccp_sub_input_width']) && $data['ays_sccp_sub_input_width'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_input_width']) ) : '';
 
@@ -108,41 +111,45 @@ class Sccp_Settings_Actions {
             // Subscribe box Width by percentage or pixels
             $sccp_sub_width_by_percentage_px = (isset($data['ays_sccp_sub_width_by_percentage_px']) && $data['ays_sccp_sub_width_by_percentage_px'] != '') ? sanitize_text_field( $data['ays_sccp_sub_width_by_percentage_px'] ) : 'pixels';
 
+            // Subscribe box Width mobile by percentage or pixels
+            $sccp_sub_width_mobile_by_percentage_px = (isset($data['ays_sccp_sub_width_mobile_by_percentage_px']) && $data['ays_sccp_sub_width_mobile_by_percentage_px'] != '') ? sanitize_text_field( $data['ays_sccp_sub_width_mobile_by_percentage_px'] ) : 'pixels';
+
             // Subscribe Bg image positioning
             $sub_bg_image_position = (isset($data['ays_sub_bg_image_position']) && $data['ays_sub_bg_image_position'] != "") ? $data['ays_sub_bg_image_position'] : 'center center';
 
             $subscribe = array(
-                "sccp_sub_width"                    => $ays_sccp_sub_width,
-                "sub_cont_input_width"              => $ays_sccp_sub_input_width,
-                "sccp_sub_text_color"               => $sub_text_color,
-                "sccp_sub_desc_text_color"          => $sub_desc_text_color,
-                "sccp_sub_bg_color"                 => $sub_bg_color,
-                "sub_title_transformation"          => $sub_title_transformation,
-                "sccp_sub_button_text"              => $ays_sub_button_text,
-                "sub_icon_image"                    => $ays_sub_icon_img,
-                "sub_bg_image"                      => $ays_sub_bg_img,
-                "sub_bg_image_position"             => $sub_bg_image_position,
-                "sccp_sub_email_place_text"         => $ays_sub_email_place_text,
-                "sccp_sub_name_place_text"          => $ays_sub_name_place_text,
-                "sccp_sub_title_size"               => $ays_sccp_sub_title_size,
-                "sccp_sub_desc_size"                => $ays_sccp_sub_desc_size,
-                "enable_sub_btn_style"              => $enable_sub_btn_style,
-                "sub_btn_color"                     => $sub_btn_color,
-                "sub_btn_text_color"                => $sub_btn_text_color,
-                "sub_btn_border_color"              => $sub_btn_border_color,
-                "sub_cont_border_color"             => $sub_cont_border_color,
-                "sub_btn_size"                      => $sub_btn_size,
-                "sub_mobile_btn_size"               => $sub_mobile_btn_size,
-                "sub_btn_radius"                    => $sub_btn_radius,
-                "sub_btn_border_width"              => $sub_btn_border_width,
-                "sub_cont_border_width"             => $sub_cont_border_width,
-                "sub_btn_border_style"              => $sub_btn_border_style,
-                "sub_cont_border_style"             => $sub_cont_border_style,
-                "sub_btn_left_right_padding"        => $buttons_left_right_padding,
-                "sub_btn_top_bottom_padding"        => $buttons_top_bottom_padding,
-                "sccp_sub_text_alignment"           => $sccp_sub_text_alignment,
-                "sccp_sub_width_by_percentage_px"   => $sccp_sub_width_by_percentage_px                
-
+                "sccp_sub_width"                            => $ays_sccp_sub_width,
+                "sccp_sub_width_mobile"                     => $ays_sccp_sub_width_mobile,
+                "sub_cont_input_width"                      => $ays_sccp_sub_input_width,
+                "sccp_sub_text_color"                       => $sub_text_color,
+                "sccp_sub_desc_text_color"                  => $sub_desc_text_color,
+                "sccp_sub_bg_color"                         => $sub_bg_color,
+                "sub_title_transformation"                  => $sub_title_transformation,
+                "sccp_sub_button_text"                      => $ays_sub_button_text,
+                "sub_icon_image"                            => $ays_sub_icon_img,
+                "sub_bg_image"                              => $ays_sub_bg_img,
+                "sub_bg_image_position"                     => $sub_bg_image_position,
+                "sccp_sub_email_place_text"                 => $ays_sub_email_place_text,
+                "sccp_sub_name_place_text"                  => $ays_sub_name_place_text,
+                "sccp_sub_title_size"                       => $ays_sccp_sub_title_size,
+                "sccp_sub_desc_size"                        => $ays_sccp_sub_desc_size,
+                "enable_sub_btn_style"                      => $enable_sub_btn_style,
+                "sub_btn_color"                             => $sub_btn_color,
+                "sub_btn_text_color"                        => $sub_btn_text_color,
+                "sub_btn_border_color"                      => $sub_btn_border_color,
+                "sub_cont_border_color"                     => $sub_cont_border_color,
+                "sub_btn_size"                              => $sub_btn_size,
+                "sub_mobile_btn_size"                       => $sub_mobile_btn_size,
+                "sub_btn_radius"                            => $sub_btn_radius,
+                "sub_btn_border_width"                      => $sub_btn_border_width,
+                "sub_cont_border_width"                     => $sub_cont_border_width,
+                "sub_btn_border_style"                      => $sub_btn_border_style,
+                "sub_cont_border_style"                     => $sub_cont_border_style,
+                "sub_btn_left_right_padding"                => $buttons_left_right_padding,
+                "sub_btn_top_bottom_padding"                => $buttons_top_bottom_padding,
+                "sccp_sub_text_alignment"                   => $sccp_sub_text_alignment,
+                "sccp_sub_width_by_percentage_px"           => $sccp_sub_width_by_percentage_px,
+                "sccp_sub_width_mobile_by_percentage_px"    => $sccp_sub_width_mobile_by_percentage_px
             );            
 
              // Block content box width
