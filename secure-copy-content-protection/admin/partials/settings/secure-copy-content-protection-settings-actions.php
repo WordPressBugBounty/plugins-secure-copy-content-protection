@@ -44,7 +44,13 @@ class Sccp_Settings_Actions {
             $ays_sccp_sub_desc_size = (isset($data['ays_sccp_sub_desc_size']) && $data['ays_sccp_sub_desc_size'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_desc_size']) ) : 18;
 
             // Subscribe box text color
-            $sub_text_color = (isset($data['sub_text_color']) && $data['sub_text_color'] != '') ? stripslashes( esc_attr($data['sub_text_color']) ) : '#000';
+            $sub_text_color = ( isset( $data['sub_text_color'] ) && $data['sub_text_color'] != '') ? stripslashes( esc_attr($data['sub_text_color'] ) ) : '#000';
+
+            // Enable Subscribe box Text Color Mobile
+            $enable_sub_text_color_mobile = isset( $data['enable_sub_text_color_mobile'] ) && $data['enable_sub_text_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box Text Color Mobile
+            $sub_text_color_mobile = isset( $data['sub_text_color_mobile'] ) && $data['sub_text_color_mobile'] != '' ? sanitize_text_field( $data['sub_text_color_mobile'] ) : '#000'; 
 
             // Subscribe description text color
             $sub_desc_text_color = (isset($data['sub_desc_text_color']) && $data['sub_desc_text_color'] != '') ? stripslashes( esc_attr($data['sub_desc_text_color']) ) : '#000';
@@ -122,6 +128,8 @@ class Sccp_Settings_Actions {
                 "sccp_sub_width_mobile"                     => $ays_sccp_sub_width_mobile,
                 "sub_cont_input_width"                      => $ays_sccp_sub_input_width,
                 "sccp_sub_text_color"                       => $sub_text_color,
+                "enable_sccp_sub_text_color_mobile"         => $enable_sub_text_color_mobile,
+                "sccp_sub_text_color_mobile"                => $sub_text_color_mobile,
                 "sccp_sub_desc_text_color"                  => $sub_desc_text_color,
                 "sccp_sub_bg_color"                         => $sub_bg_color,
                 "sub_title_transformation"                  => $sub_title_transformation,

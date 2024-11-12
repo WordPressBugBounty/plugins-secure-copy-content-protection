@@ -117,7 +117,14 @@ $sccp_sub_title_size = (isset($subscribe['sccp_sub_title_size']) && $subscribe['
 $sccp_sub_desc_size = (isset($subscribe['sccp_sub_desc_size']) && $subscribe['sccp_sub_desc_size'] != '' && $subscribe['sccp_sub_desc_size'] != 0) ? absint( sanitize_text_field($subscribe['sccp_sub_desc_size']) ) : 18 ;
 
 // Subscribe box text color
-$ays_sccp_sub_text_color = (isset($subscribe['sccp_sub_text_color']) && $subscribe['sccp_sub_text_color'] != '') ? stripslashes( esc_attr($subscribe['sccp_sub_text_color']) ) : '#000';
+$ays_sccp_sub_text_color = ( isset( $subscribe['sccp_sub_text_color'] ) && $subscribe['sccp_sub_text_color'] != '' ) ? stripslashes( esc_attr($subscribe['sccp_sub_text_color']) ) : '#000';
+
+// Enable Subscribe box Text Color Mobile
+$subscribe['enable_sccp_sub_text_color_mobile'] = isset( $subscribe['enable_sccp_sub_text_color_mobile'] ) && $subscribe['enable_sccp_sub_text_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_sub_text_color_mobile = $subscribe['enable_sccp_sub_text_color_mobile'] == 'on' ?  true : false;
+
+// Subscribe box Text Color Mobile
+$ays_sccp_sub_text_color_mobile = isset( $subscribe['sccp_sub_text_color_mobile'] ) && $subscribe['sccp_sub_text_color_mobile'] != '' ? esc_attr( $subscribe['sccp_sub_text_color_mobile'] ) : $ays_sccp_sub_text_color;
 
 // Subscribe box background color
 $ays_sccp_sub_bg_color = (isset($subscribe['sccp_sub_bg_color']) && $subscribe['sccp_sub_bg_color'] != '') ? stripslashes( esc_attr($subscribe['sccp_sub_bg_color']) ) : '#fff';
@@ -726,7 +733,21 @@ $sccp_sub_bg_image_position = (isset($subscribe["sub_bg_image_position"]) && $su
                                 </a>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <input type="text" id="sub_text_color" data-alpha="true" name="sub_text_color" value="<?php echo $ays_sccp_sub_text_color; ?>"/>
+                                <div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', $this->plugin_name) ?></div>
+                                        <input type="text" id="sub_text_color" name="sub_text_color" data-alpha="true" value="<?php echo $ays_sccp_sub_text_color; ?>">
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_text_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_text_color_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', $this->plugin_name) ?></div>
+                                        <input type="text" id="sub_text_color_mobile" name="sub_text_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_sub_text_color_mobile; ?>">
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_sub_text_color_mobile" name="enable_sub_text_color_mobile" <?php echo $enable_ays_sccp_sub_text_color_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_sub_text_color_mobile" ><?php echo __('Use a different setting for Mobile', $this->plugin_name) ?></label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <hr/>

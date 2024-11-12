@@ -177,7 +177,17 @@ class Secure_Copy_Content_Protection_Public {
         }
 
         // Subscribe box text color
-		$sub_text_color = (isset($subscribe_settings['sccp_sub_text_color']) && $subscribe_settings['sccp_sub_text_color'] != '') ? 'color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_text_color']) ).';' : 'color: #000;';
+		$sub_text_color = (isset( $subscribe_settings['sccp_sub_text_color'] ) && $subscribe_settings['sccp_sub_text_color'] != '') ? 'color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_text_color']) ).';' : 'color: #000;';
+
+		// Subscribe box Enable Text Color Mobile
+        $subscribe_settings['enable_sccp_sub_text_color_mobile'] = ( isset( $subscribe_settings['enable_sccp_sub_text_color_mobile'] ) && $subscribe_settings['enable_sccp_sub_text_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Text Color Mobile
+        if ( $subscribe_settings['enable_sccp_sub_text_color_mobile'] ) {
+            $sub_text_color_mobile = ( isset( $subscribe_settings['sccp_sub_text_color_mobile'] ) && $subscribe_settings['sccp_sub_text_color_mobile'] != '' ) ?  'color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_text_color_mobile']) ).' !important;' : $sub_text_color;
+        } else {
+            $sub_text_color_mobile = $sub_text_color;
+        }
 
         // Subscribe description text color
 		$sub_desc_text_color = (isset($subscribe_settings['sccp_sub_desc_text_color']) && $subscribe_settings['sccp_sub_desc_text_color'] != '') ? 'color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_desc_text_color']) ).';' : 'color: #000;';
@@ -340,6 +350,8 @@ class Secure_Copy_Content_Protection_Public {
 
 					div.consub_div {
 					    '.$sub_width_mobile.' !important;
+					    '.$sub_text_color_mobile.'
+
 					}
 				}
 

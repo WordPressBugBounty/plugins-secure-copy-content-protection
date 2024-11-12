@@ -533,6 +533,7 @@ class Secure_Copy_Content_Protection_Actions {
 				"left_click_mess"       => "",
 				"developer_tools_mess"  => "checked",
 				"context_menu_mess"     => "checked",
+				"rclick_img_mess"       => "",
 				"rclick_link_mess"      => "",
 				"drag_start_mess"       => "checked",
 				"mobile_img_mess"       => "",

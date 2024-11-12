@@ -413,7 +413,11 @@
             $(document).find('#ays_sccp_sub_width_mobile').val('').change();
             $(document).find('#sccp_sub_width_by_percentage_px').val('pixels').change();
             $(document).find('#sccp_sub_width_mobile_by_percentage_px').val('pixels').change();
+            
             $(document).find('#sub_text_color').val('#000').change();
+            $(document).find('#sub_text_color_mobile').val('#000').change();
+            $(document).find("#enable_sub_text_color_mobile").prop('checked', true).change();
+
             $(document).find('#sub_bg_color').val('#fff').change();
             $(document).find('#ays-sccp-sub-bg-img').attr('src', '').change();
             $(document).find('input#ays_sccp_sub_bg_image').val('');
@@ -548,6 +552,9 @@
             defaultColor: '#c5c5c5',            
         });
         $('#sub_text_color').wpColorPicker({
+            defaultColor: '#000',
+        });
+        $('#sub_text_color_mobile').wpColorPicker({
             defaultColor: '#000',
         });
         $('#bc_text_color').wpColorPicker({
@@ -1442,6 +1449,64 @@
                 },
             }
         });
+
+        // Toggle mobile settings start
+        $(document).on('change', '.ays_toggle_mobile_checkbox', function (e) {
+            var state = $(this).prop('checked');
+            let parent = $(this).parents('.ays_toggle_mobile_parent');
+            switch (state) {
+                case true:
+                    parent.find('.ays_toggle_target').show(250);
+                    break;
+                case false:
+                    parent.find('.ays_toggle_target').hide(250);
+                    break;
+            }
+        });
+        
+        $(document).find('.ays_sccp_different_settings_for_mobile').on('change', toggleMobileSettings);
+        $(document).find('.ays_sccp_option_for_desktop, .ays_sccp_option_for_mobile_device_cb').on('click', toggleMobileSettingsCb);
+        
+
+        function toggleMobileSettings() {
+            var optionDiv = $(this).parents('.ays_sccp_pc_and_mobile_container');
+            var deviceNames = optionDiv.find('.ays_sccp_current_device_name');
+            var mobileOptionDiv = optionDiv.find('.ays_sccp_option_for_mobile_device');
+            var cbLabel = optionDiv.find('.ays_sccp_mobile_settings_container label');
+
+            if ($(this).prop('checked')) {
+                deviceNames.addClass('show');
+                mobileOptionDiv.addClass('show');
+                cbLabel.addClass('active');
+            } else {
+                deviceNames.removeClass('show');
+                mobileOptionDiv.removeClass('show');
+                cbLabel.removeClass('active');
+            }
+        }
+
+        function toggleMobileSettingsCb() {
+            var mainContainer = $(this).parent();
+            var desktopContainer = mainContainer.find('.ays_sccp_option_for_desktop');
+            var mobileContainer = mainContainer.find('.ays_sccp_option_for_mobile_device');
+            var desktopCb = desktopContainer.find('.ays-sccp-onoffswitch-checkbox');
+            var mobileDeviceCb = mobileContainer.find('.ays-sccp-onoffswitch-checkbox');
+            var deviceNames = mainContainer.find('.ays_sccp_current_device_name');
+
+            if (desktopCb.is(':checked')) {
+                if (!mobileContainer.hasClass('show')) {
+                    mobileContainer.addClass('show');
+                    mobileDeviceCb.prop('checked', true);
+                    deviceNames.show().fadeIn('300');
+                }
+            } else {
+                if (!mobileDeviceCb.is(':checked')) {
+                    mobileContainer.removeClass('show');
+                    deviceNames.hide().fadeOut('300');
+                }
+            }
+        }
+        // Toggle mobile settings end
 
         $(document).on('change', '.ays_toggle_checkbox', function (e) {
             var state = $(this).prop('checked');
