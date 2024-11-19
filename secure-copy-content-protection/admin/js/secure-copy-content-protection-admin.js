@@ -419,6 +419,9 @@
             $(document).find("#enable_sub_text_color_mobile").prop('checked', true).change();
 
             $(document).find('#sub_bg_color').val('#fff').change();
+            $(document).find('#sub_bg_color_mobile').val('#fff').change();
+            $(document).find("#enable_sub_bg_color_mobile").prop('checked', true).change();
+
             $(document).find('#ays-sccp-sub-bg-img').attr('src', '').change();
             $(document).find('input#ays_sccp_sub_bg_image').val('');
             $(document).find('#sccp_sub_bg-image_container').hide().change();
@@ -561,6 +564,9 @@
             defaultColor: '#000',
         });
         $('#sub_bg_color').wpColorPicker({
+            defaultColor: '#fff',
+        });
+        $('#sub_bg_color_mobile').wpColorPicker({
             defaultColor: '#fff',
         });
         $('#bc_bg_color').wpColorPicker({

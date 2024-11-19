@@ -189,11 +189,21 @@ class Secure_Copy_Content_Protection_Public {
             $sub_text_color_mobile = $sub_text_color;
         }
 
+        // Subscribe box Background Color
+		$sub_bg_color = (isset($subscribe_settings['sccp_sub_bg_color']) && $subscribe_settings['sccp_sub_bg_color'] != '') ? 'background-color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_bg_color']) ).';' : 'background-color: #fff;';
+
+		// Subscribe box Enable Background Color Mobile
+        $subscribe_settings['enable_sccp_sub_bg_color_mobile'] = ( isset( $subscribe_settings['enable_sccp_sub_bg_color_mobile'] ) && $subscribe_settings['enable_sccp_sub_bg_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Background Color Mobile
+        if ( $subscribe_settings['enable_sccp_sub_bg_color_mobile'] ) {
+            $sub_bg_color_mobile = ( isset( $subscribe_settings['sccp_sub_bg_color_mobile'] ) && $subscribe_settings['sccp_sub_bg_color_mobile'] != '' ) ?  'background-color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_bg_color_mobile']) ).' !important;' : $sub_bg_color;
+        } else {
+            $sub_bg_color_mobile = $sub_bg_color;
+        }
+
         // Subscribe description text color
 		$sub_desc_text_color = (isset($subscribe_settings['sccp_sub_desc_text_color']) && $subscribe_settings['sccp_sub_desc_text_color'] != '') ? 'color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_desc_text_color']) ).';' : 'color: #000;';
-
-        // Subscribe box background color
-		$sub_bg_color = (isset($subscribe_settings['sccp_sub_bg_color']) && $subscribe_settings['sccp_sub_bg_color'] != '') ? 'background-color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_bg_color']) ).';' : 'background-color: #fff;';
 
 		// Subscribe box title transformation
         $sub_title_transformation = (isset($subscribe_settings['sub_title_transformation']) && sanitize_text_field( $subscribe_settings['sub_title_transformation'] ) != "") ? sanitize_text_field( $subscribe_settings['sub_title_transformation'] ) : 'none';
@@ -345,13 +355,13 @@ class Secure_Copy_Content_Protection_Public {
 			<style>
 				@media screen and (max-width: 768px) {
 					.subscribe_form input[type="submit"] {
-					    '.$sccp_sub_mobile_btn_size.'
+					    '. $sccp_sub_mobile_btn_size .'
 					}
 
 					div.consub_div {
-					    '.$sub_width_mobile.' !important;
-					    '.$sub_text_color_mobile.'
-
+					    '. $sub_width_mobile .' !important;
+					    '. $sub_text_color_mobile .'
+					    '. $sub_bg_color_mobile .'
 					}
 				}
 
