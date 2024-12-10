@@ -48,8 +48,8 @@ class Ays_Sccp_Data {
                 // self::ays_sccp_helloween_message($ays_sccp_ishmar);
                 // self::ays_sccp_black_friday_message($ays_sccp_ishmar);
                 // self::ays_sccp_new_mega_bundle_message_2024( $ays_sccp_ishmar );
-                // self::ays_sccp_new_mega_bundle_message($ays_sccp_ishmar);
-                self::ays_sccp_black_friday_message_2024($ays_sccp_ishmar);
+                // self::ays_sccp_black_friday_message_2024($ays_sccp_ishmar);
+                self::ays_sccp_new_mega_bundle_message($ays_sccp_ishmar);
             }
         }
     } 
