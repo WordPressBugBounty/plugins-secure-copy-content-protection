@@ -1701,7 +1701,7 @@
         });
         /* Select message vars sccp page | End */
 
-        $(document).find('.ays-sccp-accordion-arrow-box').on('click', function(e) {
+        $(document).find('.ays-sccp-accordion-container').on('click', function(e) {
             var _this = $(this);
             openSccpCloseAccordion( _this );
         });

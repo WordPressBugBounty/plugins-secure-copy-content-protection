@@ -2563,7 +2563,7 @@ $sccp_accordion_svg_html = '
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
-                                <fieldset>
+                                <fieldset class="ays_sccp_settings_integration_container">
                                     <legend>
                                         <img class="ays_integration_logo" src="<?php echo SCCP_ADMIN_URL; ?>/images/integrations/mailchimp_logo.png" alt="">
                                         <h5><?php echo __('MailChimp Settings',$this->plugin_name)?></h5>
@@ -2575,6 +2575,7 @@ $sccp_accordion_svg_html = '
                                             if($mailchimp_username == "" || $mailchimp_api_key == ""):
                                         ?>
                                         <blockquote class="error_message">
+                                            <i class="ays_fa ays_fa_info_circle"></i>
                                             <?php echo __(
                                                 sprintf(
                                                     "For enabling this option, please go to %s page and fill all options.",
