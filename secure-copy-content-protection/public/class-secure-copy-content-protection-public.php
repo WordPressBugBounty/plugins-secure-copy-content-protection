@@ -226,6 +226,18 @@ class Secure_Copy_Content_Protection_Public {
 
 		// Subscribe Bg image positioning
 		$sccp_sub_bg_image_position = (isset($subscribe_settings["sub_bg_image_position"]) && $subscribe_settings["sub_bg_image_position"] != '') ? 'background-position:'. $subscribe_settings["sub_bg_image_position"] .';' : "background-position:center center;";
+
+		// Enable Subscribe Bg image positioning Mobile
+        $subscribe_settings['enable_sub_bg_image_position_mobile'] = ( isset( $subscribe_settings['enable_sub_bg_image_position_mobile'] ) && $subscribe_settings['enable_sub_bg_image_position_mobile'] == 'off') ? false : true;
+
+        // Subscribe Bg image positioning Mobile
+        if ( $subscribe_settings['enable_sub_bg_image_position_mobile'] ) {
+            $sccp_sub_bg_image_position_mobile = ( isset( $subscribe_settings['sub_bg_image_position_mobile'] ) && $subscribe_settings['sub_bg_image_position_mobile'] != '') ?  sanitize_text_field( $subscribe_settings['sub_bg_image_position_mobile'] ) : 'center center';
+        } else {
+            $sccp_sub_bg_image_position_mobile = $subscribe_settings["sub_bg_image_position"];
+        }
+
+        $sub_bg_image_position_mobile = 'background-position:'. $sccp_sub_bg_image_position_mobile .' !important;';
 		
 		// Subscribe button style
 		$subscribe_settings['enable_sub_btn_style'] = (isset($subscribe_settings['enable_sub_btn_style']) && $subscribe_settings['enable_sub_btn_style'] == 'on') ? 'on' : 'off'; 
@@ -362,6 +374,7 @@ class Secure_Copy_Content_Protection_Public {
 					    '. $sub_width_mobile .' !important;
 					    '. $sub_text_color_mobile .'
 					    '. $sub_bg_color_mobile .'
+					    '. $sub_bg_image_position_mobile .'
 					}
 				}
 

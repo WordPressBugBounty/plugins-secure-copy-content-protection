@@ -203,6 +203,13 @@ $sccp_sub_bg_image = isset($subscribe["sub_bg_image"]) || !empty($subscribe["sub
 // Subscribe Bg image positioning
 $sccp_sub_bg_image_position = (isset($subscribe["sub_bg_image_position"]) && $subscribe["sub_bg_image_position"] != '') ? $subscribe["sub_bg_image_position"] : "center center";
 
+// Enable Subscribe Bg image positioning Mobile
+$subscribe['enable_sub_bg_image_position_mobile'] = isset( $subscribe['enable_sub_bg_image_position_mobile'] ) && $subscribe['enable_sub_bg_image_position_mobile'] == 'off' ? 'off' : 'on';
+$enable_sccp_sub_bg_image_position_mobile = $subscribe['enable_sub_bg_image_position_mobile'] == 'on' ?  true : false;
+
+// Subscribe Bg image positioning Mobile
+$sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mobile'] ) && $subscribe['sub_bg_image_position_mobile'] != '' ? stripslashes ( esc_attr( $subscribe['sub_bg_image_position_mobile'] ) ) : $sccp_sub_bg_image_position;
+
 ?>
 <div class="wrap" style="position:relative;">
     <div class="ays-sccp-heading-box">
@@ -819,17 +826,41 @@ $sccp_sub_bg_image_position = (isset($subscribe["sub_bg_image_position"]) && $su
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <select id="ays_sub_bg_image_position" name="ays_sub_bg_image_position" class="ays-text-input ays-text-input-short">
-                                    <option value="left top" <?php echo $sccp_sub_bg_image_position == "left top" ? "selected" : ""; ?>><?php echo __( "Left Top", $this->plugin_name ); ?></option>
-                                    <option value="left center" <?php echo $sccp_sub_bg_image_position == "left center" ? "selected" : ""; ?>><?php echo __( "Left Center", $this->plugin_name ); ?></option>
-                                    <option value="left bottom" <?php echo $sccp_sub_bg_image_position == "left bottom" ? "selected" : ""; ?>><?php echo __( "Left Bottom", $this->plugin_name ); ?></option>
-                                    <option value="center top" <?php echo $sccp_sub_bg_image_position == "center top" ? "selected" : ""; ?>><?php echo __( "Center Top", $this->plugin_name ); ?></option>
-                                    <option value="center center" <?php echo $sccp_sub_bg_image_position == "center center" ? "selected" : ""; ?>><?php echo __( "Center Center", $this->plugin_name ); ?></option>
-                                    <option value="center bottom" <?php echo $sccp_sub_bg_image_position == "center bottom" ? "selected" : ""; ?>><?php echo __( "Center Bottom", $this->plugin_name ); ?></option>
-                                    <option value="right top" <?php echo $sccp_sub_bg_image_position == "right top" ? "selected" : ""; ?>><?php echo __( "Right Top", $this->plugin_name ); ?></option>
-                                    <option value="right center" <?php echo $sccp_sub_bg_image_position == "right center" ? "selected" : ""; ?>><?php echo __( "Right Center", $this->plugin_name ); ?></option>
-                                    <option value="right bottom" <?php echo $sccp_sub_bg_image_position == "right bottom" ? "selected" : ""; ?>><?php echo __( "Right Bottom", $this->plugin_name ); ?></option>
-                                </select>
+                                <div class="ays_toggle_parent ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_sub_bg_image_position_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', $this->plugin_name) ?></div>
+                                        <select id="ays_sub_bg_image_position" name="ays_sub_bg_image_position" class="ays-text-input ays-text-input-short">
+		                                    <option value="left top" <?php echo $sccp_sub_bg_image_position == "left top" ? "selected" : ""; ?>><?php echo __( "Left Top", $this->plugin_name ); ?></option>
+		                                    <option value="left center" <?php echo $sccp_sub_bg_image_position == "left center" ? "selected" : ""; ?>><?php echo __( "Left Center", $this->plugin_name ); ?></option>
+		                                    <option value="left bottom" <?php echo $sccp_sub_bg_image_position == "left bottom" ? "selected" : ""; ?>><?php echo __( "Left Bottom", $this->plugin_name ); ?></option>
+		                                    <option value="center top" <?php echo $sccp_sub_bg_image_position == "center top" ? "selected" : ""; ?>><?php echo __( "Center Top", $this->plugin_name ); ?></option>
+		                                    <option value="center center" <?php echo $sccp_sub_bg_image_position == "center center" ? "selected" : ""; ?>><?php echo __( "Center Center", $this->plugin_name ); ?></option>
+		                                    <option value="center bottom" <?php echo $sccp_sub_bg_image_position == "center bottom" ? "selected" : ""; ?>><?php echo __( "Center Bottom", $this->plugin_name ); ?></option>
+		                                    <option value="right top" <?php echo $sccp_sub_bg_image_position == "right top" ? "selected" : ""; ?>><?php echo __( "Right Top", $this->plugin_name ); ?></option>
+		                                    <option value="right center" <?php echo $sccp_sub_bg_image_position == "right center" ? "selected" : ""; ?>><?php echo __( "Right Center", $this->plugin_name ); ?></option>
+		                                    <option value="right bottom" <?php echo $sccp_sub_bg_image_position == "right bottom" ? "selected" : ""; ?>><?php echo __( "Right Bottom", $this->plugin_name ); ?></option>
+		                                </select>
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_sub_bg_image_position_mobile_container" style=" <?php echo ( $enable_sccp_sub_bg_image_position_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', $this->plugin_name) ?></div>
+                                        <select id="ays_sub_bg_image_position_mobile" name="ays_sub_bg_image_position_mobile" class="ays-text-input ays-text-input-short">
+		                                    <option value="left top" <?php echo $sccp_sub_bg_image_position_mobile == "left top" ? "selected" : ""; ?>><?php echo __( "Left Top", $this->plugin_name ); ?></option>
+		                                    <option value="left center" <?php echo $sccp_sub_bg_image_position_mobile == "left center" ? "selected" : ""; ?>><?php echo __( "Left Center", $this->plugin_name ); ?></option>
+		                                    <option value="left bottom" <?php echo $sccp_sub_bg_image_position_mobile == "left bottom" ? "selected" : ""; ?>><?php echo __( "Left Bottom", $this->plugin_name ); ?></option>
+		                                    <option value="center top" <?php echo $sccp_sub_bg_image_position_mobile == "center top" ? "selected" : ""; ?>><?php echo __( "Center Top", $this->plugin_name ); ?></option>
+		                                    <option value="center center" <?php echo $sccp_sub_bg_image_position_mobile == "center center" ? "selected" : ""; ?>><?php echo __( "Center Center", $this->plugin_name ); ?></option>
+		                                    <option value="center bottom" <?php echo $sccp_sub_bg_image_position_mobile == "center bottom" ? "selected" : ""; ?>><?php echo __( "Center Bottom", $this->plugin_name ); ?></option>
+		                                    <option value="right top" <?php echo $sccp_sub_bg_image_position_mobile == "right top" ? "selected" : ""; ?>><?php echo __( "Right Top", $this->plugin_name ); ?></option>
+		                                    <option value="right center" <?php echo $sccp_sub_bg_image_position_mobile == "right center" ? "selected" : ""; ?>><?php echo __( "Right Center", $this->plugin_name ); ?></option>
+		                                    <option value="right bottom" <?php echo $sccp_sub_bg_image_position_mobile == "right bottom" ? "selected" : ""; ?>><?php echo __( "Right Bottom", $this->plugin_name ); ?></option>
+		                                </select>
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sub_bg_image_position_mobile" name="enable_ays_sub_bg_image_position_mobile" <?php echo $enable_sccp_sub_bg_image_position_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sub_bg_image_position_mobile" ><?php echo __('Use a different setting for Mobile', $this->plugin_name) ?></label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Subscribe BG Image Position End -->

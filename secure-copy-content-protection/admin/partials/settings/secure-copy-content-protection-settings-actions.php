@@ -129,6 +129,12 @@ class Sccp_Settings_Actions {
             // Subscribe Bg image positioning
             $sub_bg_image_position = (isset($data['ays_sub_bg_image_position']) && $data['ays_sub_bg_image_position'] != "") ? $data['ays_sub_bg_image_position'] : 'center center';
 
+            // Enable Subscribe Bg image positioning Mobile
+            $enable_sub_bg_image_position_mobile = isset( $data['enable_ays_sub_bg_image_position_mobile'] ) && $data['enable_ays_sub_bg_image_position_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Bg image positioning Mobile
+            $sub_bg_image_position_mobile = isset( $data['ays_sub_bg_image_position_mobile'] ) && $data['ays_sub_bg_image_position_mobile'] != '' ? sanitize_text_field( $data['ays_sub_bg_image_position_mobile'] ) : 'center center';
+
             $subscribe = array(
                 "sccp_sub_width"                            => $ays_sccp_sub_width,
                 "sccp_sub_width_mobile"                     => $ays_sccp_sub_width_mobile,
@@ -145,6 +151,8 @@ class Sccp_Settings_Actions {
                 "sub_icon_image"                            => $ays_sub_icon_img,
                 "sub_bg_image"                              => $ays_sub_bg_img,
                 "sub_bg_image_position"                     => $sub_bg_image_position,
+                "enable_sub_bg_image_position_mobile"       => $enable_sub_bg_image_position_mobile,
+                "sub_bg_image_position_mobile"              => $sub_bg_image_position_mobile,
                 "sccp_sub_email_place_text"                 => $ays_sub_email_place_text,
                 "sccp_sub_name_place_text"                  => $ays_sub_name_place_text,
                 "sccp_sub_title_size"                       => $ays_sccp_sub_title_size,
