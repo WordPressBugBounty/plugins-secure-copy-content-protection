@@ -427,9 +427,10 @@
             $(document).find('#sccp_sub_bg-image_container').hide().change();
             $(document).find('#sccp_sub_bg_image').show().change();
 
-            $(document).find('#ays_sub_bg_image_position').val('center center').change();
-            $(document).find('#ays_sub_bg_image_position_mobile').val('center center').change();
-            $(document).find("#enable_ays_sub_bg_image_position_mobile").prop('checked', true).change();
+            $(document).find('#ays-sccp-position-val').val('center center').change();            
+            $(document).find('#ays-sccp-position-mobile-val').val('center center').change();            
+            $(document).find("#enable_ays_sub_bg_image_position_mobile").prop('checked', true).change();            
+            aysSccpImagePosition();
             
             $(document).find('#sub_desc_text_color').val('#000').change();
             $(document).find('#ays_sub_title_transformation').val('none').change();
@@ -1729,6 +1730,45 @@
                     parent.find('.ays-sccp-accordion-options-main-container').attr('data-collapsed', 'true');
                 }, 150);
             }
+        }
+
+        // Position tables start
+        $(document).find('table#ays-sccp-position-table tr td, table#ays-sccp-position-table-mobile tr td').on('click', function(e) {
+            var val = $(this).data('value');
+            var flag = $(this).parents('table').data('flag');
+
+            if (flag == 'sccp_image_position') {
+                $(this).parents('.sccp_position_block').find('.ays-sccp-position-val-class').val(val).trigger('change');
+            } else {
+                $(this).parents('.sccp_position_block').find('.ays-sccp-position-mobile-val-class').val(val).trigger('change');
+            }
+
+            aysSccpImagePosition();
+            
+        });
+        // Position tables end
+
+        aysSccpImagePosition();
+        function aysSccpImagePosition() {
+            var hiddenVal = $(document).find('.sccp_position_block #ays-sccp-position-val').val();
+            var hiddenValMobile = $(document).find('.sccp_position_block #ays-sccp-position-mobile-val').val();
+
+            if (hiddenVal == '') {
+                var $this = $(document).find('table#ays-sccp-position-table tr td[data-value="center-center"]');
+            }else{
+                var $this = $(document).find('table#ays-sccp-position-table tr td[data-value="' + hiddenVal + '"]');
+            }
+
+            if (hiddenValMobile == '') {
+                var $thisMobile = $(document).find('table#ays-sccp-position-table-mobile tr td[data-value="center-center"]');
+            }else{
+                var $thisMobile = $(document).find('table#ays-sccp-position-table-mobile tr td[data-value="' + hiddenValMobile + '"]');
+            }
+
+            $(document).find('table#ays-sccp-position-table td').removeAttr('style');
+            $(document).find('table#ays-sccp-position-table-mobile td').removeAttr('style');
+            $this.css('background-color','#3d89e0');
+            $thisMobile.css('background-color','#9964b3');
         }
 
         $(document).on("click", "#ays-sccp-dismiss-buttons-content .ays-button, #ays-sccp-dismiss-buttons-content-black-friday .ays-button-black-friday, #ays-sccp-dismiss-buttons-content-helloween .ays-button-helloween", function(e){
