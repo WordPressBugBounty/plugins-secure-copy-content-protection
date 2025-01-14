@@ -49,8 +49,8 @@ class Ays_Sccp_Data {
                 // self::ays_sccp_black_friday_message($ays_sccp_ishmar);
                 // self::ays_sccp_new_mega_bundle_message_2024( $ays_sccp_ishmar );
                 // self::ays_sccp_black_friday_message_2024($ays_sccp_ishmar);
-                // self::ays_sccp_new_mega_bundle_message($ays_sccp_ishmar);
-                self::ays_sccp_christmas_top_message_2024($ays_sccp_ishmar);
+                // self::ays_sccp_christmas_top_message_2024($ays_sccp_ishmar);
+                self::ays_sccp_new_mega_bundle_message($ays_sccp_ishmar);
             }
         }
     } 
@@ -378,7 +378,7 @@ class Ays_Sccp_Data {
                         $content[] = '<div class="ays-sccp-dicount-wrap-box ays-sccp-dicount-wrap-text-boxes">';
                         $content[] = '<div>';
                             $content[] = '<span class="ays-sccp-new-mega-bundle-title">';
-                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp' target='_blank' style='color:#ffffff; text-decoration: underline;'>Secure Copy Content Protection</a></span>", SCCP_NAME );
+                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp". SCCP_NAME_VERSION ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Secure Copy Content Protection</a></span>", SCCP_NAME );
                             $content[] = '</span>';                                
                         $content[] = '</div>';
                         $content[] = '<div>';
@@ -440,7 +440,7 @@ class Ays_Sccp_Data {
                     $content[] = '</div>';
 
                     $content[] = '<div class="ays-sccp-dicount-wrap-box ays-sccp-dicount-wrap-button-box">';
-                        $content[] = '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', SCCP_NAME ) . '</a>';
+                        $content[] = '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp'. SCCP_NAME_VERSION .'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', SCCP_NAME ) . '</a>';
                         $content[] = '<span class="ays-sccp-dicount-one-time-text">';
                             $content[] = __( "One-time payment", SCCP_NAME );
                         $content[] = '</span>';

@@ -500,7 +500,7 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Primery', $this->plugin_name ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Primary', $this->plugin_name ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
