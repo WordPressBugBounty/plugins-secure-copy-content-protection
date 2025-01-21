@@ -816,7 +816,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         </div>
                         <hr/>
                         <!-- Subscribe BG Image Position Start -->
-                        <div class="form-group row">
+                        <div class="form-group row ays-sub-bg-pos-block <?php echo ! isset( $sccp_sub_bg_image ) || empty( $sccp_sub_bg_image ) ? '' : 'active'; ?>">
                             <div class="col-sm-4">
                                 <label for="ays_sub_bg_image_position">
                                     <?php echo __( "Subscribe box background image position", $this->plugin_name ); ?>

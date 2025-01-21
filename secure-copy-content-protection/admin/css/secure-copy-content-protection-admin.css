@@ -2925,6 +2925,16 @@ body[class*='secure-copy-content-protect'] #wpfooter{
     pointer-events: none;
 }
 
+.ays-sub-bg-pos-block + hr, 
+.ays-sub-bg-pos-block {
+    display: none;
+}
+
+.ays-sub-bg-pos-block.active + hr, 
+.ays-sub-bg-pos-block.active {
+    display: flex;
+}
+
 /* Our products Media Queries */
 /* max-width */
 @media screen and (max-width: 1160px) {

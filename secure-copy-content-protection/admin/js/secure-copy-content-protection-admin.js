@@ -426,6 +426,7 @@
             $(document).find('input#ays_sccp_sub_bg_image').val('');
             $(document).find('#sccp_sub_bg-image_container').hide().change();
             $(document).find('#sccp_sub_bg_image').show().change();
+            $(document).find('.ays-sub-bg-pos-block').removeClass('active');
 
             $(document).find('#ays-sccp-position-val').val('center center').change();            
             $(document).find('#ays-sccp-position-mobile-val').val('center center').change();            
@@ -1124,7 +1125,8 @@
             $(this).parent().find('img#ays-sccp-sub-bg-img').attr('src', '');
             $(this).parent().parent().find('input#ays_sccp_sub_bg_image').val('');
             $(this).parent().hide();
-            $(this).parent().parent().find('a.add-sccp-sub-bg-image').show();            
+            $(this).parent().parent().find('a.add-sccp-sub-bg-image').show();
+            $(document).find('.ays-sub-bg-pos-block').removeClass('active');
         });
 
         $(document).on('click', '.ays-remove-sccp-bc-bg-img', function () {
@@ -1214,10 +1216,12 @@
                     element.hide();
                     element.parent().find('img#ays-sccp-sub-bg-img').attr('src', attachment.url);
                     element.next().val(attachment.url);
+                    $(document).find('.ays-sub-bg-pos-block').addClass('active');
                 }else if(element.hasClass('ays-edit-sccp-sub-bg-img')){
                     element.parent().find('.ays-sccp-sub-bg-image-container').fadeIn();
                     element.parent().find('img#ays-sccp-sub-bg-img').attr('src', attachment.url);
-                    $(document).find('#ays_sccp_sub_bg_image').val(attachment.url);                    
+                    $(document).find('#ays_sccp_sub_bg_image').val(attachment.url);
+                    $(document).find('.ays-sub-bg-pos-block').addClass('active');
                 }
             }).open();
 
