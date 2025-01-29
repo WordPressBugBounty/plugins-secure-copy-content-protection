@@ -55,7 +55,7 @@ class Sccp_Settings_Actions {
             // Subscribe box background color
             $sub_bg_color = (isset($data['sub_bg_color']) && $data['sub_bg_color'] != '') ? stripslashes( esc_attr($data['sub_bg_color']) ) : '#fff';
 
-            // Enable Subscribe Background Text Color Mobile
+            // Enable Subscribe box background color Mobile
             $enable_sub_bg_color_mobile = isset( $data['enable_sub_bg_color_mobile'] ) && $data['enable_sub_bg_color_mobile'] == 'on' ? 'on' : 'off';
 
             // Subscribe box Background Color Mobile
@@ -63,6 +63,12 @@ class Sccp_Settings_Actions {
 
             // Subscribe description text color
             $sub_desc_text_color = (isset($data['sub_desc_text_color']) && $data['sub_desc_text_color'] != '') ? stripslashes( esc_attr($data['sub_desc_text_color']) ) : '#000';
+
+            // Enable Subscribe description text color Mobile
+            $enable_sub_desc_text_color_mobile = isset( $data['enable_sub_desc_text_color_mobile'] ) && $data['enable_sub_desc_text_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box description text color Mobile
+            $sub_desc_text_color_mobile = isset( $data['sub_desc_text_color_mobile'] ) && $data['sub_desc_text_color_mobile'] != '' ? sanitize_text_field( $data['sub_desc_text_color_mobile'] ) : '#000';
             
             // Subscribe box title transformation
             $sub_title_transformation = (isset($data['ays_sub_title_transformation']) && sanitize_text_field( $data['ays_sub_title_transformation'] ) != "") ? sanitize_text_field( $data['ays_sub_title_transformation'] ) : 'none';
@@ -143,6 +149,8 @@ class Sccp_Settings_Actions {
                 "enable_sccp_sub_text_color_mobile"         => $enable_sub_text_color_mobile,
                 "sccp_sub_text_color_mobile"                => $sub_text_color_mobile,
                 "sccp_sub_desc_text_color"                  => $sub_desc_text_color,
+                "enable_sccp_sub_desc_text_color_mobile"    => $enable_sub_desc_text_color_mobile,
+                "sccp_sub_desc_text_color_mobile"           => $sub_desc_text_color_mobile,
                 "sccp_sub_bg_color"                         => $sub_bg_color,
                 "enable_sccp_sub_bg_color_mobile"           => $enable_sub_bg_color_mobile,
                 "sccp_sub_bg_color_mobile"                  => $sub_bg_color_mobile,

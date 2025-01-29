@@ -203,7 +203,17 @@ class Secure_Copy_Content_Protection_Public {
         }
 
         // Subscribe description text color
-		$sub_desc_text_color = (isset($subscribe_settings['sccp_sub_desc_text_color']) && $subscribe_settings['sccp_sub_desc_text_color'] != '') ? 'color:'.stripslashes( esc_attr($subscribe_settings['sccp_sub_desc_text_color']) ).';' : 'color: #000;';
+		$sub_desc_text_color = (isset($subscribe_settings['sccp_sub_desc_text_color']) && $subscribe_settings['sccp_sub_desc_text_color'] != '') ? 'color:'. stripslashes( esc_attr( $subscribe_settings['sccp_sub_desc_text_color'] ) ) .';' : 'color: #000;';
+
+		// Subscribe box Enable description text Color Mobile
+        $subscribe_settings['enable_sccp_sub_desc_text_color_mobile'] = ( isset( $subscribe_settings['enable_sccp_sub_desc_text_color_mobile'] ) && $subscribe_settings['enable_sccp_sub_desc_text_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box description text Color Mobile
+        if ( $subscribe_settings['enable_sccp_sub_desc_text_color_mobile'] ) {
+            $sub_desc_text_color_mobile = ( isset( $subscribe_settings['sccp_sub_desc_text_color_mobile'] ) && $subscribe_settings['sccp_sub_desc_text_color_mobile'] != '' ) ?  'color:'. stripslashes( esc_attr( $subscribe_settings['sccp_sub_desc_text_color_mobile'] ) ) .' !important;' : $sub_desc_text_color;
+        } else {
+            $sub_desc_text_color_mobile = $sub_desc_text_color;
+        }
 
 		// Subscribe box title transformation
         $sub_title_transformation = (isset($subscribe_settings['sub_title_transformation']) && sanitize_text_field( $subscribe_settings['sub_title_transformation'] ) != "") ? sanitize_text_field( $subscribe_settings['sub_title_transformation'] ) : 'none';
@@ -336,7 +346,7 @@ class Secure_Copy_Content_Protection_Public {
 
         $block_sub_desc_field = '';
         if($enable_block_sub_desc_field == "checked"){
-        	$block_sub_desc_field = '<p class="consub_para" style="text-align:'.$sccp_sub_text_alignment.';'.$sub_desc_text_color.' '.$sub_desc_size.'">'.$enable_block_sub_desc_textarea.'</p>';
+        	$block_sub_desc_field = '<p class="consub_para consub_para_desc" style="text-align:'. $sccp_sub_text_alignment .';'. $sub_desc_text_color .' '. $sub_desc_size .'">'. $enable_block_sub_desc_textarea .'</p>';
         }
 
         $block_sub_name_field = '';
@@ -375,6 +385,10 @@ class Secure_Copy_Content_Protection_Public {
 					    '. $sub_text_color_mobile .'
 					    '. $sub_bg_color_mobile .'
 					    '. $sub_bg_image_position_mobile .'
+					}
+
+					p.consub_para.consub_para_desc {
+					    '. $sub_desc_text_color_mobile .'
 					}
 				}
 
