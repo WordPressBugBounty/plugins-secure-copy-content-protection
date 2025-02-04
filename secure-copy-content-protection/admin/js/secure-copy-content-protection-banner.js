@@ -39,7 +39,7 @@
                 day     = hour * 24;
 
             var sccpCountdownEndTime = sccpBannerLangObj.sccpBannerDate;
-            // var sccpCountdownEndTime = "JAN 15, 2025 23:59:59";
+            var sccpCountdownEndTime = "FEB 11, 2025 23:59:59";
             var countDown_new = new Date(sccpCountdownEndTime).getTime();
 
             if ( isNaN(countDown_new) || isFinite(countDown_new) == false ) {

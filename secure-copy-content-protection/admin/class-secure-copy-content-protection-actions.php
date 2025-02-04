@@ -14,7 +14,7 @@ class Secure_Copy_Content_Protection_Actions {
 			$enable_protection = isset($data['sccp_enable_all_posts']) ? true : false;
 			$except_types      = isset($data['sccp_except_post_types']) ? json_encode($data['sccp_except_post_types']) : '';
 			$protection_text   = isset($data['sccp_notification_text']) ? stripslashes($data['sccp_notification_text']) : __('You cannot copy content of this page', $this->plugin_name);
-			$audio             = isset($data['upload_audio_url']) ? trim($data['upload_audio_url']) : "";
+			$audio             = isset( $data['upload_audio_url'] ) ? esc_sql( sanitize_text_field( $data['upload_audio_url'] ) ) : "";
 
 			// MailChimp general settings
 			$sccp_settings = new Sccp_Settings_Actions($this->plugin_name);

@@ -436,13 +436,14 @@ class Secure_Copy_Content_Protection_Public {
 				if ( $check_email === null ) {
 				
 					$sub_email = $ays_sb_email;
-					$sub_name = isset($_POST['ays_sb_name_field_'.$id]) ? esc_sql($_POST['ays_sb_name_field_'.$id]) : '';
+					$sub_name = isset( $_POST['ays_sb_name_field_'.$id] ) ? stripslashes( esc_html( $_POST['ays_sb_name_field_'.$id] ) ) : '';
+					
 					$wpdb->insert(
 						$report_table,
 						array(
 							'subscribe_id'  	=> $id,
 							'subscribe_email'  	=> $sub_email,
-							'user_name'			=> $sub_name,
+							'user_name'			=> esc_sql( $sub_name ),
 							'user_ip'    		=> $user_ip,
 							'user_id'    		=> is_user_logged_in() ? wp_get_current_user()->ID : 0,
 							'vote_date'  		=> current_time('Y-m-d G:i:s'),

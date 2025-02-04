@@ -378,7 +378,7 @@ class Ays_Sccp_Data {
                         $content[] = '<div class="ays-sccp-dicount-wrap-box ays-sccp-dicount-wrap-text-boxes">';
                         $content[] = '<div>';
                             $content[] = '<span class="ays-sccp-new-mega-bundle-title">';
-                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp". SCCP_NAME_VERSION ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Secure Copy Content Protection</a></span>", SCCP_NAME );
+                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=upgrade-50-". SCCP_NAME_VERSION ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Secure Copy Content Protection</a></span>", SCCP_NAME );
                             $content[] = '</span>';                                
                         $content[] = '</div>';
                         $content[] = '<div>';
@@ -439,8 +439,20 @@ class Ays_Sccp_Data {
                             
                     $content[] = '</div>';
 
+                    $content[] = '<div class="ays-sccp-dicount-wrap-box ays-sccp-dicount-top-bundle-coupon-text-box">';
+                        $content[] = '<div class="ays-sccp-coupon-container">';
+                            $content[] = '<div class="ays-sccp-dicount-top-bundle-coupon-row">';
+                                $content[] = 'UPGRADE50';
+                            $content[] = '</div>';
+
+                            $content[] = '<div class="ays-sccp-dicount-top-bundle-text-row">';
+                                $content[] = __( '50% Extra Discount Coupon', SCCP_NAME );
+                            $content[] = '</div>';
+                        $content[] = '</div>';
+                    $content[] = '</div>';
+
                     $content[] = '<div class="ays-sccp-dicount-wrap-box ays-sccp-dicount-wrap-button-box">';
-                        $content[] = '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp'. SCCP_NAME_VERSION .'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', SCCP_NAME ) . '</a>';
+                        $content[] = '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=upgrade-50-'. SCCP_NAME_VERSION .'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', SCCP_NAME ) . '</a>';
                         $content[] = '<span class="ays-sccp-dicount-one-time-text">';
                             $content[] = __( "One-time payment", SCCP_NAME );
                         $content[] = '</span>';
