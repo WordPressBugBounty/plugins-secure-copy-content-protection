@@ -218,6 +218,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Subscribe box title transformation
         $sub_title_transformation = (isset($subscribe_settings['sub_title_transformation']) && sanitize_text_field( $subscribe_settings['sub_title_transformation'] ) != "") ? sanitize_text_field( $subscribe_settings['sub_title_transformation'] ) : 'none';
 
+        // Subscribe box Enable title transformation Mobile
+        $subscribe_settings['enable_sub_title_transformation_mobile'] = ( isset( $subscribe_settings['enable_sub_title_transformation_mobile'] ) && $subscribe_settings['enable_sub_title_transformation_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box title transformation Mobile
+        if ( $subscribe_settings['enable_sub_title_transformation_mobile'] ) {
+            $sub_title_transformation_mobile = ( isset( $subscribe_settings['sub_title_transformation_mobile'] ) && $subscribe_settings['sub_title_transformation_mobile'] != '' ) ?  stripslashes( esc_attr( $subscribe_settings['sub_title_transformation_mobile'] ) ) .' !important;' : $sub_title_transformation;
+        } else {
+            $sub_title_transformation_mobile = $sub_title_transformation;
+        }
+
 		// Subscribe box title font size		
 		$sub_title_size = isset($subscribe_settings['sccp_sub_title_size']) && $subscribe_settings['sccp_sub_title_size'] != '' && $subscribe_settings['sccp_sub_title_size'] != 0 ? 'font-size: '. absint( sanitize_text_field($subscribe_settings['sccp_sub_title_size']) ). 'px;' : '';
 
@@ -390,6 +400,10 @@ class Secure_Copy_Content_Protection_Public {
 					p.consub_para.consub_para_desc {
 					    '. $sub_desc_text_color_mobile .'
 					}
+
+					p.consub_para.consub_para_title {
+						text-transform:'.$sub_title_transformation_mobile.';
+					}
 				}
 
 				input.ays_sccp_sb_email.ays_sccp_sb_field[type="email"], 
@@ -399,7 +413,7 @@ class Secure_Copy_Content_Protection_Public {
 
 			</style>
 			<div class="consub_div" id="consub_div_id" '. $consub_div .'>
-				<p class="consub_para" style="text-transform:'.$sub_title_transformation.'; '.$sub_title_size.' text-align:'.$sccp_sub_text_alignment.';"> ' . $subs_to_view_header_text . '</p>
+				<p class="consub_para consub_para_title" style="text-transform:'.$sub_title_transformation.'; '.$sub_title_size.' text-align:'.$sccp_sub_text_alignment.';"> ' . $subs_to_view_header_text . '</p>
 				<div class="consub_icon" style="justify-content:'.$sccp_sub_text_alignment.';">
 					<img src="'.$sccp_sub_icon_image.'" class="ays_sccp_lock_sub" alt="Lock">
 				</div>

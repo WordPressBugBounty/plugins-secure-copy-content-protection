@@ -149,6 +149,13 @@ $ays_sccp_sub_desc_text_color_mobile = isset( $subscribe['sccp_sub_desc_text_col
 // Subscribe box title transformation
 $sub_title_transformation = (isset($subscribe['sub_title_transformation']) && sanitize_text_field($subscribe['sub_title_transformation']) != "") ? sanitize_text_field($subscribe['sub_title_transformation']) : 'none';
 
+// Enable Subscribe title transformation Mobile
+$subscribe['enable_sub_title_transformation_mobile'] = isset( $subscribe['enable_sub_title_transformation_mobile'] ) && $subscribe['enable_sub_title_transformation_mobile'] == 'off' ? 'off' : 'on';
+$enable_sub_title_transformation_mobile = $subscribe['enable_sub_title_transformation_mobile'] == 'on' ?  true : false;
+
+// Subscribe box title transformation Mobile
+$sub_title_transformation_mobile = isset( $subscribe['sub_title_transformation_mobile'] ) && $subscribe['sub_title_transformation_mobile'] != '' ? esc_attr( $subscribe['sub_title_transformation_mobile'] ) : $sub_title_transformation;
+
 // Subscribe box button text
 $ays_sccp_sub_button_text = (isset($subscribe['sccp_sub_button_text']) && $subscribe['sccp_sub_button_text'] != '') ? stripslashes( esc_attr($subscribe['sccp_sub_button_text']) ) : 'Subscribe' ;
 
@@ -929,12 +936,35 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <select name="ays_sub_title_transformation" id="ays_sub_title_transformation" class="ays-text-input ays-text-input-short" style="display:block;">
-                                    <option value="uppercase" <?php echo $sub_title_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", $this->plugin_name ); ?></option>
-                                    <option value="lowercase" <?php echo $sub_title_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", $this->plugin_name ); ?></option>
-                                    <option value="capitalize" <?php echo $sub_title_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", $this->plugin_name ); ?></option>
-                                    <option value="none" <?php echo $sub_title_transformation == 'none' ? 'selected' : ''; ?>><?php echo __( "None", $this->plugin_name ); ?></option>
-                                </select>
+                                <div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sub_title_transformation_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', $this->plugin_name) ?></div>
+                                        <div>
+                                        	<select name="ays_sub_title_transformation" id="ays_sub_title_transformation" class="ays-text-input ays-text-input-short" style="display:block;">
+			                                    <option value="uppercase" <?php echo $sub_title_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", $this->plugin_name ); ?></option>
+			                                    <option value="lowercase" <?php echo $sub_title_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", $this->plugin_name ); ?></option>
+			                                    <option value="capitalize" <?php echo $sub_title_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", $this->plugin_name ); ?></option>
+			                                    <option value="none" <?php echo $sub_title_transformation == 'none' ? 'selected' : ''; ?>><?php echo __( "None", $this->plugin_name ); ?></option>
+			                                </select>
+                                        </div>                                        
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_sub_desc_text_color_mobile_container" style=" <?php echo ( $enable_sub_title_transformation_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', $this->plugin_name) ?></div>
+                                        <div>
+                                        	<select name="ays_sub_title_transformation_mobile" id="ays_sub_title_transformation_mobile" class="ays-text-input ays-text-input-short" style="display:block;">
+			                                    <option value="uppercase" <?php echo $sub_title_transformation_mobile == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", $this->plugin_name ); ?></option>
+			                                    <option value="lowercase" <?php echo $sub_title_transformation_mobile == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", $this->plugin_name ); ?></option>
+			                                    <option value="capitalize" <?php echo $sub_title_transformation_mobile == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", $this->plugin_name ); ?></option>
+			                                    <option value="none" <?php echo $sub_title_transformation_mobile == 'none' ? 'selected' : ''; ?>><?php echo __( "None", $this->plugin_name ); ?></option>
+			                                </select>
+                                        </div>    
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sub_title_transformation_mobile" name="enable_ays_sub_title_transformation_mobile" <?php echo $enable_sub_title_transformation_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sub_title_transformation_mobile" ><?php echo __('Use a different setting for Mobile', $this->plugin_name) ?></label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <hr/>

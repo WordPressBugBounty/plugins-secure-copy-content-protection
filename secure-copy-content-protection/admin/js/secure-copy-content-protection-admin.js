@@ -438,6 +438,9 @@
             $(document).find("#enable_sub_desc_text_color_mobile").prop('checked', true).change();
 
             $(document).find('#ays_sub_title_transformation').val('none').change();
+            $(document).find('#ays_sub_title_transformation_mobile').val('none').change();
+            $(document).find("#enable_ays_sub_title_transformation_mobile").prop('checked', true).change();
+            
             $(document).find('#ays_sccp_sub_cont_border_style').val('solid').change();
             $(document).find('#ays_sccp_sub_cont_border_color').val('#000').change();
             $(document).find('#ays_sccp_sub_cont_border_width').val('1').change();

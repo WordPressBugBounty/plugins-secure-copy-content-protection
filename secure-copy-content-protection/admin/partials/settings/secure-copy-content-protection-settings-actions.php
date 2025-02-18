@@ -73,6 +73,12 @@ class Sccp_Settings_Actions {
             // Subscribe box title transformation
             $sub_title_transformation = (isset($data['ays_sub_title_transformation']) && sanitize_text_field( $data['ays_sub_title_transformation'] ) != "") ? sanitize_text_field( $data['ays_sub_title_transformation'] ) : 'none';
 
+            // Enable Subscribe title transformation Mobile
+            $enable_sub_title_transformation_mobile = isset( $data['enable_ays_sub_title_transformation_mobile'] ) && $data['enable_ays_sub_title_transformation_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box title transformation Mobile
+            $sub_title_transformation_mobile = isset( $data['ays_sub_title_transformation_mobile'] ) && $data['ays_sub_title_transformation_mobile'] != '' ? sanitize_text_field( $data['ays_sub_title_transformation_mobile'] ) : 'none';
+
             // Subscribe box button text
             $ays_sub_button_text = (isset($data['ays_sccp_sub_button_text']) && $data['ays_sccp_sub_button_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_sub_button_text']) ) : 'Subscribe';
 
@@ -155,6 +161,8 @@ class Sccp_Settings_Actions {
                 "enable_sccp_sub_bg_color_mobile"           => $enable_sub_bg_color_mobile,
                 "sccp_sub_bg_color_mobile"                  => $sub_bg_color_mobile,
                 "sub_title_transformation"                  => $sub_title_transformation,
+                "enable_sub_title_transformation_mobile"    => $enable_sub_title_transformation_mobile,
+                "sub_title_transformation_mobile"           => $sub_title_transformation_mobile,
                 "sccp_sub_button_text"                      => $ays_sub_button_text,
                 "sub_icon_image"                            => $ays_sub_icon_img,
                 "sub_bg_image"                              => $ays_sub_bg_img,
