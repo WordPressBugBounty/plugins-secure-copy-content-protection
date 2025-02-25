@@ -72,7 +72,8 @@
                                     </div>
                                 </div>
                                 <div class="ays-sccp-filte-by-user" style="display:flex;margin-left:10px;">
-                                    <select name="orderbyuser" class="ays-sccp-search-users-select" id="bulk-action-select2-sccp" >
+                                    <?php $nonce = wp_create_nonce('sccp-reports-user-search-nonce'); ?>
+                                    <select name="orderbyuser" class="ays-sccp-search-users-select" id="bulk-action-select2-sccp" data-nonce="<?php echo $nonce; ?>">
                                         <option value=""><?php echo __('Select User',$this->plugin_name)?></option>
                                         <?php
                                             foreach($this->results_obj->get_users_by_id() as $key => $value){

@@ -1464,9 +1464,11 @@
                 url: sccp.ajax,
                 dataType: 'json',
                 data: function (response) {
-                    var checkedUsers = $(document).find('.ays-sccp-search-users-select').val();
+                    var checkedUsers = $(document).find('.ays-sccp-search-users-select').val();                    
+                    var wp_nonce = $(this).data('nonce');
                     return {
                         action: 'ays_sccp_reports_user_search',
+                        _ajax_nonce: wp_nonce,
                         search: response.term,
                         val: checkedUsers,
                     };

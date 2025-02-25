@@ -944,58 +944,65 @@ class Secure_Copy_Content_Protection_Admin {
         error_reporting(0);
         global $wpdb;
 
-        $search = isset($_REQUEST['search']) && $_REQUEST['search'] != '' ? $_REQUEST['search'] : null;
-        $checked = isset($_REQUEST['val']) && $_REQUEST['val'] !='' ? $_REQUEST['val'] : null;
-        $users_sql = "SELECT user_id
-                       FROM {$wpdb->prefix}ays_sccp_reports
-                       GROUP BY user_id";
-        $users = $wpdb->get_results($users_sql,"ARRAY_A");
-        $args = array();
-        $arg = '';
+        check_ajax_referer( 'sccp-reports-user-search-nonce', sanitize_key( $_REQUEST['_ajax_nonce'] ) );
 
-        if($search !== null){
-             $arg .= $search;
-             $arg .= '*';
-             $args['search'] = $arg;
-        }
-        $guest = false;
-        foreach ($users as $key => $value ) {
-            $args['include'][] = $value['user_id'];
-            if ( $value['user_id'] == '0' && strpos('guest', strtolower($search)) !== false ) {
-            	$guest = true;
-            }
-        }
-
-        $reports_users = get_users($args);
         $response = array(
             'results' => array()
         );
-        if(empty($args)){
-            $reports_users = '';
-        }
 
-        foreach ($reports_users as $key => $user) {
-            if ($checked !== null) {
-                if (in_array($user->ID, $checked)) {
-                    continue;
-                }else{
-                    $response['results'][] = array(
-                        'id' => $user->ID,
-                        'text' => $user->data->display_name
-                    );
-                }
-            }else{
-                $response['results'][] = array(
-                    'id' => $user->ID,
-                    'text' => $user->data->display_name,
-                );
-            }
-        }
-        if ($guest) {
-        	$response['results'][] = array(
-                'id' => 0,
-                'text' => 'Guest',
-            );
+        if( current_user_can( 'manage_options' ) ){
+
+	        $search = isset($_REQUEST['search']) && $_REQUEST['search'] != '' ? sanitize_text_field( $_REQUEST['search'] ) : null;
+	        $checked = isset($_REQUEST['val']) && $_REQUEST['val'] !='' ? sanitize_text_field( $_REQUEST['val'] ) : null;
+	        $users_sql = "SELECT user_id
+	                       FROM {$wpdb->prefix}ays_sccp_reports
+	                       GROUP BY user_id";
+	        $users = $wpdb->get_results($users_sql,"ARRAY_A");
+	        $args = array();
+	        $arg = '';
+
+	        if($search !== null){
+	             $arg .= $search;
+	             $arg .= '*';
+	             $args['search'] = $arg;
+	        }
+	        $guest = false;
+	        foreach ($users as $key => $value ) {
+	            $args['include'][] = $value['user_id'];
+	            if ( $value['user_id'] == '0' && strpos('guest', strtolower($search)) !== false ) {
+	            	$guest = true;
+	            }
+	        }
+
+	        $reports_users = get_users($args);
+	        
+	        if(empty($args)){
+	            $reports_users = '';
+	        }
+
+	        foreach ($reports_users as $key => $user) {
+	            if ($checked !== null) {
+	                if (in_array($user->ID, $checked)) {
+	                    continue;
+	                }else{
+	                    $response['results'][] = array(
+	                        'id' => $user->ID,
+	                        'text' => $user->data->display_name
+	                    );
+	                }
+	            }else{
+	                $response['results'][] = array(
+	                    'id' => $user->ID,
+	                    'text' => $user->data->display_name,
+	                );
+	            }
+	        }
+	        if ($guest) {
+	        	$response['results'][] = array(
+	                'id' => 0,
+	                'text' => 'Guest',
+	            );
+	        }        
         }        
 
         ob_end_clean();

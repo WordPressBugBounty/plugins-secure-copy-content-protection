@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Popup box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 07:46+0300\n"
-"PO-Revision-Date: 2025-02-10 07:46+0300\n"
+"POT-Creation-Date: 2025-02-24 08:38+0300\n"
+"PO-Revision-Date: 2025-02-24 08:38+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -21,13 +21,13 @@ msgstr ""
 #: ../admin/class-secure-copy-content-protection-actions.php:379
 #: ../admin/class-secure-copy-content-protection-actions.php:474
 #: ../includes/class-secure-copy-content-protection-activator.php:176
-#: ../public/class-secure-copy-content-protection-public.php:907
+#: ../public/class-secure-copy-content-protection-public.php:921
 msgid "You cannot copy content of this page"
 msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-actions.php:130
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:92
-#: ../public/class-secure-copy-content-protection-public.php:1164
+#: ../public/class-secure-copy-content-protection-public.php:1178
 msgid ""
 "Javascript not detected. Javascript required for this site to function. "
 "Please enable it in your browser settings and refresh this page."
@@ -35,19 +35,19 @@ msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-actions.php:186
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:82
-#: ../public/class-secure-copy-content-protection-public.php:729
+#: ../public/class-secure-copy-content-protection-public.php:743
 msgid "You need to Enter right password"
 msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-actions.php:188
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:90
-#: ../public/class-secure-copy-content-protection-public.php:229
-#: ../public/class-secure-copy-content-protection-public.php:325
+#: ../public/class-secure-copy-content-protection-public.php:239
+#: ../public/class-secure-copy-content-protection-public.php:335
 msgid "Subscribe"
 msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-actions.php:613
-#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:426
+#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:434
 #: ../admin/partials/subscribe/actions/secure-copy-content-protection-subscribe-actions.php:105
 msgid "Changes saved."
 msgstr ""
@@ -107,7 +107,7 @@ msgid "Great!"
 msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-admin.php:220
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:132
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:133
 msgid "Clear"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-admin.php:324
 #: ../admin/class-secure-copy-content-protection-admin.php:325
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:272
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:279
 msgid "General Settings"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgid "Copy Protection plugin Premium version"
 msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-admin.php:670
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:235
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:242
 msgid "Settings"
 msgstr ""
 
@@ -245,131 +245,131 @@ msgstr ""
 msgid "If you love our plugin, please do big favor and rate us on"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1065
+#: ../admin/class-secure-copy-content-protection-admin.php:1072
 msgid "Message Variables"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1066
+#: ../admin/class-secure-copy-content-protection-admin.php:1073
 msgid "Insert your preferred message variable into the editor by clicking."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1357
+#: ../admin/class-secure-copy-content-protection-admin.php:1364
 msgid "Quiz Maker"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1358
+#: ../admin/class-secure-copy-content-protection-admin.php:1365
 msgid "With our Quiz Maker plugin it’s easy to make a quiz in a short time."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1359
+#: ../admin/class-secure-copy-content-protection-admin.php:1366
 msgid ""
 "You to add images to your quiz, order unlimited questions. Also you can "
 "style your quiz to satisfy your visitors."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1366
+#: ../admin/class-secure-copy-content-protection-admin.php:1373
 msgid "Survey Maker"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1367
+#: ../admin/class-secure-copy-content-protection-admin.php:1374
 msgid ""
 "Make amazing online surveys and get real-time feedback quickly and easily."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1368
+#: ../admin/class-secure-copy-content-protection-admin.php:1375
 msgid ""
 "Learn what your website visitors want, need, and expect with the help of "
 "Survey Maker. Build surveys without limiting your needs."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1375
+#: ../admin/class-secure-copy-content-protection-admin.php:1382
 msgid "Poll Maker"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1376
+#: ../admin/class-secure-copy-content-protection-admin.php:1383
 msgid "Create amazing online polls for your WordPress website super easily."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1377
+#: ../admin/class-secure-copy-content-protection-admin.php:1384
 msgid ""
 "Build up various types of polls in a minute and get instant feedback on any "
 "topic or product."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1384
+#: ../admin/class-secure-copy-content-protection-admin.php:1391
 msgid "Popup Box"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1385
+#: ../admin/class-secure-copy-content-protection-admin.php:1392
 msgid ""
 "Popup everything you want! Create informative and promotional popups all in "
 "one plugin."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1386
+#: ../admin/class-secure-copy-content-protection-admin.php:1393
 msgid ""
 "Attract your visitors and convert them into email subscribers and paying "
 "customers."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1393
+#: ../admin/class-secure-copy-content-protection-admin.php:1400
 msgid "Gallery Photo Gallery"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1394
+#: ../admin/class-secure-copy-content-protection-admin.php:1401
 msgid ""
 "Create unlimited galleries and include unlimited images in those galleries."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1395
+#: ../admin/class-secure-copy-content-protection-admin.php:1402
 msgid ""
 "Represent images in an attractive way. Attract people with your own single "
 "and multiple free galleries from your photo library."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1402
+#: ../admin/class-secure-copy-content-protection-admin.php:1409
 msgid "Personal Dictionary"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1403
+#: ../admin/class-secure-copy-content-protection-admin.php:1410
 msgid ""
 "Allow your students to create personal dictionary, study and memorize the "
 "words."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1404
+#: ../admin/class-secure-copy-content-protection-admin.php:1411
 msgid ""
 "Allow your users to create their own digital dictionaries and learn new "
 "words and terms as fastest as possible."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1411
+#: ../admin/class-secure-copy-content-protection-admin.php:1418
 msgid "Chart Builder"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1412
+#: ../admin/class-secure-copy-content-protection-admin.php:1419
 msgid "Chart Builder plugin allows you to create beautiful charts"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1413
+#: ../admin/class-secure-copy-content-protection-admin.php:1420
 msgid " and graphs easily and quickly."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1420
+#: ../admin/class-secure-copy-content-protection-admin.php:1427
 msgid "Easy Form"
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1421
+#: ../admin/class-secure-copy-content-protection-admin.php:1428
 msgid "Choose the best WordPress form builder plugin. "
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1422
+#: ../admin/class-secure-copy-content-protection-admin.php:1429
 msgid ""
 "Create contact forms, payment forms, surveys, and many more custom forms. "
 "Build forms easily with us."
 msgstr ""
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1602
+#: ../admin/class-secure-copy-content-protection-admin.php:1609
 #: ../includes/class-secure-copy-content-protection-data.php:443
 msgid "Buy Now"
 msgstr ""
@@ -378,7 +378,7 @@ msgstr ""
 #: ../admin/partials/features/secure-copy-content-protection-pro-features.php:6
 #: ../admin/partials/results/secure-copy-content-protection-results-display.php:17
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:223
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:226
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:233
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:27
 msgid "View Documentation"
 msgstr ""
@@ -564,48 +564,48 @@ msgstr ""
 
 #: ../admin/partials/results/secure-copy-content-protection-results-display.php:54
 #: ../admin/partials/results/secure-copy-content-protection-results-display.php:71
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:95
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:96
 msgid "Filter"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:76
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:77
 msgid "Select User"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:103
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:104
 msgid "Search"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:124
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:125
 msgid "Export Filter"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:131
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:132
 #: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:421
 msgid "Shortcode ID"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:137
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:138
 msgid "Start Date from"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:141
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:142
 msgid "Start Date to"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:153
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:154
 msgid "Export to"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:155
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:156
 msgid "CSV"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:156
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:157
 msgid "XLSX"
 msgstr ""
 
-#: ../admin/partials/results/secure-copy-content-protection-results-display.php:157
+#: ../admin/partials/results/secure-copy-content-protection-results-display.php:158
 msgid "JSON"
 msgstr ""
 
@@ -698,7 +698,7 @@ msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:248
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2687
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1825
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1855
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:49
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:190
 msgid "Save changes"
@@ -706,7 +706,7 @@ msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:263
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:304
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:249
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:256
 msgid "General"
 msgstr ""
 
@@ -716,8 +716,8 @@ msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:271
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1698
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:688
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1354
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:695
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1384
 msgid "Styles"
 msgstr ""
 
@@ -748,8 +748,8 @@ msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:295
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2562
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:253
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:316
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:260
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:323
 msgid "Integrations"
 msgstr ""
 
@@ -780,8 +780,8 @@ msgid ""
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:362
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:367
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:373
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:374
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:380
 msgid "Notification text"
 msgstr ""
 
@@ -1350,47 +1350,47 @@ msgid "The position of background image of the tooltip"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1855
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1439
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1469
 msgid "Left Top"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1856
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1440
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1470
 msgid "Left Center"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1857
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1441
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1471
 msgid "Left Bottom"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1858
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1442
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1472
 msgid "Center Top"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1859
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1443
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1473
 msgid "Center Center"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1860
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1444
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1474
 msgid "Center Bottom"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1861
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1445
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1475
 msgid "Right Top"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1862
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1446
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1476
 msgid "Right Center"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1863
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1447
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1477
 msgid "Right Bottom"
 msgstr ""
 
@@ -1412,38 +1412,42 @@ msgid "Specify how to capitalize a title text of your tooltip."
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1905
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:922
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:929
 msgid "Uppercase – Transforms all characters to uppercase"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1906
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:923
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:930
 msgid "Lowercase – Transforms all characters to lowercase"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1907
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:924
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:931
 msgid "Capitalize – Transforms the first character of each word to uppercase"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1916
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2166
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:936
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:947
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:959
 msgid "None"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1917
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:933
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:944
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:956
 msgid "Uppercase"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1918
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:934
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:945
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:957
 msgid "Lowercase"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:1919
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:935
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:946
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:958
 msgid "Capitalize"
 msgstr ""
 
@@ -1490,9 +1494,9 @@ msgid "Size of tooltip text"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2000
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:703
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1199
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1659
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:710
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1229
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1689
 msgid "On PC"
 msgstr ""
 
@@ -1501,8 +1505,8 @@ msgid "Define the font size for PC devices."
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2019
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1218
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1678
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1248
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1708
 msgid "On mobile"
 msgstr ""
 
@@ -1644,14 +1648,14 @@ msgid "Reset styles"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2313
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1341
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1801
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1371
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1831
 msgid "Reset tooltip styles to default values"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2320
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1348
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1808
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1378
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1838
 msgid "Reset"
 msgstr ""
 
@@ -1668,7 +1672,7 @@ msgid "Shortcode"
 msgstr ""
 
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:2454
-#: ../public/class-secure-copy-content-protection-public.php:566
+#: ../public/class-secure-copy-content-protection-public.php:580
 msgid "Password"
 msgstr ""
 
@@ -1742,11 +1746,11 @@ msgstr ""
 msgid "Add IP"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:428
+#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:436
 msgid "SCCP attribute ."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:430
+#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:438
 msgid "SCCP attribute deleted."
 msgstr ""
 
@@ -1755,156 +1759,156 @@ msgstr ""
 msgid "Add Icon"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:256
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:365
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:263
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:372
 msgid "Message variables"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:259
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:553
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:266
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:560
 msgid "Shortcodes"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:262
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:269
 msgid "Subscribe to view settings"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:265
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:272
 msgid "Block content to view settings"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:277
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:284
 msgid "Default parameters for copy protection"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:282
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:289
 msgid "WP Editor height"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:283
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:290
 msgid ""
 "Give the default value to the height of the WP Editor. It will apply to all "
 "WP Editors within the plugin on the dashboard."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:297
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:304
 msgid "Users IP adressess"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:302
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:309
 msgid "Do not store IP adressess"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:303
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:310
 msgid ""
 "After enabling this option, IP address of the users will not be stored in "
 "database."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:321
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:328
 msgid "Mailchimp"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:328
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:335
 msgid "Mailchimp Username"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:344
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:351
 msgid "Mailchimp API Key"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:357
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:364
 msgid "You can get your API key from your "
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:357
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:364
 msgid "Account Extras menu"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:366
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:372
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:373
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:379
 msgid ""
 "You can copy these variables and paste them in the following options from "
 "the copy protection settings"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:384
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:391
 msgid ""
 "The user's first name that was filled in their WordPress site during "
 "registration."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:393
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:400
 msgid ""
 "The user's last name that was filled in their WordPress site during "
 "registration."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:402
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:409
 msgid "The user's email that was filled in their WordPress profile."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:411
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:418
 msgid "The user's display name that was filled in their WordPress profile."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:420
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:427
 msgid "The user's nickname that was filled in their WordPress profile."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:429
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:436
 msgid ""
 "The user's role(s) when logged-in. In case the user is not logged-in, the "
 "field will be empty."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:438
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:445
 msgid "The ID of the current user."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:447
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:454
 msgid "Shows the admin's email that was filled in their WordPress profile."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:456
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:463
 msgid ""
 "Shows the post author's nickname that was filled in their WordPress profile."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:465
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:472
 msgid "The Email of the author of the post."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:474
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:481
 msgid "The Display name of the author of the post."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:483
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:492
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:490
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:499
 msgid "The Last name of the author of the post."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:501
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:508
 msgid "The ID of the current post."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:510
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:517
 msgid "The Post title of the current post."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:519
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:526
 msgid "It will show the current date."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:528
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:535
 msgid "Prints a title to the web page on which the tooltip is running."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:537
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:544
 msgid "The title of the website."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:546
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:553
 msgid ""
 "Shows the current user's IP no matter whether they are a logged-in user or a "
 "guest. Please note, that this message variable will return empty, if 'Do not "
@@ -1912,564 +1916,567 @@ msgid ""
 "addresses."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:558
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:565
 msgid "Extra shortcodes"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:565
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:572
 msgid "Subscribers count"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:566
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:573
 msgid ""
 "Copy the following shortcode and paste it into any posts. Insert the Block "
 "ID to receive the current number of subscribers of the block."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:583
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:590
 msgid "Show User First Name"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:584
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:591
 msgid ""
 "Shows the logged-in user's First Name. If the user is not logged-in, the "
 "shortcode will be empty."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:601
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:608
 msgid "Show User Last Name"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:602
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:609
 msgid ""
 "Shows the logged-in user's Last Name. If the user is not logged-in, the "
 "shortcode will be empty."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:619
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:626
 msgid "Show User Email"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:620
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:627
 msgid ""
 "Shows the logged-in user's Email. If the user is not logged-in, the "
 "shortcode will be empty."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:637
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:644
 msgid "Show User roles"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:638
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:645
 msgid ""
 "Shows the logged-in user's role(s). If the user is not logged-in, the "
 "shortcode will be empty."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:655
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:662
 msgid "Show User Display name"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:656
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:663
 msgid ""
 "Shows the logged-in user's Display name. If the user is not logged-in, the "
 "shortcode will be empty."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:673
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:680
 msgid "Show User Nickname"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:674
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:681
 msgid ""
 "Shows the logged-in user's Nickname. If the user is not logged-in, the "
 "shortcode will be empty."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:693
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:700
 msgid "Subscribe box width"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:694
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:701
 msgid ""
 "Set the default value for the width of the subscription field in pixels or "
 "as a percentage. This will apply to all subscription boxes in the frontend "
 "plugin."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:704
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:711
 msgid ""
 "Define the width for desktop devices. If you put 0 or leave it blank, the "
 "width will be 100%. It accepts only numerical values and you can choose "
 "whether to define the value by percentage or in pixels."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:715
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:737
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1371
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:722
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:744
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1401
 msgid "px"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:716
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:738
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1372
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:723
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:745
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1402
 msgid "%"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:725
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:732
 msgid "On Mobile"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:726
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:733
 msgid ""
 "Define the width for mobile devices in percentage. Note: This option works "
 "for the screens with less than 768 pixels width."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:750
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:757
 msgid "Subscribe text color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:752
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:759
 msgid ""
 "Set the default text color of the Subscribe Box. It will apply to all "
 "Subscribe Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:759
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:786
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:838
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:899
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:766
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:793
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:845
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:906
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:941
 msgid "PC"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:764
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:791
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:859
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:904
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:771
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:798
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:866
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:911
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:953
 msgid "Mobile"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:769
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:796
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:882
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:909
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:776
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:803
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:889
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:916
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:965
 msgid "Use a different setting for Mobile"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:777
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:784
 msgid "Subscribe box background color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:779
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:786
 msgid ""
 "Set the default background color of the Subscribe Box. It will apply to all "
 "Subscribe Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:805
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:812
 msgid "Subscribe box background image"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:806
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:813
 msgid "Add background image for Subscribe Box."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:829
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:836
 msgid "Subscribe box background image position"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:830
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:837
 msgid "The position of background image for Subscribe Box"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:890
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:897
 msgid "Subscribe description text color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:892
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:899
 msgid ""
 "Set the default description text color of the Subscribe Box. It will apply "
 "to all Subscribe Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:918
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:925
 msgid "Subscribe title transformation"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:920
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:927
 msgid "Specify how to capitalize a title text of your Subscribe box."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:944
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:974
 msgid "Subscribe container border style"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:945
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1485
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:975
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1515
 msgid "Specify container border style."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:968
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:998
 msgid "Subscribe container border color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:969
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1509
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:999
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1539
 msgid "Specify container border color."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:982
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1012
 msgid "Subscribe container border width"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:983
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1013
 msgid ""
 "Subscribe container border width in pixels. It accepts only numeric values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1001
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1031
 msgid "Subscribe container input width"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1002
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1032
 msgid ""
 "Subscribe container input width in pixels. It accepts only numeric values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1020
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1050
 msgid "Subscribe button text"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1021
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1051
 msgid ""
 "Set the default value to the button text of the Subscribe Box. It will apply "
 "to all Subscribe Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1034
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1064
 msgid "Subscribe Icon"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1035
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1065
 msgid "Add icon image for Subscribe Box. Advisable size for image is 50x50."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1057
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1087
 msgid "Subscribe email placeholder text"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1058
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1088
 msgid ""
 "Set the default value to the email placeholder text of the Subscribe Box. It "
 "will apply to all Subscribe Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1071
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1101
 msgid "Subscribe name placeholder text"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1072
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1102
 msgid ""
 "Set the default value to the name placeholder text of the Subscribe Box. It "
 "will apply to all Subscribe Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1085
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1115
 msgid "Subscribe title Font size"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1086
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1116
 msgid ""
 "Set the default value to the Font size of the Subscribe Box title in pixels. "
 "It will apply to all Subscribe Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1104
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1134
 msgid "Subscribe description Font size"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1105
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1135
 msgid ""
 "Set the default value to the Font size of the Subscribe Box description in "
 "pixels. It will apply to all Subscribe Boxes within the plugin on the front-"
 "end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1123
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1153
 msgid "Subscribe box text alignment"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1124
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1154
 msgid "Align the text of Subscribe box to the left, center, or right."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1132
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1592
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1162
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1622
 msgid "Left"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1136
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1596
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1166
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1626
 msgid "Center"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1140
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1600
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1170
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1630
 msgid "Right"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1148
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1178
 msgid "Subscribe button style"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1149
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1179
 msgid "Change Subscribe button  styles."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1161
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1191
 msgid "Button color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1162
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1192
 msgid "Specify button color."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1175
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1635
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1205
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1665
 msgid "Button text color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1176
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1636
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1206
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1666
 msgid "Specify button text color."
-msgstr ""
-
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1189
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1649
-msgid "Button size"
-msgstr ""
-
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1190
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1650
-msgid "Specify button size."
-msgstr ""
-
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1200
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1660
-msgid "Define the button font size for PC devices."
 msgstr ""
 
 #: ../admin/partials/settings/secure-copy-content-protection-settings.php:1219
 #: ../admin/partials/settings/secure-copy-content-protection-settings.php:1679
+msgid "Button size"
+msgstr ""
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1220
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1680
+msgid "Specify button size."
+msgstr ""
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1230
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1690
+msgid "Define the button font size for PC devices."
+msgstr ""
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1249
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1709
 msgid "Define the button font size for mobile devices."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1239
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1699
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1269
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1729
 msgid "Button border-radius"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1240
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1270
 msgid ""
 "Subscribe buttons border-radius in pixels. It accepts only numeric values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1258
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1718
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1288
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1748
 msgid "Button border width"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1259
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1289
 msgid ""
 "Subscribe buttons border width in pixels. It accepts only numeric values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1277
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1737
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1307
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1767
 msgid "Button border style"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1278
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1738
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1308
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1768
 msgid "Specify button border style."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1301
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1761
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1331
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1791
 msgid "Button border color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1302
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1762
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1332
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1792
 msgid "Specify button border color."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1315
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1775
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1345
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1805
 msgid "Button padding"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1316
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1776
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1346
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1806
 msgid "Padding of buttons in pixels. It accepts only numeric values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1323
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1783
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1353
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1813
 msgid "Left / Right"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1327
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1787
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1357
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1817
 msgid "Top / Bottom"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1339
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1369
 msgid "Subscribe reset styles"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1359
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1389
 msgid "Block content box width"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1360
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1390
 msgid ""
 "Set the default value for the width of the block content field in pixels or "
 "as a percentage. This will apply to all block content boxes in the frontend "
 "plugin."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1380
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1410
 msgid "Block content text color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1382
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1412
 msgid ""
 "Set the default text color of the Block content Box. It will apply to all "
 "Block content Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1393
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1423
 msgid "Block content box background color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1395
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1425
 msgid ""
 "Set the default background color of the Block content Box. It will apply to "
 "all Block content Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1407
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1437
 msgid "Block content box background image"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1408
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1438
 msgid "Add background image for Block content Box."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1431
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1461
 msgid "Block content box background image position"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1432
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1462
 msgid "The position of background image for Block content Box"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1456
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1486
 msgid "Block content button text"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1457
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1487
 msgid ""
 "Set the default value to the button text of the Block content Box. It will "
 "apply to all Block content Boxes within the plugin on the front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1470
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1500
 msgid "Block content password placeholder text"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1471
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1501
 msgid ""
 "Set the default value to the password placeholder text of the Block content "
 "Box. It will apply to all Block contents Boxes within the plugin on the "
 "front-end."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1484
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1514
 msgid "Block content container border style"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1508
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1538
 msgid "Block content container border color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1522
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1552
 msgid "Block content container border width"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1523
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1553
 msgid ""
 "Block content container border width in pixels. It accepts only numeric "
 "values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1541
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1571
 msgid "Block content container input width"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1542
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1572
 msgid ""
 "Block content container input width in pixels. It accepts only numeric "
 "values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1560
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1590
 msgid "Block content Icon"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1561
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1591
 msgid ""
 "Add icon image for Block content Box. Advisable size for image is 50x50."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1583
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1613
 msgid "Block content box text alignment"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1584
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1614
 msgid "Align the text of Block content box to the left, center, or right."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1608
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1638
 msgid "Block content button style"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1609
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1639
 msgid "Change Block content button  styles."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1621
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1651
 msgid "Button background color"
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1622
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1652
 msgid "Specify button background color."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1700
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1730
 msgid ""
 "Block content buttons border-radius in pixels. It accepts only numeric "
 "values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1719
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1749
 msgid ""
 "Block content buttons border width in pixels. It accepts only numeric values."
 msgstr ""
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1799
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1829
 msgid "Block content reset styles"
 msgstr ""
 
@@ -2775,15 +2782,15 @@ msgstr ""
 msgid "Result deleted."
 msgstr ""
 
-#: ../public/class-secure-copy-content-protection-public.php:315
+#: ../public/class-secure-copy-content-protection-public.php:325
 msgid "Type your email address"
 msgstr ""
 
-#: ../public/class-secure-copy-content-protection-public.php:318
+#: ../public/class-secure-copy-content-protection-public.php:328
 msgid "Type your name"
 msgstr ""
 
-#: ../public/class-secure-copy-content-protection-public.php:563
+#: ../public/class-secure-copy-content-protection-public.php:577
 msgid "Submit"
 msgstr ""
 
