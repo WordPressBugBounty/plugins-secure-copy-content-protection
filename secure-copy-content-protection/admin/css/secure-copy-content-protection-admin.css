@@ -3410,6 +3410,12 @@ p.ays-subtitle {
     font-size: 18px !important;
 }
 
+.ays_sccp_settings_integration_container blockquote.blockquote_error_message.error_message a {
+    color: blue !important;
+    text-decoration: underline;
+    font-size: 20px !important;
+}
+
 .ays_sccp_settings_integration_container i.ays_fa.ays_fa_info_circle:before {
     color: #005AE0;
 }

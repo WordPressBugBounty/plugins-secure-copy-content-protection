@@ -431,11 +431,11 @@ class Sccp_Settings_Actions {
             return;
 
         if ( 'saved' == $status )
-            $updated_message = esc_html( __( 'Changes saved.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Changes saved.', 'secure-copy-content-protection' ) );
         elseif ( 'updated' == $status )
-            $updated_message = esc_html( __( 'SCCP attribute .', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'SCCP attribute .', 'secure-copy-content-protection' ) );
         elseif ( 'deleted' == $status )
-            $updated_message = esc_html( __( 'SCCP attribute deleted.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'SCCP attribute deleted.', 'secure-copy-content-protection' ) );
 
         if ( empty( $updated_message ) )
             return;

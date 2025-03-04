@@ -79,7 +79,7 @@ class Ays_Sccp_Extra_Shortcodes_Public
         $id = (isset($attr['id']) && $attr['id'] != '') ? absint( sanitize_text_field($attr['id']) ) : null;
 
         if (is_null($id) || $id == 0 ) {
-            $passed_users_count_html = "<p class='wrong_shortcode_text' style='color:red;'>" . __('Wrong shortcode initialized', $this->plugin_name) . "</p>";
+            $passed_users_count_html = "<p class='wrong_shortcode_text' style='color:red;'>" . __('Wrong shortcode initialized', 'secure-copy-content-protection') . "</p>";
             return str_replace(array("\r\n", "\n", "\r"), "\n", $passed_users_count_html);
         }
 
@@ -117,7 +117,7 @@ class Ays_Sccp_Extra_Shortcodes_Public
         $content_html = array();
 
         if($results === null){
-            $content_html = "<p style='text-align: center;font-style:italic;'>" . __( "There are no results yet.", $this->plugin_name ) . "</p>";
+            $content_html = "<p style='text-align: center;font-style:italic;'>" . __( "There are no results yet.", 'secure-copy-content-protection' ) . "</p>";
             return $content_html;
         }
 

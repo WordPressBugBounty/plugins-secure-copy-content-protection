@@ -102,11 +102,11 @@ class Secure_Copy_Content_Protection_Subscribe_Actions {
             return;
 
         if ( 'saved' == $status )
-            $updated_message = esc_html( __( 'Changes saved.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Changes saved.', 'secure-copy-content-protection' ) );
         elseif ( 'updated' == $status )
-            $updated_message = esc_html( __( 'SCCP subscribe.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'SCCP subscribe.', 'secure-copy-content-protection' ) );
         elseif ( 'deleted' == $status )
-            $updated_message = esc_html( __( 'SCCP subscribe deleted.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'SCCP subscribe deleted.', 'secure-copy-content-protection' ) );
 
         if ( empty( $updated_message ) )
             return;

@@ -168,8 +168,8 @@ class Secure_Copy_Content_Protection_Admin {
         $sccp_banner_date = $this->ays_sccp_update_banner_time();
         wp_localize_script($this->plugin_name . '-banner', 'sccpBannerLangObj', array(
             'sccpBannerDate'  	 => $sccp_banner_date,
-            'somethingWentWrong' => __( "Maybe something went wrong.", $this->plugin_name ),
-            'errorMsg'           => __( "Error", $this->plugin_name )
+            'somethingWentWrong' => __( "Maybe something went wrong.", 'secure-copy-content-protection' ),
+            'errorMsg'           => __( "Error", 'secure-copy-content-protection' )
         ) );	
 
 		if (false !== strpos($hook_suffix, "plugins.php")){			
@@ -199,39 +199,39 @@ class Secure_Copy_Content_Protection_Admin {
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/secure-copy-content-protection-admin.js', array('jquery', 'wp-color-picker'), $this->version, true);
 		wp_localize_script($this->plugin_name, 'sccp', array(
 			'ajax'           	=> admin_url('admin-ajax.php'),
-			'loader_message' 	=> __('Just a moment...', $this->plugin_name),
+			'loader_message' 	=> __('Just a moment...', 'secure-copy-content-protection'),
 			'loader_url'     	=> SCCP_ADMIN_URL . '/images/rocket.svg',
 			'bc_user_role'    	=> $ays_users_roles,
-            "emptyEmailError"               => __( 'Email field is empty', $this->plugin_name),
-            "invalidEmailError"             => __( 'Invalid Email address', $this->plugin_name),
-            'selectUser'                    => __( 'Select user', $this->plugin_name),
-            'pleaseEnterMore'               => __( "Please enter 1 or more characters", $this->plugin_name ),
-            'searching'                     => __( "Searching...", $this->plugin_name ),
-            'activated'                     => __( "Activated", $this->plugin_name ),
-            'errorMsg'                      => __( "Error", $this->plugin_name ),
-            'loadResource'                  => __( "Can't load resource.", $this->plugin_name ),
-            'somethingWentWrong'            => __( "Maybe something went wrong.", $this->plugin_name ),            
-            'greateJob'                     => __( 'Great job', $this->plugin_name),
-            'formMoreDetailed'              => __( 'For more detailed configuration visit', $this->plugin_name),
-            'greate'                        => __( 'Great!', $this->plugin_name),
+            "emptyEmailError"               => __( 'Email field is empty', 'secure-copy-content-protection'),
+            "invalidEmailError"             => __( 'Invalid Email address', 'secure-copy-content-protection'),
+            'selectUser'                    => __( 'Select user', 'secure-copy-content-protection'),
+            'pleaseEnterMore'               => __( "Please enter 1 or more characters", 'secure-copy-content-protection' ),
+            'searching'                     => __( "Searching...", 'secure-copy-content-protection' ),
+            'activated'                     => __( "Activated", 'secure-copy-content-protection' ),
+            'errorMsg'                      => __( "Error", 'secure-copy-content-protection' ),
+            'loadResource'                  => __( "Can't load resource.", 'secure-copy-content-protection' ),
+            'somethingWentWrong'            => __( "Maybe something went wrong.", 'secure-copy-content-protection' ),            
+            'greateJob'                     => __( 'Great job', 'secure-copy-content-protection'),
+            'formMoreDetailed'              => __( 'For more detailed configuration visit', 'secure-copy-content-protection'),
+            'greate'                        => __( 'Great!', 'secure-copy-content-protection'),
 		));
 
 		$color_picker_strings = array(
-			'clear'            => __( 'Clear', $this->plugin_name ),
-			'clearAriaLabel'   => __( 'Clear color', $this->plugin_name ),
-			'defaultString'    => __( 'Default', $this->plugin_name ),
-			'defaultAriaLabel' => __( 'Select default color', $this->plugin_name ),
-			'pick'             => __( 'Select Color', $this->plugin_name ),
-			'defaultLabel'     => __( 'Color value', $this->plugin_name ),
+			'clear'            => __( 'Clear', 'secure-copy-content-protection' ),
+			'clearAriaLabel'   => __( 'Clear color', 'secure-copy-content-protection' ),
+			'defaultString'    => __( 'Default', 'secure-copy-content-protection' ),
+			'defaultAriaLabel' => __( 'Select default color', 'secure-copy-content-protection' ),
+			'pick'             => __( 'Select Color', 'secure-copy-content-protection' ),
+			'defaultLabel'     => __( 'Color value', 'secure-copy-content-protection' ),
 		);
 		wp_localize_script( $this->plugin_name.'-wp-color-picker-alpha', 'wpColorPickerL10n', $color_picker_strings );
 
 		wp_localize_script($this->plugin_name, 'sccpLangObj', array(
             // 'sccpBannerDate'  => $sccp_banner_date,
-            'nameField'       => __( 'Name field', $this->plugin_name ),
-            'title'           => __( 'Tick the checkbox to show the Name field', $this->plugin_name ),
-            'descField'       => __( 'Description field', $this->plugin_name ),
-            'descTitle'       => __( 'Tick the checkbox to show the Description field', $this->plugin_name ),
+            'nameField'       => __( 'Name field', 'secure-copy-content-protection' ),
+            'title'           => __( 'Tick the checkbox to show the Name field', 'secure-copy-content-protection' ),
+            'descField'       => __( 'Description field', 'secure-copy-content-protection' ),
+            'descTitle'       => __( 'Tick the checkbox to show the Description field', 'secure-copy-content-protection' ),
             'adminUrl'        => SCCP_ADMIN_URL,
         ) );		
 		
@@ -297,8 +297,8 @@ class Secure_Copy_Content_Protection_Admin {
 		add_action( "load-$hook_sccp", array( $this, 'add_tabs' ));
 
 		$hook_subscribe_to_view = add_submenu_page( $this->plugin_name,
-            __('Subscribe to view', $this->plugin_name),
-            __('Subscribe to view', $this->plugin_name),
+            __('Subscribe to view', 'secure-copy-content-protection'),
+            __('Subscribe to view', 'secure-copy-content-protection'),
             'manage_options',
             $this->plugin_name . '-subscribe-to-view',
             array($this, 'display_plugin_sccp_subscribe_to_view_page') 
@@ -308,7 +308,7 @@ class Secure_Copy_Content_Protection_Admin {
         global $wpdb;
         $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}ays_sccp_reports WHERE `unread` = 1";
         $unread_results_count = $wpdb->get_var($sql);
-        $results_text = __('Results', $this->plugin_name);
+        $results_text = __('Results', 'secure-copy-content-protection');
         $menu_item = ($unread_results_count == 0) ? $results_text : $results_text . '<span class="ays_menu_badge ays_results_bage">' . $unread_results_count . '</span>';
 		$hook_results = add_submenu_page( $this->plugin_name,
 			$results_text,
@@ -321,8 +321,8 @@ class Secure_Copy_Content_Protection_Admin {
 		add_action( "load-$hook_results", array( $this, 'add_tabs' ));
 
 		$hook_settings = add_submenu_page( $this->plugin_name,
-            __('General Settings', $this->plugin_name),
-            __('General Settings', $this->plugin_name),
+            __('General Settings', 'secure-copy-content-protection'),
+            __('General Settings', 'secure-copy-content-protection'),
             'manage_options',
             $this->plugin_name . '-settings',
             array($this, 'display_plugin_sccp_settings_page') 
@@ -331,8 +331,8 @@ class Secure_Copy_Content_Protection_Admin {
 		add_action( "load-$hook_settings", array( $this, 'add_tabs' ));
 
 		$hook_featured_plugins = add_submenu_page( $this->plugin_name,
-            __('Our Products', $this->plugin_name),
-            __('Our Products', $this->plugin_name),
+            __('Our Products', 'secure-copy-content-protection'),
+            __('Our Products', 'secure-copy-content-protection'),
             'manage_options',
             $this->plugin_name . '-featured-plugins',
             array($this, 'display_plugin_sccp_featured_plugins_page') 
@@ -341,8 +341,8 @@ class Secure_Copy_Content_Protection_Admin {
 
 		$hook_pro_features = add_submenu_page(
 			$this->plugin_name,
-			__('PRO Features', $this->plugin_name),
-			__('PRO Features', $this->plugin_name),
+			__('PRO Features', 'secure-copy-content-protection'),
+			__('PRO Features', 'secure-copy-content-protection'),
 			'manage_options',
 			$this->plugin_name . '-pro-features',
 			array($this, 'display_plugin_sccp_pro_features_page')
@@ -361,24 +361,24 @@ class Secure_Copy_Content_Protection_Admin {
 			array(
 				'id'      => 'sccp_help_tab',
 				'title'   => __( 'General Information:
-					'),
+					', 'secure-copy-content-protection'),
 				'content' =>
-					'<h2>' . __( 'SCCP Information', $this->plugin_name) . '</h2>' .
+					'<h2>' . __( 'SCCP Information', 'secure-copy-content-protection') . '</h2>' .
 					'<p>' .
-						__( 'Copy Content Protection is a must-have WordPress plugin which prevents the risk of plagiarism on your website. After the activation of the plugin the Copy and Paste, right-click option, inspect elements (F12 key), content-selection, copy the image, save image as features will be automatically disabled. In addition, the user has an option to enable or disable the features via the checkbox.',  $this->plugin_name ).'</p>'
+						__( 'Copy Content Protection is a must-have WordPress plugin which prevents the risk of plagiarism on your website. After the activation of the plugin the Copy and Paste, right-click option, inspect elements (F12 key), content-selection, copy the image, save image as features will be automatically disabled. In addition, the user has an option to enable or disable the features via the checkbox.',  'secure-copy-content-protection' ).'</p>'
 			)
 		);
 	
 		$screen->set_help_sidebar(
-			'<p><strong>' . __( 'For more information:', $this->plugin_name) . '</strong></p>' .
+			'<p><strong>' . __( 'For more information:', 'secure-copy-content-protection') . '</strong></p>' .
 			'<p>
-				<a href="https://www.youtube.com/watch?v=whYBGV703SM" target="_blank">' . __( 'Youtube video tutorials' , $this->plugin_name ) . '</a>
+				<a href="https://www.youtube.com/watch?v=whYBGV703SM" target="_blank">' . __( 'Youtube video tutorials' , 'secure-copy-content-protection' ) . '</a>
 			</p>' .
 			'<p>
-				<a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank">' . __( 'Documentation', $this->plugin_name ) . '</a>
+				<a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank">' . __( 'Documentation', 'secure-copy-content-protection' ) . '</a>
 			</p>' .
 			'<p>
-				<a href="https://ays-pro.com/wordpress/secure-copy-content-protection" target="_blank">' . __( 'Copy Protection plugin Premium version', $this->plugin_name ) . '</a>
+				<a href="https://ays-pro.com/wordpress/secure-copy-content-protection" target="_blank">' . __( 'Copy Protection plugin Premium version', 'secure-copy-content-protection' ) . '</a>
 			</p>'
 		);
 	}
@@ -667,9 +667,9 @@ class Secure_Copy_Content_Protection_Admin {
 		*  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
 		*/
 		$settings_link = array(
-			'<a href="' . admin_url('options-general.php?page=' . $this->plugin_name) . '">' . __('Settings', $this->plugin_name) . '</a>',
-			'<a href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank">' . __('Demo', $this->plugin_name) . '</a>',
-            '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=buy-now-sccp" class="ays-sccp-upgrade-plugin-btn" target="_blank" style="color:#01A32A; font-weight:bold;">' . __('Upgrade 30% Sale', $this->plugin_name) . '</a>',
+			'<a href="' . admin_url('options-general.php?page=' . $this->plugin_name) . '">' . __('Settings', 'secure-copy-content-protection') . '</a>',
+			'<a href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank">' . __('Demo', 'secure-copy-content-protection') . '</a>',
+            '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=buy-now-sccp" class="ays-sccp-upgrade-plugin-btn" target="_blank" style="color:#01A32A; font-weight:bold;">' . __('Upgrade 30% Sale', 'secure-copy-content-protection') . '</a>',
 		);
 
 		return array_merge($settings_link, $links);
@@ -678,7 +678,7 @@ class Secure_Copy_Content_Protection_Admin {
 
  	public function add_plugin_row_meta($meta, $file) {
 		if ($file == SCCP_BASENAME) {
-			$meta[] = '<a href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank">' . esc_html__( 'Free Support', $this->plugin_name ) . '</a>';
+			$meta[] = '<a href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank">' . esc_html__( 'Free Support', 'secure-copy-content-protection' ) . '</a>';
 		}
 
 		return $meta;
@@ -743,7 +743,7 @@ class Secure_Copy_Content_Protection_Admin {
 	public function screen_option_results() {
 		$option = 'per_page';
 		$args   = array(
-			'label'   => __('Results', $this->plugin_name),
+			'label'   => __('Results', 'secure-copy-content-protection'),
 			'default' => 7,
 			'option'  => 'sccp_results_per_page',
 		);
@@ -805,15 +805,15 @@ class Secure_Copy_Content_Protection_Admin {
             if(false !== strpos($_REQUEST['page'], $this->plugin_name)){
                 ?>
                 <div class="ays-sccp-footer-support-box">
-                    <span class="ays-sccp-footer-link-row"><a href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo __( "Support", $this->plugin_name); ?></a></span>
+                    <span class="ays-sccp-footer-link-row"><a href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html(__( "Support", 'secure-copy-content-protection') ); ?></a></span>
                     <span class="ays-sccp-footer-slash-row">/</span>
-                    <span class="ays-sccp-footer-link-row"><a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank"><?php echo __( "Docs", $this->plugin_name); ?></a></span>
+                    <span class="ays-sccp-footer-link-row"><a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank"><?php echo __( "Docs", 'secure-copy-content-protection'); ?></a></span>
                     <span class="ays-sccp-footer-slash-row">/</span>
-                    <span class="ays-sccp-footer-link-row"><a href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank"><?php echo __( "Suggest a Feature", $this->plugin_name); ?></a></span>
+                    <span class="ays-sccp-footer-link-row"><a href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank"><?php echo __( "Suggest a Feature", 'secure-copy-content-protection'); ?></a></span>
                 </div>
                 <p style="font-size:13px;text-align:center;font-style:italic;">
                     <span style="margin-left:0px;margin-right:10px;" class="ays_heart_beat"><i class="ays_fa ays_fa_heart animated"></i></span>
-                    <span><?php echo __( "If you love our plugin, please do big favor and rate us on", $this->plugin_name); ?></span> 
+                    <span><?php echo __( "If you love our plugin, please do big favor and rate us on", 'secure-copy-content-protection'); ?></span> 
                     <a target="_blank" href='https://wordpress.org/support/plugin/secure-copy-content-protection/reviews/?rate=5#new-post'>WordPress.org</a>
                     <a target="_blank" class="ays-rated-link" href='https://wordpress.org/support/plugin/secure-copy-content-protection/reviews/'>
                         <span class="ays-dashicons ays-dashicons-star-empty"></span>
@@ -1069,8 +1069,8 @@ class Secure_Copy_Content_Protection_Admin {
                     $content[] = '<i class="ays_fa ays_fa_link"></i>';
                 $content[] = '</div>';
                 $content[] = '<div>';
-                    $content[] = '<span>'. __("Message Variables" , $this->plugin_name) .'</span>';
-                    $content[] = '<a class="ays_help" data-toggle="tooltip" data-html="true" title="'. __("Insert your preferred message variable into the editor by clicking." , $this->plugin_name) .'">';
+                    $content[] = '<span>'. __("Message Variables" , 'secure-copy-content-protection') .'</span>';
+                    $content[] = '<a class="ays_help" data-toggle="tooltip" data-html="true" title="'. __("Insert your preferred message variable into the editor by clicking." , 'secure-copy-content-protection') .'">';
                         $content[] = '<i class="ays_fa ays_fa_info_circle"></i>';
                     $content[] = '</a>';
                 $content[] = '</div>';
@@ -1173,7 +1173,7 @@ class Secure_Copy_Content_Protection_Admin {
 
         // Check for permissions.
         if ( ! current_user_can( 'activate_plugins' ) ) {
-            wp_send_json_error( esc_html__( 'Plugin activation is disabled for you on this site.', $this->plugin_name ) );
+            wp_send_json_error( esc_html__( 'Plugin activation is disabled for you on this site.', 'secure-copy-content-protection' ) );
         }
 
         $type = 'addon';
@@ -1189,18 +1189,18 @@ class Secure_Copy_Content_Protection_Admin {
 
             if ( ! is_wp_error( $activate ) ) {
                 if ( $type === 'plugin' ) {
-                    wp_send_json_success( esc_html__( 'Plugin activated.', $this->plugin_name ) );
+                    wp_send_json_success( esc_html__( 'Plugin activated.', 'secure-copy-content-protection' ) );
                 } else {
-                        ( esc_html__( 'Addon activated.', $this->plugin_name ) );
+                        ( esc_html__( 'Addon activated.', 'secure-copy-content-protection' ) );
                 }
             }
         }
 
         if ( $type === 'plugin' ) {
-            wp_send_json_error( esc_html__( 'Could not activate the plugin. Please activate it on the Plugins page.', $this->plugin_name ) );
+            wp_send_json_error( esc_html__( 'Could not activate the plugin. Please activate it on the Plugins page.', 'secure-copy-content-protection' ) );
         }
 
-        wp_send_json_error( esc_html__( 'Could not activate the addon. Please activate it on the Plugins page.', $this->plugin_name ) );
+        wp_send_json_error( esc_html__( 'Could not activate the addon. Please activate it on the Plugins page.', 'secure-copy-content-protection' ) );
     }
 
     /**
@@ -1214,7 +1214,7 @@ class Secure_Copy_Content_Protection_Admin {
         // Run a security check.
         check_ajax_referer( $this->plugin_name . '-install-plugin-nonce', sanitize_key( $_REQUEST['_ajax_nonce'] ) );
 
-        $generic_error = esc_html__( 'There was an error while performing your request.', $this->plugin_name );
+        $generic_error = esc_html__( 'There was an error while performing your request.', 'secure-copy-content-protection' );
         $type          = ! empty( $_POST['type'] ) ? sanitize_key( $_POST['type'] ) : '';
 
         // Check if new installations are allowed.
@@ -1223,7 +1223,7 @@ class Secure_Copy_Content_Protection_Admin {
         }
 
         $error = $type === 'plugin'
-            ? esc_html__( 'Could not install the plugin. Please download and install it manually.', $this->plugin_name )
+            ? esc_html__( 'Could not install the plugin. Please download and install it manually.', 'secure-copy-content-protection' )
             : "";
 
         $plugin_url = ! empty( $_POST['plugin'] ) ? esc_url_raw( wp_unslash( $_POST['plugin'] ) ) : '';
@@ -1295,7 +1295,7 @@ class Secure_Copy_Content_Protection_Admin {
 
         // Check for permissions.
         if ( ! current_user_can( 'activate_plugins' ) ) {
-            $result['msg'] = $type === 'plugin' ? esc_html__( 'Plugin installed.', $this->plugin_name ) : "";
+            $result['msg'] = $type === 'plugin' ? esc_html__( 'Plugin installed.', 'secure-copy-content-protection' ) : "";
 
             wp_send_json_success( $result );
         }
@@ -1307,7 +1307,7 @@ class Secure_Copy_Content_Protection_Admin {
         if ( ! is_wp_error( $activated ) ) {
 
             $result['is_activated'] = true;
-            $result['msg']          = $type === 'plugin' ? esc_html__( 'Plugin installed and activated.', $this->plugin_name ) : esc_html__( 'Addon installed and activated.', $this->plugin_name );
+            $result['msg']          = $type === 'plugin' ? esc_html__( 'Plugin installed and activated.', 'secure-copy-content-protection' ) : esc_html__( 'Addon installed and activated.', 'secure-copy-content-protection' );
 
             wp_send_json_success( $result );
         }
@@ -1361,72 +1361,72 @@ class Secure_Copy_Content_Protection_Admin {
         $plugins_array = array(
            'quiz-maker/quiz-maker.php'        => array(
                 'icon'        => $images_url . 'icon-quiz-128x128.png',
-                'name'        => __( 'Quiz Maker', $this->plugin_name ),
-                'desc'        => __( 'With our Quiz Maker plugin it’s easy to make a quiz in a short time.', $this->plugin_name ),
-                'desc_hidden' => __( 'You to add images to your quiz, order unlimited questions. Also you can style your quiz to satisfy your visitors.', $this->plugin_name ),
+                'name'        => __( 'Quiz Maker', 'secure-copy-content-protection' ),
+                'desc'        => __( 'With our Quiz Maker plugin it’s easy to make a quiz in a short time.', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'You to add images to your quiz, order unlimited questions. Also you can style your quiz to satisfy your visitors.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/quiz-maker/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/quiz-maker/',
                 'url'         => $plugin_url_arr['quiz-maker'],
             ),
             'survey-maker/survey-maker.php'        => array(
                 'icon'        => $images_url . 'icon-survey-128x128.png',
-                'name'        => __( 'Survey Maker', $this->plugin_name ),
-                'desc'        => __( 'Make amazing online surveys and get real-time feedback quickly and easily.', $this->plugin_name ),
-                'desc_hidden' => __( 'Learn what your website visitors want, need, and expect with the help of Survey Maker. Build surveys without limiting your needs.', $this->plugin_name ),
+                'name'        => __( 'Survey Maker', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Make amazing online surveys and get real-time feedback quickly and easily.', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'Learn what your website visitors want, need, and expect with the help of Survey Maker. Build surveys without limiting your needs.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/survey-maker/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/survey-maker',
                 'url'         => $plugin_url_arr['survey-maker'],
             ),
             'poll-maker/poll-maker-ays.php'        => array(
                 'icon'        => $images_url . 'icon-poll-128x128.png',
-                'name'        => __( 'Poll Maker', $this->plugin_name ),
-                'desc'        => __( 'Create amazing online polls for your WordPress website super easily.', $this->plugin_name ),
-                'desc_hidden' => __( 'Build up various types of polls in a minute and get instant feedback on any topic or product.', $this->plugin_name ),
+                'name'        => __( 'Poll Maker', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Create amazing online polls for your WordPress website super easily.', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'Build up various types of polls in a minute and get instant feedback on any topic or product.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/poll-maker/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/poll-maker/',
                 'url'         => $plugin_url_arr['poll-maker'],
             ),
             'ays-popup-box/ays-pb.php'        => array(
                 'icon'        => $images_url . 'icon-popup-128x128.png',
-                'name'        => __( 'Popup Box', $this->plugin_name ),
-                'desc'        => __( 'Popup everything you want! Create informative and promotional popups all in one plugin.', $this->plugin_name ),
-                'desc_hidden' => __( 'Attract your visitors and convert them into email subscribers and paying customers.', $this->plugin_name ),
+                'name'        => __( 'Popup Box', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Popup everything you want! Create informative and promotional popups all in one plugin.', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'Attract your visitors and convert them into email subscribers and paying customers.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/ays-popup-box/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/popup-box/',
                 'url'         => $plugin_url_arr['ays-popup-box'],
             ),
             'gallery-photo-gallery/gallery-photo-gallery.php'        => array(
                 'icon'        => $images_url . 'icon-gallery-128x128.png',
-                'name'        => __( 'Gallery Photo Gallery', $this->plugin_name ),
-                'desc'        => __( 'Create unlimited galleries and include unlimited images in those galleries.', $this->plugin_name ),
-                'desc_hidden' => __( 'Represent images in an attractive way. Attract people with your own single and multiple free galleries from your photo library.', $this->plugin_name ),
+                'name'        => __( 'Gallery Photo Gallery', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Create unlimited galleries and include unlimited images in those galleries.', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'Represent images in an attractive way. Attract people with your own single and multiple free galleries from your photo library.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/gallery-photo-gallery/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/photo-gallery/',
                 'url'         => $plugin_url_arr['gallery-photo-gallery'],
             ),
             'personal-dictionary/personal-dictionary.php'        => array(
                 'icon'        => $images_url . 'pd-logo-128x128.png',
-                'name'        => __( 'Personal Dictionary', $this->plugin_name ),
-                'desc'        => __( 'Allow your students to create personal dictionary, study and memorize the words.', $this->plugin_name ),
-                'desc_hidden' => __( 'Allow your users to create their own digital dictionaries and learn new words and terms as fastest as possible.', $this->plugin_name ),
+                'name'        => __( 'Personal Dictionary', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Allow your students to create personal dictionary, study and memorize the words.', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'Allow your users to create their own digital dictionaries and learn new words and terms as fastest as possible.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/personal-dictionary/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/personal-dictionary/',
                 'url'         => $plugin_url_arr['personal-dictionary'],
             ),
             'chart-builder/chart-builder.php'        => array(
                 'icon'        => $images_url . 'chartify-150x150.png',
-                'name'        => __( 'Chart Builder', $this->plugin_name ),
-                'desc'        => __( 'Chart Builder plugin allows you to create beautiful charts', $this->plugin_name ),
-                'desc_hidden' => __( ' and graphs easily and quickly.', $this->plugin_name ),
+                'name'        => __( 'Chart Builder', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Chart Builder plugin allows you to create beautiful charts', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( ' and graphs easily and quickly.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/chart-builder/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/chart-builder/',
                 'url'         => $plugin_url_arr['chart-builder'],
             ),
             'easy-form/easy-form.php'        => array(
                 'icon'        => $images_url . 'easyform-150x150.png',
-                'name'        => __( 'Easy Form', 'chart-builder' ),
-                'desc'        => __( 'Choose the best WordPress form builder plugin. ', 'chart-builder' ),
-                'desc_hidden' => __( 'Create contact forms, payment forms, surveys, and many more custom forms. Build forms easily with us.', 'chart-builder' ),
+                'name'        => __( 'Easy Form', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Choose the best WordPress form builder plugin. ', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'Create contact forms, payment forms, surveys, and many more custom forms. Build forms easily with us.', 'secure-copy-content-protection' ),
                 'wporg'       => 'https://wordpress.org/plugins/easy-form/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/easy-form',
                 'url'         => $plugin_url_arr['easy-form'],
@@ -1510,18 +1510,18 @@ class Secure_Copy_Content_Protection_Admin {
             if ( is_plugin_active( $plugin ) ) {
                 // Status text/status.
                 $plugin_data['status_class'] = 'status-active';
-                $plugin_data['status_text']  = esc_html__( 'Active', $this->plugin_name );
+                $plugin_data['status_text']  = esc_html__( 'Active', 'secure-copy-content-protection' );
                 // Button text/status.
                 $plugin_data['action_class'] = $plugin_data['status_class'] . ' ays-sccp-card__btn-info disabled';
-                $plugin_data['action_text']  = esc_html__( 'Activated', $this->plugin_name );
+                $plugin_data['action_text']  = esc_html__( 'Activated', 'secure-copy-content-protection' );
                 $plugin_data['plugin_src']   = esc_attr( $plugin );
             } else {
                 // Status text/status.
                 $plugin_data['status_class'] = 'status-installed';
-                $plugin_data['status_text']  = esc_html__( 'Inactive', $this->plugin_name );
+                $plugin_data['status_text']  = esc_html__( 'Inactive', 'secure-copy-content-protection' );
                 // Button text/status.
                 $plugin_data['action_class'] = $plugin_data['status_class'] . ' ays-sccp-card__btn-info';
-                $plugin_data['action_text']  = esc_html__( 'Activate', $this->plugin_name );
+                $plugin_data['action_text']  = esc_html__( 'Activate', 'secure-copy-content-protection' );
                 $plugin_data['plugin_src']   = esc_attr( $plugin );
             }
         } else {
@@ -1532,10 +1532,10 @@ class Secure_Copy_Content_Protection_Admin {
             if ( isset( $details['act'] ) && 'go-to-url' === $details['act'] ) {
                 $plugin_data['status_class'] = 'status-go-to-url';
             }
-            $plugin_data['status_text'] = esc_html__( 'Not Installed', $this->plugin_name );
+            $plugin_data['status_text'] = esc_html__( 'Not Installed', 'secure-copy-content-protection' );
             // Button text/status.
             $plugin_data['action_class'] = $plugin_data['status_class'] . ' ays-sccp-card__btn-info';
-            $plugin_data['action_text']  = esc_html__( 'Install Plugin', $this->plugin_name );
+            $plugin_data['action_text']  = esc_html__( 'Install Plugin', 'secure-copy-content-protection' );
             $plugin_data['plugin_src']   = esc_url( $details['url'] );
         }
 
@@ -1601,12 +1601,12 @@ class Secure_Copy_Content_Protection_Admin {
                         }
                         elseif ( $plugin_not_activated ) {
                             $content .= '<a href="'. esc_url( $details['wporg'] ) .'" target="_blank" rel="noopener noreferrer">
-                                '. esc_html_e( 'WordPress.org', $this->plugin_name ) .'
+                                '. esc_html_e( 'WordPress.org', 'secure-copy-content-protection' ) .'
                                 <span aria-hidden="true" class="dashicons dashicons-external"></span>
                             </a>';
                         }
             $content .='
-                        <a target="_blank" href="'. esc_url( $plugin_data['details']['buy_now'] ) .'" class="ays-sccp-card__btn-primary">'. __('Buy Now', $this->plugin_name) .'</a>
+                        <a target="_blank" href="'. esc_url( $plugin_data['details']['buy_now'] ) .'" class="ays-sccp-card__btn-primary">'. __('Buy Now', 'secure-copy-content-protection') .'</a>
                     </div>
                 </div>';
         }

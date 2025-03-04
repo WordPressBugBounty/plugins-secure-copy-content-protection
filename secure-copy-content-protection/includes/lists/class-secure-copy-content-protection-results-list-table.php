@@ -8,8 +8,8 @@ class Sccp_Results_List_Table extends WP_List_Table {
 	public function __construct( $plugin_name ) {
 		$this->plugin_name = $plugin_name;
 		parent::__construct(array(
-			'singular' => __('Result', $this->plugin_name), //singular name of the listed records
-			'plural'   => __('Results', $this->plugin_name), //plural name of the listed records
+			'singular' => __('Result', 'secure-copy-content-protection'), //singular name of the listed records
+			'plural'   => __('Results', 'secure-copy-content-protection'), //plural name of the listed records
 			'ajax'     => false, //does this table support ajax?
 		));
 		add_action('admin_notices', array($this, 'results_notices'));
@@ -319,7 +319,7 @@ class Sccp_Results_List_Table extends WP_List_Table {
 
 	/** Text displayed when no customer data is available */
 	public function no_items() {
-		_e('There are no results yet.', $this->plugin_name);
+		_e('There are no results yet.', 'secure-copy-content-protection');
 	}
 
 	/**
@@ -345,7 +345,7 @@ class Sccp_Results_List_Table extends WP_List_Table {
 			case 'user_id':
 				$display_name = (isset(get_user_by('ID', $item[$column_name])->display_name) &&  get_user_by('ID', $item[$column_name])->display_name != null) ? sanitize_text_field( get_user_by('ID', $item[$column_name])->display_name ) : 'Deleted User';	
 
-				return $item[$column_name] > 0 ? $display_name : __("Guest", $this->plugin_name);
+				return $item[$column_name] > 0 ? $display_name : __("Guest", 'secure-copy-content-protection');
 				break;
 			case 'user_roles':
 					$user_meta = get_userdata($item['user_id']);
@@ -418,15 +418,15 @@ class Sccp_Results_List_Table extends WP_List_Table {
 	function get_columns() {
 		$columns = array(
 			'cb'         	  	=> '<input type="checkbox" />',
-			'subscribe_id'    	=> __('Shortcode ID', $this->plugin_name),
-			'subscribe_email' 	=> __('User Email', $this->plugin_name),
-			'user_name' 		=> __('User Name', $this->plugin_name),
-			'user_ip'    		=> __('User IP', $this->plugin_name),
-			'user_id'    		=> __('WP User', $this->plugin_name),
-			'user_roles'    	=> __('User Role', $this->plugin_name),
-			'vote_date'  		=> __('Date', $this->plugin_name),
-			'unread'     		=> __('Read Status', $this->plugin_name),
-			'user_address'     	=> __('City, Country', $this->plugin_name)
+			'subscribe_id'    	=> __('Shortcode ID', 'secure-copy-content-protection'),
+			'subscribe_email' 	=> __('User Email', 'secure-copy-content-protection'),
+			'user_name' 		=> __('User Name', 'secure-copy-content-protection'),
+			'user_ip'    		=> __('User IP', 'secure-copy-content-protection'),
+			'user_id'    		=> __('WP User', 'secure-copy-content-protection'),
+			'user_roles'    	=> __('User Role', 'secure-copy-content-protection'),
+			'vote_date'  		=> __('Date', 'secure-copy-content-protection'),
+			'unread'     		=> __('Read Status', 'secure-copy-content-protection'),
+			'user_address'     	=> __('City, Country', 'secure-copy-content-protection')
 		);
 
 		return $columns;
@@ -460,9 +460,9 @@ class Sccp_Results_List_Table extends WP_List_Table {
 	 */
 	public function get_bulk_actions() {
 		$actions = array(
-			'bulk-mark-as-read' => __( 'Mark as read', $this->plugin_name),
-            'mark-as-unread'    => __( 'Mark as unread', $this->plugin_name),
-			'bulk-delete'       => __( 'Delete', $this->plugin_name),
+			'bulk-mark-as-read' => __( 'Mark as read', 'secure-copy-content-protection'),
+            'mark-as-unread'    => __( 'Mark as unread', 'secure-copy-content-protection'),
+			'bulk-delete'       => __( 'Delete', 'secure-copy-content-protection'),
 		);
 
 		return $actions;
@@ -591,7 +591,7 @@ class Sccp_Results_List_Table extends WP_List_Table {
 		}
 
 		if ('deleted' == $status) {
-			$updated_message = esc_html(__('Result deleted.', $this->plugin_name));
+			$updated_message = esc_html(__('Result deleted.', 'secure-copy-content-protection'));
 		}
 
 		if (empty($updated_message)) {

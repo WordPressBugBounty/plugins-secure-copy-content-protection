@@ -17,21 +17,21 @@ $block_subscribe = array_reverse($data);
 
 $loader_iamge = "<span class='ays_display_none ays_sccp_loader_box'><img src='". SCCP_ADMIN_URL ."/images/loaders/loading.gif'></span>";
 
-$plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plus=icon.svg'></span>";
+$plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plus_icon.svg'></span>";
 ?>
 <div class="wrap ays-sccp-subscribe-block" style="position:relative;">
     <div class="ays-sccp-heading-box">
         <div class="ays-sccp-wordpress-user-manual-box">
             <a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank" style="text-decoration: none;font-size: 13px;">
                 <i class="ays_fa ays_fa_file_text"></i>
-                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", $this->plugin_name); ?></span>
+                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", 'secure-copy-content-protection'); ?></span>
             </a>
         </div>
     </div>
     <div class="container-fluid">
         <form method="post">
             <h1 class="wp-heading-inline">
-                <?php echo __('Subscribe to view', $this->plugin_name); ?>
+                <?php echo __('Subscribe to view', 'secure-copy-content-protection'); ?>
             </h1>
             <?php
             if (isset($_REQUEST['status'])) {
@@ -46,7 +46,7 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                     'data-toggle' => 'tooltip',
                     'data-delay'=> '{"show":"1000"}'
                 );
-                submit_button(__('Save changes', $this->plugin_name), 'primary ays-button ays-sccp-save-comp', 'ays_submit', false, $save_attributes);
+                submit_button(__('Save changes', 'secure-copy-content-protection'), 'primary ays-button ays-sccp-save-comp', 'ays_submit', false, $save_attributes);
                 echo $loader_iamge;
                 ?>
             </div>
@@ -54,7 +54,7 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
             <div class="row">        
                 <div class="col-sm-12">
                     <p style="font-size:14px; font-style:italic;margin:0px;">
-                        <?php echo __("Hide the content of your website and display it only for the users who have subscribed. The users who are not subscribed will see the hidden content. Only after providing their email, they will be able to see the content. For activating this option you will need to use the below mention shortcode. Add the first part of the shortcode at the beginning of the content which you want to be hidden and the second part add after the hidden content.", $this->plugin_name); ?>
+                        <?php echo __("Hide the content of your website and display it only for the users who have subscribed. The users who are not subscribed will see the hidden content. Only after providing their email, they will be able to see the content. For activating this option you will need to use the below mention shortcode. Add the first part of the shortcode at the beginning of the content which you want to be hidden and the second part add after the hidden content.", 'secure-copy-content-protection'); ?>
                             
                     </p>           
                 </div>
@@ -66,7 +66,7 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                         style="margin-bottom: 20px">
                         <?php 
                             echo $plus_icon_svg; 
-                            echo __('Add new', $this->plugin_name);                        
+                            echo __('Add new', 'secure-copy-content-protection');                        
                         ?>
                 </button>
                 <div class="all_block_subscribes" data-last-id="<?php echo $bs_last_id; ?>">
@@ -84,7 +84,7 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                                 <div class="col sccp_block_sub">
                                     <div class="sccp_block_sub_label_inp">
                                         <div class="sccp_block_sub_label">
-                                            <label for="sccp_block_subscribe_shortcode_<?php echo $block_id; ?>" class="sccp_bc_label"><?= __('Shortcode', $this->plugin_name); ?></label>
+                                            <label for="sccp_block_subscribe_shortcode_<?php echo $block_id; ?>" class="sccp_bc_label"><?= __('Shortcode', 'secure-copy-content-protection'); ?></label>
                                         </div>                                    
                                         <div class="sccp_block_sub_inp">
                                             <input type="text" name="sccp_block_subscribe_shortcode[]" id="sccp_block_subscribe_shortcode_<?php echo $block_id; ?>"
@@ -97,9 +97,9 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                                         <hr>
                                         <div class="copy_protection_container row">
                                             <div class="col-sm-4">
-                                                <label for="sccp_enable_block_sub_name_field_<?php echo $block_id; ?>"><?= __("Name field", $this->plugin_name); ?></label>
+                                                <label for="sccp_enable_block_sub_name_field_<?php echo $block_id; ?>"><?= __("Name field", 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Tick the checkbox to show the Name field', $this->plugin_name) ?>">
+                                                   title="<?= __('Tick the checkbox to show the Name field', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -114,9 +114,9 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                                         <hr/>
                                         <div class="copy_protection_container row block_sub_description">
                                             <div class="col-sm-4">
-                                                <label for="sccp_enable_block_sub_desc_field_<?php echo $block_id; ?>"><?= __("Description field", $this->plugin_name); ?></label>
+                                                <label for="sccp_enable_block_sub_desc_field_<?php echo $block_id; ?>"><?= __("Description field", 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Tick the checkbox to show the Description field', $this->plugin_name) ?>">
+                                                   title="<?= __('Tick the checkbox to show the Description field', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -133,7 +133,7 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                                         </div>                          
                                     </div>
                                     <div class="sccp_block_sub_inp_row">
-                                        <div class="sccp_pro " title="<?= __('This feature will available in PRO version', $this->plugin_name); ?>">
+                                        <div class="sccp_pro " title="<?= __('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
                                             <div class="pro_features sccp_general_pro">
                                                 <div>
                                                     <a href="https://ays-pro.com/wordpress/secure-copy-content-protection/" target="_blank" class="ays-sccp-new-upgrade-button-link">
@@ -142,13 +142,13 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                                                                 <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>">
                                                                 <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">
                                                             </div>
-                                                            <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", $this->plugin_name); ?></div>
+                                                            <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", 'secure-copy-content-protection'); ?></div>
                                                         </div>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="sccp_block_sub_label">
-                                                <label for="sccp_require_verification_<?php echo $block_id; ?>" class="sccp_bc_label"><?= __('Require verification', $this->plugin_name); ?></label>
+                                                <label for="sccp_require_verification_<?php echo $block_id; ?>" class="sccp_bc_label"><?= __('Require verification', 'secure-copy-content-protection'); ?></label>
                                             </div>
                                             <div class="sccp_block_sub_inp">
                                                 <input type="checkbox" name="sccp_subscribe_require_verification[]" id="sccp_require_verification_<?php echo $block_id; ?>"
@@ -174,7 +174,7 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                         style="margin-top: 20px">
                         <?php 
                             echo $plus_icon_svg; 
-                            echo __('Add new', $this->plugin_name);                        
+                            echo __('Add new', 'secure-copy-content-protection');                        
                         ?>                        
                 </button> 
                 <hr/>                        
@@ -187,7 +187,7 @@ $plus_icon_svg = "<span class=''><img src='". SCCP_ADMIN_URL ."/images/icons/plu
                     'data-toggle' => 'tooltip',
                     'data-delay'=> '{"show":"1000"}'
                 );
-                submit_button(__('Save changes', $this->plugin_name), 'primary ays-button ays-sccp-save-comp', 'ays_submit', false, $save_bottom_attributes);
+                submit_button(__('Save changes', 'secure-copy-content-protection'), 'primary ays-button ays-sccp-save-comp', 'ays_submit', false, $save_bottom_attributes);
                 echo $loader_iamge;
                 ?>
             </div>

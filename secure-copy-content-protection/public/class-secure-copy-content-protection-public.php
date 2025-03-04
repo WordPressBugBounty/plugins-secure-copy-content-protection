@@ -236,7 +236,7 @@ class Secure_Copy_Content_Protection_Public {
 		
 
         // Subscribe button text
-		$sub_button_text = (isset($subscribe_settings['sccp_sub_button_text']) && $subscribe_settings['sccp_sub_button_text'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_button_text']) ) : __('Subscribe', $this->plugin_name);
+		$sub_button_text = (isset($subscribe_settings['sccp_sub_button_text']) && $subscribe_settings['sccp_sub_button_text'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_button_text']) ) : __('Subscribe', 'secure-copy-content-protection');
 
 		// Subscribe Add Icon image
 		$sccp_sub_icon_image = isset($subscribe_settings["sub_icon_image"]) && !empty($subscribe_settings["sub_icon_image"]) ? $subscribe_settings["sub_icon_image"] : SCCP_PUBLIC_URL.'/images/email.png';
@@ -322,17 +322,17 @@ class Secure_Copy_Content_Protection_Public {
 
 
         // Subscribe email placeholder text
-		$sub_email_place_text = (isset($subscribe_settings['sccp_sub_email_place_text']) && $subscribe_settings['sccp_sub_email_place_text'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_email_place_text']) ) : __('Type your email address', $this->plugin_name);
+		$sub_email_place_text = (isset($subscribe_settings['sccp_sub_email_place_text']) && $subscribe_settings['sccp_sub_email_place_text'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_email_place_text']) ) : __('Type your email address', 'secure-copy-content-protection');
 
         // Subscribe name placeholder text
-		$sub_name_place_text = (isset($subscribe_settings['sccp_sub_name_place_text']) && $subscribe_settings['sccp_sub_name_place_text'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_name_place_text']) ) : __('Type your name', $this->plugin_name);
+		$sub_name_place_text = (isset($subscribe_settings['sccp_sub_name_place_text']) && $subscribe_settings['sccp_sub_name_place_text'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_name_place_text']) ) : __('Type your name', 'secure-copy-content-protection');
 
 		// Subscribe box text alignment
         $sccp_sub_text_alignment = (isset($subscribe_settings['sccp_sub_text_alignment']) && sanitize_text_field( $subscribe_settings['sccp_sub_text_alignment'] ) != '') ? sanitize_text_field( $subscribe_settings['sccp_sub_text_alignment'] ) : 'center';
 
 		$consub_div = 'style="'.$sub_width.' '.$sub_text_color.' '.$sub_bg_color.' '.$sub_cont_border_style.' '.$sub_cont_border_width.' '.$sccp_sub_cont_border_color.' '.$sccp_sub_bg_image.' '.$sccp_sub_bg_image_position.'"';
 
-		$subs_to_view_header_text = isset($ays_sccp_data["subs_to_view_header_text"]) && !empty($ays_sccp_data["subs_to_view_header_text"]) ? stripslashes($ays_sccp_data["subs_to_view_header_text"]) : __('Subscribe', $this->plugin_name);
+		$subs_to_view_header_text = isset($ays_sccp_data["subs_to_view_header_text"]) && !empty($ays_sccp_data["subs_to_view_header_text"]) ? stripslashes($ays_sccp_data["subs_to_view_header_text"]) : __('Subscribe', 'secure-copy-content-protection');
 
 		$sub_block_button_position = isset($ays_sccp_data["sccp_sub_block_button_position"]) && $ays_sccp_data["sccp_sub_block_button_position"] != '' ? $ays_sccp_data["sccp_sub_block_button_position"] : 'next-to';
 
@@ -574,10 +574,10 @@ class Secure_Copy_Content_Protection_Public {
 		$sccp_bc_bg_image_position = (isset($block_content_settings["bc_bg_image_position"]) && $block_content_settings["bc_bg_image_position"] != '') ? 'background-position:'. $block_content_settings["bc_bg_image_position"] .';' : "background-position:center center;";
 
 		// Block content button text
-		$bc_button_text = (isset($block_content_settings['sccp_bc_button_text']) && $block_content_settings['sccp_bc_button_text'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_button_text']) ) : __('Submit', $this->plugin_name);
+		$bc_button_text = (isset($block_content_settings['sccp_bc_button_text']) && $block_content_settings['sccp_bc_button_text'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_button_text']) ) : __('Submit', 'secure-copy-content-protection');
 
 		// Block content paswword placeholder text
-		$bc_psw_place_text = (isset($block_content_settings['sccp_bc_psw_place_text']) && $block_content_settings['sccp_bc_psw_place_text'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_psw_place_text']) ) : __('Password', $this->plugin_name);
+		$bc_psw_place_text = (isset($block_content_settings['sccp_bc_psw_place_text']) && $block_content_settings['sccp_bc_psw_place_text'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_psw_place_text']) ) : __('Password', 'secure-copy-content-protection');
 
 		// Block content Container border style
 		$bc_cont_border_style = (isset($block_content_settings['bc_cont_border_style']) && $block_content_settings['bc_cont_border_style'] != '') ? $block_content_settings['bc_cont_border_style'] : 'double';
@@ -740,7 +740,7 @@ class Secure_Copy_Content_Protection_Public {
 					$sccp_result = $wpdb->get_row("SELECT * FROM " . $sccp_table . " WHERE id = 1", ARRAY_A);
 					$sccp_data   = json_decode($sccp_result["options"], true);
 
-					$bc_header_text = isset($sccp_data["bc_header_text"]) && !empty($sccp_data["bc_header_text"]) ? stripslashes($sccp_data["bc_header_text"]) : __('You need to Enter right password', $this->plugin_name);
+					$bc_header_text = isset($sccp_data["bc_header_text"]) && !empty($sccp_data["bc_header_text"]) ? stripslashes($sccp_data["bc_header_text"]) : __('You need to Enter right password', 'secure-copy-content-protection');
 
 					$bc_button_position = isset($sccp_data["sccp_bc_button_position"]) && $sccp_data["sccp_bc_button_position"] != '' ? $sccp_data["sccp_bc_button_position"] : 'next-to';
 
@@ -918,7 +918,7 @@ class Secure_Copy_Content_Protection_Public {
 				"tooltip_bg_image_position" => "center center",
 				"tooltip_bg_image_object_fit" => "cover",
 			);
-			$notf_text         = __('You cannot copy content of this page', $this->plugin_name);
+			$notf_text         = __('You cannot copy content of this page', 'secure-copy-content-protection');
 			$audio             = '';
 		} else {
 			$sccp_table = esc_sql(SCCP_TABLE);
@@ -1175,7 +1175,7 @@ class Secure_Copy_Content_Protection_Public {
 
 		if (isset($options['disable_js']) && $options['disable_js'] == 'checked') {
 
-			$disable_js_msg = isset($options["disable_js_msg"]) && !empty($options["disable_js_msg"]) ? stripslashes($options["disable_js_msg"]) : __('Javascript not detected. Javascript required for this site to function. Please enable it in your browser settings and refresh this page.', $this->plugin_name);
+			$disable_js_msg = isset($options["disable_js_msg"]) && !empty($options["disable_js_msg"]) ? stripslashes($options["disable_js_msg"]) : __('Javascript not detected. Javascript required for this site to function. Please enable it in your browser settings and refresh this page.', 'secure-copy-content-protection');
 
 			echo '<div id="ays_noscript" style="display:none;">
 					<p>'.$disable_js_msg.'</p>

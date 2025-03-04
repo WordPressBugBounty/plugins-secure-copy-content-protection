@@ -13,11 +13,11 @@ class Secure_Copy_Content_Protection_Actions {
 		if (isset($data["sccp_action"]) && wp_verify_nonce($data["sccp_action"], 'sccp_action')) {
 			$enable_protection = isset($data['sccp_enable_all_posts']) ? true : false;
 			$except_types      = isset($data['sccp_except_post_types']) ? json_encode($data['sccp_except_post_types']) : '';
-			$protection_text   = isset($data['sccp_notification_text']) ? stripslashes($data['sccp_notification_text']) : __('You cannot copy content of this page', $this->plugin_name);
+			$protection_text   = isset($data['sccp_notification_text']) ? stripslashes($data['sccp_notification_text']) : __('You cannot copy content of this page', 'secure-copy-content-protection');
 			$audio             = isset( $data['upload_audio_url'] ) ? esc_sql( sanitize_text_field( $data['upload_audio_url'] ) ) : "";
 
 			// MailChimp general settings
-			$sccp_settings = new Sccp_Settings_Actions($this->plugin_name);
+			$sccp_settings = new Sccp_Settings_Actions('secure-copy-content-protection');
 
 			$mailchimp_res      = ($sccp_settings->ays_get_setting('mailchimp') === false) ? json_encode(array()) : $sccp_settings->ays_get_setting('mailchimp');
 			$mailchimp          = json_decode($mailchimp_res, true);
@@ -127,7 +127,7 @@ class Secure_Copy_Content_Protection_Actions {
 				"mobile_img_mess"      => (isset($data["sccp_enable_mobile_img_mess"])) ? "checked" : "",
 				"msg_only_once"        => (isset($data["sccp_show_msg_only_once"])) ? "checked" : "",
 				"disable_js"      	   => (isset($data["sccp_access_disable_js"])) ? "checked" : "",
-				"disable_js_msg"       => isset($data['ays_disabled_js_msg']) ? stripslashes($data['ays_disabled_js_msg']) : __('Javascript not detected. Javascript required for this site to function. Please enable it in your browser settings and refresh this page.', $this->plugin_name),
+				"disable_js_msg"       => isset($data['ays_disabled_js_msg']) ? stripslashes($data['ays_disabled_js_msg']) : __('Javascript not detected. Javascript required for this site to function. Please enable it in your browser settings and refresh this page.', 'secure-copy-content-protection'),
 				"drag_start_mess"      => (isset($data["sccp_enable_drag_start_mess"])) ? "checked" : "",
 				"ctrlc_mess"           => (isset($data["sccp_enable_ctrlc_mess"])) ? "checked" : "",
 				"ctrlv_mess"           => (isset($data["sccp_enable_ctrlv_mess"])) ? "checked" : "",
@@ -183,9 +183,9 @@ class Secure_Copy_Content_Protection_Actions {
 
 				"enable_text_selecting" => (isset($data["sccp_enable_text_selecting"])) ? "checked" : "",
 				"timeout"               => (isset($data["sscp_timeout"]) && $data["sscp_timeout"] > 0) ? absint($data["sscp_timeout"]) : 1000,
-				"bc_header_text"        => isset($data['sccp_bc_header_text']) ? stripslashes($data['sccp_bc_header_text']) : __('You need to Enter right password', $this->plugin_name),
+				"bc_header_text"        => isset($data['sccp_bc_header_text']) ? stripslashes($data['sccp_bc_header_text']) : __('You need to Enter right password', 'secure-copy-content-protection'),
 				"sccp_bc_button_position"        => (isset($data['sccp_bc_button_position']) && $data['sccp_bc_button_position'] != '' )? $data['sccp_bc_button_position'] : 'next-to',
-				"subs_to_view_header_text"        => isset($data['sccp_subscribe_block_header_text']) ? stripslashes($data['sccp_subscribe_block_header_text']) : __('Subscribe', $this->plugin_name),
+				"subs_to_view_header_text"        => isset($data['sccp_subscribe_block_header_text']) ? stripslashes($data['sccp_subscribe_block_header_text']) : __('Subscribe', 'secure-copy-content-protection'),
 				"sccp_sub_block_button_position"        => (isset($data['sccp_sub_block_button_position']) && $data['sccp_sub_block_button_position'] != '' )? $data['sccp_sub_block_button_position'] : 'next-to',
 				"enable_copyright_text" => (isset($data["sccp_enable_copyright_text"]) && sanitize_text_field( $data['sccp_enable_copyright_text'] ) == 'on') ? "on" : "off",
 				"copyright_text" => (isset($data["sccp_copyright_text"]) && sanitize_text_field( $data['sccp_copyright_text'] ) != '') ? $data["sccp_copyright_text"] : "",
@@ -376,7 +376,7 @@ class Secure_Copy_Content_Protection_Actions {
 		if (!empty($data)) {
 			$enable_protection = (isset($data['protection_status']) && $data['protection_status'] == 1) ? "checked" : "";
 			$except_types      = (isset($data['except_post_types'])) ? json_decode($data['except_post_types']) : array();
-			$protection_text   = (isset($data['protection_text']) && $data['protection_text'] != "") ? wpautop(stripslashes($data['protection_text'])) : __('You cannot copy content of this page', $this->plugin_name);
+			$protection_text   = (isset($data['protection_text']) && $data['protection_text'] != "") ? wpautop(stripslashes($data['protection_text'])) : __('You cannot copy content of this page', 'secure-copy-content-protection');
 			$audio             = (isset($data['audio']) && $data['audio'] != "") ? $data['audio'] : '';
 			$styles            = (isset($data['styles']) && $data['styles'] != "") ? json_decode($data['styles'], true) : array(
 				"bg_color"         		=> "#ffffff",
@@ -471,7 +471,7 @@ class Secure_Copy_Content_Protection_Actions {
 		} else {
 			$enable_protection = "checked";
 			$except_types      = array();
-			$protection_text   = __('You cannot copy content of this page', $this->plugin_name);
+			$protection_text   = __('You cannot copy content of this page', 'secure-copy-content-protection');
 			$audio             = '';
 			$styles            = array(
 				"bg_color"         		=> "#ffffff",
@@ -610,19 +610,17 @@ class Secure_Copy_Content_Protection_Actions {
 		}
 		$updated_message = '';
 		if ($status == 'saved') {
-			$updated_message = esc_html(__('Changes saved.', $this->plugin_name));
+			$updated_message = esc_html(__('Changes saved.', 'secure-copy-content-protection'));
 		} 
 
 		if (empty($updated_message)) {
 			return;
 		}
-		
-		$content = '<div class="notice notice-success is-dismissible" style="margin-top:20px">
-						<p>
-							'.$updated_message.'
-						</p>
-					</div>';
-		echo $content;
-		
+
+		?>
+        <div class="notice notice-success is-dismissible" style="margin-top:20px">
+            <p> <?php echo esc_html($updated_message); ?> </p>
+        </div>
+        <?php 
 	}
 }
