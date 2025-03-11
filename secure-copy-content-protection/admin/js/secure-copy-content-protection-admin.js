@@ -442,6 +442,9 @@
             $(document).find("#enable_ays_sub_title_transformation_mobile").prop('checked', true).change();
             
             $(document).find('#ays_sccp_sub_cont_border_style').val('solid').change();
+            $(document).find('#ays_sccp_sub_cont_border_style_mobile').val('solid').change();
+            $(document).find("#enable_ays_sccp_sub_cont_border_style_mobile").prop('checked', true).change();
+            
             $(document).find('#ays_sccp_sub_cont_border_color').val('#000').change();
             $(document).find('#ays_sccp_sub_cont_border_width').val('1').change();
             $(document).find('#ays_sccp_sub_input_width').val('').change();

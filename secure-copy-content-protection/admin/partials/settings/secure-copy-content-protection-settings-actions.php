@@ -120,8 +120,14 @@ class Sccp_Settings_Actions {
             // Buttons border style
             $sub_btn_border_style = (isset($data['ays_sccp_sub_btn_border_style']) && $data['ays_sccp_sub_btn_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_sub_btn_border_style'] ) : 'solid';
 
-            // Container border style
+            // Subscribe Container border style
             $sub_cont_border_style = (isset($data['ays_sccp_sub_cont_border_style']) && $data['ays_sccp_sub_cont_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_sub_cont_border_style'] ) : 'solid';
+
+            // Enable Subscribe Container border style Mobile
+            $enable_sub_cont_border_style_mobile = isset( $data['enable_ays_sccp_sub_cont_border_style_mobile'] ) && $data['enable_ays_sccp_sub_cont_border_style_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Container border style Mobile
+            $sub_cont_border_style_mobile = isset( $data['ays_sccp_sub_cont_border_style_mobile'] ) && $data['ays_sccp_sub_cont_border_style_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_cont_border_style_mobile'] ) : 'solid';
 
             // Buttons Left / Right padding
             $buttons_left_right_padding = (isset($data['ays_sub_btn_left_right_padding']) && $data['ays_sub_btn_left_right_padding'] != "") ? $data['ays_sub_btn_left_right_padding'] : '20';
@@ -185,6 +191,8 @@ class Sccp_Settings_Actions {
                 "sub_cont_border_width"                     => $sub_cont_border_width,
                 "sub_btn_border_style"                      => $sub_btn_border_style,
                 "sub_cont_border_style"                     => $sub_cont_border_style,
+                "enable_sub_cont_border_style_mobile"       => $enable_sub_cont_border_style_mobile,
+                "sub_cont_border_style_mobile"              => $sub_cont_border_style_mobile,
                 "sub_btn_left_right_padding"                => $buttons_left_right_padding,
                 "sub_btn_top_bottom_padding"                => $buttons_top_bottom_padding,
                 "sccp_sub_text_alignment"                   => $sccp_sub_text_alignment,

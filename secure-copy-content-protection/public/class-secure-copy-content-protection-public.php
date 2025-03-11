@@ -285,8 +285,18 @@ class Secure_Copy_Content_Protection_Public {
 		// Buttons border style
 		$ays_sccp_sub_btn_border_style = (isset($subscribe_settings['sub_btn_border_style']) && $subscribe_settings['sub_btn_border_style'] != '') ? $subscribe_settings['sub_btn_border_style'] : 'solid';
 
-		// Container border style
+		// Subscribe Container border style
 		$sub_cont_border_style = (isset($subscribe_settings['sub_cont_border_style']) && $subscribe_settings['sub_cont_border_style'] != '') ? 'border-style: '. $subscribe_settings['sub_cont_border_style'] .';' : 'border-style: solid;';
+
+		// Subscribe box Enable Container border Mobile
+        $subscribe_settings['enable_sub_cont_border_style_mobile'] = ( isset( $subscribe_settings['enable_sub_cont_border_style_mobile'] ) && $subscribe_settings['enable_sub_cont_border_style_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Container border Mobile
+        if ( $subscribe_settings['enable_sub_cont_border_style_mobile'] ) {
+            $sub_cont_border_style_mobile = ( isset( $subscribe_settings['sub_cont_border_style_mobile'] ) && $subscribe_settings['sub_cont_border_style_mobile'] != '' ) ?  'border-style: '. $subscribe_settings['sub_cont_border_style_mobile'] .' !important;' : $sub_cont_border_style;
+        } else {
+            $sub_cont_border_style_mobile = $sub_cont_border_style;
+        }
 
 		// Container border width
 		$sub_cont_border_width = (isset($subscribe_settings['sub_cont_border_width']) && $subscribe_settings['sub_cont_border_width'] != '') ? 'border-width: '. $subscribe_settings['sub_cont_border_width'] .'px;': '';
@@ -395,6 +405,7 @@ class Secure_Copy_Content_Protection_Public {
 					    '. $sub_text_color_mobile .'
 					    '. $sub_bg_color_mobile .'
 					    '. $sub_bg_image_position_mobile .'
+					    '. $sub_cont_border_style_mobile .'
 					}
 
 					p.consub_para.consub_para_desc {
