@@ -446,6 +446,9 @@
             $(document).find("#enable_ays_sccp_sub_cont_border_style_mobile").prop('checked', true).change();
             
             $(document).find('#ays_sccp_sub_cont_border_color').val('#000').change();
+            $(document).find('#ays_sccp_sub_cont_border_color_mobile').val('#000').change();
+            $(document).find("#enable_ays_sccp_sub_cont_border_color_mobile").prop('checked', true).change();
+            
             $(document).find('#ays_sccp_sub_cont_border_width').val('1').change();
             $(document).find('#ays_sccp_sub_input_width').val('').change();
             $(document).find('#ays_sccp_sub_button_text').val('Subscribe').change();
@@ -564,6 +567,9 @@
             defaultColor: '#c5c5c5',
         });
         $('#ays_sccp_sub_cont_border_color').wpColorPicker({
+            defaultColor: '#000000',            
+        });
+        $('#ays_sccp_sub_cont_border_color_mobile').wpColorPicker({
             defaultColor: '#000000',            
         });
         $('#ays_sccp_bc_cont_border_color').wpColorPicker({

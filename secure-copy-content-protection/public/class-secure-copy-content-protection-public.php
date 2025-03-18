@@ -312,9 +312,20 @@ class Secure_Copy_Content_Protection_Public {
 		// Container border color
 		$ays_sccp_sub_cont_border_color = (isset($subscribe_settings['sub_cont_border_color']) && $subscribe_settings['sub_cont_border_color'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_cont_border_color'] ) ) : '#000000';
 
+		// Subscribe box Enable Container border color Mobile
+        $subscribe_settings['enable_sub_cont_border_color_mobile'] = ( isset( $subscribe_settings['enable_sub_cont_border_color_mobile'] ) && $subscribe_settings['enable_sub_cont_border_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Container border color Mobile
+        if ( $subscribe_settings['enable_sub_cont_border_color_mobile'] ) {
+            $ays_sccp_sub_cont_border_color_mobile = ( isset( $subscribe_settings['sub_cont_border_color_mobile'] ) && $subscribe_settings['sub_cont_border_color_mobile'] != '' ) ?  stripslashes( esc_attr( $subscribe_settings['sub_cont_border_color_mobile'] ) ) : $ays_sccp_sub_cont_border_color;
+        } else {
+            $ays_sccp_sub_cont_border_color_mobile = $ays_sccp_sub_cont_border_color;
+        }
+
 		$sccp_sub_btn_border_color = $ays_sccp_enable_sub_btn_style ? 'border-color:'.$ays_sccp_sub_btn_border_color.';' : '';
 
 		$sccp_sub_cont_border_color = 'border-color:'.$ays_sccp_sub_cont_border_color.';';
+		$sccp_sub_cont_border_color_mobile = 'border-color:'.$ays_sccp_sub_cont_border_color_mobile.' !important;';
 
 		// Buttons Left / Right padding
         $sccp_sub_btn_left_right_padding = '20px';
@@ -406,6 +417,7 @@ class Secure_Copy_Content_Protection_Public {
 					    '. $sub_bg_color_mobile .'
 					    '. $sub_bg_image_position_mobile .'
 					    '. $sub_cont_border_style_mobile .'
+					    '. $sccp_sub_cont_border_color_mobile .'
 					}
 
 					p.consub_para.consub_para_desc {
@@ -1139,6 +1151,11 @@ class Secure_Copy_Content_Protection_Public {
 
 			echo '<div id="ays_tooltip" '.$custom_class.'><div id="ays_tooltip_block">' . $notf_text . '</div></div>
                     <style>
+                    	* {
+						    -webkit-touch-callout: none !important; 
+						    -webkit-user-select: none !important; 
+						    user-select: none !important;
+					  	}
                         #ays_tooltip,.ays_tooltip_class {
                     		display: none;
                     		position: absolute;

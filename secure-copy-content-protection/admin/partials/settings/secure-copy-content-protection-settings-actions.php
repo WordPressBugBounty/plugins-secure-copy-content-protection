@@ -103,7 +103,14 @@ class Sccp_Settings_Actions {
 
             $sub_btn_border_color = (isset($data['ays_sccp_sub_btn_border_color']) && $data['ays_sccp_sub_btn_border_color'] != '') ? sanitize_text_field($data['ays_sccp_sub_btn_border_color']) : '#000000';
 
+            // Subscribe Container border color
             $sub_cont_border_color = (isset($data['ays_sccp_sub_cont_border_color']) && $data['ays_sccp_sub_cont_border_color'] != '') ? sanitize_text_field($data['ays_sccp_sub_cont_border_color']) : '#000000';
+
+            // Enable Subscribe Container border color Mobile
+            $enable_sub_cont_border_color_mobile = isset( $data['enable_ays_sccp_sub_cont_border_color_mobile'] ) && $data['enable_ays_sccp_sub_cont_border_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Container border color Mobile
+            $sub_cont_border_color_mobile = isset( $data['ays_sccp_sub_cont_border_color_mobile'] ) && $data['ays_sccp_sub_cont_border_color_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_cont_border_color_mobile'] ) : '#000';
 
             $sub_btn_size = (isset($data['ays_sccp_sub_btn_size']) && $data['ays_sccp_sub_btn_size'] != '') ? sanitize_text_field($data['ays_sccp_sub_btn_size']) : '14';
 
@@ -184,6 +191,8 @@ class Sccp_Settings_Actions {
                 "sub_btn_text_color"                        => $sub_btn_text_color,
                 "sub_btn_border_color"                      => $sub_btn_border_color,
                 "sub_cont_border_color"                     => $sub_cont_border_color,
+                "enable_sub_cont_border_color_mobile"       => $enable_sub_cont_border_color_mobile,
+                "sub_cont_border_color_mobile"              => $sub_cont_border_color_mobile,
                 "sub_btn_size"                              => $sub_btn_size,
                 "sub_mobile_btn_size"                       => $sub_mobile_btn_size,
                 "sub_btn_radius"                            => $sub_btn_radius,
