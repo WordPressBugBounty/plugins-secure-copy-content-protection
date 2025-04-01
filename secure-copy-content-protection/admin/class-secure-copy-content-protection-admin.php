@@ -807,13 +807,13 @@ class Secure_Copy_Content_Protection_Admin {
                 <div class="ays-sccp-footer-support-box">
                     <span class="ays-sccp-footer-link-row"><a href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html(__( "Support", 'secure-copy-content-protection') ); ?></a></span>
                     <span class="ays-sccp-footer-slash-row">/</span>
-                    <span class="ays-sccp-footer-link-row"><a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank"><?php echo __( "Docs", 'secure-copy-content-protection'); ?></a></span>
+                    <span class="ays-sccp-footer-link-row"><a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank"><?php echo esc_html(__( "Docs", 'secure-copy-content-protection')); ?></a></span>
                     <span class="ays-sccp-footer-slash-row">/</span>
-                    <span class="ays-sccp-footer-link-row"><a href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank"><?php echo __( "Suggest a Feature", 'secure-copy-content-protection'); ?></a></span>
+                    <span class="ays-sccp-footer-link-row"><a href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank"><?php echo esc_html(__( "Suggest a Feature", 'secure-copy-content-protection')); ?></a></span>
                 </div>
                 <p style="font-size:13px;text-align:center;font-style:italic;">
                     <span style="margin-left:0px;margin-right:10px;" class="ays_heart_beat"><i class="ays_fa ays_fa_heart animated"></i></span>
-                    <span><?php echo __( "If you love our plugin, please do big favor and rate us on", 'secure-copy-content-protection'); ?></span> 
+                    <span><?php echo esc_html(__( "If you love our plugin, please do big favor and rate us on", 'secure-copy-content-protection')); ?></span> 
                     <a target="_blank" href='https://wordpress.org/support/plugin/secure-copy-content-protection/reviews/?rate=5#new-post'>WordPress.org</a>
                     <a target="_blank" class="ays-rated-link" href='https://wordpress.org/support/plugin/secure-copy-content-protection/reviews/'>
                         <span class="ays-dashicons ays-dashicons-star-empty"></span>
@@ -1614,7 +1614,7 @@ class Secure_Copy_Content_Protection_Admin {
         $content.= '<input type="hidden" id="ays_sccp_ajax_install_plugin_nonce" name="ays_sccp_ajax_install_plugin_nonce" value="'. $install_plugin_nonce .'">';
         $content.= '</div>';
 
-        echo $content;
+        echo wp_kses_post($content);
     }
 
 }

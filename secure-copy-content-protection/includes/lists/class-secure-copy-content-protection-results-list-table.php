@@ -319,7 +319,7 @@ class Sccp_Results_List_Table extends WP_List_Table {
 
 	/** Text displayed when no customer data is available */
 	public function no_items() {
-		_e('There are no results yet.', 'secure-copy-content-protection');
+		esc_html_e('There are no results yet.', 'secure-copy-content-protection');
 	}
 
 	/**
@@ -600,7 +600,7 @@ class Sccp_Results_List_Table extends WP_List_Table {
 
 		?>
         <div class="notice notice-success is-dismissible">
-            <p> <?php echo $updated_message; ?> </p>
+            <p> <?php echo esc_html($updated_message); ?> </p>
         </div>
 		<?php
 	}

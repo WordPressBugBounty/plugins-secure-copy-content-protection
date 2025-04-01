@@ -230,7 +230,7 @@ $sccp_accordion_svg_html = '
                 <form autocomplete="off" method="post" enctype="multipart/form-data" id="ays_sccp_form">
                     <input type="hidden" class="sccp_wp_editor_height" value="<?php echo $sccp_wp_editor_height; ?>">
                     <h1 class="wp-heading-inline">
-                        <?= esc_html(get_admin_page_title()); ?>                        
+                        <?php echo  esc_html(get_admin_page_title()); ?>                        
                     </h1>
                     <?php
                         if (isset($_REQUEST['status'])) {
@@ -250,7 +250,7 @@ $sccp_accordion_svg_html = '
                         ?>
                     </div>
                     <hr>
-                    <input type="hidden" name="sccp_tab" value="<?= htmlentities($sccp_tab); ?>">
+                    <input type="hidden" name="sccp_tab" value="<?php echo  htmlentities($sccp_tab); ?>">
                     <?php
                     wp_nonce_field('sccp_action', 'sccp_action');
                     ?>
@@ -259,62 +259,62 @@ $sccp_accordion_svg_html = '
                         <div class="ays-top-menu">
                             <div class="nav-tab-wrapper ays-top-tab-wrapper">
                                 <a href="#tab1" data-tab="tab1"
-                                class="nav-tab <?= ($sccp_tab == 'tab1') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('General', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab1') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('General', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab2" data-tab="tab2"
-                                class="nav-tab <?= ($sccp_tab == 'tab2') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('Options', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab2') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('Options', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab5" data-tab="tab5"
-                                class="nav-tab <?= ($sccp_tab == 'tab5') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('Styles', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab5') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('Styles', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab8" data-tab="tab8"
-                                class="nav-tab <?= ($sccp_tab == 'tab8') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('Block Content', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab8') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('Block Content', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab3" data-tab="tab3"
-                                class="nav-tab <?= ($sccp_tab == 'tab3') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('Block IPs', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab3') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('Block IPs', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab4" data-tab="tab4"
-                                class="nav-tab <?= ($sccp_tab == 'tab4') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('Block Country', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab4') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('Block Country', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab6" data-tab="tab6"
-                                class="nav-tab <?= ($sccp_tab == 'tab6') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('Page Blocker', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab6') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('Page Blocker', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab7" data-tab="tab7"
-                                class="nav-tab <?= ($sccp_tab == 'tab7') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('PayPal', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab7') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('PayPal', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab9" data-tab="tab9"
-                                class="nav-tab <?= ($sccp_tab == 'tab9') ? 'nav-tab-active' : ''; ?>">
-                                    <?= __('Integrations', 'secure-copy-content-protection'); ?>
+                                class="nav-tab <?php echo  ($sccp_tab == 'tab9') ? 'nav-tab-active' : ''; ?>">
+                                    <?php echo  __('Integrations', 'secure-copy-content-protection'); ?>
                                 </a>
                             </div>
                         </div>
                         <div class="ays_menu_right" data-scroll="-1"><i class="ays_fa ays_fa_angle_right"></i></div>
                     </div>
 
-                    <div id="tab1" class="nav-tab-content <?= ($sccp_tab == 'tab1') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab1" class="nav-tab-content <?php echo  ($sccp_tab == 'tab1') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="copy_protection_header">
-                            <h5><?= __("General", 'secure-copy-content-protection'); ?></h5>
+                            <h5><?php echo  __("General", 'secure-copy-content-protection'); ?></h5>
                         </div>
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_enable_all_posts"><?= __("Enable copy protection in all post types", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_enable_all_posts"><?php echo  __("Enable copy protection in all post types", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Enable Options category of the plugin', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('Enable Options category of the plugin', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-8">
                                 <input type="checkbox" class="modern-checkbox" id="sccp_enable_all_posts"
-                                       name="sccp_enable_all_posts" <?= $data["enable_protection"]; ?>
+                                       name="sccp_enable_all_posts" <?php echo  $data["enable_protection"]; ?>
                                        value="true">
                                 <label for="sccp_enable_all_posts"></label>
                             </div>
@@ -322,9 +322,9 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_post_types"><?= __("Except this", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_post_types"><?php echo  __("Except this", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Disable copy paste option for the website, except selected post types', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('Disable copy paste option for the website, except selected post types', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -343,15 +343,15 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_enable_text_selecting"><?= __("Enable text selecting", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_enable_text_selecting"><?php echo  __("Enable text selecting", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Enable text selecting. This option will work only on desktop, on mobile devices text selecting is always disabled.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('Enable text selecting. This option will work only on desktop, on mobile devices text selecting is always disabled.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-8">
                                 <input type="checkbox" class="modern-checkbox" id="sccp_enable_text_selecting"
-                                       name="sccp_enable_text_selecting" <?= isset($data["options"]["enable_text_selecting"]) ? $data["options"]["enable_text_selecting"] : "" ?>
+                                       name="sccp_enable_text_selecting" <?php echo  isset($data["options"]["enable_text_selecting"]) ? $data["options"]["enable_text_selecting"] : "" ?>
                                        value="true">
                                 <label for="sccp_enable_text_selecting"></label>
                             </div>
@@ -359,9 +359,9 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row ays-sccp-desc-message-vars-parent">
                             <div class="col-sm-4">
-                                <label for="sccp_notification_text"><?= __("Notification text", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_notification_text"><?php echo  __("Notification text", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('The warning text that appears after copy attempt. You can use Variables (General Settings) to insert user data here.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('The warning text that appears after copy attempt. You can use Variables (General Settings) to insert user data here.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                                 <p class="ays_sccp_small_hint_text_for_message_variables">
@@ -386,20 +386,20 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_upload_audio"><?= __("Upload Audio", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_upload_audio"><?php echo  __("Upload Audio", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('The audio that plays after copy attempt', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('The audio that plays after copy attempt', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-3">
-                                <a href="javascript:void(0)" class="btn btn-primary upload_audio"><?= __("Upload Audio", 'secure-copy-content-protection'); ?></a>
+                                <a href="javascript:void(0)" class="btn btn-primary upload_audio"><?php echo  __("Upload Audio", 'secure-copy-content-protection'); ?></a>
                             </div>
                             <div class="col-sm-5">
                                 <div class="sccp_upload_audio">
                                     <?php if (isset($data['audio']) && !empty($data['audio'])) { ?>
                                         <audio id="sccp_audio" controls>
-                                            <source src="<?= (isset($data['audio']) && !empty($data['audio'])) ? $data['audio'] : ""; ?>"
+                                            <source src="<?php echo  (isset($data['audio']) && !empty($data['audio'])) ? $data['audio'] : ""; ?>"
                                                     type="audio/mpeg">
                                         </audio>
                                         <button type="button" class="close ays_close" aria-label="Close">
@@ -408,22 +408,22 @@ $sccp_accordion_svg_html = '
                                     <?php } ?>
                                 </div>
                                 <input type="hidden" class="upload_audio_url" name="upload_audio_url"
-                                       value="<?= (isset($data['audio']) && !empty($data['audio'])) ? $data['audio'] : ""; ?>">
+                                       value="<?php echo  (isset($data['audio']) && !empty($data['audio'])) ? $data['audio'] : ""; ?>">
                             </div>
                         </div>
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_exclude_inp_textarea"><?= __("Exclude input and textarea", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_exclude_inp_textarea"><?php echo  __("Exclude input and textarea", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('This option will exclude input and textarea', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('This option will exclude input and textarea', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-3">
                                 <input type="checkbox" class="modern-checkbox-options exclude_inp_textarea"
                                        id="sccp_exclude_inp_textarea"
-                                       name="sccp_exclude_inp_textarea" <?= isset($data["options"]["exclude_inp_textarea"]) ? $data["options"]["exclude_inp_textarea"] : ''; ?>
+                                       name="sccp_exclude_inp_textarea" <?php echo  isset($data["options"]["exclude_inp_textarea"]) ? $data["options"]["exclude_inp_textarea"] : ''; ?>
                                        value="true">
                             </div>
                             <div class="col-sm-5"></div>
@@ -431,16 +431,16 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_exclude_css_selector"><?= __("Exclude certain CSS selector", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_exclude_css_selector"><?php echo  __("Exclude certain CSS selector", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Add your preferred CSS selector(s) and they will not be protected by the plugin.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('Add your preferred CSS selector(s) and they will not be protected by the plugin.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-1">
                                 <input type="checkbox" class="modern-checkbox-options sccp_exclude_css_selector"
                                        id="sccp_exclude_css_selector"
-                                       name="sccp_exclude_css_selector" <?= isset($data["options"]["exclude_css_selector"]) ? $data["options"]["exclude_css_selector"] : ''; ?>
+                                       name="sccp_exclude_css_selector" <?php echo  isset($data["options"]["exclude_css_selector"]) ? $data["options"]["exclude_css_selector"] : ''; ?>
                                        value="true">
                             </div>
                             <div class="col-sm-7 if-ays-sccp-hide-css-input" <?php echo isset($data["options"]["exclude_css_selector"]) ? '' : 'style="display: none;"'; ?>>                                
@@ -451,22 +451,22 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_disable_sup_admin"><?= __("Disable Copy Protection for Super admin", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_disable_sup_admin"><?php echo  __("Disable Copy Protection for Super admin", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('In case of activating this option the super admin will not be able to use the plugin. Note: This option is disabled by default.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  __('In case of activating this option the super admin will not be able to use the plugin. Note: This option is disabled by default.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-3">
                                 <input type="checkbox" class="modern-checkbox-options disable_sup_admin"
                                        id="sccp_disable_sup_admin"
-                                       name="sccp_disable_sup_admin" <?= isset($data["options"]["disable_sup_admin"]) ? $data["options"]["disable_sup_admin"] : ''; ?>
+                                       name="sccp_disable_sup_admin" <?php echo  isset($data["options"]["disable_sup_admin"]) ? $data["options"]["disable_sup_admin"] : ''; ?>
                                        value="false">
                             </div>
                             <div class="col-sm-5"></div>
                         </div>
                         <hr>
-                        <div class="sccp_pro only_pro" title="<?= __('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
+                        <div class="sccp_pro only_pro" title="<?php echo  __('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
                             <div class="pro_features sccp_general_pro">
                                 <div>                                    
                                     <a href="https://ays-pro.com/wordpress/secure-copy-content-protection/" target="_blank" class="ays-sccp-new-upgrade-button-link">
@@ -496,7 +496,7 @@ $sccp_accordion_svg_html = '
                             </div>
                         </div>
                     </div>
-                    <div id="tab2" class="nav-tab-content <?= ($sccp_tab == 'tab2') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab2" class="nav-tab-content <?php echo  ($sccp_tab == 'tab2') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -507,13 +507,13 @@ $sccp_accordion_svg_html = '
                                 <div class="copy_protection_header row">
                                     <div class="col-sm-3"></div>
                                     <div class="col-sm-2">
-                                       <label for="sccp_select_all"><h5><?= __("ON/OFF", 'secure-copy-content-protection'); ?></h5></label> 
+                                       <label for="sccp_select_all"><h5><?php echo  __("ON/OFF", 'secure-copy-content-protection'); ?></h5></label> 
                                     </div>
                                     <div class="col-sm-2">
-                                        <label for="sccp_select_all_mess"><h5><?= __("Show Message", 'secure-copy-content-protection'); ?></h5></label>
+                                        <label for="sccp_select_all_mess"><h5><?php echo  __("Show Message", 'secure-copy-content-protection'); ?></h5></label>
                                     </div>
                                     <div class="col-sm-2">
-                                        <label for="sccp_select_all_audio"><h5><?= __("Play Audio", 'secure-copy-content-protection'); ?></h5></label> 
+                                        <label for="sccp_select_all_audio"><h5><?php echo  __("Play Audio", 'secure-copy-content-protection'); ?></h5></label> 
                                     </div>
                                     <div class="col-sm-3"></div>
                                 </div>
@@ -523,19 +523,19 @@ $sccp_accordion_svg_html = '
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ays_all"
                                                id="sccp_select_all"
-                                               name="sccp_select_all" <?= isset($data["options"]["select_all"]) ? $data["options"]["select_all"] : ''; ?>
+                                               name="sccp_select_all" <?php echo  isset($data["options"]["select_all"]) ? $data["options"]["select_all"] : ''; ?>
                                                value="true">
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox ays_all_mess"
                                                id="sccp_select_all_mess"
-                                               name="sccp_select_all_mess" <?= isset($data["options"]["select_all_mess"]) ? $data["options"]["select_all_mess"] : ""; ?>
+                                               name="sccp_select_all_mess" <?php echo  isset($data["options"]["select_all_mess"]) ? $data["options"]["select_all_mess"] : ""; ?>
                                                value="true">                                
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox ays_all_audio"
                                                id="sccp_select_all_audio"
-                                               name="sccp_select_all_audio" <?= isset($data["options"]["select_all_audio"]) ? $data["options"]["select_all_audio"] : ''; ?>
+                                               name="sccp_select_all_audio" <?php echo  isset($data["options"]["select_all_audio"]) ? $data["options"]["select_all_audio"] : ''; ?>
                                                value="true">                                
                                     </div>
                                     <div class="col-sm-3"></div>
@@ -544,29 +544,29 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_context_menu"><?= __("Disable right click", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_context_menu"><?php echo  __("Disable right click", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Right click is not allowed', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Right click is not allowed', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options right"
                                                id="sccp_enable_context_menu"
-                                               name="sccp_enable_context_menu" <?= isset($data["options"]["context_menu"]) ? $data["options"]["context_menu"] : 'checked'; ?>
+                                               name="sccp_enable_context_menu" <?php echo  isset($data["options"]["context_menu"]) ? $data["options"]["context_menu"] : 'checked'; ?>
                                                value="true">
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess right-mess"
                                                id="sccp_enable_context_menu_mess"
-                                               name="sccp_enable_context_menu_mess" <?= isset($data["options"]["context_menu_mess"]) ? $data["options"]["context_menu_mess"] : "checked"; ?>
+                                               name="sccp_enable_context_menu_mess" <?php echo  isset($data["options"]["context_menu_mess"]) ? $data["options"]["context_menu_mess"] : "checked"; ?>
                                                value="true">
                                         <label for="sccp_enable_context_menu_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio right-audio"
                                                id="sccp_enable_right_click_audio"
-                                               name="sccp_enable_right_click_audio" <?= isset($data["options"]["right_click_audio"]) ? $data["options"]["right_click_audio"] : ''; ?>
+                                               name="sccp_enable_right_click_audio" <?php echo  isset($data["options"]["right_click_audio"]) ? $data["options"]["right_click_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_right_click_audio"></label>
                                     </div>
@@ -576,29 +576,29 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_disabled_rclick_img"><?= __("Disable right click for images", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_disabled_rclick_img"><?php echo  __("Disable right click for images", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('By enabling the option, the right-click for the images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('By enabling the option, the right-click for the images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options right_img"
                                                id="sccp_disabled_rclick_img"
-                                               name="sccp_disabled_rclick_img" <?= isset($data["options"]["rclick_img"]) ? $data["options"]["rclick_img"] : 'checked'; ?>
+                                               name="sccp_disabled_rclick_img" <?php echo  isset($data["options"]["rclick_img"]) ? $data["options"]["rclick_img"] : 'checked'; ?>
                                                value="true">
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess right_img-mess"
                                                id="sccp_disabled_rclick_img_mess"
-                                               name="sccp_disabled_rclick_img_mess" <?= isset($data["options"]["rclick_img_mess"]) ? $data["options"]["rclick_img_mess"] : "checked"; ?>
+                                               name="sccp_disabled_rclick_img_mess" <?php echo  isset($data["options"]["rclick_img_mess"]) ? $data["options"]["rclick_img_mess"] : "checked"; ?>
                                                value="true">
                                         <label for="sccp_enable_context_menu_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio right_img-audio"
                                                id="sccp_disabled_rclick_img_audio"
-                                               name="sccp_disabled_rclick_img_audio" <?= isset($data["options"]["rclick_img_audio"]) ? $data["options"]["rclick_img_audio"] : ''; ?>
+                                               name="sccp_disabled_rclick_img_audio" <?php echo  isset($data["options"]["rclick_img_audio"]) ? $data["options"]["rclick_img_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_right_click_audio"></label>
                                     </div>
@@ -607,29 +607,29 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_disabled_rclick_link"><?= __("Disable right click for links", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_disabled_rclick_link"><?php echo  __("Disable right click for links", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('By enabling the option, the right-click for the links will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('By enabling the option, the right-click for the links will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options right_link"
                                                id="sccp_disabled_rclick_link"
-                                               name="sccp_disabled_rclick_link" <?= isset($data["options"]["rclick_link"]) ? $data["options"]["rclick_link"] : 'checked'; ?>
+                                               name="sccp_disabled_rclick_link" <?php echo  isset($data["options"]["rclick_link"]) ? $data["options"]["rclick_link"] : 'checked'; ?>
                                                value="true">
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess right_link-mess"
                                                id="sccp_disabled_rclick_link_mess"
-                                               name="sccp_disabled_rclick_link_mess" <?= isset($data["options"]["rclick_link_mess"]) ? $data["options"]["rclick_link_mess"] : "checked"; ?>
+                                               name="sccp_disabled_rclick_link_mess" <?php echo  isset($data["options"]["rclick_link_mess"]) ? $data["options"]["rclick_link_mess"] : "checked"; ?>
                                                value="true">
                                         <label for="sccp_enable_context_menu_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio right_link-audio"
                                                id="sccp_disabled_rclick_link_audio"
-                                               name="sccp_disabled_rclick_link_audio" <?= isset($data["options"]["rclick_link_audio"]) ? $data["options"]["rclick_link_audio"] : ''; ?>
+                                               name="sccp_disabled_rclick_link_audio" <?php echo  isset($data["options"]["rclick_link_audio"]) ? $data["options"]["rclick_link_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_right_click_audio"></label>
                                     </div>
@@ -638,30 +638,30 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_developer_tools"><?= __("Disable Developer Tools Hot-keys", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_developer_tools"><?php echo  __("Disable Developer Tools Hot-keys", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to open developer tools by CTRL+SHIFT+C/CMD+OPT+C, CTRL+SHIFT+J/CMD+OPT+J, CTRL+SHIFT+I/CMD+OPT+I', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to open developer tools by CTRL+SHIFT+C/CMD+OPT+C, CTRL+SHIFT+J/CMD+OPT+J, CTRL+SHIFT+I/CMD+OPT+I', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options devtool"
                                                id="sccp_enable_developer_tools"
-                                               name="sccp_enable_developer_tools" <?= isset($data["options"]["developer_tools"]) ? $data["options"]["developer_tools"] : 'checked'; ?>
+                                               name="sccp_enable_developer_tools" <?php echo  isset($data["options"]["developer_tools"]) ? $data["options"]["developer_tools"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_developer_tools"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess devtool-mess"
                                                id="sccp_enable_developer_tools_mess"
-                                               name="sccp_enable_developer_tools_mess" <?= isset($data["options"]["developer_tools_mess"]) ? $data["options"]["developer_tools_mess"] : 'checked'; ?>
+                                               name="sccp_enable_developer_tools_mess" <?php echo  isset($data["options"]["developer_tools_mess"]) ? $data["options"]["developer_tools_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_developer_tools_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio devtool-audio"
                                                id="sccp_enable_developer_tools_audio"
-                                               name="sccp_enable_developer_tools_audio" <?= isset($data["options"]["developer_tools_audio"]) ? $data["options"]["developer_tools_audio"] : ''; ?>
+                                               name="sccp_enable_developer_tools_audio" <?php echo  isset($data["options"]["developer_tools_audio"]) ? $data["options"]["developer_tools_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_developer_tools_audio"></label>
                                     </div>
@@ -670,30 +670,30 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_drag_start"><?= __("Disable Drag & Drop", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_drag_start"><?php echo  __("Disable Drag & Drop", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('By enabling this option, the dragging of the texts and images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('By enabling this option, the dragging of the texts and images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options dragstart"
                                                id="sccp_enable_drag_start"
-                                               name="sccp_enable_drag_start" <?= isset($data["options"]["drag_start"]) ? $data["options"]["drag_start"] : 'checked'; ?>
+                                               name="sccp_enable_drag_start" <?php echo  isset($data["options"]["drag_start"]) ? $data["options"]["drag_start"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_drag_start"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess dragstart-mess"
                                                id="sccp_enable_drag_start_mess"
-                                               name="sccp_enable_drag_start_mess" <?= isset($data["options"]["drag_start_mess"]) ? $data["options"]["drag_start_mess"] : 'checked'; ?>
+                                               name="sccp_enable_drag_start_mess" <?php echo  isset($data["options"]["drag_start_mess"]) ? $data["options"]["drag_start_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_drag_start_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio dragstart-audio"
                                                id="sccp_enable_drag_start_audio"
-                                               name="sccp_enable_drag_start_audio" <?= isset($data["options"]["drag_start_audio"]) ? $data["options"]["drag_start_audio"] : ''; ?>
+                                               name="sccp_enable_drag_start_audio" <?php echo  isset($data["options"]["drag_start_audio"]) ? $data["options"]["drag_start_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_drag_start_audio"></label>
                                     </div>
@@ -702,27 +702,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f12"><?= __("Disable F12", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f12"><?php echo  __("Disable F12", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Inspect element is not available to open by F12', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Inspect element is not available to open by F12', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options f12" id="sccp_enable_f12"
-                                               name="sccp_enable_f12" <?= isset($data["options"]["f12"]) ? $data["options"]["f12"] : 'checked'; ?>
+                                               name="sccp_enable_f12" <?php echo  isset($data["options"]["f12"]) ? $data["options"]["f12"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_f12"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess f12-mess" id="sccp_enable_f12_mess"
-                                               name="sccp_enable_f12_mess" <?= isset($data["options"]["f12_mess"]) ? $data["options"]["f12_mess"] : 'checked'; ?>
+                                               name="sccp_enable_f12_mess" <?php echo  isset($data["options"]["f12_mess"]) ? $data["options"]["f12_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_f12_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio f12-audio" id="sccp_enable_f12_audio"
-                                               name="sccp_enable_f12_audio" <?= isset($data["options"]["f12_audio"]) ? $data["options"]["f12_audio"] : ''; ?>
+                                               name="sccp_enable_f12_audio" <?php echo  isset($data["options"]["f12_audio"]) ? $data["options"]["f12_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f12_audio"></label>
                                     </div>
@@ -731,27 +731,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlc"><?= __("Disable CTRL-C/CMD-C", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlc"><?php echo  __("Disable CTRL-C/CMD-C", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to copy the highlighted text', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to copy the highlighted text', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlc" id="sccp_enable_ctrlc"
-                                               name="sccp_enable_ctrlc" <?= isset($data["options"]["ctrlc"]) ? $data["options"]["ctrlc"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlc" <?php echo  isset($data["options"]["ctrlc"]) ? $data["options"]["ctrlc"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlc"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlc-mess" id="sccp_enable_ctrlc_mess"
-                                               name="sccp_enable_ctrlc_mess" <?= isset($data["options"]["ctrlc_mess"]) ? $data["options"]["ctrlc_mess"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlc_mess" <?php echo  isset($data["options"]["ctrlc_mess"]) ? $data["options"]["ctrlc_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlc_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlc-audio" id="sccp_enable_ctrlc_audio"
-                                               name="sccp_enable_ctrlc_audio" <?= isset($data["options"]["ctrlc_audio"]) ? $data["options"]["ctrlc_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlc_audio" <?php echo  isset($data["options"]["ctrlc_audio"]) ? $data["options"]["ctrlc_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlc_audio"></label>
                                     </div>
@@ -760,27 +760,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlv"><?= __("Disable CTRL-V/CMD-V", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlv"><?php echo  __("Disable CTRL-V/CMD-V", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to paste the highlighted text', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to paste the highlighted text', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlv" id="sccp_enable_ctrlv"
-                                               name="sccp_enable_ctrlv" <?= isset($data["options"]["ctrlv"]) ? $data["options"]["ctrlv"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlv" <?php echo  isset($data["options"]["ctrlv"]) ? $data["options"]["ctrlv"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlv"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlv-mess" id="sccp_enable_ctrlv_mess"
-                                               name="sccp_enable_ctrlv_mess" <?= isset($data["options"]["ctrlv_mess"]) ? $data["options"]["ctrlv_mess"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlv_mess" <?php echo  isset($data["options"]["ctrlv_mess"]) ? $data["options"]["ctrlv_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlv_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlv-audio" id="sccp_enable_ctrlv_audio"
-                                               name="sccp_enable_ctrlv_audio" <?= isset($data["options"]["ctrlv_audio"]) ? $data["options"]["ctrlv_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlv_audio" <?php echo  isset($data["options"]["ctrlv_audio"]) ? $data["options"]["ctrlv_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlv_audio"></label>
                                     </div>
@@ -789,27 +789,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrls"><?= __("Disable CTRL-S/CMD-S", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrls"><?php echo  __("Disable CTRL-S/CMD-S", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to save a copy of the page being viewed.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to save a copy of the page being viewed.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrls" id="sccp_enable_ctrls"
-                                               name="sccp_enable_ctrls" <?= isset($data["options"]["ctrls"]) ? $data["options"]["ctrls"] : 'checked'; ?>
+                                               name="sccp_enable_ctrls" <?php echo  isset($data["options"]["ctrls"]) ? $data["options"]["ctrls"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrls"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrls-mess" id="sccp_enable_ctrls_mess"
-                                               name="sccp_enable_ctrls_mess" <?= isset($data["options"]["ctrls_mess"]) ? $data["options"]["ctrls_mess"] : 'checked'; ?>
+                                               name="sccp_enable_ctrls_mess" <?php echo  isset($data["options"]["ctrls_mess"]) ? $data["options"]["ctrls_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrls_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrls-audio" id="sccp_enable_ctrls_audio"
-                                               name="sccp_enable_ctrls_audio" <?= isset($data["options"]["ctrls_audio"]) ? $data["options"]["ctrls_audio"] : ''; ?>
+                                               name="sccp_enable_ctrls_audio" <?php echo  isset($data["options"]["ctrls_audio"]) ? $data["options"]["ctrls_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrls_audio"></label>
                                     </div>
@@ -818,27 +818,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrla"><?= __("Disable CTRL-A/CMD-A", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrla"><?php echo  __("Disable CTRL-A/CMD-A", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to select all', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to select all', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrla" id="sccp_enable_ctrla"
-                                               name="sccp_enable_ctrla" <?= isset($data["options"]["ctrla"]) ? $data["options"]["ctrla"] : 'checked'; ?>
+                                               name="sccp_enable_ctrla" <?php echo  isset($data["options"]["ctrla"]) ? $data["options"]["ctrla"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrla"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrla-mess" id="sccp_enable_ctrla_mess"
-                                               name="sccp_enable_ctrla_mess" <?= isset($data["options"]["ctrla_mess"]) ? $data["options"]["ctrla_mess"] : 'checked'; ?>
+                                               name="sccp_enable_ctrla_mess" <?php echo  isset($data["options"]["ctrla_mess"]) ? $data["options"]["ctrla_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrla_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrla-audio" id="sccp_enable_ctrla_audio"
-                                               name="sccp_enable_ctrla_audio" <?= isset($data["options"]["ctrla_audio"]) ? $data["options"]["ctrla_audio"] : ''; ?>
+                                               name="sccp_enable_ctrla_audio" <?php echo  isset($data["options"]["ctrla_audio"]) ? $data["options"]["ctrla_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrla_audio"></label>
                                     </div>
@@ -847,27 +847,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlx"><?= __("Disable CTRL-X/CMD-X", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlx"><?php echo  __("Disable CTRL-X/CMD-X", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to cut the highlighted text', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to cut the highlighted text', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlx" id="sccp_enable_ctrlx"
-                                               name="sccp_enable_ctrlx" <?= isset($data["options"]["ctrlx"]) ? $data["options"]["ctrlx"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlx" <?php echo  isset($data["options"]["ctrlx"]) ? $data["options"]["ctrlx"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlx"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlx-mess" id="sccp_enable_ctrlx_mess"
-                                               name="sccp_enable_ctrlx_mess" <?= isset($data["options"]["ctrlx_mess"]) ? $data["options"]["ctrlx_mess"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlx_mess" <?php echo  isset($data["options"]["ctrlx_mess"]) ? $data["options"]["ctrlx_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlx_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlx-audio" id="sccp_enable_ctrlx_audio"
-                                               name="sccp_enable_ctrlx_audio" <?= isset($data["options"]["ctrlx_audio"]) ? $data["options"]["ctrlx_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlx_audio" <?php echo  isset($data["options"]["ctrlx_audio"]) ? $data["options"]["ctrlx_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlx_audio"></label>
                                     </div>
@@ -876,27 +876,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlu"><?= __("Disable CTRL-U/CMD-U", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlu"><?php echo  __("Disable CTRL-U/CMD-U", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to view source of the page', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to view source of the page', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlu" id="sccp_enable_ctrlu"
-                                               name="sccp_enable_ctrlu" <?= isset($data["options"]["ctrlu"]) ? $data["options"]["ctrlu"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlu" <?php echo  isset($data["options"]["ctrlu"]) ? $data["options"]["ctrlu"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlu"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlu-mess" id="sccp_enable_ctrlu_mess"
-                                               name="sccp_enable_ctrlu_mess" <?= isset($data["options"]["ctrlu_mess"]) ? $data["options"]["ctrlu_mess"] : 'checked'; ?>
+                                               name="sccp_enable_ctrlu_mess" <?php echo  isset($data["options"]["ctrlu_mess"]) ? $data["options"]["ctrlu_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlu_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlu-audio" id="sccp_enable_ctrlu_audio"
-                                               name="sccp_enable_ctrlu_audio" <?= isset($data["options"]["ctrlu_audio"]) ? $data["options"]["ctrlu_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlu_audio" <?php echo  isset($data["options"]["ctrlu_audio"]) ? $data["options"]["ctrlu_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlu_audio"></label>
                                     </div>
@@ -905,27 +905,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlf"><?= __("Disable search hot-keys", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlf"><?php echo  __("Disable search hot-keys", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to find text on the page by CTRL+F/CMD+F, CTRL+G/CMD+G, CTRL+SHIFT+G/CMD+OPT+G', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to find text on the page by CTRL+F/CMD+F, CTRL+G/CMD+G, CTRL+SHIFT+G/CMD+OPT+G', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlf" id="sccp_enable_ctrlf"
-                                               name="sccp_enable_ctrlf" <?= isset($data["options"]["ctrlf"]) ? $data["options"]["ctrlf"] : ''; ?>
+                                               name="sccp_enable_ctrlf" <?php echo  isset($data["options"]["ctrlf"]) ? $data["options"]["ctrlf"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlf"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlf-mess" id="sccp_enable_ctrlf_mess"
-                                               name="sccp_enable_ctrlf_mess" <?= isset($data["options"]["ctrlf_mess"]) ? $data["options"]["ctrlf_mess"] : ''; ?>
+                                               name="sccp_enable_ctrlf_mess" <?php echo  isset($data["options"]["ctrlf_mess"]) ? $data["options"]["ctrlf_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlf_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlf-audio" id="sccp_enable_ctrlf_audio"
-                                               name="sccp_enable_ctrlf_audio" <?= isset($data["options"]["ctrlf_audio"]) ? $data["options"]["ctrlf_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlf_audio" <?php echo  isset($data["options"]["ctrlf_audio"]) ? $data["options"]["ctrlf_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlf_audio"></label>
                                     </div>
@@ -934,27 +934,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlp"><?= __("Disable CTRL-P/CMD-P", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlp"><?php echo  __("Disable CTRL-P/CMD-P", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to print the page', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to print the page', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlp" id="sccp_enable_ctrlp"
-                                               name="sccp_enable_ctrlp" <?= isset($data["options"]["ctrlp"]) ? $data["options"]["ctrlp"] : ''; ?>
+                                               name="sccp_enable_ctrlp" <?php echo  isset($data["options"]["ctrlp"]) ? $data["options"]["ctrlp"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlp"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlp-mess" id="sccp_enable_ctrlp_mess"
-                                               name="sccp_enable_ctrlp_mess" <?= isset($data["options"]["ctrlp_mess"]) ? $data["options"]["ctrlp_mess"] : ''; ?>
+                                               name="sccp_enable_ctrlp_mess" <?php echo  isset($data["options"]["ctrlp_mess"]) ? $data["options"]["ctrlp_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlp_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlp-audio" id="sccp_enable_ctrlp_audio"
-                                               name="sccp_enable_ctrlp_audio" <?= isset($data["options"]["ctrlp_audio"]) ? $data["options"]["ctrlp_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlp_audio" <?php echo  isset($data["options"]["ctrlp_audio"]) ? $data["options"]["ctrlp_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlp_audio"></label>
                                     </div>
@@ -963,27 +963,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlh"><?= __("Disable CTRL-H/CMD-H", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlh"><?php echo  __("Disable CTRL-H/CMD-H", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow to open history page', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow to open history page', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlh" id="sccp_enable_ctrlh"
-                                               name="sccp_enable_ctrlh" <?= isset($data["options"]["ctrlh"]) ? $data["options"]["ctrlh"] : ''; ?>
+                                               name="sccp_enable_ctrlh" <?php echo  isset($data["options"]["ctrlh"]) ? $data["options"]["ctrlh"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlh"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlh-mess" id="sccp_enable_ctrlh_mess"
-                                               name="sccp_enable_ctrlh_mess" <?= isset($data["options"]["ctrlh_mess"]) ? $data["options"]["ctrlh_mess"] : ''; ?>
+                                               name="sccp_enable_ctrlh_mess" <?php echo  isset($data["options"]["ctrlh_mess"]) ? $data["options"]["ctrlh_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlh_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlh-audio" id="sccp_enable_ctrlh_audio"
-                                               name="sccp_enable_ctrlh_audio" <?= isset($data["options"]["ctrlh_audio"]) ? $data["options"]["ctrlh_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlh_audio" <?php echo  isset($data["options"]["ctrlh_audio"]) ? $data["options"]["ctrlh_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlh_audio"></label>
                                     </div>
@@ -992,27 +992,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrll"><?= __("Disable CTRL-L/CMD-L", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrll"><?php echo  __("Disable CTRL-L/CMD-L", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrll" id="sccp_enable_ctrll"
-                                               name="sccp_enable_ctrll" <?= isset($data["options"]["ctrll"]) ? $data["options"]["ctrll"] : ''; ?>
+                                               name="sccp_enable_ctrll" <?php echo  isset($data["options"]["ctrll"]) ? $data["options"]["ctrll"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrll"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrll-mess" id="sccp_enable_ctrll_mess"
-                                               name="sccp_enable_ctrll_mess" <?= isset($data["options"]["ctrll_mess"]) ? $data["options"]["ctrll_mess"] : ''; ?>
+                                               name="sccp_enable_ctrll_mess" <?php echo  isset($data["options"]["ctrll_mess"]) ? $data["options"]["ctrll_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrll_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrll-audio" id="sccp_enable_ctrll_audio"
-                                               name="sccp_enable_ctrll_audio" <?= isset($data["options"]["ctrll_audio"]) ? $data["options"]["ctrll_audio"] : ''; ?>
+                                               name="sccp_enable_ctrll_audio" <?php echo  isset($data["options"]["ctrll_audio"]) ? $data["options"]["ctrll_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrll_audio"></label>
                                     </div>
@@ -1021,27 +1021,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlk"><?= __("Disable CTRL-K", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlk"><?php echo  __("Disable CTRL-K", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow the user to move to the address bar and perform a google search.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow the user to move to the address bar and perform a google search.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlk" id="sccp_enable_ctrlk"
-                                               name="sccp_enable_ctrlk" <?= isset($data["options"]["ctrlk"]) ? $data["options"]["ctrlk"] : ''; ?>
+                                               name="sccp_enable_ctrlk" <?php echo  isset($data["options"]["ctrlk"]) ? $data["options"]["ctrlk"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlk"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlk-mess" id="sccp_enable_ctrlk_mess"
-                                               name="sccp_enable_ctrlk_mess" <?= isset($data["options"]["ctrlk_mess"]) ? $data["options"]["ctrlk_mess"] : ''; ?>
+                                               name="sccp_enable_ctrlk_mess" <?php echo  isset($data["options"]["ctrlk_mess"]) ? $data["options"]["ctrlk_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlk_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlk-audio" id="sccp_enable_ctrlk_audio"
-                                               name="sccp_enable_ctrlk_audio" <?= isset($data["options"]["ctrlk_audio"]) ? $data["options"]["ctrlk_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlk_audio" <?php echo  isset($data["options"]["ctrlk_audio"]) ? $data["options"]["ctrlk_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlk_audio"></label>
                                     </div>
@@ -1050,27 +1050,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlo"><?= __("Disable CTRL-O", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlo"><?php echo  __("Disable CTRL-O", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow to open file from your computer.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow to open file from your computer.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options ctrlo" id="sccp_enable_ctrlo"
-                                               name="sccp_enable_ctrlo" <?= isset($data["options"]["ctrlo"]) ? $data["options"]["ctrlo"] : ''; ?>
+                                               name="sccp_enable_ctrlo" <?php echo  isset($data["options"]["ctrlo"]) ? $data["options"]["ctrlo"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlo"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess ctrlo-mess" id="sccp_enable_ctrlo_mess"
-                                               name="sccp_enable_ctrlo_mess" <?= isset($data["options"]["ctrlo_mess"]) ? $data["options"]["ctrlo_mess"] : ''; ?>
+                                               name="sccp_enable_ctrlo_mess" <?php echo  isset($data["options"]["ctrlo_mess"]) ? $data["options"]["ctrlo_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlo_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio ctrlo-audio" id="sccp_enable_ctrlo_audio"
-                                               name="sccp_enable_ctrlo_audio" <?= isset($data["options"]["ctrlo_audio"]) ? $data["options"]["ctrlo_audio"] : ''; ?>
+                                               name="sccp_enable_ctrlo_audio" <?php echo  isset($data["options"]["ctrlo_audio"]) ? $data["options"]["ctrlo_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrlo_audio"></label>
                                     </div>
@@ -1079,27 +1079,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f6"><?= __("Disable F6", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f6"><?php echo  __("Disable F6", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options sccp_f6" id="sccp_enable_f6"
-                                               name="sccp_enable_f6" <?= isset($data["options"]["sccp_f6"]) ? $data["options"]["sccp_f6"] : ''; ?>
+                                               name="sccp_enable_f6" <?php echo  isset($data["options"]["sccp_f6"]) ? $data["options"]["sccp_f6"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f6"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess sccp_f6-mess" id="sccp_enable_f6_mess"
-                                               name="sccp_enable_f6_mess" <?= isset($data["options"]["f6_mess"]) ? $data["options"]["f6_mess"] : ''; ?>
+                                               name="sccp_enable_f6_mess" <?php echo  isset($data["options"]["f6_mess"]) ? $data["options"]["f6_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f6_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio sccp_f6-audio" id="sccp_enable_f6_audio"
-                                               name="sccp_enable_f6_audio" <?= isset($data["options"]["f6_audio"]) ? $data["options"]["f6_audio"] : ''; ?>
+                                               name="sccp_enable_f6_audio" <?php echo  isset($data["options"]["f6_audio"]) ? $data["options"]["f6_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f6_audio"></label>
                                     </div>
@@ -1108,27 +1108,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f3"><?= __("Disable F3", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f3"><?php echo  __("Disable F3", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow to find text on the page.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow to find text on the page.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options sccp_f3" id="sccp_enable_f3"
-                                               name="sccp_enable_f3" <?= isset($data["options"]["sccp_f3"]) ? $data["options"]["sccp_f3"] : ''; ?>
+                                               name="sccp_enable_f3" <?php echo  isset($data["options"]["sccp_f3"]) ? $data["options"]["sccp_f3"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f3"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess sccp_f3-mess" id="sccp_enable_f3_mess"
-                                               name="sccp_enable_f3_mess" <?= isset($data["options"]["f3_mess"]) ? $data["options"]["f3_mess"] : ''; ?>
+                                               name="sccp_enable_f3_mess" <?php echo  isset($data["options"]["f3_mess"]) ? $data["options"]["f3_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f3_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio sccp_f3-audio" id="sccp_enable_f3_audio"
-                                               name="sccp_enable_f3_audio" <?= isset($data["options"]["f3_audio"]) ? $data["options"]["f3_audio"] : ''; ?>
+                                               name="sccp_enable_f3_audio" <?php echo  isset($data["options"]["f3_audio"]) ? $data["options"]["f3_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f3_audio"></label>
                                     </div>
@@ -1137,27 +1137,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f9"><?= __("Disable F9", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f9"><?php echo  __("Disable F9", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('By enabling this option, the reading mode will completely be deactivated on the Mozilla browser.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('By enabling this option, the reading mode will completely be deactivated on the Mozilla browser.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options sccp_f9" id="sccp_enable_f9"
-                                               name="sccp_enable_f9" <?= isset($data["options"]["sccp_f9"]) ? $data["options"]["sccp_f9"] : ''; ?>
+                                               name="sccp_enable_f9" <?php echo  isset($data["options"]["sccp_f9"]) ? $data["options"]["sccp_f9"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f9"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess sccp_f9-mess" id="sccp_enable_f9_mess"
-                                               name="sccp_enable_f9_mess" <?= isset($data["options"]["f9_mess"]) ? $data["options"]["f9_mess"] : ''; ?>
+                                               name="sccp_enable_f9_mess" <?php echo  isset($data["options"]["f9_mess"]) ? $data["options"]["f9_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f9_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio sccp_f9-audio" id="sccp_enable_f9_audio"
-                                               name="sccp_enable_f9_audio" <?= isset($data["options"]["f9_audio"]) ? $data["options"]["f9_audio"] : ''; ?>
+                                               name="sccp_enable_f9_audio" <?php echo  isset($data["options"]["f9_audio"]) ? $data["options"]["f9_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_f9_audio"></label>
                                     </div>
@@ -1166,27 +1166,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_altd"><?= __("Disable ALT-D", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_altd"><?php echo  __("Disable ALT-D", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options sccp_altd" id="sccp_enable_altd"
-                                               name="sccp_enable_altd" <?= isset($data["options"]["sccp_altd"]) ? $data["options"]["sccp_altd"] : ''; ?>
+                                               name="sccp_enable_altd" <?php echo  isset($data["options"]["sccp_altd"]) ? $data["options"]["sccp_altd"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_altd"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess sccp_altd-mess" id="sccp_enable_altd_mess"
-                                               name="sccp_enable_altd_mess" <?= isset($data["options"]["altd_mess"]) ? $data["options"]["altd_mess"] : ''; ?>
+                                               name="sccp_enable_altd_mess" <?php echo  isset($data["options"]["altd_mess"]) ? $data["options"]["altd_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_altd_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio sccp_altd-audio" id="sccp_enable_altd_audio"
-                                               name="sccp_enable_altd_audio" <?= isset($data["options"]["altd_audio"]) ? $data["options"]["altd_audio"] : ''; ?>
+                                               name="sccp_enable_altd_audio" <?php echo  isset($data["options"]["altd_audio"]) ? $data["options"]["altd_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_altd_audio"></label>
                                     </div>
@@ -1195,27 +1195,27 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrle"><?= __("Disable CTRL-E", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrle"><?php echo  __("Disable CTRL-E", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options sccp_ctrle" id="sccp_enable_ctrle"
-                                               name="sccp_enable_ctrle" <?= isset($data["options"]["sccp_ctrle"]) ? $data["options"]["sccp_ctrle"] : ''; ?>
+                                               name="sccp_enable_ctrle" <?php echo  isset($data["options"]["sccp_ctrle"]) ? $data["options"]["sccp_ctrle"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrle"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess sccp_ctrle-mess" id="sccp_enable_ctrle_mess"
-                                               name="sccp_enable_ctrle_mess" <?= isset($data["options"]["ctrle_mess"]) ? $data["options"]["ctrle_mess"] : ''; ?>
+                                               name="sccp_enable_ctrle_mess" <?php echo  isset($data["options"]["ctrle_mess"]) ? $data["options"]["ctrle_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrle_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio sccp_ctrle-audio" id="sccp_enable_ctrle_audio"
-                                               name="sccp_enable_ctrle_audio" <?= isset($data["options"]["ctrle_audio"]) ? $data["options"]["ctrle_audio"] : ''; ?>
+                                               name="sccp_enable_ctrle_audio" <?php echo  isset($data["options"]["ctrle_audio"]) ? $data["options"]["ctrle_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_ctrle_audio"></label>
                                     </div>
@@ -1225,30 +1225,30 @@ $sccp_accordion_svg_html = '
                                 <?php  if (isset($data["options"]["printscreen"]) && $data["options"]["printscreen"] == 'checked') { ?>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_printscreen"><?= __("Disable Print Screen (PC only)", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_printscreen"><?php echo  __("Disable Print Screen (PC only)", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not allowed to print screen', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not allowed to print screen', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options printscreen"
                                                id="sccp_enable_printscreen"
-                                               name="sccp_enable_printscreen" <?= isset($data["options"]["printscreen"]) ? $data["options"]["printscreen"] : 'checked'; ?>
+                                               name="sccp_enable_printscreen" <?php echo  isset($data["options"]["printscreen"]) ? $data["options"]["printscreen"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_printscreen"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess printscreen-mess"
                                                id="sccp_enable_printscreen_mess"
-                                               name="sccp_enable_printscreen_mess" <?= isset($data["options"]["printscreen_mess"]) ? $data["options"]["printscreen_mess"] : 'checked'; ?>
+                                               name="sccp_enable_printscreen_mess" <?php echo  isset($data["options"]["printscreen_mess"]) ? $data["options"]["printscreen_mess"] : 'checked'; ?>
                                                value="true">
                                         <label for="sccp_enable_printscreen_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio printscreen-audio"
                                                id="sccp_enable_printscreen_audio"
-                                               name="sccp_enable_printscreen_audio" <?= isset($data["options"]["printscreen_audio"]) ? $data["options"]["printscreen_audio"] : ''; ?>
+                                               name="sccp_enable_printscreen_audio" <?php echo  isset($data["options"]["printscreen_audio"]) ? $data["options"]["printscreen_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_printscreen_audio"></label>
                                     </div>
@@ -1258,31 +1258,31 @@ $sccp_accordion_svg_html = '
                                 <?php } ?>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_left_click"><?= __("Disable left click", 'secure-copy-content-protection'); ?>
-                                            <span class="sccp_not_rec"><?= __("( not recommended )", 'secure-copy-content-protection'); ?></span>
+                                        <label for="sccp_enable_left_click"><?php echo  __("Disable left click", 'secure-copy-content-protection'); ?>
+                                            <span class="sccp_not_rec"><?php echo  __("( not recommended )", 'secure-copy-content-protection'); ?></span>
                                         </label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Left click is not allowed', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Left click is not allowed', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options left" id="sccp_enable_left_click"
-                                               name="sccp_enable_left_click" <?= isset($data["options"]["left_click"]) ? $data["options"]["left_click"] : "" ?>
+                                               name="sccp_enable_left_click" <?php echo  isset($data["options"]["left_click"]) ? $data["options"]["left_click"] : "" ?>
                                                value="true">
                                         <label for="sccp_enable_left_click"></label>
                                     </div>
                                     <div class="col-sm-2 ">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess left-mess"
                                                id="sccp_enable_left_click_mess"
-                                               name="sccp_enable_left_click_mess" <?= isset($data["options"]["left_click_mess"]) ? $data["options"]["left_click_mess"] : ''; ?>
+                                               name="sccp_enable_left_click_mess" <?php echo  isset($data["options"]["left_click_mess"]) ? $data["options"]["left_click_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_left_click_mess"></label>
                                     </div>
                                     <div class="col-sm-2 ">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio left-audio"
                                                id="sccp_enable_left_click_audio"
-                                               name="sccp_enable_left_click_audio" <?= isset($data["options"]["left_click_audio"]) ? $data["options"]["left_click_audio"] : ''; ?>
+                                               name="sccp_enable_left_click_audio" <?php echo  isset($data["options"]["left_click_audio"]) ? $data["options"]["left_click_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_left_click_audio"></label>
                                     </div>
@@ -1291,30 +1291,30 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_mobile_img"><?= __("Disable scrolling over images (Mobile)", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_mobile_img"><?php echo  __("Disable scrolling over images (Mobile)", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Not open images context menu in mobile browsers after taphold. But makes it impossible to scroll over the images.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Not open images context menu in mobile browsers after taphold. But makes it impossible to scroll over the images.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox-options mobile-img"
                                                id="sccp_enable_mobile_img"
-                                               name="sccp_enable_mobile_img" <?= isset($data["options"]["mobile_img"]) ? $data["options"]["mobile_img"] : ''; ?>
+                                               name="sccp_enable_mobile_img" <?php echo  isset($data["options"]["mobile_img"]) ? $data["options"]["mobile_img"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_mobile_img"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_mess mobile-img-mess"
                                                id="sccp_enable_mobile_img_mess"
-                                               name="sccp_enable_mobile_img_mess" <?= isset($data["options"]["mobile_img_mess"]) ? $data["options"]["mobile_img_mess"] : ''; ?>
+                                               name="sccp_enable_mobile_img_mess" <?php echo  isset($data["options"]["mobile_img_mess"]) ? $data["options"]["mobile_img_mess"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_mobile_img_mess"></label>
                                     </div>
                                     <div class="col-sm-2">
                                         <input type="checkbox" class="modern-checkbox modern_checkbox_audio mobile-img-audio"
                                                id="sccp_enable_mobile_img_audio"
-                                               name="sccp_enable_mobile_img_audio" <?= isset($data["options"]["mobile_img_audio"]) ? $data["options"]["mobile_img_audio"] : ''; ?>
+                                               name="sccp_enable_mobile_img_audio" <?php echo  isset($data["options"]["mobile_img_audio"]) ? $data["options"]["mobile_img_audio"] : ''; ?>
                                                value="true">
                                         <label for="sccp_enable_mobile_img_audio"></label>
                                     </div>
@@ -1323,9 +1323,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_show_msg_only_once"><?= __("Show message only once", 'secure-copy-content-protection'); ?>
+                                        <label for="sccp_show_msg_only_once"><?php echo  __("Show message only once", 'secure-copy-content-protection'); ?>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?= __('Enable to show the warning text once( only after the first attempt) when the user tries non-permitted actions in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  __('Enable to show the warning text once( only after the first attempt) when the user tries non-permitted actions in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1333,7 +1333,7 @@ $sccp_accordion_svg_html = '
                                     <div class="col-sm-2">
                                        <input type="checkbox" class="modern-checkbox-options"
                                                id="sccp_show_msg_only_once"
-                                               name="sccp_show_msg_only_once" <?= isset($data["options"]["msg_only_once"]) ? $data["options"]["msg_only_once"] : ''; ?>
+                                               name="sccp_show_msg_only_once" <?php echo  isset($data["options"]["msg_only_once"]) ? $data["options"]["msg_only_once"] : ''; ?>
                                                value="true">
                                         <label for="sccp_show_msg_only_once"></label>
                                     </div>
@@ -1342,9 +1342,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_access_disable_js"><?= __("Protect content when Javascript is disabled", 'secure-copy-content-protection'); ?>
+                                        <label for="sccp_access_disable_js"><?php echo  __("Protect content when Javascript is disabled", 'secure-copy-content-protection'); ?>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?= __('It will block the site content if the user disabled browser Javascript. There will be a white screen with a message.', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  __('It will block the site content if the user disabled browser Javascript. There will be a white screen with a message.', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1352,7 +1352,7 @@ $sccp_accordion_svg_html = '
                                     <div class="col-sm-2">
                                        <input type="checkbox" class="modern-checkbox-options"
                                                id="sccp_access_disable_js"
-                                               name="sccp_access_disable_js" <?= isset($data["options"]["disable_js"]) ? $data["options"]["disable_js"] : ''; ?>
+                                               name="sccp_access_disable_js" <?php echo  isset($data["options"]["disable_js"]) ? $data["options"]["disable_js"] : ''; ?>
                                                value="true">
                                         <label for="sccp_access_disable_js"></label>
                                     </div>
@@ -1361,9 +1361,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="form-group row if-ays-sccp-hide-results">
                                     <div class="col-sm-3">
-                                        <label for="ays_sccp_disabled_js_msg"><?= __("Message while Javascript is disabled", 'secure-copy-content-protection'); ?>
+                                        <label for="ays_sccp_disabled_js_msg"><?php echo  __("Message while Javascript is disabled", 'secure-copy-content-protection'); ?>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('Write the message which will be displayed when the Javascript is disabled', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('Write the message which will be displayed when the Javascript is disabled', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                         </label>
@@ -1465,7 +1465,7 @@ $sccp_accordion_svg_html = '
                                     </div>
                                 </div>
                                 <hr/>
-                                <div class="sccp_pro only_pro" title="<?= __('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
+                                <div class="sccp_pro only_pro" title="<?php echo  __('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
                                     <div class="pro_features sccp_general_pro">
                                         <div>                                    
                                             <a href="https://ays-pro.com/wordpress/secure-copy-content-protection/" target="_blank" class="ays-sccp-new-upgrade-button-link">
@@ -1492,9 +1492,9 @@ $sccp_accordion_svg_html = '
                                     </div>
                                     <div class="copy_protection_container form-group row">
                                         <div class="col-sm-3">
-                                            <label for="sccp_enable_watermark"><?= __("Enable Images Watermark", 'secure-copy-content-protection'); ?></label>
+                                            <label for="sccp_enable_watermark"><?php echo  __("Enable Images Watermark", 'secure-copy-content-protection'); ?></label>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?= __('Enable watermark with notification text on all site images', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  __('Enable watermark with notification text on all site images', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </div>
@@ -1507,11 +1507,11 @@ $sccp_accordion_svg_html = '
                                     <hr>
                                     <div class="copy_protection_container form-group row">
                                         <div class="col-sm-3">
-                                            <label for="sccp_enable_f12"><?= __("Disable REST API", 'secure-copy-content-protection'); ?>
-                                                <span class="sccp_not_rec"><?= __("( not recommended )", 'secure-copy-content-protection'); ?></span>
+                                            <label for="sccp_enable_f12"><?php echo  __("Disable REST API", 'secure-copy-content-protection'); ?>
+                                                <span class="sccp_not_rec"><?php echo  __("( not recommended )", 'secure-copy-content-protection'); ?></span>
                                             </label>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?= __('Disable REST API', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  __('Disable REST API', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </div>
@@ -1534,9 +1534,9 @@ $sccp_accordion_svg_html = '
                             <div class="ays-sccp-accordion-options-box">
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_bc_header_text"><?= __("Block content header text", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_bc_header_text"><?php echo  __("Block content header text", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('The header text for block content', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('The header text for block content', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1552,9 +1552,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_bc_button_position"><?= __("Block content button position", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_bc_button_position"><?php echo  __("Block content button position", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('The button position for block content', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('The button position for block content', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1579,9 +1579,9 @@ $sccp_accordion_svg_html = '
                             <div class="ays-sccp-accordion-options-box">                                                     
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_subscribe_block_header_text"><?= __("Subscribe to view header text", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_subscribe_block_header_text"><?php echo  __("Subscribe to view header text", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('The header text for subscribe to view', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('The header text for subscribe to view', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1597,9 +1597,9 @@ $sccp_accordion_svg_html = '
                                 <hr>                                
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_sub_block_button_position"><?= __("Subscribe to view button position", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_sub_block_button_position"><?php echo  __("Subscribe to view button position", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?= __('The button position for subscribe to view', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  __('The button position for subscribe to view', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1615,7 +1615,7 @@ $sccp_accordion_svg_html = '
                             </div>
                         </div>
                     </div>                    
-                    <div id="tab3" class="nav-tab-content only_pro <?= ($sccp_tab == 'tab3') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab3" class="nav-tab-content only_pro <?php echo  ($sccp_tab == 'tab3') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -1653,7 +1653,7 @@ $sccp_accordion_svg_html = '
                             </div>
                         </div>
                     </div>
-                    <div id="tab4" class="nav-tab-content only_pro <?= ($sccp_tab == 'tab4') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab4" class="nav-tab-content only_pro <?php echo  ($sccp_tab == 'tab4') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -1691,7 +1691,7 @@ $sccp_accordion_svg_html = '
                             </div>
                         </div>
                     </div>
-                    <div id="tab5" class="nav-tab-content container-fluid <?= ($sccp_tab == 'tab5') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab5" class="nav-tab-content container-fluid <?php echo  ($sccp_tab == 'tab5') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -1703,9 +1703,9 @@ $sccp_accordion_svg_html = '
                                     <div class="col-sm-6">
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="tooltip_position"><?= __('Tooltip position', 'secure-copy-content-protection'); ?></label>
+                                                <label for="tooltip_position"><?php echo  __('Tooltip position', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Position of tooltip on window', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Position of tooltip on window', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -1732,16 +1732,16 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="sscp_timeout"><?= __('Notification text display duration', 'secure-copy-content-protection'); ?></label>
+                                                <label for="sscp_timeout"><?php echo  __('Notification text display duration', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Notification text display duration in milliseconds. 1000ms is default value.', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Notification text display duration in milliseconds. 1000ms is default value.', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left ays_sccp_display_flex">
                                                 <div>
                                                    <input type="number" id="sscp_timeout" name="sscp_timeout"
-                                                       value="<?= isset($data["options"]["timeout"]) ? $data["options"]["timeout"] : 1000 ?>"/>
+                                                       value="<?php echo  isset($data["options"]["timeout"]) ? $data["options"]["timeout"] : 1000 ?>"/>
                                                 </div>
                                                 <div class="ays_sccp_dropdown_max_width">
                                                     <input type="text" value="ms" class="ays-sccp-form-hint-for-size" disabled="">
@@ -1751,15 +1751,15 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="bg_color"><?= __('Tooltip background color', 'secure-copy-content-protection'); ?></label>
+                                                <label for="bg_color"><?php echo  __('Tooltip background color', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Filler color of tooltip', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Filler color of tooltip', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left">
                                                 <input type="text" id="bg_color" data-alpha="true" name="bg_color"
-                                                       value="<?= stripslashes( esc_attr( $data["styles"]["bg_color"] ) ); ?>"/>
+                                                       value="<?php echo  stripslashes( esc_attr( $data["styles"]["bg_color"] ) ); ?>"/>
                                             </div>
                                         </div>
                                         <hr>
@@ -1923,9 +1923,9 @@ $sccp_accordion_svg_html = '
                                         <hr>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="tooltip_letter_spacing"><?= __('Tooltip letter spacing', 'secure-copy-content-protection'); ?></label>
+                                                <label for="tooltip_letter_spacing"><?php echo  __('Tooltip letter spacing', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Define the space between the letters of the tooltip text in pixels. Note: The default value for this option is 0.', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Define the space between the letters of the tooltip text in pixels. Note: The default value for this option is 0.', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -1972,23 +1972,23 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="text_color"><?= __('Tooltip text color', 'secure-copy-content-protection'); ?></label>
+                                                <label for="text_color"><?php echo  __('Tooltip text color', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Color of tooltip text', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Color of tooltip text', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left">
                                                 <input type="text" id="text_color" data-alpha="true" name="text_color"
-                                                       value="<?= stripslashes( esc_attr(  $data["styles"]["text_color"] ) ); ?>"/>
+                                                       value="<?php echo  stripslashes( esc_attr(  $data["styles"]["text_color"] ) ); ?>"/>
                                             </div>
                                         </div>
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="font_size"><?= __('Tooltip Font size', 'secure-copy-content-protection'); ?>
+                                                <label for="font_size"><?php echo  __('Tooltip Font size', 'secure-copy-content-protection'); ?>
                                                     <a class="ays_help" data-toggle="tooltip"
-                                                       title="<?= __('Size of tooltip text', 'secure-copy-content-protection') ?>">
+                                                       title="<?php echo  __('Size of tooltip text', 'secure-copy-content-protection') ?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -2037,9 +2037,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="ays_tooltip_padding_top_bottom"><?= __('Tooltip padding', 'secure-copy-content-protection'); ?></label>
+                                                <label for="ays_tooltip_padding_top_bottom"><?php echo  __('Tooltip padding', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Tooltip padding in pixels.', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Tooltip padding in pixels.', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2068,16 +2068,16 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="boxshadow_color"><?= __('Tooltip box shadow', 'secure-copy-content-protection'); ?></label>
+                                                <label for="boxshadow_color"><?php echo  __('Tooltip box shadow', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Box-shadow color for tooltip', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Box-shadow color for tooltip', 'secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left">
                                                 <div class="col-sm-6">
                                                     <input type="text" id="boxshadow_color" data-alpha="true" name="boxshadow_color"
-                                                           value="<?= $boxshadow_color; ?>"/>
+                                                           value="<?php echo  $boxshadow_color; ?>"/>
                                                 </div>
                                                 <hr>
                                                 <div class="col-sm-12">
@@ -2099,30 +2099,30 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_color"><?= __('Tooltip border color', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_color"><?php echo  __('Tooltip border color', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('Color of tooltip border', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('Color of tooltip border', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left">
                                                 <input type="text" id="border_color" data-alpha="true" name="border_color"
-                                                       value="<?= stripslashes( esc_attr($data["styles"]["border_color"]) ); ?>"/>
+                                                       value="<?php echo  stripslashes( esc_attr($data["styles"]["border_color"]) ); ?>"/>
                                             </div>
                                         </div>                                
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_width"><?= __('Tooltip border width', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_width"><?php echo  __('Tooltip border width', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('This shows the thickness of the border in pixels', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('This shows the thickness of the border in pixels', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left ays_sccp_display_flex">
                                                 <div>
                                                    <input type="number" id="border_width" name="border_width" class="form-control"
-                                                       value="<?= $data["styles"]["border_width"]; ?>"/>
+                                                       value="<?php echo  $data["styles"]["border_width"]; ?>"/>
                                                 </div>
                                                 <div class="ays_sccp_dropdown_max_width">
                                                     <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
@@ -2132,9 +2132,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>                                
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_radius"><?= __('Tooltip border radius', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_radius"><?php echo  __('Tooltip border radius', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('This shows if the border has curvature', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('This shows if the border has curvature', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2142,7 +2142,7 @@ $sccp_accordion_svg_html = '
                                                 <div>
                                                    <input type="number" id="border_radius" name="border_radius"
                                                        class="form-control"
-                                                       value="<?= $data["styles"]["border_radius"]; ?>"/>
+                                                       value="<?php echo  $data["styles"]["border_radius"]; ?>"/>
                                                 </div>
                                                 <div class="ays_sccp_dropdown_max_width">
                                                     <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
@@ -2152,9 +2152,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_style"><?= __('Tooltip border style', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_style"><?php echo  __('Tooltip border style', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?= __('This shows if the border is highlighted with style', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  __('This shows if the border is highlighted with style', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2243,25 +2243,25 @@ $sccp_accordion_svg_html = '
                                         <div class="copy_protection_container ays_tooltip_container">
                                             <div id="ays_tooltip" class="ays-tooltip-live-container">
                                                 <div id="ays_tooltip_block">
-                                                    <?= isset($data['protection_text']) ? $data['protection_text'] : 'You cannot copy content of this page' ?>
+                                                    <?php echo  isset($data['protection_text']) ? $data['protection_text'] : 'You cannot copy content of this page' ?>
                                                 </div>
                                             </div>
                                             <style>
                                                 #ays_tooltip {
                                                     width: fit-content;
                                                     width: -moz-fit-content;
-                                                    background-color:<?= isset($data["styles"]["bg_color"]) ? stripslashes( esc_attr( $data["styles"]["bg_color"] ) ) : '#ffffff' ?>;
-                                                    background-image: url(' <?= isset($data["styles"]["bg_image"]) ? $data["styles"]["bg_image"] : '' ?>');
+                                                    background-color:<?php echo  isset($data["styles"]["bg_color"]) ? stripslashes( esc_attr( $data["styles"]["bg_color"] ) ) : '#ffffff' ?>;
+                                                    background-image: url(' <?php echo  isset($data["styles"]["bg_image"]) ? $data["styles"]["bg_image"] : '' ?>');
                                                     background-repeat: no-repeat;
                                                     background-position: <?php echo $tooltip_bg_image_position ?>;
                                                     background-size: <?php echo $tooltip_bg_image_object_fit ?>;
-                                                    border-color: <?= isset($data["styles"]["border_color"]) ? stripslashes( esc_attr($data["styles"]["border_color"] ) ) : '#b7b7b7' ?>;
-                                                    box-shadow: <?= isset($data["styles"]["boxshadow_color"]) ? stripslashes( esc_attr(  $data["styles"]["boxshadow_color"] ) ). ' ' . $box_shadow_offsets .' 1px' : 'rgba(0,0,0,0)' ?>;
-                                                    letter-spacing: <?= isset($data["styles"]["letter_spacing"]) ? $data["styles"]["letter_spacing"].'px' : '0' ?>;
-                                                    border-width: <?= isset($data["styles"]["border_width"]) ? $data["styles"]["border_width"].'px' : '1px' ?>;
-                                                    border-radius: <?= isset($data["styles"]["border_radius"]) ? $data["styles"]["border_radius"].'px' : '3px' ?>;
-                                                    border-style: <?= isset($data["styles"]["border_style"]) ? $data["styles"]["border_style"] : 'solid' ?>;
-                                                    color: <?= !empty($data["styles"]["text_color"]) ? stripslashes( esc_attr( $data["styles"]["text_color"] ) ) : '#ff0000' ?>;
+                                                    border-color: <?php echo  isset($data["styles"]["border_color"]) ? stripslashes( esc_attr($data["styles"]["border_color"] ) ) : '#b7b7b7' ?>;
+                                                    box-shadow: <?php echo  isset($data["styles"]["boxshadow_color"]) ? stripslashes( esc_attr(  $data["styles"]["boxshadow_color"] ) ). ' ' . $box_shadow_offsets .' 1px' : 'rgba(0,0,0,0)' ?>;
+                                                    letter-spacing: <?php echo  isset($data["styles"]["letter_spacing"]) ? $data["styles"]["letter_spacing"].'px' : '0' ?>;
+                                                    border-width: <?php echo  isset($data["styles"]["border_width"]) ? $data["styles"]["border_width"].'px' : '1px' ?>;
+                                                    border-radius: <?php echo  isset($data["styles"]["border_radius"]) ? $data["styles"]["border_radius"].'px' : '3px' ?>;
+                                                    border-style: <?php echo  isset($data["styles"]["border_style"]) ? $data["styles"]["border_style"] : 'solid' ?>;
+                                                    color: <?php echo  !empty($data["styles"]["text_color"]) ? stripslashes( esc_attr( $data["styles"]["text_color"] ) ) : '#ff0000' ?>;
                                                     padding: <?php echo $tooltip_padding_top_bottom; ?>px <?php echo $tooltip_padding_left_right; ?>px;
                                                     opacity:<?php echo isset($data["styles"]['tooltip_opacity']) ? $data["styles"]['tooltip_opacity'] : '1'; ?> ;
                                                     box-sizing: border-box;
@@ -2270,19 +2270,19 @@ $sccp_accordion_svg_html = '
                                                 }
 
                                                 #ays_tooltip > * {
-                                                    color: <?= !empty($data["styles"]["text_color"]) ? stripslashes(esc_attr( $data["styles"]["text_color"] ) ) : '#ff0000' ?>;
+                                                    color: <?php echo  !empty($data["styles"]["text_color"]) ? stripslashes(esc_attr( $data["styles"]["text_color"] ) ) : '#ff0000' ?>;
                                                 }
 
                                                 #ays_tooltip_block > * {
-                                                    font-size: <?= !empty($data["styles"]["font_size"]) ? $data["styles"]["font_size"] : "12"?>px;
+                                                    font-size: <?php echo  !empty($data["styles"]["font_size"]) ? $data["styles"]["font_size"] : "12"?>px;
                                                 }
                                                 #ays_tooltip_block {
-                                                    font-size: <?= !empty($data["styles"]["font_size"]) ? $data["styles"]["font_size"] : "12"?>px;
-                                                    backdrop-filter: blur(<?= $tooltip_bg_blur; ?>px);
+                                                    font-size: <?php echo  !empty($data["styles"]["font_size"]) ? $data["styles"]["font_size"] : "12"?>px;
+                                                    backdrop-filter: blur(<?php echo  $tooltip_bg_blur; ?>px);
                                                 }
                                             </style>
                                             <style id="ays-sccp-custom-styles">
-                                                <?= isset($data["styles"]["custom_css"]) ? stripslashes ( esc_attr( $data["styles"]["custom_css"] ) ) : '' ?>
+                                                <?php echo  isset($data["styles"]["custom_css"]) ? stripslashes ( esc_attr( $data["styles"]["custom_css"] ) ) : '' ?>
                                             </style>
                                         </div>
                                     </div>
@@ -2293,15 +2293,15 @@ $sccp_accordion_svg_html = '
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-3">
                                 <label for="sccp_custom_css">
-                                    <?= __('Custom CSS', 'secure-copy-content-protection') ?>
+                                    <?php echo  __('Custom CSS', 'secure-copy-content-protection') ?>
                                     <a class="ays_help" data-toggle="tooltip"
-                                       title="<?= __('Field for entering your own CSS code', 'secure-copy-content-protection') ?>">
+                                       title="<?php echo  __('Field for entering your own CSS code', 'secure-copy-content-protection') ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
                             </div>
                             <div class="col-sm-9 ays_divider_left">
-                                <textarea class="ays-textarea" id="sccp_custom_css" name="custom_css" cols="33" rows="7"><?= isset($data["styles"]["custom_css"]) ? stripslashes ( esc_attr( $data["styles"]["custom_css"] ) ): '' ?></textarea>
+                                <textarea class="ays-textarea" id="sccp_custom_css" name="custom_css" cols="33" rows="7"><?php echo  isset($data["styles"]["custom_css"]) ? stripslashes ( esc_attr( $data["styles"]["custom_css"] ) ): '' ?></textarea>
                             </div>
                         </div>
                         <hr/>
@@ -2317,12 +2317,12 @@ $sccp_accordion_svg_html = '
                             </div>
                             <div class="col-sm-9 ays_divider_left">
                                 <button type="button" class="ays-button button-secondary"
-                                        id="reset_to_default"><?= __("Reset", 'secure-copy-content-protection') ?>
+                                        id="reset_to_default"><?php echo  __("Reset", 'secure-copy-content-protection') ?>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div id="tab6" class="nav-tab-content only_pro <?= ($sccp_tab == 'tab6') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab6" class="nav-tab-content only_pro <?php echo  ($sccp_tab == 'tab6') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -2360,7 +2360,7 @@ $sccp_accordion_svg_html = '
                             </div>
                         </div>
                     </div>
-                    <div id="tab7" class="nav-tab-content only_pro <?= ($sccp_tab == 'tab7') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab7" class="nav-tab-content only_pro <?php echo  ($sccp_tab == 'tab7') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -2398,7 +2398,7 @@ $sccp_accordion_svg_html = '
                             </div>
                         </div>
                     </div>
-                    <div id="tab8" class="nav-tab-content container-fluid <?= ($sccp_tab == 'tab8') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab8" class="nav-tab-content container-fluid <?php echo  ($sccp_tab == 'tab8') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -2407,7 +2407,7 @@ $sccp_accordion_svg_html = '
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">                      
                                 <button type="button" class="button add_new_block_content"
-                                        style="margin-bottom: 20px"><?= __('Add new', 'secure-copy-content-protection'); ?></button>
+                                        style="margin-bottom: 20px"><?php echo  __('Add new', 'secure-copy-content-protection'); ?></button>
                                 <div class="all_block_contents" data-last-id="<?php echo $bc_last_id; ?>">
                                     <?php
                                      foreach ( $block_content_data as $key => $blocont ) { 
@@ -2441,7 +2441,7 @@ $sccp_accordion_svg_html = '
                                         <div class="blockcont_one" id="blocont<?php echo $block_id; ?>">
                                             <div class="copy_protection_container form-group row ays_bc_row">
                                                 <div class="col">
-                                                    <label for="sccp_blockcont_shortcode" class="sccp_bc_label"><?= __('Shortcode', 'secure-copy-content-protection'); ?></label>
+                                                    <label for="sccp_blockcont_shortcode" class="sccp_bc_label"><?php echo  __('Shortcode', 'secure-copy-content-protection'); ?></label>
                                                     <input type="text" name="sccp_blockcont_shortcode[]"
                                                            class="ays-text-input sccp_blockcont_shortcode select2_style"
                                                            value="[ays_block id='<?php echo $block_id; ?>'] Content [/ays_block]"
@@ -2451,15 +2451,15 @@ $sccp_accordion_svg_html = '
                                                 <div class="col">
                                                     <div class="input-group bc_count_limit">
                                                         <div class="bc_count">
-                                                            <label for="sccp_blockcont_pass" class="sccp_bc_label"><?= __('Password', 'secure-copy-content-protection'); ?><a class="ays_help password_count" data-toggle="tooltip"
-                                                   title="<?= __('Shows how many times have used a password', 'secure-copy-content-protection') ?>">
+                                                            <label for="sccp_blockcont_pass" class="sccp_bc_label"><?php echo  __('Password', 'secure-copy-content-protection'); ?><a class="ays_help password_count" data-toggle="tooltip"
+                                                   title="<?php echo  __('Shows how many times have used a password', 'secure-copy-content-protection') ?>">
                                                                     <?php echo $block_password_count; ?>
                                                                 </a></label>
                                                             <input type="hidden" name="bc_pass_count_<?php echo $block_id; ?>" value="<?php echo $block_password_count; ?>">        
                                                         </div>
                                                         <div class="bc_limit">
-                                                            <label for="sccp_blockcont_limit_<?php echo $block_id; ?>" class="sccp_bc_limit"><?= __('Limit', 'secure-copy-content-protection'); ?><a class="ays_help" data-toggle="tooltip"
-                                                           title="<?= __('Choose the maximum amount of the usage of the password', 'secure-copy-content-protection') ?>">
+                                                            <label for="sccp_blockcont_limit_<?php echo $block_id; ?>" class="sccp_bc_limit"><?php echo  __('Limit', 'secure-copy-content-protection'); ?><a class="ays_help" data-toggle="tooltip"
+                                                           title="<?php echo  __('Choose the maximum amount of the usage of the password', 'secure-copy-content-protection') ?>">
                                                             <i class="ays_fa ays_fa_info_circle"></i>
                                                         </a></label>
                                                             <input type="number" id="sccp_blockcont_limit_<?php echo $block_id; ?>" name="bc_pass_limit_<?php echo $block_id; ?>" value="<?php echo $block_password_limit; ?>">
@@ -2477,11 +2477,11 @@ $sccp_accordion_svg_html = '
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <p style="margin-top:60px;"><?= __('OR', 'secure-copy-content-protection') ?></p>
+                                                    <p style="margin-top:60px;"><?php echo  __('OR', 'secure-copy-content-protection') ?></p>
                                                 </div>
                                                 <div class="col">
-                                                    <label for="sccp_blockcont_roles" class="sccp_bc_label"><?= __('Except', 'secure-copy-content-protection'); ?><a class="ays_help user_role_count" data-toggle="tooltip"
-                                           title="<?= __('Shows how many times have used a user role', 'secure-copy-content-protection') ?>">
+                                                    <label for="sccp_blockcont_roles" class="sccp_bc_label"><?php echo  __('Except', 'secure-copy-content-protection'); ?><a class="ays_help user_role_count" data-toggle="tooltip"
+                                           title="<?php echo  __('Shows how many times have used a user role', 'secure-copy-content-protection') ?>">
                                                             <?php echo $block_user_role_count; ?>
                                                         </a></label>
                                                         <input type="hidden" name="bc_user_role_count_<?php echo $block_id; ?>" value="<?php echo $block_user_role_count; ?>">
@@ -2516,7 +2516,7 @@ $sccp_accordion_svg_html = '
                                                     </div>
                                                 </div>
                                                 <div class="col">
-                                                    <label for="sccp_blockcont_schedule" style="margin-left: 35px;"><?= __('Schedule', 'secure-copy-content-protection'); ?><a class="ays_help schedule_notice" style="background: <?php echo $bc_schedule_notice_color; ?>" data-toggle="tooltip" title="<?= __('Block content status', 'secure-copy-content-protection') ?>">
+                                                    <label for="sccp_blockcont_schedule" style="margin-left: 35px;"><?php echo  __('Schedule', 'secure-copy-content-protection'); ?><a class="ays_help schedule_notice" style="background: <?php echo $bc_schedule_notice_color; ?>" data-toggle="tooltip" title="<?php echo  __('Block content status', 'secure-copy-content-protection') ?>">
                                                             <?php echo $bc_schedule_notice; ?>
                                                         </a></label>
                                                     <div class="input-group">
@@ -2551,11 +2551,11 @@ $sccp_accordion_svg_html = '
                                     <input type="hidden" class="deleted_ids" value="" name="deleted_ids">
                                 </div>
                                 <button type="button" class="button add_new_block_content"
-                                        style="margin-top: 20px"><?= __('Add new', 'secure-copy-content-protection'); ?></button>          
+                                        style="margin-top: 20px"><?php echo  __('Add new', 'secure-copy-content-protection'); ?></button>          
                             </div>
                         </div>
                     </div>
-                    <div id="tab9" class="nav-tab-content <?= ($sccp_tab == 'tab9') ? 'nav-tab-content-active' : ''; ?>">
+                    <div id="tab9" class="nav-tab-content <?php echo  ($sccp_tab == 'tab9') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
@@ -2698,7 +2698,7 @@ $sccp_accordion_svg_html = '
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title"
-                            id="add_ip_modalLabel"><?= __("Blacklist modal", 'secure-copy-content-protection'); ?></h5>
+                            id="add_ip_modalLabel"><?php echo  __("Blacklist modal", 'secure-copy-content-protection'); ?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -2706,7 +2706,7 @@ $sccp_accordion_svg_html = '
                     <div class="modal-body">
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-12">
-                                <label><?= __("Add IP parts", 'secure-copy-content-protection'); ?></label>
+                                <label><?php echo  __("Add IP parts", 'secure-copy-content-protection'); ?></label>
                             </div>
                             <div class="col-sm-12">
                                 <table style="width: 100%">
@@ -2722,9 +2722,9 @@ $sccp_accordion_svg_html = '
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="button button-secondary"
-                                data-dismiss="modal"><?= __("Close", 'secure-copy-content-protection'); ?></button>
+                                data-dismiss="modal"><?php echo  __("Close", 'secure-copy-content-protection'); ?></button>
                         <button type="button"
-                                class="button button-primary"><?= __("Add IP", 'secure-copy-content-protection'); ?></button>
+                                class="button button-primary"><?php echo  __("Add IP", 'secure-copy-content-protection'); ?></button>
                     </div>
                 </div>
             </div>

@@ -450,6 +450,9 @@
             $(document).find("#enable_ays_sccp_sub_cont_border_color_mobile").prop('checked', true).change();
             
             $(document).find('#ays_sccp_sub_cont_border_width').val('1').change();
+            $(document).find('#ays_sccp_sub_cont_border_width_mobile').val('1').change();
+            $(document).find("#enable_ays_sccp_sub_cont_border_width_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sccp_sub_input_width').val('').change();
             $(document).find('#ays_sccp_sub_button_text').val('Subscribe').change();
             $(document).find('#ays-sccp-sub-img').attr('src', '').change();

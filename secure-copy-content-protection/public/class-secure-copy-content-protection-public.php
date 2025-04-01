@@ -301,6 +301,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Container border width
 		$sub_cont_border_width = (isset($subscribe_settings['sub_cont_border_width']) && $subscribe_settings['sub_cont_border_width'] != '') ? 'border-width: '. $subscribe_settings['sub_cont_border_width'] .'px;': '';
 
+		// Subscribe box Enable Container border width Mobile
+        $subscribe_settings['enable_sub_cont_border_width_mobile'] = ( isset( $subscribe_settings['enable_sub_cont_border_width_mobile'] ) && $subscribe_settings['enable_sub_cont_border_width_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Container border width Mobile
+        if ( $subscribe_settings['enable_sub_cont_border_width_mobile'] ) {
+            $sub_cont_border_width_mobile = ( isset( $subscribe_settings['sub_cont_border_width_mobile'] ) && $subscribe_settings['sub_cont_border_width_mobile'] != '' ) ?  'border-width: '. $subscribe_settings['sub_cont_border_width_mobile'] .'px !important;' : $sub_cont_border_width;
+        } else {
+            $sub_cont_border_width_mobile = $sub_cont_border_width;
+        }
+
 		// Container input width
 		$sub_cont_input_width = (isset($subscribe_settings['sub_cont_input_width']) && $subscribe_settings['sub_cont_input_width'] != '' && $subscribe_settings['sub_cont_input_width'] != 0) ? 'max-width: '. $subscribe_settings['sub_cont_input_width'] .'px;': '';
 
@@ -416,6 +426,7 @@ class Secure_Copy_Content_Protection_Public {
 					    '. $sub_text_color_mobile .'
 					    '. $sub_bg_color_mobile .'
 					    '. $sub_bg_image_position_mobile .'
+					    '. $sub_cont_border_width_mobile .'
 					    '. $sub_cont_border_style_mobile .'
 					    '. $sccp_sub_cont_border_color_mobile .'
 					}
@@ -1036,7 +1047,7 @@ class Secure_Copy_Content_Protection_Public {
 
 			if (!empty($audio)) {
 				echo "<audio id='sccp_public_audio'>
-                  <source src=" . $audio . " type='audio/mpeg'>
+                  <source src=" . esc_attr($audio) . " type='audio/mpeg'>
                 </audio>";
 			}
 
@@ -1149,7 +1160,7 @@ class Secure_Copy_Content_Protection_Public {
 
 			$box_shadow_offsets = $styles["sccp_box_shadow_x_offset"] . 'px ' . $styles["sccp_box_shadow_y_offset"] . 'px ' . $styles["sccp_box_shadow_z_offset"] . 'px ';
 
-			echo '<div id="ays_tooltip" '.$custom_class.'><div id="ays_tooltip_block">' . $notf_text . '</div></div>
+			echo '<div id="ays_tooltip" '. esc_attr($custom_class) .'><div id="ays_tooltip_block">' . esc_html($notf_text) . '</div></div>
                     <style>
                     	* {
 						    -webkit-touch-callout: none !important; 
@@ -1160,42 +1171,42 @@ class Secure_Copy_Content_Protection_Public {
                     		display: none;
                     		position: absolute;
     						z-index: 999999999;
-                            background-color: ' . $styles["bg_color"] . ';
-                            '.$av_bg_image.'
+                            background-color: ' . esc_attr($styles["bg_color"]) . ';
+                            '.esc_attr($av_bg_image).'
                             background-repeat: no-repeat;
-                            background-position: ' . $styles["tooltip_bg_image_position"] . ';
-                            background-size: ' . $styles["tooltip_bg_image_object_fit"] . ';
-                            opacity:' . $styles["tooltip_opacity"] . ';
-                            border: ' . $styles["border_width"] . 'px ' . $styles["border_style"] . ' ' . $styles["border_color"] . ';
-                            border-radius: ' . $styles["border_radius"] . 'px;
-                            box-shadow: ' . $styles["boxshadow_color"] . ' ' . $box_shadow_offsets .' 1px;
-                            color: ' . $styles["text_color"] . ';
-                            padding: ' . $styles["tooltip_padding_top_bottom"] . 'px ' . $styles["tooltip_padding_left_right"] . 'px;
-                            text-transform: ' . $tooltip_text_transformation . ';
-							'.$tooltip_title_shadow.';
+                            background-position: ' . esc_attr($styles["tooltip_bg_image_position"]) . ';
+                            background-size: ' . esc_attr($styles["tooltip_bg_image_object_fit"]) . ';
+                            opacity:' . esc_attr($styles["tooltip_opacity"]) . ';
+                            border: ' . esc_attr($styles["border_width"]) . 'px ' . esc_attr($styles["border_style"]) . ' ' . esc_attr($styles["border_color"]) . ';
+                            border-radius: ' . esc_attr($styles["border_radius"]) . 'px;
+                            box-shadow: ' . esc_attr($styles["boxshadow_color"]) . ' ' . esc_attr($box_shadow_offsets) .' 1px;
+                            color: ' . esc_attr($styles["text_color"]) . ';
+                            padding: ' . esc_attr($styles["tooltip_padding_top_bottom"]) . 'px ' . esc_attr($styles["tooltip_padding_left_right"]) . 'px;
+                            text-transform: ' . esc_attr($tooltip_text_transformation) . ';
+							'. esc_attr($tooltip_title_shadow) .';
                         }
                         
                         #ays_tooltip > *, .ays_tooltip_class > * {
-                            color: ' . $styles["text_color"] . ';
-                            font-size: ' . (isset($styles["font_size"]) ? $styles["font_size"] : "12") . 'px;
-                            letter-spacing:' . $styles["letter_spacing"] . 'px;
+                            color: ' . esc_attr($styles["text_color"]) . ';
+                            font-size: ' . (isset($styles["font_size"]) ? esc_attr($styles["font_size"]) : "12") . 'px;
+                            letter-spacing:' . esc_attr($styles["letter_spacing"]) . 'px;
                         }
 
                         #ays_tooltip_block {
-                            font-size: ' . (isset($styles["font_size"]) ? $styles["font_size"] : "12") . 'px;
-                            backdrop-filter: blur('. $styles["bg_blur"] .'px);
+                            font-size: ' . (isset($styles["font_size"]) ? esc_attr($styles["font_size"]) : "12") . 'px;
+                            backdrop-filter: blur('. esc_attr($styles["bg_blur"]) .'px);
                         }
 
                         @media screen and (max-width: 768px){
                         	#ays_tooltip,.ays_tooltip_class {
-                        		font-size: ' . (isset($styles["mobile_font_size"]) ? $styles["mobile_font_size"] : "12") . 'px;
+                        		font-size: ' . (isset($styles["mobile_font_size"]) ? esc_attr($styles["mobile_font_size"]) : "12") . 'px;
                         	}
                         	#ays_tooltip > *, .ays_tooltip_class > * {	                            
-	                            font-size: ' . (isset($styles["mobile_font_size"]) ? $styles["mobile_font_size"] : "12") . 'px;
+	                            font-size: ' . (isset($styles["mobile_font_size"]) ? esc_attr($styles["mobile_font_size"]) : "12") . 'px;
 	                        }
                         }
                         
-                       ' . (isset($styles["custom_css"]) ? wp_unslash( stripslashes( htmlspecialchars_decode( $styles["custom_css"] ) ) ) : "") . '
+                       ' . (isset($styles["custom_css"]) ? stripslashes( htmlspecialchars_decode( $styles["custom_css"] ) ) : "") . '
                     </style>
             ';
 			include_once('partials/secure-copy-content-protection-public-display.php');
@@ -1206,7 +1217,7 @@ class Secure_Copy_Content_Protection_Public {
 			$disable_js_msg = isset($options["disable_js_msg"]) && !empty($options["disable_js_msg"]) ? stripslashes($options["disable_js_msg"]) : __('Javascript not detected. Javascript required for this site to function. Please enable it in your browser settings and refresh this page.', 'secure-copy-content-protection');
 
 			echo '<div id="ays_noscript" style="display:none;">
-					<p>'.$disable_js_msg.'</p>
+					<p>'. esc_html($disable_js_msg) .'</p>
 			  	  </div>
 			  	  <noscript> 
 			  	 	<style>

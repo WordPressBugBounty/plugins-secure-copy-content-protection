@@ -16,7 +16,7 @@
  * Plugin Name:       Secure Copy Content Protection
  * Plugin URI:        https://ays-pro.com/wordpress/secure-copy-content-protection/
  * Description:       Copy Protection plugin is activated it disables the right click, copy paste, content selection and copy shortcut keys
- * Version:           4.5.1
+ * Version:           4.5.3
  * Author:            Copy Content Protection Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('SCCP_NAME_VERSION', '4.5.1');
+define('SCCP_NAME_VERSION', '4.5.3');
 define('SCCP_NAME', 'secure-copy-content-protection');
 if (!defined('SCCP_ADMIN_URL')) {
 	define('SCCP_ADMIN_URL', plugin_dir_url(__FILE__) . 'admin');
@@ -66,7 +66,7 @@ function activate_secure_copy_content_protection() {
  */
 function ays_sccp_activation_redirect_method( $plugin ) {
 	if ($plugin == plugin_basename(__FILE__)) {
-		exit(wp_redirect(admin_url('admin.php?page=secure-copy-content-protection')));
+		exit( wp_redirect( esc_url( admin_url( 'admin.php?page=secure-copy-content-protection' ) ) ) );
 	}
 }
 
@@ -112,15 +112,15 @@ function sccp_admin_notice() {
                     <div class="ays-logo-container-upgrade">
                         <div class="logo-container">
                             <a href="https://ays-pro.com/wordpress/secure-copy-content-protection" target="_blank" style="box-shadow: none;">
-                                <img  class="sccp-logo" src="<?php echo esc_attr(SCCP_ADMIN_URL) . '/images/sccp.png'; ?>" alt="<?php echo __( "Secure Copy Content Protection", 'secure-copy-content-protection' ); ?>" title="<?php echo __( "Secure Copy Content Protection", 'secure-copy-content-protection' ); ?>"/>
+                                <img  class="sccp-logo" src="<?php echo esc_attr(SCCP_ADMIN_URL) . '/images/sccp.png'; ?>" alt="<?php echo esc_attr__( "Secure Copy Content Protection", 'secure-copy-content-protection' ); ?>" title="<?php echo esc_attr__( "Secure Copy Content Protection", 'secure-copy-content-protection' ); ?>"/>
                             </a>
                         </div>
                         <div class="ays-upgrade-container">
                             <a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=top-menu-sccp" target="_blank">
                                 <img src="<?php echo esc_attr(SCCP_ADMIN_URL) . '/images/icons/lightning-hover.svg'; ?>">
-                                <span><?php echo __( "Upgrade", 'secure-copy-content-protection' ); ?></span>
+                                <span><?php echo esc_html__( "Upgrade", 'secure-copy-content-protection' ); ?></span>
                             </a>
-                            <span class="ays-sccp-logo-container-one-time-text"><?php echo __( "One-time payment", 'secure-copy-content-protection' ); ?></span>
+                            <span class="ays-sccp-logo-container-one-time-text"><?php echo esc_html__( "One-time payment", 'secure-copy-content-protection' ); ?></span>
                         </div>
                     </div>
                     <ul id="menu">

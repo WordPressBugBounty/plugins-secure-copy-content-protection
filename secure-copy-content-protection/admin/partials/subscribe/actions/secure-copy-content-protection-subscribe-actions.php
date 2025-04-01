@@ -113,7 +113,7 @@ class Secure_Copy_Content_Protection_Subscribe_Actions {
 
         ?>
         <div class="notice notice-success is-dismissible">
-            <p> <?php echo $updated_message; ?> </p>
+            <p> <?php echo esc_html( $updated_message ); ?> </p>
         </div>
         <?php
     }

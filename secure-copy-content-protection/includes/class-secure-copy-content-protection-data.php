@@ -91,7 +91,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -183,7 +183,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -283,7 +283,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -369,7 +369,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo html_entity_decode(esc_html( $content ));
+            echo wp_kses_post( $content );
         }        
     }
 
@@ -457,7 +457,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -525,7 +525,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -563,7 +563,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -632,7 +632,7 @@ class Ays_Sccp_Data {
             $content[] = '</div>';
 
             $content = implode( '', $content );
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -713,7 +713,7 @@ class Ays_Sccp_Data {
 
             $content = implode( '', $content );
 
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -775,7 +775,7 @@ class Ays_Sccp_Data {
 
             $content = implode( '', $content );
 
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 
@@ -830,7 +830,7 @@ class Ays_Sccp_Data {
 
             $content = implode( '', $content );
 
-            echo $content;
+            echo wp_kses_post($content);
         }
     }
 

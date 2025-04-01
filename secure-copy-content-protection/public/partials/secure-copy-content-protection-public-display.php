@@ -163,7 +163,7 @@ if (!isset($_GET['elementor-preview'])): ?>
                 $(function () {
                     let all = $('*').not('script, meta, link, style, noscript, title'),
                         tooltip = $('#ays_tooltip'),
-                        tooltipClass = "<?=$tooltip_position?>";
+                        tooltipClass = "<?php echo $tooltip_position; ?>";
                     if (tooltipClass == "mouse" || tooltipClass == "mouse_first_pos") {
     	                <?php if($is_mobile):?>
                         let startTime, endTime;
@@ -229,7 +229,7 @@ if (!isset($_GET['elementor-preview'])): ?>
                         let target = $(event.target);
                         let t = e || window.event;
                         let n = t.target || t.srcElement;
-                        if (!target.is("<?=$exclude_css_selectors?>") && (!target.is("<?=$enable_rclick_img?>") && !target.is("img")) && (!target.is("<?=$enable_rclick_link?>") && !target.is("a") && n.parentElement.nodeName !== "A") ) {
+                        if (!target.is("<?php echo $exclude_css_selectors; ?>") && (!target.is("<?php echo $enable_rclick_img; ?>") && !target.is("img")) && (!target.is("<?php echo $enable_rclick_link; ?>") && !target.is("a") && n.parentElement.nodeName !== "A") ) {
                             if (n.nodeName !== "A" ) {
                                 show_tooltip(<?php echo $enable_context_menu_mess?> );
                                 audio_play(<?php echo $right_click_audio?>);
@@ -285,7 +285,7 @@ if (!isset($_GET['elementor-preview'])): ?>
     				<?php if($enable_drag_start) : ?>
                     $(document).on('dragstart', function () {
                         let target = $(event.target);
-                        if (!target.is("<?=$exclude_css_selectors?>")) {
+                        if (!target.is("<?php echo $exclude_css_selectors; ?>")) {
                             show_tooltip(<?php echo $enable_drag_start_mess?> );
                             audio_play(<?php echo $enable_drag_start_audio?>);
                             return false;
@@ -297,7 +297,7 @@ if (!isset($_GET['elementor-preview'])): ?>
 
                     $(document).on('mousedown', function (e) {
                         let target = $(event.target);
-                        if (!target.is("<?=$exclude_css_selectors?>")) {
+                        if (!target.is("<?php echo $exclude_css_selectors; ?>")) {
                             let event = e || window.event;
                             if (event.which == 1) {
                                 show_tooltip(<?php echo $enable_left_click_mess?> );
@@ -314,7 +314,7 @@ if (!isset($_GET['elementor-preview'])): ?>
                         if (!sccp_selObj.rangeCount < 1) {
                             var sccp_selRange = sccp_selObj.getRangeAt(0);
                             var sccp_selection_selector = sccp_selRange.startContainer.parentElement;
-                            check_selectors = !$(sccp_selection_selector).is("<?=$exclude_css_selectors?>");
+                            check_selectors = !$(sccp_selection_selector).is("<?php echo $exclude_css_selectors; ?>");
                         }
 
                         if (check_selectors) {
@@ -996,12 +996,12 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 $('#ays_tooltip').fadeOut();
                                 setTimeout(function () {
                                     tooltip2.remove();
-                                }, <?=$timeout?>);
+                                }, <?php echo $timeout; ?>);
                             }else{
                                 tooltip.css({'display': 'table'});
                                 setTimeout(function () {
-                                    $('#ays_tooltip').fadeOut(<?=$timeout / 2?>);
-                                }, <?=$timeout?>);
+                                    $('#ays_tooltip').fadeOut(<?php echo $timeout / 2?>);
+                                }, <?php echo $timeout; ?>);
                             }
                         }
 

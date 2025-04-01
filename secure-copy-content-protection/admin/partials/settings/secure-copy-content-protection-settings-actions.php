@@ -124,6 +124,12 @@ class Sccp_Settings_Actions {
             // Container border width
             $sub_cont_border_width = (isset($data['ays_sccp_sub_cont_border_width']) && sanitize_text_field( $data['ays_sccp_sub_cont_border_width'] ) != "") ? sanitize_text_field( $data['ays_sccp_sub_cont_border_width'] ) : '1';
 
+            // Enable Subscribe Container border width Mobile
+            $enable_sub_cont_border_width_mobile = isset( $data['enable_ays_sccp_sub_cont_border_width_mobile'] ) && $data['enable_ays_sccp_sub_cont_border_width_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Container border width Mobile
+            $sub_cont_border_width_mobile = isset( $data['ays_sccp_sub_cont_border_width_mobile'] ) && $data['ays_sccp_sub_cont_border_width_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_cont_border_width_mobile'] ) : '1';
+
             // Buttons border style
             $sub_btn_border_style = (isset($data['ays_sccp_sub_btn_border_style']) && $data['ays_sccp_sub_btn_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_sub_btn_border_style'] ) : 'solid';
 
@@ -198,6 +204,8 @@ class Sccp_Settings_Actions {
                 "sub_btn_radius"                            => $sub_btn_radius,
                 "sub_btn_border_width"                      => $sub_btn_border_width,
                 "sub_cont_border_width"                     => $sub_cont_border_width,
+                "enable_sub_cont_border_width_mobile"       => $enable_sub_cont_border_width_mobile,
+                "sub_cont_border_width_mobile"              => $sub_cont_border_width_mobile,
                 "sub_btn_border_style"                      => $sub_btn_border_style,
                 "sub_cont_border_style"                     => $sub_cont_border_style,
                 "enable_sub_cont_border_style_mobile"       => $enable_sub_cont_border_style_mobile,
@@ -459,7 +467,7 @@ class Sccp_Settings_Actions {
 
         ?>
         <div class="notice notice-success is-dismissible">
-            <p> <?php echo $updated_message; ?> </p>
+            <p> <?php echo esc_html( $updated_message ); ?> </p>
         </div>
         <?php
     }
