@@ -217,8 +217,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                         let keyCode = e.keyCode ? e.keyCode : e.which;
                         if (keyCode == 44) {
                             stopPrntScr();
-                            show_tooltip(<?php echo $enable_printscreen_mess?> );
-                            audio_play(<?php echo $enable_printscreen_audio ?>);
+                            show_tooltip(<?php echo $enable_printscreen_mess; ?> );
+                            audio_play(<?php echo $enable_printscreen_audio; ?>);
                         }
                     });
     				<?php endif; ?>
@@ -231,8 +231,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                         let n = t.target || t.srcElement;
                         if (!target.is("<?php echo $exclude_css_selectors; ?>") && (!target.is("<?php echo $enable_rclick_img; ?>") && !target.is("img")) && (!target.is("<?php echo $enable_rclick_link; ?>") && !target.is("a") && n.parentElement.nodeName !== "A") ) {
                             if (n.nodeName !== "A" ) {
-                                show_tooltip(<?php echo $enable_context_menu_mess?> );
-                                audio_play(<?php echo $right_click_audio?>);
+                                show_tooltip(<?php echo $enable_context_menu_mess; ?> );
+                                audio_play(<?php echo $right_click_audio; ?>);
                             }
                             return false;
                         }
@@ -247,8 +247,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                             let t = e || window.event;
                             let n = t.target || t.srcElement;
                             if (n.nodeName !== "A") {
-                                show_tooltip(<?php echo $enable_rclick_img_mess?> );
-                                audio_play(<?php echo $enable_rclick_img_audio?>);
+                                show_tooltip(<?php echo $enable_rclick_img_mess; ?> );
+                                audio_play(<?php echo $enable_rclick_img_audio; ?>);
                             }
                             return false;
                         }
@@ -259,8 +259,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                     all.on('touchstart', function (event) {
                         let target = $(event.target);
                         if (target.is("img")) {
-                            show_tooltip(<?php echo $enable_mobile_img_mess?> );
-                            audio_play(<?php echo $enable_mobile_img_audio?>);
+                            show_tooltip(<?php echo $enable_mobile_img_mess; ?> );
+                            audio_play(<?php echo $enable_mobile_img_audio; ?>);
                             event.preventDefault();
                             event.stopPropagation();
                             event.stopImmediatePropagation();
@@ -275,8 +275,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                         let t = e || window.event;
                         let n = t.target || t.srcElement;
                         if (target.is("a") || n.parentElement.nodeName == "A" || target.is("div.ays_tooltip_class")) {
-                            show_tooltip(<?php echo $enable_rclick_link_mess?> );
-                            audio_play(<?php echo $enable_rclick_link_audio?>);
+                            show_tooltip(<?php echo $enable_rclick_link_mess; ?> );
+                            audio_play(<?php echo $enable_rclick_link_audio; ?>);
                             return false;
                         }
                     });
@@ -286,8 +286,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                     $(document).on('dragstart', function () {
                         let target = $(event.target);
                         if (!target.is("<?php echo $exclude_css_selectors; ?>")) {
-                            show_tooltip(<?php echo $enable_drag_start_mess?> );
-                            audio_play(<?php echo $enable_drag_start_audio?>);
+                            show_tooltip(<?php echo $enable_drag_start_mess; ?> );
+                            audio_play(<?php echo $enable_drag_start_audio; ?>);
                             return false;
                         }
                     });
@@ -300,8 +300,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                         if (!target.is("<?php echo $exclude_css_selectors; ?>")) {
                             let event = e || window.event;
                             if (event.which == 1) {
-                                show_tooltip(<?php echo $enable_left_click_mess?> );
-                                audio_play(<?php echo $enable_left_click_audio?>);
+                                show_tooltip(<?php echo $enable_left_click_mess; ?> );
+                                audio_play(<?php echo $enable_left_click_audio; ?>);
                                 return false;
                             }
                         }
@@ -336,8 +336,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                                         event.keyCode === 74 ||
                                         event.keyCode === 68 ||
                                         event.keyCode === 67))) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
@@ -353,8 +353,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                                         (event.keyCode === 115 && event.shiftKey) ||
                                         (event.keyCode === 118 && event.shiftKey) ||
                                         (event.keyCode === 120 && event.shiftKey)) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
@@ -365,23 +365,23 @@ if (!isset($_GET['elementor-preview'])): ?>
                                         event.keyCode === 67 ||
                                         event.keyCode === 88 ||
                                         event.keyCode === 69))) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
                                 if (isIE) {
                                     if ((event.keyCode === 123 && event.shiftKey)) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }                         
                                 if (isMozilla) {
                                     if ((event.ctrlKey && event.keyCode === 73) || 
                                         (event.altKey && event.keyCode === 68)) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
@@ -389,8 +389,8 @@ if (!isset($_GET['elementor-preview'])): ?>
 
         						<?php if($enable_ctrls) : ?>
                                 if ((event.keyCode === 83 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrls_mess ?>);
-                                    audio_play(<?php echo $enable_ctrls_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrls_mess; ?>);
+                                    audio_play(<?php echo $enable_ctrls_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
@@ -400,13 +400,13 @@ if (!isset($_GET['elementor-preview'])): ?>
 
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrla_mess ?>);
-                                            audio_play(<?php echo $enable_ctrla_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrla_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrla_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrla_mess ?>);
-                                        audio_play(<?php echo $enable_ctrla_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrla_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrla_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -416,13 +416,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlc_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlc_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlc_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlc_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlc_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlc_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlc_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlc_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -432,13 +432,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 86 && event.ctrlKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlv_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlv_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlv_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlv_audio; ?>);
                                             return false;
                                          }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlv_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlv_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlv_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlv_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -448,13 +448,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 88 && event.ctrlKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlx_mess ?> );
-                                            audio_play(<?php echo $enable_ctrlx_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlx_mess; ?> );
+                                            audio_play(<?php echo $enable_ctrlx_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlx_mess ?> );
-                                        audio_play(<?php echo $enable_ctrlx_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlx_mess; ?> );
+                                        audio_play(<?php echo $enable_ctrlx_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -462,104 +462,104 @@ if (!isset($_GET['elementor-preview'])): ?>
 
         						<?php if($enable_ctrlu) : ?>
                                 if ((event.keyCode === 85 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlu_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlu_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlu_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlu_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
         						<?php if($enable_ctrlf) : ?>
                                 if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlf_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlf_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlf_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlf_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
         						<?php if($enable_ctrlp) : ?>
                                 if ((event.keyCode === 80 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlp_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlp_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlp_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlp_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
                                 <?php if($enable_ctrlh) : ?>
                                 if ((event.keyCode === 72 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlh_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlh_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlh_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlh_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrll) : ?>
                                 if ((event.keyCode === 76 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrll_mess ?> );
-                                    audio_play(<?php echo $enable_ctrll_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrll_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrll_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrlk) : ?>
                                 if ((event.keyCode === 75 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlk_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlk_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlk_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlk_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>                                
 
                                 <?php if($enable_ctrlo) : ?>
                                 if ((event.keyCode === 79 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlo_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlo_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlo_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlo_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f6) : ?>
                                 if (event.keyCode === 117 || (event.keyCode === 117 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f6_mess ?> );
-                                    audio_play(<?php echo $enable_f6_audio?>);
+                                    show_tooltip(<?php echo $enable_f6_mess; ?> );
+                                    audio_play(<?php echo $enable_f6_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f3) : ?>
                                 if (event.keyCode === 114 || (event.keyCode === 114 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f3_mess ?> );
-                                    audio_play(<?php echo $enable_f3_audio?>);
+                                    show_tooltip(<?php echo $enable_f3_mess; ?> );
+                                    audio_play(<?php echo $enable_f3_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f9) : ?>
                                 if (event.keyCode === 120 || (event.keyCode === 120 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f9_mess ?> );
-                                    audio_play(<?php echo $enable_f9_audio?>);
+                                    show_tooltip(<?php echo $enable_f9_mess; ?> );
+                                    audio_play(<?php echo $enable_f9_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_altd) : ?>
                                 if (event.keyCode === 68 && event.altKey) {
-                                    show_tooltip(<?php echo $enable_altd_mess ?> );
-                                    audio_play(<?php echo $enable_altd_audio?>);
+                                    show_tooltip(<?php echo $enable_altd_mess; ?> );
+                                    audio_play(<?php echo $enable_altd_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrle) : ?>
                                 if (event.keyCode === 69 && event.ctrlKey) {
-                                    show_tooltip(<?php echo $enable_ctrle_mess ?> );
-                                    audio_play(<?php echo $enable_ctrle_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrle_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrle_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
         						<?php if($enable_f12) : ?>
                                 if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f12_mess ?>);
-                                    audio_play(<?php echo $enable_f12_audio?>);
+                                    show_tooltip(<?php echo $enable_f12_mess; ?>);
+                                    audio_play(<?php echo $enable_f12_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
@@ -576,22 +576,22 @@ if (!isset($_GET['elementor-preview'])): ?>
                                         ) ||
                                         (event.ctrlKey && event.keyCode === 85)
                                     ) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
                                 if (isFirefox) {
                                     if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 75 || event.keyCode === 69)) || event.keyCode === 118 || event.keyCode === 116 || (event.keyCode === 112 && event.shiftKey) || (event.keyCode === 115 && event.shiftKey) || (event.keyCode === 118 && event.shiftKey) || (event.keyCode === 120 && event.shiftKey) || (event.keyCode === 85 && event.ctrlKey)) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
                                 if (isOpera) {
                                     if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 88 || event.keyCode === 69)) || (event.ctrlKey && event.keyCode === 85)) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
@@ -599,8 +599,8 @@ if (!isset($_GET['elementor-preview'])): ?>
 
         						<?php if($enable_ctrls) : ?>
                                 if ((event.keyCode === 83 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrls_mess ?>);
-                                    audio_play(<?php echo $enable_ctrls_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrls_mess; ?>);
+                                    audio_play(<?php echo $enable_ctrls_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
@@ -609,13 +609,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if (event.keyCode === 65 && event.ctrlKey) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrla_mess ?>);
-                                            audio_play(<?php echo $enable_ctrla_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrla_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrla_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrla_mess ?>);
-                                        audio_play(<?php echo $enable_ctrla_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrla_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrla_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -625,13 +625,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlc_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlc_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlc_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlc_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlc_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlc_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlc_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlc_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -641,13 +641,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 86 && event.ctrlKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlv_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlv_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlv_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlv_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlv_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlv_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlv_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlv_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -657,13 +657,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 88 && event.ctrlKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlx_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlx_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlx_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlx_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlx_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlx_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlx_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlx_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -671,104 +671,104 @@ if (!isset($_GET['elementor-preview'])): ?>
 
         						<?php if($enable_ctrlu) : ?>
                                 if ((event.keyCode === 85 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlu_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlu_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlu_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlu_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
         						<?php if($enable_ctrlf) : ?>
                                 if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlf_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlf_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlf_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlf_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
         						<?php if($enable_ctrlp) : ?>
                                 if ((event.keyCode === 80 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlp_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlp_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlp_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlp_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
                                 <?php if($enable_ctrlh) : ?>
                                 if ((event.keyCode === 72 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlh_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlh_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlh_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlh_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrll) : ?>
                                 if ((event.keyCode === 76 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrll_mess ?> );
-                                    audio_play(<?php echo $enable_ctrll_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrll_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrll_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrlk) : ?>
                                 if ((event.keyCode === 75 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlk_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlk_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlk_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlk_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>                                
 
                                 <?php if($enable_ctrlo) : ?>
                                 if ((event.keyCode === 79 && event.ctrlKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlo_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlo_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlo_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlo_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f6) : ?>
                                 if (event.keyCode === 117 || (event.keyCode === 117 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f6_mess ?> );
-                                    audio_play(<?php echo $enable_f6_audio?>);
+                                    show_tooltip(<?php echo $enable_f6_mess; ?> );
+                                    audio_play(<?php echo $enable_f6_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f3) : ?>
                                 if (event.keyCode === 114 || (event.keyCode === 114 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f3_mess ?> );
-                                    audio_play(<?php echo $enable_f3_audio?>);
+                                    show_tooltip(<?php echo $enable_f3_mess; ?> );
+                                    audio_play(<?php echo $enable_f3_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f9) : ?>
                                 if (event.keyCode === 120 || (event.keyCode === 120 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f9_mess ?> );
-                                    audio_play(<?php echo $enable_f9_audio?>);
+                                    show_tooltip(<?php echo $enable_f9_mess; ?> );
+                                    audio_play(<?php echo $enable_f9_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_altd) : ?>
                                 if (event.keyCode === 68 && event.altKey) {
-                                    show_tooltip(<?php echo $enable_altd_mess ?> );
-                                    audio_play(<?php echo $enable_altd_audio?>);
+                                    show_tooltip(<?php echo $enable_altd_mess; ?> );
+                                    audio_play(<?php echo $enable_altd_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrle) : ?>
                                 if (event.keyCode === 69 && event.ctrlKey) {
-                                    show_tooltip(<?php echo $enable_ctrle_mess ?> );
-                                    audio_play(<?php echo $enable_ctrle_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrle_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrle_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
         						<?php if($enable_f12) : ?>
                                 if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-                                    show_tooltip(<?php echo $enable_f12_mess ?>);
-                                    audio_play(<?php echo $enable_f12_audio?>);
+                                    show_tooltip(<?php echo $enable_f12_mess; ?>);
+                                    audio_play(<?php echo $enable_f12_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
@@ -780,8 +780,8 @@ if (!isset($_GET['elementor-preview'])): ?>
                                         event.keyCode === 74 ||
                                         event.keyCode === 69 ||
                                         event.keyCode === 75)) {
-                                        show_tooltip(<?php echo $enable_developer_tools_mess ?>);
-                                        audio_play(<?php echo $enable_developer_tools_audio?>);
+                                        show_tooltip(<?php echo $enable_developer_tools_mess; ?>);
+                                        audio_play(<?php echo $enable_developer_tools_audio; ?>);
                                         return false;
                                     }
                                 }
@@ -789,8 +789,8 @@ if (!isset($_GET['elementor-preview'])): ?>
 
         						<?php if($enable_ctrls) : ?>
                                 if ((event.keyCode === 83 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrls_mess ?>);
-                                    audio_play(<?php echo $enable_ctrls_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrls_mess; ?>);
+                                    audio_play(<?php echo $enable_ctrls_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
@@ -799,13 +799,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 65 && event.metaKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrla_mess ?>);
-                                            audio_play(<?php echo $enable_ctrla_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrla_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrla_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrla_mess ?>);
-                                        audio_play(<?php echo $enable_ctrla_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrla_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrla_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -815,13 +815,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 67 && event.metaKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlc_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlc_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlc_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlc_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlc_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlc_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlc_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlc_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -831,13 +831,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 86 && event.metaKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlv_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlv_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlv_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlv_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlv_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlv_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlv_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlv_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -847,13 +847,13 @@ if (!isset($_GET['elementor-preview'])): ?>
                                 if ((event.keyCode === 88 && event.metaKey)) {
                                     <?php if($exclude_inp_textarea) : ?>
                                         if (!(event.target.nodeName == 'INPUT' || event.target.nodeName == 'TEXTAREA')) {
-                                            show_tooltip(<?php echo $enable_ctrlx_mess ?>);
-                                            audio_play(<?php echo $enable_ctrlx_audio?>);
+                                            show_tooltip(<?php echo $enable_ctrlx_mess; ?>);
+                                            audio_play(<?php echo $enable_ctrlx_audio; ?>);
                                             return false;
                                         }
                                     <?php else: ?>
-                                        show_tooltip(<?php echo $enable_ctrlx_mess ?>);
-                                        audio_play(<?php echo $enable_ctrlx_audio?>);
+                                        show_tooltip(<?php echo $enable_ctrlx_mess; ?>);
+                                        audio_play(<?php echo $enable_ctrlx_audio; ?>);
                                         return false;
                                     <?php endif; ?>
                                 }
@@ -861,104 +861,104 @@ if (!isset($_GET['elementor-preview'])): ?>
 
         						<?php if($enable_ctrlu) : ?>
                                 if ((event.keyCode === 85 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlu_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlu_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlu_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlu_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
         						<?php if($enable_ctrlf) : ?>
                                 if ((event.keyCode === 70 && event.metaKey) || (event.keyCode === 71 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlf_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlf_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlf_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlf_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
         						<?php if($enable_ctrlp) : ?>
                                 if ((event.keyCode === 80 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlp_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlp_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlp_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlp_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
 
                                 <?php if($enable_ctrlh) : ?>
                                 if ((event.keyCode === 72 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlh_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlh_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlh_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlh_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrll) : ?>
                                 if ((event.keyCode === 76 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrll_mess ?> );
-                                    audio_play(<?php echo $enable_ctrll_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrll_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrll_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrlk) : ?>
                                 if ((event.keyCode === 75 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlk_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlk_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlk_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlk_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrlo) : ?>
                                 if ((event.keyCode === 79 && event.metaKey)) {
-                                    show_tooltip(<?php echo $enable_ctrlo_mess ?> );
-                                    audio_play(<?php echo $enable_ctrlo_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrlo_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrlo_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f6) : ?>
                                 if (event.keyCode === 117) {
-                                    show_tooltip(<?php echo $enable_f6_mess ?> );
-                                    audio_play(<?php echo $enable_f6_audio?>);
+                                    show_tooltip(<?php echo $enable_f6_mess; ?> );
+                                    audio_play(<?php echo $enable_f6_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f3) : ?>
                                 if (event.keyCode === 114) {
-                                    show_tooltip(<?php echo $enable_f3_mess ?> );
-                                    audio_play(<?php echo $enable_f3_audio?>);
+                                    show_tooltip(<?php echo $enable_f3_mess; ?> );
+                                    audio_play(<?php echo $enable_f3_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_f9) : ?>
                                 if (event.keyCode === 120) {
-                                    show_tooltip(<?php echo $enable_f9_mess ?> );
-                                    audio_play(<?php echo $enable_f9_audio?>);
+                                    show_tooltip(<?php echo $enable_f9_mess; ?> );
+                                    audio_play(<?php echo $enable_f9_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_altd) : ?>
                                 if (event.keyCode === 68 && event.altKey) {
-                                    show_tooltip(<?php echo $enable_altd_mess ?> );
-                                    audio_play(<?php echo $enable_altd_audio?>);
+                                    show_tooltip(<?php echo $enable_altd_mess; ?> );
+                                    audio_play(<?php echo $enable_altd_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
                                 <?php if($enable_ctrle) : ?>
                                 if (event.keyCode === 69 && event.metaKey) {
-                                    show_tooltip(<?php echo $enable_ctrle_mess ?> );
-                                    audio_play(<?php echo $enable_ctrle_audio?>);
+                                    show_tooltip(<?php echo $enable_ctrle_mess; ?> );
+                                    audio_play(<?php echo $enable_ctrle_audio; ?>);
                                     return false;
                                 }
                                 <?php endif; ?>
 
         						<?php if($enable_f12) : ?>
                                 if (event.keyCode === 123) {
-                                    show_tooltip(<?php echo $enable_f12_mess ?>);
-                                    audio_play(<?php echo $enable_f12_audio?>);
+                                    show_tooltip(<?php echo $enable_f12_mess; ?>);
+                                    audio_play(<?php echo $enable_f12_audio; ?>);
                                     return false;
                                 }
         						<?php endif; ?>
@@ -969,15 +969,15 @@ if (!isset($_GET['elementor-preview'])): ?>
                     function disableSelection(e) {
                         if (typeof e.onselectstart !== "undefined")
                             e.onselectstart = function () {
-                                show_tooltip(<?php echo $enable_left_click_mess ?> );
-                                audio_play(<?php echo $enable_left_click_audio?>);
+                                show_tooltip(<?php echo $enable_left_click_mess; ?> );
+                                audio_play(<?php echo $enable_left_click_audio; ?>);
                                 return false
                             };
                         else if (typeof e.style.MozUserSelect !== "undefined")
                             e.style.MozUserSelect = "none";
                         else e.onmousedown = function () {
-                                show_tooltip(<?php echo $enable_left_click_mess ?>);
-                                audio_play(<?php echo $enable_left_click_audio?>);
+                                show_tooltip(<?php echo $enable_left_click_mess; ?>);
+                                audio_play(<?php echo $enable_left_click_audio; ?>);
                                 return false
                             };
                         e.style.cursor = "default"
@@ -1000,7 +1000,7 @@ if (!isset($_GET['elementor-preview'])): ?>
                             }else{
                                 tooltip.css({'display': 'table'});
                                 setTimeout(function () {
-                                    $('#ays_tooltip').fadeOut(<?php echo $timeout / 2?>);
+                                    $('#ays_tooltip').fadeOut(<?php echo ($timeout / 2); ?>);
                                 }, <?php echo $timeout; ?>);
                             }
                         }
@@ -1030,7 +1030,7 @@ if (!isset($_GET['elementor-preview'])): ?>
             <?php if($enable_copyright_text) : ?>
 
                 <?php if($copyright_text != '') : ?>
-                    copyrightText = ' <?php echo $copyright_text ?>';;
+                    copyrightText = ' <?php echo $copyright_text; ?>';;
                 <?php endif; ?>
 
                 <?php if($copyright_include_url) : ?>
@@ -1047,7 +1047,7 @@ if (!isset($_GET['elementor-preview'])): ?>
 
             <?php endif; ?>
             <?php if($sccp_enable_copyright_word) : ?>
-                copyrightWord = '<?php echo $sccp_copyright_word ?>';
+                copyrightWord = '<?php echo $sccp_copyright_word; ?>';
                 window.addEventListener('copy', function () {
                     var text = window.getSelection().toString();
                     

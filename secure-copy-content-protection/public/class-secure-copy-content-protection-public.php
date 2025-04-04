@@ -1160,7 +1160,7 @@ class Secure_Copy_Content_Protection_Public {
 
 			$box_shadow_offsets = $styles["sccp_box_shadow_x_offset"] . 'px ' . $styles["sccp_box_shadow_y_offset"] . 'px ' . $styles["sccp_box_shadow_z_offset"] . 'px ';
 
-			echo '<div id="ays_tooltip" '. esc_attr($custom_class) .'><div id="ays_tooltip_block">' . esc_html($notf_text) . '</div></div>
+			echo '<div id="ays_tooltip" '. esc_attr($custom_class) .'><div id="ays_tooltip_block">' . $notf_text . '</div></div>
                     <style>
                     	* {
 						    -webkit-touch-callout: none !important; 
