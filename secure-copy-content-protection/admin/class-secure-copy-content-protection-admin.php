@@ -1037,13 +1037,13 @@ class Secure_Copy_Content_Protection_Admin {
         // $date = time() + ( 60 ) + (int) ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS); // for testing | 1 min
         $next_3_days = date('M d, Y H:i:s', $date);
 
-        $ays_sccp_banner_time = get_option('ays_sccp_banner_time');
+        $ays_sccp_banner_time = get_option('ays_new_sccp_banner_time');
 
         if ( !$ays_sccp_banner_time || is_null( $ays_sccp_banner_time ) ) {
-            update_option('ays_sccp_banner_time', $next_3_days ); 
+            update_option('ays_new_sccp_banner_time', $next_3_days ); 
         }
 
-        $get_ays_sccp_banner_time = get_option('ays_sccp_banner_time');
+        $get_ays_sccp_banner_time = get_option('ays_new_sccp_banner_time');
 
         $val = 60*60*24*0.5; // half day
         // $val = 60; // for testing | 1 min
@@ -1053,7 +1053,7 @@ class Secure_Copy_Content_Protection_Admin {
 
         $days_diff = $date_diff / $val;
         if(intval($days_diff) > 0 ){
-            update_option('ays_sccp_banner_time', $next_3_days);
+            update_option('ays_new_sccp_banner_time', $next_3_days);
         }
 
         return $get_ays_sccp_banner_time;
