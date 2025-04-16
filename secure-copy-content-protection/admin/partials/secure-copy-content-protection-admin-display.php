@@ -399,7 +399,7 @@ $sccp_accordion_svg_html = '
                                 <div class="sccp_upload_audio">
                                     <?php if (isset($data['audio']) && !empty($data['audio'])) { ?>
                                         <audio id="sccp_audio" controls>
-                                            <source src="<?php echo  (isset($data['audio']) && !empty($data['audio'])) ? $data['audio'] : ""; ?>"
+                                            <source src="<?php echo  (isset($data['audio']) && !empty($data['audio'])) ? esc_url( $data['audio'] ) : ""; ?>"
                                                     type="audio/mpeg">
                                         </audio>
                                         <button type="button" class="close ays_close" aria-label="Close">
@@ -408,7 +408,7 @@ $sccp_accordion_svg_html = '
                                     <?php } ?>
                                 </div>
                                 <input type="hidden" class="upload_audio_url" name="upload_audio_url"
-                                       value="<?php echo  (isset($data['audio']) && !empty($data['audio'])) ? $data['audio'] : ""; ?>">
+                                       value="<?php echo  (isset($data['audio']) && !empty($data['audio'])) ? esc_url( $data['audio'] ) : ""; ?>">
                             </div>
                         </div>
                         <hr>

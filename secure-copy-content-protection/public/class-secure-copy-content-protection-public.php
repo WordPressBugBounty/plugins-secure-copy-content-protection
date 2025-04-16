@@ -1047,7 +1047,7 @@ class Secure_Copy_Content_Protection_Public {
 
 			if (!empty($audio)) {
 				echo "<audio id='sccp_public_audio'>
-                  <source src=" . esc_attr($audio) . " type='audio/mpeg'>
+                  <source src=" . esc_url( $audio ) . " type='audio/mpeg'>
                 </audio>";
 			}
 
