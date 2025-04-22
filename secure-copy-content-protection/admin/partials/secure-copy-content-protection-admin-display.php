@@ -571,8 +571,7 @@ $sccp_accordion_svg_html = '
                                         <label for="sccp_enable_right_click_audio"></label>
                                     </div>
                                     <div class="col-sm-3"></div>
-                                </div> 
-
+                                </div>
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">

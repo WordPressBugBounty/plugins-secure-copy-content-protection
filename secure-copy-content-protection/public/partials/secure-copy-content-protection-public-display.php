@@ -119,30 +119,30 @@ $is_mobile = Secure_Copy_Content_Protection_Public::isMobileDevice();
 //Elementor plugin conflict solution
 if (!isset($_GET['elementor-preview'])): ?>
     <style>
-        <?php if(!$enable_text_selecting): ?>
-        *:not(input):not(textarea)::selection {
-            background-color: transparent !important;
-            color: inherit !important;
-        }
+        <?php if( ! $enable_text_selecting ) : ?>
+            *:not(input):not(textarea)::selection {
+                background-color: transparent !important;
+                color: inherit !important;
+            }
 
-        *:not(input):not(textarea)::-moz-selection {
-            background-color: transparent !important;
-            color: inherit !important;
-        }
+            *:not(input):not(textarea)::-moz-selection {
+                background-color: transparent !important;
+                color: inherit !important;
+            }
 
-        <?php endif;
+        <?php endif; ?>
 
-         if($is_mobile):?>
-        *:not(input):not(textarea):not(button) {
-            -webkit-user-select: none !important;
-            -moz-user-select: none !important;
-            -ms-user-select: none !important;
-            user-select: none !important;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-            -webkit-touch-callout: none !important;
-        }
+        <?php if( $is_mobile && ! $enable_text_selecting ) : ?>
+            *:not(input):not(textarea):not(button) {
+                -webkit-user-select: none !important;
+                -moz-user-select: none !important;
+                -ms-user-select: none !important;
+                user-select: none !important;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+                -webkit-touch-callout: none !important;
+            }
 
-        <?php endif;?>
+        <?php endif; ?>
     </style>
     <script>
             function stopPrntScr() {

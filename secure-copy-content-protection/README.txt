@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
 Tested up to: 6.8
-Stable tag: 4.5.6
+Stable tag: 4.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -159,7 +159,8 @@ Don't forget, in case of any problems or upcoming questions feel free to contact
 **Other plugins from Ays Pro Team** 
 
 * [Quiz Maker](https://wordpress.org/plugins/quiz-maker/) for creating advanced quizzes and exams easily and quickly.
-* [Survey Maker](https://wordpress.org/plugins/survey-maker/) for collecting data and analyze it.  
+* [Survey Maker](https://wordpress.org/plugins/survey-maker/) for collecting data and analyze it.
+* [Fox LMS](https://wordpress.org/plugins/fox-lms/) for building, organizing, and sharing online courses from your WordPress site.
 * [Poll Maker](https://wordpress.org/plugins/poll-maker/) for creating powerful and interactive polls. 
 * [Popup Box](https://wordpress.org/plugins/ays-popup-box/), an easy way to create eye-catching and engaging popups. 
 * [Chartify](https://wordpress.org/plugins/chart-builder/) to build both static and dynamic charts, graphs and diagrams. 
@@ -261,6 +262,10 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 
 == Changelog ==
+
+= 4.5.7 =
+* Improved: Code correction on the front-end
+* Improved: Some styles on the admin dashboard
 
 = 4.5.6 =
 * Tested: Compatible up to 6.8
