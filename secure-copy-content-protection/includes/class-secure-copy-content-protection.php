@@ -180,8 +180,9 @@ class Secure_Copy_Content_Protection {
 		$this->loader->add_action('admin_menu', $plugin_admin, 'add_plugin_admin_menu');
 
 		$this->loader->add_action( 'admin_head', $plugin_admin, 'admin_menu_styles' );
-		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
-		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'disable_scripts', 100 );
 
 		$this->loader->add_action('wp_ajax_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option');
 		$this->loader->add_action('wp_ajax_nopriv_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option');

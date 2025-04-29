@@ -16,7 +16,7 @@
  * Plugin Name:       Secure Copy Content Protection
  * Plugin URI:        https://ays-pro.com/wordpress/secure-copy-content-protection/
  * Description:       Copy Protection plugin is activated it disables the right click, copy paste, content selection and copy shortcut keys
- * Version:           4.5.7
+ * Version:           4.5.8
  * Author:            Copy Content Protection Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('SCCP_NAME_VERSION', '4.5.7');
+define('SCCP_NAME_VERSION', '4.5.8');
 define('SCCP_NAME', 'secure-copy-content-protection');
 if (!defined('SCCP_ADMIN_URL')) {
 	define('SCCP_ADMIN_URL', plugin_dir_url(__FILE__) . 'admin');
@@ -124,24 +124,27 @@ function sccp_admin_notice() {
                         </div>
                     </div>
                     <ul id="menu">
-                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank">Demo</a></li>
-                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank">Free Support</a></li>
-                        <li class="modile-ddmenu-xs make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank">Make a Suggestion</a></li>
-                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank">Contact us</a></li>
+                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-pro.com/wordpress/secure-copy-content-protection/?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-top-banner-pricing-link" target="_blank"><?php echo esc_html__( "Pricing", 'secure-copy-content-protection' ); ?></a></li>
+                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank"><?php echo esc_html__( "Demo", 'secure-copy-content-protection' ); ?></a></li>
+                        <li class="modile-ddmenu-lg modile-ddmenu-lg-custom"><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Free Support", 'secure-copy-content-protection' ); ?></a></li>
+                        <li class="modile-ddmenu-xs make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank"><?php echo esc_html__( "Make a Suggestion", 'secure-copy-content-protection' ); ?></a></li>
+                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
                         <li class="modile-ddmenu-md">
                             <a class="toggle_ddmenu" href="javascript:void(0);"><i class="ays_fa ays_fa_ellipsis_h"></i></a>
-                            <ul class="ddmenu" data-expanded="false">                                
-                                <li><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank">Demo</a></li>
-                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank">Contact us</a></li>
+                            <ul class="ddmenu" data-expanded="false">
+                                <li><a class="ays-btn" href="https://ays-pro.com/wordpress/secure-copy-content-protection/?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-top-banner-pricing-link" target="_blank"><?php echo esc_html__( "Pricing", 'secure-copy-content-protection' ); ?></a></li>
+                                <li><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank"><?php echo esc_html__( "Demo", 'secure-copy-content-protection' ); ?></a></li>
+                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
                             </ul>
                         </li>
                         <li class="modile-ddmenu-sm">
                             <a class="toggle_ddmenu" href="javascript:void(0);"><i class="ays_fa ays_fa_ellipsis_h"></i></a>
                             <ul class="ddmenu" data-expanded="false">
-                                <li><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank">Demo</a></li>
-                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank">Free Support</a></li>
-                                <li class="make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank">Make a Suggestion</a></li>
-                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank">Contact us</a></li>
+                                <li><a class="ays-btn" href="https://ays-pro.com/wordpress/secure-copy-content-protection/?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-top-banner-pricing-link" target="_blank"><?php echo esc_html__( "Pricing", 'secure-copy-content-protection' ); ?></a></li>
+                                <li><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank"><?php echo esc_html__( "Demo", 'secure-copy-content-protection' ); ?></a></li>
+                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Free Support", 'secure-copy-content-protection' ); ?></a></li>
+                                <li class="make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/copy-protection-plugin-survey/" target="_blank"><?php echo esc_html__( "Make a Suggestion", 'secure-copy-content-protection' ); ?></a></li>
+                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
                             </ul>
                         </li>
                     </ul>

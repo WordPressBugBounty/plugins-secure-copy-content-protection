@@ -243,6 +243,32 @@ class Secure_Copy_Content_Protection_Admin {
 
 	}
 
+	/**
+     * De-register JavaScript files for the admin area.
+     *
+     * @since    1.0.0
+     */
+    public function disable_scripts($hook_suffix) {
+        if (false !== strpos($hook_suffix, $this->plugin_name)) {
+            if (is_plugin_active('ai-engine/ai-engine.php')) {
+                wp_deregister_script('mwai');
+                wp_deregister_script('mwai-vendor');
+                wp_dequeue_script('mwai');
+                wp_dequeue_script('mwai-vendor');
+            }
+
+            if (is_plugin_active('html5-video-player/html5-video-player.php')) {
+                wp_dequeue_style('h5vp-admin');
+                wp_dequeue_style('fs_common');
+            }
+
+            if (is_plugin_active('panorama/panorama.php')) {
+                wp_dequeue_style('bppiv_admin_custom_css');
+                wp_dequeue_style('bppiv-custom-style');
+            }
+        }
+    }
+
 	function codemirror_enqueue_scripts($hook) {
 		if (strpos($hook, $this->plugin_name) !== false) {
 			if(function_exists('wp_enqueue_code_editor')){
@@ -1331,6 +1357,7 @@ class Secure_Copy_Content_Protection_Admin {
         $images_url = SCCP_ADMIN_URL . '/images/icons/';
 
         $plugin_slug = array(
+        	'fox-lms',
             'quiz-maker',
             'survey-maker',
             'poll-maker',
@@ -1359,7 +1386,16 @@ class Secure_Copy_Content_Protection_Admin {
         }
 
         $plugins_array = array(
-           'quiz-maker/quiz-maker.php'        => array(
+        	'fox-lms/fox-lms.php'        => array(
+                'icon'        => $images_url . 'icon-fox-lms-128x128.png',
+                'name'        => __( 'Fox LMS', 'secure-copy-content-protection' ),
+                'desc'        => __( 'Build and manage online courses directly on your WordPress site.', 'secure-copy-content-protection' ),
+                'desc_hidden' => __( 'With the FoxLMS plugin, you can create, sell, and organize courses, lessons, and quizzes, transforming your website into a dynamic e-learning platform.', 'secure-copy-content-protection' ),
+                'wporg'       => 'https://wordpress.org/plugins/fox-lms/',
+                'buy_now'     => 'https://foxlms.com/pricing/?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=fox-lms-our-products-page',
+                'url'         => $plugin_url_arr['fox-lms'],
+            ),
+           	'quiz-maker/quiz-maker.php'        => array(
                 'icon'        => $images_url . 'icon-quiz-128x128.png',
                 'name'        => __( 'Quiz Maker', 'secure-copy-content-protection' ),
                 'desc'        => __( 'With our Quiz Maker plugin it’s easy to make a quiz in a short time.', 'secure-copy-content-protection' ),
@@ -1611,10 +1647,10 @@ class Secure_Copy_Content_Protection_Admin {
                 </div>';
         }
         $install_plugin_nonce = wp_create_nonce( $this->plugin_name . '-install-plugin-nonce' );
-        $content.= '<input type="hidden" id="ays_sccp_ajax_install_plugin_nonce" name="ays_sccp_ajax_install_plugin_nonce" value="'. $install_plugin_nonce .'">';
-        $content.= '</div>';
+        $content .= '<input type="hidden" id="ays_sccp_ajax_install_plugin_nonce" name="ays_sccp_ajax_install_plugin_nonce" value="'. $install_plugin_nonce .'">';
+        $content .= '</div>';
 
-        echo wp_kses_post($content);
+        echo $content;
     }
 
 }
