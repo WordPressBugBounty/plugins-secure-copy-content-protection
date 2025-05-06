@@ -37,6 +37,12 @@ class Sccp_Settings_Actions {
             // Subscribe input width
             $ays_sccp_sub_input_width = (isset($data['ays_sccp_sub_input_width']) && $data['ays_sccp_sub_input_width'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_input_width']) ) : '';
 
+            // Enable Subscribe Container input width Mobile
+            $enable_ays_sccp_sub_input_width_mobile = isset( $data['enable_ays_sccp_sub_input_width_mobile'] ) && $data['enable_ays_sccp_sub_input_width_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Container input width Mobile
+            $ays_sccp_sub_input_width_mobile = isset( $data['ays_sccp_sub_input_width_mobile'] ) && $data['ays_sccp_sub_input_width_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_input_width_mobile'] ) : '';
+
             // Subscribe box title size
             $ays_sccp_sub_title_size = (isset($data['ays_sccp_sub_title_size']) && $data['ays_sccp_sub_title_size'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_title_size']) ) : 18;
 
@@ -170,6 +176,8 @@ class Sccp_Settings_Actions {
                 "sccp_sub_width"                            => $ays_sccp_sub_width,
                 "sccp_sub_width_mobile"                     => $ays_sccp_sub_width_mobile,
                 "sub_cont_input_width"                      => $ays_sccp_sub_input_width,
+                "enable_sub_cont_input_width_mobile"        => $enable_ays_sccp_sub_input_width_mobile,
+                "sub_cont_input_width_mobile"               => $ays_sccp_sub_input_width_mobile,
                 "sccp_sub_text_color"                       => $sub_text_color,
                 "enable_sccp_sub_text_color_mobile"         => $enable_sub_text_color_mobile,
                 "sccp_sub_text_color_mobile"                => $sub_text_color_mobile,

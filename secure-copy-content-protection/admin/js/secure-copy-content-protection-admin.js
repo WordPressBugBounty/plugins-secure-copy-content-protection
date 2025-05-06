@@ -454,6 +454,9 @@
             $(document).find("#enable_ays_sccp_sub_cont_border_width_mobile").prop('checked', true).change();
 
             $(document).find('#ays_sccp_sub_input_width').val('').change();
+            $(document).find('#ays_sccp_sub_input_width_mobile').val('').change();
+            $(document).find("#enable_ays_sccp_sub_input_width_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sccp_sub_button_text').val('Subscribe').change();
             $(document).find('#ays-sccp-sub-img').attr('src', '').change();
             $(document).find('input#ays_sccp_sub_icon_image').val('');

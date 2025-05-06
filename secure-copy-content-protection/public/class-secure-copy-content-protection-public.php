@@ -314,6 +314,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Container input width
 		$sub_cont_input_width = (isset($subscribe_settings['sub_cont_input_width']) && $subscribe_settings['sub_cont_input_width'] != '' && $subscribe_settings['sub_cont_input_width'] != 0) ? 'max-width: '. $subscribe_settings['sub_cont_input_width'] .'px;': '';
 
+		// Subscribe Container enable input width Mobile
+        $subscribe_settings['enable_sub_cont_input_width_mobile'] = ( isset( $subscribe_settings['enable_sub_cont_input_width_mobile'] ) && $subscribe_settings['enable_sub_cont_input_width_mobile'] == 'off') ? false : true;
+        
+        // Subscribe Container border width Mobile
+        if ( $subscribe_settings['enable_sub_cont_input_width_mobile'] ) {
+            $sub_cont_input_width_mobile = ( isset( $subscribe_settings['sub_cont_input_width_mobile'] ) && $subscribe_settings['sub_cont_input_width_mobile'] != '' ) ?  'max-width: '. $subscribe_settings['sub_cont_input_width_mobile'] .'px !important;' : $sub_cont_input_width;
+        } else {
+            $sub_cont_input_width_mobile = $sub_cont_input_width;
+        }
+
 		$sccp_sub_btn_border_style = $ays_sccp_enable_sub_btn_style ? 'border-style:'.$ays_sccp_sub_btn_border_style : '';
 
 		// Buttons border color
@@ -436,13 +446,18 @@ class Secure_Copy_Content_Protection_Public {
 					}
 
 					p.consub_para.consub_para_title {
-						text-transform:'.$sub_title_transformation_mobile.';
+						text-transform:'. $sub_title_transformation_mobile .';
+					}
+
+					input.ays_sccp_sb_email.ays_sccp_sb_field[type="email"], 
+					input.ays_sccp_sb_name.ays_sccp_sb_field[type="text"]{
+						'. $sub_cont_input_width_mobile .'
 					}
 				}
 
 				input.ays_sccp_sb_email.ays_sccp_sb_field[type="email"], 
 				input.ays_sccp_sb_name.ays_sccp_sb_field[type="text"]{
-					'.$sub_cont_input_width.'
+					'. $sub_cont_input_width .'
 				}
 
 			</style>
