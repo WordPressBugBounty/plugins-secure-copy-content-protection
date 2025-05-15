@@ -231,6 +231,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Subscribe box title font size		
 		$sub_title_size = isset($subscribe_settings['sccp_sub_title_size']) && $subscribe_settings['sccp_sub_title_size'] != '' && $subscribe_settings['sccp_sub_title_size'] != 0 ? 'font-size: '. absint( sanitize_text_field($subscribe_settings['sccp_sub_title_size']) ). 'px;' : '';
 
+		// Subscribe Container enable input width Mobile
+        $subscribe_settings['enable_sccp_sub_title_size_mobile'] = ( isset( $subscribe_settings['enable_sccp_sub_title_size_mobile'] ) && $subscribe_settings['enable_sccp_sub_title_size_mobile'] == 'off') ? false : true;
+        
+        // Subscribe Container border width Mobile
+        if ( $subscribe_settings['enable_sccp_sub_title_size_mobile'] ) {
+            $sub_title_size_mobile = ( isset( $subscribe_settings['sccp_sub_title_size_mobile'] ) && $subscribe_settings['sccp_sub_title_size_mobile'] != '' && $subscribe_settings['sccp_sub_title_size_mobile'] != 0 ) ?  'font-size: '. absint( sanitize_text_field( $subscribe_settings['sccp_sub_title_size_mobile'] ) ). 'px !important;' : $sub_title_size;
+        } else {
+            $sub_title_size_mobile = $sub_title_size;
+        }
+
 		// Subscribe box description font size		
 		$sub_desc_size = isset($subscribe_settings['sccp_sub_desc_size']) && $subscribe_settings['sccp_sub_desc_size'] != '' && $subscribe_settings['sccp_sub_desc_size'] != 0 ? 'font-size: '. absint( sanitize_text_field($subscribe_settings['sccp_sub_desc_size']) ). 'px;' : '';
 		
@@ -447,6 +457,7 @@ class Secure_Copy_Content_Protection_Public {
 
 					p.consub_para.consub_para_title {
 						text-transform:'. $sub_title_transformation_mobile .';
+						'. $sub_title_size_mobile .';
 					}
 
 					input.ays_sccp_sb_email.ays_sccp_sb_field[type="email"], 

@@ -168,6 +168,7 @@ class Secure_Copy_Content_Protection_Admin {
         $sccp_banner_date = $this->ays_sccp_update_banner_time();
         wp_localize_script($this->plugin_name . '-banner', 'sccpBannerLangObj', array(
             'sccpBannerDate'  	 => $sccp_banner_date,
+            'copied'             => esc_html__( 'Copied!', 'secure-copy-content-protection'),
             'somethingWentWrong' => __( "Maybe something went wrong.", 'secure-copy-content-protection' ),
             'errorMsg'           => __( "Error", 'secure-copy-content-protection' )
         ) );	

@@ -46,6 +46,12 @@ class Sccp_Settings_Actions {
             // Subscribe box title size
             $ays_sccp_sub_title_size = (isset($data['ays_sccp_sub_title_size']) && $data['ays_sccp_sub_title_size'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_title_size']) ) : 18;
 
+            // Enable Subscribe box title size Mobile
+            $enable_ays_sccp_sub_title_size_mobile = isset( $data['enable_ays_sccp_sub_title_size_mobile'] ) && $data['enable_ays_sccp_sub_title_size_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box title size Mobile
+            $ays_sccp_sub_title_size_mobile = isset( $data['ays_sccp_sub_title_size_mobile'] ) && $data['ays_sccp_sub_title_size_mobile'] != '' ? absint( sanitize_text_field( $data['ays_sccp_sub_title_size_mobile'] ) ) : 18;
+
             // Subscribe box description size
             $ays_sccp_sub_desc_size = (isset($data['ays_sccp_sub_desc_size']) && $data['ays_sccp_sub_desc_size'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_desc_size']) ) : 18;
 
@@ -199,6 +205,8 @@ class Sccp_Settings_Actions {
                 "sccp_sub_email_place_text"                 => $ays_sub_email_place_text,
                 "sccp_sub_name_place_text"                  => $ays_sub_name_place_text,
                 "sccp_sub_title_size"                       => $ays_sccp_sub_title_size,
+                "enable_sccp_sub_title_size_mobile"         => $enable_ays_sccp_sub_title_size_mobile,
+                "sccp_sub_title_size_mobile"                => $ays_sccp_sub_title_size_mobile,
                 "sccp_sub_desc_size"                        => $ays_sccp_sub_desc_size,
                 "enable_sub_btn_style"                      => $enable_sub_btn_style,
                 "sub_btn_color"                             => $sub_btn_color,

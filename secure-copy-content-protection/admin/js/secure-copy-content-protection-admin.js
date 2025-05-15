@@ -464,7 +464,11 @@
             $(document).find('#sccp_sub_icon_image').show().change();
             $(document).find('#ays_sccp_sub_email_place_text').val('Type your email address').change();
             $(document).find('#ays_sccp_sub_name_place_text').val('Type your name').change();
+
             $(document).find('#ays_sccp_sub_title_size').val('18');
+            $(document).find('#ays_sccp_sub_title_size_mobile').val('18').change();
+            $(document).find("#enable_ays_sccp_sub_title_size_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sccp_sub_desc_size').val('18');
             $(document).find("#ays_sccp_sub_text_alignment_left").prop('checked' , false).change();
             $(document).find("#ays_sccp_sub_text_alignment_center").prop('checked' , true).change();
@@ -1964,3 +1968,31 @@
 
     });
 })(jQuery);
+
+function selectAndCopyElementContents(el) {
+    if (window.getSelection && document.createRange) {
+        var _this = jQuery(document).find('.ays-sccp-copy-element-box');
+
+        var text      = el.textContent;
+        var textField = document.createElement('textarea');
+
+        textField.innerText = text;
+        document.body.appendChild(textField);
+        textField.select();
+        document.execCommand('copy');
+        textField.remove();
+
+        var selection = window.getSelection();
+        selection.setBaseAndExtent(el,0,el,1);
+
+        _this.attr( "data-original-title", sccpBannerLangObj.copied );
+        _this.attr( "title", sccpBannerLangObj.copied );
+
+        _this.tooltip("show");
+
+    } else if (document.selection && document.body.createTextRange) {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.select();
+    }
+}

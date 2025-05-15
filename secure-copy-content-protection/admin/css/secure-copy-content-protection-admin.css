@@ -173,7 +173,7 @@ div.ays-notice-banner {
 .ays-upgrade-container a {
     display: flex;
     align-items: center;
-    border: 1px solid #099472;
+    border: 2px solid #099472;
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
@@ -3561,4 +3561,80 @@ table#ays-sccp-position-table-mobile td:hover {
 .ays_sccp_sub_bg_image_position_mobile_container {
     margin-left: 20px;
     padding-left: 20px;
+}
+
+/* SCCP Top Banner Coupon Button | Start */
+
+.ays-sccp-coupon-container .ays-sccp-coupon-box {
+    display: flex;
+    align-items: center;
+    border: 2px dashed #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    /*color: #0B328E;*/
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #000;
+    background-color: #f9dc6c;
+    cursor: pointer;
+}
+
+.ays-sccp-logo-container-upgrade span.ays-sccp-logo-container-one-time-text{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ays-sccp-coupon-container {
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ays-sccp-coupon-container .ays-sccp-coupon-box span {
+    margin-left: 5px;
+}
+
+.ays-sccp-coupon-container .ays-sccp-coupon-box img {
+    width: 10px;
+}
+
+.ays-coupon-container .ays-sccp-coupon-box img {
+    width: 8px;
+}
+
+.ays-sccp-coupon-container .ays-sccp-coupon-box:hover {
+    color: #000;
+    background-color: #f1c51b;
+}
+
+.ays-sccp-coupon-container .ays-sccp-coupon-box:focus {
+    box-shadow: unset;
+}
+
+.ays-sccp-coupon-container .ays-sccp-coupon-box:hover .ays-sccp-svg-light-hover{
+    display: flex;
+}
+/* SCCP Top Banner Coupon Button | End */
+
+@media screen and (max-width: 1080px) {
+    .ays-notice-banner .navigation-bar ul{
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ays-notice-banner #navigation-container{
+        padding: 20px 0;
+    }
+    .ays-upgrade-container{
+        min-width: 105px;
+    }
+    .ays-notice-banner .modile-ddmenu-sm, .ays-notice-banner .modile-ddmenu-md{
+        width: fit-content;
+    }
 }
