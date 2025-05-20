@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
 Tested up to: 6.8.1
-Stable tag: 4.6.0
+Stable tag: 4.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -262,6 +262,11 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 
 == Changelog ==
+
+= 4.6.1 ( May 20, 2025 ) =
+* Improved: Some changes on the admin dashboard
+* Fixed: Dismiss button problem on the admin dashboard
+* Fixed: CSS conflict with the WP Social Login and Register plugin
 
 = 4.6.0 ( May 14, 2025 ) =
 * Added: Mobile Container Title Font size option for Subscribe to view box on the general settings

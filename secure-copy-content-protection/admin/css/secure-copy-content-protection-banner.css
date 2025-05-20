@@ -1,5 +1,5 @@
 /* New Mega Bundle Banner SCCP | Start */
-/*
+
 div#ays-sccp-new-mega-bundle-dicount-month-main {
     border: 0;
     background: #FFF;
@@ -40,7 +40,7 @@ div#ays-sccp-new-mega-bundle-dicount-month-main .btn-link {
 }
 
 div#ays-sccp-new-mega-bundle-dicount-month-main.ays_sccp_dicount_info {
-    background-image: url("../images/ays-sccp-banner-background-30.svg"); 
+    background-image: url("../images/ays-sccp-banner-background-50.svg"); 
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -447,11 +447,87 @@ div#ays-sccp-new-mega-bundle-dicount-month-main button.notice-dismiss:before{
         width: 35%;
     }
 }
-*/
+
+@media screen and (max-width: 1274px){
+    div#ays-sccp-countdown-main-container li span{
+        font-size: 25px;
+        min-height: 40px;
+        min-width: 40px;
+    
+    }   
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box.ays-sccp-dicount-wrap-text-box .ays-sccp-new-mega-bundle-title{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box.ays-sccp-dicount-wrap-button-box{
+        margin-bottom: 16px;
+    }
+
+    #ays-sccp-countdown-main-container ul {
+        padding-left: 0;
+    }
+
+    div#ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box.ays-sccp-dicount-wrap-text-box {
+        /* width: 100%; */
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-coupon-row{
+        width: 120px;
+        font-size: 18px;
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main #ays-button-top-buy-now{
+        padding: 12px 20px;
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box{
+        font-size: 12px;
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box.ays-sccp-dicount-wrap-text-box .ays-sccp-new-mega-bundle-desc {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1076px) and (min-width: 769px){
+    #ays-sccp-countdown-main-container li{
+        padding: 10px;
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-coupon-row{
+        width: 100px;
+        font-size: 16px;
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box.ays-sccp-dicount-wrap-button-box{
+        margin-bottom: 16px;
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main #ays-button-top-buy-now{
+        padding: 12px 15px;
+    }
+    #ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box{
+        font-size: 11px;
+        padding: 12px 0;
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 769px){
+    div#ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box.ays-sccp-dicount-wrap-countdown-box {
+        width: 45%;
+    }
+
+    div#ays-sccp-new-mega-bundle-dicount-month-main .ays-sccp-dicount-wrap-box.ays-sccp-dicount-wrap-text-box {
+        width: 35%;
+    }
+
+    div#ays-sccp-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+} 
+
+
 /* New Mega Bundle Banner SCCP | End */
 
 /* New Mega Bundle 2025 Banner SCCP | Start */
-
+/*
 div#ays-sccp-new-mega-bundle-2025-dicount-month-main {
     border: 0;
     background: #FFF;
@@ -949,8 +1025,8 @@ div#ays-sccp-new-mega-bundle-2025-dicount-month-main button.notice-dismiss:hover
         min-width: 50px;
     }
 }
+*/
 /* New Mega Bundle 2025 Banner Sccp | End */
-
 
 /* 2024 | Christmas top banner | Start */
 /*

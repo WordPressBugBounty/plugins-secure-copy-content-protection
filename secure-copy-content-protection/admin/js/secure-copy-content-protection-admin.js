@@ -1809,14 +1809,16 @@
             e.preventDefault();
 
             var $this = $(this);
-            var thisParent  = $this.parents("#ays-sccp-dismiss-buttons-content");
-            // var thisParent  = $this.parents("#ays-sccp-dismiss-buttons-content-helloween");
-            // var thisParent  = $this.parents("#ays-sccp-dismiss-buttons-content-black-friday");
+            var thisParent  = $this.parents("#ays-sccp-dismiss-buttons-content");            
             var mainParent  = $this.parents("div.ays_sccp_dicount_info");
             var closeButton = mainParent.find("button.notice-dismiss");
 
             var attr_plugin = $this.attr('data-plugin');
             var wp_nonce    = thisParent.find('#secure-copy-content-protection-sale-banner').val();
+
+            if(typeof wp_nonce == 'undefined'){
+                wp_nonce    = $(document).find('#secure-copy-content-protection-sale-banner').val();
+            }
 
             var data = {
                 action: 'ays_sccp_dismiss_button',
