@@ -220,7 +220,7 @@ $sccp_accordion_svg_html = '
         <div class="ays-sccp-wordpress-user-manual-box">            
             <a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank" style="text-decoration: none;font-size: 13px;">
                 <i class="ays_fa ays_fa_file_text"></i>
-                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", 'secure-copy-content-protection'); ?></span>
+                <span style="margin-left: 3px;text-decoration: underline;"><?php echo esc_html__("View Documentation", 'secure-copy-content-protection'); ?></span>
             </a>
         </div>
     </div>
@@ -260,39 +260,39 @@ $sccp_accordion_svg_html = '
                             <div class="nav-tab-wrapper ays-top-tab-wrapper">
                                 <a href="#tab1" data-tab="tab1"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab1') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('General', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('General', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab2" data-tab="tab2"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab2') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('Options', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('Options', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab5" data-tab="tab5"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab5') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('Styles', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('Styles', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab8" data-tab="tab8"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab8') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('Block Content', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('Block Content', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab3" data-tab="tab3"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab3') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('Block IPs', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('Block IPs', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab4" data-tab="tab4"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab4') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('Block Country', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('Block Country', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab6" data-tab="tab6"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab6') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('Page Blocker', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('Page Blocker', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab7" data-tab="tab7"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab7') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('PayPal', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('PayPal', 'secure-copy-content-protection'); ?>
                                 </a>
                                 <a href="#tab9" data-tab="tab9"
                                 class="nav-tab <?php echo  ($sccp_tab == 'tab9') ? 'nav-tab-active' : ''; ?>">
-                                    <?php echo  __('Integrations', 'secure-copy-content-protection'); ?>
+                                    <?php echo  esc_html__('Integrations', 'secure-copy-content-protection'); ?>
                                 </a>
                             </div>
                         </div>
@@ -301,14 +301,14 @@ $sccp_accordion_svg_html = '
 
                     <div id="tab1" class="nav-tab-content <?php echo  ($sccp_tab == 'tab1') ? 'nav-tab-content-active' : ''; ?>">
                         <div class="copy_protection_header">
-                            <h5><?php echo  __("General", 'secure-copy-content-protection'); ?></h5>
+                            <h5><?php echo  esc_html__("General", 'secure-copy-content-protection'); ?></h5>
                         </div>
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_enable_all_posts"><?php echo  __("Enable copy protection in all post types", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_enable_all_posts"><?php echo  esc_html__("Enable copy protection in all post types", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('Enable Options category of the plugin', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('Enable Options category of the plugin', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -322,9 +322,9 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_post_types"><?php echo  __("Except this", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_post_types"><?php echo  esc_html__("Except this", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('Disable copy paste option for the website, except selected post types', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('Disable copy paste option for the website, except selected post types', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -343,9 +343,9 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_enable_text_selecting"><?php echo  __("Enable text selecting", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_enable_text_selecting"><?php echo  esc_html__("Enable text selecting", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('Enable text selecting. This option will work only on desktop, on mobile devices text selecting is always disabled.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('Enable text selecting. This option will work only on desktop, on mobile devices text selecting is always disabled.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -359,14 +359,14 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row ays-sccp-desc-message-vars-parent">
                             <div class="col-sm-4">
-                                <label for="sccp_notification_text"><?php echo  __("Notification text", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_notification_text"><?php echo  esc_html__("Notification text", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('The warning text that appears after copy attempt. You can use Variables (General Settings) to insert user data here.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('The warning text that appears after copy attempt. You can use Variables (General Settings) to insert user data here.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                                 <p class="ays_sccp_small_hint_text_for_message_variables">
-                                    <span><?php echo __( "To see all Message Variables " , 'secure-copy-content-protection' ); ?></span>
-                                    <a href="?page=secure-copy-content-protection-settings&ays_sccp_tab=tab3" target="_blank"><?php echo __( "click here" , 'secure-copy-content-protection' ); ?></a>
+                                    <span><?php echo esc_html__( "To see all Message Variables " , 'secure-copy-content-protection' ); ?></span>
+                                    <a href="?page=secure-copy-content-protection-settings&ays_sccp_tab=tab3" target="_blank"><?php echo esc_html__( "click here" , 'secure-copy-content-protection' ); ?></a>
                                 </p>
                             </div>
                             <div class="col-sm-8">
@@ -386,14 +386,14 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_upload_audio"><?php echo  __("Upload Audio", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_upload_audio"><?php echo  esc_html__("Upload Audio", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('The audio that plays after copy attempt', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('The audio that plays after copy attempt', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-3">
-                                <a href="javascript:void(0)" class="btn btn-primary upload_audio"><?php echo  __("Upload Audio", 'secure-copy-content-protection'); ?></a>
+                                <a href="javascript:void(0)" class="btn btn-primary upload_audio"><?php echo  esc_html__("Upload Audio", 'secure-copy-content-protection'); ?></a>
                             </div>
                             <div class="col-sm-5">
                                 <div class="sccp_upload_audio">
@@ -414,9 +414,9 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_exclude_inp_textarea"><?php echo  __("Exclude input and textarea", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_exclude_inp_textarea"><?php echo  esc_html__("Exclude input and textarea", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('This option will exclude input and textarea', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('This option will exclude input and textarea', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -431,9 +431,9 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_exclude_css_selector"><?php echo  __("Exclude certain CSS selector", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_exclude_css_selector"><?php echo  esc_html__("Exclude certain CSS selector", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('Add your preferred CSS selector(s) and they will not be protected by the plugin.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo esc_attr__('Add your preferred CSS selector(s) and they will not be protected by the plugin.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -451,9 +451,9 @@ $sccp_accordion_svg_html = '
                         <hr>
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-4">
-                                <label for="sccp_disable_sup_admin"><?php echo  __("Disable Copy Protection for Super admin", 'secure-copy-content-protection'); ?></label>
+                                <label for="sccp_disable_sup_admin"><?php echo  esc_html__("Disable Copy Protection for Super admin", 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?php echo  __('In case of activating this option the super admin will not be able to use the plugin. Note: This option is disabled by default.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('In case of activating this option the super admin will not be able to use the plugin. Note: This option is disabled by default.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -466,7 +466,7 @@ $sccp_accordion_svg_html = '
                             <div class="col-sm-5"></div>
                         </div>
                         <hr>
-                        <div class="sccp_pro only_pro" title="<?php echo  __('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
+                        <div class="sccp_pro only_pro" title="<?php echo  esc_attr__('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
                             <div class="pro_features sccp_general_pro">
                                 <div>                                    
                                     <a href="https://ays-pro.com/wordpress/secure-copy-content-protection/" target="_blank" class="ays-sccp-new-upgrade-button-link">
@@ -475,7 +475,7 @@ $sccp_accordion_svg_html = '
                                                 <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>">
                                                 <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">
                                             </div>
-                                            <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", 'secure-copy-content-protection'); ?></div>
+                                            <div class="ays-sccp-new-upgrade-button"><?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?></div>
                                         </div>
                                     </a>
                                     <div class="ays-sccp-center-big-main-button-box ays-sccp-new-big-button-flex">
@@ -484,7 +484,7 @@ $sccp_accordion_svg_html = '
                                                 <div class="ays-sccp-center-new-big-upgrade-button">
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>" class="ays-sccp-new-button-img-hide">
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">  
-                                                    <?php echo __("Upgrade", 'secure-copy-content-protection'); ?>
+                                                    <?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?>
                                                 </div>
                                             </a>
                                         </div>
@@ -500,20 +500,20 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Primary', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Primary', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
                                 <div class="copy_protection_header row">
                                     <div class="col-sm-3"></div>
                                     <div class="col-sm-2">
-                                       <label for="sccp_select_all"><h5><?php echo  __("ON/OFF", 'secure-copy-content-protection'); ?></h5></label> 
+                                       <label for="sccp_select_all"><h5><?php echo  esc_html__("ON/OFF", 'secure-copy-content-protection'); ?></h5></label> 
                                     </div>
                                     <div class="col-sm-2">
-                                        <label for="sccp_select_all_mess"><h5><?php echo  __("Show Message", 'secure-copy-content-protection'); ?></h5></label>
+                                        <label for="sccp_select_all_mess"><h5><?php echo  esc_html__("Show Message", 'secure-copy-content-protection'); ?></h5></label>
                                     </div>
                                     <div class="col-sm-2">
-                                        <label for="sccp_select_all_audio"><h5><?php echo  __("Play Audio", 'secure-copy-content-protection'); ?></h5></label> 
+                                        <label for="sccp_select_all_audio"><h5><?php echo  esc_html__("Play Audio", 'secure-copy-content-protection'); ?></h5></label> 
                                     </div>
                                     <div class="col-sm-3"></div>
                                 </div>
@@ -544,9 +544,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_context_menu"><?php echo  __("Disable right click", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_context_menu"><?php echo  esc_html__("Disable right click", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Right click is not allowed', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Right click is not allowed', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -575,9 +575,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_disabled_rclick_img"><?php echo  __("Disable right click for images", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_disabled_rclick_img"><?php echo  esc_html__("Disable right click for images", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('By enabling the option, the right-click for the images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('By enabling the option, the right-click for the images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -606,9 +606,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_disabled_rclick_link"><?php echo  __("Disable right click for links", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_disabled_rclick_link"><?php echo  esc_html__("Disable right click for links", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('By enabling the option, the right-click for the links will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('By enabling the option, the right-click for the links will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -637,9 +637,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_developer_tools"><?php echo  __("Disable Developer Tools Hot-keys", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_developer_tools"><?php echo  esc_html__("Disable Developer Tools Hot-keys", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to open developer tools by CTRL+SHIFT+C/CMD+OPT+C, CTRL+SHIFT+J/CMD+OPT+J, CTRL+SHIFT+I/CMD+OPT+I', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to open developer tools by CTRL+SHIFT+C/CMD+OPT+C, CTRL+SHIFT+J/CMD+OPT+J, CTRL+SHIFT+I/CMD+OPT+I', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -669,9 +669,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_drag_start"><?php echo  __("Disable Drag & Drop", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_drag_start"><?php echo  esc_html__("Disable Drag & Drop", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('By enabling this option, the dragging of the texts and images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('By enabling this option, the dragging of the texts and images will be not allowed in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -701,9 +701,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f12"><?php echo  __("Disable F12", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f12"><?php echo  esc_html__("Disable F12", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Inspect element is not available to open by F12', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Inspect element is not available to open by F12', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -730,9 +730,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlc"><?php echo  __("Disable CTRL-C/CMD-C", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlc"><?php echo  esc_html__("Disable CTRL-C/CMD-C", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to copy the highlighted text', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to copy the highlighted text', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -759,9 +759,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlv"><?php echo  __("Disable CTRL-V/CMD-V", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlv"><?php echo  esc_html__("Disable CTRL-V/CMD-V", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to paste the highlighted text', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to paste the highlighted text', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -788,9 +788,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrls"><?php echo  __("Disable CTRL-S/CMD-S", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrls"><?php echo  esc_html__("Disable CTRL-S/CMD-S", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to save a copy of the page being viewed.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to save a copy of the page being viewed.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -817,9 +817,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrla"><?php echo  __("Disable CTRL-A/CMD-A", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrla"><?php echo  esc_html__("Disable CTRL-A/CMD-A", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to select all', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to select all', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -846,9 +846,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlx"><?php echo  __("Disable CTRL-X/CMD-X", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlx"><?php echo  esc_html__("Disable CTRL-X/CMD-X", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to cut the highlighted text', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to cut the highlighted text', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -875,9 +875,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlu"><?php echo  __("Disable CTRL-U/CMD-U", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlu"><?php echo  esc_html__("Disable CTRL-U/CMD-U", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to view source of the page', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to view source of the page', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -904,9 +904,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlf"><?php echo  __("Disable search hot-keys", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlf"><?php echo  esc_html__("Disable search hot-keys", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to find text on the page by CTRL+F/CMD+F, CTRL+G/CMD+G, CTRL+SHIFT+G/CMD+OPT+G', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to find text on the page by CTRL+F/CMD+F, CTRL+G/CMD+G, CTRL+SHIFT+G/CMD+OPT+G', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -933,9 +933,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlp"><?php echo  __("Disable CTRL-P/CMD-P", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlp"><?php echo  esc_html__("Disable CTRL-P/CMD-P", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to print the page', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to print the page', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -962,9 +962,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlh"><?php echo  __("Disable CTRL-H/CMD-H", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlh"><?php echo  esc_html__("Disable CTRL-H/CMD-H", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow to open history page', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow to open history page', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -991,9 +991,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrll"><?php echo  __("Disable CTRL-L/CMD-L", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrll"><?php echo  esc_html__("Disable CTRL-L/CMD-L", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1020,9 +1020,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlk"><?php echo  __("Disable CTRL-K", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlk"><?php echo  esc_html__("Disable CTRL-K", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow the user to move to the address bar and perform a google search.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow the user to move to the address bar and perform a google search.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1049,9 +1049,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrlo"><?php echo  __("Disable CTRL-O", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrlo"><?php echo  esc_html__("Disable CTRL-O", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow to open file from your computer.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow to open file from your computer.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1078,9 +1078,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f6"><?php echo  __("Disable F6", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f6"><?php echo  esc_html__("Disable F6", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1107,9 +1107,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f3"><?php echo  __("Disable F3", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f3"><?php echo  esc_html__("Disable F3", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow to find text on the page.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow to find text on the page.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1136,9 +1136,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_f9"><?php echo  __("Disable F9", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_f9"><?php echo  esc_html__("Disable F9", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('By enabling this option, the reading mode will completely be deactivated on the Mozilla browser.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('By enabling this option, the reading mode will completely be deactivated on the Mozilla browser.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1165,9 +1165,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_altd"><?php echo  __("Disable ALT-D", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_altd"><?php echo  esc_html__("Disable ALT-D", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1194,9 +1194,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_ctrle"><?php echo  __("Disable CTRL-E", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_ctrle"><?php echo  esc_html__("Disable CTRL-E", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Does not allow to select the browser address bar', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1224,9 +1224,9 @@ $sccp_accordion_svg_html = '
                                 <?php  if (isset($data["options"]["printscreen"]) && $data["options"]["printscreen"] == 'checked') { ?>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_printscreen"><?php echo  __("Disable Print Screen (PC only)", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_printscreen"><?php echo  esc_html__("Disable Print Screen (PC only)", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not allowed to print screen', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not allowed to print screen', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1257,11 +1257,11 @@ $sccp_accordion_svg_html = '
                                 <?php } ?>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_left_click"><?php echo  __("Disable left click", 'secure-copy-content-protection'); ?>
-                                            <span class="sccp_not_rec"><?php echo  __("( not recommended )", 'secure-copy-content-protection'); ?></span>
+                                        <label for="sccp_enable_left_click"><?php echo  esc_html__("Disable left click", 'secure-copy-content-protection'); ?>
+                                            <span class="sccp_not_rec"><?php echo  esc_html__("( not recommended )", 'secure-copy-content-protection'); ?></span>
                                         </label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Left click is not allowed', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Left click is not allowed', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1290,9 +1290,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_enable_mobile_img"><?php echo  __("Disable scrolling over images (Mobile)", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_enable_mobile_img"><?php echo  esc_html__("Disable scrolling over images (Mobile)", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Not open images context menu in mobile browsers after taphold. But makes it impossible to scroll over the images.', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Not open images context menu in mobile browsers after taphold. But makes it impossible to scroll over the images.', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1322,9 +1322,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_show_msg_only_once"><?php echo  __("Show message only once", 'secure-copy-content-protection'); ?>
+                                        <label for="sccp_show_msg_only_once"><?php echo  esc_html__("Show message only once", 'secure-copy-content-protection'); ?>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?php echo  __('Enable to show the warning text once( only after the first attempt) when the user tries non-permitted actions in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  esc_attr__('Enable to show the warning text once( only after the first attempt) when the user tries non-permitted actions in the copy protection enabled areas on the website.', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1341,9 +1341,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_access_disable_js"><?php echo  __("Protect content when Javascript is disabled", 'secure-copy-content-protection'); ?>
+                                        <label for="sccp_access_disable_js"><?php echo  esc_html__("Protect content when Javascript is disabled", 'secure-copy-content-protection'); ?>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?php echo  __('It will block the site content if the user disabled browser Javascript. There will be a white screen with a message.', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  esc_attr__('It will block the site content if the user disabled browser Javascript. There will be a white screen with a message.', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1360,9 +1360,9 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="form-group row if-ays-sccp-hide-results">
                                     <div class="col-sm-3">
-                                        <label for="ays_sccp_disabled_js_msg"><?php echo  __("Message while Javascript is disabled", 'secure-copy-content-protection'); ?>
+                                        <label for="ays_sccp_disabled_js_msg"><?php echo  esc_html__("Message while Javascript is disabled", 'secure-copy-content-protection'); ?>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('Write the message which will be displayed when the Javascript is disabled', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('Write the message which will be displayed when the Javascript is disabled', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                         </label>
@@ -1386,8 +1386,8 @@ $sccp_accordion_svg_html = '
                                 <div class="copy_protection_container form-group row ays_toggle_parent">
                                     <div class="col-sm-3">
                                         <label for="sccp_enable_copyright_text">
-                                            <?php echo __('Enable Copyright text','secure-copy-content-protection'); ?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Enable copyright text.','secure-copy-content-protection'); ?>">
+                                            <?php echo esc_html__('Enable Copyright text','secure-copy-content-protection'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Enable copyright text.','secure-copy-content-protection'); ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1401,8 +1401,8 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-4">
                                                 <label for="sccp_copyright_text">
-                                                    <?php echo __('Copyright text','secure-copy-content-protection')?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Type in the copyright text that will be added to the copied text.','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__('Copyright text','secure-copy-content-protection')?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Type in the copyright text that will be added to the copied text.','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1417,9 +1417,9 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-4">
                                                 <label class="form-check-label" for="sccp_copyright_include_url">
-                                                    <?php echo __('Include URL link', 'secure-copy-content-protection'); ?>
+                                                    <?php echo esc_html__('Include URL link', 'secure-copy-content-protection'); ?>
                                                     <a class="ays_help" data-toggle="tooltip"
-                                                    title="<?php echo __('Tick the checkbox if you want to include your URL link at the end of the copyright text.', 'secure-copy-content-protection'); ?>">
+                                                    title="<?php echo esc_attr__('Tick the checkbox if you want to include your URL link at the end of the copyright text.', 'secure-copy-content-protection'); ?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1434,8 +1434,8 @@ $sccp_accordion_svg_html = '
                                 <div class="copy_protection_container form-group row ays_toggle_parent">
                                     <div class="col-sm-3">
                                         <label for="ays_sccp_enable_copyright_word">
-                                            <?php echo __('Enable pasting custom text','secure-copy-content-protection'); ?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Activate this option, and provided custom text will be replaced with the copied text.','secure-copy-content-protection'); ?>">
+                                            <?php echo esc_html__('Enable pasting custom text','secure-copy-content-protection'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Activate this option, and provided custom text will be replaced with the copied text.','secure-copy-content-protection'); ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1449,8 +1449,8 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-4">
                                                 <label for="ays_sccp_copyright_word">
-                                                    <?php echo __('Custom text','secure-copy-content-protection')?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Type in the custom text.','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__('Custom text','secure-copy-content-protection')?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Type in the custom text.','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1464,7 +1464,7 @@ $sccp_accordion_svg_html = '
                                     </div>
                                 </div>
                                 <hr/>
-                                <div class="sccp_pro only_pro" title="<?php echo  __('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
+                                <div class="sccp_pro only_pro" title="<?php echo  esc_attr__('This feature will available in PRO version', 'secure-copy-content-protection'); ?>">
                                     <div class="pro_features sccp_general_pro">
                                         <div>                                    
                                             <a href="https://ays-pro.com/wordpress/secure-copy-content-protection/" target="_blank" class="ays-sccp-new-upgrade-button-link">
@@ -1473,7 +1473,7 @@ $sccp_accordion_svg_html = '
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">
                                                     </div>
-                                                    <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", 'secure-copy-content-protection'); ?></div>
+                                                    <div class="ays-sccp-new-upgrade-button"><?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?></div>
                                                 </div>
                                             </a>
                                             <div class="ays-sccp-center-big-main-button-box ays-sccp-new-big-button-flex">
@@ -1482,7 +1482,7 @@ $sccp_accordion_svg_html = '
                                                         <div class="ays-sccp-center-new-big-upgrade-button">
                                                             <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>" class="ays-sccp-new-button-img-hide">
                                                             <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">  
-                                                            <?php echo __("Upgrade", 'secure-copy-content-protection'); ?>
+                                                            <?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -1491,9 +1491,9 @@ $sccp_accordion_svg_html = '
                                     </div>
                                     <div class="copy_protection_container form-group row">
                                         <div class="col-sm-3">
-                                            <label for="sccp_enable_watermark"><?php echo  __("Enable Images Watermark", 'secure-copy-content-protection'); ?></label>
+                                            <label for="sccp_enable_watermark"><?php echo  esc_html__("Enable Images Watermark", 'secure-copy-content-protection'); ?></label>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?php echo  __('Enable watermark with notification text on all site images', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  esc_attr__('Enable watermark with notification text on all site images', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </div>
@@ -1506,11 +1506,11 @@ $sccp_accordion_svg_html = '
                                     <hr>
                                     <div class="copy_protection_container form-group row">
                                         <div class="col-sm-3">
-                                            <label for="sccp_enable_f12"><?php echo  __("Disable REST API", 'secure-copy-content-protection'); ?>
-                                                <span class="sccp_not_rec"><?php echo  __("( not recommended )", 'secure-copy-content-protection'); ?></span>
+                                            <label for="sccp_enable_f12"><?php echo  esc_html__("Disable REST API", 'secure-copy-content-protection'); ?>
+                                                <span class="sccp_not_rec"><?php echo  esc_html__("( not recommended )", 'secure-copy-content-protection'); ?></span>
                                             </label>
                                             <a class="ays_help" data-toggle="tooltip"
-                                               title="<?php echo  __('Disable REST API', 'secure-copy-content-protection') ?>">
+                                               title="<?php echo  esc_attr__('Disable REST API', 'secure-copy-content-protection') ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </div>
@@ -1527,15 +1527,15 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Block content options', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Block content options', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_bc_header_text"><?php echo  __("Block content header text", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_bc_header_text"><?php echo  esc_html__("Block content header text", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('The header text for block content', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('The header text for block content', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1551,16 +1551,16 @@ $sccp_accordion_svg_html = '
                                 <hr>
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_bc_button_position"><?php echo  __("Block content button position", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_bc_button_position"><?php echo  esc_html__("Block content button position", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('The button position for block content', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('The button position for block content', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-3 sccp_bc_btn_position_select_div" >
                                         <select id="sccp_bc_button_position" name="sccp_bc_button_position" class="ays-text-input-short">
-                                            <option <?php echo ($bc_button_position == 'next-to') ? 'selected' : ''; ?> value="next-to"><?php echo __('Next to the input', 'secure-copy-content-protection'); ?></option>
-                                            <option <?php echo ($bc_button_position == 'under') ? 'selected' : ''; ?> value="under"><?php echo __('Under the input', 'secure-copy-content-protection'); ?></option>
+                                            <option <?php echo ($bc_button_position == 'next-to') ? 'selected' : ''; ?> value="next-to"><?php echo esc_html__('Next to the input', 'secure-copy-content-protection'); ?></option>
+                                            <option <?php echo ($bc_button_position == 'under') ? 'selected' : ''; ?> value="under"><?php echo esc_attr__('Under the input', 'secure-copy-content-protection'); ?></option>
                                         </select>
                                         
                                     </div>
@@ -1572,15 +1572,15 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Subscribe to view options', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Subscribe to view options', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">                                                     
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_subscribe_block_header_text"><?php echo  __("Subscribe to view header text", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_subscribe_block_header_text"><?php echo  esc_html__("Subscribe to view header text", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('The header text for subscribe to view', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('The header text for subscribe to view', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
@@ -1596,16 +1596,16 @@ $sccp_accordion_svg_html = '
                                 <hr>                                
                                 <div class="copy_protection_container form-group row">
                                     <div class="col-sm-3">
-                                        <label for="sccp_sub_block_button_position"><?php echo  __("Subscribe to view button position", 'secure-copy-content-protection'); ?></label>
+                                        <label for="sccp_sub_block_button_position"><?php echo  esc_html__("Subscribe to view button position", 'secure-copy-content-protection'); ?></label>
                                         <a class="ays_help" data-toggle="tooltip"
-                                           title="<?php echo  __('The button position for subscribe to view', 'secure-copy-content-protection') ?>">
+                                           title="<?php echo  esc_attr__('The button position for subscribe to view', 'secure-copy-content-protection') ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </div>
                                     <div class="col-sm-3 sccp_bc_btn_position_select_div" >
                                         <select id="sccp_sub_block_button_position" name="sccp_sub_block_button_position" class="ays-text-input-short">
-                                            <option <?php echo ($sub_block_button_position == 'next-to') ? 'selected' : ''; ?> value="next-to"><?php echo __('Next to the input', 'secure-copy-content-protection'); ?></option>
-                                            <option <?php echo ($sub_block_button_position == 'under') ? 'selected' : ''; ?> value="under"><?php echo __('Under the input', 'secure-copy-content-protection'); ?></option>
+                                            <option <?php echo ($sub_block_button_position == 'next-to') ? 'selected' : ''; ?> value="next-to"><?php echo esc_html__('Next to the input', 'secure-copy-content-protection'); ?></option>
+                                            <option <?php echo ($sub_block_button_position == 'under') ? 'selected' : ''; ?> value="under"><?php echo esc_html__('Under the input', 'secure-copy-content-protection'); ?></option>
                                         </select>
                                         
                                     </div>
@@ -1618,7 +1618,7 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Block IPs', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Block IPs', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
@@ -1630,7 +1630,7 @@ $sccp_accordion_svg_html = '
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>">
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">
                                                 </div>
-                                                <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", 'secure-copy-content-protection'); ?></div>
+                                                <div class="ays-sccp-new-upgrade-button"><?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?></div>
                                             </div>
                                         </a>
                                         <div class="ays-sccp-center-big-main-button-box ays-sccp-new-big-button-flex">
@@ -1639,7 +1639,7 @@ $sccp_accordion_svg_html = '
                                                     <div class="ays-sccp-center-new-big-upgrade-button">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>" class="ays-sccp-new-button-img-hide">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">  
-                                                        <?php echo __("Upgrade", 'secure-copy-content-protection'); ?>
+                                                        <?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?>
                                                     </div>
                                                 </a>
                                             </div>
@@ -1656,7 +1656,7 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Block Country', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Block Country', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
@@ -1668,7 +1668,7 @@ $sccp_accordion_svg_html = '
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>">
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">
                                                 </div>
-                                                <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", 'secure-copy-content-protection'); ?></div>
+                                                <div class="ays-sccp-new-upgrade-button"><?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?></div>
                                             </div>
                                         </a>
                                         <div class="ays-sccp-center-big-main-button-box ays-sccp-new-big-button-flex">
@@ -1677,7 +1677,7 @@ $sccp_accordion_svg_html = '
                                                     <div class="ays-sccp-center-new-big-upgrade-button">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>" class="ays-sccp-new-button-img-hide">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">  
-                                                        <?php echo __("Upgrade", 'secure-copy-content-protection'); ?>
+                                                        <?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?>
                                                     </div>
                                                 </a>
                                             </div>
@@ -1694,7 +1694,7 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Styles', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Styles', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
@@ -1702,9 +1702,9 @@ $sccp_accordion_svg_html = '
                                     <div class="col-sm-6">
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="tooltip_position"><?php echo  __('Tooltip position', 'secure-copy-content-protection'); ?></label>
+                                                <label for="tooltip_position"><?php echo  esc_html__('Tooltip position', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Position of tooltip on window', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('Position of tooltip on window', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -1731,9 +1731,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="sscp_timeout"><?php echo  __('Notification text display duration', 'secure-copy-content-protection'); ?></label>
+                                                <label for="sscp_timeout"><?php echo  esc_html__('Notification text display duration', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Notification text display duration in milliseconds. 1000ms is default value.', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('Notification text display duration in milliseconds. 1000ms is default value.', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -1750,9 +1750,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="bg_color"><?php echo  __('Tooltip background color', 'secure-copy-content-protection'); ?></label>
+                                                <label for="bg_color"><?php echo  esc_html__('Tooltip background color', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Filler color of tooltip', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('Filler color of tooltip', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -1766,8 +1766,8 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_enable_background_gradient">
-                                                    <?php echo __('Tooltip background gradient','secure-copy-content-protection')?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Color gradient of the tooltip background','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__('Tooltip background gradient','secure-copy-content-protection')?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Color gradient of the tooltip background','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1779,8 +1779,8 @@ $sccp_accordion_svg_html = '
                                                 <div class="row ays_toggle_target" style="margin: 10px 0 0 0; padding-top: 10px; <?php echo ($enable_background_gradient) ? '' : 'display:none;' ?>">
                                                     <div class="col-sm-12 ays_divider_top" style="margin-top: 10px; padding-top: 10px;">
                                                         <label for='ays-sccp-background-gradient-color-1'>
-                                                            <?php echo __('Color 1', 'secure-copy-content-protection'); ?>
-                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Color 1 of the tooltip background gradient','secure-copy-content-protection')?>">
+                                                            <?php echo esc_html__('Color 1', 'secure-copy-content-protection'); ?>
+                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Color 1 of the tooltip background gradient','secure-copy-content-protection')?>">
                                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                                             </a>
                                                         </label>
@@ -1788,8 +1788,8 @@ $sccp_accordion_svg_html = '
                                                     </div>
                                                     <div class="col-sm-12 ays_divider_top" style="margin-top: 10px; padding-top: 10px;">
                                                         <label for='ays-sccp-background-gradient-color-2'>
-                                                            <?php echo __('Color 2', 'secure-copy-content-protection'); ?>
-                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Color 2 of the tooltip background gradient','secure-copy-content-protection')?>">
+                                                            <?php echo esc_html__('Color 2', 'secure-copy-content-protection'); ?>
+                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Color 2 of the tooltip background gradient','secure-copy-content-protection')?>">
                                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                                             </a>
                                                         </label>
@@ -1797,16 +1797,16 @@ $sccp_accordion_svg_html = '
                                                     </div>
                                                     <div class="col-sm-12 ays_divider_top" style="margin-top: 10px; padding-top: 10px;">
                                                         <label for="ays_sccp_gradient_direction">
-                                                            <?php echo __('Gradient direction','secure-copy-content-protection')?>
-                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('The direction of the color gradient.','secure-copy-content-protection')?>">
+                                                            <?php echo esc_html__('Gradient direction','secure-copy-content-protection')?>
+                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('The direction of the color gradient.','secure-copy-content-protection')?>">
                                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                                             </a>
                                                         </label>
                                                         <select id="ays_sccp_gradient_direction" name="ays_sccp_gradient_direction" class="ays-text-input">
-                                                            <option <?php echo ($sccp_gradient_direction == 'vertical') ? 'selected' : ''; ?> value="vertical"><?php echo __( 'Vertical', 'secure-copy-content-protection'); ?></option>
-                                                            <option <?php echo ($sccp_gradient_direction == 'horizontal') ? 'selected' : ''; ?> value="horizontal"><?php echo __( 'Horizontal', 'secure-copy-content-protection'); ?></option>
-                                                            <option <?php echo ($sccp_gradient_direction == 'diagonal_left_to_right') ? 'selected' : ''; ?> value="diagonal_left_to_right"><?php echo __( 'Diagonal left to right', 'secure-copy-content-protection'); ?></option>
-                                                            <option <?php echo ($sccp_gradient_direction == 'diagonal_right_to_left') ? 'selected' : ''; ?> value="diagonal_right_to_left"><?php echo __( 'Diagonal right to left', 'secure-copy-content-protection'); ?></option>
+                                                            <option <?php echo ($sccp_gradient_direction == 'vertical') ? 'selected' : ''; ?> value="vertical"><?php echo esc_html__( 'Vertical', 'secure-copy-content-protection'); ?></option>
+                                                            <option <?php echo ($sccp_gradient_direction == 'horizontal') ? 'selected' : ''; ?> value="horizontal"><?php echo esc_html__( 'Horizontal', 'secure-copy-content-protection'); ?></option>
+                                                            <option <?php echo ($sccp_gradient_direction == 'diagonal_left_to_right') ? 'selected' : ''; ?> value="diagonal_left_to_right"><?php echo esc_html__( 'Diagonal left to right', 'secure-copy-content-protection'); ?></option>
+                                                            <option <?php echo ($sccp_gradient_direction == 'diagonal_right_to_left') ? 'selected' : ''; ?> value="diagonal_right_to_left"><?php echo esc_html__( 'Diagonal right to left', 'secure-copy-content-protection'); ?></option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -1818,8 +1818,8 @@ $sccp_accordion_svg_html = '
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
                                                 <label>
-                                                    <?php echo __('Tooltip background image','secure-copy-content-protection')?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Background image for of the tooltip','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__('Tooltip background image','secure-copy-content-protection')?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Background image for of the tooltip','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1843,23 +1843,23 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_tooltip_bg_image_position">
-                                                    <?php echo __( "Tooltip background image position", 'secure-copy-content-protection' ); ?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('The position of background image of the tooltip','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__( "Tooltip background image position", 'secure-copy-content-protection' ); ?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('The position of background image of the tooltip','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
                                             </div>
                                             <div class="col-sm-6 ays_divider_left">
                                                 <select id="ays_sccp_tooltip_bg_image_position" name="ays_sccp_tooltip_bg_image_position" class="ays-text-input" style="display:inline-block;">
-                                                    <option value="left top" <?php echo $tooltip_bg_image_position == "left top" ? "selected" : ""; ?>><?php echo __( "Left Top", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="left center" <?php echo $tooltip_bg_image_position == "left center" ? "selected" : ""; ?>><?php echo __( "Left Center", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="left bottom" <?php echo $tooltip_bg_image_position == "left bottom" ? "selected" : ""; ?>><?php echo __( "Left Bottom", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="center top" <?php echo $tooltip_bg_image_position == "center top" ? "selected" : ""; ?>><?php echo __( "Center Top", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="center center" <?php echo $tooltip_bg_image_position == "center center" ? "selected" : ""; ?>><?php echo __( "Center Center", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="center bottom" <?php echo $tooltip_bg_image_position == "center bottom" ? "selected" : ""; ?>><?php echo __( "Center Bottom", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="right top" <?php echo $tooltip_bg_image_position == "right top" ? "selected" : ""; ?>><?php echo __( "Right Top", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="right center" <?php echo $tooltip_bg_image_position == "right center" ? "selected" : ""; ?>><?php echo __( "Right Center", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="right bottom" <?php echo $tooltip_bg_image_position == "right bottom" ? "selected" : ""; ?>><?php echo __( "Right Bottom", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="left top" <?php echo $tooltip_bg_image_position == "left top" ? "selected" : ""; ?>><?php echo esc_html__( "Left Top", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="left center" <?php echo $tooltip_bg_image_position == "left center" ? "selected" : ""; ?>><?php echo esc_html__( "Left Center", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="left bottom" <?php echo $tooltip_bg_image_position == "left bottom" ? "selected" : ""; ?>><?php echo esc_html__( "Left Bottom", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="center top" <?php echo $tooltip_bg_image_position == "center top" ? "selected" : ""; ?>><?php echo esc_html__( "Center Top", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="center center" <?php echo $tooltip_bg_image_position == "center center" ? "selected" : ""; ?>><?php echo esc_html__( "Center Center", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="center bottom" <?php echo $tooltip_bg_image_position == "center bottom" ? "selected" : ""; ?>><?php echo esc_html__( "Center Bottom", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="right top" <?php echo $tooltip_bg_image_position == "right top" ? "selected" : ""; ?>><?php echo esc_html__( "Right Top", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="right center" <?php echo $tooltip_bg_image_position == "right center" ? "selected" : ""; ?>><?php echo esc_html__( "Right Center", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="right bottom" <?php echo $tooltip_bg_image_position == "right bottom" ? "selected" : ""; ?>><?php echo esc_html__( "Right Bottom", 'secure-copy-content-protection' ); ?></option>
                                                 </select>
                                             </div>
                                         </div>
@@ -1868,8 +1868,8 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_tooltip_bg_image_object_fit">
-                                                    <?php echo __( "Tooltip background image object-fit", 'secure-copy-content-protection' ); ?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify how a sccp tooltip image should be resized to fit its container.','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__( "Tooltip background image object-fit", 'secure-copy-content-protection' ); ?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify how a sccp tooltip image should be resized to fit its container.','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1897,9 +1897,9 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_tooltip_text_transformation">
-                                                    <?php echo __('Tooltip text transformation', 'secure-copy-content-protection' ); ?>
+                                                    <?php echo esc_html__('Tooltip text transformation', 'secure-copy-content-protection' ); ?>
                                                     <a class="ays_help" data-toggle="tooltip" data-html="true" data-placement="top" title="<?php
-                                                        echo __("Specify how to capitalize a title text of your tooltip.", 'secure-copy-content-protection') .
+                                                        echo esc_attr__("Specify how to capitalize a title text of your tooltip.", 'secure-copy-content-protection') .
                                                             "<ul style='list-style-type: circle;padding-left: 20px;'>".
                                                                 "<li>". __('Uppercase – Transforms all characters to uppercase','secure-copy-content-protection') ."</li>".
                                                                 "<li>". __('Lowercase – Transforms all characters to lowercase','secure-copy-content-protection') ."</li>".
@@ -1912,19 +1912,19 @@ $sccp_accordion_svg_html = '
                                             </div>
                                             <div class="col-sm-6 ays_divider_left">
                                                 <select name="ays_sccp_tooltip_text_transformation" id="ays_sccp_tooltip_text_transformation" class="ays-text-input" style="display:block;">
-                                                    <option value="none" <?php echo $tooltip_text_transformation == 'none' ? 'selected' : ''; ?>><?php echo __( "None", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="uppercase" <?php echo $tooltip_text_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="lowercase" <?php echo $tooltip_text_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="capitalize" <?php echo $tooltip_text_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="none" <?php echo $tooltip_text_transformation == 'none' ? 'selected' : ''; ?>><?php echo esc_html__( "None", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="uppercase" <?php echo $tooltip_text_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Uppercase", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="lowercase" <?php echo $tooltip_text_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Lowercase", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="capitalize" <?php echo $tooltip_text_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo esc_html__( "Capitalize", 'secure-copy-content-protection' ); ?></option>
                                                 </select>
                                             </div>
                                         </div>
                                         <hr>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="tooltip_letter_spacing"><?php echo  __('Tooltip letter spacing', 'secure-copy-content-protection'); ?></label>
+                                                <label for="tooltip_letter_spacing"><?php echo  esc_html__('Tooltip letter spacing', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Define the space between the letters of the tooltip text in pixels. Note: The default value for this option is 0.', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('Define the space between the letters of the tooltip text in pixels. Note: The default value for this option is 0.', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -1942,8 +1942,8 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="sccp_tooltip_bg_blur">
-                                                    <?php echo __( "Tooltip Background Blur", 'secure-copy-content-protection' ); ?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('The background blur of the tooltip.','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__( "Tooltip Background Blur", 'secure-copy-content-protection' ); ?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('The background blur of the tooltip.','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1956,8 +1956,8 @@ $sccp_accordion_svg_html = '
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
                                                 <label for="sccp_tooltip_opacity">
-                                                    <?php echo __("Tooltip opacity", 'secure-copy-content-protection');?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __("The opacity degree of the tooltip", 'secure-copy-content-protection');?>">
+                                                    <?php echo esc_html__("Tooltip opacity", 'secure-copy-content-protection');?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The opacity degree of the tooltip", 'secure-copy-content-protection');?>">
                                                        <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1971,9 +1971,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="text_color"><?php echo  __('Tooltip text color', 'secure-copy-content-protection'); ?></label>
+                                                <label for="text_color"><?php echo  esc_html__('Tooltip text color', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Color of tooltip text', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('Color of tooltip text', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -1985,9 +1985,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="font_size"><?php echo  __('Tooltip Font size', 'secure-copy-content-protection'); ?>
+                                                <label for="font_size"><?php echo  esc_html__('Tooltip Font size', 'secure-copy-content-protection'); ?>
                                                     <a class="ays_help" data-toggle="tooltip"
-                                                       title="<?php echo  __('Size of tooltip text', 'secure-copy-content-protection') ?>">
+                                                       title="<?php echo  esc_attr__('Size of tooltip text', 'secure-copy-content-protection') ?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -1996,8 +1996,8 @@ $sccp_accordion_svg_html = '
                                                 <div class="row">
                                                     <div class="col-sm-5">
                                                         <label for='font_size'>
-                                                            <?php echo __('On PC', 'secure-copy-content-protection'); ?>
-                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the font size for PC devices.','secure-copy-content-protection'); ?>">
+                                                            <?php echo esc_html__('On PC', 'secure-copy-content-protection'); ?>
+                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the font size for PC devices.','secure-copy-content-protection'); ?>">
                                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                                             </a>
                                                         </label>
@@ -2015,8 +2015,8 @@ $sccp_accordion_svg_html = '
                                                 <div class="row">
                                                     <div class="col-sm-5">
                                                         <label for='mobile_font_size'>
-                                                            <?php echo __('On mobile', 'secure-copy-content-protection'); ?>
-                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the font size for mobile devices.','secure-copy-content-protection'); ?>">
+                                                            <?php echo esc_html__('On mobile', 'secure-copy-content-protection'); ?>
+                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the font size for mobile devices.','secure-copy-content-protection'); ?>">
                                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                                             </a>
                                                         </label>
@@ -2036,9 +2036,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="ays_tooltip_padding_top_bottom"><?php echo  __('Tooltip padding', 'secure-copy-content-protection'); ?></label>
+                                                <label for="ays_tooltip_padding_top_bottom"><?php echo  esc_html__('Tooltip padding', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Tooltip padding in pixels.', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('Tooltip padding in pixels.', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2067,9 +2067,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="boxshadow_color"><?php echo  __('Tooltip box shadow', 'secure-copy-content-protection'); ?></label>
+                                                <label for="boxshadow_color"><?php echo  esc_html__('Tooltip box shadow', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Box-shadow color for tooltip', 'secure-copy-content-protection'); ?>">
+                                                   title="<?php echo  esc_attr__('Box-shadow color for tooltip', 'secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2081,15 +2081,15 @@ $sccp_accordion_svg_html = '
                                                 <hr>
                                                 <div class="col-sm-12">
                                                     <div>
-                                                        <span class="ays_sccp_small_hint_text"><?php echo __('X', 'secure-copy-content-protection'); ?></span>
+                                                        <span class="ays_sccp_small_hint_text"><?php echo esc_html__('X', 'secure-copy-content-protection'); ?></span>
                                                         <input type="number" class="ays-text-input ays-text-input-80-width" id='ays_sccp_box_shadow_x_offset' name='ays_sccp_box_shadow_x_offset' value="<?php echo $sccp_box_shadow_x_offset; ?>" />
                                                     </div>
                                                     <div style="margin-top: 5px;">
-                                                        <span class="ays_sccp_small_hint_text"><?php echo __('Y', 'secure-copy-content-protection'); ?></span>
+                                                        <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Y', 'secure-copy-content-protection'); ?></span>
                                                         <input type="number" class="ays-text-input ays-text-input-80-width" id='ays_sccp_box_shadow_y_offset' name='ays_sccp_box_shadow_y_offset' value="<?php echo $sccp_box_shadow_y_offset; ?>" />
                                                     </div>
                                                     <div style="margin-top: 5px;">
-                                                        <span class="ays_sccp_small_hint_text"><?php echo __('Z', 'secure-copy-content-protection'); ?></span>
+                                                        <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Z', 'secure-copy-content-protection'); ?></span>
                                                         <input type="number" class="ays-text-input ays-text-input-80-width" id='ays_sccp_box_shadow_z_offset' name='ays_sccp_box_shadow_z_offset' value="<?php echo $sccp_box_shadow_z_offset; ?>" />
                                                     </div>
                                                 </div>
@@ -2098,9 +2098,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_color"><?php echo  __('Tooltip border color', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_color"><?php echo  esc_html__('Tooltip border color', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('Color of tooltip border', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('Color of tooltip border', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2112,9 +2112,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_width"><?php echo  __('Tooltip border width', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_width"><?php echo  esc_html__('Tooltip border width', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('This shows the thickness of the border in pixels', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('This shows the thickness of the border in pixels', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2131,9 +2131,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>                                
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_radius"><?php echo  __('Tooltip border radius', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_radius"><?php echo  esc_html__('Tooltip border radius', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('This shows if the border has curvature', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('This shows if the border has curvature', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2151,9 +2151,9 @@ $sccp_accordion_svg_html = '
                                         <hr/>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
-                                                <label for="border_style"><?php echo  __('Tooltip border style', 'secure-copy-content-protection'); ?></label>
+                                                <label for="border_style"><?php echo  esc_html__('Tooltip border style', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
-                                                   title="<?php echo  __('This shows if the border is highlighted with style', 'secure-copy-content-protection') ?>">
+                                                   title="<?php echo  esc_attr__('This shows if the border is highlighted with style', 'secure-copy-content-protection') ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </div>
@@ -2185,8 +2185,8 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_enable_title_text_shadow">
-                                                    <?php echo __('Tooltip title text shadow','secure-copy-content-protection')?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add text shadow for the tooltip title.','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__('Tooltip title text shadow','secure-copy-content-protection')?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Add text shadow for the tooltip title.','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -2197,8 +2197,8 @@ $sccp_accordion_svg_html = '
                                                 <div class="row ays_toggle_target" style="margin: 10px 0 0 0; padding-top: 10px; <?php echo ($enable_sccp_title_text_shadow) ? '' : 'display:none;' ?>">
                                                     <div class="col-sm-12 ays_divider_top" style="margin-top: 10px; padding-top: 10px;">
                                                         <label for='ays_sccp_tooltip_title_text_shadow_color'>
-                                                            <?php echo __('Color', 'secure-copy-content-protection'); ?>
-                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify text shadow color.','secure-copy-content-protection')?>">
+                                                            <?php echo esc_html__('Color', 'secure-copy-content-protection'); ?>
+                                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify text shadow color.','secure-copy-content-protection')?>">
                                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                                             </a>
                                                         </label>
@@ -2208,15 +2208,15 @@ $sccp_accordion_svg_html = '
                                                 <hr class="ays_toggle_target" style="<?php echo ($enable_sccp_title_text_shadow) ? '' : 'display:none;' ?>">
                                                 <div class="col-sm-12 ays_toggle_target" style="<?php echo ($enable_sccp_title_text_shadow) ? '' : 'display:none;' ?>">
                                                     <div>
-                                                        <span class="ays_sccp_small_hint_text"><?php echo __('X', 'secure-copy-content-protection'); ?></span>
+                                                        <span class="ays_sccp_small_hint_text"><?php echo esc_html__('X', 'secure-copy-content-protection'); ?></span>
                                                         <input type="number" class="ays-text-input ays-text-input-80-width" id='ays_sccp_text_shadow_x_offset' name='ays_sccp_text_shadow_x_offset' value="<?php echo $sccp_text_shadow_x_offset; ?>" />
                                                     </div>
                                                     <div style="margin-top: 5px;">
-                                                        <span class="ays_sccp_small_hint_text"><?php echo __('Y', 'secure-copy-content-protection'); ?></span>
+                                                        <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Y', 'secure-copy-content-protection'); ?></span>
                                                         <input type="number" class="ays-text-input ays-text-input-80-width" id='ays_sccp_text_shadow_y_offset' name='ays_sccp_text_shadow_y_offset' value="<?php echo $sccp_text_shadow_y_offset; ?>" />
                                                     </div>
                                                     <div style="margin-top: 5px;">
-                                                        <span class="ays_sccp_small_hint_text"><?php echo __('Z', 'secure-copy-content-protection'); ?></span>
+                                                        <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Z', 'secure-copy-content-protection'); ?></span>
                                                         <input type="number" class="ays-text-input ays-text-input-80-width" id='ays_sccp_text_shadow_z_offset' name='ays_sccp_text_shadow_z_offset' value="<?php echo $sccp_text_shadow_z_offset; ?>" />
                                                     </div>
                                                 </div>
@@ -2227,8 +2227,8 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_custom_class">
-                                                    <?php echo __('Custom class for tooltip container','secure-copy-content-protection')?>
-                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Custom HTML class for tooltip container. You can use your class for adding your custom styles for tooltip container.','secure-copy-content-protection')?>">
+                                                    <?php echo esc_html__('Custom class for tooltip container','secure-copy-content-protection')?>
+                                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Custom HTML class for tooltip container. You can use your class for adding your custom styles for tooltip container.','secure-copy-content-protection')?>">
                                                         <i class="ays_fa ays_fa_info_circle"></i>
                                                     </a>
                                                 </label>
@@ -2292,9 +2292,9 @@ $sccp_accordion_svg_html = '
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-3">
                                 <label for="sccp_custom_css">
-                                    <?php echo  __('Custom CSS', 'secure-copy-content-protection') ?>
+                                    <?php echo  esc_html__('Custom CSS', 'secure-copy-content-protection') ?>
                                     <a class="ays_help" data-toggle="tooltip"
-                                       title="<?php echo  __('Field for entering your own CSS code', 'secure-copy-content-protection') ?>">
+                                       title="<?php echo  esc_attr__('Field for entering your own CSS code', 'secure-copy-content-protection') ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2307,16 +2307,16 @@ $sccp_accordion_svg_html = '
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-3">
                                 <label for="reset_to_default">
-                                    <?php echo __('Reset styles', 'secure-copy-content-protection') ?>
+                                    <?php echo esc_html__('Reset styles', 'secure-copy-content-protection') ?>
                                     <a class="ays_help" data-toggle="tooltip"
-                                       title="<?php echo __('Reset tooltip styles to default values', 'secure-copy-content-protection') ?>">
+                                       title="<?php echo esc_attr__('Reset tooltip styles to default values', 'secure-copy-content-protection') ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
                             </div>
                             <div class="col-sm-9 ays_divider_left">
                                 <button type="button" class="ays-button button-secondary"
-                                        id="reset_to_default"><?php echo  __("Reset", 'secure-copy-content-protection') ?>
+                                        id="reset_to_default"><?php echo  esc_html__("Reset", 'secure-copy-content-protection') ?>
                                 </button>
                             </div>
                         </div>
@@ -2325,7 +2325,7 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Page Blocker', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Page Blocker', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
@@ -2337,7 +2337,7 @@ $sccp_accordion_svg_html = '
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>">
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">
                                                 </div>
-                                                <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", 'secure-copy-content-protection'); ?></div>
+                                                <div class="ays-sccp-new-upgrade-button"><?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?></div>
                                             </div>
                                         </a>
                                         <div class="ays-sccp-center-big-main-button-box ays-sccp-new-big-button-flex">
@@ -2346,7 +2346,7 @@ $sccp_accordion_svg_html = '
                                                     <div class="ays-sccp-center-new-big-upgrade-button">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>" class="ays-sccp-new-button-img-hide">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">  
-                                                        <?php echo __("Upgrade", 'secure-copy-content-protection'); ?>
+                                                        <?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?>
                                                     </div>
                                                 </a>
                                             </div>
@@ -2363,7 +2363,7 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'PayPal', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'PayPal', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">
@@ -2375,7 +2375,7 @@ $sccp_accordion_svg_html = '
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>">
                                                     <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">
                                                 </div>
-                                                <div class="ays-sccp-new-upgrade-button"><?php echo __("Upgrade", 'secure-copy-content-protection'); ?></div>
+                                                <div class="ays-sccp-new-upgrade-button"><?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?></div>
                                             </div>
                                         </a>
                                         <div class="ays-sccp-center-big-main-button-box ays-sccp-new-big-button-flex">
@@ -2384,7 +2384,7 @@ $sccp_accordion_svg_html = '
                                                     <div class="ays-sccp-center-new-big-upgrade-button">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_locked_24x24.svg'?>" class="ays-sccp-new-button-img-hide">
                                                         <img src="<?php echo SCCP_ADMIN_URL.'/images/icons/sccp_unlocked_24x24.svg'?>" class="ays-sccp-new-upgrade-button-hover">  
-                                                        <?php echo __("Upgrade", 'secure-copy-content-protection'); ?>
+                                                        <?php echo esc_html__("Upgrade", 'secure-copy-content-protection'); ?>
                                                     </div>
                                                 </a>
                                             </div>
@@ -2401,12 +2401,12 @@ $sccp_accordion_svg_html = '
                         <div class="ays-sccp-accordion-options-main-container" data-collapsed="false">
                             <div class="ays-sccp-accordion-container">
                                 <?php echo $sccp_accordion_svg_html; ?>
-                                <p class="ays-subtitle" style="margin-top:0;"><?php echo __( 'Block Content', 'secure-copy-content-protection' ); ?></p>
+                                <p class="ays-subtitle" style="margin-top:0;"><?php echo esc_html__( 'Block Content', 'secure-copy-content-protection' ); ?></p>
                             </div>
                             <hr class="ays-sccp-bolder-hr"/>
                             <div class="ays-sccp-accordion-options-box">                      
                                 <button type="button" class="button add_new_block_content"
-                                        style="margin-bottom: 20px"><?php echo  __('Add new', 'secure-copy-content-protection'); ?></button>
+                                        style="margin-bottom: 20px"><?php echo  esc_html__('Add new', 'secure-copy-content-protection'); ?></button>
                                 <div class="all_block_contents" data-last-id="<?php echo $bc_last_id; ?>">
                                     <?php
                                      foreach ( $block_content_data as $key => $blocont ) { 
@@ -2440,7 +2440,7 @@ $sccp_accordion_svg_html = '
                                         <div class="blockcont_one" id="blocont<?php echo $block_id; ?>">
                                             <div class="copy_protection_container form-group row ays_bc_row">
                                                 <div class="col">
-                                                    <label for="sccp_blockcont_shortcode" class="sccp_bc_label"><?php echo  __('Shortcode', 'secure-copy-content-protection'); ?></label>
+                                                    <label for="sccp_blockcont_shortcode" class="sccp_bc_label"><?php echo  esc_html__('Shortcode', 'secure-copy-content-protection'); ?></label>
                                                     <input type="text" name="sccp_blockcont_shortcode[]"
                                                            class="ays-text-input sccp_blockcont_shortcode select2_style"
                                                            value="[ays_block id='<?php echo $block_id; ?>'] Content [/ays_block]"
@@ -2450,15 +2450,15 @@ $sccp_accordion_svg_html = '
                                                 <div class="col">
                                                     <div class="input-group bc_count_limit">
                                                         <div class="bc_count">
-                                                            <label for="sccp_blockcont_pass" class="sccp_bc_label"><?php echo  __('Password', 'secure-copy-content-protection'); ?><a class="ays_help password_count" data-toggle="tooltip"
-                                                   title="<?php echo  __('Shows how many times have used a password', 'secure-copy-content-protection') ?>">
+                                                            <label for="sccp_blockcont_pass" class="sccp_bc_label"><?php echo  esc_html__('Password', 'secure-copy-content-protection'); ?><a class="ays_help password_count" data-toggle="tooltip"
+                                                   title="<?php echo  esc_attr__('Shows how many times have used a password', 'secure-copy-content-protection') ?>">
                                                                     <?php echo $block_password_count; ?>
                                                                 </a></label>
                                                             <input type="hidden" name="bc_pass_count_<?php echo $block_id; ?>" value="<?php echo $block_password_count; ?>">        
                                                         </div>
                                                         <div class="bc_limit">
-                                                            <label for="sccp_blockcont_limit_<?php echo $block_id; ?>" class="sccp_bc_limit"><?php echo  __('Limit', 'secure-copy-content-protection'); ?><a class="ays_help" data-toggle="tooltip"
-                                                           title="<?php echo  __('Choose the maximum amount of the usage of the password', 'secure-copy-content-protection') ?>">
+                                                            <label for="sccp_blockcont_limit_<?php echo $block_id; ?>" class="sccp_bc_limit"><?php echo  esc_html__('Limit', 'secure-copy-content-protection'); ?><a class="ays_help" data-toggle="tooltip"
+                                                           title="<?php echo  esc_attr__('Choose the maximum amount of the usage of the password', 'secure-copy-content-protection') ?>">
                                                             <i class="ays_fa ays_fa_info_circle"></i>
                                                         </a></label>
                                                             <input type="number" id="sccp_blockcont_limit_<?php echo $block_id; ?>" name="bc_pass_limit_<?php echo $block_id; ?>" value="<?php echo $block_password_limit; ?>">
@@ -2476,11 +2476,11 @@ $sccp_accordion_svg_html = '
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <p style="margin-top:60px;"><?php echo  __('OR', 'secure-copy-content-protection') ?></p>
+                                                    <p style="margin-top:60px;"><?php echo  esc_html__('OR', 'secure-copy-content-protection') ?></p>
                                                 </div>
                                                 <div class="col">
-                                                    <label for="sccp_blockcont_roles" class="sccp_bc_label"><?php echo  __('Except', 'secure-copy-content-protection'); ?><a class="ays_help user_role_count" data-toggle="tooltip"
-                                           title="<?php echo  __('Shows how many times have used a user role', 'secure-copy-content-protection') ?>">
+                                                    <label for="sccp_blockcont_roles" class="sccp_bc_label"><?php echo  esc_html__('Except', 'secure-copy-content-protection'); ?><a class="ays_help user_role_count" data-toggle="tooltip"
+                                           title="<?php echo  esc_attr__('Shows how many times have used a user role', 'secure-copy-content-protection') ?>">
                                                             <?php echo $block_user_role_count; ?>
                                                         </a></label>
                                                         <input type="hidden" name="bc_user_role_count_<?php echo $block_id; ?>" value="<?php echo $block_user_role_count; ?>">
@@ -2515,7 +2515,7 @@ $sccp_accordion_svg_html = '
                                                     </div>
                                                 </div>
                                                 <div class="col">
-                                                    <label for="sccp_blockcont_schedule" style="margin-left: 35px;"><?php echo  __('Schedule', 'secure-copy-content-protection'); ?><a class="ays_help schedule_notice" style="background: <?php echo $bc_schedule_notice_color; ?>" data-toggle="tooltip" title="<?php echo  __('Block content status', 'secure-copy-content-protection') ?>">
+                                                    <label for="sccp_blockcont_schedule" style="margin-left: 35px;"><?php echo  esc_html__('Schedule', 'secure-copy-content-protection'); ?><a class="ays_help schedule_notice" style="background: <?php echo $bc_schedule_notice_color; ?>" data-toggle="tooltip" title="<?php echo  esc_attr__('Block content status', 'secure-copy-content-protection') ?>">
                                                             <?php echo $bc_schedule_notice; ?>
                                                         </a></label>
                                                     <div class="input-group">
@@ -2550,7 +2550,7 @@ $sccp_accordion_svg_html = '
                                     <input type="hidden" class="deleted_ids" value="" name="deleted_ids">
                                 </div>
                                 <button type="button" class="button add_new_block_content"
-                                        style="margin-top: 20px"><?php echo  __('Add new', 'secure-copy-content-protection'); ?></button>          
+                                        style="margin-top: 20px"><?php echo  esc_html__('Add new', 'secure-copy-content-protection'); ?></button>          
                             </div>
                         </div>
                     </div>
@@ -2565,7 +2565,7 @@ $sccp_accordion_svg_html = '
                                 <fieldset class="ays_sccp_settings_integration_container">
                                     <legend>
                                         <img class="ays_integration_logo" src="<?php echo SCCP_ADMIN_URL; ?>/images/integrations/mailchimp_logo.png" alt="">
-                                        <h5><?php echo __('MailChimp Settings','secure-copy-content-protection')?></h5>
+                                        <h5><?php echo esc_html__('MailChimp Settings','secure-copy-content-protection')?></h5>
                                     </legend>
                                     <?php
                                         if(count($mailchimp) > 0):
@@ -2589,7 +2589,7 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-4">
                                                 <label for="ays_enable_mailchimp">
-                                                    <?php echo __('Enable MailChimp','secure-copy-content-protection')?>
+                                                    <?php echo esc_html__('Enable MailChimp','secure-copy-content-protection')?>
                                                 </label>
                                             </div>
                                             <div class="col-sm-1">
@@ -2609,7 +2609,7 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-4">
                                                 <label for="ays_mailchimp_list">
-                                                    <?php echo __('MailChimp list','secure-copy-content-protection')?>
+                                                    <?php echo esc_html__('MailChimp list','secure-copy-content-protection')?>
                                                 </label>
                                             </div>
                                             <div class="col-sm-8">
@@ -2635,7 +2635,7 @@ $sccp_accordion_svg_html = '
                                         <div class="form-group row">
                                             <div class="col-sm-4">
                                                 <label for="ays_sccp_enable_double_opt_in">
-                                                    <?php echo __('Enable double opt-in','secure-copy-content-protection')?>
+                                                    <?php echo esc_html__('Enable double opt-in','secure-copy-content-protection')?>
                                                 </label>
                                             </div>
                                             <div class="col-sm-8">
@@ -2649,7 +2649,7 @@ $sccp_accordion_svg_html = '
                                                                 echo $sccp_mailchimp_optin;
                                                             }
                                                     ?>/>
-                                                <span class="ays_option_description"><?php echo __( 'Send contacts an opt-in confirmation email when their email address added to the list.', 'secure-copy-content-protection' ); ?></span>
+                                                <span class="ays_option_description"><?php echo esc_html__( 'Send contacts an opt-in confirmation email when their email address added to the list.', 'secure-copy-content-protection' ); ?></span>
                                             </div>
                                         </div>
                                         <?php
@@ -2697,7 +2697,7 @@ $sccp_accordion_svg_html = '
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title"
-                            id="add_ip_modalLabel"><?php echo  __("Blacklist modal", 'secure-copy-content-protection'); ?></h5>
+                            id="add_ip_modalLabel"><?php echo  esc_html__("Blacklist modal", 'secure-copy-content-protection'); ?></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -2705,7 +2705,7 @@ $sccp_accordion_svg_html = '
                     <div class="modal-body">
                         <div class="copy_protection_container form-group row">
                             <div class="col-sm-12">
-                                <label><?php echo  __("Add IP parts", 'secure-copy-content-protection'); ?></label>
+                                <label><?php echo  esc_html__("Add IP parts", 'secure-copy-content-protection'); ?></label>
                             </div>
                             <div class="col-sm-12">
                                 <table style="width: 100%">
@@ -2721,9 +2721,9 @@ $sccp_accordion_svg_html = '
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="button button-secondary"
-                                data-dismiss="modal"><?php echo  __("Close", 'secure-copy-content-protection'); ?></button>
+                                data-dismiss="modal"><?php echo  esc_html__("Close", 'secure-copy-content-protection'); ?></button>
                         <button type="button"
-                                class="button button-primary"><?php echo  __("Add IP", 'secure-copy-content-protection'); ?></button>
+                                class="button button-primary"><?php echo  esc_html__("Add IP", 'secure-copy-content-protection'); ?></button>
                     </div>
                 </div>
             </div>
