@@ -214,6 +214,22 @@ $sccp_accordion_svg_html = '
     </svg>
 </div>';
 
+$if_dismiss_cookie_exists = (isset( $_COOKIE['ays_sccp_fox_lms_pages_popup_dismiss_for_three_click'] ) && $_COOKIE['ays_sccp_fox_lms_pages_popup_dismiss_for_three_click'] >= 3) ? true : false;
+
+$if_fox_lms_plugin_exists = ( in_array('fox-lms/fox-lms.php', apply_filters('active_plugins', get_option('active_plugins'))) ) ? true : false;
+
+$if_fox_lms_plugin_installed_flag = get_option('ays_sccp_and_fox_lms_plugin_flag');
+
+if ( !$if_fox_lms_plugin_installed_flag ) {
+    update_option('ays_sccp_and_fox_lms_plugin_flag', 0);
+}
+
+if ( $if_fox_lms_plugin_exists ) {
+    update_option('ays_sccp_and_fox_lms_plugin_flag', 1);
+}
+
+$if_fox_lms_plugin_installed_flag = get_option('ays_sccp_and_fox_lms_plugin_flag');
+
 ?>
 <div class="wrap">
     <div class="ays-sccp-heading-box">
@@ -2688,6 +2704,46 @@ $sccp_accordion_svg_html = '
                     echo $loader_iamge;
                     ?>
                     </div>
+
+                    <?php if( !$if_dismiss_cookie_exists && !$if_fox_lms_plugin_exists && !$if_fox_lms_plugin_installed_flag ): ?>
+                        <!-- SCCP and Fox LMS integration main page 2025 | Start -->
+                        <div id="ays-sccp-fox-lms-all-pages-popup" class="bounceInRight_2022" style="display: none;">
+                            <div id="ays-sccp-fox-lms-all-pages-popup-main">
+                                <div class="ays-sccp-fox-lms-all-pages-popup-layer">
+                                    <div id="ays-sccp-fox-lms-all-pages-popup-close-main">
+                                        <div id="ays-sccp-fox-lms-all-pages-popup-close"><div>&times;</div></div>
+                                    </div>
+                                    <div id="ays-sccp-fox-lms-all-pages-popup-heading-title">
+                                        <div class="ays-sccp-fox-lms-all-pages-popup-heading-center">
+                                            <a href="https://bit.ly/43MyeyB" target="_blank">
+                                                <?php echo esc_html__("WordPress LMS Plugin", 'secure-copy-content-protection'); ?>
+                                            </a>    
+                                        </div>
+                                    </div>
+                                    <div id="ays-sccp-fox-lms-all-pages-popup-heading">
+                                        <div class="ays-sccp-fox-lms-all-pages-popup-heading-center">
+                                            <a href="https://bit.ly/43MyeyB" target="_blank">
+                                                <img loading="lazy" src="<?php echo SCCP_ADMIN_URL; ?>/images/ays-sccp-and-lms-popup-logo.svg">
+                                                <img loading="lazy" class="ays-sccp-fox-lms-all-pages-icon" src="<?php echo SCCP_ADMIN_URL; ?>/images/ays-sccp-and-lms-popup-icon.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ays-sccp-fox-lms-all-pages-popup-footer">
+                                        <div id="ays-sccp-fox-lms-all-pages-popup-button" class="ays-sccp-fox-lms-all-pages-popup-st">
+                                            <div class="ays-sccp-fox-lms-all-pages-popup-btn">
+                                                <a href="https://bit.ly/43MyeyB" id="ays-pages-submit-popup" class="ays-sccp-fox-lms-all-pages-popup-fields ays-sccp-fox-lms-all-pages-popup-fields-submit" target="_blank"><?php echo esc_html__("Download FREE version", 'secure-copy-content-protection'); ?></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="ays-sccp-fox-lms-all-pages-popup-content">
+                                        <div class="ays-sccp-fox-lms-all-pages-popup-content-description"><?php echo esc_html__("Get Learning Management System and online course solution in WordPress now.", 'secure-copy-content-protection'); ?></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- SCCP and Fox LMS integration main page 2025 | End -->
+                <?php endif; ?>
+
                 </form>
             </div>
         </div>
