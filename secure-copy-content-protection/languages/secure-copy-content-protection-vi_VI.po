@@ -1,0 +1,2796 @@
+# Translation of Plugins - Secure Copy Content Protection and Content Locking - Stable (latest release) in Vietnamese
+# This file is distributed under the same license as the Plugins - Secure Copy Content Protection and Content Locking - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-29 08:07:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: vi_VN\n"
+"Project-Id-Version: Plugins - Secure Copy Content Protection and Content Locking - Stable (latest release)\n"
+
+#: secure-copy-content-protection.php:127
+msgid "summer2025"
+msgstr ""
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2739
+msgid "Get Learning Management System and online course solution in WordPress now."
+msgstr ""
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2734
+msgid "Download FREE version"
+msgstr ""
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2719
+msgid "WordPress LMS Plugin"
+msgstr ""
+
+#: secure-copy-content-protection.php:165
+msgid "Ask a question us"
+msgstr ""
+
+#: secure-copy-content-protection.php:129
+msgid "Extra 20% Coupon"
+msgstr ""
+
+#: secure-copy-content-protection.php:127
+msgid "Click for copy"
+msgstr ""
+
+#: admin/class-secure-copy-content-protection-admin.php:171
+msgid "Copied!"
+msgstr ""
+
+#: secure-copy-content-protection.php:137
+#: secure-copy-content-protection.php:143
+#: secure-copy-content-protection.php:153
+msgid "Contact us"
+msgstr ""
+
+#: secure-copy-content-protection.php:136
+#: secure-copy-content-protection.php:152
+msgid "Make a Suggestion"
+msgstr ""
+
+#: secure-copy-content-protection.php:133
+#: secure-copy-content-protection.php:141
+#: secure-copy-content-protection.php:149
+msgid "Pricing"
+msgstr ""
+
+#: admin/class-secure-copy-content-protection-admin.php:1413
+msgid "With the FoxLMS plugin, you can create, sell, and organize courses, lessons, and quizzes, transforming your website into a dynamic e-learning platform."
+msgstr ""
+
+#: admin/class-secure-copy-content-protection-admin.php:1412
+msgid "Build and manage online courses directly on your WordPress site."
+msgstr ""
+
+#: admin/class-secure-copy-content-protection-admin.php:1411
+msgid "Fox LMS"
+msgstr ""
+
+#: includes/class-secure-copy-content-protection-data.php:311
+msgid "30 Day Money Back Guarantee"
+msgstr ""
+
+#: includes/class-secure-copy-content-protection-data.php:305
+msgid "<span><a href='"
+msgstr ""
+
+#: includes/class-secure-copy-content-protection-data.php:238
+msgid "Christmas Sale"
+msgstr "Giảm giá giáng sinh"
+
+#. translators: 1: HTML opening <a> tag 2: HTML closing </a> tag
+#: admin/partials/secure-copy-content-protection-admin-display.php:2596
+#: admin/partials/secure-copy-content-protection-admin-display.php:2681
+msgid "For enabling this option, please go to %1$s this %2$s page and fill all options."
+msgstr "Để kích hoạt tuỳ chọn này, vui lòng truy cập trang %2$s %1$s và điền tất cả tuỳ chọn."
+
+#: includes/class-secure-copy-content-protection-data.php:247
+msgid "20% Extra OFF"
+msgstr "Giảm thêm 20%"
+
+#: includes/class-secure-copy-content-protection-data.php:172
+msgid "School Bundle"
+msgstr "Gói Học Tập"
+
+#: includes/class-secure-copy-content-protection-data.php:273
+msgid "20% Extra Discount Coupon"
+msgstr "Phiếu giảm giá thêm 20%"
+
+#: includes/class-secure-copy-content-protection-data.php:149
+msgid "50% OFF"
+msgstr "Giảm 50%"
+
+#: includes/class-secure-copy-content-protection-data.php:142
+msgid "<span><a href='https://ays-pro.com/school-bundle?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=black-friday-mega-bundle-sale-banner' class='ays-sccp-black-friday-bundle-title-link' target='_blank'>Black Friday Sale</a></span>"
+msgstr "<span><a href='https://ays-pro.com/school-bundle?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=black-friday-mega-bundle-sale-banner' class='ays-sccp-black-friday-bundle-title-link' target='_blank'>Giảm giá Black Friday</a></span>"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:811
+#: admin/partials/settings/secure-copy-content-protection-settings.php:838
+#: admin/partials/settings/secure-copy-content-protection-settings.php:924
+#: admin/partials/settings/secure-copy-content-protection-settings.php:951
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1000
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1052
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1080
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1122
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1164
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1271
+msgid "Use a different setting for Mobile"
+msgstr "Sử dụng cài đặt khác cho Mobile"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:806
+#: admin/partials/settings/secure-copy-content-protection-settings.php:833
+#: admin/partials/settings/secure-copy-content-protection-settings.php:901
+#: admin/partials/settings/secure-copy-content-protection-settings.php:946
+#: admin/partials/settings/secure-copy-content-protection-settings.php:988
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1035
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1075
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1110
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1152
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1259
+msgid "Mobile"
+msgstr "Di động"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:801
+#: admin/partials/settings/secure-copy-content-protection-settings.php:828
+#: admin/partials/settings/secure-copy-content-protection-settings.php:880
+#: admin/partials/settings/secure-copy-content-protection-settings.php:941
+#: admin/partials/settings/secure-copy-content-protection-settings.php:976
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1018
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1070
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1098
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1140
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1247
+msgid "PC"
+msgstr "PC"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:768
+msgid "Define the width for mobile devices in percentage. Note: This option works for the screens with less than 768 pixels width."
+msgstr "Định nghĩa chiều rộng cho thiết bị di động theo phần trăm. Lưu ý: Tùy chọn này hoạt động trên màn hình có chiều rộng nhỏ hơn 768 pixel."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:767
+msgid "On Mobile"
+msgstr "Trên di động"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:746
+msgid "Define the width for desktop devices. If you put 0 or leave it blank, the width will be 100%. It accepts only numerical values and you can choose whether to define the value by percentage or in pixels."
+msgstr "Định nghĩa chiều rộng cho thiết bị máy tính để bàn. Nếu bạn nhập 0 hoặc để trống, chiều rộng sẽ là 100%. Chỉ chấp nhận giá trị số và bạn có thể chọn định nghĩa giá trị bằng phần trăm hoặc pixel."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1943
+msgid "Define the space between the letters of the tooltip text in pixels. Note: The default value for this option is 0."
+msgstr "Định nghĩa khoảng cách giữa các chữ cái của văn bản tooltip bằng pixel. Lưu ý: Giá trị mặc định cho tùy chọn này là 0."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1941
+msgid "Tooltip letter spacing"
+msgstr "Khoảng cách chữ cái tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:114
+msgid "Post Author First Name"
+msgstr "Tên tác giả bài viết"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:525
+#: admin/partials/settings/secure-copy-content-protection-settings.php:534
+msgid "The Last name of the author of the post."
+msgstr "Họ của tác giả bài viết."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:115
+msgid "Post Author Last Name"
+msgstr "Họ tác giả bài viết"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:552
+msgid "The Post title of the current post."
+msgstr "Tiêu đề bài viết hiện tại."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:117
+msgid "Post Title"
+msgstr "Tiêu đề bài viết"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:516
+msgid "The Display name of the author of the post."
+msgstr "Tên hiển thị của tác giả bài viết."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:113
+msgid "Post Author Display Name"
+msgstr "Tên hiển thị tác giả bài viết"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:543
+msgid "The ID of the current post."
+msgstr "ID của bài viết hiện tại."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:116
+msgid "Post ID"
+msgstr "ID bài viết"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1591
+msgid "Subscribe to view options"
+msgstr "Đăng ký để xem tùy chọn"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1546
+msgid "Block content options"
+msgstr "Tùy chọn nội dung khối"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:519
+msgid "Primary"
+msgstr "Chính"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:507
+msgid "The Email of the author of the post."
+msgstr "Email của tác giả bài viết."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:112
+msgid "Post Author Email"
+msgstr "Email tác giả bài viết"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:579
+msgid "The title of the website."
+msgstr "Tiêu đề của trang web."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:121
+msgid "Site Title"
+msgstr "Tiêu đề trang web"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:498
+msgid "Shows the post author's nickname that was filled in their WordPress profile."
+msgstr "Hiển thị biệt danh của tác giả bài viết được điền trong hồ sơ WordPress của họ."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:111
+msgid "Post Author Nickname"
+msgstr "Biệt danh tác giả bài viết"
+
+#: admin/class-secure-copy-content-protection-admin.php:1660
+msgid "WordPress.org"
+msgstr "WordPress.org"
+
+#: admin/class-secure-copy-content-protection-admin.php:1594
+msgid "Install Plugin"
+msgstr "Cài đặt Plugin"
+
+#: admin/class-secure-copy-content-protection-admin.php:1591
+msgid "Not Installed"
+msgstr "Chưa cài đặt"
+
+#: admin/class-secure-copy-content-protection-admin.php:1580
+msgid "Activate"
+msgstr "Kích hoạt"
+
+#: admin/class-secure-copy-content-protection-admin.php:1577
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#: admin/class-secure-copy-content-protection-admin.php:1569
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#: admin/class-secure-copy-content-protection-admin.php:1485
+msgid "Create contact forms, payment forms, surveys, and many more custom forms. Build forms easily with us."
+msgstr "Tạo các biểu mẫu liên hệ, biểu mẫu thanh toán, khảo sát và nhiều biểu mẫu tùy chỉnh khác. Xây dựng biểu mẫu dễ dàng với chúng tôi."
+
+#: admin/class-secure-copy-content-protection-admin.php:1484
+msgid "Choose the best WordPress form builder plugin. "
+msgstr "Chọn plugin tạo biểu mẫu WordPress tốt nhất. "
+
+#: admin/class-secure-copy-content-protection-admin.php:1422
+msgid "You to add images to your quiz, order unlimited questions. Also you can style your quiz to satisfy your visitors."
+msgstr "Bạn có thể thêm hình ảnh vào bài kiểm tra của mình, đặt câu hỏi không giới hạn. Bạn cũng có thể tùy chỉnh kiểu dáng bài kiểm tra để làm hài lòng khách truy cập của mình."
+
+#: admin/class-secure-copy-content-protection-admin.php:1421
+msgid "With our Quiz Maker plugin it’s easy to make a quiz in a short time."
+msgstr "Với plugin Quiz Maker của chúng tôi, việc tạo bài kiểm tra trong thời gian ngắn rất dễ dàng."
+
+#: admin/class-secure-copy-content-protection-admin.php:1356
+msgid "Addon installed and activated."
+msgstr "Phần mở rộng đã được cài đặt và kích hoạt."
+
+#: admin/class-secure-copy-content-protection-admin.php:1356
+msgid "Plugin installed and activated."
+msgstr "Plugin đã được cài đặt và kích hoạt."
+
+#: admin/class-secure-copy-content-protection-admin.php:1344
+msgid "Plugin installed."
+msgstr "Plugin đã được cài đặt."
+
+#: admin/class-secure-copy-content-protection-admin.php:1272
+msgid "Could not install the plugin. Please download and install it manually."
+msgstr "Không thể cài đặt plugin. Vui lòng tải xuống và cài đặt thủ công."
+
+#: admin/class-secure-copy-content-protection-admin.php:1263
+msgid "There was an error while performing your request."
+msgstr "Đã xảy ra lỗi trong khi thực hiện yêu cầu của bạn."
+
+#: admin/class-secure-copy-content-protection-admin.php:1249
+msgid "Could not activate the addon. Please activate it on the Plugins page."
+msgstr "Không thể kích hoạt phần mở rộng. Vui lòng kích hoạt nó trên trang Plugins."
+
+#: admin/class-secure-copy-content-protection-admin.php:1246
+msgid "Could not activate the plugin. Please activate it on the Plugins page."
+msgstr "Không thể kích hoạt plugin. Vui lòng kích hoạt nó trên trang Plugins."
+
+#: admin/class-secure-copy-content-protection-admin.php:1240
+msgid "Addon activated."
+msgstr "Phần mở rộng đã được kích hoạt."
+
+#: admin/class-secure-copy-content-protection-admin.php:1238
+msgid "Plugin activated."
+msgstr "Plugin đã được kích hoạt."
+
+#: admin/class-secure-copy-content-protection-admin.php:1222
+msgid "Plugin activation is disabled for you on this site."
+msgstr "Việc kích hoạt plugin bị vô hiệu hóa đối với bạn trên trang web này."
+
+#: admin/class-secure-copy-content-protection-admin.php:217
+msgid "Great!"
+msgstr "Tuyệt vời!"
+
+#: admin/class-secure-copy-content-protection-admin.php:216
+msgid "For more detailed configuration visit"
+msgstr "Để cấu hình chi tiết hơn, hãy truy cập"
+
+#: admin/class-secure-copy-content-protection-admin.php:215
+msgid "Great job"
+msgstr "Tuyệt vời!"
+
+#: admin/class-secure-copy-content-protection-admin.php:213
+msgid "Can't load resource."
+msgstr "Không thể tải tài nguyên."
+
+#: admin/class-secure-copy-content-protection-admin.php:211
+#: admin/class-secure-copy-content-protection-admin.php:1572
+msgid "Activated"
+msgstr "Đã kích hoạt"
+
+#: admin/class-secure-copy-content-protection-admin.php:210
+msgid "Searching..."
+msgstr "Đang tìm kiếm..."
+
+#: admin/class-secure-copy-content-protection-admin.php:209
+msgid "Please enter 1 or more characters"
+msgstr "Vui lòng nhập 1 ký tự trở lên"
+
+#: admin/class-secure-copy-content-protection-admin.php:208
+msgid "Select user"
+msgstr "Chọn người dùng"
+
+#: admin/class-secure-copy-content-protection-admin.php:207
+msgid "Invalid Email address"
+msgstr "Địa chỉ Email không hợp lệ"
+
+#: admin/class-secure-copy-content-protection-admin.php:206
+msgid "Email field is empty"
+msgstr "Trường Email trống"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:570
+msgid "Prints a title to the web page on which the tooltip is running."
+msgstr "In tiêu đề vào trang web mà tooltip đang chạy."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:120
+msgid "Current Page Title"
+msgstr "Tiêu đề trang hiện tại"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:561
+msgid "It will show the current date."
+msgstr "Nó sẽ hiển thị ngày hiện tại."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1243
+msgid "Disable Print Screen (PC only)"
+msgstr "Vô hiệu hóa Print Screen (chỉ dành cho PC)"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:119
+msgid "Current Date"
+msgstr "Ngày hiện tại"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:627
+msgid "By enabling the option, the right-click for the links will be not allowed in the copy protection enabled areas on the website."
+msgstr "Bằng cách bật tùy chọn này, chuột phải cho các liên kết sẽ không được phép trong các khu vực được bật bảo vệ bản quyền trên trang web."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:625
+msgid "Disable right click for links"
+msgstr "Vô hiệu hóa chuột phải cho liên kết"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:489
+msgid "Shows the admin's email that was filled in their WordPress profile."
+msgstr "Hiển thị email của quản trị viên đã được điền trong hồ sơ WordPress của họ."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:109
+#: admin/partials/secure-copy-content-protection-admin-display.php:110
+msgid "Admin Email"
+msgstr "Email Quản trị viên"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:118
+msgid "User's IP address"
+msgstr "Địa chỉ IP của người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:108
+msgid "User's ID"
+msgstr "ID người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:107
+msgid "User's Wordpress Roles"
+msgstr "Vai trò WordPress của người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:106
+msgid "User's Nickname"
+msgstr "Biệt danh của người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:105
+msgid "User's Display Name"
+msgstr "Tên hiển thị của người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:104
+msgid "User's WordPress profile email"
+msgstr "Email hồ sơ WordPress của người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:103
+msgid "User's Last Name"
+msgstr "Họ của người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:102
+msgid "User's First Name"
+msgstr "Tên của người dùng"
+
+#: admin/class-secure-copy-content-protection-admin.php:1119
+msgid "Insert your preferred message variable into the editor by clicking."
+msgstr "Chèn biến tin nhắn ưa thích của bạn vào trình chỉnh sửa bằng cách nhấp chuột."
+
+#: admin/class-secure-copy-content-protection-admin.php:1118
+msgid "Message Variables"
+msgstr "Các biến tin nhắn"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1975
+msgid "Block content reset styles"
+msgstr "Đặt lại kiểu nội dung khối"
+
+#: admin/class-secure-copy-content-protection-admin.php:858
+msgid "Suggest a Feature"
+msgstr "Đề xuất tính năng"
+
+#: admin/class-secure-copy-content-protection-admin.php:856
+msgid "Docs"
+msgstr "Xem hướng dẫn"
+
+#: admin/class-secure-copy-content-protection-admin.php:854
+msgid "Support"
+msgstr "Hỗ trợ"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1515
+msgid "Subscribe reset styles"
+msgstr "Đặt lại kiểu đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1895
+msgid "Block content buttons border width in pixels. It accepts only numeric values."
+msgstr "Độ rộng viền của nút nội dung khối tính bằng pixel. Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1876
+msgid "Block content buttons border-radius in pixels. It accepts only numeric values."
+msgstr "Bán kính viền của nút nội dung khối tính bằng pixel. Chỉ chấp nhận giá trị số."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1752
+msgid "Notification text display duration in milliseconds. 1000ms is default value."
+msgstr "Thời gian hiển thị văn bản thông báo tính bằng mili giây. Giá trị mặc định là 1000ms."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1750
+msgid "Notification text display duration"
+msgstr "Thời gian hiển thị văn bản thông báo"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1798
+msgid "Specify button background color."
+msgstr "Chỉ định màu nền nút."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1797
+msgid "Button background color"
+msgstr "Màu nền nút"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1785
+msgid "Change Block content button  styles."
+msgstr "Thay đổi kiểu nút nội dung khối."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1784
+msgid "Block content button style"
+msgstr "Kiểu nút nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1760
+msgid "Align the text of Block content box to the left, center, or right."
+msgstr "Căn chỉnh văn bản của hộp nội dung khối sang trái, giữa hoặc phải."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1759
+msgid "Block content box text alignment"
+msgstr "Căn chỉnh văn bản hộp nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1718
+msgid "Block content container input width in pixels. It accepts only numeric values."
+msgstr "Chiều rộng đầu vào của vùng chứa nội dung khối tính bằng pixel. Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1717
+msgid "Block content container input width"
+msgstr "Nội dung khối chứa chiều rộng đầu vào"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1737
+msgid "Add icon image for Block content Box. Advisable size for image is 50x50."
+msgstr "Thêm ảnh icon cho ô Nội dung Khối. Kích thước ảnh khuyên dùng là 50x50."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1736
+msgid "Block content Icon"
+msgstr "Icon nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1699
+msgid "Block content container border width in pixels. It accepts only numeric values."
+msgstr "Độ rộng viền của container nội dung khối tính bằng pixel. Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1698
+msgid "Block content container border width"
+msgstr "Độ rộng viền của container nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1684
+msgid "Block content container border color"
+msgstr "Màu viền của container nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1660
+msgid "Block content container border style"
+msgstr "Kiểu viền của container nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1647
+msgid "Set the default value to the password placeholder text of the Block content Box. It will apply to all Block contents Boxes within the plugin on the front-end."
+msgstr "Đặt giá trị mặc định cho văn bản placeholder mật khẩu của ô Nội dung Khối. Nó sẽ áp dụng cho tất cả các ô Nội dung Khối trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1646
+msgid "Block content password placeholder text"
+msgstr "Văn bản placeholder mật khẩu của nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1633
+msgid "Set the default value to the button text of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end."
+msgstr "Đặt giá trị mặc định cho văn bản nút của ô Nội dung Khối. Nó sẽ áp dụng cho tất cả các ô Nội dung Khối trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1632
+msgid "Block content button text"
+msgstr "Văn bản nút của nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1608
+msgid "The position of background image for Block content Box"
+msgstr "Vị trí hình ảnh nền cho ô Nội dung Khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1607
+msgid "Block content box background image position"
+msgstr "Vị trí hình ảnh nền của ô nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1584
+msgid "Add background image for Block content Box."
+msgstr "Thêm hình ảnh nền cho ô Nội dung Khối."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1583
+msgid "Block content box background image"
+msgstr "Hình ảnh nền của ô nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1571
+msgid "Set the default background color of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end."
+msgstr "Đặt màu nền mặc định cho ô Nội dung Khối. Nó sẽ áp dụng cho tất cả các ô Nội dung Khối trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1569
+msgid "Block content box background color"
+msgstr "Màu nền của ô nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1558
+msgid "Set the default text color of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end."
+msgstr "Đặt màu văn bản mặc định cho ô Nội dung Khối. Nó sẽ áp dụng cho tất cả các ô Nội dung Khối trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1556
+msgid "Block content text color"
+msgstr "Màu văn bản của nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1536
+msgid "Set the default value for the width of the block content field in pixels or as a percentage. This will apply to all block content boxes in the frontend plugin."
+msgstr "Đặt giá trị mặc định cho chiều rộng của trường nội dung khối tính bằng pixel hoặc phần trăm. Điều này sẽ áp dụng cho tất cả các hộp nội dung khối trong plugin giao diện."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1535
+msgid "Block content box width"
+msgstr "Chiều rộng hộp nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:307
+msgid "Block content to view settings"
+msgstr "Cài đặt xem nội dung khối"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:480
+msgid "The ID of the current user."
+msgstr "ID của người dùng hiện tại."
+
+#: includes/class-secure-copy-content-protection-data.php:751
+msgid ""
+"Hurry up! \n"
+"                                                <a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp' target='_blank' style='color:#ffc700;'>\n"
+"                                                    Check it out!\n"
+"                                                </a>"
+msgstr ""
+"Nhanh lên! \n"
+"                                                <a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp' target='_blank' style='color:#ffc700;'>\n"
+"                                                    Xem ngay!\n"
+"                                                </a>"
+
+#: includes/class-secure-copy-content-protection-data.php:738
+msgid ""
+"Limited Time \n"
+"                            <span class='ays-sccp-dicount-wrap-color-helloween' style='color:#b2ff00;'>20%</span> \n"
+"                            <span>\n"
+"                                SALE on\n"
+"                            </span> \n"
+"                            <br>\n"
+"                            <span style='' class='ays-sccp-helloween-bundle'>\n"
+"                                <a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp' target='_blank' class='ays-sccp-dicount-wrap-color-helloween ays-sccp-dicount-wrap-text-decoration-helloween' style='display:block; color:#b2ff00;margin-right:6px;'>\n"
+"                                    Secure Copy Content Protection\n"
+"                                </a>\n"
+"                            </span>"
+msgstr ""
+"Thời gian có hạn\n"
+"                            <span class='ays-sccp-dicount-wrap-color-helloween' style='color:#b2ff00;'>20%</span> \n"
+"                            <span>\n"
+"                                GIẢM GIÁ trên\n"
+"                            </span> \n"
+"                            <br>\n"
+"                            <span style='' class='ays-sccp-helloween-bundle'>\n"
+"                                <a href='https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=sale-banner-sccp' target='_blank' class='ays-sccp-dicount-wrap-color-helloween ays-sccp-dicount-wrap-text-decoration-helloween' style='display:block; color:#b2ff00;margin-right:6px;'>\n"
+"                                    Bảo vệ nội dung sao chép an toàn\n"
+"                                </a>\n"
+"                            </span>"
+
+#: admin/class-secure-copy-content-protection-admin.php:173
+#: admin/class-secure-copy-content-protection-admin.php:212
+msgid "Error"
+msgstr "Lỗi"
+
+#: admin/class-secure-copy-content-protection-admin.php:172
+#: admin/class-secure-copy-content-protection-admin.php:214
+msgid "Maybe something went wrong."
+msgstr "Có thể có lỗi xảy ra."
+
+#: includes/class-secure-copy-content-protection-data.php:180
+#: includes/class-secure-copy-content-protection-data.php:280
+#: includes/class-secure-copy-content-protection-data.php:369
+#: includes/class-secure-copy-content-protection-data.php:456
+#: includes/class-secure-copy-content-protection-data.php:543
+#: secure-copy-content-protection.php:123
+msgid "One-time payment"
+msgstr "Thanh toán một lần"
+
+#: includes/class-secure-copy-content-protection-data.php:115
+#: includes/class-secure-copy-content-protection-data.php:209
+#: includes/class-secure-copy-content-protection-data.php:431
+msgid "Offer ends in:"
+msgstr "Ưu đãi kết thúc trong:"
+
+#: includes/class-secure-copy-content-protection-data.php:490
+msgid "30 Days Money Back Guarantee"
+msgstr "Bảo đảm hoàn tiền 30 ngày"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:290
+msgid ""
+"We're sure that you'll love our Secure Copy Content Protection plugin, but, if for some reason, you're not\n"
+"                        satisfied in the first 30 days of using our product, there is a money-back guarantee and\n"
+"                        we'll issue a refund."
+msgstr "Chúng tôi chắc chắn rằng bạn sẽ yêu thích plugin Bảo vệ nội dung sao chép an toàn của chúng tôi, nhưng nếu vì lý do nào đó, bạn không hài lòng trong 30 ngày đầu tiên sử dụng sản phẩm của chúng tôi, có bảo đảm hoàn tiền và chúng tôi sẽ hoàn lại tiền."
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:288
+msgid "30 day money back guarantee !!!"
+msgstr "Bảo đảm hoàn tiền 30 ngày!!!"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:52
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:62
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:269
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:275
+msgid "(One-time payment)"
+msgstr "(Thanh toán một lần)"
+
+#: admin/class-secure-copy-content-protection-admin.php:718
+msgid "Upgrade 30% Sale"
+msgstr "Giảm giá 30% nâng cấp"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1132
+msgid "Subscribe container input width in pixels. It accepts only numeric values."
+msgstr "Chiều rộng ô nhập liệu vùng đăng ký tính bằng pixel. Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1131
+msgid "Subscribe container input width"
+msgstr "Chiều rộng ô nhập liệu vùng đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:872
+msgid "The position of background image for Subscribe Box"
+msgstr "Vị trí hình ảnh nền cho hộp đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:871
+msgid "Subscribe box background image position"
+msgstr "Vị trí hình ảnh nền hộp đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:848
+msgid "Add background image for Subscribe Box."
+msgstr "Thêm hình ảnh nền cho hộp đăng ký."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:847
+msgid "Subscribe box background image"
+msgstr "Hình ảnh nền hộp đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1492
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1952
+msgid "Padding of buttons in pixels. It accepts only numeric values."
+msgstr "Padding của nút tính bằng pixel. Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1491
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1951
+msgid "Button padding"
+msgstr "Padding nút"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1434
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1894
+msgid "Button border width"
+msgstr "Độ rộng viền nút"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1415
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1875
+msgid "Button border-radius"
+msgstr "Bán kính viền nút"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2189
+msgid "Outset"
+msgstr "Lồi"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2188
+msgid "Inset"
+msgstr "Lõm"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2187
+msgid "Ridge"
+msgstr "Gờ"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2186
+msgid "Groove"
+msgstr "Rãnh"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:494
+#: admin/partials/secure-copy-content-protection-admin-display.php:503
+#: admin/partials/secure-copy-content-protection-admin-display.php:1492
+#: admin/partials/secure-copy-content-protection-admin-display.php:1501
+#: admin/partials/secure-copy-content-protection-admin-display.php:1649
+#: admin/partials/secure-copy-content-protection-admin-display.php:1658
+#: admin/partials/secure-copy-content-protection-admin-display.php:1687
+#: admin/partials/secure-copy-content-protection-admin-display.php:1696
+#: admin/partials/secure-copy-content-protection-admin-display.php:2356
+#: admin/partials/secure-copy-content-protection-admin-display.php:2365
+#: admin/partials/secure-copy-content-protection-admin-display.php:2394
+#: admin/partials/secure-copy-content-protection-admin-display.php:2403
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:145
+#: secure-copy-content-protection.php:121
+msgid "Upgrade"
+msgstr "Nâng cấp"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1062
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1685
+msgid "Specify container border color."
+msgstr "Chỉ định màu viền vùng chứa."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1061
+msgid "Subscribe container border color"
+msgstr "Màu viền vùng chứa đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1090
+msgid "Subscribe container border width in pixels. It accepts only numeric values."
+msgstr "Độ rộng viền của vùng đăng ký (tính bằng pixel). Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1089
+msgid "Subscribe container border width"
+msgstr "Độ rộng viền vùng đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1188
+msgid "Add icon image for Subscribe Box. Advisable size for image is 50x50."
+msgstr "Thêm ảnh icon cho hộp đăng ký. Kích thước khuyến nghị là 50x50."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1187
+msgid "Subscribe Icon"
+msgstr "Icon đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:25
+#: admin/partials/settings/secure-copy-content-protection-settings.php:26
+msgid "Add Icon"
+msgstr "Thêm Icon"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1010
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1661
+msgid "Specify container border style."
+msgstr "Chỉ định kiểu viền của vùng chứa."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1009
+msgid "Subscribe container border style"
+msgstr "Kiểu viền vùng đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1454
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1914
+msgid "Specify button border style."
+msgstr "Chỉ định kiểu viền nút."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1453
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1913
+msgid "Button border style"
+msgstr "Kiểu viền nút"
+
+#: includes/class-secure-copy-content-protection-data.php:569
+msgid "Hurry up! <a href='https://ays-pro.com/school-bundle?utm_source=dashboard-school&utm_medium=free-school&utm_campaign=sccp-school' target='_blank'>Check it out!</a>"
+msgstr "Nhanh lên! <a href='https://ays-pro.com/school-bundle?utm_source=dashboard-school&utm_medium=free-school&utm_campaign=sccp-school' target='_blank'>Xem ngay!</a>"
+
+#: includes/class-secure-copy-content-protection-data.php:565
+msgid "Limited Time <span class='ays-sccp-dicount-wrap-color'>50%</span> SALE on <br><span><a href='https://ays-pro.com/school-bundle?utm_source=dashboard-school&utm_medium=free-school&utm_campaign=sccp-school' target='_blank' class='ays-sccp-dicount-wrap-color ays-sccp-dicount-wrap-text-decoration' style='display:block;'>School Bundle</a></span> (Quiz + Copy + Poll + Personal Dictionary)!"
+msgstr "¡OFERTA por tiempo limitado <span class='ays-sccp-dicount-wrap-color'>50%</span> en <br><span><a href='https://ays-pro.com/school-bundle?utm_source=dashboard-school&utm_medium=free-school&utm_campaign=sccp-school' target='_blank' class='ays-sccp-dicount-wrap-color ays-sccp-dicount-wrap-text-decoration' style='display:block;'>Paquete escolar</a></span> (Cuestionario + Copia + Encuesta + Diccionario personal)!"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1281
+msgid "Set the default value to the Font size of the Subscribe Box description in pixels. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Thiết lập giá trị mặc định cho kích thước font chữ mô tả hộp đăng ký (tính bằng pixel).  Sẽ áp dụng cho tất cả các hộp đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1280
+msgid "Subscribe description Font size"
+msgstr "Kích thước font chữ mô tả đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1478
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1938
+msgid "Specify button border color."
+msgstr "Chỉ định màu viền nút."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1477
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1937
+msgid "Button border color"
+msgstr "Màu viền nút"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1435
+msgid "Subscribe buttons border width in pixels. It accepts only numeric values."
+msgstr "Độ rộng viền nút đăng ký (tính bằng pixel). Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:932
+msgid "Subscribe description text color"
+msgstr "Màu chữ mô tả đăng ký"
+
+#: includes/class-secure-copy-content-protection-data.php:90
+msgid "Install Now !"
+msgstr "Cài đặt ngay!"
+
+#: includes/class-secure-copy-content-protection-data.php:74
+msgid "Chartify plugin allows you to create beautiful charts and graphs easily and quickly."
+msgstr "Plugin Chartify cho phép bạn tạo các biểu đồ và đồ thị đẹp mắt một cách dễ dàng và nhanh chóng."
+
+#: includes/class-secure-copy-content-protection-data.php:71
+msgid "<span><a href='https://wordpress.org/plugins/chart-builder/' target='_blank' style='color:#98FBA6; text-decoration: underline;'>Chart Builder</a></span> Plugin is launched"
+msgstr "<span><a href='https://wordpress.org/plugins/chart-builder/' target='_blank' style='color:#98FBA6; text-decoration: underline;'>Chart Builder</a></span> Plugin đã được ra mắt"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:758
+#: admin/partials/settings/secure-copy-content-protection-settings.php:780
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1548
+msgid "%"
+msgstr "%"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:757
+#: admin/partials/settings/secure-copy-content-protection-settings.php:779
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1547
+msgid "px"
+msgstr "px"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:736
+msgid "Set the default value for the width of the subscription field in pixels or as a percentage. This will apply to all subscription boxes in the frontend plugin."
+msgstr "Thiết lập giá trị mặc định cho chiều rộng của trường đăng ký (tính bằng pixel hoặc phần trăm). Điều này sẽ áp dụng cho tất cả các hộp đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:735
+msgid "Subscribe box width"
+msgstr "Chiều rộng hộp đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1352
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1812
+msgid "Specify button text color."
+msgstr "Chỉ định màu chữ nút."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1351
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1811
+msgid "Button text color"
+msgstr "Màu chữ nút"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1962
+msgid "The background blur of the tooltip."
+msgstr "Độ mờ nền của tooltip."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1961
+msgid "Tooltip Background Blur"
+msgstr "Độ mờ nền Tooltip"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:821
+msgid "Set the default background color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Thiết lập màu nền mặc định cho hộp đăng ký. Sẽ áp dụng cho tất cả các hộp đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:819
+msgid "Subscribe box background color"
+msgstr "Màu nền hộp đăng ký"
+
+#: includes/class-secure-copy-content-protection-data.php:881
+msgid "20%"
+msgstr "20%"
+
+#: includes/class-secure-copy-content-protection-data.php:676
+msgid "Hurry up! <a href='https://ays-pro.com/huge-bundle/' target='_blank'>Check it out!</a>"
+msgstr "Nhanh lên! <a href='https://ays-pro.com/huge-bundle/' target='_blank'>Xem ngay!</a>"
+
+#: includes/class-secure-copy-content-protection-data.php:670
+msgid "Limited Time <span class='ays-sccp-dicount-wrap-color'>60%</span> SALE on <br><span><a href='https://ays-pro.com/huge-bundle/' target='_blank' class='ays-sccp-dicount-wrap-color ays-sccp-dicount-wrap-text-decoration'>Huge Bundle</a></span> (All Plugins)"
+msgstr "Giảm giá <span class='ays-sccp-dicount-wrap-color'>60%</span> trong thời gian có hạn trên <br><span><a href='https://ays-pro.com/huge-bundle/' target='_blank' class='ays-sccp-dicount-wrap-color ays-sccp-dicount-wrap-text-decoration'>Gói Khổng Lồ</a></span> (Tất cả các Plugin)"
+
+#: admin/class-secure-copy-content-protection-admin.php:1483
+msgid "Easy Form"
+msgstr "Mẫu đơn giản"
+
+#: admin/class-secure-copy-content-protection-admin.php:1476
+msgid " and graphs easily and quickly."
+msgstr " và biểu đồ một cách dễ dàng và nhanh chóng."
+
+#: admin/class-secure-copy-content-protection-admin.php:1475
+msgid "Chart Builder plugin allows you to create beautiful charts"
+msgstr "Plugin Trình tạo biểu đồ cho phép bạn tạo các biểu đồ đẹp mắt"
+
+#: admin/class-secure-copy-content-protection-admin.php:1474
+msgid "Chart Builder"
+msgstr "Trình tạo biểu đồ"
+
+#: includes/class-secure-copy-content-protection-data.php:824
+msgid "20% off"
+msgstr "Giảm 20%"
+
+#: includes/class-secure-copy-content-protection-data.php:159
+#: includes/class-secure-copy-content-protection-data.php:257
+#: includes/class-secure-copy-content-protection-data.php:324
+#: includes/class-secure-copy-content-protection-data.php:915
+msgid "Dismiss ad"
+msgstr "Bỏ quảng cáo"
+
+#: includes/class-secure-copy-content-protection-data.php:178
+#: includes/class-secure-copy-content-protection-data.php:278
+#: includes/class-secure-copy-content-protection-data.php:849
+msgid "Get Your Deal"
+msgstr "Nhận ưu đãi của bạn"
+
+#: includes/class-secure-copy-content-protection-data.php:122
+#: includes/class-secure-copy-content-protection-data.php:216
+#: includes/class-secure-copy-content-protection-data.php:345
+#: includes/class-secure-copy-content-protection-data.php:835
+#: includes/class-secure-copy-content-protection-data.php:893
+msgid "Seconds"
+msgstr "Giây"
+
+#: includes/class-secure-copy-content-protection-data.php:121
+#: includes/class-secure-copy-content-protection-data.php:215
+#: includes/class-secure-copy-content-protection-data.php:344
+#: includes/class-secure-copy-content-protection-data.php:834
+#: includes/class-secure-copy-content-protection-data.php:892
+msgid "Minutes"
+msgstr "Phút"
+
+#: includes/class-secure-copy-content-protection-data.php:120
+#: includes/class-secure-copy-content-protection-data.php:214
+#: includes/class-secure-copy-content-protection-data.php:343
+#: includes/class-secure-copy-content-protection-data.php:833
+#: includes/class-secure-copy-content-protection-data.php:891
+msgid "Hours"
+msgstr "Giờ"
+
+#: includes/class-secure-copy-content-protection-data.php:119
+#: includes/class-secure-copy-content-protection-data.php:213
+#: includes/class-secure-copy-content-protection-data.php:342
+#: includes/class-secure-copy-content-protection-data.php:832
+#: includes/class-secure-copy-content-protection-data.php:890
+msgid "Days"
+msgstr "Ngày"
+
+#: includes/class-secure-copy-content-protection-data.php:819
+msgid "Sale"
+msgstr "Giảm giá"
+
+#: includes/class-secure-copy-content-protection-data.php:819
+#: includes/class-secure-copy-content-protection-data.php:881
+msgid "Limited Time"
+msgstr "Thời gian có hạn"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1395
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1855
+msgid "Define the button font size for mobile devices."
+msgstr "Định nghĩa kích thước phông chữ nút cho thiết bị di động."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1376
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1836
+msgid "Define the button font size for PC devices."
+msgstr "Định nghĩa kích thước phông chữ nút cho thiết bị PC."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:472
+msgid "In case of activating this option the super admin will not be able to use the plugin. Note: This option is disabled by default."
+msgstr "Trong trường hợp kích hoạt tùy chọn này, quản trị viên cấp cao sẽ không thể sử dụng plugin. Lưu ý: Tùy chọn này bị vô hiệu hóa theo mặc định."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:470
+msgid "Disable Copy Protection for Super admin"
+msgstr "Vô hiệu hóa bảo vệ sao chép cho quản trị viên cấp cao"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1157
+msgid "By enabling this option, the reading mode will completely be deactivated on the Mozilla browser."
+msgstr "Bằng cách bật tùy chọn này, chế độ đọc sẽ bị tắt hoàn toàn trên trình duyệt Mozilla."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1155
+msgid "Disable F9"
+msgstr "Vô hiệu hóa F9"
+
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:57
+msgid "Hide the content of your website and display it only for the users who have subscribed. The users who are not subscribed will see the hidden content. Only after providing their email, they will be able to see the content. For activating this option you will need to use the below mention shortcode. Add the first part of the shortcode at the beginning of the content which you want to be hidden and the second part add after the hidden content."
+msgstr "Ẩn nội dung trang web của bạn và chỉ hiển thị nó cho những người dùng đã đăng ký. Những người dùng chưa đăng ký sẽ thấy nội dung đã ẩn. Chỉ sau khi cung cấp email của họ, họ mới có thể xem nội dung. Để kích hoạt tùy chọn này, bạn cần sử dụng shortcode được đề cập bên dưới. Thêm phần đầu tiên của shortcode vào đầu nội dung bạn muốn ẩn và thêm phần thứ hai sau nội dung đã ẩn."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1316
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1776
+msgid "Right"
+msgstr "Phải"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1312
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1772
+msgid "Center"
+msgstr "Giữa"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1308
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1768
+msgid "Left"
+msgstr "Trái"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1300
+msgid "Align the text of Subscribe box to the left, center, or right."
+msgstr "Căn chỉnh văn bản của hộp đăng ký sang trái, giữa hoặc phải."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1299
+msgid "Subscribe box text alignment"
+msgstr "Căn chỉnh văn bản hộp đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1503
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1963
+msgid "Top / Bottom"
+msgstr "Trên / Dưới"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1499
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1959
+msgid "Left / Right"
+msgstr "Trái / Phải"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1416
+msgid "Subscribe buttons border-radius in pixels. It accepts only numeric values."
+msgstr "Bán kính góc bo của nút Đăng ký tính bằng pixel. Chỉ chấp nhận giá trị số."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:588
+msgid "Shows the current user's IP no matter whether they are a logged-in user or a guest. Please note, that this message variable will return empty, if 'Do not store IP addresses' is ticked from General Settings>General>Users IP addresses."
+msgstr "Hiển thị địa chỉ IP của người dùng hiện tại bất kể họ là người dùng đã đăng nhập hay khách. Xin lưu ý rằng biến thông điệp này sẽ trả về giá trị rỗng nếu 'Không lưu địa chỉ IP' được đánh dấu trong Cài đặt chung> Chung > Địa chỉ IP của người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1366
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1826
+msgid "Specify button size."
+msgstr "Chỉ định kích thước nút."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1365
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1825
+msgid "Button size"
+msgstr "Kích thước nút"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1338
+msgid "Specify button color."
+msgstr "Chỉ định màu nút."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1337
+msgid "Button color"
+msgstr "Màu nút"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1325
+msgid "Change Subscribe button  styles."
+msgstr "Thay đổi kiểu dáng nút Đăng ký."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1324
+msgid "Subscribe button style"
+msgstr "Kiểu nút Đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:471
+msgid "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty."
+msgstr "Vai trò của người dùng khi đăng nhập. Nếu người dùng không đăng nhập, trường sẽ trống."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:716
+msgid "Shows the logged-in user's Nickname. If the user is not logged-in, the shortcode will be empty."
+msgstr "Hiển thị biệt danh của người dùng đã đăng nhập. Nếu người dùng không đăng nhập, shortcode sẽ trống."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:715
+msgid "Show User Nickname"
+msgstr "Hiển thị biệt danh người dùng"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1239
+msgid "Set the default value to the Font size of the Subscribe Box title in pixels. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Đặt giá trị mặc định cho kích thước phông chữ của tiêu đề Hộp Đăng ký tính bằng pixel. Nó sẽ áp dụng cho tất cả các Hộp Đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1238
+msgid "Subscribe title Font size"
+msgstr "Kích thước phông chữ tiêu đề Đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:698
+msgid "Shows the logged-in user's Display name. If the user is not logged-in, the shortcode will be empty."
+msgstr "Hiển thị tên hiển thị của người dùng đã đăng nhập. Nếu người dùng không đăng nhập, shortcode sẽ trống."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:697
+msgid "Show User Display name"
+msgstr "Hiển thị tên người dùng"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:680
+msgid "Shows the logged-in user's role(s). If the user is not logged-in, the shortcode will be empty."
+msgstr "Hiển thị vai trò của người dùng đã đăng nhập. Nếu người dùng không đăng nhập, shortcode sẽ trống."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:679
+msgid "Show User roles"
+msgstr "Hiển thị vai trò người dùng"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:662
+msgid "Shows the logged-in user's Email. If the user is not logged-in, the shortcode will be empty."
+msgstr "Hiển thị Email của người dùng đã đăng nhập. Nếu người dùng không đăng nhập, shortcode sẽ trống."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:661
+msgid "Show User Email"
+msgstr "Hiển thị Email người dùng"
+
+#: admin/partials/features/secure-copy-content-protection-featured-display.php:14
+msgid "See All Plugins"
+msgstr "Xem tất cả Plugin"
+
+#: admin/class-secure-copy-content-protection-admin.php:1467
+msgid "Allow your users to create their own digital dictionaries and learn new words and terms as fastest as possible."
+msgstr "Cho phép người dùng tạo từ điển kỹ thuật số của riêng họ và học các từ và thuật ngữ mới nhanh nhất có thể."
+
+#: admin/class-secure-copy-content-protection-admin.php:1466
+msgid "Allow your students to create personal dictionary, study and memorize the words."
+msgstr "Cho phép học sinh tạo từ điển cá nhân, học và ghi nhớ các từ."
+
+#: admin/class-secure-copy-content-protection-admin.php:1465
+msgid "Personal Dictionary"
+msgstr "Từ điển cá nhân"
+
+#: admin/class-secure-copy-content-protection-admin.php:1439
+msgid "Create amazing online polls for your WordPress website super easily."
+msgstr "Tạo các cuộc thăm dò trực tuyến tuyệt vời cho trang web WordPress của bạn một cách siêu dễ dàng."
+
+#: admin/class-secure-copy-content-protection-admin.php:1438
+msgid "Poll Maker"
+msgstr "Công cụ tạo thăm dò"
+
+#: admin/class-secure-copy-content-protection-admin.php:1458
+msgid "Represent images in an attractive way. Attract people with your own single and multiple free galleries from your photo library."
+msgstr "Trình bày hình ảnh một cách hấp dẫn. Thu hút mọi người với bộ sưu tập ảnh đơn và nhiều ảnh miễn phí từ thư viện ảnh của bạn."
+
+#: admin/class-secure-copy-content-protection-admin.php:1457
+msgid "Create unlimited galleries and include unlimited images in those galleries."
+msgstr "Tạo bộ sưu tập không giới hạn và bao gồm hình ảnh không giới hạn trong các bộ sưu tập đó."
+
+#: admin/class-secure-copy-content-protection-admin.php:1456
+msgid "Gallery Photo Gallery"
+msgstr "Bộ sưu tập ảnh"
+
+#: admin/class-secure-copy-content-protection-admin.php:1449
+msgid "Attract your visitors and convert them into email subscribers and paying customers."
+msgstr "Thu hút khách truy cập và chuyển đổi họ thành người đăng ký email và khách hàng trả tiền."
+
+#: admin/class-secure-copy-content-protection-admin.php:1448
+msgid "Popup everything you want! Create informative and promotional popups all in one plugin."
+msgstr "Hiện tất cả những gì bạn muốn! Tạo các cửa sổ bật lên thông tin và quảng cáo tất cả trong một plugin."
+
+#: admin/class-secure-copy-content-protection-admin.php:1447
+msgid "Popup Box"
+msgstr "Cửa sổ bật lên"
+
+#: admin/class-secure-copy-content-protection-admin.php:1431
+msgid "Learn what your website visitors want, need, and expect with the help of Survey Maker. Build surveys without limiting your needs."
+msgstr "Tìm hiểu những gì khách truy cập trang web của bạn muốn, cần và mong đợi với sự trợ giúp của Công cụ tạo khảo sát. Xây dựng khảo sát mà không giới hạn nhu cầu của bạn."
+
+#: admin/class-secure-copy-content-protection-admin.php:1430
+msgid "Make amazing online surveys and get real-time feedback quickly and easily."
+msgstr "Tạo các khảo sát trực tuyến tuyệt vời và nhận phản hồi thời gian thực nhanh chóng và dễ dàng."
+
+#: admin/class-secure-copy-content-protection-admin.php:1429
+msgid "Survey Maker"
+msgstr "Công cụ tạo khảo sát"
+
+#: admin/class-secure-copy-content-protection-admin.php:1440
+msgid "Build up various types of polls in a minute and get instant feedback on any topic or product."
+msgstr "Xây dựng nhiều loại thăm dò khác nhau trong một phút và nhận phản hồi tức thì về bất kỳ chủ đề hoặc sản phẩm nào."
+
+#: admin/class-secure-copy-content-protection-admin.php:1420
+msgid "Quiz Maker"
+msgstr "Công cụ tạo câu hỏi trắc nghiệm"
+
+#: includes/class-secure-copy-content-protection-data.php:633
+msgid "Spring is here! <span class='ays-sccp-dicount-wrap-color'>50%</span> SALE on <span><a href='https://ays-pro.com/spring-bundle' target='_blank' class='ays-sccp-dicount-wrap-color ays-sccp-dicount-wrap-text-decoration'>Spring Bundle</a></span><span style='display: block;'>Quiz + Popup + Copy</span>"
+msgstr "Mùa xuân đã đến! <span class='ays-sccp-dicount-wrap-color'>50%</span> GIẢM GIÁ trên <span><a href='https://ays-pro.com/spring-bundle' target='_blank' class='ays-sccp-dicount-wrap-color ays-sccp-dicount-wrap-text-decoration'>Gói Mùa Xuân</a></span><span style='display: block;'>Câu hỏi + Popup + Sao chép</span>"
+
+#: admin/partials/features/secure-copy-content-protection-featured-display.php:7
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:6
+#: admin/partials/results/secure-copy-content-protection-results-display.php:17
+#: admin/partials/secure-copy-content-protection-admin-display.php:239
+#: admin/partials/settings/secure-copy-content-protection-settings.php:268
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:27
+msgid "View Documentation"
+msgstr "Xem hướng dẫn"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1225
+msgid "Set the default value to the name placeholder text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Đặt giá trị mặc định cho văn bản giữ chỗ tên của Hộp đăng ký. Nó sẽ áp dụng cho tất cả các Hộp đăng ký trong plugin ở phía trước."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1224
+msgid "Subscribe name placeholder text"
+msgstr "Văn bản giữ chỗ tên đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:462
+msgid "The user's nickname that was filled in their WordPress profile."
+msgstr "Biệt danh của người dùng đã được điền vào hồ sơ WordPress của họ."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1211
+msgid "Set the default value to the email placeholder text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Đặt giá trị mặc định cho văn bản giữ chỗ email của Hộp Đăng ký. Nó sẽ áp dụng cho tất cả các Hộp Đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1210
+msgid "Subscribe email placeholder text"
+msgstr "Văn bản giữ chỗ email đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:962
+msgid "Specify how to capitalize a title text of your Subscribe box."
+msgstr "Chỉ định cách viết hoa tiêu đề của hộp Đăng ký."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:960
+msgid "Subscribe title transformation"
+msgstr "Chuyển đổi tiêu đề đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1174
+msgid "Set the default value to the button text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Đặt giá trị mặc định cho văn bản nút của Hộp Đăng ký. Nó sẽ áp dụng cho tất cả các Hộp Đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1173
+msgid "Subscribe button text"
+msgstr "Văn bản nút đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:794
+msgid "Set the default text color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Đặt màu văn bản mặc định của Hộp Đăng ký. Nó sẽ áp dụng cho tất cả các Hộp Đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:792
+msgid "Subscribe text color"
+msgstr "Màu văn bản đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:934
+msgid "Set the default description text color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end."
+msgstr "Đặt màu văn bản mô tả mặc định của Hộp Đăng ký. Nó sẽ áp dụng cho tất cả các Hộp Đăng ký trong plugin ở giao diện người dùng."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:304
+msgid "Subscribe to view settings"
+msgstr "Cài đặt xem đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:644
+msgid "Shows the logged-in user's Last Name. If the user is not logged-in, the shortcode will be empty."
+msgstr "Hiển thị họ của người dùng đã đăng nhập. Nếu người dùng chưa đăng nhập, shortcode sẽ trống."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:643
+msgid "Show User Last Name"
+msgstr "Hiển thị họ người dùng"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:453
+msgid "The user's display name that was filled in their WordPress profile."
+msgstr "Tên hiển thị của người dùng được điền trong hồ sơ WordPress của họ."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:626
+msgid "Shows the logged-in user's First Name. If the user is not logged-in, the shortcode will be empty."
+msgstr "Hiển thị tên của người dùng đã đăng nhập. Nếu người dùng chưa đăng nhập, shortcode sẽ trống."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:625
+msgid "Show User First Name"
+msgstr "Hiển thị tên người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2035
+msgid "Define the font size for mobile devices."
+msgstr "Định nghĩa kích thước font chữ cho thiết bị di động."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2034
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1394
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1854
+msgid "On mobile"
+msgstr "Trên thiết bị di động"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2016
+msgid "Define the font size for PC devices."
+msgstr "Định nghĩa kích thước font chữ cho máy tính."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2015
+#: admin/partials/settings/secure-copy-content-protection-settings.php:745
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1375
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1835
+msgid "On PC"
+msgstr "Trên máy tính"
+
+#: admin/class-secure-copy-content-protection-admin.php:235
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:119
+msgid "Tick the checkbox to show the Description field"
+msgstr "Đánh dấu vào ô để hiển thị trường Mô tả"
+
+#: admin/class-secure-copy-content-protection-admin.php:234
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:117
+msgid "Description field"
+msgstr "Trường mô tả"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1934
+#: admin/partials/settings/secure-copy-content-protection-settings.php:981
+#: admin/partials/settings/secure-copy-content-protection-settings.php:993
+msgid "Capitalize"
+msgstr "Viết hoa"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1933
+#: admin/partials/settings/secure-copy-content-protection-settings.php:980
+#: admin/partials/settings/secure-copy-content-protection-settings.php:992
+msgid "Lowercase"
+msgstr "Viết thường"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1932
+#: admin/partials/settings/secure-copy-content-protection-settings.php:979
+#: admin/partials/settings/secure-copy-content-protection-settings.php:991
+msgid "Uppercase"
+msgstr "VIẾT HOA"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1922
+#: admin/partials/settings/secure-copy-content-protection-settings.php:966
+msgid "Capitalize – Transforms the first character of each word to uppercase"
+msgstr "Viết hoa – Chuyển chữ cái đầu tiên của mỗi từ thành chữ hoa"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1921
+#: admin/partials/settings/secure-copy-content-protection-settings.php:965
+msgid "Lowercase – Transforms all characters to lowercase"
+msgstr "Viết thường – Chuyển tất cả các ký tự thành chữ thường"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1920
+#: admin/partials/settings/secure-copy-content-protection-settings.php:964
+msgid "Uppercase – Transforms all characters to uppercase"
+msgstr "VIẾT HOA – Chuyển tất cả các ký tự thành chữ HOA"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1918
+msgid "Specify how to capitalize a title text of your tooltip."
+msgstr "Chỉ định cách viết hoa tiêu đề của tooltip."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1916
+msgid "Tooltip text transformation"
+msgstr "Biến đổi văn bản Tooltip"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:444
+msgid "The user's email that was filled in their WordPress profile."
+msgstr "Email của người dùng được điền trong hồ sơ WordPress của họ."
+
+#: public/partials/class-secure-copy-content-protection-extra-shortcode.php:82
+msgid "Wrong shortcode initialized"
+msgstr "Shortcode khởi tạo sai"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:608
+msgid "Copy the following shortcode and paste it into any posts. Insert the Block ID to receive the current number of subscribers of the block."
+msgstr "Sao chép shortcode sau và dán nó vào bất kỳ bài viết nào. Chèn ID Khối để nhận số lượng người đăng ký hiện tại của khối."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:607
+msgid "Subscribers count"
+msgstr "Số lượng người đăng ký"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:600
+msgid "Extra shortcodes"
+msgstr "Shortcode bổ sung"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:301
+#: admin/partials/settings/secure-copy-content-protection-settings.php:595
+msgid "Shortcodes"
+msgstr "Shortcode"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:435
+msgid "The user's last name that was filled in their WordPress site during registration."
+msgstr "Họ của người dùng được điền vào trang WordPress của họ trong quá trình đăng ký."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:426
+msgid "The user's first name that was filled in their WordPress site during registration."
+msgstr "Tên của người dùng được điền vào trang WordPress của họ trong quá trình đăng ký."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:408
+#: admin/partials/settings/secure-copy-content-protection-settings.php:414
+msgid "You can copy these variables and paste them in the following options from the copy protection settings"
+msgstr "Bạn có thể sao chép các biến này và dán chúng vào các tùy chọn sau từ cài đặt bảo vệ sao chép"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:298
+#: admin/partials/settings/secure-copy-content-protection-settings.php:407
+msgid "Message variables"
+msgstr "Biến thông báo"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:385
+msgid "click here"
+msgstr "nhấp vào đây"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:384
+msgid "To see all Message Variables "
+msgstr "Để xem tất cả các Biến thông báo "
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:380
+msgid "The warning text that appears after copy attempt. You can use Variables (General Settings) to insert user data here."
+msgstr "Văn bản cảnh báo xuất hiện sau khi thử sao chép. Bạn có thể sử dụng Biến (Cài đặt chung) để chèn dữ liệu người dùng ở đây."
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:426
+msgid "User Role"
+msgstr "Vai trò người dùng"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:465
+msgid "Delete"
+msgstr "Xóa"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:464
+msgid "Mark as unread"
+msgstr "Đánh dấu là chưa đọc"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:463
+msgid "Mark as read"
+msgstr "Đánh dấu là đã đọc"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2217
+msgid "Specify text shadow color."
+msgstr "Chỉ định màu đổ bóng văn bản."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2216
+msgid "Color"
+msgstr "Màu sắc"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2205
+msgid "Add text shadow for the tooltip title."
+msgstr "Thêm đổ bóng văn bản cho tiêu đề tooltip."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2204
+msgid "Tooltip title text shadow"
+msgstr "Đổ bóng văn bản tiêu đề Tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1825
+msgid "Diagonal right to left"
+msgstr "Chéo phải sang trái"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1824
+msgid "Diagonal left to right"
+msgstr "Chéo trái sang phải"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1823
+msgid "Horizontal"
+msgstr "Ngang"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1822
+msgid "Vertical"
+msgstr "Dọc"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1817
+msgid "The direction of the color gradient."
+msgstr "Hướng của dải màu."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1816
+msgid "Gradient direction"
+msgstr "Hướng dải màu"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1808
+msgid "Color 2 of the tooltip background gradient"
+msgstr "Màu 2 của dải màu nền tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1807
+msgid "Color 2"
+msgstr "Màu 2"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1799
+msgid "Color 1 of the tooltip background gradient"
+msgstr "Màu 1 của dải màu nền tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1798
+msgid "Color 1"
+msgstr "Màu 1"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1786
+msgid "Color gradient of the tooltip background"
+msgstr "Dải màu nền tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1785
+msgid "Tooltip background gradient"
+msgstr "Dải màu nền tooltip"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:77
+msgid "Select User"
+msgstr "Chọn Người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1888
+msgid "Specify how a sccp tooltip image should be resized to fit its container."
+msgstr "Chỉ định cách thay đổi kích thước hình ảnh tooltip sccp để phù hợp với container của nó."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1887
+msgid "Tooltip background image object-fit"
+msgstr "Thuộc tính object-fit của hình ảnh nền tooltip"
+
+#: admin/class-secure-copy-content-protection-admin.php:427
+msgid "Copy Protection plugin Premium version"
+msgstr "Phiên bản Premium của plugin Bảo vệ Bản quyền"
+
+#: admin/class-secure-copy-content-protection-admin.php:424
+msgid "Documentation"
+msgstr "Xem hướng dẫn"
+
+#: admin/class-secure-copy-content-protection-admin.php:421
+msgid "Youtube video tutorials"
+msgstr "Hướng dẫn video trên Youtube"
+
+#: admin/class-secure-copy-content-protection-admin.php:419
+msgid "For more information:"
+msgstr "Để biết thêm thông tin:"
+
+#: admin/class-secure-copy-content-protection-admin.php:414
+msgid "Copy Content Protection is a must-have WordPress plugin which prevents the risk of plagiarism on your website. After the activation of the plugin the Copy and Paste, right-click option, inspect elements (F12 key), content-selection, copy the image, save image as features will be automatically disabled. In addition, the user has an option to enable or disable the features via the checkbox."
+msgstr "Copy Content Protection là một plugin WordPress cần thiết giúp ngăn ngừa nguy cơ đạo văn trên trang web của bạn. Sau khi kích hoạt plugin, các chức năng Sao chép và Dán, chuột phải, kiểm tra phần tử (phím F12), chọn nội dung, sao chép hình ảnh, lưu hình ảnh sẽ tự động bị vô hiệu hóa. Ngoài ra, người dùng có tùy chọn bật hoặc tắt các chức năng thông qua hộp kiểm."
+
+#: admin/class-secure-copy-content-protection-admin.php:412
+msgid "SCCP Information"
+msgstr "Thông tin SCCP"
+
+#: admin/class-secure-copy-content-protection-admin.php:409
+msgid ""
+"General Information:\n"
+"\t\t\t\t\t"
+msgstr "Thông tin chung:"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1128
+msgid "Does not allow to find text on the page."
+msgstr "Không cho phép tìm kiếm văn bản trên trang."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1126
+msgid "Disable F3"
+msgstr "Vô hiệu hóa F3"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1070
+msgid "Does not allow to open file from your computer."
+msgstr "Không cho phép mở tệp từ máy tính của bạn."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1068
+msgid "Disable CTRL-O"
+msgstr "Vô hiệu hóa CTRL-O"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2108
+#: admin/partials/secure-copy-content-protection-admin-display.php:2235
+msgid "Z"
+msgstr "Z"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2104
+#: admin/partials/secure-copy-content-protection-admin-display.php:2231
+msgid "Y"
+msgstr "Y"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2100
+#: admin/partials/secure-copy-content-protection-admin-display.php:2227
+msgid "X"
+msgstr "X"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1878
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1623
+msgid "Right Bottom"
+msgstr "Phải Dưới"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1877
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1622
+msgid "Right Center"
+msgstr "Phải Giữa"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1876
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1621
+msgid "Right Top"
+msgstr "Phải Trên"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1875
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1620
+msgid "Center Bottom"
+msgstr "Giữa Dưới"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1874
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1619
+msgid "Center Center"
+msgstr "Giữa Giữa"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1873
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1618
+msgid "Center Top"
+msgstr "Giữa Trên"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1872
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1617
+msgid "Left Bottom"
+msgstr "Trái Dưới"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1871
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1616
+msgid "Left Center"
+msgstr "Trái Giữa"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1870
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1615
+msgid "Left Top"
+msgstr "Trái Trên"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1863
+msgid "The position of background image of the tooltip"
+msgstr "Vị trí hình ảnh nền của tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1862
+msgid "Tooltip background image position"
+msgstr "Vị trí hình ảnh nền tooltip"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:345
+msgid "After enabling this option, IP address of the users will not be stored in database."
+msgstr "Sau khi bật tùy chọn này, địa chỉ IP của người dùng sẽ không được lưu trữ trong cơ sở dữ liệu."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:344
+msgid "Do not store IP adressess"
+msgstr "Không lưu trữ địa chỉ IP"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:339
+msgid "Users IP adressess"
+msgstr "Địa chỉ IP của người dùng"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:325
+msgid "Give the default value to the height of the WP Editor. It will apply to all WP Editors within the plugin on the dashboard."
+msgstr "Đặt giá trị mặc định cho chiều cao của WP Editor. Nó sẽ áp dụng cho tất cả các WP Editor trong plugin trên bảng điều khiển."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:324
+msgid "WP Editor height"
+msgstr "Chiều cao WP Editor"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:319
+msgid "Default parameters for copy protection"
+msgstr "Các tham số mặc định cho bảo vệ bản quyền"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2668
+msgid "Send contacts an opt-in confirmation email when their email address added to the list."
+msgstr "Gửi email xác nhận đăng ký cho liên hệ khi địa chỉ email của họ được thêm vào danh sách."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2654
+msgid "Enable double opt-in"
+msgstr "Bật xác nhận đăng ký kép"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:104
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1469
+msgid "Type in the custom text."
+msgstr "Nhập văn bản tùy chỉnh."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1468
+msgid "Custom text"
+msgstr "Văn bản tùy chỉnh"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1454
+msgid "Activate this option, and provided custom text will be replaced with the copied text."
+msgstr "Kích hoạt tùy chọn này, và văn bản tùy chỉnh được cung cấp sẽ được thay thế bằng văn bản đã sao chép."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1453
+msgid "Enable pasting custom text"
+msgstr "Bật dán văn bản tùy chỉnh"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1438
+msgid "Tick the checkbox if you want to include your URL link at the end of the copyright text."
+msgstr "Đánh dấu vào ô nếu bạn muốn thêm liên kết URL của mình vào cuối văn bản bản quyền."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1436
+msgid "Include URL link"
+msgstr "Thêm liên kết URL"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1421
+msgid "Type in the copyright text that will be added to the copied text."
+msgstr "Nhập văn bản bản quyền sẽ được thêm vào văn bản đã sao chép."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1420
+msgid "Copyright text"
+msgstr "Văn bản bản quyền"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1406
+msgid "Enable copyright text."
+msgstr "Bật văn bản bản quyền."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1405
+msgid "Enable Copyright text"
+msgstr "Bật văn bản bản quyền"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:171
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:174
+msgid "Export results"
+msgstr "Xuất kết quả"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:161
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:164
+msgid "Mailchimp integration"
+msgstr "Tích hợp Mailchimp"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:151
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:154
+msgid "Subscribe to view content"
+msgstr "Đăng ký để xem nội dung"
+
+#: admin/class-secure-copy-content-protection-admin.php:727
+#: secure-copy-content-protection.php:135
+#: secure-copy-content-protection.php:151
+msgid "Free Support"
+msgstr "Hỗ trợ miễn phí"
+
+#: admin/class-secure-copy-content-protection-admin.php:380
+#: admin/class-secure-copy-content-protection-admin.php:381
+msgid "Our Products"
+msgstr "Sản phẩm khác"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1617
+msgid "The button position for subscribe to view"
+msgstr "Vị trí nút đăng ký để xem"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1615
+msgid "Subscribe to view button position"
+msgstr "Vị trí nút đăng ký để xem"
+
+#: admin/class-secure-copy-content-protection-admin.php:1665
+#: includes/class-secure-copy-content-protection-data.php:367
+#: includes/class-secure-copy-content-protection-data.php:541
+msgid "Buy Now"
+msgstr "Mua ngay"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1579
+#: admin/partials/secure-copy-content-protection-admin-display.php:1624
+msgid "Under the input"
+msgstr "Bên dưới ô nhập"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1578
+#: admin/partials/secure-copy-content-protection-admin-display.php:1623
+msgid "Next to the input"
+msgstr "Bên cạnh ô nhập"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1572
+msgid "The button position for block content"
+msgstr "Vị trí nút cho nội dung khối"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1570
+msgid "Block content button position"
+msgstr "Vị trí nút nội dung khối"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:423
+msgid "User Name"
+msgstr "Tên người dùng"
+
+#: public/class-secure-copy-content-protection-public.php:379
+msgid "Type your name"
+msgstr "Nhập tên của bạn"
+
+#: admin/class-secure-copy-content-protection-admin.php:862
+msgid "If you love our plugin, please do big favor and rate us on"
+msgstr "Nếu bạn yêu thích plugin của chúng tôi, hãy dành chút thời gian đánh giá chúng tôi trên"
+
+#: admin/class-secure-copy-content-protection-admin.php:717
+#: secure-copy-content-protection.php:134
+#: secure-copy-content-protection.php:142
+#: secure-copy-content-protection.php:150
+msgid "Demo"
+msgstr "Bản demo"
+
+#: admin/class-secure-copy-content-protection-admin.php:233
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:102
+msgid "Tick the checkbox to show the Name field"
+msgstr "Đánh dấu vào ô để hiển thị trường Tên"
+
+#: admin/class-secure-copy-content-protection-admin.php:232
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:100
+msgid "Name field"
+msgstr "Trường Tên"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1599
+msgid "The header text for subscribe to view"
+msgstr "Tiêu đề cho mục đăng ký để xem"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1597
+msgid "Subscribe to view header text"
+msgstr "Tiêu đề đăng ký để xem"
+
+#: includes/class-secure-copy-content-protection-data.php:455
+#: includes/class-secure-copy-content-protection-data.php:602
+#: includes/class-secure-copy-content-protection-data.php:651
+#: includes/class-secure-copy-content-protection-data.php:709
+#: includes/class-secure-copy-content-protection-data.php:786
+msgid "Buy Now !"
+msgstr "Mua ngay!"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2628
+msgid "MailChimp list"
+msgstr "Danh sách MailChimp"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2608
+msgid "Enable MailChimp"
+msgstr "Bật MailChimp"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2584
+msgid "MailChimp Settings"
+msgstr "Cài đặt MailChimp"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:143
+msgid "There are no lists"
+msgstr "Không có danh sách nào"
+
+#: admin/partials/settings/secure-copy-content-protection-settings-actions.php:479
+msgid "SCCP attribute deleted."
+msgstr "Thuộc tính SCCP đã bị xóa."
+
+#: admin/partials/settings/secure-copy-content-protection-settings-actions.php:477
+msgid "SCCP attribute ."
+msgstr "Thuộc tính SCCP."
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:399
+msgid "Account Extras menu"
+msgstr "Menu Tiện ích Tài khoản"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:399
+msgid "You can get your API key from your "
+msgstr "Bạn có thể lấy API key từ "
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:386
+msgid "Mailchimp API Key"
+msgstr "Khóa API Mailchimp"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:370
+msgid "Mailchimp Username"
+msgstr "Tên người dùng Mailchimp"
+
+#: admin/partials/settings/secure-copy-content-protection-settings.php:363
+msgid "Mailchimp"
+msgstr "Mailchimp"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:311
+#: admin/partials/secure-copy-content-protection-admin-display.php:2577
+#: admin/partials/settings/secure-copy-content-protection-settings.php:295
+#: admin/partials/settings/secure-copy-content-protection-settings.php:358
+msgid "Integrations"
+msgstr "Tích hợp"
+
+#: admin/class-secure-copy-content-protection-admin.php:370
+#: admin/class-secure-copy-content-protection-admin.php:371
+#: admin/partials/settings/secure-copy-content-protection-settings.php:314
+msgid "General Settings"
+msgstr "Cài đặt chung"
+
+#: admin/class-secure-copy-content-protection-admin.php:226
+msgid "Color value"
+msgstr "Giá trị màu sắc"
+
+#: admin/class-secure-copy-content-protection-admin.php:225
+msgid "Select Color"
+msgstr "Chọn màu"
+
+#: admin/class-secure-copy-content-protection-admin.php:224
+msgid "Select default color"
+msgstr "Chọn màu mặc định"
+
+#: admin/class-secure-copy-content-protection-admin.php:223
+msgid "Default"
+msgstr "Mặc định"
+
+#: admin/class-secure-copy-content-protection-admin.php:222
+msgid "Clear color"
+msgstr "Xóa màu"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:142
+msgid "Start Date to"
+msgstr "Ngày bắt đầu đến"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:138
+msgid "Start Date from"
+msgstr "Ngày bắt đầu từ"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:158
+msgid "JSON"
+msgstr "JSON"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:157
+msgid "XLSX"
+msgstr "XLSX"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:156
+msgid "CSV"
+msgstr "CSV"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:154
+msgid "Export to"
+msgstr "Xuất sang"
+
+#: admin/class-secure-copy-content-protection-admin.php:221
+#: admin/partials/results/secure-copy-content-protection-results-display.php:133
+msgid "Clear"
+msgstr "Xóa"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:125
+msgid "Export Filter"
+msgstr "Bộ lọc xuất"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:27
+msgid "Export"
+msgstr "Xuất"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:452
+msgid "Add your preferred CSS selector(s) and they will not be protected by the plugin."
+msgstr "Thêm bộ chọn CSS ưa thích của bạn và chúng sẽ không được bảo vệ bởi plugin."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:450
+msgid "Exclude certain CSS selector"
+msgstr "Loại trừ bộ chọn CSS nhất định"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1343
+msgid "Enable to show the warning text once( only after the first attempt) when the user tries non-permitted actions in the copy protection enabled areas on the website."
+msgstr "Bật để hiển thị văn bản cảnh báo một lần (chỉ sau lần thử đầu tiên) khi người dùng thực hiện các hành động không được phép trong các khu vực được bật bảo vệ bản sao trên trang web."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1341
+msgid "Show message only once"
+msgstr "Chỉ hiển thị thông báo một lần"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:427
+msgid "Date"
+msgstr "Ngày"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1510
+msgid "Enable Images Watermark"
+msgstr "Bật hình mờ ảnh"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1309
+msgid "Disable scrolling over images (Mobile)"
+msgstr "Tắt cuộn trên ảnh (Di động)"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:690
+msgid "By enabling this option, the dragging of the texts and images will be not allowed in the copy protection enabled areas on the website."
+msgstr "Bằng cách bật tùy chọn này, việc kéo thả văn bản và hình ảnh sẽ không được phép trong các khu vực được bật bảo vệ bản sao trên trang web."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:688
+msgid "Disable Drag & Drop"
+msgstr "Tắt kéo và thả"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:526
+msgid "ON/OFF"
+msgstr "BẬT/TẮT"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:596
+msgid "By enabling the option, the right-click for the images will be not allowed in the copy protection enabled areas on the website."
+msgstr "Bằng cách bật tùy chọn này, việc nhấp chuột phải vào hình ảnh sẽ không được phép trong các khu vực được bật bảo vệ bản quyền trên trang web."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:594
+msgid "Disable right click for images"
+msgstr "Vô hiệu hóa chuột phải cho hình ảnh"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:54
+#: admin/partials/results/secure-copy-content-protection-results-display.php:71
+#: admin/partials/results/secure-copy-content-protection-results-display.php:96
+msgid "Filter"
+msgstr "Bộ lọc"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:46
+#: admin/partials/results/secure-copy-content-protection-results-display.php:63
+msgid "No Filtering"
+msgstr "Không lọc"
+
+#: admin/partials/results/secure-copy-content-protection-results-display.php:132
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:421
+msgid "Shortcode ID"
+msgstr "ID Shortcode"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1041
+msgid "Does not allow the user to move to the address bar and perform a google search."
+msgstr "Không cho phép người dùng di chuyển đến thanh địa chỉ và thực hiện tìm kiếm Google."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:923
+msgid "Disable search hot-keys"
+msgstr "Vô hiệu hóa phím tắt tìm kiếm"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:809
+msgid "Not allowed to save a copy of the page being viewed."
+msgstr "Không được phép lưu bản sao của trang đang xem."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1732
+msgid "Mouse first position"
+msgstr "Vị trí chuột đầu tiên"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:429
+msgid "City, Country"
+msgstr "Thành phố, Quốc gia"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:594
+msgid "Result deleted."
+msgstr "Kết quả đã bị xóa."
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:428
+msgid "Read Status"
+msgstr "Trạng thái đọc"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:425
+msgid "WP User"
+msgstr "Người dùng WP"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:424
+msgid "User IP"
+msgstr "IP người dùng"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:422
+msgid "User Email"
+msgstr "Email người dùng"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:348
+msgid "Guest"
+msgstr "Khách"
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:322
+#: public/partials/class-secure-copy-content-protection-extra-shortcode.php:120
+msgid "There are no results yet."
+msgstr "Chưa có kết quả nào."
+
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:11
+msgid "Result"
+msgstr "Kết quả"
+
+#: admin/partials/subscribe/actions/secure-copy-content-protection-subscribe-actions.php:109
+msgid "SCCP subscribe deleted."
+msgstr "Đăng ký SCCP đã bị xóa."
+
+#: admin/partials/subscribe/actions/secure-copy-content-protection-subscribe-actions.php:107
+msgid "SCCP subscribe."
+msgstr "Đăng ký SCCP."
+
+#: admin/class-secure-copy-content-protection-actions.php:613
+#: admin/partials/settings/secure-copy-content-protection-settings-actions.php:475
+#: admin/partials/subscribe/actions/secure-copy-content-protection-subscribe-actions.php:105
+msgid "Changes saved."
+msgstr "Thay đổi đã được lưu."
+
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:151
+msgid "Require verification"
+msgstr "Yêu cầu xác minh"
+
+#: admin/class-secure-copy-content-protection-admin.php:357
+#: admin/class-secure-copy-content-protection-admin.php:792
+#: admin/partials/results/secure-copy-content-protection-results-display.php:30
+#: includes/lists/class-secure-copy-content-protection-results-list-table.php:12
+msgid "Results"
+msgstr "Kết quả"
+
+#: admin/class-secure-copy-content-protection-admin.php:346
+#: admin/class-secure-copy-content-protection-admin.php:347
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:34
+msgid "Subscribe to view"
+msgstr "Đăng ký để xem"
+
+#: public/class-secure-copy-content-protection-public.php:376
+msgid "Type your email address"
+msgstr "Nhập địa chỉ email của bạn"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1381
+msgid "Write the message which will be displayed when the Javascript is disabled"
+msgstr "Viết thông báo sẽ được hiển thị khi Javascript bị tắt"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1379
+msgid "Message while Javascript is disabled"
+msgstr "Thông báo khi Javascript bị tắt"
+
+#: admin/class-secure-copy-content-protection-actions.php:130
+#: admin/partials/secure-copy-content-protection-admin-display.php:92
+#: public/class-secure-copy-content-protection-public.php:1238
+msgid "Javascript not detected. Javascript required for this site to function. Please enable it in your browser settings and refresh this page."
+msgstr "Javascript không được phát hiện. Javascript cần thiết để trang web này hoạt động. Vui lòng bật nó trong cài đặt trình duyệt của bạn và làm mới trang này."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1362
+msgid "It will block the site content if the user disabled browser Javascript. There will be a white screen with a message."
+msgstr "Nó sẽ chặn nội dung trang web nếu người dùng tắt Javascript của trình duyệt. Sẽ có một màn hình trắng với một thông báo."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1360
+msgid "Protect content when Javascript is disabled"
+msgstr "Bảo vệ nội dung khi Javascript bị tắt"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1213
+msgid "Disable CTRL-E"
+msgstr "Vô hiệu hóa CTRL-E"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1277
+#: admin/partials/secure-copy-content-protection-admin-display.php:1526
+msgid "( not recommended )"
+msgstr "(không khuyến khích)"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1184
+msgid "Disable ALT-D"
+msgstr "Vô hiệu hóa ALT-D"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1039
+msgid "Disable CTRL-K"
+msgstr "Vô hiệu hóa CTRL-K"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1097
+msgid "Disable F6"
+msgstr "Vô hiệu hóa F6"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:485
+#: admin/partials/secure-copy-content-protection-admin-display.php:1483
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:136
+msgid "This feature will available in PRO version"
+msgstr "Tính năng này sẽ có sẵn trong phiên bản PRO"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1554
+msgid "The header text for block content"
+msgstr "Văn bản tiêu đề cho nội dung khối"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1552
+msgid "Block content header text"
+msgstr "Tiêu đề nội dung bị chặn"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1012
+#: admin/partials/secure-copy-content-protection-admin-display.php:1099
+#: admin/partials/secure-copy-content-protection-admin-display.php:1186
+#: admin/partials/secure-copy-content-protection-admin-display.php:1215
+msgid "Does not allow to select the browser address bar"
+msgstr "Không cho phép chọn thanh địa chỉ trình duyệt"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1010
+msgid "Disable CTRL-L/CMD-L"
+msgstr "Vô hiệu hóa CTRL-L/CMD-L"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:983
+msgid "Does not allow to open history page"
+msgstr "Không cho phép mở trang lịch sử"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2477
+msgid "Choose the maximum amount of the usage of the password"
+msgstr "Chọn số lần sử dụng tối đa của mật khẩu"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2476
+msgid "Limit"
+msgstr "Giới hạn"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2534
+msgid "Block content status"
+msgstr "Trạng thái nội dung bị chặn"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2499
+msgid "Shows how many times have used a user role"
+msgstr "Hiển thị số lần đã sử dụng một vai trò người dùng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2470
+msgid "Shows how many times have used a password"
+msgstr "Hiển thị số lần đã sử dụng một mật khẩu"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2534
+msgid "Schedule"
+msgstr "Lịch trình"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:435
+msgid "This option will exclude input and textarea"
+msgstr "Tùy chọn này sẽ loại trừ ô nhập liệu và vùng văn bản"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:433
+msgid "Exclude input and textarea"
+msgstr "Loại trừ ô nhập liệu và vùng văn bản"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1976
+msgid "The opacity degree of the tooltip"
+msgstr "Mức độ mờ của tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1975
+msgid "Tooltip opacity"
+msgstr "Độ mờ tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2088
+msgid "Box-shadow color for tooltip"
+msgstr "Màu đổ bóng cho tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2086
+msgid "Tooltip box shadow"
+msgstr "Đổ bóng tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2247
+msgid "Custom HTML class for tooltip container. You can use your class for adding your custom styles for tooltip container."
+msgstr "Lớp HTML tùy chỉnh cho container tooltip. Bạn có thể sử dụng lớp của mình để thêm kiểu tùy chỉnh cho container tooltip."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2246
+msgid "Custom class for tooltip container"
+msgstr "Lớp tùy chỉnh cho container tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1838
+msgid "Background image for of the tooltip"
+msgstr "Hình nền cho tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1837
+msgid "Tooltip background image"
+msgstr "Hình nền tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:51
+#: admin/partials/settings/secure-copy-content-protection-settings.php:27
+#: admin/partials/settings/secure-copy-content-protection-settings.php:28
+msgid "Add Image"
+msgstr "Thêm hình ảnh"
+
+#: admin/class-secure-copy-content-protection-admin.php:203
+msgid "Just a moment..."
+msgstr "Vui lòng chờ..."
+
+#: public/class-secure-copy-content-protection-public.php:637
+msgid "Submit"
+msgstr "Gửi"
+
+#: admin/class-secure-copy-content-protection-actions.php:186
+#: admin/partials/secure-copy-content-protection-admin-display.php:82
+#: public/class-secure-copy-content-protection-public.php:803
+msgid "You need to Enter right password"
+msgstr "Bạn cần nhập mật khẩu đúng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:303
+#: admin/partials/secure-copy-content-protection-admin-display.php:2344
+msgid "Page Blocker"
+msgstr "Chặn trang"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:291
+#: admin/partials/secure-copy-content-protection-admin-display.php:2420
+msgid "Block Content"
+msgstr "Chặn nội dung"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:241
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:244
+msgid "Watermark images"
+msgstr "Hình mờ"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:191
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:194
+msgid "Block by Country"
+msgstr "Chặn theo quốc gia"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:181
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:184
+msgid "Block by IP"
+msgstr "Chặn theo IP"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:121
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:124
+msgid "Disable right-click"
+msgstr "Vô hiệu hóa chuột phải"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:111
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:114
+msgid "Content Protection"
+msgstr "Bảo vệ nội dung"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:101
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:104
+msgid "Usage for lifetime"
+msgstr "Sử dụng trọn đời"
+
+#: admin/partials/features/secure-copy-content-protection-featured-display.php:11
+msgid "Please feel free to use our other awesome plugins!"
+msgstr "Hãy thoải mái sử dụng các plugin tuyệt vời khác của chúng tôi!"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2057
+msgid "Tooltip padding in pixels."
+msgstr "Lề tooltip tính bằng pixel."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2055
+msgid "Tooltip padding"
+msgstr "Lề tooltip"
+
+#: includes/class-secure-copy-content-protection-data.php:907
+msgid "BUY NOW!"
+msgstr "MUA NGAY!"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:925
+msgid "Not allowed to find text on the page by CTRL+F/CMD+F, CTRL+G/CMD+G, CTRL+SHIFT+G/CMD+OPT+G"
+msgstr "Không được phép tìm kiếm văn bản trên trang bằng CTRL+F/CMD+F, CTRL+G/CMD+G, CTRL+SHIFT+G/CMD+OPT+G"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1512
+msgid "Enable watermark with notification text on all site images"
+msgstr "Bật hình mờ với văn bản thông báo trên tất cả hình ảnh của trang web"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:722
+msgid "Inspect element is not available to open by F12"
+msgstr "Kiểm tra phần tử không có sẵn để mở bằng F12."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:954
+msgid "Not allowed to print the page"
+msgstr "Không cho phép in trang"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:952
+msgid "Disable CTRL-P/CMD-P"
+msgstr "Vô hiệu hóa CTRL-P/CMD-P"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1311
+msgid "Not open images context menu in mobile browsers after taphold. But makes it impossible to scroll over the images."
+msgstr "Không mở menu ngữ cảnh hình ảnh trên trình duyệt di động sau khi nhấn giữ. Nhưng điều này khiến việc cuộn trên hình ảnh trở nên bất khả thi."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:981
+msgid "Disable CTRL-H/CMD-H"
+msgstr "Vô hiệu hóa CTRL-H/CMD-H"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:896
+msgid "Not allowed to view source of the page"
+msgstr "Không cho phép xem nguồn của trang"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:658
+msgid "Not allowed to open developer tools by CTRL+SHIFT+C/CMD+OPT+C, CTRL+SHIFT+J/CMD+OPT+J, CTRL+SHIFT+I/CMD+OPT+I"
+msgstr "Không cho phép mở công cụ dành cho nhà phát triển bằng CTRL+SHIFT+C/CMD+OPT+C, CTRL+SHIFT+J/CMD+OPT+J, CTRL+SHIFT+I/CMD+OPT+I"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:656
+msgid "Disable Developer Tools Hot-keys"
+msgstr "Vô hiệu hóa các phím tắt của Công cụ dành cho nhà phát triển"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:894
+msgid "Disable CTRL-U/CMD-U"
+msgstr "Vô hiệu hóa CTRL-U/CMD-U"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:364
+msgid "Enable text selecting. This option will work only on desktop, on mobile devices text selecting is always disabled."
+msgstr "Bật chọn văn bản. Tùy chọn này chỉ hoạt động trên máy tính để bàn, trên thiết bị di động, việc chọn văn bản luôn bị vô hiệu hóa."
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:362
+msgid "Enable text selecting"
+msgstr "Bật chọn văn bản"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2335
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1524
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1984
+msgid "Reset"
+msgstr "Đặt lại"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2328
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1517
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1977
+msgid "Reset tooltip styles to default values"
+msgstr "Đặt lại kiểu tooltip về giá trị mặc định"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2326
+msgid "Reset styles"
+msgstr "Đặt lại kiểu"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1737
+msgid "Right bottom"
+msgstr "Phía dưới bên phải"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1736
+msgid "Right top"
+msgstr "Phía trên bên phải"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1735
+msgid "Left bottom"
+msgstr "Phía dưới bên trái"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1734
+msgid "Left top"
+msgstr "Phía trên bên trái"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1733
+msgid "Center center"
+msgstr "Giữa giữa"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1731
+msgid "Mouse current position"
+msgstr "Vị trí chuột hiện tại"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1723
+msgid "Position of tooltip on window"
+msgstr "Vị trí tooltip trên cửa sổ"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1721
+msgid "Tooltip position"
+msgstr "Vị trí tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2313
+msgid "Field for entering your own CSS code"
+msgstr "Vùng nhập mã CSS của riêng bạn"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2311
+msgid "Custom CSS"
+msgstr "CSS tùy chỉnh"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1245
+msgid "Not allowed to print screen"
+msgstr "Không cho phép chụp màn hình"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:251
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:254
+msgid "Paid content via PayPal"
+msgstr "Nội dung trả phí qua PayPal"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:141
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:144
+msgid "Block content with password"
+msgstr "Chặn nội dung có mật khẩu"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2459
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:87
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2425
+#: admin/partials/secure-copy-content-protection-admin-display.php:2569
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:69
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:177
+msgid "Add new"
+msgstr "Thêm mới"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2469
+#: public/class-secure-copy-content-protection-public.php:640
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2495
+msgid "OR"
+msgstr "HOẶC"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2006
+msgid "Size of tooltip text"
+msgstr "Kích thước văn bản tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2004
+msgid "Tooltip Font size"
+msgstr "Cỡ chữ tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:307
+#: admin/partials/secure-copy-content-protection-admin-display.php:2382
+msgid "PayPal"
+msgstr "PayPal"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:532
+msgid "Play Audio"
+msgstr "Phát âm thanh"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:407
+msgid "The audio that plays after copy attempt"
+msgstr "Âm thanh phát sau khi cố gắng sao chép"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:405
+#: admin/partials/secure-copy-content-protection-admin-display.php:412
+msgid "Upload Audio"
+msgstr "Tải lên âm thanh"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:231
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:234
+msgid "Protection by post/post type"
+msgstr "Bảo vệ theo bài đăng/kiểu bài đăng"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:221
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:224
+msgid "Protection by user roles"
+msgstr "Bảo vệ theo vai trò người dùng"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:211
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:214
+msgid "Block Rest api"
+msgstr "Chặn Rest API"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:201
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:204
+msgid "Front/back blocker"
+msgstr "Trình chặn phía trước/sau"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2172
+msgid "This shows if the border is highlighted with style"
+msgstr "Điều này hiển thị nếu đường viền được làm nổi bật bằng kiểu"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2152
+msgid "This shows if the border has curvature"
+msgstr "Điều này hiển thị nếu đường viền có độ cong"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2133
+msgid "This shows the thickness of the border in pixels"
+msgstr "Điều này hiển thị độ dày của viền tính bằng pixel"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2119
+msgid "Color of tooltip border"
+msgstr "Màu của viền tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1992
+msgid "Color of tooltip text"
+msgstr "Màu của văn bản tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1990
+msgid "Tooltip text color"
+msgstr "Màu văn bản tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1771
+msgid "Filler color of tooltip"
+msgstr "Màu nền của tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1525
+#: admin/partials/secure-copy-content-protection-admin-display.php:1529
+msgid "Disable REST API"
+msgstr "Tắt REST API"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:867
+msgid "Not allowed to cut the highlighted text"
+msgstr "Không được phép cắt văn bản được bôi đen"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:838
+msgid "Not allowed to select all"
+msgstr "Không được phép chọn tất cả"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:780
+msgid "Not allowed to paste the highlighted text"
+msgstr "Không được phép dán văn bản được bôi đen"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:751
+msgid "Not allowed to copy the highlighted text"
+msgstr "Không được phép sao chép văn bản được bôi đen"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:565
+msgid "Right click is not allowed"
+msgstr "Không được phép click chuột phải"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1280
+msgid "Left click is not allowed"
+msgstr "Không được phép click chuột trái"
+
+#: admin/class-secure-copy-content-protection-actions.php:188
+#: admin/partials/secure-copy-content-protection-admin-display.php:90
+#: public/class-secure-copy-content-protection-public.php:249
+#: public/class-secure-copy-content-protection-public.php:386
+msgid "Subscribe"
+msgstr "Đăng ký"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2498
+msgid "Except"
+msgstr "Ngoại trừ"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:343
+msgid "Disable copy paste option for the website, except selected post types"
+msgstr "Tắt tùy chọn sao chép dán cho website, ngoại trừ các loại bài viết đã chọn"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:327
+msgid "Enable Options category of the plugin"
+msgstr "Bật danh mục Tùy chọn của plugin"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:720
+msgid "Disable F12"
+msgstr "Tắt F12"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:563
+msgid "Disable right click"
+msgstr "Tắt click chuột phải"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:529
+msgid "Show Message"
+msgstr "Hiển thị thông báo"
+
+#: admin/class-secure-copy-content-protection-admin.php:390
+#: admin/class-secure-copy-content-protection-admin.php:391
+msgid "PRO Features"
+msgstr "Tính năng PRO"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:51
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:61
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:268
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:274
+msgid "Buy now"
+msgstr "Mua ngay"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:131
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:134
+msgid "Style settings"
+msgstr "Cài đặt kiểu dáng"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:77
+msgid "Unlimited sites"
+msgstr "Số lượng website không giới hạn"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:76
+msgid "5 site"
+msgstr "5 website"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:75
+msgid "1 site"
+msgstr "1 website"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:71
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:74
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:91
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:94
+msgid "Support for"
+msgstr "Hỗ trợ cho"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:87
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:97
+msgid "Lifetime"
+msgstr "Trọn đời"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:86
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:96
+msgid "12 months"
+msgstr "12 tháng"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:85
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:95
+msgid "1 months"
+msgstr "1 tháng"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:81
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:84
+msgid "Upgrade for"
+msgstr "Nâng cấp cho"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:43
+msgid "Free"
+msgstr "Miễn phí"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:35
+msgid "Developer"
+msgstr "Nhà phát triển"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:29
+msgid "Business"
+msgstr "Doanh nghiệp"
+
+#: admin/partials/features/secure-copy-content-protection-pro-features.php:24
+msgid "Personal"
+msgstr "Cá nhân"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:865
+msgid "Disable CTRL-X/CMD-X"
+msgstr "Tắt CTRL-X/CMD-X"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:836
+msgid "Disable CTRL-A/CMD-A"
+msgstr "Tắt CTRL-A/CMD-A"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:807
+msgid "Disable CTRL-S/CMD-S"
+msgstr "Tắt CTRL-S/CMD-S"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:778
+msgid "Disable CTRL-V/CMD-V"
+msgstr "Tắt CTRL-V/CMD-V"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:749
+msgid "Disable CTRL-C/CMD-C"
+msgstr "Tắt CTRL-C/CMD-C"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:299
+#: admin/partials/secure-copy-content-protection-admin-display.php:1675
+msgid "Block Country"
+msgstr "Chặn quốc gia"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1276
+msgid "Disable left click"
+msgstr "Tắt click chuột trái"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:283
+msgid "Options"
+msgstr "Tùy chọn"
+
+#: admin/class-secure-copy-content-protection-admin.php:716
+#: admin/partials/settings/secure-copy-content-protection-settings.php:277
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2780
+msgid "Close"
+msgstr "Đóng"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2764
+msgid "Add IP parts"
+msgstr "Thêm phần IP"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2756
+msgid "Blacklist modal"
+msgstr "Modal danh sách đen"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2185
+msgid "Dashed"
+msgstr "Đường nét đứt"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2184
+msgid "Dotted"
+msgstr "Đường nét chấm"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2183
+msgid "Double"
+msgstr "Đường nét kép"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2182
+msgid "Solid"
+msgstr "Đường nét liền"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1931
+#: admin/partials/secure-copy-content-protection-admin-display.php:2181
+#: admin/partials/settings/secure-copy-content-protection-settings.php:982
+#: admin/partials/settings/secure-copy-content-protection-settings.php:994
+msgid "None"
+msgstr "Không"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2170
+msgid "Tooltip border style"
+msgstr "Kiểu viền Tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2150
+msgid "Tooltip border radius"
+msgstr "Bán kính viền Tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2131
+msgid "Tooltip border width"
+msgstr "Độ rộng viền Tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2117
+msgid "Tooltip border color"
+msgstr "Màu viền Tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:1769
+msgid "Tooltip background color"
+msgstr "Màu nền Tooltip"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:2782
+msgid "Add IP"
+msgstr "Thêm IP"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:287
+#: admin/partials/secure-copy-content-protection-admin-display.php:1713
+#: admin/partials/settings/secure-copy-content-protection-settings.php:730
+#: admin/partials/settings/secure-copy-content-protection-settings.php:1530
+msgid "Styles"
+msgstr "Kiểu hiển thị"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:295
+#: admin/partials/secure-copy-content-protection-admin-display.php:1637
+msgid "Block IPs"
+msgstr "Chặn IP"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:279
+#: admin/partials/secure-copy-content-protection-admin-display.php:320
+#: admin/partials/settings/secure-copy-content-protection-settings.php:291
+msgid "General"
+msgstr "Tổng quan"
+
+#: admin/class-secure-copy-content-protection-actions.php:16
+#: admin/class-secure-copy-content-protection-actions.php:379
+#: admin/class-secure-copy-content-protection-actions.php:474
+#: includes/class-secure-copy-content-protection-activator.php:176
+#: public/class-secure-copy-content-protection-public.php:981
+msgid "You cannot copy content of this page"
+msgstr "Bạn không thể sao chép nội dung của trang này"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:378
+#: admin/partials/settings/secure-copy-content-protection-settings.php:409
+#: admin/partials/settings/secure-copy-content-protection-settings.php:415
+msgid "Notification text"
+msgstr "Văn bản thông báo"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:341
+msgid "Except this"
+msgstr "Ngoại trừ điều này"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:325
+msgid "Enable copy protection in all post types"
+msgstr "Bật bảo vệ sao chép trong tất cả các loại bài viết"
+
+#: admin/partials/secure-copy-content-protection-admin-display.php:264
+#: admin/partials/secure-copy-content-protection-admin-display.php:2703
+#: admin/partials/settings/secure-copy-content-protection-settings.php:2001
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:49
+#: admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:190
+msgid "Save changes"
+msgstr "Lưu thay đổi"
+
+#. Author URI of the plugin
+#: secure-copy-content-protection.php
+msgid "https://ays-pro.com/"
+msgstr "https://ays-pro.com/"
+
+#. Author of the plugin
+#: secure-copy-content-protection.php
+msgid "Copy Content Protection Team"
+msgstr "Nhóm bảo vệ nội dung sao chép"
+
+#. Description of the plugin
+#: secure-copy-content-protection.php
+msgid "Copy Protection plugin is activated it disables the right click, copy paste, content selection and copy shortcut keys"
+msgstr "Plugin Bảo vệ Sao chép được kích hoạt, nó vô hiệu hóa chuột phải, sao chép dán, chọn nội dung và các phím tắt sao chép"
+
+#. Plugin URI of the plugin
+#: secure-copy-content-protection.php
+msgid "https://ays-pro.com/wordpress/secure-copy-content-protection/"
+msgstr "https://ays-pro.com/wordpress/secure-copy-content-protection/"
+
+#. Plugin Name of the plugin
+#: secure-copy-content-protection.php
+#: includes/class-secure-copy-content-protection-data.php:820
+#: includes/class-secure-copy-content-protection-data.php:882
+#: secure-copy-content-protection.php:115
+msgid "Secure Copy Content Protection"
+msgstr "Secure Copy Content Protection"
