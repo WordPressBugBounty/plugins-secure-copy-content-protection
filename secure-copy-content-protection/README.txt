@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
 Tested up to: 6.8.1
-Stable tag: 4.6.5
+Stable tag: 4.6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -262,6 +262,10 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 
 == Changelog ==
+
+= 4.6.6 ( June 17, 2025 ) =
+* Added: Mobile Container Description Font size option for Subscribe to view box on the general settings
+* Improved: Some changes on the admin dashboard
 
 = 4.6.5 ( June 12, 2025 ) =
 * Fixed: Language translation problem

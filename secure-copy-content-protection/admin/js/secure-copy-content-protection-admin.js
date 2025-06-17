@@ -470,6 +470,9 @@
             $(document).find("#enable_ays_sccp_sub_title_size_mobile").prop('checked', true).change();
 
             $(document).find('#ays_sccp_sub_desc_size').val('18');
+            $(document).find('#ays_sccp_sub_desc_size_mobile').val('18').change();
+            $(document).find("#enable_ays_sccp_sub_desc_size_mobile").prop('checked', true).change();
+            
             $(document).find("#ays_sccp_sub_text_alignment_left").prop('checked' , false).change();
             $(document).find("#ays_sccp_sub_text_alignment_center").prop('checked' , true).change();
             $(document).find("#ays_sccp_sub_text_alignment_right").prop('checked' , false).change();

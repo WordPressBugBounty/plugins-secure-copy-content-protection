@@ -123,6 +123,13 @@ $sccp_sub_title_size_mobile = isset( $subscribe['sccp_sub_title_size_mobile'] ) 
 // Subscribe box description font size
 $sccp_sub_desc_size = (isset($subscribe['sccp_sub_desc_size']) && $subscribe['sccp_sub_desc_size'] != '' && $subscribe['sccp_sub_desc_size'] != 0) ? absint( sanitize_text_field($subscribe['sccp_sub_desc_size']) ) : 18 ;
 
+// Enable Subscribe box description font size Mobile
+$subscribe['enable_sccp_sub_desc_size_mobile'] = isset( $subscribe['enable_sccp_sub_desc_size_mobile'] ) && $subscribe['enable_sccp_sub_desc_size_mobile'] == 'off' ? 'off' : 'on';
+$enable_sccp_sub_desc_size_mobile = $subscribe['enable_sccp_sub_desc_size_mobile'] == 'on' ?  true : false;
+
+// Subscribe box description font size Mobile
+$sccp_sub_desc_size_mobile = isset( $subscribe['sccp_sub_desc_size_mobile'] ) && $subscribe['sccp_sub_desc_size_mobile'] != 0 ? esc_attr( $subscribe['sccp_sub_desc_size_mobile'] ) : $sccp_sub_desc_size;
+
 // Subscribe box text color
 $ays_sccp_sub_text_color = ( isset( $subscribe['sccp_sub_text_color'] ) && $subscribe['sccp_sub_text_color'] != '' ) ? stripslashes( esc_attr($subscribe['sccp_sub_text_color']) ) : '#000';
 
@@ -1284,12 +1291,35 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left ays_sccp_display_flex">
-                                <div>
-                                   <input type="number" name="ays_sccp_sub_desc_size" id="ays_sccp_sub_desc_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size; ?>">
-                                </div>
-                                <div class="ays_sccp_dropdown_max_width">
-                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-                                </div>
+                            	<div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_display_flex">
+			                                <div>
+			                                <input type="number" name="ays_sccp_sub_desc_size" id="ays_sccp_sub_desc_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size; ?>">
+			                                </div>
+			                                <div class="ays_sccp_dropdown_max_width">
+			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+			                                </div>
+			                            </div>
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_display_flex">
+			                                <div>
+			                                   <input type="number" name="ays_sccp_sub_desc_size_mobile" id="ays_sccp_sub_desc_size_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size_mobile; ?>">
+			                                </div>
+			                                <div class="ays_sccp_dropdown_max_width">
+			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+			                                </div>
+			                            </div>
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_desc_size_mobile" name="enable_ays_sccp_sub_desc_size_mobile" <?php echo $enable_sccp_sub_desc_size_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_sub_desc_size_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    </div>
+                                </div>                                
                             </div>                            
                         </div>
                         <hr>

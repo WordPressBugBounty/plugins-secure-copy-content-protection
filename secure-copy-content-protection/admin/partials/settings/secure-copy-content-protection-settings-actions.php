@@ -55,6 +55,12 @@ class Sccp_Settings_Actions {
             // Subscribe box description size
             $ays_sccp_sub_desc_size = (isset($data['ays_sccp_sub_desc_size']) && $data['ays_sccp_sub_desc_size'] != '') ? absint( sanitize_text_field($data['ays_sccp_sub_desc_size']) ) : 18;
 
+            // Enable Subscribe box description size Mobile
+            $enable_ays_sccp_sub_desc_size_mobile = isset( $data['enable_ays_sccp_sub_desc_size_mobile'] ) && $data['enable_ays_sccp_sub_desc_size_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box description size Mobile
+            $ays_sccp_sub_desc_size_mobile = isset( $data['ays_sccp_sub_desc_size_mobile'] ) && $data['ays_sccp_sub_desc_size_mobile'] != '' ? absint( sanitize_text_field( $data['ays_sccp_sub_desc_size_mobile'] ) ) : 18;
+
             // Subscribe box text color
             $sub_text_color = ( isset( $data['sub_text_color'] ) && $data['sub_text_color'] != '') ? stripslashes( esc_attr($data['sub_text_color'] ) ) : '#000';
 
@@ -208,6 +214,8 @@ class Sccp_Settings_Actions {
                 "enable_sccp_sub_title_size_mobile"         => $enable_ays_sccp_sub_title_size_mobile,
                 "sccp_sub_title_size_mobile"                => $ays_sccp_sub_title_size_mobile,
                 "sccp_sub_desc_size"                        => $ays_sccp_sub_desc_size,
+                "enable_sccp_sub_desc_size_mobile"          => $enable_ays_sccp_sub_desc_size_mobile,
+                "sccp_sub_desc_size_mobile"                 => $ays_sccp_sub_desc_size_mobile,
                 "enable_sub_btn_style"                      => $enable_sub_btn_style,
                 "sub_btn_color"                             => $sub_btn_color,
                 "sub_btn_text_color"                        => $sub_btn_text_color,
