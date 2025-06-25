@@ -252,11 +252,21 @@ class Secure_Copy_Content_Protection_Public {
             $sub_desc_size_mobile = ( isset( $subscribe_settings['sccp_sub_desc_size_mobile'] ) && $subscribe_settings['sccp_sub_desc_size_mobile'] != '' && $subscribe_settings['sccp_sub_desc_size_mobile'] != 0 ) ?  'font-size: '. absint( sanitize_text_field( $subscribe_settings['sccp_sub_desc_size_mobile'] ) ). 'px !important;' : $sub_desc_size;
         } else {
             $sub_desc_size_mobile = $sub_desc_size;
-        }
-		
+        }		
 
         // Subscribe button text
 		$sub_button_text = (isset($subscribe_settings['sccp_sub_button_text']) && $subscribe_settings['sccp_sub_button_text'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_button_text']) ) : __('Subscribe', 'secure-copy-content-protection');
+
+		// Enable Subscribe button text Mobile
+        $subscribe_settings['enable_sccp_sub_button_text_mobile'] = ( isset( $subscribe_settings['enable_sccp_sub_button_text_mobile'] ) && $subscribe_settings['enable_sccp_sub_button_text_mobile'] == 'off') ? false : true;
+        
+        // Subscribe button text Mobile
+        if ( $subscribe_settings['enable_sccp_sub_button_text_mobile'] ) {
+            
+        	$sub_button_text_mobile = (isset($subscribe_settings['sccp_sub_button_text_mobile']) && $subscribe_settings['sccp_sub_button_text_mobile'] != '') ? stripslashes( esc_attr($subscribe_settings['sccp_sub_button_text_mobile']) ) : $sub_button_text;
+        } else {
+            $sub_button_text_mobile = $sub_button_text;
+        }
 
 		// Subscribe Add Icon image
 		$sccp_sub_icon_image = isset($subscribe_settings["sub_icon_image"]) && !empty($subscribe_settings["sub_icon_image"]) ? $subscribe_settings["sub_icon_image"] : SCCP_PUBLIC_URL.'/images/email.png';
@@ -491,15 +501,15 @@ class Secure_Copy_Content_Protection_Public {
 				'. $block_sub_desc_field .'
 				<form action="" class="ays_sb_form" method="post">
 					<div class="subscribe_form" style="'.$sub_block_button_style.'">
-					'.$block_sub_name_field . '
-					<div class="subscribe_form_email">
-						<input type="email" class="ays_sccp_sb_email ays_sccp_sb_field" required name="ays_sb_email_form_'.$id.'" placeholder="'.$sub_email_place_text.'" style="'.$sub_block_input_style.'">
+						'.$block_sub_name_field . '
+						<div class="subscribe_form_email">
+							<input type="email" class="ays_sccp_sb_email ays_sccp_sb_field" required name="ays_sb_email_form_'.$id.'" placeholder="'.$sub_email_place_text.'" style="'.$sub_block_input_style.'">
+						</div>
+						<div class="subscribe_form_email">
+							<input type="submit" style="'.$sccp_sub_btn_color.' '.$sccp_sub_btn_text_color.' '.$sccp_sub_btn_size.' '.$sccp_sub_btn_radius.' '.$sccp_sub_btn_padding.' '. $sccp_sub_btn_border_width.' '.$sccp_sub_btn_border_color.' '.$sccp_sub_btn_border_style.'" class="ays_sccp_sb_sbm ays_sccp_sb_field" name="subscribe_sub_'.$id.'" id="subscribe_sub_'.$id.'" value="'.$sub_button_text.'" data-mobile-value="'.$sub_button_text_mobile.'" data-desktop-value="'.$sub_button_text.'">
+						</div>
 					</div>
-					<div class="subscribe_form_email">
-						<input type="submit" style="'.$sccp_sub_btn_color.' '.$sccp_sub_btn_text_color.' '.$sccp_sub_btn_size.' '.$sccp_sub_btn_radius.' '.$sccp_sub_btn_padding.' '. $sccp_sub_btn_border_width.' '.$sccp_sub_btn_border_color.' '.$sccp_sub_btn_border_style.'" class="ays_sccp_sb_sbm ays_sccp_sb_field" name="subscribe_sub_'.$id.'" value="'.$sub_button_text.'">
-					</div>
-					</div>
-				</form>
+				</form>				
 			</div>';
 
 		$ays_sb_email = isset( $_POST['ays_sb_email_form_'.$id] ) && $_POST['ays_sb_email_form_'.$id] != '' ? esc_sql( sanitize_email( $_POST['ays_sb_email_form_'.$id] ) ) : '';

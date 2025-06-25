@@ -42,4 +42,30 @@
             inp.addClass('ays_green_border').removeAttr('title');
         }
     });
+
+    function updateSubmitButtonText() {
+        $(document).find('.ays_sccp_sb_sbm').each(function() {
+            var $btn = $(this);
+            var mobileText = $btn.data('mobile-value');
+            var originalText = $btn.data('desktop-value');
+
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                if (mobileText) {
+                    $btn.val(mobileText);
+                }
+            } else {
+                if (originalText) {
+                    $btn.val(originalText);
+                }
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        updateSubmitButtonText();
+    });
+
+    $(window).on('resize', function() {
+        updateSubmitButtonText();
+    });    
 })(jQuery);

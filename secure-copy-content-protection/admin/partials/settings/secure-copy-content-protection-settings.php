@@ -173,6 +173,13 @@ $sub_title_transformation_mobile = isset( $subscribe['sub_title_transformation_m
 // Subscribe box button text
 $ays_sccp_sub_button_text = (isset($subscribe['sccp_sub_button_text']) && $subscribe['sccp_sub_button_text'] != '') ? stripslashes( esc_attr($subscribe['sccp_sub_button_text']) ) : 'Subscribe' ;
 
+// Enable Subscribe box button text Mobile
+$subscribe['enable_sccp_sub_button_text_mobile'] = isset( $subscribe['enable_sccp_sub_button_text_mobile'] ) && $subscribe['enable_sccp_sub_button_text_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_sub_button_text_mobile = $subscribe['enable_sccp_sub_button_text_mobile'] == 'on' ?  true : false;
+
+// Subscribe box button text Mobile
+$ays_sccp_sub_button_text_mobile = isset( $subscribe['sccp_sub_button_text_mobile'] ) && $subscribe['sccp_sub_button_text_mobile'] != '' ? stripslashes( esc_attr( $subscribe['sccp_sub_button_text_mobile'] ) ) : $ays_sccp_sub_button_text;
+
 // Subscribe box email placeholder text
 $sccp_sub_email_place_text = (isset($subscribe['sccp_sub_email_place_text']) && $subscribe['sccp_sub_email_place_text'] != '') ? stripslashes( esc_attr($subscribe['sccp_sub_email_place_text']) ) : 'Type your email address' ;
 
@@ -1184,7 +1191,21 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <input type="text" name="ays_sccp_sub_button_text" id="ays_sccp_sub_button_text" class="ays-text-input" value="<?php echo $ays_sccp_sub_button_text; ?>">
+                            	<div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" name="ays_sccp_sub_button_text" id="ays_sccp_sub_button_text" class="ays-text-input" value="<?php echo $ays_sccp_sub_button_text; ?>">
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_button_text_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" name="ays_sccp_sub_button_text_mobile" id="ays_sccp_sub_button_text_mobile" class="ays-text-input" value="<?php echo $ays_sccp_sub_button_text_mobile; ?>">
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_button_text_mobile" name="enable_ays_sccp_sub_button_text_mobile" <?php echo $enable_ays_sccp_sub_button_text_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_sub_button_text_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    </div>
+                                </div>                                
                             </div>
                         </div>                        
                         <hr/>
