@@ -401,6 +401,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Subscribe box text alignment
         $sccp_sub_text_alignment = (isset($subscribe_settings['sccp_sub_text_alignment']) && sanitize_text_field( $subscribe_settings['sccp_sub_text_alignment'] ) != '') ? sanitize_text_field( $subscribe_settings['sccp_sub_text_alignment'] ) : 'center';
 
+        // Enable Subscribe box text alignment Mobile
+        $subscribe_settings['enable_sccp_sub_text_alignment_mobile'] = ( isset( $subscribe_settings['enable_sccp_sub_text_alignment_mobile'] ) && $subscribe_settings['enable_sccp_sub_text_alignment_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box text alignment Mobile
+        if ( $subscribe_settings['enable_sccp_sub_text_alignment_mobile'] ) {
+            $sccp_sub_text_alignment_mobile = ( isset( $subscribe_settings['sccp_sub_text_alignment_mobile'] ) && $subscribe_settings['sccp_sub_text_alignment_mobile'] != '' ) ?  sanitize_text_field( $subscribe_settings['sccp_sub_text_alignment_mobile'] ) : $sccp_sub_text_alignment;
+        } else {
+            $sccp_sub_text_alignment_mobile = $sccp_sub_text_alignment;
+        }
+
 		$consub_div = 'style="'.$sub_width.' '.$sub_text_color.' '.$sub_bg_color.' '.$sub_cont_border_style.' '.$sub_cont_border_width.' '.$sccp_sub_cont_border_color.' '.$sccp_sub_bg_image.' '.$sccp_sub_bg_image_position.'"';
 
 		$subs_to_view_header_text = isset($ays_sccp_data["subs_to_view_header_text"]) && !empty($ays_sccp_data["subs_to_view_header_text"]) ? stripslashes($ays_sccp_data["subs_to_view_header_text"]) : __('Subscribe', 'secure-copy-content-protection');
@@ -474,11 +484,18 @@ class Secure_Copy_Content_Protection_Public {
 					p.consub_para.consub_para_desc {
 					    '. $sub_desc_text_color_mobile .'
 						'. $sub_desc_size_mobile .';
+						text-align: '. $sccp_sub_text_alignment_mobile .' !important;
+
 					}
 
 					p.consub_para.consub_para_title {
 						text-transform:'. $sub_title_transformation_mobile .';
 						'. $sub_title_size_mobile .';
+						text-align: '. $sccp_sub_text_alignment_mobile .' !important;
+					}
+
+					div.consub_icon {						
+						justify-content: '. $sccp_sub_text_alignment_mobile .' !important;
 					}
 
 					input.ays_sccp_sb_email.ays_sccp_sb_field[type="email"], 

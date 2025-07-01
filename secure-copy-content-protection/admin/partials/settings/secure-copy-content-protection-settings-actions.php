@@ -175,6 +175,12 @@ class Sccp_Settings_Actions {
             // Subscribe box text alignment
             $sccp_sub_text_alignment = (isset($data['ays_sccp_sub_text_alignment']) && sanitize_text_field( $data['ays_sccp_sub_text_alignment']) != '') ? sanitize_text_field( $data['ays_sccp_sub_text_alignment'] ) : 'center';
 
+            // Enable Subscribe box text alignment Mobile
+            $enable_sccp_sub_text_alignment_mobile = isset( $data['enable_ays_sccp_sub_text_alignment_mobile'] ) && $data['enable_ays_sccp_sub_text_alignment_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box text alignment Mobile
+            $sccp_sub_text_alignment_mobile = isset( $data['ays_sccp_sub_text_alignment_mobile'] ) && $data['ays_sccp_sub_text_alignment_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_text_alignment_mobile'] ) : 'center';
+
             // Subscribe box Width by percentage or pixels
             $sccp_sub_width_by_percentage_px = (isset($data['ays_sccp_sub_width_by_percentage_px']) && $data['ays_sccp_sub_width_by_percentage_px'] != '') ? sanitize_text_field( $data['ays_sccp_sub_width_by_percentage_px'] ) : 'pixels';
 
@@ -245,6 +251,8 @@ class Sccp_Settings_Actions {
                 "sub_btn_left_right_padding"                => $buttons_left_right_padding,
                 "sub_btn_top_bottom_padding"                => $buttons_top_bottom_padding,
                 "sccp_sub_text_alignment"                   => $sccp_sub_text_alignment,
+                "enable_sccp_sub_text_alignment_mobile"     => $enable_sccp_sub_text_alignment_mobile,
+                "sccp_sub_text_alignment_mobile"            => $sccp_sub_text_alignment_mobile,
                 "sccp_sub_width_by_percentage_px"           => $sccp_sub_width_by_percentage_px,
                 "sccp_sub_width_mobile_by_percentage_px"    => $sccp_sub_width_mobile_by_percentage_px
             );            

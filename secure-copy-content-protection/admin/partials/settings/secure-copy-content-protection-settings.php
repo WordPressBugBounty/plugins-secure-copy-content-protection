@@ -257,6 +257,13 @@ $buttons_top_bottom_padding = (isset($subscribe['sub_btn_top_bottom_padding']) &
 // Subscribe box text alignment
 $ays_sccp_sub_text_alignment = (isset($subscribe['sccp_sub_text_alignment']) && sanitize_text_field( $subscribe['sccp_sub_text_alignment'] ) != '') ? sanitize_text_field( $subscribe['sccp_sub_text_alignment'] ) : 'center';
 
+// Enable Subscribe box text alignment Mobile
+$subscribe['enable_sccp_sub_text_alignment_mobile'] = isset( $subscribe['enable_sccp_sub_text_alignment_mobile'] ) && $subscribe['enable_sccp_sub_text_alignment_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_sub_text_alignment_mobile = $subscribe['enable_sccp_sub_text_alignment_mobile'] == 'on' ?  true : false;
+
+// Subscribe box text alignment Mobile
+$ays_sccp_sub_text_alignment_mobile = isset( $subscribe['sccp_sub_text_alignment_mobile'] ) && $subscribe['sccp_sub_text_alignment_mobile'] != '' ? esc_attr( $subscribe['sccp_sub_text_alignment_mobile'] ) : $ays_sccp_sub_text_alignment;
+
 $loader_iamge = "<span class='ays_display_none ays_sccp_loader_box'><img src='". SCCP_ADMIN_URL ."/images/loaders/loading.gif'></span>";
 
 $sccp_sub_icon_image = isset($subscribe["sub_icon_image"]) || !empty($subscribe["sub_icon_image"]) ? $subscribe["sub_icon_image"] : '';
@@ -1354,18 +1361,48 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <div class="form-check form-check-inline checkbox_ays">
-                                    <input type="radio" id="ays_sccp_sub_text_alignment_left" class="form-check-input" name="ays_sccp_sub_text_alignment" value="left" <?php echo ($ays_sccp_sub_text_alignment == 'left') ? 'checked' : ''; ?>/>
-                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_left"><?php echo __( 'Left', 'secure-copy-content-protection' ); ?></label>
-                                </div>
-                                <div class="form-check form-check-inline checkbox_ays">
-                                    <input type="radio" id="ays_sccp_sub_text_alignment_center" class="form-check-input" name="ays_sccp_sub_text_alignment" value="center" <?php echo ($ays_sccp_sub_text_alignment == 'center') ? 'checked' : ''; ?>/>
-                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_center"><?php echo __( 'Center', 'secure-copy-content-protection' ); ?></label>
-                                </div>
-                                <div class="form-check form-check-inline checkbox_ays">
-                                    <input type="radio" id="ays_sccp_sub_text_alignment_right" class="form-check-input" name="ays_sccp_sub_text_alignment" value="right" <?php echo ($ays_sccp_sub_text_alignment == 'right') ? 'checked' : ''; ?>/>
-                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_right"><?php echo __( 'Right', 'secure-copy-content-protection' ); ?></label>
-                                </div>                                
+
+                            	<div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_text_alignment_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_display_flex">
+			                                <div class="form-check form-check-inline checkbox_ays">
+			                                    <input type="radio" id="ays_sccp_sub_text_alignment_left" class="form-check-input" name="ays_sccp_sub_text_alignment" value="left" <?php echo ( $ays_sccp_sub_text_alignment == 'left' ) ? 'checked' : ''; ?>/>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_left"><?php echo __( 'Left', 'secure-copy-content-protection' ); ?></label>
+			                                </div>
+			                                <div class="form-check form-check-inline checkbox_ays">
+			                                    <input type="radio" id="ays_sccp_sub_text_alignment_center" class="form-check-input" name="ays_sccp_sub_text_alignment" value="center" <?php echo ($ays_sccp_sub_text_alignment == 'center') ? 'checked' : ''; ?>/>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_center"><?php echo __( 'Center', 'secure-copy-content-protection' ); ?></label>
+			                                </div>
+			                                <div class="form-check form-check-inline checkbox_ays">
+			                                    <input type="radio" id="ays_sccp_sub_text_alignment_right" class="form-check-input" name="ays_sccp_sub_text_alignment" value="right" <?php echo ($ays_sccp_sub_text_alignment == 'right') ? 'checked' : ''; ?>/>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_right"><?php echo __( 'Right', 'secure-copy-content-protection' ); ?></label>
+			                                </div>
+			                            </div>
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_text_alignment_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_display_flex">
+			                                <div class="form-check form-check-inline checkbox_ays">
+			                                    <input type="radio" id="ays_sccp_sub_text_alignment_left_mobile" class="form-check-input" name="ays_sccp_sub_text_alignment_mobile" value="left" <?php echo ( $ays_sccp_sub_text_alignment_mobile == 'left') ? 'checked' : ''; ?>/>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_left_mobile"><?php echo __( 'Left', 'secure-copy-content-protection' ); ?></label>
+			                                </div>
+			                                <div class="form-check form-check-inline checkbox_ays">
+			                                    <input type="radio" id="ays_sccp_sub_text_alignment_center_mobile" class="form-check-input" name="ays_sccp_sub_text_alignment_mobile" value="center" <?php echo ( $ays_sccp_sub_text_alignment_mobile == 'center') ? 'checked' : ''; ?>/>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_center_mobile"><?php echo __( 'Center', 'secure-copy-content-protection' ); ?></label>
+			                                </div>
+			                                <div class="form-check form-check-inline checkbox_ays">
+			                                    <input type="radio" id="ays_sccp_sub_text_alignment_right_mobile" class="form-check-input" name="ays_sccp_sub_text_alignment_mobile" value="right" <?php echo ( $ays_sccp_sub_text_alignment_mobile == 'right' ) ? 'checked' : ''; ?>/>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_right_mobile"><?php echo __( 'Right', 'secure-copy-content-protection' ); ?></label>
+			                                </div>
+			                            </div>
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_text_alignment_mobile" name="enable_ays_sccp_sub_text_alignment_mobile" <?php echo $enable_ays_sccp_sub_text_alignment_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_sub_text_alignment_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    </div>
+                                </div>                                                                
                             </div>
                         </div>
                         <hr>
