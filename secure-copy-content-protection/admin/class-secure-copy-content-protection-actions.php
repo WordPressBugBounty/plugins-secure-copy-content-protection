@@ -618,7 +618,7 @@ class Secure_Copy_Content_Protection_Actions {
 		}
 
 		?>
-        <div class="notice notice-success is-dismissible" style="margin-top:20px">
+        <div class="ays-sccp-admin-notice notice notice-success is-dismissible" style="margin-top:20px">
             <p> <?php echo esc_html($updated_message); ?> </p>
         </div>
         <?php 

@@ -114,11 +114,13 @@ class Secure_Copy_Content_Protection_Admin {
 		wp_enqueue_style($this->plugin_name . '-admin', plugin_dir_url(__FILE__) . 'css/admin.css', array(), $this->version, 'all');
 		wp_enqueue_style($this->plugin_name . '-sweetalert2', plugin_dir_url(__FILE__) . 'css/sweetalert2.min.css', array(), $this->version, 'all');		
 
-		wp_enqueue_style($this->plugin_name . "-banner", plugin_dir_url(__FILE__) . 'css/secure-copy-content-protection-banner.css', array(), $this->version, 'all');
 
 		if (false === strpos($hook_suffix, $this->plugin_name)) {
 			return;
 		}
+
+		wp_enqueue_style($this->plugin_name . "-banner", plugin_dir_url(__FILE__) . 'css/secure-copy-content-protection-banner.css', array(), $this->version, 'all');
+		
 		/**
 		 * This function is provided for demonstration purposes only.
 		 *
