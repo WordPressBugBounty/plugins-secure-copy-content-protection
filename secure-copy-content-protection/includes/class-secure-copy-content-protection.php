@@ -183,6 +183,7 @@ class Secure_Copy_Content_Protection {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'disable_scripts', 100 );
+		$this->loader->add_action('current_screen', $plugin_admin, 'ays_sccp_disable_all_notice_from_plugin', 200, 1);
 
 		$this->loader->add_action('wp_ajax_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option');
 		$this->loader->add_action('wp_ajax_nopriv_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option');

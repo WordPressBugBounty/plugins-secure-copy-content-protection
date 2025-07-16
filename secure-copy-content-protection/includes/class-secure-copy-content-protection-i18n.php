@@ -36,7 +36,12 @@ class Secure_Copy_Content_Protection_i18n {
 
 		if ( version_compare( get_bloginfo( 'version' ), '6.7', '>=' ) ) {
             $plugin = 'secure-copy-content-protection';
-            $locale = get_locale();
+
+            if( is_admin() ){
+                $locale = get_user_locale();
+            } else {
+                $locale = get_locale();
+            }
 
 			if ( is_textdomain_loaded( $plugin ) ) {
                 unload_textdomain( $plugin );
