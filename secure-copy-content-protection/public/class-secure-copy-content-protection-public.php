@@ -292,9 +292,26 @@ class Secure_Copy_Content_Protection_Public {
 		// Subscribe button style
 		$subscribe_settings['enable_sub_btn_style'] = (isset($subscribe_settings['enable_sub_btn_style']) && $subscribe_settings['enable_sub_btn_style'] == 'on') ? 'on' : 'off'; 
 		$ays_sccp_enable_sub_btn_style = (isset($subscribe_settings['enable_sub_btn_style']) && $subscribe_settings['enable_sub_btn_style'] == 'on') ? true : false;
+
+		// Subscribe box button color
 		$ays_sccp_sub_btn_color = (isset($subscribe_settings['sub_btn_color']) && $subscribe_settings['sub_btn_color'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_btn_color'] ) ) : 'rgba(255,255,255,0)';
+
+		// Enable Subscribe box button color Mobile
+        $subscribe_settings['enable_sub_btn_color_mobile'] = ( isset( $subscribe_settings['enable_sub_btn_color_mobile'] ) && $subscribe_settings['enable_sub_btn_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box button color Mobile
+        if ( $subscribe_settings['enable_sub_btn_color_mobile'] ) {
+            $ays_sccp_sub_btn_color_mobile = ( isset( $subscribe_settings['sub_btn_color_mobile'] ) && $subscribe_settings['sub_btn_color_mobile'] != '' ) ?  stripslashes( esc_attr( $subscribe_settings['sub_btn_color_mobile'] ) ) : $ays_sccp_sub_btn_color;
+        } else {
+            $ays_sccp_sub_btn_color_mobile = $ays_sccp_sub_btn_color;
+        }
+
 		$ays_sccp_sub_btn_text_color = (isset($subscribe_settings['sub_btn_text_color']) && $subscribe_settings['sub_btn_text_color'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_btn_text_color'] ) ) : '#000000';
+
 		$sccp_sub_btn_color = $ays_sccp_enable_sub_btn_style ? 'background-color:'.$ays_sccp_sub_btn_color.';' : '';
+
+		$sccp_sub_btn_color_mobile = $ays_sccp_enable_sub_btn_style ? 'background-color:'.$ays_sccp_sub_btn_color_mobile.' !important;' : '';
+
 		$sccp_sub_btn_text_color = $ays_sccp_enable_sub_btn_style ? 'color:'.$ays_sccp_sub_btn_text_color.';' : '';
 
 		$ays_sccp_sub_btn_size = (isset($subscribe_settings['sub_btn_size']) && $subscribe_settings['sub_btn_size'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_btn_size'] ) ) : '14';
@@ -502,13 +519,17 @@ class Secure_Copy_Content_Protection_Public {
 					input.ays_sccp_sb_name.ays_sccp_sb_field[type="text"]{
 						'. $sub_cont_input_width_mobile .'
 					}
+					input.ays_sccp_sb_sbm.ays_sccp_sb_field[type="submit"]{
+						'. $sccp_sub_btn_color_mobile .'
+					}
+
 				}
 
 				input.ays_sccp_sb_email.ays_sccp_sb_field[type="email"], 
 				input.ays_sccp_sb_name.ays_sccp_sb_field[type="text"]{
 					'. $sub_cont_input_width .'
 				}
-
+				
 			</style>
 			<div class="consub_div" id="consub_div_id" '. $consub_div .'>
 				<p class="consub_para consub_para_title" style="text-transform:'.$sub_title_transformation.'; '.$sub_title_size.' text-align:'.$sccp_sub_text_alignment.';"> ' . $subs_to_view_header_text . '</p>

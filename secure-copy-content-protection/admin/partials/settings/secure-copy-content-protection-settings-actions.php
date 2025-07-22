@@ -118,10 +118,17 @@ class Sccp_Settings_Actions {
             // Subscribe box name placeholder text
             $ays_sub_name_place_text = (isset($data['ays_sccp_sub_name_place_text']) && $data['ays_sccp_sub_name_place_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_sub_name_place_text']) ) : 'Type your name';
 
-            //Subscribe button style
+            // Subscribe button style
             $enable_sub_btn_style = (isset($data['ays_sccp_enable_sub_btn_style']) && $data['ays_sccp_enable_sub_btn_style'] != '') ? 'on' : 'off';
 
+            // Subscribe button color
             $sub_btn_color = (isset($data['ays_sccp_sub_btn_color']) && $data['ays_sccp_sub_btn_color'] != '') ? sanitize_text_field($data['ays_sccp_sub_btn_color']) : 'rgba(255,255,255,0)';
+
+            // Enable Subscribe button color Mobile
+            $enable_sub_btn_color_mobile = isset( $data['enable_ays_sccp_sub_btn_color_mobile'] ) && $data['enable_ays_sccp_sub_btn_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe button color Mobile
+            $sub_btn_color_mobile = isset( $data['ays_sccp_sub_btn_color_mobile'] ) && $data['ays_sccp_sub_btn_color_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_btn_color_mobile'] ) : 'rgba(255,255,255,0)';
 
             $sub_btn_text_color = (isset($data['ays_sccp_sub_btn_text_color']) && $data['ays_sccp_sub_btn_text_color'] != '') ? sanitize_text_field($data['ays_sccp_sub_btn_text_color']) : '#000000';
 
@@ -232,6 +239,8 @@ class Sccp_Settings_Actions {
                 "sccp_sub_desc_size_mobile"                 => $ays_sccp_sub_desc_size_mobile,
                 "enable_sub_btn_style"                      => $enable_sub_btn_style,
                 "sub_btn_color"                             => $sub_btn_color,
+                "enable_sub_btn_color_mobile"               => $enable_sub_btn_color_mobile,
+                "sub_btn_color_mobile"                      => $sub_btn_color_mobile,
                 "sub_btn_text_color"                        => $sub_btn_text_color,
                 "sub_btn_border_color"                      => $sub_btn_border_color,
                 "sub_cont_border_color"                     => $sub_cont_border_color,

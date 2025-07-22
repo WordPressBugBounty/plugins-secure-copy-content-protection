@@ -485,7 +485,11 @@
             $(document).find("#enable_ays_sccp_sub_text_alignment_mobile").prop('checked', true).change();
 
             $(document).find("#ays_sccp_enable_sub_btn_style").prop('checked' , false).change();
+
             $(document).find('#ays_sccp_sub_btn_color').val('#fff').change();
+            $(document).find('#ays_sccp_sub_btn_color_mobile').val('#fff').change();
+            $(document).find("#enable_ays_sccp_sub_btn_color_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sccp_sub_btn_text_color').val('#000').change();
             $(document).find('#ays_sccp_sub_btn_size').val('14').change();
             $(document).find('#ays_sccp_sub_mobile_btn_size').val('14').change();
@@ -558,6 +562,12 @@
             }
         });
         $('#ays_sccp_sub_btn_color').wpColorPicker({
+            defaultColor: '#ffffff',
+            change: function(event, ui) {
+                $('#ays_tooltip, #ays_tooltip>*').css('color', ui.color.toString())
+            }
+        });
+        $('#ays_sccp_sub_btn_color_mobile').wpColorPicker({
             defaultColor: '#ffffff',
             change: function(event, ui) {
                 $('#ays_tooltip, #ays_tooltip>*').css('color', ui.color.toString())
