@@ -306,13 +306,26 @@ class Secure_Copy_Content_Protection_Public {
             $ays_sccp_sub_btn_color_mobile = $ays_sccp_sub_btn_color;
         }
 
+		// Enable Subscribe box button text color Mobile
 		$ays_sccp_sub_btn_text_color = (isset($subscribe_settings['sub_btn_text_color']) && $subscribe_settings['sub_btn_text_color'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_btn_text_color'] ) ) : '#000000';
+
+		// Enable Subscribe box button text color Mobile
+        $subscribe_settings['enable_sub_btn_text_color_mobile'] = ( isset( $subscribe_settings['enable_sub_btn_text_color_mobile'] ) && $subscribe_settings['enable_sub_btn_text_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box button text color Mobile
+        if ( $subscribe_settings['enable_sub_btn_text_color_mobile'] ) {
+            $ays_sccp_sub_btn_text_color_mobile = ( isset( $subscribe_settings['sub_btn_text_color_mobile'] ) && $subscribe_settings['sub_btn_text_color_mobile'] != '' ) ?  stripslashes( esc_attr( $subscribe_settings['sub_btn_text_color_mobile'] ) ) : $ays_sccp_sub_btn_text_color;
+        } else {
+            $ays_sccp_sub_btn_text_color_mobile = $ays_sccp_sub_btn_text_color;
+        }
 
 		$sccp_sub_btn_color = $ays_sccp_enable_sub_btn_style ? 'background-color:'.$ays_sccp_sub_btn_color.';' : '';
 
 		$sccp_sub_btn_color_mobile = $ays_sccp_enable_sub_btn_style ? 'background-color:'.$ays_sccp_sub_btn_color_mobile.' !important;' : '';
 
 		$sccp_sub_btn_text_color = $ays_sccp_enable_sub_btn_style ? 'color:'.$ays_sccp_sub_btn_text_color.';' : '';
+
+		$sccp_sub_btn_text_color_mobile = $ays_sccp_enable_sub_btn_style ? 'color:'.$ays_sccp_sub_btn_text_color_mobile.' !important;' : '';
 
 		$ays_sccp_sub_btn_size = (isset($subscribe_settings['sub_btn_size']) && $subscribe_settings['sub_btn_size'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_btn_size'] ) ) : '14';
 		$sccp_sub_btn_size = $ays_sccp_enable_sub_btn_style ? 'font-size:'.$ays_sccp_sub_btn_size.'px;' : '';
@@ -521,6 +534,7 @@ class Secure_Copy_Content_Protection_Public {
 					}
 					input.ays_sccp_sb_sbm.ays_sccp_sb_field[type="submit"]{
 						'. $sccp_sub_btn_color_mobile .'
+						'. $sccp_sub_btn_text_color_mobile .'
 					}
 
 				}
