@@ -333,9 +333,22 @@ class Secure_Copy_Content_Protection_Public {
 		$sub_mobile_btn_size = (isset($subscribe_settings['sub_mobile_btn_size']) && $subscribe_settings['sub_mobile_btn_size'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_mobile_btn_size'] ) ) : '14';
 		$sccp_sub_mobile_btn_size = $ays_sccp_enable_sub_btn_style ? 'font-size:'.$sub_mobile_btn_size.'px !important;' : '';
 
+		// Subscribe box button border radius
 		$ays_sccp_sub_btn_radius = (isset($subscribe_settings['sub_btn_radius']) && $subscribe_settings['sub_btn_radius'] != '') ? $subscribe_settings['sub_btn_radius'] : '3';
 
+		// Enable Subscribe box button border radius Mobile
+        $subscribe_settings['enable_sub_btn_radius_mobile'] = ( isset( $subscribe_settings['enable_sub_btn_radius_mobile'] ) && $subscribe_settings['enable_sub_btn_radius_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box button border radius Mobile
+        if ( $subscribe_settings['enable_sub_btn_radius_mobile'] ) {
+            $ays_sccp_sub_btn_radius_mobile = ( isset( $subscribe_settings['sub_btn_radius_mobile'] ) && $subscribe_settings['sub_btn_radius_mobile'] != '' ) ? sanitize_text_field( $subscribe_settings['sub_btn_radius_mobile'] ) : $ays_sccp_sub_btn_radius;
+        } else {
+            $ays_sccp_sub_btn_radius_mobile = $ays_sccp_sub_btn_radius;
+        }
+
 		$sccp_sub_btn_radius = $ays_sccp_enable_sub_btn_style ? 'border-radius:'.$ays_sccp_sub_btn_radius.'px;' : '';
+
+		$sccp_sub_btn_radius_mobile = $ays_sccp_enable_sub_btn_style ? 'border-radius:'.$ays_sccp_sub_btn_radius_mobile.'px !important;' : '';
 
 		// Buttons border width
 		$ays_sccp_sub_btn_border_width = (isset($subscribe_settings['sub_btn_border_width']) && $subscribe_settings['sub_btn_border_width'] != '') ? $subscribe_settings['sub_btn_border_width'] : '1';
@@ -535,6 +548,7 @@ class Secure_Copy_Content_Protection_Public {
 					input.ays_sccp_sb_sbm.ays_sccp_sb_field[type="submit"]{
 						'. $sccp_sub_btn_color_mobile .'
 						'. $sccp_sub_btn_text_color_mobile .'
+						'. $sccp_sub_btn_radius_mobile .'
 					}
 
 				}

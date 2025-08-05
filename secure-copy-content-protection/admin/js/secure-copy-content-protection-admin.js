@@ -496,7 +496,11 @@
             
             $(document).find('#ays_sccp_sub_btn_size').val('14').change();
             $(document).find('#ays_sccp_sub_mobile_btn_size').val('14').change();
+
             $(document).find('#ays_sccp_sub_btn_radius').val('3').change();
+            $(document).find('#ays_sccp_sub_btn_radius_mobile').val('3').change();
+            $(document).find("#enable_ays_sccp_sub_btn_radius_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sccp_sub_btn_border_width').val('1').change();
             $(document).find('#ays_sccp_sub_btn_border_style').val('solid').change();
             $(document).find('#ays_sccp_sub_btn_border_color').val('#000').change();
