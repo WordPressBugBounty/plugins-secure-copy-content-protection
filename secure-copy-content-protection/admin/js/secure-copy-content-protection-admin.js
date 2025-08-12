@@ -502,6 +502,9 @@
             $(document).find("#enable_ays_sccp_sub_btn_radius_mobile").prop('checked', true).change();
 
             $(document).find('#ays_sccp_sub_btn_border_width').val('1').change();
+            $(document).find('#ays_sccp_sub_btn_border_width_mobile').val('1').change();
+            $(document).find("#enable_ays_sccp_sub_btn_border_width_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sccp_sub_btn_border_style').val('solid').change();
             $(document).find('#ays_sccp_sub_btn_border_color').val('#000').change();
             $(document).find('#ays_sub_btn_left_right_padding').val('20').change();

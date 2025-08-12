@@ -230,6 +230,13 @@ $ays_sccp_sub_btn_radius_mobile = isset( $subscribe['sub_btn_radius_mobile'] ) &
 // Buttons border width
 $ays_sccp_sub_btn_border_width = (isset($subscribe['sub_btn_border_width']) && $subscribe['sub_btn_border_width'] != '') ? $subscribe['sub_btn_border_width'] : '1';
 
+// Enable Subscribe button border width Mobile
+$subscribe['enable_sub_btn_border_width_mobile'] = isset( $subscribe['enable_sub_btn_border_width_mobile'] ) && $subscribe['enable_sub_btn_border_width_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_sub_btn_border_width_mobile = $subscribe['enable_sub_btn_border_width_mobile'] == 'on' ?  true : false;
+
+// Subscribe button border width Mobile
+$ays_sccp_sub_btn_border_width_mobile = isset( $subscribe['sub_btn_border_width_mobile'] ) && $subscribe['sub_btn_border_width_mobile'] != '' ? esc_attr( $subscribe['sub_btn_border_width_mobile'] ) : $ays_sccp_sub_btn_border_width;
+
 // Buttons border style
 $ays_sccp_sub_btn_border_style = (isset($subscribe['sub_btn_border_style']) && $subscribe['sub_btn_border_style'] != '') ? $subscribe['sub_btn_border_style'] : 'solid';
 
@@ -1608,14 +1615,38 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                                 </a>
                                             </label>
                                         </div>
+
                                         <div class="col-sm-7 ays_divider_left ays_sccp_display_flex">
-                                            <div>
-                                               <input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width' data-alpha="true" name='ays_sccp_sub_btn_border_width' value="<?php echo $ays_sccp_sub_btn_border_width; ?>"/>
-                                            </div>
-                                            <div class="ays_sccp_dropdown_max_width">
-                                                <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-                                            </div>
-                                        </div>
+                                        	<div class="ays_toggle_mobile_parent">
+			                                    <div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_display_flex">
+						                                <div>
+					                                		<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width' data-alpha="true" name='ays_sccp_sub_btn_border_width' value="<?php echo $ays_sccp_sub_btn_border_width; ?>"/>
+						                                </div>
+						                                <div class="ays_sccp_dropdown_max_width">
+						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+						                                </div>
+						                            </div>
+			                                    </div>
+			                                    <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display:none'; ?>">
+			                                        <hr>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_display_flex">
+						                                <div>
+						                                	<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width_mobile' data-alpha="true" name='ays_sccp_sub_btn_border_width_mobile' value="<?php echo $ays_sccp_sub_btn_border_width_mobile; ?>"/>
+						                                </div>
+						                                <div class="ays_sccp_dropdown_max_width">
+						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+						                                </div>
+						                            </div>
+			                                    </div>
+			                                    <div class="ays_sccp_mobile_settings_container">
+			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_width_mobile" name="enable_ays_sccp_sub_btn_border_width_mobile" <?php echo $enable_ays_sccp_sub_btn_border_width_mobile ? 'checked' : '' ?>>
+			                                        <label for="enable_ays_sccp_sub_btn_border_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                    </div>
+			                                </div>
+                                       	</div>                                        
                                     </div>
                                     <hr>
                                     <div class="form-group row">

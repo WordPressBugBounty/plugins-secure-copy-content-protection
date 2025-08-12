@@ -166,6 +166,12 @@ class Sccp_Settings_Actions {
             // Buttons border width
             $sub_btn_border_width = (isset($data['ays_sccp_sub_btn_border_width']) && sanitize_text_field( $data['ays_sccp_sub_btn_border_width'] ) != "") ? sanitize_text_field( $data['ays_sccp_sub_btn_border_width'] ) : '1';
 
+            // Enable Subscribe box button border width Mobile
+            $enable_sub_btn_border_width_mobile = isset( $data['enable_ays_sccp_sub_btn_border_width_mobile'] ) && $data['enable_ays_sccp_sub_btn_border_width_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box button border width Mobile
+            $sub_btn_border_width_mobile = isset( $data['ays_sccp_sub_btn_border_width_mobile'] ) && $data['ays_sccp_sub_btn_border_width_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_btn_border_width_mobile'] ) : '1';
+
             // Container border width
             $sub_cont_border_width = (isset($data['ays_sccp_sub_cont_border_width']) && sanitize_text_field( $data['ays_sccp_sub_cont_border_width'] ) != "") ? sanitize_text_field( $data['ays_sccp_sub_cont_border_width'] ) : '1';
 
@@ -268,6 +274,8 @@ class Sccp_Settings_Actions {
                 "enable_sub_btn_radius_mobile"              => $enable_sub_btn_radius_mobile,
                 "sub_btn_radius_mobile"                     => $sub_btn_radius_mobile,
                 "sub_btn_border_width"                      => $sub_btn_border_width,
+                "enable_sub_btn_border_width_mobile"        => $enable_sub_btn_border_width_mobile,
+                "sub_btn_border_width_mobile"               => $sub_btn_border_width_mobile,
                 "sub_cont_border_width"                     => $sub_cont_border_width,
                 "enable_sub_cont_border_width_mobile"       => $enable_sub_cont_border_width_mobile,
                 "sub_cont_border_width_mobile"              => $sub_cont_border_width_mobile,

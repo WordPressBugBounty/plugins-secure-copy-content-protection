@@ -353,7 +353,19 @@ class Secure_Copy_Content_Protection_Public {
 		// Buttons border width
 		$ays_sccp_sub_btn_border_width = (isset($subscribe_settings['sub_btn_border_width']) && $subscribe_settings['sub_btn_border_width'] != '') ? $subscribe_settings['sub_btn_border_width'] : '1';
 
+		// Enable Subscribe box button border width Mobile
+        $subscribe_settings['enable_sub_btn_border_width_mobile'] = ( isset( $subscribe_settings['enable_sub_btn_border_width_mobile'] ) && $subscribe_settings['enable_sub_btn_border_width_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box button border width Mobile
+        if ( $subscribe_settings['enable_sub_btn_border_width_mobile'] ) {
+            $ays_sccp_sub_btn_border_width_mobile = ( isset( $subscribe_settings['sub_btn_border_width_mobile'] ) && $subscribe_settings['sub_btn_border_width_mobile'] != '' ) ? sanitize_text_field( $subscribe_settings['sub_btn_border_width_mobile'] ) : $ays_sccp_sub_btn_border_width;
+        } else {
+            $ays_sccp_sub_btn_border_width_mobile = $ays_sccp_sub_btn_border_width;
+        }
+
 		$sccp_sub_btn_border_width = $ays_sccp_enable_sub_btn_style ? 'border-width:'.$ays_sccp_sub_btn_border_width.'px;' : '';
+
+		$sccp_sub_btn_border_width_mobile = $ays_sccp_enable_sub_btn_style ? 'border-width:'.$ays_sccp_sub_btn_border_width_mobile.'px !important;' : '';
 
 		// Buttons border style
 		$ays_sccp_sub_btn_border_style = (isset($subscribe_settings['sub_btn_border_style']) && $subscribe_settings['sub_btn_border_style'] != '') ? $subscribe_settings['sub_btn_border_style'] : 'solid';
@@ -549,6 +561,7 @@ class Secure_Copy_Content_Protection_Public {
 						'. $sccp_sub_btn_color_mobile .'
 						'. $sccp_sub_btn_text_color_mobile .'
 						'. $sccp_sub_btn_radius_mobile .'
+						'. $sccp_sub_btn_border_width_mobile .'
 					}
 
 				}
