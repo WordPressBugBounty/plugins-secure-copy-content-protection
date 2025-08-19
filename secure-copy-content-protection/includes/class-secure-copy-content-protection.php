@@ -118,6 +118,11 @@ class Secure_Copy_Content_Protection {
 		 */
 		require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-secure-copy-content-protection-i18n.php';
 
+		/**
+         * The class responsible for showing SCCP Feedback popup.
+         */
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-secure-copy-content-protection-feedback.php';
+
 		/*
          * The class is responsible for showing sccp results in wordpress default WP_LIST_TABLE style
          */

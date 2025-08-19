@@ -240,6 +240,13 @@ $ays_sccp_sub_btn_border_width_mobile = isset( $subscribe['sub_btn_border_width_
 // Buttons border style
 $ays_sccp_sub_btn_border_style = (isset($subscribe['sub_btn_border_style']) && $subscribe['sub_btn_border_style'] != '') ? $subscribe['sub_btn_border_style'] : 'solid';
 
+// Enable Buttons border style Mobile
+$subscribe['enable_sub_btn_border_style_mobile'] = isset( $subscribe['enable_sub_btn_border_style_mobile'] ) && $subscribe['enable_sub_btn_border_style_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_sub_btn_border_style_mobile = $subscribe['enable_sub_btn_border_style_mobile'] == 'on' ?  true : false;
+
+// Buttons border style Mobile
+$ays_sccp_sub_btn_border_style_mobile = isset( $subscribe['sub_btn_border_style_mobile'] ) && $subscribe['sub_btn_border_style_mobile'] != '' ? esc_attr( $subscribe['sub_btn_border_style_mobile'] ) : $ays_sccp_sub_btn_border_style;
+
 // Subscribe Container border style
 $ays_sccp_sub_cont_border_style = (isset($subscribe['sub_cont_border_style']) && $subscribe['sub_cont_border_style'] != '') ? $subscribe['sub_cont_border_style'] : 'solid';
 
@@ -1659,17 +1666,45 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                             </label>
                                         </div>
                                         <div class="col-sm-7 ays_divider_left">
-                                            <select id="ays_sccp_sub_btn_border_style" name="ays_sccp_sub_btn_border_style" class="ays-text-input ays-text-input-short">
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
-                                            </select>
+                                        	<div class="ays_toggle_mobile_parent">
+			                                    <div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div>
+			                                        	<select id="ays_sccp_sub_btn_border_style" name="ays_sccp_sub_btn_border_style" class="ays-text-input ays-text-input-short">
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
+			                                            </select>
+			                                        </div>                                        
+			                                    </div>
+			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_style_mobile ) ? '' : 'display:none'; ?>">
+			                                        <hr>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div>
+			                                        	<select id="ays_sccp_sub_btn_border_style_mobile" name="ays_sccp_sub_btn_border_style_mobile" class="ays-text-input ays-text-input-short">
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
+			                                            </select>
+			                                        </div>    
+			                                    </div>
+			                                    <div class="ays_sccp_mobile_settings_container">
+			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_style_mobile" name="enable_ays_sccp_sub_btn_border_style_mobile" <?php echo $enable_ays_sccp_sub_btn_border_style_mobile ? 'checked' : '' ?>>
+			                                        <label for="enable_ays_sccp_sub_btn_border_style_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                    </div>
+			                                </div>                                            
                                         </div>
                                     </div>
                                     <hr>

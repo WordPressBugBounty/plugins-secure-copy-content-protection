@@ -370,6 +370,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Buttons border style
 		$ays_sccp_sub_btn_border_style = (isset($subscribe_settings['sub_btn_border_style']) && $subscribe_settings['sub_btn_border_style'] != '') ? $subscribe_settings['sub_btn_border_style'] : 'solid';
 
+		// Subscribe box Enable Buttons border Mobile
+        $subscribe_settings['enable_sub_btn_border_style_mobile'] = ( isset( $subscribe_settings['enable_sub_btn_border_style_mobile'] ) && $subscribe_settings['enable_sub_btn_border_style_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Buttons border Mobile
+        if ( $subscribe_settings['enable_sub_btn_border_style_mobile'] ) {
+            $ays_sccp_sub_btn_border_style_mobile = ( isset( $subscribe_settings['sub_btn_border_style_mobile'] ) && $subscribe_settings['sub_btn_border_style_mobile'] != '' ) ?  $subscribe_settings['sub_btn_border_style_mobile'] : $ays_sccp_sub_btn_border_style;
+        } else {
+            $ays_sccp_sub_btn_border_style_mobile = $ays_sccp_sub_btn_border_style;
+        }
+
 		// Subscribe Container border style
 		$sub_cont_border_style = (isset($subscribe_settings['sub_cont_border_style']) && $subscribe_settings['sub_cont_border_style'] != '') ? 'border-style: '. $subscribe_settings['sub_cont_border_style'] .';' : 'border-style: solid;';
 
@@ -409,7 +419,9 @@ class Secure_Copy_Content_Protection_Public {
             $sub_cont_input_width_mobile = $sub_cont_input_width;
         }
 
-		$sccp_sub_btn_border_style = $ays_sccp_enable_sub_btn_style ? 'border-style:'.$ays_sccp_sub_btn_border_style : '';
+		$sccp_sub_btn_border_style = $ays_sccp_enable_sub_btn_style ? 'border-style:'. $ays_sccp_sub_btn_border_style . ';' : '';
+
+		$sccp_sub_btn_border_style_mobile = $ays_sccp_enable_sub_btn_style ? 'border-style:'. $ays_sccp_sub_btn_border_style_mobile . ' !important;' : '';
 
 		// Buttons border color
 		$ays_sccp_sub_btn_border_color = (isset($subscribe_settings['sub_btn_border_color']) && $subscribe_settings['sub_btn_border_color'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_btn_border_color'] ) ) : '#000000';
@@ -562,6 +574,7 @@ class Secure_Copy_Content_Protection_Public {
 						'. $sccp_sub_btn_text_color_mobile .'
 						'. $sccp_sub_btn_radius_mobile .'
 						'. $sccp_sub_btn_border_width_mobile .'
+						'. $sccp_sub_btn_border_style_mobile .'
 					}
 
 				}

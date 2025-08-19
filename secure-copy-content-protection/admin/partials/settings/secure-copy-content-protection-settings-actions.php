@@ -184,6 +184,12 @@ class Sccp_Settings_Actions {
             // Buttons border style
             $sub_btn_border_style = (isset($data['ays_sccp_sub_btn_border_style']) && $data['ays_sccp_sub_btn_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_sub_btn_border_style'] ) : 'solid';
 
+            // Enable Subscribe Buttons border style Mobile
+            $enable_sub_btn_border_style_mobile = isset( $data['enable_ays_sccp_sub_btn_border_style_mobile'] ) && $data['enable_ays_sccp_sub_btn_border_style_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Buttons border style Mobile
+            $sub_btn_border_style_mobile = isset( $data['ays_sccp_sub_btn_border_style_mobile'] ) && $data['ays_sccp_sub_btn_border_style_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_btn_border_style_mobile'] ) : 'solid';
+
             // Subscribe Container border style
             $sub_cont_border_style = (isset($data['ays_sccp_sub_cont_border_style']) && $data['ays_sccp_sub_cont_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_sub_cont_border_style'] ) : 'solid';
 
@@ -280,6 +286,8 @@ class Sccp_Settings_Actions {
                 "enable_sub_cont_border_width_mobile"       => $enable_sub_cont_border_width_mobile,
                 "sub_cont_border_width_mobile"              => $sub_cont_border_width_mobile,
                 "sub_btn_border_style"                      => $sub_btn_border_style,
+                "enable_sub_btn_border_style_mobile"        => $enable_sub_btn_border_style_mobile,
+                "sub_btn_border_style_mobile"               => $sub_btn_border_style_mobile,
                 "sub_cont_border_style"                     => $sub_cont_border_style,
                 "enable_sub_cont_border_style_mobile"       => $enable_sub_cont_border_style_mobile,
                 "sub_cont_border_style_mobile"              => $sub_cont_border_style_mobile,

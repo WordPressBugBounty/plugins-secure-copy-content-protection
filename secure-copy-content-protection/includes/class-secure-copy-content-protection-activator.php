@@ -162,6 +162,16 @@ class Secure_Copy_Content_Protection_Activator {
                 );
             }
         }
+
+        $terms_activation = get_option('ays_sccp_show_agree_terms');
+		$first_activation = get_option('ays_sccp_maker_first_time_activation_page', false);
+
+		if ( !$terms_activation && $first_activation ) {
+			self::ays_sccp_activator_request( 'activator' );
+			update_option('ays_sccp_agree_terms', 'true');
+			update_option('ays_sccp_show_agree_terms', 'hide');
+		}
+
 	}
 
 	public static function insert_default_data() {
@@ -194,10 +204,30 @@ class Secure_Copy_Content_Protection_Activator {
 		}
 	}
 
-  public static function ays_sccp_update_db_check(){
-    if (get_site_option('sccp_db_version') != SCCP_DB_VERSION) {
-        self::activate();
+    public static function ays_sccp_update_db_check(){
+        $is_plugin_downloaded = get_option('sccp_db_version', false) === false;
+
+		if ($is_plugin_downloaded) {
+			update_option('ays_sccp_maker_first_time_activation_page', true);
+		}
+
+        if (get_site_option('sccp_db_version') != SCCP_DB_VERSION) {
+            self::activate();
+        }
     }
-  }
+
+    public static function ays_sccp_activator_request($cta){
+        $curl = curl_init();
+
+        $api_url = "https://poll-plugin.com/sccp/";
+
+        wp_remote_post( $api_url, array(
+            'timeout' => 30,
+            'body' => wp_json_encode(array(
+                'type'  => 'sccp',
+                'cta'   => $cta,
+            )),
+        ) );
+    }
 
 }

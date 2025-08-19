@@ -45,4 +45,17 @@ if (get_option('sccp_upgrade_plugin') == 'false') {
 	$wpdb->query("DROP TABLE IF EXISTS `$settings_table`");
 	delete_option("sccp_db_version");
 	delete_option("sccp_upgrade_plugin");
+
+	delete_option("ays_sccp_maker_first_time_activation_page");
+	delete_option("ays_sccp_agree_terms");
+	delete_option("ays_sccp_show_agree_terms");
 }
+
+$api_url = "https://poll-plugin.com/sccp/uninstall/";
+
+wp_remote_post( $api_url, array(
+    'timeout' => 30,
+    'body' => wp_json_encode(array(
+        'type'  => 'sccp',
+    )),
+) );

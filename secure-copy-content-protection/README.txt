@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
 Tested up to: 6.8.2
-Stable tag: 4.7.4
+Stable tag: 4.7.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -262,6 +262,9 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 
 == Changelog ==
+
+= 4.7.5 ( August 19, 2025 ) =
+* Added: Mobile Container button border style option for Subscribe to view box on the general settings
 
 = 4.7.4 ( August 12, 2025 ) =
 * Added: Mobile Container button border width option for Subscribe to view box on the general settings

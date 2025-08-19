@@ -178,7 +178,13 @@ class Secure_Copy_Content_Protection_Admin {
 		if (false !== strpos($hook_suffix, "plugins.php")){			
 			wp_enqueue_script($this->plugin_name . '-sweetalert2', plugin_dir_url(__FILE__) . 'js/sweetalert2.all.min.js', array('jquery'), $this->version, true);
 			wp_enqueue_script($this->plugin_name . '-admin', plugin_dir_url(__FILE__) . 'js/admin.js', array('jquery'), $this->version, true);
-			wp_localize_script($this->plugin_name . '-admin', 'sccp_admin_ajax', array('ajax_url' => admin_url('admin-ajax.php')));
+			wp_localize_script($this->plugin_name . '-admin', 'sccp_admin_ajax', array(
+                'ajax_url'              => admin_url('admin-ajax.php'),
+                'errorMsg'              => __( "Error", 'secure-copy-content-protection' ),
+                'loadResource'          => __( "Can't load resource.", 'secure-copy-content-protection' ),
+                'somethingWentWrong'    => __( "Maybe something went wrong.", 'secure-copy-content-protection' ),
+
+            ));
 		}
 
 		if (false === strpos($hook_suffix, $this->plugin_name)) {
