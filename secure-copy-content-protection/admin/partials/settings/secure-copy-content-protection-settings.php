@@ -280,6 +280,13 @@ $ays_sccp_sub_input_width_mobile = isset( $subscribe['sub_cont_input_width_mobil
 // Buttons border color
 $ays_sccp_sub_btn_border_color = (isset($subscribe['sub_btn_border_color']) && $subscribe['sub_btn_border_color'] != '') ? stripslashes( esc_attr( $subscribe['sub_btn_border_color'] ) ) : '#000000';
 
+// Enable Subscribe Buttons border color Mobile
+$subscribe['enable_sub_btn_border_color_mobile'] = isset( $subscribe['enable_sub_btn_border_color_mobile'] ) && $subscribe['enable_sub_btn_border_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_sub_btn_border_color_mobile = $subscribe['enable_sub_btn_border_color_mobile'] == 'on' ?  true : false;
+
+// Subscribe box Buttons border color Mobile
+$ays_sccp_sub_btn_border_color_mobile = isset( $subscribe['sub_btn_border_color_mobile'] ) && $subscribe['sub_btn_border_color_mobile'] != '' ? esc_attr( $subscribe['sub_btn_border_color_mobile'] ) : $ays_sccp_sub_btn_border_color;
+
 // Subscribe Container border color
 $ays_sccp_sub_cont_border_color = (isset($subscribe['sub_cont_border_color']) && $subscribe['sub_cont_border_color'] != '') ? stripslashes( esc_attr( $subscribe['sub_cont_border_color'] ) ) : '#000000';
 
@@ -1717,8 +1724,24 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                                 </a>
                                             </label>
                                         </div>
+
                                         <div class="col-sm-7 ays_divider_left">
-                                            <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_border_color' data-alpha="true" name='ays_sccp_sub_btn_border_color' value="<?php echo $ays_sccp_sub_btn_border_color; ?>"/>
+                                        	<div class="ays_toggle_mobile_parent">
+			                                    <div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+
+			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_border_color' data-alpha="true" name='ays_sccp_sub_btn_border_color' value="<?php echo $ays_sccp_sub_btn_border_color; ?>"/>
+			                                    </div>
+			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_color_mobile ) ? '' : 'display:none'; ?>">
+			                                        <hr>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_border_color_mobile' data-alpha="true" name='ays_sccp_sub_btn_border_color_mobile' value="<?php echo $ays_sccp_sub_btn_border_color_mobile; ?>"/>
+			                                    </div>
+			                                    <div class="ays_sccp_mobile_settings_container">
+			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_color_mobile" name="enable_ays_sccp_sub_btn_border_color_mobile" <?php echo $enable_ays_sccp_sub_btn_border_color_mobile ? 'checked' : '' ?>>
+			                                        <label for="enable_ays_sccp_sub_btn_border_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                    </div>
+			                                </div>                                            
                                         </div>
                                     </div>
                                     <hr>

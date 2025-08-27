@@ -16,7 +16,7 @@
  * Plugin Name:       Secure Copy Content Protection
  * Plugin URI:        https://ays-pro.com/wordpress/secure-copy-content-protection/
  * Description:       Copy Protection plugin is activated it disables the right click, copy paste, content selection and copy shortcut keys
- * Version:           4.7.5
+ * Version:           4.7.6
  * Author:            Copy Content Protection Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('SCCP_NAME_VERSION', '4.7.5');
+define('SCCP_NAME_VERSION', '4.7.6');
 define('SCCP_NAME', 'secure-copy-content-protection');
 if (!defined('SCCP_ADMIN_URL')) {
 	define('SCCP_ADMIN_URL', plugin_dir_url(__FILE__) . 'admin');
@@ -121,13 +121,7 @@ function sccp_admin_notice() {
                                 <span><?php echo esc_html__( "Upgrade", 'secure-copy-content-protection' ); ?></span>
                             </a>
                             <span class="ays-sccp-logo-container-one-time-text"><?php echo esc_html__( "One-time payment", 'secure-copy-content-protection' ); ?></span>
-                        </div>
-                        <div class="ays-sccp-coupon-container">
-                            <div class="ays-sccp-coupon-box ays-sccp-copy-element-box-parent">
-                                <span onClick="selectAndCopyElementContents(this)" class="ays-sccp-copy-element-box" data-toggle="tooltip" title="<?php echo esc_html__( "Click for copy", 'secure-copy-content-protection' ); ?>"><?php echo esc_html__( "summer2025", 'secure-copy-content-protection' ); ?></span>
-                            </div>
-                            <span class="ays-sccp-logo-container-one-time-text"><?php echo esc_html__( "Extra 20% Coupon", 'secure-copy-content-protection' ); ?></span>
-                        </div>
+                        </div>                        
                     </div>
                     <ul id="menu">
                         <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-pro.com/wordpress/secure-copy-content-protection/?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-top-banner-pricing-link-<?php echo esc_attr( SCCP_NAME_VERSION ); ?>" target="_blank"><?php echo esc_html__( "Pricing", 'secure-copy-content-protection' ); ?></a></li>

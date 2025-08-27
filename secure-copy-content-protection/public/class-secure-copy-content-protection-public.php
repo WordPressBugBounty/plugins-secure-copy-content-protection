@@ -426,6 +426,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Buttons border color
 		$ays_sccp_sub_btn_border_color = (isset($subscribe_settings['sub_btn_border_color']) && $subscribe_settings['sub_btn_border_color'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_btn_border_color'] ) ) : '#000000';
 
+		// Subscribe box Enable Buttons border color Mobile
+        $subscribe_settings['enable_sub_btn_border_color_mobile'] = ( isset( $subscribe_settings['enable_sub_btn_border_color_mobile'] ) && $subscribe_settings['enable_sub_btn_border_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Buttons border color Mobile
+        if ( $subscribe_settings['enable_sub_btn_border_color_mobile'] ) {
+            $ays_sccp_sub_btn_border_color_mobile = ( isset( $subscribe_settings['sub_btn_border_color_mobile'] ) && $subscribe_settings['sub_btn_border_color_mobile'] != '' ) ?  stripslashes( esc_attr( $subscribe_settings['sub_btn_border_color_mobile'] ) ) : $ays_sccp_sub_btn_border_color;
+        } else {
+            $ays_sccp_sub_btn_border_color_mobile = $ays_sccp_sub_btn_border_color;
+        }
+
 		// Container border color
 		$ays_sccp_sub_cont_border_color = (isset($subscribe_settings['sub_cont_border_color']) && $subscribe_settings['sub_cont_border_color'] != '') ? stripslashes( esc_attr( $subscribe_settings['sub_cont_border_color'] ) ) : '#000000';
 
@@ -440,6 +450,8 @@ class Secure_Copy_Content_Protection_Public {
         }
 
 		$sccp_sub_btn_border_color = $ays_sccp_enable_sub_btn_style ? 'border-color:'.$ays_sccp_sub_btn_border_color.';' : '';
+
+		$sccp_sub_btn_border_color_mobile = $ays_sccp_enable_sub_btn_style ? 'border-color:'.$ays_sccp_sub_btn_border_color_mobile.' !important;' : '';
 
 		$sccp_sub_cont_border_color = 'border-color:'.$ays_sccp_sub_cont_border_color.';';
 		$sccp_sub_cont_border_color_mobile = 'border-color:'.$ays_sccp_sub_cont_border_color_mobile.' !important;';
@@ -575,6 +587,7 @@ class Secure_Copy_Content_Protection_Public {
 						'. $sccp_sub_btn_radius_mobile .'
 						'. $sccp_sub_btn_border_width_mobile .'
 						'. $sccp_sub_btn_border_style_mobile .'
+						'. $sccp_sub_btn_border_color_mobile .'
 					}
 
 				}

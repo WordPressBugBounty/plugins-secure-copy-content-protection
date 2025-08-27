@@ -510,6 +510,9 @@
             $(document).find("#enable_ays_sccp_sub_btn_border_style_mobile").prop('checked', true).change();
             
             $(document).find('#ays_sccp_sub_btn_border_color').val('#000').change();
+            $(document).find('#ays_sccp_sub_btn_border_color_mobile').val('#000').change();
+            $(document).find("#enable_ays_sccp_sub_btn_border_color_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sub_btn_left_right_padding').val('20').change();
             $(document).find('#ays_sub_btn_top_bottom_padding').val('10').change();
 
@@ -611,6 +614,9 @@
             }
         });
         $('#ays_sccp_sub_btn_border_color').wpColorPicker({
+            defaultColor: '#000000',            
+        });
+        $('#ays_sccp_sub_btn_border_color_mobile').wpColorPicker({
             defaultColor: '#000000',            
         });
         $('#ays_sccp_bc_btn_border_color').wpColorPicker({
