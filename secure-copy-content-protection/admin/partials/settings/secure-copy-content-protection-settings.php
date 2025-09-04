@@ -302,6 +302,15 @@ $buttons_left_right_padding = (isset($subscribe['sub_btn_left_right_padding']) &
 
 // Buttons Top / Bottom padding
 $buttons_top_bottom_padding = (isset($subscribe['sub_btn_top_bottom_padding']) && $subscribe['sub_btn_top_bottom_padding'] != '') ? $subscribe['sub_btn_top_bottom_padding'] : '10';
+
+// Enable Subscribe Buttons padding Mobile
+$subscribe['enable_sub_btn_padding_mobile'] = isset( $subscribe['enable_sub_btn_padding_mobile'] ) && $subscribe['enable_sub_btn_padding_mobile'] == 'off' ? 'off' : 'on';
+$enable_buttons_padding_mobile = $subscribe['enable_sub_btn_padding_mobile'] == 'on' ?  true : false;
+
+// Subscribe Buttons padding Mobile
+$buttons_left_right_padding_mobile = isset( $subscribe['sub_btn_left_right_padding_mobile'] ) && $subscribe['sub_btn_left_right_padding_mobile'] != '' ? esc_attr( $subscribe['sub_btn_left_right_padding_mobile'] ) : $buttons_left_right_padding;
+
+$buttons_top_bottom_padding_mobile = (isset($subscribe['sub_btn_top_bottom_padding_mobile']) && $subscribe['sub_btn_top_bottom_padding_mobile'] != '') ? esc_attr( $subscribe['sub_btn_top_bottom_padding_mobile'] ) : $buttons_top_bottom_padding;
  
 // Subscribe box text alignment
 $ays_sccp_sub_text_alignment = (isset($subscribe['sccp_sub_text_alignment']) && sanitize_text_field( $subscribe['sccp_sub_text_alignment'] ) != '') ? sanitize_text_field( $subscribe['sccp_sub_text_alignment'] ) : 'center';
@@ -1755,14 +1764,36 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                             </label>
                                         </div>
                                         <div class="col-sm-7 ays_divider_left">
-                                            <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
-                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
-                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding' name='ays_sub_btn_left_right_padding' value="<?php echo $buttons_left_right_padding; ?>" style="width: 100px;" />
-                                            </div>
-                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
-                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
-                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding' name='ays_sub_btn_top_bottom_padding' value="<?php echo $buttons_top_bottom_padding; ?>" style="width: 100px;" />
-                                            </div>
+                                        	<div class="ays_toggle_mobile_parent">
+			                                    <div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_buttons_padding_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+
+			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
+		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding' name='ays_sub_btn_left_right_padding' value="<?php echo $buttons_left_right_padding; ?>" style="width: 100px;" />
+		                                            </div>
+		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
+		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding' name='ays_sub_btn_top_bottom_padding' value="<?php echo $buttons_top_bottom_padding; ?>" style="width: 100px;" />
+		                                            </div>
+			                                    </div>
+			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_buttons_padding_mobile ) ? '' : 'display:none'; ?>">
+			                                        <hr>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
+		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding_mobile' name='ays_sub_btn_left_right_padding_mobile' value="<?php echo $buttons_left_right_padding_mobile; ?>" style="width: 100px;" />
+		                                            </div>
+		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
+		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding_mobile' name='ays_sub_btn_top_bottom_padding_mobile' value="<?php echo $buttons_top_bottom_padding_mobile; ?>" style="width: 100px;" />
+		                                            </div>
+			                                    </div>
+			                                    <div class="ays_sccp_mobile_settings_container">
+			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sub_btn_padding_mobile" name="enable_ays_sub_btn_padding_mobile" <?php echo $enable_buttons_padding_mobile ? 'checked' : '' ?>>
+			                                        <label for="enable_ays_sub_btn_padding_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                    </div>
+			                                </div>                                            
                                         </div>
                                     </div>
                                 </div>                                

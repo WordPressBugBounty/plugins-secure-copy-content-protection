@@ -212,6 +212,14 @@ class Sccp_Settings_Actions {
             // Buttons Top / Bottom padding
             $buttons_top_bottom_padding = (isset($data['ays_sub_btn_top_bottom_padding']) && $data['ays_sub_btn_top_bottom_padding'] != "") ? $data['ays_sub_btn_top_bottom_padding'] : '10';
 
+            // Enable Subscribe Buttons padding Mobile
+            $enable_sub_buttons_padding_mobile = isset( $data['enable_ays_sub_btn_padding_mobile'] ) && $data['enable_ays_sub_btn_padding_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Buttons padding Mobile
+            $buttons_left_right_padding_mobile = isset( $data['ays_sub_btn_left_right_padding_mobile'] ) && $data['ays_sub_btn_left_right_padding_mobile'] != '' ? sanitize_text_field( $data['ays_sub_btn_left_right_padding_mobile'] ) : '20';
+
+            $buttons_top_bottom_padding_mobile = isset( $data['ays_sub_btn_top_bottom_padding_mobile'] ) && $data['ays_sub_btn_top_bottom_padding_mobile'] != '' ? sanitize_text_field( $data['ays_sub_btn_top_bottom_padding_mobile'] ) : '10';
+
             // Subscribe box text alignment
             $sccp_sub_text_alignment = (isset($data['ays_sccp_sub_text_alignment']) && sanitize_text_field( $data['ays_sccp_sub_text_alignment']) != '') ? sanitize_text_field( $data['ays_sccp_sub_text_alignment'] ) : 'center';
 
@@ -302,6 +310,9 @@ class Sccp_Settings_Actions {
                 "sub_cont_border_style_mobile"              => $sub_cont_border_style_mobile,
                 "sub_btn_left_right_padding"                => $buttons_left_right_padding,
                 "sub_btn_top_bottom_padding"                => $buttons_top_bottom_padding,
+                "enable_sub_btn_padding_mobile"             => $enable_sub_buttons_padding_mobile,
+                "sub_btn_left_right_padding_mobile"         => $buttons_left_right_padding_mobile,
+                "sub_btn_top_bottom_padding_mobile"         => $buttons_top_bottom_padding_mobile,
                 "sccp_sub_text_alignment"                   => $sccp_sub_text_alignment,
                 "enable_sccp_sub_text_alignment_mobile"     => $enable_sccp_sub_text_alignment_mobile,
                 "sccp_sub_text_alignment_mobile"            => $sccp_sub_text_alignment_mobile,

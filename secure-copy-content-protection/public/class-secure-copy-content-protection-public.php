@@ -468,7 +468,21 @@ class Secure_Copy_Content_Protection_Public {
             $sccp_sub_btn_top_bottom_padding = $subscribe_settings['sub_btn_top_bottom_padding'] . 'px';
         }
 
+        // Enable Subscribe Buttons padding Mobile
+        $subscribe_settings['enable_sub_btn_padding_mobile'] = ( isset( $subscribe_settings['enable_sub_btn_padding_mobile'] ) && $subscribe_settings['enable_sub_btn_padding_mobile'] == 'off') ? false : true;
+        
+        // Subscribe Container border width Mobile
+        if ( $subscribe_settings['enable_sub_btn_padding_mobile'] ) {
+            $sccp_sub_btn_left_right_padding_mobile = ( isset( $subscribe_settings['sub_btn_left_right_padding_mobile'] ) && $subscribe_settings['sub_btn_left_right_padding_mobile'] != '' ) ?  $subscribe_settings['sub_btn_left_right_padding_mobile'] .'px' : $sccp_sub_btn_left_right_padding;
+            $sccp_sub_btn_top_bottom_padding_mobile = ( isset( $subscribe_settings['sub_btn_top_bottom_padding_mobile'] ) && $subscribe_settings['sub_btn_top_bottom_padding_mobile'] != '' ) ?  $subscribe_settings['sub_btn_top_bottom_padding_mobile'] .'px' : $sccp_sub_btn_top_bottom_padding;
+        } else {
+            $sccp_sub_btn_left_right_padding_mobile = $sccp_sub_btn_left_right_padding;
+            $sccp_sub_btn_top_bottom_padding_mobile = $sccp_sub_btn_top_bottom_padding;
+        }
+
         $sccp_sub_btn_padding = $ays_sccp_enable_sub_btn_style ? 'padding:'.$sccp_sub_btn_top_bottom_padding.' '.$sccp_sub_btn_left_right_padding.';' : '';
+
+        $sccp_sub_btn_padding_mobile = $ays_sccp_enable_sub_btn_style ? 'padding:'. $sccp_sub_btn_top_bottom_padding_mobile .' '. $sccp_sub_btn_left_right_padding_mobile .' !important;' : '';
 
 
         // Subscribe email placeholder text
@@ -588,6 +602,7 @@ class Secure_Copy_Content_Protection_Public {
 						'. $sccp_sub_btn_border_width_mobile .'
 						'. $sccp_sub_btn_border_style_mobile .'
 						'. $sccp_sub_btn_border_color_mobile .'
+						'. $sccp_sub_btn_padding_mobile .'
 					}
 
 				}
