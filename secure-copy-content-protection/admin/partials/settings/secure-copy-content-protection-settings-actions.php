@@ -323,8 +323,13 @@ class Sccp_Settings_Actions {
              // Block content box width
             $ays_sccp_bc_width = (isset($data['ays_sccp_bc_width']) && $data['ays_sccp_bc_width'] != '') ? absint( sanitize_text_field($data['ays_sccp_bc_width']) ) : '';
 
+            $ays_sccp_bc_width_mobile = (isset($data['ays_sccp_bc_width_mobile']) && $data['ays_sccp_bc_width_mobile'] != '') ? absint( sanitize_text_field($data['ays_sccp_bc_width_mobile']) ) : '';
+
             // Block content box Width by percentage or pixels
             $sccp_bc_width_by_percentage_px = (isset($data['ays_sccp_bc_width_by_percentage_px']) && $data['ays_sccp_bc_width_by_percentage_px'] != '') ? sanitize_text_field( $data['ays_sccp_bc_width_by_percentage_px'] ) : 'pixels';
+
+            $sccp_bc_width_mobile_by_percentage_px = (isset($data['ays_sccp_bc_width_mobile_by_percentage_px']) && $data['ays_sccp_bc_width_mobile_by_percentage_px'] != '') ? sanitize_text_field( $data['ays_sccp_bc_width_mobile_by_percentage_px'] ) : 'pixels';
+
 
             // Block content box text color
             $bc_text_color = (isset($data['bc_text_color']) && $data['bc_text_color'] != '') ? stripslashes( esc_attr($data['bc_text_color']) ) : '#000';
@@ -391,31 +396,33 @@ class Sccp_Settings_Actions {
             $bc_buttons_top_bottom_padding = (isset($data['ays_bc_btn_top_bottom_padding']) && $data['ays_bc_btn_top_bottom_padding'] != "") ? $data['ays_bc_btn_top_bottom_padding'] : '10';
 
             $block_content = array(
-                "sccp_bc_width"                  => $ays_sccp_bc_width,
-                "sccp_bc_width_by_percentage_px" => $sccp_bc_width_by_percentage_px,
-                "sccp_bc_text_color"             => $bc_text_color,
-                "sccp_bc_bg_color"               => $bc_bg_color,
-                "bc_bg_image"                    => $ays_bc_bg_img,
-                "bc_bg_image_position"           => $bc_bg_image_position,
-                "sccp_bc_button_text"            => $ays_bc_button_text,
-                "sccp_bc_psw_place_text"         => $ays_bc_psw_place_text,
-                "bc_cont_border_style"           => $bc_cont_border_style,
-                "bc_cont_border_color"           => $bc_cont_border_color,
-                "bc_cont_border_width"           => $bc_cont_border_width,
-                "bc_icon_image"                  => $ays_bc_icon_img,
-                "bc_cont_input_width"            => $ays_sccp_bc_input_width,
-                "bc_text_alignment"              => $sccp_bc_text_alignment,
-                "enable_bc_btn_style"            => $enable_bc_btn_style,
-                "bc_btn_color"                   => $bc_btn_color,
-                "bc_btn_text_color"              => $bc_btn_text_color,
-                "bc_btn_size"                    => $bc_btn_size,
-                "bc_mobile_btn_size"             => $bc_mobile_btn_size,
-                "bc_btn_radius"                  => $bc_btn_radius,
-                "bc_btn_border_width"            => $bc_btn_border_width,
-                "bc_btn_border_style"            => $bc_btn_border_style,
-                "bc_btn_border_color"            => $bc_btn_border_color,
-                "bc_btn_left_right_padding"      => $bc_buttons_left_right_padding,
-                "bc_btn_top_bottom_padding"      => $bc_buttons_top_bottom_padding,
+                "sccp_bc_width"                         => $ays_sccp_bc_width,
+                "sccp_bc_width_mobile"                  => $ays_sccp_bc_width_mobile,
+                "sccp_bc_width_by_percentage_px"        => $sccp_bc_width_by_percentage_px,
+                "sccp_bc_width_mobile_by_percentage_px" => $sccp_bc_width_mobile_by_percentage_px,
+                "sccp_bc_text_color"                    => $bc_text_color,
+                "sccp_bc_bg_color"                      => $bc_bg_color,
+                "bc_bg_image"                           => $ays_bc_bg_img,
+                "bc_bg_image_position"                  => $bc_bg_image_position,
+                "sccp_bc_button_text"                   => $ays_bc_button_text,
+                "sccp_bc_psw_place_text"                => $ays_bc_psw_place_text,
+                "bc_cont_border_style"                  => $bc_cont_border_style,
+                "bc_cont_border_color"                  => $bc_cont_border_color,
+                "bc_cont_border_width"                  => $bc_cont_border_width,
+                "bc_icon_image"                         => $ays_bc_icon_img,
+                "bc_cont_input_width"                   => $ays_sccp_bc_input_width,
+                "bc_text_alignment"                     => $sccp_bc_text_alignment,
+                "enable_bc_btn_style"                   => $enable_bc_btn_style,
+                "bc_btn_color"                          => $bc_btn_color,
+                "bc_btn_text_color"                     => $bc_btn_text_color,
+                "bc_btn_size"                           => $bc_btn_size,
+                "bc_mobile_btn_size"                    => $bc_mobile_btn_size,
+                "bc_btn_radius"                         => $bc_btn_radius,
+                "bc_btn_border_width"                   => $bc_btn_border_width,
+                "bc_btn_border_style"                   => $bc_btn_border_style,
+                "bc_btn_border_color"                   => $bc_btn_border_color,
+                "bc_btn_left_right_padding"             => $bc_buttons_left_right_padding,
+                "bc_btn_top_bottom_padding"             => $bc_buttons_top_bottom_padding,
             );
 
             $result = $this->ays_update_setting('mailchimp', json_encode($mailchimp));

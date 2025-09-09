@@ -524,7 +524,9 @@
 
         $('#bc_reset_to_default').on('click', function () {
             $(document).find('#ays_sccp_bc_width').val('').change();
+            $(document).find('#ays_sccp_bc_width_mobile').val('').change();
             $(document).find('#sccp_bc_width_by_percentage_px').val('pixels').change();
+            $(document).find('#sccp_bc_width_mobile_by_percentage_px').val('pixels').change();
             $(document).find('#bc_text_color').val('#000').change();
             $(document).find('#bc_bg_color').val('#fff').change();
             $(document).find('#ays-sccp-bc-bg-img').attr('src', '').change();

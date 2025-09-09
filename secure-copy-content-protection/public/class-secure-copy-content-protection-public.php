@@ -762,6 +762,21 @@ class Secure_Copy_Content_Protection_Public {
             $bc_width = 'max-width: fit-content;';
         }
 
+        // Block content box width mobile
+        if(isset($block_content_settings['sccp_bc_width_mobile']) && $block_content_settings['sccp_bc_width_mobile'] != '' && absint( $block_content_settings['sccp_bc_width_mobile'] ) > 0){
+            if (isset($block_content_settings['sccp_bc_width_mobile_by_percentage_px']) && $block_content_settings['sccp_bc_width_mobile_by_percentage_px'] == 'percentage') {
+                if (absint(intval($block_content_settings['sccp_bc_width_mobile'])) > 100 ) {
+                    $bc_width_mobile = 'max-width: 100%';
+                }else{
+                    $bc_width_mobile = 'max-width: '. $block_content_settings['sccp_bc_width_mobile'] . '%';
+                }
+            }else{
+                $bc_width_mobile = 'max-width: '. $block_content_settings['sccp_bc_width_mobile'] . 'px';
+            }
+        }else{
+            $bc_width_mobile = 'max-width: fit-content';
+        }
+
         // Block content box text color
 		$bc_text_color = (isset($block_content_settings['sccp_bc_text_color']) && $block_content_settings['sccp_bc_text_color'] != '') ? 'color:'.stripslashes( esc_attr($block_content_settings['sccp_bc_text_color']) ).';' : 'color: #000;';
 
@@ -958,6 +973,9 @@ class Secure_Copy_Content_Protection_Public {
 					$con = do_shortcode('
 						<style>
 							@media screen and (max-width: 768px){
+	                        	.conblock_div {
+	                        		'. $bc_width_mobile .' !important;
+	                        	}
 	                        	.conblock_div input[type="submit"] {
 	                        		'.$sccp_bc_mobile_btn_size.'
 	                        	}
