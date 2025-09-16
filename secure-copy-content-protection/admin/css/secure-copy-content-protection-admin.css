@@ -128,6 +128,14 @@ div.ays-notice-banner {
     background-image: unset;
 }
 
+.ays-notice-banner .navigation-bar li.ays_sccp_take_gift a {
+    color: #eb5757;
+}
+
+.ays-notice-banner .navigation-bar li.ays_sccp_take_gift a:hover {
+    color: #c44949;
+}
+
 .ays-notice-banner #navigation-container {
     width: 100%;
     margin: 0 auto;
