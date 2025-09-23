@@ -169,10 +169,12 @@ class Secure_Copy_Content_Protection_Admin {
 
         $sccp_banner_date = $this->ays_sccp_update_banner_time();
         wp_localize_script($this->plugin_name . '-banner', 'sccpBannerLangObj', array(
-            'sccpBannerDate'  	 => $sccp_banner_date,
-            'copied'             => esc_html__( 'Copied!', 'secure-copy-content-protection'),
-            'somethingWentWrong' => __( "Maybe something went wrong.", 'secure-copy-content-protection' ),
-            'errorMsg'           => __( "Error", 'secure-copy-content-protection' )
+            'sccpBannerDate'  	     => $sccp_banner_date,
+            'copied'                 => esc_html__( 'Copied!', 'secure-copy-content-protection'),
+            'somethingWentWrong'     => __( "Maybe something went wrong.", 'secure-copy-content-protection' ),
+            'errorMsg'               => __( "Error", 'secure-copy-content-protection' ),
+            'successCopyCoupon'      => __( "Coupon code copied!", 'secure-copy-content-protection' ),
+            'failedCopyCoupon'       => __( "Failed to copy coupon code", 'secure-copy-content-protection' ),
         ) );	
 
 		if (false !== strpos($hook_suffix, "plugins.php")){			
@@ -183,7 +185,6 @@ class Secure_Copy_Content_Protection_Admin {
                 'errorMsg'              => __( "Error", 'secure-copy-content-protection' ),
                 'loadResource'          => __( "Can't load resource.", 'secure-copy-content-protection' ),
                 'somethingWentWrong'    => __( "Maybe something went wrong.", 'secure-copy-content-protection' ),
-
             ));
 		}
 
