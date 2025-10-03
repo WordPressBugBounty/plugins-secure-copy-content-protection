@@ -230,6 +230,8 @@ if ( $if_fox_lms_plugin_exists ) {
 
 $if_fox_lms_plugin_installed_flag = get_option('ays_sccp_and_fox_lms_plugin_flag');
 
+$temporarily_do_not_show_fox_lms_popup = false;
+
 ?>
 <div class="wrap">
     <div class="ays-sccp-heading-box">
@@ -2705,7 +2707,7 @@ $if_fox_lms_plugin_installed_flag = get_option('ays_sccp_and_fox_lms_plugin_flag
                     ?>
                     </div>
 
-                    <?php if( !$if_dismiss_cookie_exists && !$if_fox_lms_plugin_exists && !$if_fox_lms_plugin_installed_flag ): ?>
+                    <?php if( !$if_dismiss_cookie_exists && !$if_fox_lms_plugin_exists && !$if_fox_lms_plugin_installed_flag && $temporarily_do_not_show_fox_lms_popup ) : ?>
                         <!-- SCCP and Fox LMS integration main page 2025 | Start -->
                         <div id="ays-sccp-fox-lms-all-pages-popup" class="bounceInRight_2022" style="display: none;">
                             <div id="ays-sccp-fox-lms-all-pages-popup-main">

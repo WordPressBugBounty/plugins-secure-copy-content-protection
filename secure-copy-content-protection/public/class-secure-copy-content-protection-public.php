@@ -780,6 +780,16 @@ class Secure_Copy_Content_Protection_Public {
         // Block content box text color
 		$bc_text_color = (isset($block_content_settings['sccp_bc_text_color']) && $block_content_settings['sccp_bc_text_color'] != '') ? 'color:'.stripslashes( esc_attr($block_content_settings['sccp_bc_text_color']) ).';' : 'color: #000;';
 
+		// Subscribe box Enable Text Color Mobile
+        $block_content_settings['enable_sccp_bc_text_color_mobile'] = ( isset( $block_content_settings['enable_sccp_bc_text_color_mobile'] ) && $block_content_settings['enable_sccp_bc_text_color_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Text Color Mobile
+        if ( $block_content_settings['enable_sccp_bc_text_color_mobile'] ) {
+            $bc_text_color_mobile = ( isset( $block_content_settings['sccp_bc_text_color_mobile'] ) && $block_content_settings['sccp_bc_text_color_mobile'] != '' ) ?  'color:'.stripslashes( esc_attr($block_content_settings['sccp_bc_text_color_mobile']) ).' !important;' : $bc_text_color;
+        } else {
+            $bc_text_color_mobile = $bc_text_color;
+        }
+
 		// Block content box background color
 		$bc_bg_color = (isset($block_content_settings['sccp_bc_bg_color']) && $block_content_settings['sccp_bc_bg_color'] != '') ? 'background-color:'.stripslashes( esc_attr($block_content_settings['sccp_bc_bg_color']) ).';' : 'background-color: #fff;';
 
@@ -975,6 +985,7 @@ class Secure_Copy_Content_Protection_Public {
 							@media screen and (max-width: 768px){
 	                        	.conblock_div {
 	                        		'. $bc_width_mobile .' !important;
+	                        		'. $bc_text_color_mobile .';
 	                        	}
 	                        	.conblock_div input[type="submit"] {
 	                        		'.$sccp_bc_mobile_btn_size.'

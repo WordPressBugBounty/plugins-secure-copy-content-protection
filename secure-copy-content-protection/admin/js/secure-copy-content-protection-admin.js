@@ -527,7 +527,11 @@
             $(document).find('#ays_sccp_bc_width_mobile').val('').change();
             $(document).find('#sccp_bc_width_by_percentage_px').val('pixels').change();
             $(document).find('#sccp_bc_width_mobile_by_percentage_px').val('pixels').change();
+
             $(document).find('#bc_text_color').val('#000').change();
+            $(document).find('#bc_text_color_mobile').val('#000').change();
+            $(document).find("#enable_bc_text_color_mobile").prop('checked', true).change();
+
             $(document).find('#bc_bg_color').val('#fff').change();
             $(document).find('#ays-sccp-bc-bg-img').attr('src', '').change();
             $(document).find('input#ays_sccp_bc_bg_image').val('');
@@ -643,6 +647,9 @@
             defaultColor: '#000',
         });
         $('#bc_text_color').wpColorPicker({
+            defaultColor: '#000',
+        });
+        $('#bc_text_color_mobile').wpColorPicker({
             defaultColor: '#000',
         });
         $('#sub_bg_color').wpColorPicker({

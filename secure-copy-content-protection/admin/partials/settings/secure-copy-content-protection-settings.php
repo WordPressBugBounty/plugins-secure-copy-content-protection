@@ -45,6 +45,14 @@ $sccp_bc_width_mobile_by_percentage_px = (isset($block_content['sccp_bc_width_mo
 // Block content box text color
 $ays_sccp_bc_text_color = (isset($block_content['sccp_bc_text_color']) && $block_content['sccp_bc_text_color'] != '') ? stripslashes( esc_attr($block_content['sccp_bc_text_color']) ) : '#000';
 
+// Enable Block content box Text Color Mobile
+$block_content['enable_sccp_bc_text_color_mobile'] = isset( $block_content['enable_sccp_bc_text_color_mobile'] ) && $block_content['enable_sccp_bc_text_color_mobile'] == 'off' ? 'off' : 'on';
+
+$enable_ays_sccp_bc_text_color_mobile = $block_content['enable_sccp_bc_text_color_mobile'] == 'on' ?  true : false;
+
+// Block content box Text Color Mobile
+$ays_sccp_bc_text_color_mobile = isset( $block_content['sccp_bc_text_color_mobile'] ) && $block_content['sccp_bc_text_color_mobile'] != '' ? esc_attr( $block_content['sccp_bc_text_color_mobile'] ) : $ays_sccp_bc_text_color;
+
 // Block content box background color
 $ays_sccp_bc_bg_color = (isset($block_content['sccp_bc_bg_color']) && $block_content['sccp_bc_bg_color'] != '') ? stripslashes( esc_attr($block_content['sccp_bc_bg_color']) ) : '#fff';
 
@@ -1891,7 +1899,21 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </a>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <input type="text" id="bc_text_color" data-alpha="true" name="bc_text_color" value="<?php echo $ays_sccp_bc_text_color; ?>"/>
+                            	<div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" id="bc_text_color" name="bc_text_color" data-alpha="true" value="<?php echo $ays_sccp_bc_text_color; ?>">
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_text_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_text_color_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" id="bc_text_color_mobile" name="bc_text_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_bc_text_color_mobile; ?>">
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_bc_text_color_mobile" name="enable_bc_text_color_mobile" <?php echo $enable_ays_sccp_bc_text_color_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_bc_text_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    </div>
+                                </div>                                
                             </div>
                         </div>
                         <hr>

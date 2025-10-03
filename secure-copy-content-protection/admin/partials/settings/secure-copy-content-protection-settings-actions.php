@@ -334,6 +334,12 @@ class Sccp_Settings_Actions {
             // Block content box text color
             $bc_text_color = (isset($data['bc_text_color']) && $data['bc_text_color'] != '') ? stripslashes( esc_attr($data['bc_text_color']) ) : '#000';
 
+            // Enable Block content box Text Color Mobile
+            $enable_bc_text_color_mobile = isset( $data['enable_bc_text_color_mobile'] ) && $data['enable_bc_text_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content box Text Color Mobile
+            $bc_text_color_mobile = isset( $data['bc_text_color_mobile'] ) && $data['bc_text_color_mobile'] != '' ? sanitize_text_field( $data['bc_text_color_mobile'] ) : '#000';
+
             // Block content box background color
             $bc_bg_color = (isset($data['bc_bg_color']) && $data['bc_bg_color'] != '') ? stripslashes( esc_attr($data['bc_bg_color']) ) : '#fff';
 
@@ -401,6 +407,8 @@ class Sccp_Settings_Actions {
                 "sccp_bc_width_by_percentage_px"        => $sccp_bc_width_by_percentage_px,
                 "sccp_bc_width_mobile_by_percentage_px" => $sccp_bc_width_mobile_by_percentage_px,
                 "sccp_bc_text_color"                    => $bc_text_color,
+                "enable_sccp_bc_text_color_mobile"      => $enable_bc_text_color_mobile,
+                "sccp_bc_text_color_mobile"             => $bc_text_color_mobile,
                 "sccp_bc_bg_color"                      => $bc_bg_color,
                 "bc_bg_image"                           => $ays_bc_bg_img,
                 "bc_bg_image_position"                  => $bc_bg_image_position,
