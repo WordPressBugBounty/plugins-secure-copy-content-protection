@@ -551,6 +551,7 @@ class Secure_Copy_Content_Protection_Public {
             $user_ip = '';
         }else{
             $user_ip = $this->sccp_get_user_ip();
+			$user_ip = filter_var( $user_ip, FILTER_VALIDATE_IP ) ? $user_ip : 'UNKNOWN';
         }
         
 		$cookie_sub_val = '';
@@ -711,6 +712,7 @@ class Secure_Copy_Content_Protection_Public {
 
 	public function sccp_blockcont_generate_shortcode( $atts, $content ) {
 		wp_enqueue_style($this->plugin_name.'-block-content', plugin_dir_url(__FILE__) . 'css/block_content_public.css', array(), $this->version, 'all');
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/secure-copy-content-protection-public.js', array('jquery'), $this->version, false);
 		global $wpdb;
 		$sccp_settings = $this->settings;
 		$id = esc_sql($atts['id']);
@@ -793,14 +795,47 @@ class Secure_Copy_Content_Protection_Public {
 		// Block content box background color
 		$bc_bg_color = (isset($block_content_settings['sccp_bc_bg_color']) && $block_content_settings['sccp_bc_bg_color'] != '') ? 'background-color:'.stripslashes( esc_attr($block_content_settings['sccp_bc_bg_color']) ).';' : 'background-color: #fff;';
 
+		// Block content box Enable Background Color Mobile
+        $block_content_settings['enable_sccp_bc_bg_color_mobile'] = ( isset( $block_content_settings['enable_sccp_bc_bg_color_mobile'] ) && $block_content_settings['enable_sccp_bc_bg_color_mobile'] == 'off') ? false : true;
+        
+        // Block content box Background Color Mobile
+        if ( $block_content_settings['enable_sccp_bc_bg_color_mobile'] ) {
+            $bc_bg_color_mobile = ( isset( $block_content_settings['sccp_bc_bg_color_mobile'] ) && $block_content_settings['sccp_bc_bg_color_mobile'] != '' ) ?  'background-color:'.stripslashes( esc_attr($block_content_settings['sccp_bc_bg_color_mobile']) ).' !important;' : $bc_bg_color;
+        } else {
+            $bc_bg_color_mobile = $bc_bg_color;
+        }
+
 		// Block content Add BG image
 		$sccp_bc_bg_image = isset($block_content_settings["bc_bg_image"]) && !empty($block_content_settings["bc_bg_image"]) ? 'background-image: url('.$block_content_settings["bc_bg_image"].');' : '';
 
 		// Block content Bg image positioning
 		$sccp_bc_bg_image_position = (isset($block_content_settings["bc_bg_image_position"]) && $block_content_settings["bc_bg_image_position"] != '') ? 'background-position:'. $block_content_settings["bc_bg_image_position"] .';' : "background-position:center center;";
 
+		// Enable Block content Bg image positioning Mobile
+        $block_content_settings['enable_bc_bg_image_position_mobile'] = ( isset( $block_content_settings['enable_bc_bg_image_position_mobile'] ) && $block_content_settings['enable_bc_bg_image_position_mobile'] == 'off') ? false : true;
+
+        // Block content Bg image positioning Mobile
+        if ( $block_content_settings['enable_bc_bg_image_position_mobile'] ) {
+            $sccp_bc_bg_image_position_mobile = ( isset( $block_content_settings['bc_bg_image_position_mobile'] ) && $block_content_settings['bc_bg_image_position_mobile'] != '') ?  sanitize_text_field( $block_content_settings['bc_bg_image_position_mobile'] ) : 'center center';
+        } else {
+            $sccp_bc_bg_image_position_mobile = $block_content_settings["bc_bg_image_position"];
+        }
+
+        $bc_bg_image_position_mobile = 'background-position:'. $sccp_bc_bg_image_position_mobile .' !important;';
+
 		// Block content button text
 		$bc_button_text = (isset($block_content_settings['sccp_bc_button_text']) && $block_content_settings['sccp_bc_button_text'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_button_text']) ) : __('Submit', 'secure-copy-content-protection');
+
+		// Enable Block content button text Mobile
+        $block_content_settings['enable_sccp_bc_button_text_mobile'] = ( isset( $block_content_settings['enable_sccp_bc_button_text_mobile'] ) && $block_content_settings['enable_sccp_bc_button_text_mobile'] == 'off') ? false : true;
+        
+        // Block content button text Mobile
+        if ( $block_content_settings['enable_sccp_bc_button_text_mobile'] ) {
+            
+        	$bc_button_text_mobile = (isset($block_content_settings['sccp_bc_button_text_mobile']) && $block_content_settings['sccp_bc_button_text_mobile'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_button_text_mobile']) ) : $bc_button_text;
+        } else {
+            $bc_button_text_mobile = $bc_button_text;
+        }
 
 		// Block content paswword placeholder text
 		$bc_psw_place_text = (isset($block_content_settings['sccp_bc_psw_place_text']) && $block_content_settings['sccp_bc_psw_place_text'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_psw_place_text']) ) : __('Password', 'secure-copy-content-protection');
@@ -986,6 +1021,8 @@ class Secure_Copy_Content_Protection_Public {
 	                        	.conblock_div {
 	                        		'. $bc_width_mobile .' !important;
 	                        		'. $bc_text_color_mobile .';
+	                        		'. $bc_bg_color_mobile .';
+	                        		'. $bc_bg_image_position_mobile .';
 	                        	}
 	                        	.conblock_div input[type="submit"] {
 	                        		'.$sccp_bc_mobile_btn_size.'
@@ -1003,7 +1040,7 @@ class Secure_Copy_Content_Protection_Public {
 									<input type="password" required name="pass_form" placeholder="'.$bc_psw_place_text.'" style="'.$bc_cont_input_width.'">
 								</div>
 								<div class="ays_sccp_bc_form_fields">
-								<input type="submit" name="sub_form_'.$id.'" value="'.$bc_button_text.'" style="'.$sccp_bc_btn_color.' '.$sccp_bc_btn_text_color.' '.$sccp_bc_btn_size.' '.$sccp_bc_btn_radius.' '.$sccp_bc_btn_border_width.' '.$sccp_bc_btn_border_style.' '.$sccp_bc_btn_border_color.' '.$sccp_bc_btn_padding.'">
+								<input type="submit" class="ays_sccp_bc_sbm" name="sub_form_'.$id.'" value="'.$bc_button_text.'" data-mobile-value="'.$bc_button_text_mobile.'" data-desktop-value="'.$bc_button_text.'" style="'.$sccp_bc_btn_color.' '.$sccp_bc_btn_text_color.' '.$sccp_bc_btn_size.' '.$sccp_bc_btn_radius.' '.$sccp_bc_btn_border_width.' '.$sccp_bc_btn_border_style.' '.$sccp_bc_btn_border_color.' '.$sccp_bc_btn_padding.'">
 								</div>
 							</form>
 						</div>');
@@ -1276,16 +1313,21 @@ class Secure_Copy_Content_Protection_Public {
 			// Do not store IP adressess 
         	$sccp_disable_user_ip = (isset($settings_options['sccp_disable_user_ip']) && $settings_options['sccp_disable_user_ip'] == 'on') ? true : false;
 
-			$user_first_name 		= '';
-	        $user_last_name  		= '';
-	        $user_display_name  	= '';
-	        $user_nickname 			= '';
-	        $user_email 	 		= '';
-	        $user_wordpress_roles   = '';
+			$user_first_name 		 = '';
+	        $user_last_name  		 = '';
+	        $user_display_name  	 = '';
+	        $user_nickname 			 = '';
+	        $user_email 	 		 = '';
+	        $user_wordpress_roles    = '';
+	        $user_data = wp_get_current_user();
 	        $user_id = get_current_user_id();
 	        $current_date = date_i18n( 'M d, Y', current_time('timestamp') );
+	        $current_time = date_i18n( get_option( 'time_format' ), current_time('timestamp') );
+	        $current_day  = date_i18n( 'l', current_time('timestamp') );
+	        $current_month  = date_i18n( 'F', current_time('timestamp') );
+
 	        if($user_id != 0){
-	            $usermeta  = get_user_meta( $user_id );	            
+	            $usermeta  = get_user_meta( $user_id );	
 	        	
 	            if($usermeta !== null){
 	                $user_first_name = (isset($usermeta['first_name'][0]) && sanitize_text_field( $usermeta['first_name'][0] != '') ) ? sanitize_text_field( $usermeta['first_name'][0] ) : '';
@@ -1308,12 +1350,13 @@ class Secure_Copy_Content_Protection_Public {
 	            }
 	    	}else{
 	    		$user_id = '';
-	    	}
+	    	}	    	
 	    	
 	    	if($sccp_disable_user_ip){
             	$user_ip = '';
 	        }else{
 	            $user_ip = $this->sccp_get_user_ip();
+	            $user_ip = filter_var( $user_ip, FILTER_VALIDATE_IP ) ? $user_ip : 'UNKNOWN';
 	        }
 
 	        $current_user_ip = $user_ip;
@@ -1325,31 +1368,56 @@ class Secure_Copy_Content_Protection_Public {
         	$post_author_display_name = get_the_author_meta( 'display_name', $author_id );
         	$post_author_first_name = get_the_author_meta( 'first_name', $author_id );
         	$post_author_last_name = get_the_author_meta( 'last_name', $author_id );
+        	$post_author_website_url = get_the_author_meta( 'url', $author_id );
         	$post_author_email = get_the_author_meta( 'email', $author_id );
+
+        	$post_author_roles = '';
+        	$user_registered = '';
+	        if ( is_user_logged_in() ) {
+	            $post_author_roles = get_the_author_meta( 'roles', $author_id );
+	            $user_registered = $user_data->user_registered;
+	        }
+
         	$current_post_id = get_the_ID();
         	$post_title = get_the_title();
         	$get_site_title = get_bloginfo('name');
+        	$get_site_description = get_bloginfo('description');
+        	$home_page_url = home_url();
+
+        	if ( ! empty( $post_author_roles ) && $post_author_roles != "" ) {
+	            if ( is_array( $post_author_roles ) ) {
+	                $post_author_roles = implode( ", ", $post_author_roles );
+	            }
+	        }
 	        
 			$message_data = array(                    
-                'user_first_name' 			=> $user_first_name,
-                'user_last_name' 			=> $user_last_name,                   
-                'user_wordpress_email' 		=> $user_email,                  
-                'user_display_name' 		=> $user_display_name,
-                'user_nickname'     		=> $user_nickname,
-                'user_wordpress_roles' 		=> $user_wordpress_roles,
-                'current_user_ip'       	=> $current_user_ip,
-                'admin_email'       		=> $super_admin_email,
-                'post_author_nickname'  	=> $post_author_nickname,
-                'post_author_email'			=> $post_author_email,
-                'post_author_display_name'	=> $post_author_display_name,
-                'post_author_first_name'	=> $post_author_first_name,
-                'post_author_last_name'		=> $post_author_last_name,
-                'user_id'              		=> $user_id,
-                'current_date'          	=> $current_date,
-                'current_page_title'		=> $current_page_title,
-                'site_title'				=> $get_site_title,
-                'post_id'					=> $current_post_id,
-                'post_title'                => $post_title,
+                'user_first_name' 				=> $user_first_name,
+                'user_last_name' 				=> $user_last_name,                   
+                'user_wordpress_email' 			=> $user_email,                  
+                'user_display_name' 			=> $user_display_name,
+                'user_nickname'     			=> $user_nickname,
+                'user_wordpress_roles' 			=> $user_wordpress_roles,
+                'current_user_ip'       		=> $current_user_ip,
+                'admin_email'       			=> $super_admin_email,
+                'post_author_nickname'  		=> $post_author_nickname,
+                'post_author_email'				=> $post_author_email,
+                'post_author_display_name'		=> $post_author_display_name,
+                'post_author_first_name'		=> $post_author_first_name,
+                'post_author_last_name'			=> $post_author_last_name,
+                'post_author_website_url'		=> $post_author_website_url,
+                'post_author_roles'				=> $post_author_roles,
+                'user_id'              			=> $user_id,
+                'user_registered'           	=> $user_registered,
+                'current_date'          		=> $current_date,
+                'current_time'          		=> $current_time,
+                'current_day'          			=> $current_day,
+                'current_month'          		=> $current_month,
+                'current_page_title'			=> $current_page_title,
+                'site_title'					=> $get_site_title,
+                'site_description'				=> $get_site_description,
+                'post_id'						=> $current_post_id,
+                'post_title'                	=> $post_title,
+                'home_page_url'             	=> $home_page_url,
             );
 
 			$notf_text = $this->sccp_replace_message_variables($notf_text, $message_data);
@@ -1493,24 +1561,20 @@ class Secure_Copy_Content_Protection_Public {
 	}
 
 	private function sccp_get_user_ip() {
-		$ipaddress = '';
-		if (getenv('HTTP_CLIENT_IP')) {
-			$ipaddress = getenv('HTTP_CLIENT_IP');
-		} else if (getenv('HTTP_X_FORWARDED_FOR')) {
-			$ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-		} else if (getenv('HTTP_X_FORWARDED')) {
-			$ipaddress = getenv('HTTP_X_FORWARDED');
-		} else if (getenv('HTTP_FORWARDED_FOR')) {
-			$ipaddress = getenv('HTTP_FORWARDED_FOR');
-		} else if (getenv('HTTP_FORWARDED')) {
-			$ipaddress = getenv('HTTP_FORWARDED');
-		} else if (getenv('REMOTE_ADDR')) {
-			$ipaddress = getenv('REMOTE_ADDR');
-		} else {
-			$ipaddress = 'UNKNOWN';
-		}
+	    $ip = '';
 
-		return $ipaddress;
+	    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {        
+	        $ip_list = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+	        $ip = trim($ip_list[0]);
+	    } elseif (!empty($_SERVER['REMOTE_ADDR'])) {
+	        $ip = $_SERVER['REMOTE_ADDR'];
+	    }
+	    
+	    if (filter_var($ip, FILTER_VALIDATE_IP)) {
+	        return $ip;
+	    }
+
+	    return 'UNKNOWN';
 	}
 
 	public function ays_add_mailchimp_transaction( $username, $api_key, $list_id, $args ) {

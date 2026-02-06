@@ -157,6 +157,11 @@
                 <button type="button" class="button button-primary sccp_results_export-action" data-type="xlsx"><?php echo esc_html( __('XLSX', 'secure-copy-content-protection') );?></button>
                 <button type="button" class="button button-primary sccp_results_export-action" data-type="json"><?php echo esc_html( __('JSON', 'secure-copy-content-protection') );?></button>
                 <a href="javascript:void(0)" id="download" style="display: none;">Download</a>
+
+                <?php 
+                    $sccp_ajax_export_results_nonce = wp_create_nonce( 'sccp-ajax-export-results-nonce' ); 
+                ?>
+                <input type="hidden" id="sccp_ajax_export_results_nonce" name="sccp_ajax_export_results_nonce" value="<?php echo $sccp_ajax_export_results_nonce; ?>">
             </div>
 
         </div>

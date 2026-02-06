@@ -101,7 +101,7 @@ class Sccp_Settings_Actions {
             $ays_sub_button_text = (isset($data['ays_sccp_sub_button_text']) && $data['ays_sccp_sub_button_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_sub_button_text']) ) : 'Subscribe';
 
             // Enable Subscribe title transformation Mobile
-            $enable_ays_sub_button_text_mobile = isset( $data['enable_ays_sccp_sub_button_text_mobile'] ) && $data['enable_ays_sub_title_transformation_mobile'] == 'on' ? 'on' : 'off';
+            $enable_ays_sub_button_text_mobile = isset( $data['enable_ays_sccp_sub_button_text_mobile'] ) && $data['enable_ays_sccp_sub_button_text_mobile'] == 'on' ? 'on' : 'off';
 
             // Subscribe box title transformation Mobile
             $ays_sub_button_text_mobile = isset( $data['ays_sccp_sub_button_text_mobile'] ) && $data['ays_sccp_sub_button_text_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_button_text_mobile'] ) : 'Subscribe';
@@ -343,14 +343,32 @@ class Sccp_Settings_Actions {
             // Block content box background color
             $bc_bg_color = (isset($data['bc_bg_color']) && $data['bc_bg_color'] != '') ? stripslashes( esc_attr($data['bc_bg_color']) ) : '#fff';
 
+            // Enable Block content box background color Mobile
+            $enable_bc_bg_color_mobile = isset( $data['enable_bc_bg_color_mobile'] ) && $data['enable_bc_bg_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content box Background Color Mobile
+            $bc_bg_color_mobile = isset( $data['bc_bg_color_mobile'] ) && $data['bc_bg_color_mobile'] != '' ? sanitize_text_field( $data['bc_bg_color_mobile'] ) : '#fff';
+
             // Block content box Add BG Image
             $ays_bc_bg_img = (isset($data['ays_sccp_bc_bg_image']) && $data['ays_sccp_bc_bg_image'] != '') ? $data['ays_sccp_bc_bg_image'] : '';
 
             // Block content Bg image positioning
             $bc_bg_image_position = (isset($data['ays_bc_bg_image_position']) && $data['ays_bc_bg_image_position'] != "") ? $data['ays_bc_bg_image_position'] : 'center center';
 
+            // Enable Block content Bg image positioning Mobile
+            $enable_bc_bg_image_position_mobile = isset( $data['enable_ays_bc_bg_image_position_mobile'] ) && $data['enable_ays_bc_bg_image_position_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content Bg image positioning Mobile
+            $bc_bg_image_position_mobile = isset( $data['ays_bc_bg_image_position_mobile'] ) && $data['ays_bc_bg_image_position_mobile'] != '' ? sanitize_text_field( $data['ays_bc_bg_image_position_mobile'] ) : 'center center';
+
             // Block content box button text
             $ays_bc_button_text = (isset($data['ays_sccp_bc_button_text']) && $data['ays_sccp_bc_button_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_bc_button_text']) ) : 'Submit';
+
+            // Enable Block content title transformation Mobile
+            $enable_ays_bc_button_text_mobile = isset( $data['enable_ays_sccp_bc_button_text_mobile'] ) && $data['enable_ays_sccp_bc_button_text_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content box title transformation Mobile
+            $ays_bc_button_text_mobile = isset( $data['ays_sccp_bc_button_text_mobile'] ) && $data['ays_sccp_bc_button_text_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_button_text_mobile'] ) : 'Subscribe';
 
             // Block content box password placeholder text
             $ays_bc_psw_place_text = (isset($data['ays_sccp_bc_psw_place_text']) && $data['ays_sccp_bc_psw_place_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_bc_psw_place_text']) ) : 'Password';
@@ -410,9 +428,15 @@ class Sccp_Settings_Actions {
                 "enable_sccp_bc_text_color_mobile"      => $enable_bc_text_color_mobile,
                 "sccp_bc_text_color_mobile"             => $bc_text_color_mobile,
                 "sccp_bc_bg_color"                      => $bc_bg_color,
+                "enable_sccp_bc_bg_color_mobile"        => $enable_bc_bg_color_mobile,
+                "sccp_bc_bg_color_mobile"               => $bc_bg_color_mobile,
                 "bc_bg_image"                           => $ays_bc_bg_img,
                 "bc_bg_image_position"                  => $bc_bg_image_position,
+                "enable_bc_bg_image_position_mobile"    => $enable_bc_bg_image_position_mobile,
+                "bc_bg_image_position_mobile"           => $bc_bg_image_position_mobile,
                 "sccp_bc_button_text"                   => $ays_bc_button_text,
+                "enable_sccp_bc_button_text_mobile"     => $enable_ays_bc_button_text_mobile,
+                "sccp_bc_button_text_mobile"            => $ays_bc_button_text_mobile,
                 "sccp_bc_psw_place_text"                => $ays_bc_psw_place_text,
                 "bc_cont_border_style"                  => $bc_cont_border_style,
                 "bc_cont_border_color"                  => $bc_cont_border_color,

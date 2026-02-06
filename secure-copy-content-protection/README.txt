@@ -3,8 +3,8 @@ Contributors: ays-pro
 Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
-Tested up to: 6.8.2
-Stable tag: 4.8.1
+Tested up to: 6.9
+Stable tag: 5.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -262,6 +262,70 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 
 == Changelog ==
+
+= 5.0.0 ( February 03, 2026 ) =
+* Added: Home Page URL message variable on the general settings
+
+= 4.9.9 ( January 27, 2026 ) =
+* Added: Site Description message variable on the general settings
+* Improved: Some changes on the admin dashboard
+
+= 4.9.8 ( January 20, 2026 ) =
+* Added: Mobile button text option for Block content to view box on the general settings
+
+= 4.9.7 ( January 14, 2026 ) =
+* Improved: Some changes on the admin dashboard
+
+= 4.9.6 ( January 08, 2026 ) =
+* Added: User Registered message variable on the general settings
+
+= 4.9.5 ( December 24, 2025 ) =
+* Improved: Some changes on the admin dashboard
+
+= 4.9.4 ( December 16, 2025 ) =
+* Added: Current month message variable on the general settings
+
+= 4.9.3 ( December 09, 2025 ) =
+* Added: Current day message variable on the general settings
+* Improved: Some changes on the admin dashboard
+
+= 4.9.2 ( December 05, 2025 ) =
+* Improved: Some changes on the admin dashboard
+* Updated: POT and Po files
+
+= 4.9.1 ( December 02, 2025 ) =
+* Added: Current time message variable on the general settings
+* Improved: Some changes on the admin dashboard
+* Tested: Compatible up to 6.9
+
+= 4.9.0 ( November 25, 2025 ) =
+* Improved: Some changes on the admin dashboard
+
+= 4.8.9 ( November 20, 2025 ) =
+* Added: "Black Friday Deal" Banner
+
+= 4.8.8 ( November 18, 2025 ) =
+* Added: Post author roles message variable on the general settings
+
+= 4.8.7 ( November 11, 2025 ) =
+* Improved: Some changes on the admin dashboard
+* Updated: POT and Po files
+
+= 4.8.6 ( November 04, 2025 ) =
+* Added: Mobile background position option for Block content to view box on the general settings
+* Improved: Some changes on the admin dashboard
+
+= 4.8.5 ( October 28, 2025 ) =
+* Added: Post author website url variable on the general settings
+
+= 4.8.4 ( October 21, 2025 ) =
+* Improved: Some changes on the admin dashboard
+
+= 4.8.3 ( October 14, 2025 ) =
+* Added: Mobile background color option for Block content to view box on the general settings
+
+= 4.8.2 ( October 08, 2025 ) =
+* Improved: Some changes on the admin dashboard
 
 = 4.8.1 ( October 03, 2025 ) =
 * Added: Mobile text color option for Block content to view box on the general settings

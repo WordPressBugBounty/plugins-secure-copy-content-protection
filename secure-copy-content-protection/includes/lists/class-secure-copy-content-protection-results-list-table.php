@@ -334,31 +334,43 @@ class Sccp_Results_List_Table extends WP_List_Table {
 		$other_info = !empty($item['other_info']) ? json_decode($item['other_info']) : array();
 		switch ( $column_name ) {
 			case 'subscribe_id':
+				return intval( $item[$column_name] );
+				break;
 			case 'user_ip':
-			case 'subscribe_email':
 			case 'user_name':
-			case 'vote_date':
-			case 'unread':
 			case 'user_address':
-				return $item[$column_name];
+				return esc_html( $item[$column_name] );
+				break;
+			case 'subscribe_email':
+				return esc_html( sanitize_email( $item[$column_name] ) );
+				break;
+			case 'vote_date':
+				return esc_html( $item[$column_name] );
+				break;
+			case 'unread':
+				return intval( $item[$column_name] );
 				break;
 			case 'user_id':
-				$display_name = (isset(get_user_by('ID', $item[$column_name])->display_name) &&  get_user_by('ID', $item[$column_name])->display_name != null) ? sanitize_text_field( get_user_by('ID', $item[$column_name])->display_name ) : 'Deleted User';	
+					if ( $item[$column_name] > 0 ) {
+			        	$user = get_user_by( 'ID', intval( $item[$column_name] ) );
+				        $display_name = $user && $user->display_name
+				            ? esc_html( $user->display_name )
+				            : esc_html__( 'Deleted User', 'secure-copy-content-protection' );
 
-				return $item[$column_name] > 0 ? $display_name : __("Guest", 'secure-copy-content-protection');
-				break;
+				        return $display_name;
+				    }
+    				return esc_html__( 'Guest', 'secure-copy-content-protection' );
+				break;			
 			case 'user_roles':
-					$user_meta = get_userdata($item['user_id']);
-		        	$user_roles = isset($user_meta) && $user_meta ? $user_meta->roles : false;
-		        	$role = "";
-		        	if ( $user_roles && !is_null( $user_roles ) && is_array($user_roles) ) {
-		        		$role = count($user_roles) > 1 ? implode(", ", $user_roles) : implode("", $user_roles);
-		        	}
-				
-				return $role;
+					$user_meta = get_userdata( intval( $item['user_id'] ) );
+				    $user_roles = $user_meta && is_array( $user_meta->roles ) ? $user_meta->roles : array();
+
+				    $roles = ! empty( $user_roles ) ? implode( ', ', $user_roles ) : '';
+
+				    return esc_html( $roles );
 				break;			
 			default:
-				return print_r($item, true); //Show the whole array for troubleshooting purposes
+				return esc_html( print_r( $item, true ) );
 		}
 	}
 

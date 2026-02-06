@@ -61,11 +61,31 @@
         });
     }
 
+    function updateBcSubmitButtonText() {
+        $(document).find('.ays_sccp_bc_sbm').each(function() {
+            var $btn = $(this);
+            var mobileText = $btn.data('mobile-value');
+            var originalText = $btn.data('desktop-value');
+
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                if (mobileText) {
+                    $btn.val(mobileText);
+                }
+            } else {
+                if (originalText) {
+                    $btn.val(originalText);
+                }
+            }
+        });
+    }
+
     $(document).ready(function() {
         updateSubmitButtonText();
+        updateBcSubmitButtonText();
     });
 
     $(window).on('resize', function() {
         updateSubmitButtonText();
+        updateBcSubmitButtonText();
     });    
 })(jQuery);

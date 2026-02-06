@@ -253,19 +253,24 @@
         });
 
         $(document).find('.sccp_results_export-action').on('click', function(e) {
+            
             e.preventDefault();
             let $this = $('#ays-export-filters');
             $this.find('div.ays-sccp-preloader').css('display', 'flex');
             let action = 'ays_sccp_results_export_file';
             let sccp_id = $('#sccp_id-filter').val();
+
+            var wp_nonce = $(document).find('#sccp_ajax_export_results_nonce').val();
             var type = $(this).data('type');
             var date_from = $('#sccp_start-date-filter').val() || $('#sccp_start-date-filter').attr('min');
             var date_to = $('#sccp_end-date-filter').val() || $('#sccp_end-date-filter').attr('max');
+
             $.post({
                 url: sccp.ajax,
                 dataType: 'json',
                 data: { 
                     action: action,
+                    _ajax_nonce : wp_nonce,
                     type: type,
                     sccp_id: sccp_id,
                     date_from: date_from, 
@@ -286,8 +291,9 @@
                                 Jhxlsx.export(tableData, options);
                                 break;
                             case 'csv':
-                                $('#download').attr({
-                                    'href': response.file,
+                                var downloadUrl = sccp.ajaxurl + '?action=sccp_download_export&token=' + encodeURIComponent(response.token);
+                                    $('#download').attr({
+                                    'href': downloadUrl,
                                     'download': "exported_sccp.csv",
                                 })[0].click();
                                 break;
@@ -533,8 +539,18 @@
             $(document).find("#enable_bc_text_color_mobile").prop('checked', true).change();
 
             $(document).find('#bc_bg_color').val('#fff').change();
+            $(document).find('#bc_bg_color_mobile').val('#fff').change();
+            $(document).find("#enable_bc_bg_color_mobile").prop('checked', true).change();
+            
             $(document).find('#ays-sccp-bc-bg-img').attr('src', '').change();
             $(document).find('input#ays_sccp_bc_bg_image').val('');
+            $(document).find('.ays-bc-bg-pos-block').removeClass('active');
+
+            $(document).find('#ays-sccp-bc-position-val').val('center center').change();            
+            $(document).find('#ays-sccp-bc-position-mobile-val').val('center center').change();            
+            $(document).find("#enable_ays_bc_bg_image_position_mobile").prop('checked', true).change();            
+            aysSccpBcImagePosition();
+
             $(document).find('#sccp_bc_bg-image_container').hide().change();
             $(document).find('#sccp_bc_bg_image').show().change();
             $(document).find('#ays_bc_bg_image_position').val('center center').change();
@@ -659,6 +675,9 @@
             defaultColor: '#fff',
         });
         $('#bc_bg_color').wpColorPicker({
+            defaultColor: '#fff',
+        });
+        $('#bc_bg_color_mobile').wpColorPicker({
             defaultColor: '#fff',
         });
         $('#sub_desc_text_color').wpColorPicker({
@@ -1220,6 +1239,7 @@
             $(this).parent().parent().find('input#ays_sccp_bc_bg_image').val('');
             $(this).parent().hide();
             $(this).parent().parent().find('a.add-sccp-bc-bg-image').show();            
+            $(document).find('.ays-bc-bg-pos-block').removeClass('active');
         });
 
         setTimeout(function(){
@@ -1332,15 +1352,17 @@
                     element.hide();
                     element.parent().find('img#ays-sccp-bc-bg-img').attr('src', attachment.url);
                     element.next().val(attachment.url);
+                    $(document).find('.ays-bc-bg-pos-block').addClass('active');
                 }else if(element.hasClass('ays-edit-sccp-bc-bg-img')){
                     element.parent().find('.ays-sccp-bc-bg-image-container').fadeIn();
                     element.parent().find('img#ays-sccp-bc-bg-img').attr('src', attachment.url);
                     $(document).find('#ays_sccp_bc_bg_image').val(attachment.url);                    
+                    $(document).find('.ays-bc-bg-pos-block').addClass('active');             
                 }else if(element.hasClass('add-sccp-bc-icon-image')){
                     element.parent().find('.ays-sccp-bc-image-container').fadeIn();
                     element.hide();
                     element.parent().find('img#ays-sccp-bc-img').attr('src', attachment.url);
-                    element.next().val(attachment.url);                    
+                    element.next().val(attachment.url);       
                 }else if(element.hasClass('ays-edit-sccp-bc-img')){
                     element.parent().find('.ays-sccp-bc-image-container').fadeIn();
                     element.parent().find('img#ays-sccp-bc-img').attr('src', attachment.url);
@@ -1859,6 +1881,45 @@
 
             $(document).find('table#ays-sccp-position-table td').removeAttr('style');
             $(document).find('table#ays-sccp-position-table-mobile td').removeAttr('style');
+            $this.css('background-color','#3d89e0');
+            $thisMobile.css('background-color','#9964b3');
+        }
+
+        // BC Position tables start
+        $(document).find('table#ays-sccp-bc-position-table tr td, table#ays-sccp-bc-position-table-mobile tr td').on('click', function(e) {
+            var val = $(this).data('value');
+            var flag = $(this).parents('table').data('flag');
+
+            if (flag == 'sccp_image_position') {
+                $(this).parents('.sccp_position_block').find('.ays-sccp-position-val-class').val(val).trigger('change');
+            } else {
+                $(this).parents('.sccp_position_block').find('.ays-sccp-position-mobile-val-class').val(val).trigger('change');
+            }
+
+            aysSccpBcImagePosition();
+            
+        });
+        // Position tables end
+
+        aysSccpBcImagePosition();
+        function aysSccpBcImagePosition() {
+            var hiddenVal = $(document).find('.sccp_position_block #ays-sccp-bc-position-val').val();
+            var hiddenValMobile = $(document).find('.sccp_position_block #ays-sccp-bc-position-mobile-val').val();
+
+            if (hiddenVal == '') {
+                var $this = $(document).find('table#ays-sccp-bc-position-table tr td[data-value="center-center"]');
+            }else{
+                var $this = $(document).find('table#ays-sccp-bc-position-table tr td[data-value="' + hiddenVal + '"]');
+            }
+
+            if (hiddenValMobile == '') {
+                var $thisMobile = $(document).find('table#ays-sccp-bc-position-table-mobile tr td[data-value="center-center"]');
+            }else{
+                var $thisMobile = $(document).find('table#ays-sccp-bc-position-table-mobile tr td[data-value="' + hiddenValMobile + '"]');
+            }
+
+            $(document).find('table#ays-sccp-bc-position-table td').removeAttr('style');
+            $(document).find('table#ays-sccp-bc-position-table-mobile td').removeAttr('style');
             $this.css('background-color','#3d89e0');
             $thisMobile.css('background-color','#9964b3');
         }

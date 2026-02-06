@@ -556,7 +556,7 @@ select[multiple] + .select2.select2-container {
 }
 
 .select2.select2-container,.select2-container--default.select2-container{
-    z-index: 10000;
+    z-index: 9999;
 }
 
 .copy_protection_container .select2.select2-container.select2-container--default {
@@ -2941,12 +2941,16 @@ body[class*='secure-copy-content-protect'] #wpfooter{
 }
 
 .ays-sub-bg-pos-block + hr, 
-.ays-sub-bg-pos-block {
+.ays-bc-bg-pos-block + hr, 
+.ays-sub-bg-pos-block, 
+.ays-bc-bg-pos-block {
     display: none;
 }
 
 .ays-sub-bg-pos-block.active + hr, 
-.ays-sub-bg-pos-block.active {
+.ays-bc-bg-pos-block.active + hr, 
+.ays-sub-bg-pos-block.active, 
+.ays-bc-bg-pos-block.active {
     display: flex;
 }
 
@@ -3540,34 +3544,42 @@ p.ays-subtitle {
 }
 
 table#ays-sccp-position-table,
-table#ays-sccp-position-table-mobile {
+table#ays-sccp-bc-position-table,
+table#ays-sccp-position-table-mobile, 
+table#ays-sccp-bc-position-table-mobile {
     width: 120px;
     border: 1px solid #B8B8B8;
     cursor: pointer;
 }
 
 table#ays-sccp-position-table td,
-table#ays-sccp-position-table-mobile td {
+table#ays-sccp-bc-position-table td,
+table#ays-sccp-position-table-mobile td, 
+table#ays-sccp-bc-position-table-mobile td {
     border-bottom: 1px solid #B8B8B8;
     border-right: 1px solid #B8B8B8;
     background-color: #d8e7f9;
     height: 25px;
 }
 
-table#ays-sccp-position-table td:hover {
+table#ays-sccp-position-table td:hover, 
+table#ays-sccp-bc-position-table td:hover {
     background-color: #3d89e0;
 }
 
-table#ays-sccp-position-table-mobile td {
+table#ays-sccp-position-table-mobile td, 
+table#ays-sccp-bc-position-table-mobile td {
     background-color: #ebe0f0;
 }
 
-table#ays-sccp-position-table-mobile td:hover {
+table#ays-sccp-position-table-mobile td:hover, 
+table#ays-sccp-bc-position-table-mobile td:hover {
     background-color: #9964b3;
 }
 /* Image Position tables styles end */
 
-.ays_sccp_sub_bg_image_position_mobile_container {
+.ays_sccp_sub_bg_image_position_mobile_container, 
+.ays_sccp_bc_bg_image_position_mobile_container {
     margin-left: 20px;
     padding-left: 20px;
 }

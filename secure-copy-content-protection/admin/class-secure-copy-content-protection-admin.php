@@ -64,6 +64,8 @@ class Secure_Copy_Content_Protection_Admin {
             add_filter('set_screen_option_'.$option_name, array(__CLASS__, 'set_screen'), 10, 3);
         }
 
+        add_action('admin_post_sccp_download_export', array( $this, 'handle_sccp_download') );
+
 	}
 
 	/**
@@ -167,7 +169,7 @@ class Secure_Copy_Content_Protection_Admin {
 
         wp_enqueue_script( $this->plugin_name . "-banner", plugin_dir_url(__FILE__) . 'js/secure-copy-content-protection-banner.js', array('jquery'), $this->version, true);
 
-        $sccp_banner_date = $this->ays_sccp_update_banner_time();
+        $sccp_banner_date = self::ays_sccp_update_banner_time();
         wp_localize_script($this->plugin_name . '-banner', 'sccpBannerLangObj', array(
             'sccpBannerDate'  	     => $sccp_banner_date,
             'copied'                 => esc_html__( 'Copied!', 'secure-copy-content-protection'),
@@ -209,6 +211,7 @@ class Secure_Copy_Content_Protection_Admin {
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/secure-copy-content-protection-admin.js', array('jquery', 'wp-color-picker'), $this->version, true);
 		wp_localize_script($this->plugin_name, 'sccp', array(
 			'ajax'           	=> admin_url('admin-ajax.php'),
+            'ajaxurl'           => admin_url('admin-post.php'),
 			'loader_message' 	=> __('Just a moment...', 'secure-copy-content-protection'),
 			'loader_url'     	=> SCCP_ADMIN_URL . '/images/rocket.svg',
 			'bc_user_role'    	=> $ays_users_roles,
@@ -554,56 +557,104 @@ class Secure_Copy_Content_Protection_Admin {
 		return $response;
     }
 
-    public function ays_sccp_results_export_csv($results){
-    	global $wpdb;
-		error_reporting(0);
+    public function ays_sccp_results_export_csv( $results ){
+        
+        if ( ! current_user_can('manage_options') ) {
+            return array('status' => false, 'error' => 'no_permission');
+        }
 
-		$url = plugin_dir_url(__FILE__) . "partials/results/";
-    	$path = plugin_dir_path(__FILE__) . "partials/results/";
+        global $wpdb;
+        error_reporting(0);
 
-		$file_url          	= $url . 'exported_sccp/exported_sccp.csv';
-		$file_path          = $path . 'exported_sccp/exported_sccp.csv';
-		$export_file        = fopen($file_path, 'wa');
+        $upload = wp_upload_dir();
+        $private_dir = trailingslashit($upload['basedir']) . 'sccp-private/';
 
-		//BOM characters usage in PHP:
-		fputs($export_file, chr(0xEF) . chr(0xBB) . chr(0xBF));
+        if ( ! file_exists($private_dir) ) {
+            wp_mkdir_p($private_dir);
+            
+            @file_put_contents($private_dir . '.htaccess', "Require all denied\n");
+            
+            @file_put_contents($private_dir . 'index.php', "<?php http_response_code(403); exit('Access denied');");
+        }
 
-		if (!$export_file) {
-			echo json_encode(array(
-				'status' => false
-			));
-			wp_die();
-		}
+        $filename = 'export-' . wp_generate_password(20, false, false) . '.csv';
+        $file_path = $private_dir . $filename;
 
-		$export_file_fields = array('Shortcode ID', 'User Email', 'User Name', 'User IP', 'Date', 'WP User', 'User Roles', 'City, Country');
-		fputcsv($export_file, $export_file_fields);
+        $export_file = fopen($file_path, 'w');
 
-		$results_array_csv = array();
-		
-		foreach ($results as $f_value) {
+        if (!$export_file) {
+            return array('status' => false, 'error' => 'cannot_create_file');
+        }
 
-			$user_roles = $this->ays_sccp_get_user_roles_by_userId($f_value['user_id']);
-        	$role = "";
-        	if ( $user_roles && !is_null( $user_roles ) && is_array($user_roles) ) {
-        		$role = count($user_roles) > 1 ? implode(", ", $user_roles) : implode("", $user_roles);
-        	}
-        	array_splice($f_value,5,0,$role);
-        	
-			 $f_value['user_id'] = $f_value['user_id'] > 0 ? get_user_by('ID', $f_value['user_id'])->display_name : "Guest";
-			 $results_array_csv = $f_value;
-			
-			fputcsv($export_file, $results_array_csv);
-		}
-		
-		fclose($export_file);
+        fputs($export_file, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
-		$response = array(
-			'status' => true,
-			'file' 	 => $file_url,
-			"type"   => 'csv'
-		);
+        $export_file_fields = array('Shortcode ID', 'User Email', 'User Name', 'User IP', 'Date', 'WP User', 'User Roles', 'City, Country');
+        fputcsv($export_file, $export_file_fields);
 
-		return $response;
+        foreach ($results as $f_value) {
+            $user_roles = $this->ays_sccp_get_user_roles_by_userId($f_value['user_id']);
+            $role = "";
+            if ( $user_roles && !is_null($user_roles) && is_array($user_roles) ) {
+                $role = count($user_roles) > 1 ? implode(", ", $user_roles) : implode("", $user_roles);
+            }
+            
+            $row = $f_value;
+            array_splice($row, 5, 0, $role);
+            $row['user_id'] = $row['user_id'] > 0 ? get_user_by('ID', $row['user_id'])->display_name : "Guest";
+            
+            fputcsv($export_file, $row);
+        }
+        
+        fclose($export_file);
+
+        $token = wp_generate_password(24, false, false);
+        $user_id = get_current_user_id();
+        $transient_key = 'sccp_export_' . $user_id . '_' . $token;
+        set_transient($transient_key, $file_path, HOUR_IN_SECONDS);
+
+        $response = array(
+            'status' => true,
+            'token'  => $token,
+            'type'   => 'csv'
+        );
+
+        return $response;
+    }
+
+    public function handle_sccp_download() {
+        if ( ! is_user_logged_in() || ! current_user_can('manage_options') ) {
+            wp_die('Access denied', '', 403);
+        }
+
+        $token = isset($_GET['token']) ? sanitize_text_field($_GET['token']) : '';
+        if ( empty($token) ) {
+            wp_die('Token not found', '', 400);
+        }
+
+        $user_id = get_current_user_id();
+        $transient_key = 'sccp_export_' . $user_id . '_' . $token;
+        $file_path = get_transient($transient_key);
+
+        if ( ! $file_path || ! file_exists($file_path) ) {
+            wp_die('File not found or expired', '', 404);
+        }
+
+        header('Content-Description: File Transfer');
+        header('Content-Type: text/csv; charset=utf-8');
+        header('Content-Disposition: attachment; filename="sccp-export.csv"');
+        header('Content-Length: ' . filesize($file_path));
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        
+        if (ob_get_level()) {
+            ob_end_clean();
+        }
+        
+        readfile($file_path);
+
+        delete_transient($transient_key);
+        unlink($file_path);
+        exit;
     }
 
     public function ays_sccp_results_export_json($results){
@@ -643,6 +694,10 @@ class Secure_Copy_Content_Protection_Admin {
     } 
 
 	public function ays_sccp_results_export_file(){
+
+        // Run a security check.
+        check_ajax_referer( 'sccp-ajax-export-results-nonce', sanitize_key( $_REQUEST['_ajax_nonce'] ) );
+        
     	global $wpdb;
 		error_reporting(0);
 
@@ -968,13 +1023,13 @@ class Secure_Copy_Content_Protection_Admin {
 		$double_optin = isset( $args['double_optin'] ) && $args['double_optin'] == 'on' ? true : false;
 
 		$fields = array(
-			"name" => $list_data['name'],
-			"contact" => $list_data['contact'],
-			"permission_reminder" => $list_data['permission_reminder'],
-			"use_archive_bar" => $list_data['use_archive_bar'],
-			"campaign_defaults" => $list_data['campaign_defaults'],
-			"email_type_option" => $list_data['email_type_option'],
-			"double_optin" => $double_optin,
+			"name"                   => $list_data['name'],
+			"contact"                => $list_data['contact'],
+			"permission_reminder"    => $list_data['permission_reminder'],
+			"use_archive_bar"        => $list_data['use_archive_bar'],
+			"campaign_defaults"      => $list_data['campaign_defaults'],
+			"email_type_option"      => $list_data['email_type_option'],
+			"double_optin"           => $double_optin,
 		);
 
 		$api_prefix = explode("-",$api_key)[1];
@@ -1147,7 +1202,7 @@ class Secure_Copy_Content_Protection_Admin {
 
     }
 
-    public function ays_sccp_update_banner_time(){
+    public static function ays_sccp_update_banner_time(){
 
         $date = time() + ( 3 * 24 * 60 * 60 ) + (int) ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS);
         // $date = time() + ( 60 ) + (int) ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS); // for testing | 1 min
@@ -1741,6 +1796,187 @@ class Secure_Copy_Content_Protection_Admin {
         $content .= '</div>';
 
         echo $content;
+    }
+
+    public function ays_sccp_black_friady_popup_box(){
+        if(!empty($_REQUEST['page']) && sanitize_text_field( $_REQUEST['page'] ) != $this->plugin_name . "-admin-dashboard"){
+            if(false !== strpos( sanitize_text_field( $_REQUEST['page'] ), $this->plugin_name)){
+
+                $flag = true;
+
+                if( isset($_COOKIE['aysSccpBlackFridayPopupCount']) && intval($_COOKIE['aysSccpBlackFridayPopupCount']) >= 2 ){
+                    $flag = false;
+                }
+
+                $ays_sccp_cta_button_link = esc_url('https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=mega-bundle-popup-black-friday-sale-' . SCCP_NAME_VERSION);
+
+                if( $flag ){
+                ?>
+                <div class="ays-sccp-black-friday-popup-overlay" style="opacity: 0; visibility: hidden; display: none;">
+                  <div class="ays-sccp-black-friday-popup-dialog">
+                    <div class="ays-sccp-black-friday-popup-content">
+                      <div class="ays-sccp-black-friday-popup-background-pattern">
+                        <div class="ays-sccp-black-friday-popup-pattern-row">
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                        <div class="ays-sccp-black-friday-popup-pattern-row">
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                        <div class="ays-sccp-black-friday-popup-pattern-row">
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                        <div class="ays-sccp-black-friday-popup-pattern-row">
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-sccp-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                      </div>
+                      
+                      <button class="ays-sccp-black-friday-popup-close" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 6 6 18"></path>
+                          <path d="m6 6 12 12"></path>
+                        </svg>
+                      </button>
+                      
+                      <div class="ays-sccp-black-friday-popup-badge">
+                        <div class="ays-sccp-black-friday-popup-badge-content">
+                          <div class="ays-sccp-black-friday-popup-badge-text-sm"><?php echo esc_html__( 'Up to', 'secure-copy-content-protection' ); ?></div>
+                          <div class="ays-sccp-black-friday-popup-badge-text-lg">50%</div>
+                          <div class="ays-sccp-black-friday-popup-badge-text-md"><?php echo esc_html__( 'OFF', 'secure-copy-content-protection' ); ?></div>
+                        </div>
+                      </div>
+                      
+                      <div class="ays-sccp-black-friday-popup-main-content">
+                        <div class="ays-sccp-black-friday-popup-hashtag"><?php echo esc_html__( '#BLACKFRIDAY', 'secure-copy-content-protection' ); ?></div>
+                        <h1 class="ays-sccp-black-friday-popup-title-mega"><?php echo esc_html__( 'PHOTOGRAPHY', 'secure-copy-content-protection' ); ?></h1>
+                        <h1 class="ays-sccp-black-friday-popup-title-bundle"><?php echo esc_html__( 'BUNDLE', 'secure-copy-content-protection' ); ?></h1>
+                        <div class="ays-sccp-black-friday-popup-offer-label">
+                          <h2 class="ays-sccp-black-friday-popup-offer-text"><?php echo esc_html__( 'BLACK FRIDAY OFFER', 'secure-copy-content-protection' ); ?></h2>
+                        </div>
+                        <p class="ays-sccp-black-friday-popup-description"><?php echo esc_html__( 'Get our exclusive plugins in one bundle', 'secure-copy-content-protection' ); ?></p>
+                        <a href="<?php echo esc_url($ays_sccp_cta_button_link); ?>" target="_blank" class="ays-sccp-black-friday-popup-cta-btn"><?php echo esc_html__( 'Get Photography Bundle', 'secure-copy-content-protection' ); ?></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/javascript">
+                    (function() {
+                      var overlay = document.querySelector('.ays-sccp-black-friday-popup-overlay');
+                      var closeBtn = document.querySelector('.ays-sccp-black-friday-popup-close');
+                      var learnMoreBtn = document.querySelector('.ays-sccp-black-friday-popup-learn-more');
+                      var ctaBtn = document.querySelector('.ays-sccp-black-friday-popup-cta-btn');
+
+                      // Cookie helper functions
+                      function setCookie(name, value, days) {
+                        var expires = "";
+                        if (days) {
+                          var date = new Date();
+                          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                          expires = "; expires=" + date.toUTCString();
+                        }
+                        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+                      }
+
+                      function getCookie(name) {
+                        var nameEQ = name + "=";
+                        var ca = document.cookie.split(';');
+                        for (var i = 0; i < ca.length; i++) {
+                          var c = ca[i];
+                          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                        }
+                        return null;
+                      }
+
+                      // Get current show count from cookie
+                      var showCount = parseInt(getCookie('aysSccpBlackFridayPopupCount') || '0', 10);
+                      var maxShows = 2;
+
+                      // Show popup function
+                      function showPopup() {
+                        if (overlay && showCount < maxShows) {
+                          overlay.classList.add('ays-sccp-black-friday-popup-active');
+                          showCount++;
+                          // Update cookie with new count (expires in 30 days)
+                          setCookie('aysSccpBlackFridayPopupCount', showCount.toString(), 30);
+                        }
+                      }
+
+                      // Close popup function
+                      function closePopup(e) {
+                        if (e) {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }
+                        if (overlay) {
+                          overlay.classList.remove('ays-sccp-black-friday-popup-active');
+                        }
+                      }
+
+                      // Determine timing based on show count
+                      if (showCount === 0) {
+                        // First time - show after 30 seconds
+                        setTimeout(function() {
+                          showPopup();
+                        }, 30000);
+                      } else if (showCount === 1) {
+                        // Second time - show after 200 seconds
+                        setTimeout(function() {
+                          showPopup();
+                        }, 200000);
+                      }
+                      // If showCount >= 2, don't show popup at all
+
+                      // Close button
+                      if (closeBtn) {
+                        closeBtn.addEventListener('click', function(e) {
+                          closePopup(e);
+                        });
+                      }
+
+                      // Learn more button
+                      if (learnMoreBtn) {
+                        learnMoreBtn.addEventListener('click', function(e) {
+                          closePopup(e);
+                        });
+                      }
+
+                      // CTA button (optional - if you want it to close popup too)
+                      if (ctaBtn) {
+                        ctaBtn.addEventListener('click', function(e) {
+                          // You can add redirect logic here if needed
+                          // window.location.href = 'your-url';
+                        });
+                      }
+
+                      // Close on overlay click
+                      if (overlay) {
+                        overlay.addEventListener('click', function(e) {
+                          if (e.target === overlay) {
+                            closePopup(e);
+                          }
+                        });
+                      }
+
+                      // Close on Escape key
+                      document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' && overlay && overlay.classList.contains('ays-sccp-black-friday-popup-active')) {
+                          closePopup();
+                        }
+                      });
+                    })();
+                </script>
+                <style>
+                    .ays-sccp-black-friday-popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background-color:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}.ays-sccp-black-friday-popup-overlay.ays-sccp-black-friday-popup-active{display:flex!important;opacity:1!important;visibility:visible!important}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-dialog{position:relative;max-width:470px;width:100%;border-radius:8px;overflow:hidden;background:0 0;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);transform:scale(.95);transition:transform .2s}.ays-sccp-black-friday-popup-overlay.ays-sccp-black-friday-popup-active .ays-sccp-black-friday-popup-dialog{transform:scale(1)}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-content{position:relative;width:470px;height:410px;background:linear-gradient(to right bottom,#c056f5,#f042f0,#7d7de8);overflow:hidden}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-background-pattern{position:absolute;top:0;left:0;right:0;bottom:0;opacity:.07;pointer-events:none;transform:rotate(-12deg) translateY(32px);overflow:hidden}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-pattern-row{display:flex;gap:16px;margin-bottom:16px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-pattern-text{color:#fff;font-weight:900;font-size:96px;white-space:nowrap;line-height:1}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-close{position:absolute;top:16px;right:16px;z-index:9999;background:0 0;border:none;color:rgba(255,255,255,.8);cursor:pointer;padding:4px;transition:color .2s;line-height:0}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-close:hover,.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-learn-more:hover{color:#fff}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge{position:absolute;top:32px;right:32px;width:96px;height:96px;background-color:#d4fc79;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);animation:3s ease-in-out infinite ays-sccp-black-friday-popup-float}@keyframes ays-sccp-black-friday-popup-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-content{text-align:center}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-sm{color:#1a1a1a;font-weight:900;font-size:24px;line-height:1}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-lg{color:#1a1a1a;font-weight:900;font-size:30px;line-height:1;margin-top:4px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-md{color:#1a1a1a;font-weight:900;font-size:20px;line-height:1}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-main-content{position:relative;z-index:10;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 48px;text-align:center}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-hashtag{color:rgba(255,255,255,.9);font-weight:700;font-size:14px;margin-bottom:16px;letter-spacing:.1em}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-title-mega{color:#fff;font-weight:900;font-size:27px;line-height:1;margin:0 0 12px;text-shadow:0 4px 6px rgba(0,0,0,.1)}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-title-bundle{color:#fff;font-weight:900;font-size:27px;line-height:1;margin:0 0 24px;text-shadow:0 4px 6px rgba(0,0,0,.1)}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-offer-label{background-color:#000;padding:12px 32px;margin-bottom:24px;display:inline-block}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-offer-text{color:#fff;font-weight:700;font-size:20px;letter-spacing:.05em;margin:0}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-description{color:rgba(255,255,255,.95);font-size:18px;font-weight:500;margin:0 0 32px!important}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-cta-btn{display:inline-flex;align-items:center;justify-content:center;height:48px;background-color:#fff;color:#a855f7;font-size:18px;font-weight:700;border:none;border-radius:24px;padding:0 40px;cursor:pointer;box-shadow:0 20px 25px -5px rgba(0,0,0,.1);transition:.2s;text-decoration:none}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-cta-btn:hover{background-color:rgba(255,255,255,.9);box-shadow:0 25px 50px -12px rgba(0,0,0,.25);transform:scale(1.05)}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-learn-more{background:0 0;border:none;color:rgba(255,255,255,.9);font-size:14px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:8px;margin-top:16px;transition:color .2s}@media (max-width:768px){.ays-sccp-black-friday-popup-overlay{display:none!important}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-content{width:90vw;max-width:400px;height:380px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-main-content{padding:0 32px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge{width:80px;height:80px;top:24px;right:24px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-sm{font-size:20px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-lg{font-size:26px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-md,.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-offer-text{font-size:18px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-title-bundle,.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-title-mega{font-size:48px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-description{font-size:16px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-pattern-text{font-size:72px}}@media (max-width:480px){.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-content{width:95vw;max-width:340px;height:360px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-main-content{padding:0 24px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge{width:70px;height:70px;top:20px;right:20px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-sm,.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-offer-text{font-size:16px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-lg{font-size:22px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-badge-text-md{font-size:14px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-hashtag{font-size:12px;margin-bottom:12px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-title-bundle,.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-title-mega{font-size:40px;margin-bottom:8px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-offer-label{padding:10px 24px;margin-bottom:20px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-description{font-size:15px;margin-bottom:24px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-cta-btn{font-size:16px;height:44px;padding:0 32px}.ays-sccp-black-friday-popup-overlay .ays-sccp-black-friday-popup-pattern-text{font-size:60px}}
+                </style>
+                <?php
+                }
+            }
+        }
+
     }
 
 }
