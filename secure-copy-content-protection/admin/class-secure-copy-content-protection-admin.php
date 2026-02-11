@@ -837,10 +837,14 @@ class Secure_Copy_Content_Protection_Admin {
 		/*
 		*  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
 		*/
+
+        $sccp_ajax_deactivate_plugin_nonce = wp_create_nonce( 'sccp-ajax-deactivate-plugin-nonce' );
+
 		$settings_link = array(
 			'<a href="' . admin_url('options-general.php?page=' . $this->plugin_name) . '">' . __('Settings', 'secure-copy-content-protection') . '</a>',
 			'<a href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank">' . __('Demo', 'secure-copy-content-protection') . '</a>',
-            '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=buy-now-sccp" class="ays-sccp-upgrade-plugin-btn" target="_blank" style="color:#01A32A; font-weight:bold;">' . __('Upgrade 30% Sale', 'secure-copy-content-protection') . '</a>',
+            '<a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard-sccp&utm_medium=free-sccp&utm_campaign=buy-now-sccp" class="ays-sccp-upgrade-plugin-btn" target="_blank" style="color:#01A32A; font-weight:bold;">' . __('Upgrade 30% Sale', 'secure-copy-content-protection') . '</a>
+            <input type="hidden" id="ays_sccp_ajax_deactivate_plugin_nonce" name="ays_sccp_ajax_deactivate_plugin_nonce" value="' . $sccp_ajax_deactivate_plugin_nonce .'">',
 		);
 
 		return array_merge($settings_link, $links);
@@ -885,7 +889,20 @@ class Secure_Copy_Content_Protection_Admin {
 		include_once('partials/results/secure-copy-content-protection-results-display.php');
     }
 
-	public function deactivate_sccp_option() {		
+	public function deactivate_sccp_option() {
+
+        // Run a security check.
+        check_ajax_referer( 'sccp-ajax-deactivate-plugin-nonce', sanitize_key( $_REQUEST['_ajax_nonce'] ) );
+
+        // Check for permissions.
+        if ( ! current_user_can( 'manage_options' ) ) {
+            ob_end_clean();
+            $ob_get_clean = ob_get_clean();
+            echo json_encode(array(
+                'option' => ''
+            ));
+            wp_die();
+        }
 
 		if( is_user_logged_in() ) {
             $request_value = esc_sql( sanitize_text_field( $_REQUEST['upgrade_plugin'] ) );

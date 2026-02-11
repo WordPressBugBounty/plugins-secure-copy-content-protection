@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Popup box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-05 02:03+0300\n"
-"PO-Revision-Date: 2025-12-05 02:04+0300\n"
+"POT-Creation-Date: 2026-02-10 16:57+0300\n"
+"PO-Revision-Date: 2026-02-10 16:59+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n_noop:1,2;_x\n"
 "X-Poedit-Basepath: .\n"
@@ -22,13 +22,13 @@ msgstr ""
 #: ../admin/class-secure-copy-content-protection-actions.php:379
 #: ../admin/class-secure-copy-content-protection-actions.php:474
 #: ../includes/class-secure-copy-content-protection-activator.php:186
-#: ../public/class-secure-copy-content-protection-public.php:1175
+#: ../public/class-secure-copy-content-protection-public.php:1188
 msgid "You cannot copy content of this page"
 msgstr "Вы не можете скопировать содержимое этой страницы"
 
 #: ../admin/class-secure-copy-content-protection-actions.php:130
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:92
-#: ../public/class-secure-copy-content-protection-public.php:1449
+#: ../public/class-secure-copy-content-protection-public.php:1476
 msgid ""
 "Javascript not detected. Javascript required for this site to function. "
 "Please enable it in your browser settings and refresh this page."
@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../admin/class-secure-copy-content-protection-actions.php:186
 #: ../admin/partials/secure-copy-content-protection-admin-display.php:82
-#: ../public/class-secure-copy-content-protection-public.php:991
+#: ../public/class-secure-copy-content-protection-public.php:1004
 msgid "You need to Enter right password"
 msgstr "Вам необходимо ввести правильный пароль"
 
@@ -51,148 +51,149 @@ msgid "Subscribe"
 msgstr "Подписывайся"
 
 #: ../admin/class-secure-copy-content-protection-actions.php:613
-#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:593
+#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:601
 #: ../admin/partials/subscribe/actions/secure-copy-content-protection-subscribe-actions.php:105
 msgid "Changes saved."
 msgstr "Изменения сохранены."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:174
-#: ../admin/class-secure-copy-content-protection-admin.php:187
-#: ../admin/class-secure-copy-content-protection-admin.php:223
+#: ../admin/class-secure-copy-content-protection-admin.php:176
+#: ../admin/class-secure-copy-content-protection-admin.php:189
+#: ../admin/class-secure-copy-content-protection-admin.php:226
 msgid "Maybe something went wrong."
 msgstr "Может что-то пошло не так."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:175
-#: ../admin/class-secure-copy-content-protection-admin.php:185
-#: ../admin/class-secure-copy-content-protection-admin.php:221
+#: ../admin/class-secure-copy-content-protection-admin.php:177
+#: ../admin/class-secure-copy-content-protection-admin.php:187
+#: ../admin/class-secure-copy-content-protection-admin.php:224
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:176
+#: ../admin/class-secure-copy-content-protection-admin.php:178
+#: ../includes/class-secure-copy-content-protection-data.php:601
 msgid "Coupon code copied!"
 msgstr "Код купона скопирован!"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:177
+#: ../admin/class-secure-copy-content-protection-admin.php:179
 msgid "Failed to copy coupon code"
 msgstr "Не удалось скопировать код купона"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:186
-#: ../admin/class-secure-copy-content-protection-admin.php:222
+#: ../admin/class-secure-copy-content-protection-admin.php:188
+#: ../admin/class-secure-copy-content-protection-admin.php:225
 msgid "Can't load resource."
 msgstr "Не могу загрузить ресурс."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:212
+#: ../admin/class-secure-copy-content-protection-admin.php:215
 msgid "Just a moment..."
 msgstr "Подождите..."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:215
+#: ../admin/class-secure-copy-content-protection-admin.php:218
 msgid "Email field is empty"
 msgstr "Поле электронной почты пусто"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:216
+#: ../admin/class-secure-copy-content-protection-admin.php:219
 msgid "Invalid Email address"
 msgstr "Неверный адрес электронной почты"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:217
+#: ../admin/class-secure-copy-content-protection-admin.php:220
 msgid "Select user"
 msgstr "Выберите пользователя"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:218
+#: ../admin/class-secure-copy-content-protection-admin.php:221
 msgid "Please enter 1 or more characters"
 msgstr "Пожалуйста, введите 1 или более символов"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:219
+#: ../admin/class-secure-copy-content-protection-admin.php:222
 msgid "Searching..."
 msgstr "Поиск..."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:220
+#: ../admin/class-secure-copy-content-protection-admin.php:223
 msgid "Activated"
 msgstr "Активировано"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:224
+#: ../admin/class-secure-copy-content-protection-admin.php:227
 msgid "Great job"
 msgstr "Отличная работа"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:225
+#: ../admin/class-secure-copy-content-protection-admin.php:228
 msgid "For more detailed configuration visit"
 msgstr "Для более подробной настройки посетите"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:226
+#: ../admin/class-secure-copy-content-protection-admin.php:229
 msgid "Great!"
 msgstr "Отлично!"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:230
+#: ../admin/class-secure-copy-content-protection-admin.php:233
 #: ../admin/partials/results/secure-copy-content-protection-results-display.php:133
 msgid "Clear"
 msgstr "Очистить"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:231
+#: ../admin/class-secure-copy-content-protection-admin.php:234
 msgid "Clear color"
 msgstr "Очистить цвет"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:232
+#: ../admin/class-secure-copy-content-protection-admin.php:235
 msgid "Default"
 msgstr "По умолчанию"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:233
+#: ../admin/class-secure-copy-content-protection-admin.php:236
 msgid "Select default color"
 msgstr "Выбрать цвет по умолчанию"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:234
+#: ../admin/class-secure-copy-content-protection-admin.php:237
 msgid "Select Color"
 msgstr "Выбрать цвет"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:235
+#: ../admin/class-secure-copy-content-protection-admin.php:238
 msgid "Color value"
 msgstr "Значение цвета"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:241
+#: ../admin/class-secure-copy-content-protection-admin.php:244
 msgid "Name field"
 msgstr "Имя поля"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:242
+#: ../admin/class-secure-copy-content-protection-admin.php:245
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:102
 msgid "Tick the checkbox to show the Name field"
 msgstr "Установите флажок, чтобы отобразить название поля"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:243
+#: ../admin/class-secure-copy-content-protection-admin.php:246
 msgid "Description field"
 msgstr "Поле описания"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:244
+#: ../admin/class-secure-copy-content-protection-admin.php:247
 msgid "Tick the checkbox to show the Description field"
 msgstr "Установите флажок, чтобы отобразить поле Описание"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:416
-#: ../admin/class-secure-copy-content-protection-admin.php:417
+#: ../admin/class-secure-copy-content-protection-admin.php:419
+#: ../admin/class-secure-copy-content-protection-admin.php:420
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:34
 msgid "Subscribe to view"
 msgstr "Подпишитесь на просмотр"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:427
-#: ../admin/class-secure-copy-content-protection-admin.php:862
+#: ../admin/class-secure-copy-content-protection-admin.php:430
+#: ../admin/class-secure-copy-content-protection-admin.php:934
 #: ../admin/partials/results/secure-copy-content-protection-results-display.php:30
 #: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:12
 msgid "Results"
 msgstr "Результаты"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:440
-#: ../admin/class-secure-copy-content-protection-admin.php:441
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:421
+#: ../admin/class-secure-copy-content-protection-admin.php:443
+#: ../admin/class-secure-copy-content-protection-admin.php:444
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:428
 msgid "General Settings"
 msgstr "Настройки"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:450
-#: ../admin/class-secure-copy-content-protection-admin.php:451
+#: ../admin/class-secure-copy-content-protection-admin.php:453
+#: ../admin/class-secure-copy-content-protection-admin.php:454
 msgid "Our Products"
 msgstr "Наши товары"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:460
-#: ../admin/class-secure-copy-content-protection-admin.php:461
+#: ../admin/class-secure-copy-content-protection-admin.php:463
+#: ../admin/class-secure-copy-content-protection-admin.php:464
 msgid "PRO Features"
 msgstr "Характеристики PRO"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:479
+#: ../admin/class-secure-copy-content-protection-admin.php:482
 msgid ""
 "General Information:\n"
 "\t\t\t\t\t"
@@ -200,11 +201,11 @@ msgstr ""
 "Общая информация:\n"
 "\t\t\t\t\t"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:482
+#: ../admin/class-secure-copy-content-protection-admin.php:485
 msgid "SCCP Information"
 msgstr "SCCP Information"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:484
+#: ../admin/class-secure-copy-content-protection-admin.php:487
 msgid ""
 "Copy Content Protection is a must-have WordPress plugin which prevents the "
 "risk of plagiarism on your website. After the activation of the plugin the "
@@ -221,68 +222,68 @@ msgstr ""
 "пользователя есть возможность включить или отключить свойство с помощью "
 "флажка."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:489
+#: ../admin/class-secure-copy-content-protection-admin.php:492
 msgid "For more information:"
 msgstr "Для получения дополнительной информации:"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:491
+#: ../admin/class-secure-copy-content-protection-admin.php:494
 msgid "Youtube video tutorials"
 msgstr "Видеоуроки на ютубе"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:494
+#: ../admin/class-secure-copy-content-protection-admin.php:497
 msgid "Documentation"
 msgstr "Документация"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:497
+#: ../admin/class-secure-copy-content-protection-admin.php:500
 msgid "Copy Protection plugin Premium version"
 msgstr "Плагин Copy Protection Премиум версия"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:786
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:384
+#: ../admin/class-secure-copy-content-protection-admin.php:844
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:391
 msgid "Settings"
 msgstr "Настройки"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:787
+#: ../admin/class-secure-copy-content-protection-admin.php:845
 msgid "Demo"
 msgstr "Демо"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:788
+#: ../admin/class-secure-copy-content-protection-admin.php:846
 msgid "Upgrade 30% Sale"
 msgstr "Распродажа на обновление 30%"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:924
+#: ../admin/class-secure-copy-content-protection-admin.php:996
 msgid "Support"
 msgstr "Поддержка"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:926
+#: ../admin/class-secure-copy-content-protection-admin.php:998
 msgid "Docs"
 msgstr "Документация"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:928
+#: ../admin/class-secure-copy-content-protection-admin.php:1000
 msgid "Suggest a Feature"
 msgstr "Предложить функцию"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:932
+#: ../admin/class-secure-copy-content-protection-admin.php:1004
 msgid "If you love our plugin, please do big favor and rate us on"
 msgstr "Если вам нравится наш плагин, пожалуйста оцените нас на"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1188
+#: ../admin/class-secure-copy-content-protection-admin.php:1260
 msgid "Message Variables"
 msgstr "Переменные сообщения"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1189
+#: ../admin/class-secure-copy-content-protection-admin.php:1261
 msgid "Insert your preferred message variable into the editor by clicking."
 msgstr "Вставьте предпочтительную переменную сообщения в редактор, щелкнув."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1481
+#: ../admin/class-secure-copy-content-protection-admin.php:1553
 msgid "Fox LMS"
 msgstr "Fox LMS"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1482
+#: ../admin/class-secure-copy-content-protection-admin.php:1554
 msgid "Build and manage online courses directly on your WordPress site."
 msgstr "Создавайте и управляйте онлайн-курсами прямо на своем сайте WordPress."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1483
+#: ../admin/class-secure-copy-content-protection-admin.php:1555
 msgid ""
 "With the FoxLMS plugin, you can create, sell, and organize courses, lessons, "
 "and quizzes, transforming your website into a dynamic e-learning platform."
@@ -291,15 +292,15 @@ msgstr ""
 "курсы, уроки и тесты, превращая свой веб-сайт в динамическую платформу "
 "электронного обучения."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1490
+#: ../admin/class-secure-copy-content-protection-admin.php:1562
 msgid "Quiz Maker"
 msgstr "Quiz Maker"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1491
+#: ../admin/class-secure-copy-content-protection-admin.php:1563
 msgid "With our Quiz Maker plugin it’s easy to make a quiz in a short time."
 msgstr "С нашим плагином Quiz Maker можно легко и быстро создать тест."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1492
+#: ../admin/class-secure-copy-content-protection-admin.php:1564
 msgid ""
 "You to add images to your quiz, order unlimited questions. Also you can "
 "style your quiz to satisfy your visitors."
@@ -308,18 +309,18 @@ msgstr ""
 "количество вопросов. Также вы можете стилизовать свою викторину так, чтобы "
 "удовлетворить посетителей."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1499
+#: ../admin/class-secure-copy-content-protection-admin.php:1571
 msgid "Survey Maker"
 msgstr "Survey Maker"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1500
+#: ../admin/class-secure-copy-content-protection-admin.php:1572
 msgid ""
 "Make amazing online surveys and get real-time feedback quickly and easily."
 msgstr ""
 "Создавайте потрясающие онлайн-опросы и быстро и легко получайте отзывы в "
 "режиме реального времени."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1501
+#: ../admin/class-secure-copy-content-protection-admin.php:1573
 msgid ""
 "Learn what your website visitors want, need, and expect with the help of "
 "Survey Maker. Build surveys without limiting your needs."
@@ -328,17 +329,17 @@ msgstr ""
 "сайта, с помощью Survey Maker. Создавайте опросы, не ограничивая свои "
 "потребности."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1508
+#: ../admin/class-secure-copy-content-protection-admin.php:1580
 msgid "Poll Maker"
 msgstr "Poll Maker"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1509
+#: ../admin/class-secure-copy-content-protection-admin.php:1581
 msgid "Create amazing online polls for your WordPress website super easily."
 msgstr ""
 "Создавайте удивительные онлайн-опросы для своего веб-сайта WordPress очень "
 "легко."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1510
+#: ../admin/class-secure-copy-content-protection-admin.php:1582
 msgid ""
 "Build up various types of polls in a minute and get instant feedback on any "
 "topic or product."
@@ -346,11 +347,11 @@ msgstr ""
 "Создавайте различные типы опросов за минуту и получайте мгновенные отзывы по "
 "любой теме или продукту."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1517
+#: ../admin/class-secure-copy-content-protection-admin.php:1589
 msgid "Popup Box"
 msgstr "Popup Box"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1518
+#: ../admin/class-secure-copy-content-protection-admin.php:1590
 msgid ""
 "Popup everything you want! Create informative and promotional popups all in "
 "one plugin."
@@ -358,7 +359,7 @@ msgstr ""
 "Popup это все, что вы хотите! Создавайте информационные и рекламные "
 "всплывающие окна в одном плагине."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1519
+#: ../admin/class-secure-copy-content-protection-admin.php:1591
 msgid ""
 "Attract your visitors and convert them into email subscribers and paying "
 "customers."
@@ -366,18 +367,18 @@ msgstr ""
 "Привлекайте посетителей и превращайте их в подписчиков электронной почты и "
 "платящих клиентов."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1526
+#: ../admin/class-secure-copy-content-protection-admin.php:1598
 msgid "Gallery Photo Gallery"
 msgstr "Gallery Photo Gallery"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1527
+#: ../admin/class-secure-copy-content-protection-admin.php:1599
 msgid ""
 "Create unlimited galleries and include unlimited images in those galleries."
 msgstr ""
 "Создавайте неограниченное количество галерей и включайте неограниченное "
 "количество изображений в эти галереи."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1528
+#: ../admin/class-secure-copy-content-protection-admin.php:1600
 msgid ""
 "Represent images in an attractive way. Attract people with your own single "
 "and multiple free galleries from your photo library."
@@ -386,18 +387,18 @@ msgstr ""
 "собственными одной или несколькими бесплатными галереями из вашей "
 "фотобиблиотеки."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1535
+#: ../admin/class-secure-copy-content-protection-admin.php:1607
 msgid "Personal Dictionary"
 msgstr "Personal Dictionary"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1536
+#: ../admin/class-secure-copy-content-protection-admin.php:1608
 msgid ""
 "Allow your students to create personal dictionary, study and memorize the "
 "words."
 msgstr ""
 "Позвольте своим ученикам создать личный словарь, изучать и запоминать слова."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1537
+#: ../admin/class-secure-copy-content-protection-admin.php:1609
 msgid ""
 "Allow your users to create their own digital dictionaries and learn new "
 "words and terms as fastest as possible."
@@ -405,27 +406,27 @@ msgstr ""
 "Позвольте вашим пользователям создавать свои собственные цифровые словари и "
 "учить новые слова и термины как можно быстрее."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1544
+#: ../admin/class-secure-copy-content-protection-admin.php:1616
 msgid "Chart Builder"
 msgstr "Chart Builder"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1545
+#: ../admin/class-secure-copy-content-protection-admin.php:1617
 msgid "Chart Builder plugin allows you to create beautiful charts"
 msgstr "Плагин Chart Builder позволяет вам создавать красивые диаграммы"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1546
+#: ../admin/class-secure-copy-content-protection-admin.php:1618
 msgid " and graphs easily and quickly."
 msgstr " и графики легко и быстро."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1553
+#: ../admin/class-secure-copy-content-protection-admin.php:1625
 msgid "Easy Form"
 msgstr "Easy Form"
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1554
+#: ../admin/class-secure-copy-content-protection-admin.php:1626
 msgid "Choose the best WordPress form builder plugin. "
 msgstr "Выберите лучший плагин для создания форм WordPress. "
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1555
+#: ../admin/class-secure-copy-content-protection-admin.php:1627
 msgid ""
 "Create contact forms, payment forms, surveys, and many more custom forms. "
 "Build forms easily with us."
@@ -433,15 +434,17 @@ msgstr ""
 "Создавайте контактные формы, формы оплаты, опросы и многие другие "
 "пользовательские формы. Создавайте формы легко вместе с нами."
 
-#: ../admin/class-secure-copy-content-protection-admin.php:1735
-#: ../includes/class-secure-copy-content-protection-data.php:359
-#: ../includes/class-secure-copy-content-protection-data.php:1617
+#: ../admin/class-secure-copy-content-protection-admin.php:1807
+#: ../includes/class-secure-copy-content-protection-data.php:361
+#: ../includes/class-secure-copy-content-protection-data.php:464
+#: ../includes/class-secure-copy-content-protection-data.php:569
+#: ../includes/class-secure-copy-content-protection-data.php:2215
 msgid "Buy Now"
 msgstr "Купить сейчас"
 
 #: ../admin/partials/features/secure-copy-content-protection-featured-display.php:7
 #: ../admin/partials/results/secure-copy-content-protection-results-display.php:17
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:375
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:382
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:27
 msgid "View Documentation"
 msgstr "Посмотреть документацию"
@@ -483,7 +486,7 @@ msgid "Export Filter"
 msgstr "Фильтр экспорта"
 
 #: ../admin/partials/results/secure-copy-content-protection-results-display.php:132
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:421
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:433
 msgid "Shortcode ID"
 msgstr "Шорткод ID"
 
@@ -517,109 +520,109 @@ msgstr "JSON"
 msgid "Add Image"
 msgstr "Добавить изображение"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:145
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:150
 msgid "There are no lists"
 msgstr "Нет списков"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:268
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2707
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2447
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:273
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2712
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2513
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:49
 #: ../admin/partials/subscribe/secure-copy-content-protection-subscribe-display.php:190
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1735
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1740
 msgid "Mouse current position"
 msgstr "Текущая позиция мыши"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1736
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1741
 msgid "Mouse first position"
 msgstr "Первая позиция мыши"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1737
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1742
 msgid "Center center"
 msgstr "Центр центр"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1738
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1743
 msgid "Left top"
 msgstr "Левый верхний"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1739
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1744
 msgid "Left bottom"
 msgstr "Слева внизу"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1740
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1745
 msgid "Right top"
 msgstr "Правая верхняя часть"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1741
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1746
 msgid "Right bottom"
 msgstr "Справа внизу"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1924
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1098
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1929
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1150
 msgid "Uppercase – Transforms all characters to uppercase"
 msgstr "Верхний регистр – преобразует все символы в верхний регистр"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1925
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1099
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1930
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1151
 msgid "Lowercase – Transforms all characters to lowercase"
 msgstr "Нижний регистр – преобразует все символы в нижний регистр"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:1926
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1100
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:1931
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1152
 msgid "Capitalize – Transforms the first character of each word to uppercase"
 msgstr ""
 "Прописными буквами – преобразует первый символ каждого слова в верхний "
 "регистр"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2185
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1116
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1128
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2190
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1168
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1180
 msgid "None"
 msgstr "None"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2186
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2191
 msgid "Solid"
 msgstr "Solid"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2187
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2192
 msgid "Double"
 msgstr "Double"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2188
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2193
 msgid "Dotted"
 msgstr "Dotted"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2189
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2194
 msgid "Dashed"
 msgstr "Dashed"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2190
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2195
 msgid "Groove"
 msgstr "Groove"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2191
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2196
 msgid "Ridge"
 msgstr "Ridge"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2192
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2197
 msgid "Inset"
 msgstr "Inset"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2193
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2198
 msgid "Outset"
 msgstr "Outset"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2581
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:402
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:465
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2586
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:409
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:472
 msgid "Integrations"
 msgstr "Интеграции"
 
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2600
-#: ../admin/partials/secure-copy-content-protection-admin-display.php:2685
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2605
+#: ../admin/partials/secure-copy-content-protection-admin-display.php:2690
 #, php-format
 msgid ""
 "For enabling this option, please go to %1$s this %2$s page and fill all "
@@ -628,11 +631,11 @@ msgstr ""
 "Для включения этой опции перейдите на %1$s эту %2$s страницу и заполните все "
 "параметры."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:595
+#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:603
 msgid "SCCP attribute ."
 msgstr "Атрибут SCCP ."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:597
+#: ../admin/partials/settings/secure-copy-content-protection-settings-actions.php:605
 msgid "SCCP attribute deleted."
 msgstr "Атрибут SCCP удален."
 
@@ -641,37 +644,37 @@ msgstr "Атрибут SCCP удален."
 msgid "Add Icon"
 msgstr "Добавить иконку"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:398
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:405
 msgid "General"
 msgstr "Главная"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:405
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:514
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:412
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:521
 msgid "Message variables"
 msgstr "Переменные сообщения"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:408
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:729
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:415
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:781
 msgid "Shortcodes"
 msgstr "Шорткод"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:411
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:418
 msgid "Subscribe to view settings"
 msgstr "Настройки блока Подписаться на просмотр"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:414
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:421
 msgid "Block content to view settings"
 msgstr "Настройки блока Блокировать содержимое для просмотра"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:426
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:433
 msgid "Default parameters for copy protection"
 msgstr "Параметры по умолчанию для защиты от копирования"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:431
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:438
 msgid "WP Editor height"
 msgstr "Высота редактора WP"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:432
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:439
 msgid ""
 "Give the default value to the height of the WP Editor. It will apply to all "
 "WP Editors within the plugin on the dashboard."
@@ -679,15 +682,15 @@ msgstr ""
 "Задайте значение по умолчанию для высоты редактора WP. Это будет применяться "
 "ко всем редакторам WP в плагине на панели инструментов."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:446
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:453
 msgid "Users IP adressess"
 msgstr "IP-адреса пользователей"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:451
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:458
 msgid "Do not store IP adressess"
 msgstr "Не хранить IP-адреса"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:452
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:459
 msgid ""
 "After enabling this option, IP address of the users will not be stored in "
 "database."
@@ -695,28 +698,28 @@ msgstr ""
 "После включения этой опции IP-адреса пользователей не будут храниться в базе "
 "данных."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:470
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:477
 msgid "Mailchimp"
 msgstr "MailChimp"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:477
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:484
 msgid "Mailchimp Username"
 msgstr "Имя пользователя MailChimp"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:493
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:500
 msgid "Mailchimp API Key"
 msgstr "Ключ API MailChimp"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:506
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:513
 msgid "You can get your API key from your "
 msgstr "Вы можете получить свой ключ API от вашего "
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:506
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:513
 msgid "Account Extras menu"
 msgstr "Меню дополнительных услуг аккаунта"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:515
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:521
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:522
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:528
 msgid ""
 "You can copy these variables and paste them in the following options from "
 "the copy protection settings"
@@ -724,12 +727,12 @@ msgstr ""
 "Вы можете скопировать эти переменные и вставить их в следующие параметры из "
 "настроек защиты от копирования"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:516
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:522
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:523
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:529
 msgid "Notification text"
 msgstr "Текст уведомления"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:533
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:540
 msgid ""
 "The user's first name that was filled in their WordPress site during "
 "registration."
@@ -737,7 +740,7 @@ msgstr ""
 "Имя пользователя, которое было указано на сайте WordPress во время "
 "регистрации."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:542
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:549
 msgid ""
 "The user's last name that was filled in their WordPress site during "
 "registration."
@@ -745,21 +748,21 @@ msgstr ""
 "Фамилия пользователя, которая была указана на сайте WordPress при "
 "регистрации."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:551
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:558
 msgid "The user's email that was filled in their WordPress profile."
 msgstr ""
 "Электронная почта пользователя, которая была указана в профиле WordPress."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:560
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:567
 msgid "The user's display name that was filled in their WordPress profile."
 msgstr ""
 "Отображаемое имя пользователя, которое было указано в профиле WordPress."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:569
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:576
 msgid "The user's nickname that was filled in their WordPress profile."
 msgstr "Ник пользователя, который был указан в его профиле WordPress."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:578
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:585
 msgid ""
 "The user's role(s) when logged-in. In case the user is not logged-in, the "
 "field will be empty."
@@ -767,39 +770,51 @@ msgstr ""
 "Роль(роли) пользователя (пользователей) при входе в систему. В случае, если "
 "пользователь не вошел в систему, поле будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:587
-msgid "The ID of the current user."
-msgstr "Идентификатор текущего пользователя."
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:594
+msgid ""
+"The user's ID when logged-in. In case the user is not logged-in, the field "
+"will be empty."
+msgstr ""
+"Идентификатор пользователя при авторизации. Если пользователь не "
+"авторизован, поле будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:596
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:603
+msgid ""
+"The user's registration date when logged-in. In case the user is not logged-"
+"in, the field will be empty."
+msgstr ""
+"Дата регистрации пользователя на момент авторизации. Если пользователь не "
+"авторизован, поле будет пустым."
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:612
 msgid "Shows the admin's email that was filled in their WordPress profile."
 msgstr ""
 "Показывает адрес электронной почты администратора, указанный в его профиле "
 "WordPress."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:605
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:621
 msgid ""
 "Shows the post author's nickname that was filled in their WordPress profile."
 msgstr "Показывает псевдоним автора поста, указанный в его профиле WordPress."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:614
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:630
 msgid "The Email of the author of the post."
 msgstr "Электронная почта автора поста."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:623
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:639
 msgid "The Display name of the author of the post."
 msgstr "Отображаемое имя автора поста."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:632
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:641
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:648
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:657
 msgid "The Last name of the author of the post."
 msgstr "Фамилия автора поста."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:650
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:666
 msgid "The website URL of the author of the post."
 msgstr "URL-адрес веб-сайта автора поста."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:659
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:675
 msgid ""
 "The role(s) of the author of the post when logged-in. In case the user is "
 "not logged-in, the field will be empty."
@@ -807,33 +822,49 @@ msgstr ""
 "Роль(и) автора публикации при входе в систему. Если пользователь не вошел в "
 "систему, поле будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:668
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:684
 msgid "The ID of the current post."
 msgstr "ID текущего поста."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:677
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:693
 msgid "The Post title of the current post."
 msgstr "Заголовок текущего поста."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:686
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:702
 msgid "It will show the current date."
 msgstr "Покажет текущую дату."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:695
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:711
 msgid "It will show the current time."
 msgstr "Покажет текущее время."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:704
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:720
+msgid "It will show the current day."
+msgstr "Там будет отображаться текущий день."
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:729
+msgid "It will show the current month."
+msgstr "Там будет показан текущий месяц."
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:738
 msgid "Prints a title to the web page on which the tooltip is running."
 msgstr ""
 "Печатает заголовок веб-страницы, на которой отображается всплывающая "
 "подсказка."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:713
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:747
 msgid "The title of the website."
 msgstr "Название веб-сайта."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:722
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:756
+msgid "The description of the website."
+msgstr "Описание сайта."
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:765
+msgid "The URL of the home page."
+msgstr "URL главной страницы."
+
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:774
 msgid ""
 "Shows the current user's IP no matter whether they are a logged-in user or a "
 "guest. Please note, that this message variable will return empty, if 'Do not "
@@ -846,15 +877,15 @@ msgstr ""
 "настройки>Общие>IP-адреса пользователей будет установлен флажок \"Не "
 "сохранять IP-адреса\"."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:734
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:786
 msgid "Extra shortcodes"
 msgstr "Дополнительные шорткоды"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:741
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:793
 msgid "Subscribers count"
 msgstr "Количество подписчиков"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:742
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:794
 msgid ""
 "Copy the following shortcode and paste it into any posts. Insert the Block "
 "ID to receive the current number of subscribers of the block."
@@ -862,11 +893,11 @@ msgstr ""
 "Скопируйте следующий шорткод и вставьте его в любой пост. Вставьте "
 "идентификатор блока, чтобы получить текущее количество подписчиков блока."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:759
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:811
 msgid "Show User First Name"
 msgstr "Показать имя пользователя"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:760
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:812
 msgid ""
 "Shows the logged-in user's First Name. If the user is not logged-in, the "
 "shortcode will be empty."
@@ -874,11 +905,11 @@ msgstr ""
 "Показывает имя вошедшего в систему пользователя. Если пользователь не вошел "
 "в систему, короткий код будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:777
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:829
 msgid "Show User Last Name"
 msgstr "Показать фамилию пользователя"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:778
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:830
 msgid ""
 "Shows the logged-in user's Last Name. If the user is not logged-in, the "
 "shortcode will be empty."
@@ -886,11 +917,11 @@ msgstr ""
 "Показывает фамилию вошедшего в систему пользователя. Если пользователь не "
 "вошел в систему, шорткод будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:795
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:847
 msgid "Show User Email"
 msgstr "Показать Адрес Электронной почты Пользователя"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:796
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:848
 msgid ""
 "Shows the logged-in user's Email. If the user is not logged-in, the "
 "shortcode will be empty."
@@ -898,11 +929,11 @@ msgstr ""
 "Показывает адрес электронной почты вошедшего в систему пользователя. Если "
 "пользователь не вошел в систему, шорткод будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:813
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:865
 msgid "Show User roles"
 msgstr "Показывать роли пользователей"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:814
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:866
 msgid ""
 "Shows the logged-in user's role(s). If the user is not logged-in, the "
 "shortcode will be empty."
@@ -910,11 +941,11 @@ msgstr ""
 "Показывает роли вошедших в систему пользователей. Если пользователь не вошел "
 "в систему, шорткод будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:831
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:883
 msgid "Show User Display name"
 msgstr "Показать Отображаемое имя пользователя"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:832
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:884
 msgid ""
 "Shows the logged-in user's Display name. If the user is not logged-in, the "
 "shortcode will be empty."
@@ -922,11 +953,11 @@ msgstr ""
 "Показывает отображаемое имя вошедшего в систему пользователя. Если "
 "пользователь не вошел в систему, шорткод будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:849
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:901
 msgid "Show User Nickname"
 msgstr "Показать псевдоним пользователя"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:850
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:902
 msgid ""
 "Shows the logged-in user's Nickname. If the user is not logged-in, the "
 "shortcode will be empty."
@@ -934,16 +965,16 @@ msgstr ""
 "Показывает псевдоним вошедшего в систему пользователя. Если пользователь не "
 "вошел в систему, шорткод будет пустым."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:864
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1876
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:916
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1928
 msgid "Styles"
 msgstr "Стили"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:869
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:921
 msgid "Subscribe box width"
 msgstr "Ширина поля подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:870
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:922
 msgid ""
 "Set the default value for the width of the subscription field in pixels or "
 "as a percentage. This will apply to all subscription boxes in the frontend "
@@ -952,15 +983,15 @@ msgstr ""
 "Установите значение по умолчанию для ширины поля подписки в пикселях или в "
 "процентах. Это будет применяться ко всем блокам подписки во внешнем плагине."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:879
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1607
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1891
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2281
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:931
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1659
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1943
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2347
 msgid "On PC"
 msgstr "На ПК"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:880
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1892
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:932
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1944
 msgid ""
 "Define the width for desktop devices. If you put 0 or leave it blank, the "
 "width will be 100%. It accepts only numerical values and you can choose "
@@ -970,27 +1001,27 @@ msgstr ""
 "поле пустым, ширина будет 100%. Принимает только числовые значения, и вы "
 "можете выбрать, следует ли определять значение в процентах или в пикселях."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:891
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:913
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1903
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1925
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:943
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:965
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1955
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1977
 msgid "px"
 msgstr "px"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:892
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:914
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1904
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1926
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:944
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:966
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1956
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1978
 msgid "%"
 msgstr "%"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:901
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1913
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:953
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1965
 msgid "On Mobile"
 msgstr "На мобильном телефоне"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:902
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1914
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:954
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1966
 msgid ""
 "Define the width for mobile devices in percentage. Note: This option works "
 "for the screens with less than 768 pixels width."
@@ -998,11 +1029,11 @@ msgstr ""
 "Определите ширину для мобильных устройств в процентах. Примечание: эта опция "
 "работает для экранов с шириной менее 768 пикселей."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:926
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:978
 msgid "Subscribe text color"
 msgstr "Цвет текста подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:928
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:980
 msgid ""
 "Set the default text color of the Subscribe Box. It will apply to all "
 "Subscribe Boxes within the plugin on the front-end."
@@ -1010,89 +1041,92 @@ msgstr ""
 "Установите цвет текста по умолчанию для поля подписки. Это будет применяться "
 "ко всем ящикам подписки в плагине на интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:935
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:962
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:987
 #: ../admin/partials/settings/secure-copy-content-protection-settings.php:1014
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1075
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1110
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1152
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1066
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1127
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1162
 #: ../admin/partials/settings/secure-copy-content-protection-settings.php:1204
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1232
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1274
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1316
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1395
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1437
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1480
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1548
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1577
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1657
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1700
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1742
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1795
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1824
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1945
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1973
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1256
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1284
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1326
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1368
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1447
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1489
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1532
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1600
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1629
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1709
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1752
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1794
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1847
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1876
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1997
 #: ../admin/partials/settings/secure-copy-content-protection-settings.php:2025
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2077
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2139
 msgid "PC"
 msgstr "ПК"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:940
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:967
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1035
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1080
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1122
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1169
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1209
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1244
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1286
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1321
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1407
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1449
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1498
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1554
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1583
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1669
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1712
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1759
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1801
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1837
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1950
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1978
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2046
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:992
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1019
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1087
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1132
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1174
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1221
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1261
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1296
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1338
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1373
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1459
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1501
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1550
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1606
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1635
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1721
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1764
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1811
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1853
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1889
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2002
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2030
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2098
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2144
 msgid "Mobile"
 msgstr "Мобильный"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:945
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:972
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1058
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1085
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1134
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:997
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1024
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1110
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1137
 #: ../admin/partials/settings/secure-copy-content-protection-settings.php:1186
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1214
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1256
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1298
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1326
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1419
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1461
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1516
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1559
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1588
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1681
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1724
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1238
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1266
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1308
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1350
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1378
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1471
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1513
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1568
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1611
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1640
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1733
 #: ../admin/partials/settings/secure-copy-content-protection-settings.php:1776
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1806
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1849
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1955
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1983
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2069
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1828
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1858
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1901
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2007
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2035
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2121
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2149
 msgid "Use a different setting for Mobile"
 msgstr "Используйте другие настройки для мобильных устройств"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:953
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1005
 msgid "Subscribe box background color"
 msgstr "Цвет фона поля подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:955
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1007
 msgid ""
 "Set the default background color of the Subscribe Box. It will apply to all "
 "Subscribe Boxes within the plugin on the front-end."
@@ -1100,27 +1134,27 @@ msgstr ""
 "Установите цвет фона по умолчанию для окна подписки. Это будет применяться "
 "ко всем ящикам подписки в плагине на интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:981
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1033
 msgid "Subscribe box background image"
 msgstr "Фоновое изображение окна подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:982
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1034
 msgid "Add background image for Subscribe Box."
 msgstr "Добавьте фоновое изображение для поля подписки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1005
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1057
 msgid "Subscribe box background image position"
 msgstr "Положение фонового изображения в окне подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1006
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1058
 msgid "The position of background image for Subscribe Box"
 msgstr "Положение фонового изображения для поля подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1066
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1118
 msgid "Subscribe description text color"
 msgstr "Цвет текста описания подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1068
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1120
 msgid ""
 "Set the default description text color of the Subscribe Box. It will apply "
 "to all Subscribe Boxes within the plugin on the front-end."
@@ -1128,75 +1162,75 @@ msgstr ""
 "Установите цвет текста описания по умолчанию для поля подписки. Это будет "
 "применяться ко всем ящикам подписки в плагине на интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1094
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1146
 msgid "Subscribe title transformation"
 msgstr "Трансформация заголовка подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1096
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1148
 msgid "Specify how to capitalize a title text of your Subscribe box."
 msgstr ""
 "Укажите, как использовать заглавные буквы в тексте заголовка окна подписки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1113
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1125
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1165
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1177
 msgid "Uppercase"
 msgstr "Верхний регистр"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1114
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1126
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1166
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1178
 msgid "Lowercase"
 msgstr "Нижний регистр"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1115
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1127
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1167
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1179
 msgid "Capitalize"
 msgstr "Использовать заглавные буквы"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1143
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1195
 msgid "Subscribe container border style"
 msgstr "Стиль границы контейнера подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1144
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2107
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1196
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2173
 msgid "Specify container border style."
 msgstr "Укажите стиль границы контейнера."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1195
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1247
 msgid "Subscribe container border color"
 msgstr "Подпишитесь на цвет границы контейнера"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1196
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2131
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1248
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2197
 msgid "Specify container border color."
 msgstr "Укажите цвет границы контейнера."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1223
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1275
 msgid "Subscribe container border width"
 msgstr "Ширина границы контейнера подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1224
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1276
 msgid ""
 "Subscribe container border width in pixels. It accepts only numeric values."
 msgstr ""
 "Ширина границы контейнера подписки в пикселях. Он принимает только числовые "
 "значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1265
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1317
 msgid "Subscribe container input width"
 msgstr "Ширина ввода контейнера подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1266
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1318
 msgid ""
 "Subscribe container input width in pixels. It accepts only numeric values."
 msgstr ""
 "Ширина входного файла контейнера Subscribe в пикселях. Он принимает только "
 "числовые значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1307
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1359
 msgid "Subscribe button text"
 msgstr "Текст кнопки подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1308
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1360
 msgid ""
 "Set the default value to the button text of the Subscribe Box. It will apply "
 "to all Subscribe Boxes within the plugin on the front-end."
@@ -1204,21 +1238,21 @@ msgstr ""
 "Установите значение по умолчанию для текста кнопки в поле подписки. Это "
 "будет применяться ко всем ящикам подписки в плагине на интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1335
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1387
 msgid "Subscribe Icon"
 msgstr "Значок подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1336
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1388
 msgid "Add icon image for Subscribe Box. Advisable size for image is 50x50."
 msgstr ""
 "Добавьте изображение значка для окна подписки. Рекомендуемый размер "
 "изображения 50х50."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1358
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1410
 msgid "Subscribe email placeholder text"
 msgstr "Текст заполнителя электронной почты для подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1359
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1411
 msgid ""
 "Set the default value to the email placeholder text of the Subscribe Box. It "
 "will apply to all Subscribe Boxes within the plugin on the front-end."
@@ -1227,11 +1261,11 @@ msgstr ""
 "поле подписки. Это будет применяться ко всем ящикам подписки в плагине на "
 "интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1372
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1424
 msgid "Subscribe name placeholder text"
 msgstr "Текст заполнителя имени подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1373
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1425
 msgid ""
 "Set the default value to the name placeholder text of the Subscribe Box. It "
 "will apply to all Subscribe Boxes within the plugin on the front-end."
@@ -1239,11 +1273,11 @@ msgstr ""
 "Установите значение по умолчанию для текста заполнителя имени поля подписки. "
 "Это будет применяться ко всем ящикам подписки в плагине на интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1386
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1438
 msgid "Subscribe title Font size"
 msgstr "Размер шрифта заголовка подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1387
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1439
 msgid ""
 "Set the default value to the Font size of the Subscribe Box title in pixels. "
 "It will apply to all Subscribe Boxes within the plugin on the front-end."
@@ -1252,11 +1286,11 @@ msgstr ""
 "в пикселях. Это будет применяться ко всем полям подписки в плагине на "
 "интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1428
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1480
 msgid "Subscribe description Font size"
 msgstr "Размер шрифта описания подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1429
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1481
 msgid ""
 "Set the default value to the Font size of the Subscribe Box description in "
 "pixels. It will apply to all Subscribe Boxes within the plugin on the front-"
@@ -1266,169 +1300,169 @@ msgstr ""
 "пикселях. Это будет применяться ко всем полям подписки в плагине на "
 "интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1470
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1522
 msgid "Subscribe box text alignment"
 msgstr "Выравнивание текста поля подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1471
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1523
 msgid "Align the text of Subscribe box to the left, center, or right."
 msgstr ""
 "Выровняйте текст поля подписки по левому, центральному или правому краю."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1484
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1502
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2214
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1536
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1554
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2280
 msgid "Left"
 msgstr "Слево"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1488
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1506
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2218
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1540
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1558
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2284
 msgid "Center"
 msgstr "По центру"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1492
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1510
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2222
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1544
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1562
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2288
 msgid "Right"
 msgstr "Справа"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1525
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1577
 msgid "Subscribe button style"
 msgstr "Стиль кнопки подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1526
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1578
 msgid "Change Subscribe button  styles."
 msgstr "Измените стили кнопок подписки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1538
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1590
 msgid "Button color"
 msgstr "Цвет кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1539
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1591
 msgid "Specify button color."
 msgstr "Укажите цвет кнопки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1568
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2257
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1620
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2323
 msgid "Button text color"
 msgstr "Цвет текста кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1569
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2258
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1621
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2324
 msgid "Specify button text color."
 msgstr "Укажите цвет текста кнопки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1597
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2271
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1649
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2337
 msgid "Button size"
 msgstr "Размер кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1598
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2272
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1650
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2338
 msgid "Specify button size."
 msgstr "Укажите размер кнопки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1608
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2282
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1660
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2348
 msgid "Define the button font size for PC devices."
 msgstr "Определите размер шрифта кнопки для устройств ПК."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1626
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2300
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1678
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2366
 msgid "On mobile"
 msgstr "На мобильном"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1627
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2301
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1679
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2367
 msgid "Define the button font size for mobile devices."
 msgstr "Определите размер шрифта кнопки для мобильных устройств."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1647
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2321
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1699
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2387
 msgid "Button border-radius"
 msgstr "Радиус границы кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1648
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1700
 msgid ""
 "Subscribe buttons border-radius in pixels. It accepts only numeric values."
 msgstr ""
 "Радиус границы кнопок подписки в пикселях. Он принимает только числовые "
 "значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1690
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2340
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1742
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2406
 msgid "Button border width"
 msgstr "Ширина границы кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1691
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1743
 msgid ""
 "Subscribe buttons border width in pixels. It accepts only numeric values."
 msgstr ""
 "Ширина границы кнопок подписки в пикселях. Он принимает только числовые "
 "значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1733
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2359
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1785
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2425
 msgid "Button border style"
 msgstr "Стиль границы кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1734
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2360
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1786
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2426
 msgid "Specify button border style."
 msgstr "Укажите стиль границы кнопки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1785
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2383
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1837
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2449
 msgid "Button border color"
 msgstr "Цвет границы кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1786
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2384
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1838
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2450
 msgid "Specify button border color."
 msgstr "Укажите цвет границы кнопки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1815
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2397
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1867
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2463
 msgid "Button padding"
 msgstr "Заполнение кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1816
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2398
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1868
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2464
 msgid "Padding of buttons in pixels. It accepts only numeric values."
 msgstr "Отступы кнопок в пикселях. Он принимает только числовые значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1827
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1839
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2405
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1879
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1891
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2471
 msgid "Left / Right"
 msgstr "Влево / Вправо"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1831
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1843
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2409
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1883
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1895
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2475
 msgid "Top / Bottom"
 msgstr "Верх / Низ"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1861
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1913
 msgid "Subscribe reset styles"
 msgstr "Сброс стилей подписки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1863
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2423
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1915
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2489
 msgid "Reset tooltip styles to default values"
 msgstr "Сбросить стили всплывающей подсказки к значениям по умолчанию"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1870
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2430
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1922
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2496
 msgid "Reset"
 msgstr "Сброс"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1881
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1933
 msgid "Block content box width"
 msgstr "Ширина блока содержимого блока"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1882
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1934
 msgid ""
 "Set the default value for the width of the block content field in pixels or "
 "as a percentage. This will apply to all block content boxes in the frontend "
@@ -1438,11 +1472,11 @@ msgstr ""
 "пикселях или в процентах. Это будет применяться ко всем блокам содержимого "
 "блока в плагине внешнего интерфейса."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1936
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1988
 msgid "Block content text color"
 msgstr "Цвет текста содержимого блока"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1938
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1990
 msgid ""
 "Set the default text color of the Block content Box. It will apply to all "
 "Block content Boxes within the plugin on the front-end."
@@ -1451,11 +1485,11 @@ msgstr ""
 "применяться ко всем блокам содержимого блока внутри плагина на внешнем "
 "интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1963
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2015
 msgid "Block content box background color"
 msgstr "Цвет фона блока содержимого блока"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1965
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2017
 msgid ""
 "Set the default background color of the Block content Box. It will apply to "
 "all Block content Boxes within the plugin on the front-end."
@@ -1464,27 +1498,27 @@ msgstr ""
 "применяться ко всем блокам содержимого блока внутри плагина на внешнем "
 "интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1992
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2044
 msgid "Block content box background image"
 msgstr "Фоновое изображение блока содержимого блока"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:1993
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2045
 msgid "Add background image for Block content Box."
 msgstr "Добавьте фоновое изображение для блока содержимого блока."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2016
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2068
 msgid "Block content box background image position"
 msgstr "Положение фонового изображения блока содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2017
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2069
 msgid "The position of background image for Block content Box"
 msgstr "Положение фонового изображения для блока содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2078
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2130
 msgid "Block content button text"
 msgstr "Текст кнопки для блокировки содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2079
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2131
 msgid ""
 "Set the default value to the button text of the Block content Box. It will "
 "apply to all Block content Boxes within the plugin on the front-end."
@@ -1493,11 +1527,11 @@ msgstr ""
 "будет применяться ко всем блокам содержимого блока внутри плагина на внешнем "
 "интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2092
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2158
 msgid "Block content password placeholder text"
 msgstr "Текст-заполнитель пароля для блокировки содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2093
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2159
 msgid ""
 "Set the default value to the password placeholder text of the Block content "
 "Box. It will apply to all Block contents Boxes within the plugin on the "
@@ -1507,19 +1541,19 @@ msgstr ""
 "содержимого. Это будет применяться ко всем блокам содержимого блоков внутри "
 "плагина на внешнем интерфейсе."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2106
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2172
 msgid "Block content container border style"
 msgstr "Стиль границы контейнера для блокировки содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2130
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2196
 msgid "Block content container border color"
 msgstr "Цвет границы контейнера для блокировки содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2144
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2210
 msgid "Block content container border width"
 msgstr "Ширина контейнера для блокировки содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2145
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2211
 msgid ""
 "Block content container border width in pixels. It accepts only numeric "
 "values."
@@ -1527,11 +1561,11 @@ msgstr ""
 "Ширина границы контейнера содержимого блока в пикселях. Он принимает только "
 "числовые значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2163
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2229
 msgid "Block content container input width"
 msgstr "Ширина ввода контейнера содержимого блока"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2164
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2230
 msgid ""
 "Block content container input width in pixels. It accepts only numeric "
 "values."
@@ -1539,44 +1573,44 @@ msgstr ""
 "Введите ширину контейнера содержимого блока в пикселях. Он принимает только "
 "числовые значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2182
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2248
 msgid "Block content Icon"
 msgstr "Значок содержимого блока"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2183
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2249
 msgid ""
 "Add icon image for Block content Box. Advisable size for image is 50x50."
 msgstr ""
 "Добавьте изображение значка для блока содержимого. Рекомендуемый размер "
 "изображения - 50x50."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2205
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2271
 msgid "Block content box text alignment"
 msgstr "Выравнивание текста в поле содержимого блока"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2206
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2272
 msgid "Align the text of Block content box to the left, center, or right."
 msgstr ""
 "Выровняйте текст в поле содержимого блока по левому краю, по центру или по "
 "правому краю."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2230
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2296
 msgid "Block content button style"
 msgstr "Стиль кнопки блокировки содержимого"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2231
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2297
 msgid "Change Block content button  styles."
 msgstr "Измените стили кнопок содержимого блока."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2243
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2309
 msgid "Button background color"
 msgstr "Цвет фона кнопки"
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2244
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2310
 msgid "Specify button background color."
 msgstr "Укажите цвет фона кнопки."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2322
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2388
 msgid ""
 "Block content buttons border-radius in pixels. It accepts only numeric "
 "values."
@@ -1584,14 +1618,14 @@ msgstr ""
 "Радиус границы кнопок с содержимым блока в пикселях. Он принимает только "
 "числовые значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2341
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2407
 msgid ""
 "Block content buttons border width in pixels. It accepts only numeric values."
 msgstr ""
 "Ширина границы кнопок с содержимым блока в пикселях. Он принимает только "
 "числовые значения."
 
-#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2421
+#: ../admin/partials/settings/secure-copy-content-protection-settings.php:2487
 msgid "Block content reset styles"
 msgstr "Сброс стилей блокировки содержимого"
 
@@ -1603,7 +1637,7 @@ msgstr "Подписка SCCP."
 msgid "SCCP subscribe deleted."
 msgstr "Подписка SCCP удалена."
 
-#: ../includes/class-secure-copy-content-protection-data.php:63
+#: ../includes/class-secure-copy-content-protection-data.php:65
 msgid ""
 "<span><a href='https://wordpress.org/plugins/chart-builder/' target='_blank' "
 "style='color:#98FBA6; text-decoration: underline;'>Chart Builder</a></span> "
@@ -1613,7 +1647,7 @@ msgstr ""
 "style='color:#98FBA6; text-decoration: underline;'>Chart Builder</a></span> "
 "Plugin is launched"
 
-#: ../includes/class-secure-copy-content-protection-data.php:66
+#: ../includes/class-secure-copy-content-protection-data.php:68
 msgid ""
 "Chartify plugin allows you to create beautiful charts and graphs easily and "
 "quickly."
@@ -1621,53 +1655,53 @@ msgstr ""
 "Плагин Chartify позволяет легко и быстро создавать красивые диаграммы и "
 "графики."
 
-#: ../includes/class-secure-copy-content-protection-data.php:82
+#: ../includes/class-secure-copy-content-protection-data.php:84
 msgid "Install Now !"
 msgstr "Установите сейчас !"
 
-#: ../includes/class-secure-copy-content-protection-data.php:107
-#: ../includes/class-secure-copy-content-protection-data.php:201
-#: ../includes/class-secure-copy-content-protection-data.php:1511
+#: ../includes/class-secure-copy-content-protection-data.php:109
+#: ../includes/class-secure-copy-content-protection-data.php:203
+#: ../includes/class-secure-copy-content-protection-data.php:2109
 msgid "Offer ends in:"
 msgstr "Предложение заканчивается через:"
-
-#: ../includes/class-secure-copy-content-protection-data.php:111
-#: ../includes/class-secure-copy-content-protection-data.php:205
-#: ../includes/class-secure-copy-content-protection-data.php:334
-#: ../includes/class-secure-copy-content-protection-data.php:410
-#: ../includes/class-secure-copy-content-protection-data.php:1915
-#: ../includes/class-secure-copy-content-protection-data.php:1973
-msgid "Days"
-msgstr "Days"
-
-#: ../includes/class-secure-copy-content-protection-data.php:112
-#: ../includes/class-secure-copy-content-protection-data.php:206
-#: ../includes/class-secure-copy-content-protection-data.php:335
-#: ../includes/class-secure-copy-content-protection-data.php:411
-#: ../includes/class-secure-copy-content-protection-data.php:1916
-#: ../includes/class-secure-copy-content-protection-data.php:1974
-msgid "Hours"
-msgstr "Hours"
 
 #: ../includes/class-secure-copy-content-protection-data.php:113
 #: ../includes/class-secure-copy-content-protection-data.php:207
 #: ../includes/class-secure-copy-content-protection-data.php:336
-#: ../includes/class-secure-copy-content-protection-data.php:412
-#: ../includes/class-secure-copy-content-protection-data.php:1917
-#: ../includes/class-secure-copy-content-protection-data.php:1975
-msgid "Minutes"
-msgstr "Minutes"
+#: ../includes/class-secure-copy-content-protection-data.php:1008
+#: ../includes/class-secure-copy-content-protection-data.php:2513
+#: ../includes/class-secure-copy-content-protection-data.php:2571
+msgid "Days"
+msgstr "Days"
 
 #: ../includes/class-secure-copy-content-protection-data.php:114
 #: ../includes/class-secure-copy-content-protection-data.php:208
 #: ../includes/class-secure-copy-content-protection-data.php:337
-#: ../includes/class-secure-copy-content-protection-data.php:413
-#: ../includes/class-secure-copy-content-protection-data.php:1918
-#: ../includes/class-secure-copy-content-protection-data.php:1976
+#: ../includes/class-secure-copy-content-protection-data.php:1009
+#: ../includes/class-secure-copy-content-protection-data.php:2514
+#: ../includes/class-secure-copy-content-protection-data.php:2572
+msgid "Hours"
+msgstr "Hours"
+
+#: ../includes/class-secure-copy-content-protection-data.php:115
+#: ../includes/class-secure-copy-content-protection-data.php:209
+#: ../includes/class-secure-copy-content-protection-data.php:338
+#: ../includes/class-secure-copy-content-protection-data.php:1010
+#: ../includes/class-secure-copy-content-protection-data.php:2515
+#: ../includes/class-secure-copy-content-protection-data.php:2573
+msgid "Minutes"
+msgstr "Minutes"
+
+#: ../includes/class-secure-copy-content-protection-data.php:116
+#: ../includes/class-secure-copy-content-protection-data.php:210
+#: ../includes/class-secure-copy-content-protection-data.php:339
+#: ../includes/class-secure-copy-content-protection-data.php:1011
+#: ../includes/class-secure-copy-content-protection-data.php:2516
+#: ../includes/class-secure-copy-content-protection-data.php:2574
 msgid "Seconds"
 msgstr "Seconds"
 
-#: ../includes/class-secure-copy-content-protection-data.php:134
+#: ../includes/class-secure-copy-content-protection-data.php:136
 msgid ""
 "<span><a href='https://ays-pro.com/school-bundle?"
 "utm_source=dashboard&utm_medium=sccp-free&utm_campaign=black-friday-mega-"
@@ -1679,116 +1713,141 @@ msgstr ""
 "bundle-sale-banner' class='ays-sccp-black-friday-bundle-title-link' "
 "target='_blank'>Black Friday Sale</a></span>"
 
-#: ../includes/class-secure-copy-content-protection-data.php:141
+#: ../includes/class-secure-copy-content-protection-data.php:143
 msgid "50% OFF"
 msgstr "50% OFF"
 
-#: ../includes/class-secure-copy-content-protection-data.php:151
-#: ../includes/class-secure-copy-content-protection-data.php:249
-#: ../includes/class-secure-copy-content-protection-data.php:316
-#: ../includes/class-secure-copy-content-protection-data.php:603
-#: ../includes/class-secure-copy-content-protection-data.php:1190
-#: ../includes/class-secure-copy-content-protection-data.php:1998
+#: ../includes/class-secure-copy-content-protection-data.php:153
+#: ../includes/class-secure-copy-content-protection-data.php:251
+#: ../includes/class-secure-copy-content-protection-data.php:318
+#: ../includes/class-secure-copy-content-protection-data.php:429
+#: ../includes/class-secure-copy-content-protection-data.php:579
+#: ../includes/class-secure-copy-content-protection-data.php:1201
+#: ../includes/class-secure-copy-content-protection-data.php:1788
+#: ../includes/class-secure-copy-content-protection-data.php:2596
 msgid "Dismiss ad"
 msgstr "Dismiss ad"
 
-#: ../includes/class-secure-copy-content-protection-data.php:164
+#: ../includes/class-secure-copy-content-protection-data.php:166
 msgid "School Bundle"
 msgstr "School Bundle"
 
-#: ../includes/class-secure-copy-content-protection-data.php:170
-#: ../includes/class-secure-copy-content-protection-data.php:270
-#: ../includes/class-secure-copy-content-protection-data.php:427
-#: ../includes/class-secure-copy-content-protection-data.php:1932
+#: ../includes/class-secure-copy-content-protection-data.php:172
+#: ../includes/class-secure-copy-content-protection-data.php:272
+#: ../includes/class-secure-copy-content-protection-data.php:1025
+#: ../includes/class-secure-copy-content-protection-data.php:2530
 msgid "Get Your Deal"
 msgstr "Get Your Deal"
 
-#: ../includes/class-secure-copy-content-protection-data.php:172
-#: ../includes/class-secure-copy-content-protection-data.php:272
-#: ../includes/class-secure-copy-content-protection-data.php:361
-#: ../includes/class-secure-copy-content-protection-data.php:1536
-#: ../includes/class-secure-copy-content-protection-data.php:1619
+#: ../includes/class-secure-copy-content-protection-data.php:174
+#: ../includes/class-secure-copy-content-protection-data.php:274
+#: ../includes/class-secure-copy-content-protection-data.php:363
+#: ../includes/class-secure-copy-content-protection-data.php:466
+#: ../includes/class-secure-copy-content-protection-data.php:2134
+#: ../includes/class-secure-copy-content-protection-data.php:2217
 msgid "One-time payment"
 msgstr "Одноразовый платеж"
 
-#: ../includes/class-secure-copy-content-protection-data.php:230
+#: ../includes/class-secure-copy-content-protection-data.php:232
 msgid "Christmas Sale"
 msgstr "Рождественская распродажа"
 
-#: ../includes/class-secure-copy-content-protection-data.php:239
+#: ../includes/class-secure-copy-content-protection-data.php:241
 msgid "20% Extra OFF"
 msgstr "20% Extra OFF"
 
-#: ../includes/class-secure-copy-content-protection-data.php:265
+#: ../includes/class-secure-copy-content-protection-data.php:267
 msgid "20% Extra Discount Coupon"
 msgstr "20% Extra Discount Coupon"
 
-#: ../includes/class-secure-copy-content-protection-data.php:297
+#: ../includes/class-secure-copy-content-protection-data.php:299
 msgid "<span><a href='"
 msgstr "<span><a href='"
 
-#: ../includes/class-secure-copy-content-protection-data.php:303
+#: ../includes/class-secure-copy-content-protection-data.php:305
+#: ../includes/class-secure-copy-content-protection-data.php:412
 msgid "30 Day Money Back Guarantee"
 msgstr "30-дневная гарантия возврата денег"
 
-#: ../includes/class-secure-copy-content-protection-data.php:384
+#: ../includes/class-secure-copy-content-protection-data.php:405
+#, php-format
+msgid "%1$s Photography Bundle %2$s"
+msgstr "%1$s Photography Bundle %2$s"
+
+#: ../includes/class-secure-copy-content-protection-data.php:547
+#: ../includes/class-secure-copy-content-protection-data.php:2501
+#: ../includes/class-secure-copy-content-protection-data.php:2563
+#: ../includes/class-secure-copy-content-protection-feedback.php:129
+msgid "Secure Copy Content Protection"
+msgstr "Secure Copy Content Protection"
+
+#: ../includes/class-secure-copy-content-protection-data.php:551
+msgid "CHRISTMAS SPECIAL"
+msgstr "CHRISTMAS SPECIAL"
+
+#: ../includes/class-secure-copy-content-protection-data.php:557
+msgid "Limited time offer"
+msgstr "Ограниченное по времени предложение"
+
+#: ../includes/class-secure-copy-content-protection-data.php:561
+#: ../includes/class-secure-copy-content-protection-data.php:1759
+msgid "Click to copy"
+msgstr "Нажмите, чтобы скопировать"
+
+#: ../includes/class-secure-copy-content-protection-data.php:982
 msgid "Coupon Code"
 msgstr "Код купона"
 
-#: ../includes/class-secure-copy-content-protection-data.php:547
+#: ../includes/class-secure-copy-content-protection-data.php:1145
 msgid "days"
 msgstr "дни"
 
-#: ../includes/class-secure-copy-content-protection-data.php:552
+#: ../includes/class-secure-copy-content-protection-data.php:1150
 msgid "hours"
 msgstr "часы"
 
-#: ../includes/class-secure-copy-content-protection-data.php:557
+#: ../includes/class-secure-copy-content-protection-data.php:1155
 msgid "minutes"
 msgstr "минуты"
 
-#: ../includes/class-secure-copy-content-protection-data.php:562
+#: ../includes/class-secure-copy-content-protection-data.php:1160
 msgid "seconds"
 msgstr "секунды"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1154
+#: ../includes/class-secure-copy-content-protection-data.php:1752
 #, php-format
 msgid "Get the Pro Version of %s Secure Copy Content Protection%s – 20%% OFF"
 msgstr "Get the Pro Version of %s Secure Copy Content Protection%s – 20%% OFF"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1155
+#: ../includes/class-secure-copy-content-protection-data.php:1753
 msgid "Unlock advanced features + 30 day Money Back Guarantee"
 msgstr "Разблокируйте расширенные функции + 30-дневная гарантия возврата денег"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1161
-msgid "Click to copy"
-msgstr "Нажмите, чтобы скопировать"
-
-#: ../includes/class-secure-copy-content-protection-data.php:1170
+#: ../includes/class-secure-copy-content-protection-data.php:1768
 msgid "Only"
 msgstr "Только"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1170
+#: ../includes/class-secure-copy-content-protection-data.php:1768
 msgid "of 50 discounted licenses left"
 msgstr "из 50 оставшихся лицензий со скидкой"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1182
+#: ../includes/class-secure-copy-content-protection-data.php:1780
 msgid "Upgrade Now"
 msgstr "Обновить сейчас"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1535
-#: ../includes/class-secure-copy-content-protection-data.php:1685
-#: ../includes/class-secure-copy-content-protection-data.php:1734
-#: ../includes/class-secure-copy-content-protection-data.php:1792
-#: ../includes/class-secure-copy-content-protection-data.php:1869
+#: ../includes/class-secure-copy-content-protection-data.php:2133
+#: ../includes/class-secure-copy-content-protection-data.php:2283
+#: ../includes/class-secure-copy-content-protection-data.php:2332
+#: ../includes/class-secure-copy-content-protection-data.php:2390
+#: ../includes/class-secure-copy-content-protection-data.php:2467
 msgid "Buy Now !"
 msgstr "Купить сейчас !"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1570
+#: ../includes/class-secure-copy-content-protection-data.php:2168
 msgid "30 Days Money Back Guarantee"
 msgstr "30-дневная гарантия возврата денег"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1648
+#: ../includes/class-secure-copy-content-protection-data.php:2246
 msgid ""
 "Limited Time <span class='ays-sccp-dicount-wrap-color'>50%</span> SALE on "
 "<br><span><a href='https://ays-pro.com/school-bundle?utm_source=dashboard-"
@@ -1804,7 +1863,7 @@ msgstr ""
 "style='display:block;'>School Bundle</a></span> (Quiz + Copy + Poll + "
 "Personal Dictionary)!"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1652
+#: ../includes/class-secure-copy-content-protection-data.php:2250
 msgid ""
 "Hurry up! <a href='https://ays-pro.com/school-bundle?utm_source=dashboard-"
 "school&utm_medium=free-school&utm_campaign=sccp-school' "
@@ -1814,7 +1873,7 @@ msgstr ""
 "school&utm_medium=free-school&utm_campaign=sccp-school' "
 "target='_blank'>Check it out!</a>"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1716
+#: ../includes/class-secure-copy-content-protection-data.php:2314
 msgid ""
 "Spring is here! <span class='ays-sccp-dicount-wrap-color'>50%</span> SALE on "
 "<span><a href='https://ays-pro.com/spring-bundle' target='_blank' class='ays-"
@@ -1827,7 +1886,7 @@ msgstr ""
 "text-decoration'>Весенний Пакет</a></span><span style='display: block;'>Quiz "
 "+ Popup + Copy</span>"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1753
+#: ../includes/class-secure-copy-content-protection-data.php:2351
 msgid ""
 "Limited Time <span class='ays-sccp-dicount-wrap-color'>60%</span> SALE on "
 "<br><span><a href='https://ays-pro.com/huge-bundle/' target='_blank' "
@@ -1840,7 +1899,7 @@ msgstr ""
 "text-decoration'>Весенний Пакет</a></span><span style='display: block;'>Quiz "
 "+ Popup + Copy</span>"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1759
+#: ../includes/class-secure-copy-content-protection-data.php:2357
 msgid ""
 "Hurry up! <a href='https://ays-pro.com/huge-bundle/' target='_blank'>Check "
 "it out!</a>"
@@ -1848,7 +1907,7 @@ msgstr ""
 "Торопиться! <a href='https://ays-pro.com/wordpress/secure-copy-content-"
 "protection' target='_blank'>Проверьте!</a>"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1821
+#: ../includes/class-secure-copy-content-protection-data.php:2419
 msgid ""
 "Limited Time \n"
 "                            <span class='ays-sccp-dicount-wrap-color-"
@@ -1886,7 +1945,7 @@ msgstr ""
 "                                </a>\n"
 "                            </span>"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1834
+#: ../includes/class-secure-copy-content-protection-data.php:2432
 msgid ""
 "Hurry up! \n"
 "                                                <a href='https://ays-pro.com/"
@@ -1904,31 +1963,24 @@ msgstr ""
 "                                                    Check it out!\n"
 "                                                </a>"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1902
-#: ../includes/class-secure-copy-content-protection-data.php:1964
+#: ../includes/class-secure-copy-content-protection-data.php:2500
+#: ../includes/class-secure-copy-content-protection-data.php:2562
 msgid "Limited Time"
 msgstr "Ограниченный срок"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1902
+#: ../includes/class-secure-copy-content-protection-data.php:2500
 msgid "Sale"
 msgstr "Распродажа"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1903
-#: ../includes/class-secure-copy-content-protection-data.php:1965
-#: ../includes/class-secure-copy-content-protection-feedback.php:129
-msgid "Secure Copy Content Protection"
-msgstr "Secure Copy Content Protection"
-
-#: ../includes/class-secure-copy-content-protection-data.php:1907
-#, no-php-format
+#: ../includes/class-secure-copy-content-protection-data.php:2505
 msgid "20% off"
 msgstr "20% off"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1964
+#: ../includes/class-secure-copy-content-protection-data.php:2562
 msgid "20%"
 msgstr "20%"
 
-#: ../includes/class-secure-copy-content-protection-data.php:1990
+#: ../includes/class-secure-copy-content-protection-data.php:2588
 msgid "BUY NOW!"
 msgstr "КУПИТЬ СЕЙЧАС!"
 
@@ -1942,55 +1994,51 @@ msgstr ""
 msgid "Result"
 msgstr "Результат"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:348
-msgid "Guest"
-msgstr "Гость"
-
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:422
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:434
 msgid "User Email"
 msgstr "Email Пользователя"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:423
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:435
 msgid "User Name"
 msgstr "Имя пользователя"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:424
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:436
 msgid "User IP"
 msgstr "IP пользователя"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:425
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:437
 msgid "WP User"
 msgstr "WP пользователь"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:426
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:438
 msgid "User Role"
 msgstr "Роль пользователя"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:427
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:439
 msgid "Date"
 msgstr "Дата"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:428
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:440
 msgid "Read Status"
 msgstr "Статус чтения"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:429
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:441
 msgid "City, Country"
 msgstr "Город, Страна"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:463
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:475
 msgid "Mark as read"
 msgstr "Пометить, как прочитанное"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:464
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:476
 msgid "Mark as unread"
 msgstr "Отметить как непрочитанное"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:465
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:477
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:594
+#: ../includes/lists/class-secure-copy-content-protection-results-list-table.php:606
 msgid "Result deleted."
 msgstr "Результат удален."
 
@@ -2002,11 +2050,11 @@ msgstr "Введите свой адрес электронной почты"
 msgid "Type your name"
 msgstr "Введите свое имя"
 
-#: ../public/class-secure-copy-content-protection-public.php:825
+#: ../public/class-secure-copy-content-protection-public.php:827
 msgid "Submit"
 msgstr "Отправить"
 
-#: ../public/class-secure-copy-content-protection-public.php:828
+#: ../public/class-secure-copy-content-protection-public.php:841
 msgid "Password"
 msgstr "Пароль"
 
@@ -2017,6 +2065,12 @@ msgstr "Инициализирован неправильный шорткод"
 #: ../public/partials/class-secure-copy-content-protection-extra-shortcode.php:120
 msgid "There are no results yet."
 msgstr "Пока результатов нет."
+
+#~ msgid "The ID of the current user."
+#~ msgstr "Идентификатор текущего пользователя."
+
+#~ msgid "Guest"
+#~ msgstr "Гость"
 
 #~ msgid "User's First Name"
 #~ msgstr "Имя пользователя"
@@ -2964,8 +3018,8 @@ msgstr "Пока результатов нет."
 #~ msgstr ""
 #~ "Отличное пакетное предложение для вас! Он состоит из 5 различных мощных "
 #~ "плагинов, каждый из которых позволяет вам сделать ваш WordPress "
-#~ "максимально удобным. Быстрее! Заканчивается 30 июня. <a href='https://bit."
-#~ "ly/34EPlCF' target='_blank'>Зацени это!</a>"
+#~ "максимально удобным. Быстрее! Заканчивается 30 июня. <a href='https://"
+#~ "bit.ly/34EPlCF' target='_blank'>Зацени это!</a>"
 
 #~ msgid "Learn more"
 #~ msgstr "Выучить больше"
