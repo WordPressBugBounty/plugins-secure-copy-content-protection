@@ -364,14 +364,20 @@ class Sccp_Settings_Actions {
             // Block content box button text
             $ays_bc_button_text = (isset($data['ays_sccp_bc_button_text']) && $data['ays_sccp_bc_button_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_bc_button_text']) ) : 'Submit';
 
-            // Enable Block content title transformation Mobile
+            // Enable Block content box button text Mobile
             $enable_ays_bc_button_text_mobile = isset( $data['enable_ays_sccp_bc_button_text_mobile'] ) && $data['enable_ays_sccp_bc_button_text_mobile'] == 'on' ? 'on' : 'off';
 
-            // Block content box title transformation Mobile
-            $ays_bc_button_text_mobile = isset( $data['ays_sccp_bc_button_text_mobile'] ) && $data['ays_sccp_bc_button_text_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_button_text_mobile'] ) : 'Subscribe';
+            // Block content box button text Mobile
+            $ays_bc_button_text_mobile = isset( $data['ays_sccp_bc_button_text_mobile'] ) && $data['ays_sccp_bc_button_text_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_button_text_mobile'] ) : 'Submit';
 
             // Block content box password placeholder text
             $ays_bc_psw_place_text = (isset($data['ays_sccp_bc_psw_place_text']) && $data['ays_sccp_bc_psw_place_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_bc_psw_place_text']) ) : 'Password';
+
+            // Enable Block content box password placeholder text Mobile
+            $enable_ays_bc_psw_place_text_mobile = isset( $data['enable_ays_sccp_bc_psw_place_text_mobile'] ) && $data['enable_ays_sccp_bc_psw_place_text_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content box password placeholder text Mobile
+            $ays_bc_psw_place_text_mobile = isset( $data['ays_sccp_bc_psw_place_text_mobile'] ) && $data['ays_sccp_bc_psw_place_text_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_psw_place_text_mobile'] ) : 'Password';
 
             // Block content Container border style
             $bc_cont_border_style = (isset($data['ays_sccp_bc_cont_border_style']) && $data['ays_sccp_bc_cont_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_bc_cont_border_style'] ) : 'double';
@@ -420,41 +426,43 @@ class Sccp_Settings_Actions {
             $bc_buttons_top_bottom_padding = (isset($data['ays_bc_btn_top_bottom_padding']) && $data['ays_bc_btn_top_bottom_padding'] != "") ? $data['ays_bc_btn_top_bottom_padding'] : '10';
 
             $block_content = array(
-                "sccp_bc_width"                         => $ays_sccp_bc_width,
-                "sccp_bc_width_mobile"                  => $ays_sccp_bc_width_mobile,
-                "sccp_bc_width_by_percentage_px"        => $sccp_bc_width_by_percentage_px,
-                "sccp_bc_width_mobile_by_percentage_px" => $sccp_bc_width_mobile_by_percentage_px,
-                "sccp_bc_text_color"                    => $bc_text_color,
-                "enable_sccp_bc_text_color_mobile"      => $enable_bc_text_color_mobile,
-                "sccp_bc_text_color_mobile"             => $bc_text_color_mobile,
-                "sccp_bc_bg_color"                      => $bc_bg_color,
-                "enable_sccp_bc_bg_color_mobile"        => $enable_bc_bg_color_mobile,
-                "sccp_bc_bg_color_mobile"               => $bc_bg_color_mobile,
-                "bc_bg_image"                           => $ays_bc_bg_img,
-                "bc_bg_image_position"                  => $bc_bg_image_position,
-                "enable_bc_bg_image_position_mobile"    => $enable_bc_bg_image_position_mobile,
-                "bc_bg_image_position_mobile"           => $bc_bg_image_position_mobile,
-                "sccp_bc_button_text"                   => $ays_bc_button_text,
-                "enable_sccp_bc_button_text_mobile"     => $enable_ays_bc_button_text_mobile,
-                "sccp_bc_button_text_mobile"            => $ays_bc_button_text_mobile,
-                "sccp_bc_psw_place_text"                => $ays_bc_psw_place_text,
-                "bc_cont_border_style"                  => $bc_cont_border_style,
-                "bc_cont_border_color"                  => $bc_cont_border_color,
-                "bc_cont_border_width"                  => $bc_cont_border_width,
-                "bc_icon_image"                         => $ays_bc_icon_img,
-                "bc_cont_input_width"                   => $ays_sccp_bc_input_width,
-                "bc_text_alignment"                     => $sccp_bc_text_alignment,
-                "enable_bc_btn_style"                   => $enable_bc_btn_style,
-                "bc_btn_color"                          => $bc_btn_color,
-                "bc_btn_text_color"                     => $bc_btn_text_color,
-                "bc_btn_size"                           => $bc_btn_size,
-                "bc_mobile_btn_size"                    => $bc_mobile_btn_size,
-                "bc_btn_radius"                         => $bc_btn_radius,
-                "bc_btn_border_width"                   => $bc_btn_border_width,
-                "bc_btn_border_style"                   => $bc_btn_border_style,
-                "bc_btn_border_color"                   => $bc_btn_border_color,
-                "bc_btn_left_right_padding"             => $bc_buttons_left_right_padding,
-                "bc_btn_top_bottom_padding"             => $bc_buttons_top_bottom_padding,
+                "sccp_bc_width"                             => $ays_sccp_bc_width,
+                "sccp_bc_width_mobile"                      => $ays_sccp_bc_width_mobile,
+                "sccp_bc_width_by_percentage_px"            => $sccp_bc_width_by_percentage_px,
+                "sccp_bc_width_mobile_by_percentage_px"     => $sccp_bc_width_mobile_by_percentage_px,
+                "sccp_bc_text_color"                        => $bc_text_color,
+                "enable_sccp_bc_text_color_mobile"          => $enable_bc_text_color_mobile,
+                "sccp_bc_text_color_mobile"                 => $bc_text_color_mobile,
+                "sccp_bc_bg_color"                          => $bc_bg_color,
+                "enable_sccp_bc_bg_color_mobile"            => $enable_bc_bg_color_mobile,
+                "sccp_bc_bg_color_mobile"                   => $bc_bg_color_mobile,
+                "bc_bg_image"                               => $ays_bc_bg_img,
+                "bc_bg_image_position"                      => $bc_bg_image_position,
+                "enable_bc_bg_image_position_mobile"        => $enable_bc_bg_image_position_mobile,
+                "bc_bg_image_position_mobile"               => $bc_bg_image_position_mobile,
+                "sccp_bc_button_text"                       => $ays_bc_button_text,
+                "enable_sccp_bc_button_text_mobile"         => $enable_ays_bc_button_text_mobile,
+                "sccp_bc_button_text_mobile"                => $ays_bc_button_text_mobile,
+                "sccp_bc_psw_place_text"                    => $ays_bc_psw_place_text,
+                "enable_sccp_bc_psw_place_text_mobile"      => $enable_ays_bc_psw_place_text_mobile,
+                "sccp_bc_psw_place_text_mobile"             => $ays_bc_psw_place_text_mobile,
+                "bc_cont_border_style"                      => $bc_cont_border_style,
+                "bc_cont_border_color"                      => $bc_cont_border_color,
+                "bc_cont_border_width"                      => $bc_cont_border_width,
+                "bc_icon_image"                             => $ays_bc_icon_img,
+                "bc_cont_input_width"                       => $ays_sccp_bc_input_width,
+                "bc_text_alignment"                         => $sccp_bc_text_alignment,
+                "enable_bc_btn_style"                       => $enable_bc_btn_style,
+                "bc_btn_color"                              => $bc_btn_color,
+                "bc_btn_text_color"                         => $bc_btn_text_color,
+                "bc_btn_size"                               => $bc_btn_size,
+                "bc_mobile_btn_size"                        => $bc_mobile_btn_size,
+                "bc_btn_radius"                             => $bc_btn_radius,
+                "bc_btn_border_width"                       => $bc_btn_border_width,
+                "bc_btn_border_style"                       => $bc_btn_border_style,
+                "bc_btn_border_color"                       => $bc_btn_border_color,
+                "bc_btn_left_right_padding"                 => $bc_buttons_left_right_padding,
+                "bc_btn_top_bottom_padding"                 => $bc_buttons_top_bottom_padding,
             );
 
             $result = $this->ays_update_setting('mailchimp', json_encode($mailchimp));

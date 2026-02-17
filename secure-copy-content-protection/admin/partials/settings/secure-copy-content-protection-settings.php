@@ -89,6 +89,13 @@ $ays_sccp_bc_button_text_mobile = isset( $block_content['sccp_bc_button_text_mob
 // Block content box password placeholder text
 $sccp_bc_psw_place_text = (isset($block_content['sccp_bc_psw_place_text']) && $block_content['sccp_bc_psw_place_text'] != '') ? stripslashes( esc_attr($block_content['sccp_bc_psw_place_text']) ) : 'Password' ;
 
+// Enable Block content box password placeholder text Mobile
+$block_content['enable_sccp_bc_psw_place_text_mobile'] = isset( $block_content['enable_sccp_bc_psw_place_text_mobile'] ) && $block_content['enable_sccp_bc_psw_place_text_mobile'] == 'off' ? 'off' : 'on';
+$enable_sccp_bc_psw_place_text_mobile = $block_content['enable_sccp_bc_psw_place_text_mobile'] == 'on' ?  true : false;
+
+// Block content box password placeholder text Mobile
+$sccp_bc_psw_place_text_mobile = isset( $block_content['sccp_bc_psw_place_text_mobile'] ) && $block_content['sccp_bc_psw_place_text_mobile'] != '' ? stripslashes( esc_attr( $block_content['sccp_bc_psw_place_text_mobile'] ) ) : $sccp_bc_psw_place_text;
+
 // Block content Container border style
 $ays_sccp_bc_cont_border_style = (isset($block_content['bc_cont_border_style']) && $block_content['bc_cont_border_style'] != '') ? $block_content['bc_cont_border_style'] : 'double';
 
@@ -2162,7 +2169,21 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <input type="text" name="ays_sccp_bc_psw_place_text" id="ays_sccp_bc_psw_place_text" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text; ?>">
+                            	<div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_bc_psw_place_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" name="ays_sccp_bc_psw_place_text" id="ays_sccp_bc_psw_place_text" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text; ?>">
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_sccp_bc_psw_place_text_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" name="ays_sccp_bc_psw_place_text_mobile" id="ays_sccp_bc_psw_place_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text_mobile; ?>">
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_psw_place_text_mobile" name="enable_ays_sccp_bc_psw_place_text_mobile" <?php echo $enable_sccp_bc_psw_place_text_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_bc_psw_place_text_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    </div>
+                                </div>                                
                             </div>
                         </div>
                         <hr>

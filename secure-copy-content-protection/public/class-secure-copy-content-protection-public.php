@@ -715,7 +715,9 @@ class Secure_Copy_Content_Protection_Public {
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/secure-copy-content-protection-public.js', array('jquery'), $this->version, false);
 		global $wpdb;
 		$sccp_settings = $this->settings;
-		$id = esc_sql($atts['id']);
+
+		$id = ( isset( $atts['id'] ) && $atts['id'] != '' ) ? absint( intval( $atts['id'] ) ) : null;
+
 		$bc_table = esc_sql(SCCP_BLOCK_CONTENT);
 
 		$sccp_result = $wpdb->get_row(
@@ -839,6 +841,17 @@ class Secure_Copy_Content_Protection_Public {
 
 		// Block content paswword placeholder text
 		$bc_psw_place_text = (isset($block_content_settings['sccp_bc_psw_place_text']) && $block_content_settings['sccp_bc_psw_place_text'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_psw_place_text']) ) : __('Password', 'secure-copy-content-protection');
+
+		// Enable Block content paswword placeholder text Mobile
+        $block_content_settings['enable_sccp_bc_psw_place_text_mobile'] = ( isset( $block_content_settings['enable_sccp_bc_psw_place_text_mobile'] ) && $block_content_settings['enable_sccp_bc_psw_place_text_mobile'] == 'off') ? false : true;
+        
+        // Block content paswword placeholder text Mobile
+        if ( $block_content_settings['enable_sccp_bc_psw_place_text_mobile'] ) {
+            
+        	$bc_psw_place_text_mobile = (isset($block_content_settings['sccp_bc_psw_place_text_mobile']) && $block_content_settings['sccp_bc_psw_place_text_mobile'] != '') ? stripslashes( esc_attr($block_content_settings['sccp_bc_psw_place_text_mobile']) ) : $bc_psw_place_text;
+        } else {
+            $bc_psw_place_text_mobile = $bc_psw_place_text;
+        }
 
 		// Block content Container border style
 		$bc_cont_border_style = (isset($block_content_settings['bc_cont_border_style']) && $block_content_settings['bc_cont_border_style'] != '') ? $block_content_settings['bc_cont_border_style'] : 'double';
@@ -1037,7 +1050,7 @@ class Secure_Copy_Content_Protection_Public {
 							</div>
 							<form action="" method="post" class="conblock_block_form" style="'.$bc_button_style.'">
 								<div class="ays_sccp_bc_form_fields">
-									<input type="password" required name="pass_form" placeholder="'.$bc_psw_place_text.'" style="'.$bc_cont_input_width.'">
+									<input type="password" class="ays_sccp_place_text" required name="pass_form" data-mobile-placeholder="'.$bc_psw_place_text_mobile.'" data-desktop-placeholder="'.$bc_psw_place_text.'" placeholder="'.$bc_psw_place_text.'" style="'.$bc_cont_input_width.'">
 								</div>
 								<div class="ays_sccp_bc_form_fields">
 								<input type="submit" class="ays_sccp_bc_sbm" name="sub_form_'.$id.'" value="'.$bc_button_text.'" data-mobile-value="'.$bc_button_text_mobile.'" data-desktop-value="'.$bc_button_text.'" style="'.$sccp_bc_btn_color.' '.$sccp_bc_btn_text_color.' '.$sccp_bc_btn_size.' '.$sccp_bc_btn_radius.' '.$sccp_bc_btn_border_width.' '.$sccp_bc_btn_border_style.' '.$sccp_bc_btn_border_color.' '.$sccp_bc_btn_padding.'">

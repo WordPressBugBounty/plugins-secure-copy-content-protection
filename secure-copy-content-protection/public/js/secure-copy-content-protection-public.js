@@ -79,13 +79,33 @@
         });
     }
 
+    function updateBcPasswordPlaceholderText() {
+        $(document).find('.ays_sccp_place_text').each(function() {
+            var $btn = $(this);
+            var mobileText = $btn.data('mobile-placeholder');
+            var originalText = $btn.data('desktop-placeholder');
+
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                if (mobileText) {
+                    $btn.attr('placeholder',mobileText);
+                }
+            } else {
+                if (originalText) {
+                    $btn.attr('placeholder',originalText);
+                }
+            }
+        });
+    }
+
     $(document).ready(function() {
         updateSubmitButtonText();
         updateBcSubmitButtonText();
+        updateBcPasswordPlaceholderText();
     });
 
     $(window).on('resize', function() {
         updateSubmitButtonText();
         updateBcSubmitButtonText();
+        updateBcPasswordPlaceholderText();
     });    
 })(jQuery);

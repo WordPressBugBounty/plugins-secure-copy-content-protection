@@ -558,8 +558,15 @@
             $(document).find('#ays_sccp_bc_cont_border_color').val('#c5c5c5').change();
             $(document).find('#ays_sccp_bc_cont_border_width').val('4').change();
             $(document).find('#ays_sccp_bc_input_width').val('').change();
+
             $(document).find('#ays_sccp_bc_button_text').val('Submit').change();
+            $(document).find('#ays_sccp_bc_button_text_mobile').val('Submit').change();
+            $(document).find("#enable_ays_sccp_bc_button_text_mobile").prop('checked', true).change();
+
             $(document).find('#ays_sccp_bc_psw_place_text').val('Password').change();
+            $(document).find('#ays_sccp_bc_psw_place_text_mobile').val('Password').change();
+            $(document).find("#enable_ays_sccp_bc_psw_place_text_mobile").prop('checked', true).change();
+            
             $(document).find('#ays-sccp-bc-img').attr('src', '').change();
             $(document).find('input#ays_sccp_bc_icon_image').val('');
             $(document).find('#sccp_bc_image_container').hide().change();
