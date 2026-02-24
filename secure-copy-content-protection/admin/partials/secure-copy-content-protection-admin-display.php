@@ -2599,10 +2599,11 @@ $temporarily_do_not_show_fox_lms_popup = false;
                                             if($mailchimp_username == "" || $mailchimp_api_key == ""):
                                         ?>                                       
                                         <blockquote class="blockquote_error_message error_message">
+                                            <i class="ays_fa ays_fa_info_circle"></i>
                                             <?php
                                                 echo wp_kses_post( sprintf(
                                                     /* translators: 1: HTML opening <a> tag 2: HTML closing </a> tag */
-                                                    __( 'For enabling this option, please go to %1$s this %2$s page and fill all options.', 'secure-copy-content-protection' ),
+                                                    __( 'For enabling this option, please go to %1$s this%2$s page and fill all options.', 'secure-copy-content-protection' ),
                                                     "<a href='?page=$this->plugin_name-settings&ays_sccp_tab=tab2'>",
                                                     "</a>"
                                                 ) );

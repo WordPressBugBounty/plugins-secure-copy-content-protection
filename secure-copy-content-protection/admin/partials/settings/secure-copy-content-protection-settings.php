@@ -102,6 +102,13 @@ $ays_sccp_bc_cont_border_style = (isset($block_content['bc_cont_border_style']) 
 // Block content Container border color
 $ays_sccp_bc_cont_border_color = (isset($block_content['bc_cont_border_color']) && $block_content['bc_cont_border_color'] != '') ? stripslashes( esc_attr( $block_content['bc_cont_border_color'] ) ) : '#c5c5c5';
 
+// Enable Block content Container border color Mobile
+$block_content['enable_bc_cont_border_color_mobile'] = isset( $block_content['enable_bc_cont_border_color_mobile'] ) && $block_content['enable_bc_cont_border_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_bc_cont_border_color_mobile = $block_content['enable_bc_cont_border_color_mobile'] == 'on' ?  true : false;
+
+// Block content Container border color Mobile
+$ays_sccp_bc_cont_border_color_mobile = isset( $block_content['bc_cont_border_color_mobile'] ) && $block_content['bc_cont_border_color_mobile'] != '' ? esc_attr( $block_content['bc_cont_border_color_mobile'] ) : $ays_sccp_bc_cont_border_color;
+
 // Block content Container border width
 $ays_sccp_bc_cont_border_width = (isset($block_content['bc_cont_border_width']) && $block_content['bc_cont_border_width'] != '') ? $block_content['bc_cont_border_width'] : '4';
 
@@ -2221,7 +2228,21 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <input type="text" class="ays-text-input" id='ays_sccp_bc_cont_border_color' data-alpha="true" name='ays_sccp_bc_cont_border_color' value="<?php echo $ays_sccp_bc_cont_border_color; ?>"/>
+                            	<div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" class="ays-text-input" id='ays_sccp_bc_cont_border_color' data-alpha="true" name='ays_sccp_bc_cont_border_color' value="<?php echo $ays_sccp_bc_cont_border_color; ?>"/>
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_bg_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_cont_border_color_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <input type="text" class="ays-text-input" id='ays_sccp_bc_cont_border_color_mobile' data-alpha="true" name='ays_sccp_bc_cont_border_color_mobile' value="<?php echo $ays_sccp_bc_cont_border_color_mobile; ?>"/>
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_cont_border_color_mobile" name="enable_ays_sccp_bc_cont_border_color_mobile" <?php echo $enable_ays_sccp_bc_cont_border_color_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_bc_cont_border_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    </div>
+                                </div>                                
                             </div>
                         </div>
                         <hr>

@@ -555,7 +555,11 @@
             $(document).find('#sccp_bc_bg_image').show().change();
             $(document).find('#ays_bc_bg_image_position').val('center center').change();
             $(document).find('#ays_sccp_bc_cont_border_style').val('double').change();
+
             $(document).find('#ays_sccp_bc_cont_border_color').val('#c5c5c5').change();
+            $(document).find('#ays_sccp_bc_cont_border_color_mobile').val('c5c5c5').change();            
+            $(document).find("#enable_ays_sccp_bc_cont_border_color_mobile").prop('checked', true).change(); 
+
             $(document).find('#ays_sccp_bc_cont_border_width').val('4').change();
             $(document).find('#ays_sccp_bc_input_width').val('').change();
 
@@ -661,6 +665,9 @@
             defaultColor: '#000000',            
         });
         $('#ays_sccp_bc_cont_border_color').wpColorPicker({
+            defaultColor: '#c5c5c5',            
+        });
+        $('#ays_sccp_bc_cont_border_color_mobile').wpColorPicker({
             defaultColor: '#c5c5c5',            
         });
         $('#sub_text_color').wpColorPicker({

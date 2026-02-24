@@ -385,6 +385,12 @@ class Sccp_Settings_Actions {
             // Block content Container border color
             $bc_cont_border_color = (isset($data['ays_sccp_bc_cont_border_color']) && $data['ays_sccp_bc_cont_border_color'] != '') ? sanitize_text_field($data['ays_sccp_bc_cont_border_color']) : '#c5c5c5';
 
+            // Enable Block content Container border color Mobile
+            $enable_bc_cont_border_color_mobile = isset( $data['enable_ays_sccp_bc_cont_border_color_mobile'] ) && $data['enable_ays_sccp_bc_cont_border_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content Container border color Mobile
+            $bc_cont_border_color_mobile = isset( $data['ays_sccp_bc_cont_border_color_mobile'] ) && $data['ays_sccp_bc_cont_border_color_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_cont_border_color_mobile'] ) : '#c5c5c5';
+
             // Block content Container border width
             $bc_cont_border_width = (isset($data['ays_sccp_bc_cont_border_width']) && sanitize_text_field( $data['ays_sccp_bc_cont_border_width'] ) != "") ? sanitize_text_field( $data['ays_sccp_bc_cont_border_width'] ) : '4';
 
@@ -448,6 +454,8 @@ class Sccp_Settings_Actions {
                 "sccp_bc_psw_place_text_mobile"             => $ays_bc_psw_place_text_mobile,
                 "bc_cont_border_style"                      => $bc_cont_border_style,
                 "bc_cont_border_color"                      => $bc_cont_border_color,
+                "enable_bc_cont_border_color_mobile"        => $enable_bc_cont_border_color_mobile,
+                "bc_cont_border_color_mobile"               => $bc_cont_border_color_mobile,
                 "bc_cont_border_width"                      => $bc_cont_border_width,
                 "bc_icon_image"                             => $ays_bc_icon_img,
                 "bc_cont_input_width"                       => $ays_sccp_bc_input_width,

@@ -533,7 +533,10 @@ select[multiple] + .select2.select2-container {
     display: none;
     transition: all 0.3s ease-in;
     animation: fadeEffect .5s;
-    padding-top: 10px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin: 20px auto 0;
 }
 
 .copy_protection_wrap .nav-tab-content.nav-tab-content-active {
@@ -921,7 +924,6 @@ a.add-sccp-bc-icon-image {
 
 .sccp_pro {
     position: relative;
-    padding: 15px;
 }
 
 .sccp_pro_bg_sub {
@@ -1723,6 +1725,28 @@ div.ays-top-menu-wrapper div.ays-top-menu div.ays-top-tab-wrapper {
     transition: .5s ease-in-out;
     padding-right: 7px;
     width: fit-content;
+    padding-left: 0;
+    background: revert;
+}
+
+div.ays-top-menu-wrapper div.ays-top-menu div.ays-top-tab-wrapper a.nav-tab {    
+    font-weight: 500;
+    margin: 0;
+    padding: 8px 25px;
+    font-size: 15px;
+    border: none;
+    background: revert;
+}
+
+div.ays-top-menu-wrapper div.ays-top-menu div.ays-top-tab-wrapper a.nav-tab-active {
+    border-bottom: 1px solid #005AE0 !important;
+    color: #005AE0 !important;
+}
+
+div.ays-top-menu-wrapper div.ays-top-menu div.ays-top-tab-wrapper a.nav-tab:hover {
+    background-color: revert;
+    text-decoration: none;
+    border-bottom: 1px solid #005AE0;
 }
 
 /* */
@@ -1747,18 +1771,42 @@ div.ays-top-menu-wrapper div.ays-top-menu div.ays-top-tab-wrapper {
 .ays-gen-settings-wrapper {
     display: flex;
 }
+
 .ays-gen-settings-wrapper .nav-tab-wrapper {
     min-width: 150px;
     margin-right: 15px;
     border-bottom: none;
+    padding: 0;
+    background: revert;
 }
+
 .ays-gen-settings-wrapper .nav-tab-wrapper .nav-tab {
     display: block;
     width: 100%;
     border: 1px solid #ccc;
     margin: 0;
     float: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #dcdcde;
 }
+.ays-gen-settings-wrapper .nav-tab-wrapper .nav-tab-active, 
+.ays-gen-settings-wrapper .nav-tab-wrapper .nav-tab-active:focus, 
+.ays-gen-settings-wrapper .nav-tab-wrapper .nav-tab-active:focus:active,
+.ays-gen-settings-wrapper .nav-tab-wrapper .nav-tab-active:hover {
+    color: #000;
+    border: 1px solid #ccc;
+    background: #f0f0f1;
+    box-shadow: unset;
+}
+
+.ays-gen-settings-wrapper .nav-tab-wrapper .nav-tab-active {
+    border-bottom: 1px solid #f0f0f1;
+    background: #f0f0f1;
+    color: #000;
+}
+
 .ays-gen-settings-wrapper .nav-tab-wrapper .nav-tab:last-child {
     border-bottom: 1px solid #ccc;
 }
@@ -3335,8 +3383,11 @@ p.ays-subtitle {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 30px;
     cursor: pointer;
+}
+
+.ays-sccp-accordion-options-box {
+    position: relative;
 }
 
 .ays-sccp-accordion-container p.ays-subtitle {
@@ -3430,9 +3481,9 @@ p.ays-subtitle {
 }
 
 .ays_sccp_settings_integration_container blockquote.blockquote_error_message.error_message a {
-    color: blue !important;
+    color: #000 !important;
     text-decoration: underline;
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 
 .ays_sccp_settings_integration_container i.ays_fa.ays_fa_info_circle:before {

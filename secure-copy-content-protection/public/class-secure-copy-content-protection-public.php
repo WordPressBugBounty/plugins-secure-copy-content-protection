@@ -862,6 +862,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Block content Container border color
 		$ays_sccp_bc_cont_border_color = (isset($block_content_settings['bc_cont_border_color']) && $block_content_settings['bc_cont_border_color'] != '') ? stripslashes( esc_attr( $block_content_settings['bc_cont_border_color'] ) ) : '#c5c5c5';
 
+		// Block content box Enable Container border color Mobile
+        $block_content_settings['enable_bc_cont_border_color_mobile'] = ( isset( $block_content_settings['enable_bc_cont_border_color_mobile'] ) && $block_content_settings['enable_bc_cont_border_color_mobile'] == 'off') ? false : true;
+        
+        // Block content Container border color Mobile
+        if ( $block_content_settings['enable_bc_cont_border_color_mobile'] ) {
+            $ays_sccp_bc_cont_border_color_mobile = ( isset( $block_content_settings['bc_cont_border_color_mobile'] ) && $block_content_settings['bc_cont_border_color_mobile'] != '' ) ?  stripslashes( esc_attr( $block_content_settings['bc_cont_border_color_mobile'] ) ) : $ays_sccp_bc_cont_border_color;
+        } else {
+            $ays_sccp_bc_cont_border_color_mobile = $ays_sccp_bc_cont_border_color;
+        }
+
 		// Block content Add Icon image
 		$sccp_bc_icon_image = isset($block_content_settings["bc_icon_image"]) && !empty($block_content_settings["bc_icon_image"]) ? $block_content_settings["bc_icon_image"] : SCCP_PUBLIC_URL.'/images/lock.png';
 
@@ -885,6 +895,8 @@ class Secure_Copy_Content_Protection_Public {
 		$sccp_bc_btn_text_color = $ays_sccp_enable_bc_btn_style ? 'color:'.$ays_sccp_bc_btn_text_color.';' : '';
 
 		$ays_sccp_bc_cont_border_styles = 'border: '.$bc_cont_border_width.'px '.$bc_cont_border_style.' '.$ays_sccp_bc_cont_border_color.';';
+
+		$ays_sccp_bc_cont_border_styles_mobile = 'border: '.$bc_cont_border_width.'px '.$bc_cont_border_style.' '.$ays_sccp_bc_cont_border_color_mobile.' !important;';
 
  		// Block content button font size
 		$ays_sccp_bc_btn_size = (isset($block_content_settings['bc_btn_size']) && $block_content_settings['bc_btn_size'] != '') ? stripslashes( esc_attr( $block_content_settings['bc_btn_size'] ) ) : '14';
@@ -1036,6 +1048,7 @@ class Secure_Copy_Content_Protection_Public {
 	                        		'. $bc_text_color_mobile .';
 	                        		'. $bc_bg_color_mobile .';
 	                        		'. $bc_bg_image_position_mobile .';
+	                        		'. $ays_sccp_bc_cont_border_styles_mobile .';
 	                        	}
 	                        	.conblock_div input[type="submit"] {
 	                        		'.$sccp_bc_mobile_btn_size.'
@@ -1506,12 +1519,15 @@ class Secure_Copy_Content_Protection_Public {
 
 	}
 
-	public function sccp_replace_message_variables($content, $data){
-        foreach($data as $variable => $value){
-            $content = str_replace("%%".$variable."%%", $value, $content);
-        }
-        return $content;
-    }
+	public function sccp_replace_message_variables( $content, $data ){
+	    foreach( $data as $variable => $value ){
+	        if ( is_array( $value ) ) {
+	            $value = !empty( $value ) ? reset( $value ) : '';
+	        }
+	        $content = str_replace( "%%".$variable."%%", (string) $value, $content );
+	    }
+	    return $content;
+	}
 
 	public function hex2rgba( $color, $opacity = false ) {
 
