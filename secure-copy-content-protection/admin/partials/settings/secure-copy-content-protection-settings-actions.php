@@ -394,6 +394,12 @@ class Sccp_Settings_Actions {
             // Block content Container border width
             $bc_cont_border_width = (isset($data['ays_sccp_bc_cont_border_width']) && sanitize_text_field( $data['ays_sccp_bc_cont_border_width'] ) != "") ? sanitize_text_field( $data['ays_sccp_bc_cont_border_width'] ) : '4';
 
+            // Enable Block content Container border width Mobile
+            $enable_bc_cont_border_width_mobile = isset( $data['enable_ays_sccp_bc_cont_border_width_mobile'] ) && $data['enable_ays_sccp_bc_cont_border_width_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content Container border width Mobile
+            $bc_cont_border_width_mobile = isset( $data['ays_sccp_bc_cont_border_width_mobile'] ) && $data['ays_sccp_bc_cont_border_width_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_cont_border_width_mobile'] ) : '4';
+
             // Block content box Add Icon
             $ays_bc_icon_img = (isset($data['ays_sccp_bc_icon_image']) && $data['ays_sccp_bc_icon_image'] != '') ? $data['ays_sccp_bc_icon_image'] : '';
 
@@ -457,6 +463,8 @@ class Sccp_Settings_Actions {
                 "enable_bc_cont_border_color_mobile"        => $enable_bc_cont_border_color_mobile,
                 "bc_cont_border_color_mobile"               => $bc_cont_border_color_mobile,
                 "bc_cont_border_width"                      => $bc_cont_border_width,
+                "enable_bc_cont_border_width_mobile"        => $enable_bc_cont_border_width_mobile,
+                "bc_cont_border_width_mobile"               => $bc_cont_border_width_mobile,
                 "bc_icon_image"                             => $ays_bc_icon_img,
                 "bc_cont_input_width"                       => $ays_sccp_bc_input_width,
                 "bc_text_alignment"                         => $sccp_bc_text_alignment,

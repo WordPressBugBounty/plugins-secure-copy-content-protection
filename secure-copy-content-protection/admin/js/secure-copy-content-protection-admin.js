@@ -561,6 +561,9 @@
             $(document).find("#enable_ays_sccp_bc_cont_border_color_mobile").prop('checked', true).change(); 
 
             $(document).find('#ays_sccp_bc_cont_border_width').val('4').change();
+            $(document).find('#ays_sccp_bc_cont_border_width_mobile').val('4').change();            
+            $(document).find("#enable_ays_sccp_bc_cont_border_width_mobile_mobile").prop('checked', true).change(); 
+            
             $(document).find('#ays_sccp_bc_input_width').val('').change();
 
             $(document).find('#ays_sccp_bc_button_text').val('Submit').change();
