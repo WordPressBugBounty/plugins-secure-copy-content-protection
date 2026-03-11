@@ -125,6 +125,13 @@ $sccp_bc_icon_image = isset($block_content["bc_icon_image"]) || !empty($block_co
 // Block content input width
 $ays_sccp_bc_input_width = (isset($block_content['bc_cont_input_width']) && $block_content['bc_cont_input_width'] != '' && $block_content['bc_cont_input_width'] != 0) ? absint( sanitize_text_field($block_content['bc_cont_input_width'])) : '';
 
+// Enable Block content input width Mobile
+$block_content['enable_bc_cont_input_width_mobile'] = isset( $block_content['enable_bc_cont_input_width_mobile'] ) && $block_content['enable_bc_cont_input_width_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_bc_input_width_mobile = $block_content['enable_bc_cont_input_width_mobile'] == 'on' ?  true : false;
+
+// Block content input width Mobile
+$ays_sccp_bc_input_width_mobile = isset( $block_content['bc_cont_input_width_mobile'] ) && $block_content['bc_cont_input_width_mobile'] != '' ? esc_attr( $block_content['bc_cont_input_width_mobile'] ) : $ays_sccp_bc_input_width;
+
 // Block content box text alignment
 $ays_sccp_bc_text_alignment = (isset($block_content['bc_text_alignment']) && sanitize_text_field( $block_content['bc_text_alignment'] ) != '') ? sanitize_text_field( $block_content['bc_text_alignment'] ) : 'center';
 
@@ -2304,14 +2311,37 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </a>
                                 </label>
                             </div>
-                            <div class="col-sm-8 ays_divider_left ays_sccp_display_flex">
-                                <div>
-                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width' data-alpha="true" name='ays_sccp_bc_input_width' value="<?php echo $ays_sccp_bc_input_width; ?>"/>
+                            <div class="col-sm-8 ays_divider_left">
+                                <div class="ays_toggle_mobile_parent">
+                                    <div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_display_flex">
+			                                <div>
+		                                		<input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width' data-alpha="true" name='ays_sccp_bc_input_width' value="<?php echo $ays_sccp_bc_input_width; ?>"/>
+			                                </div>
+			                                <div class="ays_sccp_dropdown_max_width">
+			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+			                                </div>
+			                            </div>
+                                    </div>
+                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_input_width_mobile ) ? '' : 'display:none'; ?>">
+                                        <hr>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_display_flex">
+			                                <div>
+			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width_mobile' data-alpha="true" name='ays_sccp_bc_input_width_mobile' value="<?php echo $ays_sccp_bc_input_width_mobile; ?>"/>
+			                                </div>
+			                                <div class="ays_sccp_dropdown_max_width">
+			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+			                                </div>
+			                            </div>
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_input_width_mobile" name="enable_ays_sccp_bc_input_width_mobile" <?php echo $enable_ays_sccp_bc_input_width_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_bc_input_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    </div>
                                 </div>
-                                <div class="ays_sccp_dropdown_max_width">
-                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-                                </div>
-                            </div>                            
+                            </div>
                         </div>
                         <hr/>
                         <div class="form-group row copy_protection_container">
@@ -2322,7 +2352,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
-                            </div>                                    
+                            </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <a href="javascript:void(0)" id="sccp_bc_icon_image" style="<?php echo !isset($sccp_bc_icon_image) || empty($sccp_bc_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-icon-image"><?php echo $bc_icon_image_text; ?></a>
                                 <input type="hidden" id="ays_sccp_bc_icon_image" name="ays_sccp_bc_icon_image"

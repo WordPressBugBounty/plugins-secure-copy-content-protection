@@ -888,6 +888,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Block content input width
 		$bc_cont_input_width = (isset($block_content_settings['bc_cont_input_width']) && $block_content_settings['bc_cont_input_width'] != '' && $block_content_settings['bc_cont_input_width'] != 0) ? 'max-width: '. $block_content_settings['bc_cont_input_width'] .'px;': '';
 
+		// Enable Block content input width Mobile
+        $block_content_settings['enable_bc_cont_input_width_mobile'] = ( isset( $block_content_settings['enable_bc_cont_input_width_mobile'] ) && $block_content_settings['enable_bc_cont_input_width_mobile'] == 'off') ? false : true;
+        
+        // Block content input width Mobile
+        if ( $block_content_settings['enable_bc_cont_input_width_mobile'] ) {
+            $bc_cont_input_width_mobile = ( isset( $block_content_settings['bc_cont_input_width_mobile'] ) && $block_content_settings['bc_cont_input_width_mobile'] != '' ) ?  'max-width: '. $block_content_settings['bc_cont_input_width_mobile'] .'px !important;' : $bc_cont_input_width;
+        } else {
+            $bc_cont_input_width_mobile = $bc_cont_input_width;
+        }
+
 		// Block content box text alignment
         $sccp_bc_text_alignment = (isset($block_content_settings['bc_text_alignment']) && sanitize_text_field( $block_content_settings['bc_text_alignment'] ) != '') ? sanitize_text_field( $block_content_settings['bc_text_alignment'] ) : 'center';
 
@@ -1061,7 +1071,10 @@ class Secure_Copy_Content_Protection_Public {
 	                        		'. $ays_sccp_bc_cont_border_styles_mobile .';
 	                        	}
 	                        	.conblock_div input[type="submit"] {
-	                        		'.$sccp_bc_mobile_btn_size.'
+	                        		'. $sccp_bc_mobile_btn_size .'
+	                        	}
+	                        	.conblock_div input[type="password"] {
+	                        		'. $bc_cont_input_width_mobile .'
 	                        	}
 	                        	
 	                        }
