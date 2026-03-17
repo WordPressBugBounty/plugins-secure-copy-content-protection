@@ -856,6 +856,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Block content Container border style
 		$bc_cont_border_style = (isset($block_content_settings['bc_cont_border_style']) && $block_content_settings['bc_cont_border_style'] != '') ? $block_content_settings['bc_cont_border_style'] : 'double';
 
+		// Enable Block content Container border Mobile
+        $block_content_settings['enable_bc_cont_border_style_mobile'] = ( isset( $block_content_settings['enable_bc_cont_border_style_mobile'] ) && $block_content_settings['enable_bc_cont_border_style_mobile'] == 'off') ? false : true;
+        
+        // Block content box Container border Mobile
+        if ( $block_content_settings['enable_bc_cont_border_style_mobile'] ) {
+            $bc_cont_border_style_mobile = ( isset( $block_content_settings['bc_cont_border_style_mobile'] ) && $block_content_settings['bc_cont_border_style_mobile'] != '' ) ?  $block_content_settings['bc_cont_border_style_mobile'] : $bc_cont_border_style;
+        } else {
+            $bc_cont_border_style_mobile = $bc_cont_border_style;
+        }
+
 		// Block content Container border width
 		$bc_cont_border_width = (isset($block_content_settings['bc_cont_border_width']) && $block_content_settings['bc_cont_border_width'] != '') ? $block_content_settings['bc_cont_border_width'] : '4';
 
@@ -916,7 +926,7 @@ class Secure_Copy_Content_Protection_Public {
 
 		$ays_sccp_bc_cont_border_styles = 'border: '.$bc_cont_border_width.'px '.$bc_cont_border_style.' '.$ays_sccp_bc_cont_border_color.';';
 
-		$ays_sccp_bc_cont_border_styles_mobile = 'border: '.$bc_cont_border_width_mobile.'px '.$bc_cont_border_style.' '.$ays_sccp_bc_cont_border_color_mobile.' !important;';
+		$ays_sccp_bc_cont_border_styles_mobile = 'border: '.$bc_cont_border_width_mobile.'px '.$bc_cont_border_style_mobile.' '.$ays_sccp_bc_cont_border_color_mobile.' !important;';
 
  		// Block content button font size
 		$ays_sccp_bc_btn_size = (isset($block_content_settings['bc_btn_size']) && $block_content_settings['bc_btn_size'] != '') ? stripslashes( esc_attr( $block_content_settings['bc_btn_size'] ) ) : '14';

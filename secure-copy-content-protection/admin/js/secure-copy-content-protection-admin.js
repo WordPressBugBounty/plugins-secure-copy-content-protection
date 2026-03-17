@@ -554,8 +554,11 @@
             $(document).find('#sccp_bc_bg-image_container').hide().change();
             $(document).find('#sccp_bc_bg_image').show().change();
             $(document).find('#ays_bc_bg_image_position').val('center center').change();
-            $(document).find('#ays_sccp_bc_cont_border_style').val('double').change();
 
+            $(document).find('#ays_sccp_bc_cont_border_style').val('double').change();
+            $(document).find('#ays_sccp_bc_cont_border_style_mobile').val('double').change();
+            $(document).find("#enable_ays_sccp_bc_cont_border_style_mobile").prop('checked', true).change();
+            
             $(document).find('#ays_sccp_bc_cont_border_color').val('#c5c5c5').change();
             $(document).find('#ays_sccp_bc_cont_border_color_mobile').val('c5c5c5').change();            
             $(document).find("#enable_ays_sccp_bc_cont_border_color_mobile").prop('checked', true).change(); 
