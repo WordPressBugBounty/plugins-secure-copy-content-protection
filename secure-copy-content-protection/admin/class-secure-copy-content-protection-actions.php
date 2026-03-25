@@ -11,9 +11,12 @@ class Secure_Copy_Content_Protection_Actions {
 	public function store_data( $data ) {
 		global $wpdb;
 		if (isset($data["sccp_action"]) && wp_verify_nonce($data["sccp_action"], 'sccp_action')) {
+
+			$sccp_allowed_html = Ays_Sccp_Data::ays_sccp_custom_allowed_html();
+            
 			$enable_protection = isset($data['sccp_enable_all_posts']) ? true : false;
 			$except_types      = isset($data['sccp_except_post_types']) ? json_encode($data['sccp_except_post_types']) : '';
-			$protection_text   = isset($data['sccp_notification_text']) ? stripslashes($data['sccp_notification_text']) : __('You cannot copy content of this page', 'secure-copy-content-protection');
+			$protection_text   = isset($data['sccp_notification_text']) ? wp_kses( $data['sccp_notification_text'], $sccp_allowed_html ) : __('You cannot copy content of this page', 'secure-copy-content-protection');
 			$audio             = isset( $data['upload_audio_url'] ) ? sanitize_url( $data['upload_audio_url'] ) : "";
 
 			// MailChimp general settings
@@ -183,9 +186,9 @@ class Secure_Copy_Content_Protection_Actions {
 
 				"enable_text_selecting" => (isset($data["sccp_enable_text_selecting"])) ? "checked" : "",
 				"timeout"               => (isset($data["sscp_timeout"]) && $data["sscp_timeout"] > 0) ? absint($data["sscp_timeout"]) : 1000,
-				"bc_header_text"        => isset($data['sccp_bc_header_text']) ? stripslashes($data['sccp_bc_header_text']) : __('You need to Enter right password', 'secure-copy-content-protection'),
+				"bc_header_text"        => isset($data['sccp_bc_header_text']) ? wp_kses( $data['sccp_bc_header_text'], $sccp_allowed_html ) : __('You need to Enter right password', 'secure-copy-content-protection'),
 				"sccp_bc_button_position"        => (isset($data['sccp_bc_button_position']) && $data['sccp_bc_button_position'] != '' )? $data['sccp_bc_button_position'] : 'next-to',
-				"subs_to_view_header_text"        => isset($data['sccp_subscribe_block_header_text']) ? stripslashes($data['sccp_subscribe_block_header_text']) : __('Subscribe', 'secure-copy-content-protection'),
+				"subs_to_view_header_text"        => isset($data['sccp_subscribe_block_header_text']) ? wp_kses( $data['sccp_subscribe_block_header_text'], $sccp_allowed_html ) : __('Subscribe', 'secure-copy-content-protection'),
 				"sccp_sub_block_button_position"        => (isset($data['sccp_sub_block_button_position']) && $data['sccp_sub_block_button_position'] != '' )? $data['sccp_sub_block_button_position'] : 'next-to',
 				"enable_copyright_text" => (isset($data["sccp_enable_copyright_text"]) && sanitize_text_field( $data['sccp_enable_copyright_text'] ) == 'on') ? "on" : "off",
 				"copyright_text" => (isset($data["sccp_copyright_text"]) && sanitize_text_field( $data['sccp_copyright_text'] ) != '') ? $data["sccp_copyright_text"] : "",
