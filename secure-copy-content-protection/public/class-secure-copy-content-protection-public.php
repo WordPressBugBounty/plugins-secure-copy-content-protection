@@ -911,6 +911,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Block content box text alignment
         $sccp_bc_text_alignment = (isset($block_content_settings['bc_text_alignment']) && sanitize_text_field( $block_content_settings['bc_text_alignment'] ) != '') ? sanitize_text_field( $block_content_settings['bc_text_alignment'] ) : 'center';
 
+        // Enable Block content text alignment Mobile
+        $block_content_settings['enable_bc_text_alignment_mobile'] = ( isset( $block_content_settings['enable_bc_text_alignment_mobile'] ) && $block_content_settings['enable_bc_text_alignment_mobile'] == 'off') ? false : true;
+        
+        // Block content text alignment Mobile
+        if ( $block_content_settings['enable_bc_text_alignment_mobile'] ) {
+            $sccp_bc_text_alignment_mobile = ( isset( $block_content_settings['bc_text_alignment_mobile'] ) && $block_content_settings['bc_text_alignment_mobile'] != '' ) ?  sanitize_text_field( $block_content_settings['bc_text_alignment_mobile'] ) : $sccp_bc_text_alignment;
+        } else {
+            $sccp_bc_text_alignment_mobile = $sccp_bc_text_alignment;
+        }
+
         // Block content button style
 		$block_content_settings['enable_bc_btn_style'] = (isset($block_content_settings['enable_bc_btn_style']) && $block_content_settings['enable_bc_btn_style'] == 'on') ? 'on' : 'off'; 
 
@@ -1083,6 +1093,10 @@ class Secure_Copy_Content_Protection_Public {
 	                        	.conblock_div input[type="submit"] {
 	                        		'. $sccp_bc_mobile_btn_size .'
 	                        	}
+	                        	div.conblock_icon,						
+	                        	div.conblock_block_para {						
+									justify-content: '. $sccp_bc_text_alignment_mobile .' !important;
+								}
 	                        	.conblock_div input[type="password"] {
 	                        		'. $bc_cont_input_width_mobile .'
 	                        	}

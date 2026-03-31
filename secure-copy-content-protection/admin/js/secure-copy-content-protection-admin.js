@@ -583,9 +583,15 @@
             $(document).find('input#ays_sccp_bc_icon_image').val('');
             $(document).find('#sccp_bc_image_container').hide().change();
             $(document).find('#sccp_bc_icon_image').show().change();
+
             $(document).find("#ays_sccp_bc_text_alignment_left").prop('checked' , false).change();
             $(document).find("#ays_sccp_bc_text_alignment_center").prop('checked' , true).change();
-            $(document).find("#ays_sccp_bc_text_alignment_right").prop('checked' , false).change();
+            $(document).find("#ays_sccp_bc_text_alignment_right").prop('checked' , false).change();            
+            $(document).find("#ays_sccp_bc_text_alignment_left_mobile").prop('checked' , false).change();
+            $(document).find("#ays_sccp_bc_text_alignment_center_mobile").prop('checked' , true).change();
+            $(document).find("#ays_sccp_bc_text_alignment_right_mobile").prop('checked' , false).change();
+            $(document).find("#enable_ays_sccp_bc_text_alignment_mobile").prop('checked', true).change();
+
             $(document).find("#ays_sccp_enable_bc_btn_style").prop('checked' , false).change();
             $(document).find('#ays_sccp_bc_btn_color').val('#fff').change();
             $(document).find('#ays_sccp_bc_btn_text_color').val('#000').change();

@@ -421,6 +421,12 @@ class Sccp_Settings_Actions {
             // Block content box text alignment
             $sccp_bc_text_alignment = (isset($data['ays_sccp_bc_text_alignment']) && sanitize_text_field( $data['ays_sccp_bc_text_alignment']) != '') ? sanitize_text_field( $data['ays_sccp_bc_text_alignment'] ) : 'center';
 
+            // Enable Block content text alignment Mobile
+            $enable_sccp_bc_text_alignment_mobile = isset( $data['enable_ays_sccp_bc_text_alignment_mobile'] ) && $data['enable_ays_sccp_bc_text_alignment_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content text alignment Mobile
+            $sccp_bc_text_alignment_mobile = isset( $data['ays_sccp_bc_text_alignment_mobile'] ) && $data['ays_sccp_bc_text_alignment_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_text_alignment_mobile'] ) : 'center';
+
             //Block content button style
             $enable_bc_btn_style = (isset($data['ays_sccp_enable_bc_btn_style']) && $data['ays_sccp_enable_bc_btn_style'] != '') ? 'on' : 'off';
 
@@ -484,6 +490,8 @@ class Sccp_Settings_Actions {
                 "enable_bc_cont_input_width_mobile"         => $enable_ays_sccp_bc_input_width_mobile,
                 "bc_cont_input_width_mobile"                => $ays_sccp_bc_input_width_mobile,
                 "bc_text_alignment"                         => $sccp_bc_text_alignment,
+                "enable_bc_text_alignment_mobile"           => $enable_sccp_bc_text_alignment_mobile,
+                "bc_text_alignment_mobile"                  => $sccp_bc_text_alignment_mobile,
                 "enable_bc_btn_style"                       => $enable_bc_btn_style,
                 "bc_btn_color"                              => $bc_btn_color,
                 "bc_btn_text_color"                         => $bc_btn_text_color,
