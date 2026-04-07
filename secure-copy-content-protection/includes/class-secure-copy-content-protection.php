@@ -185,13 +185,14 @@ class Secure_Copy_Content_Protection {
 		$this->loader->add_action('admin_menu', $plugin_admin, 'add_plugin_admin_menu');
 
 		$this->loader->add_action( 'admin_head', $plugin_admin, 'admin_menu_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'disable_scripts', 100 );
-		$this->loader->add_action('current_screen', $plugin_admin, 'ays_sccp_disable_all_notice_from_plugin', 200, 1);
+		$this->loader->add_action( 'current_screen', $plugin_admin, 'ays_sccp_disable_all_notice_from_plugin', 200, 1 );
+		$this->loader->add_filter( 'admin_body_class', $plugin_admin, 'ays_sccp_add_body_class' );
 
-		$this->loader->add_action('wp_ajax_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option');
-		$this->loader->add_action('wp_ajax_nopriv_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option');
+		$this->loader->add_action( 'wp_ajax_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option' );
+		$this->loader->add_action( 'wp_ajax_nopriv_deactivate_sccp_option_sccp', $plugin_admin, 'deactivate_sccp_option' );
 
 		// EXPORT FILTERS
         $this->loader->add_action( 'wp_ajax_ays_sccp_show_filters', $plugin_admin, 'ays_sccp_show_filters' );
