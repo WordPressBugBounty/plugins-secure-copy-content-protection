@@ -541,6 +541,10 @@
             $(document).find('#bc_bg_color').val('#fff').change();
             $(document).find('#bc_bg_color_mobile').val('#fff').change();
             $(document).find("#enable_bc_bg_color_mobile").prop('checked', true).change();
+
+            $(document).find('#ays_sccp_bc_btn_color').val('#fff').change();
+            $(document).find('#ays_sccp_bc_btn_color_mobile').val('#fff').change();
+            $(document).find("#enable_ays_sccp_bc_btn_color_mobile").prop('checked', true).change();
             
             $(document).find('#ays-sccp-bc-bg-img').attr('src', '').change();
             $(document).find('input#ays_sccp_bc_bg_image').val('');
@@ -593,7 +597,6 @@
             $(document).find("#enable_ays_sccp_bc_text_alignment_mobile").prop('checked', true).change();
 
             $(document).find("#ays_sccp_enable_bc_btn_style").prop('checked' , false).change();
-            $(document).find('#ays_sccp_bc_btn_color').val('#fff').change();
             $(document).find('#ays_sccp_bc_btn_text_color').val('#000').change();
             $(document).find('#ays_sccp_bc_btn_size').val('14').change();
             $(document).find('#ays_sccp_bc_mobile_btn_size').val('14').change();
@@ -707,6 +710,12 @@
         });
         $('#bc_bg_color_mobile').wpColorPicker({
             defaultColor: '#fff',
+        });
+        $('#ays_sccp_bc_btn_color').wpColorPicker({
+            defaultColor: '#000',
+        });
+        $('#ays_sccp_bc_btn_color_mobile').wpColorPicker({
+            defaultColor: '#000',
         });
         $('#sub_desc_text_color').wpColorPicker({
             defaultColor: '#000',

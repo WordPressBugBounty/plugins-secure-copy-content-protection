@@ -427,10 +427,17 @@ class Sccp_Settings_Actions {
             // Block content text alignment Mobile
             $sccp_bc_text_alignment_mobile = isset( $data['ays_sccp_bc_text_alignment_mobile'] ) && $data['ays_sccp_bc_text_alignment_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_text_alignment_mobile'] ) : 'center';
 
-            //Block content button style
+            // Block content button style
             $enable_bc_btn_style = (isset($data['ays_sccp_enable_bc_btn_style']) && $data['ays_sccp_enable_bc_btn_style'] != '') ? 'on' : 'off';
 
+            // Block content button Background Color
             $bc_btn_color = (isset($data['ays_sccp_bc_btn_color']) && $data['ays_sccp_bc_btn_color'] != '') ? sanitize_text_field($data['ays_sccp_bc_btn_color']) : 'rgba(255,255,255,0)';
+
+            // Enable Block content button Background Color Mobile
+            $enable_bc_btn_color_mobile = isset( $data['enable_ays_sccp_bc_btn_color_mobile'] ) && $data['enable_ays_sccp_bc_btn_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content button Background Color Mobile
+            $bc_btn_color_mobile = isset( $data['ays_sccp_bc_btn_color_mobile'] ) && $data['ays_sccp_bc_btn_color_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_btn_color_mobile'] ) : 'rgba(255,255,255,0)';
 
             $bc_btn_text_color = (isset($data['ays_sccp_bc_btn_text_color']) && $data['ays_sccp_bc_btn_text_color'] != '') ? sanitize_text_field($data['ays_sccp_bc_btn_text_color']) : '#000000';
 
@@ -494,6 +501,8 @@ class Sccp_Settings_Actions {
                 "bc_text_alignment_mobile"                  => $sccp_bc_text_alignment_mobile,
                 "enable_bc_btn_style"                       => $enable_bc_btn_style,
                 "bc_btn_color"                              => $bc_btn_color,
+                "enable_bc_btn_color_mobile"                => $enable_bc_btn_color_mobile,
+                "bc_btn_color_mobile"                       => $bc_btn_color_mobile,
                 "bc_btn_text_color"                         => $bc_btn_text_color,
                 "bc_btn_size"                               => $bc_btn_size,
                 "bc_mobile_btn_size"                        => $bc_mobile_btn_size,

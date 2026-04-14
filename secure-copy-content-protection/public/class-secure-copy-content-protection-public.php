@@ -926,11 +926,23 @@ class Secure_Copy_Content_Protection_Public {
 
 		$ays_sccp_enable_bc_btn_style = (isset($block_content_settings['enable_bc_btn_style']) && $block_content_settings['enable_bc_btn_style'] == 'on') ? true : false;
 
+		// Block content box Container button background color
 		$ays_sccp_bc_btn_color = (isset($block_content_settings['bc_btn_color']) && $block_content_settings['bc_btn_color'] != '') ? stripslashes( esc_attr( $block_content_settings['bc_btn_color'] ) ) : 'rgba(255,255,255,0)';
+
+		// Block content box Enable Container button background color Mobile
+        $block_content_settings['enable_bc_btn_color_mobile'] = ( isset( $block_content_settings['enable_bc_btn_color_mobile'] ) && $block_content_settings['enable_bc_btn_color_mobile'] == 'off') ? false : true;
+        
+        // Block content box Container button background color Mobile
+        if ( $block_content_settings['enable_bc_btn_color_mobile'] ) {
+            $ays_sccp_bc_btn_color_mobile = ( isset( $block_content_settings['bc_btn_color_mobile'] ) && $block_content_settings['bc_btn_color_mobile'] != '' ) ?  stripslashes( esc_attr( $block_content_settings['bc_btn_color_mobile'] ) ) : $ays_sccp_bc_btn_color;
+        } else {
+            $ays_sccp_bc_btn_color_mobile = $ays_sccp_bc_btn_color;
+        }
 
 		$ays_sccp_bc_btn_text_color = (isset($block_content_settings['bc_btn_text_color']) && $block_content_settings['bc_btn_text_color'] != '') ? stripslashes( esc_attr( $block_content_settings['bc_btn_text_color'] ) ) : '#000000';
 
 		$sccp_bc_btn_color = $ays_sccp_enable_bc_btn_style ? 'background-color:'.$ays_sccp_bc_btn_color.';' : '';
+		$sccp_bc_btn_color_mobile = $ays_sccp_enable_bc_btn_style ? 'background-color:'.$ays_sccp_bc_btn_color_mobile.' !important;' : '';
 
 		$sccp_bc_btn_text_color = $ays_sccp_enable_bc_btn_style ? 'color:'.$ays_sccp_bc_btn_text_color.';' : '';
 
@@ -1099,6 +1111,9 @@ class Secure_Copy_Content_Protection_Public {
 								}
 	                        	.conblock_div input[type="password"] {
 	                        		'. $bc_cont_input_width_mobile .'
+	                        	}
+	                        	input[type="submit"].ays_sccp_bc_sbm {
+	                        		'. $sccp_bc_btn_color_mobile .'
 	                        	}
 	                        	
 	                        }
