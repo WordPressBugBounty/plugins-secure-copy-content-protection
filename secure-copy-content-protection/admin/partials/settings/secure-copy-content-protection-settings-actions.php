@@ -439,7 +439,14 @@ class Sccp_Settings_Actions {
             // Block content button Background Color Mobile
             $bc_btn_color_mobile = isset( $data['ays_sccp_bc_btn_color_mobile'] ) && $data['ays_sccp_bc_btn_color_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_btn_color_mobile'] ) : 'rgba(255,255,255,0)';
 
+            // Block content button text color
             $bc_btn_text_color = (isset($data['ays_sccp_bc_btn_text_color']) && $data['ays_sccp_bc_btn_text_color'] != '') ? sanitize_text_field($data['ays_sccp_bc_btn_text_color']) : '#000000';
+
+            // Enable Block content button text color Mobile
+            $enable_bc_btn_text_color_mobile = isset( $data['enable_ays_sccp_bc_btn_text_color_mobile'] ) && $data['enable_ays_sccp_bc_btn_text_color_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content button text color Mobile
+            $bc_btn_text_color_mobile = isset( $data['ays_sccp_bc_btn_text_color_mobile'] ) && $data['ays_sccp_bc_btn_text_color_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_btn_text_color_mobile'] ) : '#000000';
 
             $bc_btn_size = (isset($data['ays_sccp_bc_btn_size']) && $data['ays_sccp_bc_btn_size'] != '') ? sanitize_text_field($data['ays_sccp_bc_btn_size']) : '14';
 
@@ -504,6 +511,8 @@ class Sccp_Settings_Actions {
                 "enable_bc_btn_color_mobile"                => $enable_bc_btn_color_mobile,
                 "bc_btn_color_mobile"                       => $bc_btn_color_mobile,
                 "bc_btn_text_color"                         => $bc_btn_text_color,
+                "enable_bc_btn_text_color_mobile"           => $enable_bc_btn_text_color_mobile,
+                "bc_btn_text_color_mobile"                  => $bc_btn_text_color_mobile,
                 "bc_btn_size"                               => $bc_btn_size,
                 "bc_mobile_btn_size"                        => $bc_mobile_btn_size,
                 "bc_btn_radius"                             => $bc_btn_radius,

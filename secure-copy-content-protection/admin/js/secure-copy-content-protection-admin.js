@@ -564,7 +564,7 @@
             $(document).find("#enable_ays_sccp_bc_cont_border_style_mobile").prop('checked', true).change();
             
             $(document).find('#ays_sccp_bc_cont_border_color').val('#c5c5c5').change();
-            $(document).find('#ays_sccp_bc_cont_border_color_mobile').val('c5c5c5').change();            
+            $(document).find('#ays_sccp_bc_cont_border_color_mobile').val('#c5c5c5').change();            
             $(document).find("#enable_ays_sccp_bc_cont_border_color_mobile").prop('checked', true).change(); 
 
             $(document).find('#ays_sccp_bc_cont_border_width').val('4').change();
@@ -597,7 +597,11 @@
             $(document).find("#enable_ays_sccp_bc_text_alignment_mobile").prop('checked', true).change();
 
             $(document).find("#ays_sccp_enable_bc_btn_style").prop('checked' , false).change();
+
             $(document).find('#ays_sccp_bc_btn_text_color').val('#000').change();
+            $(document).find('#ays_sccp_bc_btn_text_color_mobile').val('#000').change();            
+            $(document).find("#enable_ays_sccp_bc_btn_text_color_mobile").prop('checked', true).change(); 
+
             $(document).find('#ays_sccp_bc_btn_size').val('14').change();
             $(document).find('#ays_sccp_bc_mobile_btn_size').val('14').change();
             $(document).find('#ays_sccp_bc_btn_radius').val('3').change();
@@ -661,6 +665,12 @@
             }
         });
         $('#ays_sccp_bc_btn_text_color').wpColorPicker({
+            defaultColor: '#000000',
+            change: function(event, ui) {
+                $('#ays_tooltip, #ays_tooltip>*').css('color', ui.color.toString())
+            }
+        });
+        $('#ays_sccp_bc_btn_text_color_mobile').wpColorPicker({
             defaultColor: '#000000',
             change: function(event, ui) {
                 $('#ays_tooltip, #ays_tooltip>*').css('color', ui.color.toString())

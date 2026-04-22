@@ -939,12 +939,24 @@ class Secure_Copy_Content_Protection_Public {
             $ays_sccp_bc_btn_color_mobile = $ays_sccp_bc_btn_color;
         }
 
+		// Block content box button text color Mobile
 		$ays_sccp_bc_btn_text_color = (isset($block_content_settings['bc_btn_text_color']) && $block_content_settings['bc_btn_text_color'] != '') ? stripslashes( esc_attr( $block_content_settings['bc_btn_text_color'] ) ) : '#000000';
+
+		// Enable Block content box button text color Mobile
+        $block_content_settings['enable_bc_btn_text_color_mobile'] = ( isset( $block_content_settings['enable_bc_btn_text_color_mobile'] ) && $block_content_settings['enable_bc_btn_text_color_mobile'] == 'off') ? false : true;
+        
+        // Block content box button text color Mobile
+        if ( $block_content_settings['enable_bc_btn_text_color_mobile'] ) {
+            $ays_sccp_bc_btn_text_color_mobile = ( isset( $block_content_settings['bc_btn_text_color_mobile'] ) && $block_content_settings['bc_btn_text_color_mobile'] != '' ) ?  stripslashes( esc_attr( $block_content_settings['bc_btn_text_color_mobile'] ) ) : $ays_sccp_bc_btn_text_color;
+        } else {
+            $ays_sccp_bc_btn_text_color_mobile = $ays_sccp_bc_btn_text_color;
+        }
 
 		$sccp_bc_btn_color = $ays_sccp_enable_bc_btn_style ? 'background-color:'.$ays_sccp_bc_btn_color.';' : '';
 		$sccp_bc_btn_color_mobile = $ays_sccp_enable_bc_btn_style ? 'background-color:'.$ays_sccp_bc_btn_color_mobile.' !important;' : '';
 
 		$sccp_bc_btn_text_color = $ays_sccp_enable_bc_btn_style ? 'color:'.$ays_sccp_bc_btn_text_color.';' : '';
+		$sccp_bc_btn_text_color_mobile = $ays_sccp_enable_bc_btn_style ? 'color:'.$ays_sccp_bc_btn_text_color_mobile.' !important;' : '';
 
 		$ays_sccp_bc_cont_border_styles = 'border: '.$bc_cont_border_width.'px '.$bc_cont_border_style.' '.$ays_sccp_bc_cont_border_color.';';
 
@@ -1114,6 +1126,7 @@ class Secure_Copy_Content_Protection_Public {
 	                        	}
 	                        	input[type="submit"].ays_sccp_bc_sbm {
 	                        		'. $sccp_bc_btn_color_mobile .'
+	                        		'. $sccp_bc_btn_text_color_mobile .'
 	                        	}
 	                        	
 	                        }
