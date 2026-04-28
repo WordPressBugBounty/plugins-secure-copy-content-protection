@@ -604,7 +604,11 @@
 
             $(document).find('#ays_sccp_bc_btn_size').val('14').change();
             $(document).find('#ays_sccp_bc_mobile_btn_size').val('14').change();
+
             $(document).find('#ays_sccp_bc_btn_radius').val('3').change();
+            $(document).find('#ays_sccp_bc_btn_radius_mobile').val('3').change();
+            $(document).find("#enable_ays_sccp_bc_btn_radius_mobile").prop('checked', true).change(); 
+            
             $(document).find('#ays_sccp_bc_btn_border_width').val('1').change();
             $(document).find('#ays_sccp_bc_btn_border_style').val('solid').change();
             $(document).find('#ays_sccp_bc_btn_border_color').val('#c5c5c5').change();

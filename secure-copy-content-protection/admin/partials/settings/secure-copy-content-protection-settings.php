@@ -170,13 +170,21 @@ $ays_sccp_bc_btn_text_color = (isset($block_content['bc_btn_text_color']) && $bl
 $block_content['enable_bc_btn_text_color_mobile'] = isset( $block_content['enable_bc_btn_text_color_mobile'] ) && $block_content['enable_bc_btn_text_color_mobile'] == 'off' ? 'off' : 'on';
 $enable_ays_sccp_bc_btn_text_color_mobile = $block_content['enable_bc_btn_text_color_mobile'] == 'on' ?  true : false;
 
-// Subscribe Button text color Mobile
+// Block content Button text color Mobile
 $ays_sccp_bc_btn_text_color_mobile = isset( $block_content['bc_btn_text_color_mobile'] ) && $block_content['bc_btn_text_color_mobile'] != '' ? esc_attr( $block_content['bc_btn_text_color_mobile'] ) : $ays_sccp_bc_btn_text_color;
 
 $ays_sccp_bc_btn_size = (isset($block_content['bc_btn_size']) && $block_content['bc_btn_size'] != '') ? stripslashes( esc_attr( $block_content['bc_btn_size'] ) ) : '14';
 $ays_sccp_bc_mobile_btn_size = (isset($block_content['bc_mobile_btn_size']) && $block_content['bc_mobile_btn_size'] != '') ? stripslashes( esc_attr( $block_content['bc_mobile_btn_size'] ) ) : '14';
 
+// Block content button border radius Mobile
 $ays_sccp_bc_btn_radius = (isset($block_content['bc_btn_radius']) && $block_content['bc_btn_radius'] != '') ? $block_content['bc_btn_radius'] : '3';
+
+// Enable Block content button border radius Mobile
+$block_content['enable_bc_btn_radius_mobile'] = isset( $block_content['enable_bc_btn_radius_mobile'] ) && $block_content['enable_bc_btn_radius_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_bc_btn_radius_mobile = $block_content['enable_bc_btn_radius_mobile'] == 'on' ?  true : false;
+
+// Block content button border radius Mobile
+$ays_sccp_bc_btn_radius_mobile = isset( $block_content['bc_btn_radius_mobile'] ) && $block_content['bc_btn_radius_mobile'] != '' ? esc_attr( $block_content['bc_btn_radius_mobile'] ) : $ays_sccp_bc_btn_radius;
 
 // Block content Buttons border width
 $ays_sccp_bc_btn_border_width = (isset($block_content['bc_btn_border_width']) && $block_content['bc_btn_border_width'] != '') ? $block_content['bc_btn_border_width'] : '1';
@@ -2612,13 +2620,36 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                             </label>
                                         </div>
                                         <div class="col-sm-7 ays_divider_left ays_sccp_display_flex">
-                                            <div>
-                                               <input type="number" class="ays-text-input" id='ays_sccp_bc_btn_radius' data-alpha="true" name='ays_sccp_bc_btn_radius' value="<?php echo $ays_sccp_bc_btn_radius; ?>"/>
-                                            </div>
-                                            <div class="ays_sccp_dropdown_max_width">
-                                                <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-                                            </div>
-                                        </div>                                        
+                                        	<div class="ays_toggle_mobile_parent">
+			                                    <div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_display_flex">
+						                                <div>
+						                                <input type="number" name="ays_sccp_bc_btn_radius" id="ays_sccp_bc_btn_radius" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius; ?>">
+						                                </div>
+						                                <div class="ays_sccp_dropdown_max_width">
+						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+						                                </div>
+						                            </div>
+			                                    </div>
+			                                    <div class="ays_toggle_target ays_sccp_bc_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display:none'; ?>">
+			                                        <hr>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_display_flex">
+						                                <div>
+						                                   <input type="number" name="ays_sccp_bc_btn_radius_mobile" id="ays_sccp_bc_btn_radius_mobile" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius_mobile; ?>">
+						                                </div>
+						                                <div class="ays_sccp_dropdown_max_width">
+						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+						                                </div>
+						                            </div>
+			                                    </div>
+			                                    <div class="ays_sccp_mobile_settings_container">
+			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_radius_mobile" name="enable_ays_sccp_bc_btn_radius_mobile" <?php echo $enable_ays_sccp_bc_btn_radius_mobile ? 'checked' : '' ?>>
+			                                        <label for="enable_ays_sccp_bc_btn_radius_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                    </div>
+			                                </div>
+                                        </div>
                                     </div>
                                     <hr>
                                     <div class="form-group row">

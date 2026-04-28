@@ -452,7 +452,14 @@ class Sccp_Settings_Actions {
 
             $bc_mobile_btn_size = (isset($data['ays_sccp_bc_mobile_btn_size']) && $data['ays_sccp_bc_mobile_btn_size'] != '') ? sanitize_text_field($data['ays_sccp_bc_mobile_btn_size']) : '14';
 
+            // Block content box button border radius Mobile
             $bc_btn_radius = (isset($data['ays_sccp_bc_btn_radius']) && sanitize_text_field( $data['ays_sccp_bc_btn_radius'] ) != "") ? sanitize_text_field( $data['ays_sccp_bc_btn_radius'] ) : '3';
+
+            // Enable Block content box button border radius Mobile
+            $enable_bc_btn_radius_mobile = isset( $data['enable_ays_sccp_bc_btn_radius_mobile'] ) && $data['enable_ays_sccp_bc_btn_radius_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content box button border radius Mobile
+            $bc_btn_radius_mobile = isset( $data['ays_sccp_bc_btn_radius_mobile'] ) && $data['ays_sccp_bc_btn_radius_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_btn_radius_mobile'] ) : '3';
 
             // Block content Buttons border width
             $bc_btn_border_width = (isset($data['ays_sccp_bc_btn_border_width']) && sanitize_text_field( $data['ays_sccp_bc_btn_border_width'] ) != "") ? sanitize_text_field( $data['ays_sccp_bc_btn_border_width'] ) : '1';
@@ -516,6 +523,8 @@ class Sccp_Settings_Actions {
                 "bc_btn_size"                               => $bc_btn_size,
                 "bc_mobile_btn_size"                        => $bc_mobile_btn_size,
                 "bc_btn_radius"                             => $bc_btn_radius,
+                "enable_bc_btn_radius_mobile"               => $enable_bc_btn_radius_mobile,
+                "bc_btn_radius_mobile"                      => $bc_btn_radius_mobile,
                 "bc_btn_border_width"                       => $bc_btn_border_width,
                 "bc_btn_border_style"                       => $bc_btn_border_style,
                 "bc_btn_border_color"                       => $bc_btn_border_color,
