@@ -1427,12 +1427,13 @@ class Secure_Copy_Content_Protection_Public {
 			// Do not store IP adressess 
         	$sccp_disable_user_ip = (isset($settings_options['sccp_disable_user_ip']) && $settings_options['sccp_disable_user_ip'] == 'on') ? true : false;
 
-			$user_first_name 		 = '';
-	        $user_last_name  		 = '';
-	        $user_display_name  	 = '';
-	        $user_nickname 			 = '';
-	        $user_email 	 		 = '';
-	        $user_wordpress_roles    = '';
+			$user_first_name      = '';
+	        $user_last_name  	  = '';
+	        $user_display_name    = '';
+	        $user_nickname 		  = '';
+	        $user_email 	 	  = '';
+	        $user_website_url     = '';
+	        $user_wordpress_roles = '';
 	        $user_data = wp_get_current_user();
 	        $user_id = get_current_user_id();
 	        $current_date = date_i18n( 'M d, Y', current_time('timestamp') );
@@ -1461,6 +1462,8 @@ class Secure_Copy_Content_Protection_Public {
 	                        $user_wordpress_roles = implode(",", $user_wordpress_roles);
 	                    }
 	                }
+
+	                $user_website_url = ( isset( $current_user_data->user_url ) && ! empty( $current_user_data->user_url ) ) ? $current_user_data->user_url : "";
 	            }
 	    	}else{
 	    		$user_id = '';
@@ -1503,35 +1506,40 @@ class Secure_Copy_Content_Protection_Public {
 	                $post_author_roles = implode( ", ", $post_author_roles );
 	            }
 	        }
+
+	        if ( ! empty( $user_website_url ) ) {
+	            $user_website_url = '<a href="'.$user_website_url.'" target="_blank">'.$user_website_url.'</a>';
+	        }
 	        
 			$message_data = array(                    
-                'user_first_name' 				=> $user_first_name,
-                'user_last_name' 				=> $user_last_name,                   
-                'user_wordpress_email' 			=> $user_email,                  
-                'user_display_name' 			=> $user_display_name,
-                'user_nickname'     			=> $user_nickname,
-                'user_wordpress_roles' 			=> $user_wordpress_roles,
-                'current_user_ip'       		=> $current_user_ip,
-                'admin_email'       			=> $super_admin_email,
-                'post_author_nickname'  		=> $post_author_nickname,
-                'post_author_email'				=> $post_author_email,
-                'post_author_display_name'		=> $post_author_display_name,
-                'post_author_first_name'		=> $post_author_first_name,
-                'post_author_last_name'			=> $post_author_last_name,
-                'post_author_website_url'		=> $post_author_website_url,
-                'post_author_roles'				=> $post_author_roles,
-                'user_id'              			=> $user_id,
-                'user_registered'           	=> $user_registered,
-                'current_date'          		=> $current_date,
-                'current_time'          		=> $current_time,
-                'current_day'          			=> $current_day,
-                'current_month'          		=> $current_month,
-                'current_page_title'			=> $current_page_title,
-                'site_title'					=> $get_site_title,
-                'site_description'				=> $get_site_description,
-                'post_id'						=> $current_post_id,
-                'post_title'                	=> $post_title,
-                'home_page_url'             	=> $home_page_url,
+                'user_first_name' 			=> $user_first_name,
+                'user_last_name' 			=> $user_last_name,                   
+                'user_wordpress_email' 		=> $user_email,                  
+                'user_display_name' 		=> $user_display_name,
+                'user_nickname'     		=> $user_nickname,
+                'user_wordpress_roles' 		=> $user_wordpress_roles,
+                'user_website_url' 			=> $user_website_url,
+                'current_user_ip'       	=> $current_user_ip,
+                'admin_email'       		=> $super_admin_email,
+                'post_author_nickname'  	=> $post_author_nickname,
+                'post_author_email'			=> $post_author_email,
+                'post_author_display_name'	=> $post_author_display_name,
+                'post_author_first_name'	=> $post_author_first_name,
+                'post_author_last_name'		=> $post_author_last_name,
+                'post_author_website_url'	=> $post_author_website_url,
+                'post_author_roles'			=> $post_author_roles,
+                'user_id'              		=> $user_id,
+                'user_registered'           => $user_registered,
+                'current_date'          	=> $current_date,
+                'current_time'          	=> $current_time,
+                'current_day'          		=> $current_day,
+                'current_month'          	=> $current_month,
+                'current_page_title'		=> $current_page_title,
+                'site_title'				=> $get_site_title,
+                'site_description'			=> $get_site_description,
+                'post_id'					=> $current_post_id,
+                'post_title'                => $post_title,
+                'home_page_url'             => $home_page_url,
             );
 
 			$notf_text = $this->sccp_replace_message_variables($notf_text, $message_data);

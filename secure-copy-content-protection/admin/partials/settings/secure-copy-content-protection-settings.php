@@ -605,7 +605,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's first name that was filled in their WordPress site during registration.", 'secure-copy-content-protection'); ?>
+                                        <?php echo esc_attr( __( "The user's first name that was filled in their WordPress site during registration.", 'secure-copy-content-protection') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -614,7 +614,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's last name that was filled in their WordPress site during registration.", 'secure-copy-content-protection'); ?>
+                                        <?php echo esc_attr( __( "The user's last name that was filled in their WordPress site during registration.", 'secure-copy-content-protection') ); ?>
                                     </span>
                                 </p> 
                                 <p class="vmessage">
@@ -623,7 +623,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's email that was filled in their WordPress profile.", 'secure-copy-content-protection'); ?>
+                                        <?php echo esc_attr( __( "The user's email that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -632,7 +632,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's display name that was filled in their WordPress profile.", 'secure-copy-content-protection'); ?>
+                                        <?php echo esc_attr( __( "The user's display name that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
                                     </span>
                                 </p> 
                                 <p class="vmessage">
@@ -641,7 +641,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's nickname that was filled in their WordPress profile.", 'secure-copy-content-protection'); ?>
+                                        <?php echo esc_attr( __( "The user's nickname that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -650,7 +650,16 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection'); ?>
+                                        <?php echo esc_attr( __( "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection') ); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%user_website_url%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo esc_attr( __( "The user's website url that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -758,7 +767,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The Post title of the current post.", 'secure-copy-content-protection'); ?>
+                                        <?php echo esc_attr( __( "The Post title of the current post.", 'secure-copy-content-protection') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
