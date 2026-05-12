@@ -107,10 +107,10 @@ class Sccp_Settings_Actions {
             $ays_sub_button_text_mobile = isset( $data['ays_sccp_sub_button_text_mobile'] ) && $data['ays_sccp_sub_button_text_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_button_text_mobile'] ) : 'Subscribe';
 
             // Subscribe box Add Icon
-            $ays_sub_icon_img = (isset($data['ays_sccp_sub_icon_image']) && $data['ays_sccp_sub_icon_image'] != '') ? $data['ays_sccp_sub_icon_image'] : '';
+            $ays_sub_icon_img = isset($data['ays_sccp_sub_icon_image']) && $data['ays_sccp_sub_icon_image'] !== '' ? esc_url_raw( sanitize_text_field( $data['ays_sccp_sub_icon_image'] ) ) : '';
 
             // Subscribe box Add BG Image
-            $ays_sub_bg_img = (isset($data['ays_sccp_sub_bg_image']) && $data['ays_sccp_sub_bg_image'] != '') ? $data['ays_sccp_sub_bg_image'] : '';
+            $ays_sub_bg_img = (isset($data['ays_sccp_sub_bg_image']) && $data['ays_sccp_sub_bg_image'] != '') ? esc_url_raw( sanitize_text_field( $data['ays_sccp_sub_bg_image'] ) ) : '';
 
             // Subscribe box email placeholder text
             $ays_sub_email_place_text = (isset($data['ays_sccp_sub_email_place_text']) && $data['ays_sccp_sub_email_place_text'] != '') ? stripslashes( esc_attr($data['ays_sccp_sub_email_place_text']) ) : 'Type your email address';
@@ -350,7 +350,7 @@ class Sccp_Settings_Actions {
             $bc_bg_color_mobile = isset( $data['bc_bg_color_mobile'] ) && $data['bc_bg_color_mobile'] != '' ? sanitize_text_field( $data['bc_bg_color_mobile'] ) : '#fff';
 
             // Block content box Add BG Image
-            $ays_bc_bg_img = (isset($data['ays_sccp_bc_bg_image']) && $data['ays_sccp_bc_bg_image'] != '') ? $data['ays_sccp_bc_bg_image'] : '';
+            $ays_bc_bg_img = (isset($data['ays_sccp_bc_bg_image']) && $data['ays_sccp_bc_bg_image'] != '') ? esc_url_raw( sanitize_text_field( $data['ays_sccp_bc_bg_image'] ) ) : '';            
 
             // Block content Bg image positioning
             $bc_bg_image_position = (isset($data['ays_bc_bg_image_position']) && $data['ays_bc_bg_image_position'] != "") ? $data['ays_bc_bg_image_position'] : 'center center';
@@ -407,7 +407,7 @@ class Sccp_Settings_Actions {
             $bc_cont_border_width_mobile = isset( $data['ays_sccp_bc_cont_border_width_mobile'] ) && $data['ays_sccp_bc_cont_border_width_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_cont_border_width_mobile'] ) : '4';
 
             // Block content box Add Icon
-            $ays_bc_icon_img = (isset($data['ays_sccp_bc_icon_image']) && $data['ays_sccp_bc_icon_image'] != '') ? $data['ays_sccp_bc_icon_image'] : '';
+            $ays_bc_icon_img = isset($data['ays_sccp_bc_icon_image']) && $data['ays_sccp_bc_icon_image'] !== '' ? esc_url_raw( sanitize_text_field( $data['ays_sccp_bc_icon_image'] ) ) : '';
 
             // Block content input width
             $ays_sccp_bc_input_width = (isset($data['ays_sccp_bc_input_width']) && $data['ays_sccp_bc_input_width'] != '') ? absint( sanitize_text_field($data['ays_sccp_bc_input_width']) ) : '';

@@ -1105,27 +1105,27 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         </div>
                         <hr/>
                         <div class="form-group row copy_protection_container">
-                            <div class="col-sm-4">
-                                <label for="sccp_sub_bg_image">
-                                    <?php echo __('Subscribe box background image','secure-copy-content-protection')?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add background image for Subscribe Box.','secure-copy-content-protection')?>">
-                                        <i class="ays_fa ays_fa_info_circle"></i>
-                                    </a>
-                                </label>
-                            </div>                                    
-                            <div class="col-sm-8 ays_divider_left">
-                                <a href="javascript:void(0)" id="sccp_sub_bg_image" style="<?php echo !isset($sccp_sub_bg_image) || empty($sccp_sub_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-bg-image"><?php echo $sub_bg_image_text; ?></a>
-                                <input type="hidden" id="ays_sccp_sub_bg_image" name="ays_sccp_sub_bg_image"
-                                       value="<?php echo $sccp_sub_bg_image; ?>"/>
-                                <div id="sccp_sub_bg-image_container" class="ays-sccp-sub-bg-image-container" style="<?php echo !isset($sccp_sub_bg_image) || empty($sccp_sub_bg_image) ? 'display:none' : 'display:block'; ?>">
-                                    <span class="ays-edit-sccp-sub-bg-img">
-                                        <i class="ays_fa ays_fa_pencil_square_o"></i>
-                                    </span>
-                                    <span class="ays-remove-sccp-sub-bg-img"></span>
-                                    <img src="<?php echo $sccp_sub_bg_image; ?>" id="ays-sccp-sub-bg-img"/>
-                                </div>
-                            </div>
-                        </div>
+						    <div class="col-sm-4">
+						        <label for="sccp_sub_bg_image">
+						            <?php echo __('Subscribe box background image','secure-copy-content-protection')?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add background image for Subscribe Box.','secure-copy-content-protection')?>">
+						                <i class="ays_fa ays_fa_info_circle"></i>
+						            </a>
+						        </label>
+						    </div>                                    
+						    <div class="col-sm-8 ays_divider_left">
+						        <a href="javascript:void(0)" id="sccp_sub_bg_image" style="<?php echo empty($sccp_sub_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-bg-image"><?php echo $sub_bg_image_text; ?></a>
+						        <input type="hidden" id="ays_sccp_sub_bg_image" name="ays_sccp_sub_bg_image"
+						               value="<?php echo esc_attr($sccp_sub_bg_image); ?>"/>
+						        <div id="sccp_sub_bg-image_container" class="ays-sccp-sub-bg-image-container" style="<?php echo empty($sccp_sub_bg_image) ? 'display:none' : 'display:block'; ?>">
+						            <span class="ays-edit-sccp-sub-bg-img">
+						                <i class="ays_fa ays_fa_pencil_square_o"></i>
+						            </span>
+						            <span class="ays-remove-sccp-sub-bg-img"></span>
+						            <img src="<?php echo esc_url($sccp_sub_bg_image); ?>" id="ays-sccp-sub-bg-img" alt=""/>
+						        </div>
+						    </div>
+						</div>                        
                         <hr/>
                         <!-- Subscribe BG Image Position Start -->
                         <div class="form-group row ays-sub-bg-pos-block <?php echo ! isset( $sccp_sub_bg_image ) || empty( $sccp_sub_bg_image ) ? '' : 'active'; ?>">
@@ -1459,27 +1459,27 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         </div>                        
                         <hr/>
                         <div class="form-group row copy_protection_container">
-                            <div class="col-sm-4">
-                                <label for="sccp_sub_icon_image">
-                                    <?php echo __('Subscribe Icon','secure-copy-content-protection')?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add icon image for Subscribe Box. Advisable size for image is 50x50.','secure-copy-content-protection')?>">
-                                        <i class="ays_fa ays_fa_info_circle"></i>
-                                    </a>
-                                </label>
-                            </div>                                    
-                            <div class="col-sm-8 ays_divider_left">
-                                <a href="javascript:void(0)" id="sccp_sub_icon_image" style="<?php echo !isset($sccp_sub_icon_image) || empty($sccp_sub_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-icon-image"><?php echo $sub_icon_image_text; ?></a>
-                                <input type="hidden" id="ays_sccp_sub_icon_image" name="ays_sccp_sub_icon_image"
-                                       value="<?php echo $sccp_sub_icon_image; ?>"/>
-                                <div id="sccp_sub_image_container" class="ays-sccp-sub-image-container" style="<?php echo !isset($sccp_sub_icon_image) || empty($sccp_sub_icon_image) ? 'display:none' : 'display:block'; ?>">
-                                    <span class="ays-edit-sccp-sub-img">
-                                        <i class="ays_fa ays_fa_pencil_square_o"></i>
-                                    </span>
-                                    <span class="ays-remove-sccp-sub-img"></span>
-                                    <img src="<?php echo $sccp_sub_icon_image; ?>" id="ays-sccp-sub-img"/>
-                                </div>
-                            </div>
-                        </div>
+						    <div class="col-sm-4">
+						        <label for="sccp_sub_icon_image">
+						            <?php echo __('Subscribe Icon','secure-copy-content-protection')?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add icon image for Subscribe Box. Advisable size for image is 50x50.','secure-copy-content-protection'); ?>">
+						                <i class="ays_fa ays_fa_info_circle"></i>
+						            </a>
+						        </label>
+						    </div>                                    
+						    <div class="col-sm-8 ays_divider_left">
+						        <a href="javascript:void(0)" id="sccp_sub_icon_image" style="<?php echo empty($sccp_sub_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-icon-image"><?php echo $sub_icon_image_text; ?></a>
+						        <input type="hidden" id="ays_sccp_sub_icon_image" name="ays_sccp_sub_icon_image"
+						               value="<?php echo esc_attr($sccp_sub_icon_image); ?>"/>
+						        <div id="sccp_sub_image_container" class="ays-sccp-sub-image-container" style="<?php echo empty($sccp_sub_icon_image) ? 'display:none' : 'display:block'; ?>">
+						            <span class="ays-edit-sccp-sub-img">
+						                <i class="ays_fa ays_fa_pencil_square_o"></i>
+						            </span>
+						            <span class="ays-remove-sccp-sub-img"></span>
+						            <img src="<?php echo esc_url($sccp_sub_icon_image); ?>" id="ays-sccp-sub-img" alt=""/>
+						        </div>
+						    </div>
+						</div>                        
                         <hr/>
                         <div class="form-group row">
                             <div class="col-sm-4">
@@ -2116,27 +2116,27 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         </div>
                         <hr>
                         <div class="form-group row copy_protection_container">
-                            <div class="col-sm-4">
-                                <label for="sccp_bc_bg_image">
-                                    <?php echo __('Block content box background image', 'secure-copy-content-protection')?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add background image for Block content Box.','secure-copy-content-protection')?>">
-                                        <i class="ays_fa ays_fa_info_circle"></i>
-                                    </a>
-                                </label>
-                            </div>                                    
-                            <div class="col-sm-8 ays_divider_left">
-                                <a href="javascript:void(0)" id="sccp_bc_bg_image" style="<?php echo !isset($sccp_bc_bg_image) || empty($sccp_bc_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-bg-image"><?php echo $bc_bg_image_text; ?></a>
-                                <input type="hidden" id="ays_sccp_bc_bg_image" name="ays_sccp_bc_bg_image"
-                                       value="<?php echo $sccp_bc_bg_image; ?>"/>
-                                <div id="sccp_bc_bg-image_container" class="ays-sccp-bc-bg-image-container" style="<?php echo !isset($sccp_bc_bg_image) || empty($sccp_bc_bg_image) ? 'display:none' : 'display:block'; ?>">
-                                    <span class="ays-edit-sccp-bc-bg-img">
-                                        <i class="ays_fa ays_fa_pencil_square_o"></i>
-                                    </span>
-                                    <span class="ays-remove-sccp-bc-bg-img"></span>
-                                    <img src="<?php echo $sccp_bc_bg_image; ?>" id="ays-sccp-bc-bg-img"/>
-                                </div>
-                            </div>
-                        </div>
+						    <div class="col-sm-4">
+						        <label for="sccp_bc_bg_image">
+						            <?php echo __('Block content box background image', 'secure-copy-content-protection')?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add background image for Block content Box.','secure-copy-content-protection')?>">
+						                <i class="ays_fa ays_fa_info_circle"></i>
+						            </a>
+						        </label>
+						    </div>                                    
+						    <div class="col-sm-8 ays_divider_left">
+						        <a href="javascript:void(0)" id="sccp_bc_bg_image" style="<?php echo empty($sccp_bc_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-bg-image"><?php echo $bc_bg_image_text; ?></a>
+						        <input type="hidden" id="ays_sccp_bc_bg_image" name="ays_sccp_bc_bg_image"
+						               value="<?php echo esc_attr($sccp_bc_bg_image); ?>"/>
+						        <div id="sccp_bc_bg-image_container" class="ays-sccp-bc-bg-image-container" style="<?php echo empty($sccp_bc_bg_image) ? 'display:none' : 'display:block'; ?>">
+						            <span class="ays-edit-sccp-bc-bg-img">
+						                <i class="ays_fa ays_fa_pencil_square_o"></i>
+						            </span>
+						            <span class="ays-remove-sccp-bc-bg-img"></span>
+						            <img src="<?php echo esc_url($sccp_bc_bg_image); ?>" id="ays-sccp-bc-bg-img" alt=""/>
+						        </div>
+						    </div>
+						</div>
                         <hr>
                         <!-- Block content BG Image Position Start -->
                         <div class="form-group row ays-bc-bg-pos-block <?php echo !isset( $sccp_bc_bg_image ) || empty( $sccp_bc_bg_image ) ? '' : 'active'; ?>">
@@ -2422,27 +2422,27 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         </div>
                         <hr/>
                         <div class="form-group row copy_protection_container">
-                            <div class="col-sm-4">
-                                <label for="sccp_bc_icon_image">
-                                    <?php echo __('Block content Icon','secure-copy-content-protection')?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add icon image for Block content Box. Advisable size for image is 50x50.','secure-copy-content-protection')?>">
-                                        <i class="ays_fa ays_fa_info_circle"></i>
-                                    </a>
-                                </label>
-                            </div>
-                            <div class="col-sm-8 ays_divider_left">
-                                <a href="javascript:void(0)" id="sccp_bc_icon_image" style="<?php echo !isset($sccp_bc_icon_image) || empty($sccp_bc_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-icon-image"><?php echo $bc_icon_image_text; ?></a>
-                                <input type="hidden" id="ays_sccp_bc_icon_image" name="ays_sccp_bc_icon_image"
-                                       value="<?php echo $sccp_bc_icon_image; ?>"/>
-                                <div id="sccp_bc_image_container" class="ays-sccp-bc-image-container" style="<?php echo !isset($sccp_bc_icon_image) || empty($sccp_bc_icon_image) ? 'display:none' : 'display:block'; ?>">
-                                    <span class="ays-edit-sccp-bc-img">
-                                        <i class="ays_fa ays_fa_pencil_square_o"></i>
-                                    </span>
-                                    <span class="ays-remove-sccp-bc-img"></span>
-                                    <img src="<?php echo $sccp_bc_icon_image; ?>" id="ays-sccp-bc-img"/>
-                                </div>
-                            </div>
-                        </div>
+						    <div class="col-sm-4">
+						        <label for="sccp_bc_icon_image">
+						            <?php echo __('Block content Icon','secure-copy-content-protection')?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add icon image for Block content Box. Advisable size for image is 50x50.','secure-copy-content-protection')?>">
+						                <i class="ays_fa ays_fa_info_circle"></i>
+						            </a>
+						        </label>
+						    </div>
+						    <div class="col-sm-8 ays_divider_left">
+						        <a href="javascript:void(0)" id="sccp_bc_icon_image" style="<?php echo empty($sccp_bc_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-icon-image"><?php echo $bc_icon_image_text; ?></a>
+						        <input type="hidden" id="ays_sccp_bc_icon_image" name="ays_sccp_bc_icon_image"
+						               value="<?php echo esc_attr($sccp_bc_icon_image); ?>"/>
+						        <div id="sccp_bc_image_container" class="ays-sccp-bc-image-container" style="<?php echo empty($sccp_bc_icon_image) ? 'display:none' : 'display:block'; ?>">
+						            <span class="ays-edit-sccp-bc-img">
+						                <i class="ays_fa ays_fa_pencil_square_o"></i>
+						            </span>
+						            <span class="ays-remove-sccp-bc-img"></span>
+						            <img src="<?php echo esc_url($sccp_bc_icon_image); ?>" id="ays-sccp-bc-img" alt=""/>
+						        </div>
+						    </div>
+						</div>
                         <hr/>
                         <div class="form-group row">
                             <div class="col-sm-4">
