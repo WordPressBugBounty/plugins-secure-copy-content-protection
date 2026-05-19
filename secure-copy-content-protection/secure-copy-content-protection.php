@@ -16,7 +16,7 @@
  * Plugin Name:       Secure Copy Content Protection
  * Plugin URI:        https://ays-pro.com/wordpress/secure-copy-content-protection/
  * Description:       Copy Protection plugin is activated it disables the right click, copy paste, content selection and copy shortcut keys
- * Version:           5.1.4
+ * Version:           5.1.5
  * Author:            Copy Content Protection Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('SCCP_NAME_VERSION', '5.1.4');
+define('SCCP_NAME_VERSION', '5.1.5');
 define('SCCP_NAME', 'secure-copy-content-protection');
 if (!defined('SCCP_ADMIN_URL')) {
 	define('SCCP_ADMIN_URL', plugin_dir_url(__FILE__) . 'admin');
@@ -109,11 +109,15 @@ function sccp_admin_notice() {
         <div class="ays-notice-banner">
             <div class="navigation-bar">
                 <div id="navigation-container">                   
-                    <div class="ays-logo-container-upgrade">
+                    <div class="ays-sccp-logo-container-upgrade ays-navigation-container-logo-updrade-box">
                         <div class="logo-container">
                             <a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-top-banner-logo-link-<?php echo esc_attr( SCCP_NAME_VERSION ); ?>" target="_blank" style="box-shadow: none;">
                                 <img  class="sccp-logo" src="<?php echo esc_attr(SCCP_ADMIN_URL) . '/images/sccp.png'; ?>" alt="<?php echo esc_attr__( "Secure Copy Content Protection", 'secure-copy-content-protection' ); ?>" title="<?php echo esc_attr__( "Secure Copy Content Protection", 'secure-copy-content-protection' ); ?>"/>
                             </a>
+                        </div>
+                        <div class="ays-sccp-top-banner-title">
+                            <span class="ays-sccp-top-banner-main-title"><?php echo esc_html__( "Copy Protection by AYS", 'secure-copy-content-protection' ); ?></span>
+                            <span class="ays-sccp-top-banner-sub-title"><?php echo esc_html__( "Protect Your Web Content", 'secure-copy-content-protection' ); ?></span>
                         </div>
                         <div class="ays-upgrade-container">
                             <a href="https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-top-banner-upgrade-button-<?php echo esc_attr( SCCP_NAME_VERSION ); ?>" target="_blank">
@@ -128,14 +132,14 @@ function sccp_admin_notice() {
                         <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank"><?php echo esc_html__( "Demo", 'secure-copy-content-protection' ); ?></a></li>
                         <li class="modile-ddmenu-lg modile-ddmenu-lg-custom"><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Free Support", 'secure-copy-content-protection' ); ?></a></li>
                         <li class="modile-ddmenu-lg ays_sccp_take_gift modile-ddmenu-lg-custom"><a class="ays-btn" href="https://ays-demo.com/sccp-coupon-code-as-a-gift/" target="_blank"><?php echo esc_html__( "Get 50% discount", 'secure-copy-content-protection' ); ?></a></li>
-                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
+                        <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-pro.com/contact" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
                         <li class="modile-ddmenu-md">
                             <a class="toggle_ddmenu" href="javascript:void(0);"><i class="ays_fa ays_fa_ellipsis_h"></i></a>
                             <ul class="ddmenu" data-expanded="false">
                                 <li><a class="ays-btn" href="https://ays-pro.com/wordpress/secure-copy-content-protection/?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-top-banner-pricing-link-<?php echo esc_attr( SCCP_NAME_VERSION ); ?>" target="_blank"><?php echo esc_html__( "Pricing", 'secure-copy-content-protection' ); ?></a></li>
                                 <li class="ays_sccp_take_gift"><a class="ays-btn" href="https://ays-demo.com/sccp-coupon-code-as-a-gift/" target="_blank"><?php echo esc_html__( "Get 50% discount", 'secure-copy-content-protection' ); ?></a></li>
                                 <li><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank"><?php echo esc_html__( "Demo", 'secure-copy-content-protection' ); ?></a></li>
-                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
+                                <li><a class="ays-btn" href="https://ays-pro.com/contact" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
                             </ul>
                         </li>
                         <li class="modile-ddmenu-sm">
@@ -145,7 +149,7 @@ function sccp_admin_notice() {
                                 <li><a class="ays-btn" href="https://ays-demo.com/secure-copy-content-protection-free-demo/" target="_blank"><?php echo esc_html__( "Demo", 'secure-copy-content-protection' ); ?></a></li>
                                 <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Free Support", 'secure-copy-content-protection' ); ?></a></li>
                                 <li class="ays_sccp_take_gift"><a class="ays-btn" href="https://ays-demo.com/sccp-coupon-code-as-a-gift/" target="_blank"><?php echo esc_html__( "Get 50% discount", 'secure-copy-content-protection' ); ?></a></li>                                
-                                <li><a class="ays-btn" href="https://wordpress.org/support/plugin/secure-copy-content-protection/" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
+                                <li><a class="ays-btn" href="https://ays-pro.com/contact" target="_blank"><?php echo esc_html__( "Contact us", 'secure-copy-content-protection' ); ?></a></li>
                             </ul>
                         </li>
                     </ul>
