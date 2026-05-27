@@ -464,6 +464,12 @@ class Sccp_Settings_Actions {
             // Block content Buttons border width
             $bc_btn_border_width = (isset($data['ays_sccp_bc_btn_border_width']) && sanitize_text_field( $data['ays_sccp_bc_btn_border_width'] ) != "") ? sanitize_text_field( $data['ays_sccp_bc_btn_border_width'] ) : '1';
 
+            // Enable Subscribe box button border width Mobile
+            $enable_bc_btn_border_width_mobile = isset( $data['enable_ays_sccp_bc_btn_border_width_mobile'] ) && $data['enable_ays_sccp_bc_btn_border_width_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe box button border width Mobile
+            $bc_btn_border_width_mobile = isset( $data['ays_sccp_bc_btn_border_width_mobile'] ) && $data['ays_sccp_bc_btn_border_width_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_btn_border_width_mobile'] ) : '1';
+
             // Block content Buttons border style
             $bc_btn_border_style = (isset($data['ays_sccp_bc_btn_border_style']) && $data['ays_sccp_bc_btn_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_bc_btn_border_style'] ) : 'solid';
 
@@ -526,6 +532,8 @@ class Sccp_Settings_Actions {
                 "enable_bc_btn_radius_mobile"               => $enable_bc_btn_radius_mobile,
                 "bc_btn_radius_mobile"                      => $bc_btn_radius_mobile,
                 "bc_btn_border_width"                       => $bc_btn_border_width,
+                "enable_bc_btn_border_width_mobile"         => $enable_bc_btn_border_width_mobile,
+                "bc_btn_border_width_mobile"                => $bc_btn_border_width_mobile,
                 "bc_btn_border_style"                       => $bc_btn_border_style,
                 "bc_btn_border_color"                       => $bc_btn_border_color,
                 "bc_btn_left_right_padding"                 => $bc_buttons_left_right_padding,
