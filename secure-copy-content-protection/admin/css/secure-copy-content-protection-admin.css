@@ -2530,9 +2530,11 @@ label.ays_switch_toggle:hover:after {
 }
 
 .ays-sccp-settings-form-save-button-wrap {
+    max-width: max-content;
     position: sticky;
     padding: 15px 0px;
     bottom: 0;
+    z-index: 999999;
 }
 
 .wrap.ays-sccp-subscribe-block .ays-sccp-add-new-button-new-design {

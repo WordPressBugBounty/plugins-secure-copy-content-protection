@@ -473,6 +473,12 @@ class Sccp_Settings_Actions {
             // Block content Buttons border style
             $bc_btn_border_style = (isset($data['ays_sccp_bc_btn_border_style']) && $data['ays_sccp_bc_btn_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_bc_btn_border_style'] ) : 'solid';
 
+            // Enable Block content Buttons border style Mobile
+            $enable_bc_btn_border_style_mobile = isset( $data['enable_ays_sccp_bc_btn_border_style_mobile'] ) && $data['enable_ays_sccp_bc_btn_border_style_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content Buttons border style Mobile
+            $bc_btn_border_style_mobile = isset( $data['ays_sccp_bc_btn_border_style_mobile'] ) && $data['ays_sccp_bc_btn_border_style_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_bc_btn_border_style_mobile'] ) : 'solid';
+
             // Block content Buttons border color
             $bc_btn_border_color = (isset($data['ays_sccp_bc_btn_border_color']) && $data['ays_sccp_bc_btn_border_color'] != '') ? sanitize_text_field($data['ays_sccp_bc_btn_border_color']) : '#c5c5c5';
 
@@ -535,6 +541,8 @@ class Sccp_Settings_Actions {
                 "enable_bc_btn_border_width_mobile"         => $enable_bc_btn_border_width_mobile,
                 "bc_btn_border_width_mobile"                => $bc_btn_border_width_mobile,
                 "bc_btn_border_style"                       => $bc_btn_border_style,
+                "enable_bc_btn_border_style_mobile"         => $enable_bc_btn_border_style_mobile,
+                "bc_btn_border_style_mobile"                => $bc_btn_border_style_mobile,
                 "bc_btn_border_color"                       => $bc_btn_border_color,
                 "bc_btn_left_right_padding"                 => $bc_buttons_left_right_padding,
                 "bc_btn_top_bottom_padding"                 => $bc_buttons_top_bottom_padding,
