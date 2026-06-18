@@ -618,6 +618,9 @@
             $(document).find("#enable_ays_sccp_bc_btn_border_style_mobile").prop('checked', true).change();
             
             $(document).find('#ays_sccp_bc_btn_border_color').val('#c5c5c5').change();
+            $(document).find('#ays_sccp_bc_btn_border_color_mobile').val('#c5c5c5').change();
+            $(document).find("#enable_ays_sccp_bc_btn_border_color_mobile").prop('checked', true).change();
+
             $(document).find('#ays_bc_btn_left_right_padding').val('10').change();
             $(document).find('#ays_bc_btn_top_bottom_padding').val('10').change();
 
@@ -693,6 +696,9 @@
             defaultColor: '#000000',            
         });
         $('#ays_sccp_bc_btn_border_color').wpColorPicker({
+            defaultColor: '#c5c5c5',
+        });
+        $('#ays_sccp_bc_btn_border_color_mobile').wpColorPicker({
             defaultColor: '#c5c5c5',
         });
         $('#ays_sccp_sub_cont_border_color').wpColorPicker({
