@@ -1855,7 +1855,9 @@
 
         // Select message vars sccp page | Start
         $(document).find('.ays-sccp-message-vars-icon').on('click', function(e){
-            $(this).parents(".ays-sccp-message-vars-box").find(".ays-sccp-message-vars-data").toggle('fast');
+            var messageVarsBox = $(this).parents(".ays-sccp-message-vars-box");
+            messageVarsBox.toggleClass("ays-sccp-message-vars-open");
+            messageVarsBox.find(".ays-sccp-message-vars-data").toggle('fast');
         });
         
         $(document).on( "click" , function(e){
@@ -1863,6 +1865,7 @@
             } 
             else{
                 $(document).find(".ays-sccp-message-vars-box .ays-sccp-message-vars-data").hide('fast');
+                $(document).find(".ays-sccp-message-vars-box").removeClass("ays-sccp-message-vars-open");
             }
         });
 
