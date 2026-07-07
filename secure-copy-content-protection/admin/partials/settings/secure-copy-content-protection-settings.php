@@ -1256,28 +1256,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sub_title_transformation_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div>
-                                        	<select name="ays_sub_title_transformation" id="ays_sub_title_transformation" class="ays-text-input ays-text-input-short" style="display:block;">
-			                                    <option value="uppercase" <?php echo $sub_title_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", 'secure-copy-content-protection' ); ?></option>
-			                                    <option value="lowercase" <?php echo $sub_title_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", 'secure-copy-content-protection' ); ?></option>
-			                                    <option value="capitalize" <?php echo $sub_title_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", 'secure-copy-content-protection' ); ?></option>
-			                                    <option value="none" <?php echo $sub_title_transformation == 'none' ? 'selected' : ''; ?>><?php echo __( "None", 'secure-copy-content-protection' ); ?></option>
-			                                </select>
-                                        </div>                                        
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sub_title_transformation_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div>
+	                                        	<select name="ays_sub_title_transformation" id="ays_sub_title_transformation" class="ays-text-input ays-text-input-short" style="display:block;">
+				                                    <option value="uppercase" <?php echo $sub_title_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="lowercase" <?php echo $sub_title_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="capitalize" <?php echo $sub_title_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="none" <?php echo $sub_title_transformation == 'none' ? 'selected' : ''; ?>><?php echo __( "None", 'secure-copy-content-protection' ); ?></option>
+				                                </select>
+	                                        </div>                                        
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_desc_text_color_mobile_container" style=" <?php echo ( $enable_sub_title_transformation_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div>
-                                        	<select name="ays_sub_title_transformation_mobile" id="ays_sub_title_transformation_mobile" class="ays-text-input ays-text-input-short" style="display:block;">
-			                                    <option value="uppercase" <?php echo $sub_title_transformation_mobile == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", 'secure-copy-content-protection' ); ?></option>
-			                                    <option value="lowercase" <?php echo $sub_title_transformation_mobile == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", 'secure-copy-content-protection' ); ?></option>
-			                                    <option value="capitalize" <?php echo $sub_title_transformation_mobile == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", 'secure-copy-content-protection' ); ?></option>
-			                                    <option value="none" <?php echo $sub_title_transformation_mobile == 'none' ? 'selected' : ''; ?>><?php echo __( "None", 'secure-copy-content-protection' ); ?></option>
-			                                </select>
-                                        </div>    
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div>
+	                                        	<select name="ays_sub_title_transformation_mobile" id="ays_sub_title_transformation_mobile" class="ays-text-input ays-text-input-short" style="display:block;">
+				                                    <option value="uppercase" <?php echo $sub_title_transformation_mobile == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="lowercase" <?php echo $sub_title_transformation_mobile == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="capitalize" <?php echo $sub_title_transformation_mobile == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="none" <?php echo $sub_title_transformation_mobile == 'none' ? 'selected' : ''; ?>><?php echo __( "None", 'secure-copy-content-protection' ); ?></option>
+				                                </select>
+	                                        </div>
+                                        </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sub_title_transformation_mobile" name="enable_ays_sub_title_transformation_mobile" <?php echo $enable_sub_title_transformation_mobile ? 'checked' : '' ?>>
@@ -1298,38 +1302,42 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div>
-                                        	<select id="ays_sccp_sub_cont_border_style" name="ays_sccp_sub_cont_border_style" class="ays-text-input ays-text-input-short">
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                </select>
-                                        </div>                                        
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div>
+	                                        	<select id="ays_sccp_sub_cont_border_style" name="ays_sccp_sub_cont_border_style" class="ays-text-input ays-text-input-short">
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                </select>
+	                                        </div>                                        
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_cont_border_style_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div>
-                                        	<select id="ays_sccp_sub_cont_border_style_mobile" name="ays_sccp_sub_cont_border_style_mobile" class="ays-text-input ays-text-input-short">
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                </select>
-                                        </div>    
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div>
+	                                        	<select id="ays_sccp_sub_cont_border_style_mobile" name="ays_sccp_sub_cont_border_style_mobile" class="ays-text-input ays-text-input-short">
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                </select>
+	                                        </div>
+                                        </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_cont_border_style_mobile" name="enable_ays_sccp_sub_cont_border_style_mobile" <?php echo $enable_ays_sccp_sub_cont_border_style_mobile ? 'checked' : '' ?>>
@@ -1378,28 +1386,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_width' data-alpha="true" name='ays_sccp_sub_cont_border_width' value="<?php echo $ays_sccp_sub_cont_border_width; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_width' data-alpha="true" name='ays_sccp_sub_cont_border_width' value="<?php echo $ays_sccp_sub_cont_border_width; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_cont_border_width_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_width_mobile' data-alpha="true" name='ays_sccp_sub_cont_border_width_mobile' value="<?php echo $ays_sccp_sub_cont_border_width_mobile; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_width_mobile' data-alpha="true" name='ays_sccp_sub_cont_border_width_mobile' value="<?php echo $ays_sccp_sub_cont_border_width_mobile; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_cont_border_width_mobile" name="enable_ays_sccp_sub_cont_border_width_mobile" <?php echo $enable_ays_sccp_sub_cont_border_width_mobile ? 'checked' : '' ?>>
@@ -1420,28 +1432,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>			                                   
-			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_input_width' data-alpha="true" name='ays_sccp_sub_input_width' value="<?php echo $ays_sccp_sub_input_width; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>			                                   
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_input_width' data-alpha="true" name='ays_sccp_sub_input_width' value="<?php echo $ays_sccp_sub_input_width; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_input_width_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_input_width_mobile' data-alpha="true" name='ays_sccp_sub_input_width_mobile' value="<?php echo $ays_sccp_sub_input_width_mobile; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_input_width_mobile' data-alpha="true" name='ays_sccp_sub_input_width_mobile' value="<?php echo $ays_sccp_sub_input_width_mobile; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_input_width_mobile" name="enable_ays_sccp_sub_input_width_mobile" <?php echo $enable_ays_sccp_sub_input_width_mobile ? 'checked' : '' ?>>
@@ -1462,14 +1478,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                             	<div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <input type="text" name="ays_sccp_sub_button_text" id="ays_sccp_sub_button_text" class="ays-text-input" value="<?php echo $ays_sccp_sub_button_text; ?>">
-                                    </div>
+                            		<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <input type="text" name="ays_sccp_sub_button_text" id="ays_sccp_sub_button_text" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_button_text; ?>">
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_button_text_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <input type="text" name="ays_sccp_sub_button_text_mobile" id="ays_sccp_sub_button_text_mobile" class="ays-text-input" value="<?php echo $ays_sccp_sub_button_text_mobile; ?>">
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <input type="text" name="ays_sccp_sub_button_text_mobile" id="ays_sccp_sub_button_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_button_text_mobile; ?>">
+                                        </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_button_text_mobile" name="enable_ays_sccp_sub_button_text_mobile" <?php echo $enable_ays_sccp_sub_button_text_mobile ? 'checked' : '' ?>>
@@ -1541,28 +1561,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_title_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>			                                   
-			                                   <input type="number" name="ays_sccp_sub_title_size" id="ays_sccp_sub_title_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_title_size; ?>">
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_title_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>			                                   
+				                                   <input type="number" name="ays_sccp_sub_title_size" id="ays_sccp_sub_title_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_title_size; ?>">
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_sccp_sub_title_size_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" name="ays_sccp_sub_title_size_mobile" id="ays_sccp_sub_title_size_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_title_size_mobile; ?>">
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" name="ays_sccp_sub_title_size_mobile" id="ays_sccp_sub_title_size_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_title_size_mobile; ?>">
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_title_size_mobile" name="enable_ays_sccp_sub_title_size_mobile" <?php echo $enable_sccp_sub_title_size_mobile ? 'checked' : '' ?>>
@@ -1583,28 +1607,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left ays_sccp_display_flex">
                             	<div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                <input type="number" name="ays_sccp_sub_desc_size" id="ays_sccp_sub_desc_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size; ?>">
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
-                                    </div>
+                            		<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                <input type="number" name="ays_sccp_sub_desc_size" id="ays_sccp_sub_desc_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size; ?>">
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" name="ays_sccp_sub_desc_size_mobile" id="ays_sccp_sub_desc_size_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size_mobile; ?>">
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" name="ays_sccp_sub_desc_size_mobile" id="ays_sccp_sub_desc_size_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size_mobile; ?>">
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_desc_size_mobile" name="enable_ays_sccp_sub_desc_size_mobile" <?php echo $enable_sccp_sub_desc_size_mobile ? 'checked' : '' ?>>
@@ -1803,28 +1831,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 
                                         <div class="col-sm-7 ays_divider_left ays_sccp_display_flex">
                                         	<div class="ays_toggle_mobile_parent">
-			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-						                                <input type="number" name="ays_sccp_sub_btn_radius" id="ays_sccp_sub_btn_radius" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_btn_radius; ?>">
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
-			                                    </div>
+                                        		<label>
+				                                    <div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+							                                <input type="number" name="ays_sccp_sub_btn_radius" id="ays_sccp_sub_btn_radius" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_btn_radius; ?>">
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+				                                    </div>
+			                                    </label>
+			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_radius_mobile ) ? '' : 'display:none'; ?>">
-			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-						                                   <input type="number" name="ays_sccp_sub_btn_radius_mobile" id="ays_sccp_sub_btn_radius_mobile" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_btn_radius_mobile; ?>">
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
+			                                        <label>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+							                                   <input type="number" name="ays_sccp_sub_btn_radius_mobile" id="ays_sccp_sub_btn_radius_mobile" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_btn_radius_mobile; ?>">
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+						                            </label>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_radius_mobile" name="enable_ays_sccp_sub_btn_radius_mobile" <?php echo $enable_ays_sccp_sub_btn_radius_mobile ? 'checked' : '' ?>>
@@ -1846,28 +1878,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 
                                         <div class="col-sm-7 ays_divider_left ays_sccp_display_flex">
                                         	<div class="ays_toggle_mobile_parent">
-			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-					                                		<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width' data-alpha="true" name='ays_sccp_sub_btn_border_width' value="<?php echo $ays_sccp_sub_btn_border_width; ?>"/>
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
-			                                    </div>
+                                        		<label>
+				                                    <div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+						                                		<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width' data-alpha="true" name='ays_sccp_sub_btn_border_width' value="<?php echo $ays_sccp_sub_btn_border_width; ?>"/>
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+				                                    </div>
+			                                    </label>
+			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display:none'; ?>">
-			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-						                                	<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width_mobile' data-alpha="true" name='ays_sccp_sub_btn_border_width_mobile' value="<?php echo $ays_sccp_sub_btn_border_width_mobile; ?>"/>
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
+			                                        <label>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+							                                	<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width_mobile' data-alpha="true" name='ays_sccp_sub_btn_border_width_mobile' value="<?php echo $ays_sccp_sub_btn_border_width_mobile; ?>"/>
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+						                            </label>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_width_mobile" name="enable_ays_sccp_sub_btn_border_width_mobile" <?php echo $enable_ays_sccp_sub_btn_border_width_mobile ? 'checked' : '' ?>>
@@ -1888,38 +1924,42 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
-			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-			                                        <div>
-			                                        	<select id="ays_sccp_sub_btn_border_style" name="ays_sccp_sub_btn_border_style" class="ays-text-input ays-text-input-short">
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                            </select>
-			                                        </div>                                        
-			                                    </div>
+                                        		<label>
+				                                    <div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div>
+				                                        	<select id="ays_sccp_sub_btn_border_style" name="ays_sccp_sub_btn_border_style" class="ays-text-input ays-text-input-short">
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                            </select>
+				                                        </div>                                        
+				                                    </div>
+			                                    </label>
+			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_style_mobile ) ? '' : 'display:none'; ?>">
-			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-			                                        <div>
-			                                        	<select id="ays_sccp_sub_btn_border_style_mobile" name="ays_sccp_sub_btn_border_style_mobile" class="ays-text-input ays-text-input-short">
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                            </select>
-			                                        </div>    
+			                                        <label>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div>
+				                                        	<select id="ays_sccp_sub_btn_border_style_mobile" name="ays_sccp_sub_btn_border_style_mobile" class="ays-text-input ays-text-input-short">
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                            </select>
+				                                        </div>
+			                                        </label>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_style_mobile" name="enable_ays_sccp_sub_btn_border_style_mobile" <?php echo $enable_ays_sccp_sub_btn_border_style_mobile ? 'checked' : '' ?>>
@@ -1974,24 +2014,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_buttons_padding_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
 
 			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
-		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
-		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding' name='ays_sub_btn_left_right_padding' value="<?php echo $buttons_left_right_padding; ?>" style="width: 100px;" />
+			                                        	<label>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding' name='ays_sub_btn_left_right_padding' value="<?php echo $buttons_left_right_padding; ?>" style="width: 100px;" />
+		                                                </label>
 		                                            </div>
 		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
-		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
-		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding' name='ays_sub_btn_top_bottom_padding' value="<?php echo $buttons_top_bottom_padding; ?>" style="width: 100px;" />
+		                                            	<label>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding' name='ays_sub_btn_top_bottom_padding' value="<?php echo $buttons_top_bottom_padding; ?>" style="width: 100px;" />
+		                                                </label>
 		                                            </div>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_buttons_padding_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
 			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
 			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
-		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
-		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding_mobile' name='ays_sub_btn_left_right_padding_mobile' value="<?php echo $buttons_left_right_padding_mobile; ?>" style="width: 100px;" />
+			                                        	<label>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding_mobile' name='ays_sub_btn_left_right_padding_mobile' value="<?php echo $buttons_left_right_padding_mobile; ?>" style="width: 100px;" />
+		                                                </label>
 		                                            </div>
 		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
-		                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
-		                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding_mobile' name='ays_sub_btn_top_bottom_padding_mobile' value="<?php echo $buttons_top_bottom_padding_mobile; ?>" style="width: 100px;" />
+		                                            	<label>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding_mobile' name='ays_sub_btn_top_bottom_padding_mobile' value="<?php echo $buttons_top_bottom_padding_mobile; ?>" style="width: 100px;" />
+		                                                </label>
 		                                            </div>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
@@ -2233,14 +2281,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                             	<div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <input type="text" name="ays_sccp_bc_button_text" id="ays_sccp_bc_button_text" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_button_text; ?>">                                        
-                                    </div>
+                            		<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <input type="text" name="ays_sccp_bc_button_text" id="ays_sccp_bc_button_text" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_button_text; ?>">                                        
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_button_text_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <input type="text" name="ays_sccp_bc_button_text_mobile" id="ays_sccp_bc_button_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_button_text_mobile; ?>">
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <input type="text" name="ays_sccp_bc_button_text_mobile" id="ays_sccp_bc_button_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_button_text_mobile; ?>">
+                                        </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_button_text_mobile" name="enable_ays_sccp_bc_button_text_mobile" <?php echo $enable_ays_sccp_bc_button_text_mobile ? 'checked' : '' ?>>
@@ -2261,14 +2313,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                             	<div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_bc_psw_place_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <input type="text" name="ays_sccp_bc_psw_place_text" id="ays_sccp_bc_psw_place_text" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text; ?>">
-                                    </div>
+                            		<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_bc_psw_place_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <input type="text" name="ays_sccp_bc_psw_place_text" id="ays_sccp_bc_psw_place_text" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text; ?>">
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_sccp_bc_psw_place_text_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <input type="text" name="ays_sccp_bc_psw_place_text_mobile" id="ays_sccp_bc_psw_place_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text_mobile; ?>">
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <input type="text" name="ays_sccp_bc_psw_place_text_mobile" id="ays_sccp_bc_psw_place_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text_mobile; ?>">
+                                        </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_psw_place_text_mobile" name="enable_ays_sccp_bc_psw_place_text_mobile" <?php echo $enable_sccp_bc_psw_place_text_mobile ? 'checked' : '' ?>>
@@ -2289,38 +2345,42 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div>
-                                        	<select id="ays_sccp_bc_cont_border_style" name="ays_sccp_bc_cont_border_style" class="ays-text-input ays-text-input-short">
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                </select>
-                                        </div>                                        
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div>
+	                                        	<select id="ays_sccp_bc_cont_border_style" name="ays_sccp_bc_cont_border_style" class="ays-text-input ays-text-input-short">
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                </select>
+	                                        </div>                                        
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_bc_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_cont_border_style_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div>
-                                        	<select id="ays_sccp_bc_cont_border_style_mobile" name="ays_sccp_bc_cont_border_style_mobile" class="ays-text-input ays-text-input-short">
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                </select>
-                                        </div>    
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div>
+	                                        	<select id="ays_sccp_bc_cont_border_style_mobile" name="ays_sccp_bc_cont_border_style_mobile" class="ays-text-input ays-text-input-short">
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                </select>
+	                                        </div>
+                                        </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_cont_border_style_mobile" name="enable_ays_sccp_bc_cont_border_style_mobile" <?php echo $enable_ays_sccp_bc_cont_border_style_mobile ? 'checked' : '' ?>>
@@ -2369,28 +2429,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_cont_border_width' data-alpha="true" name='ays_sccp_bc_cont_border_width' value="<?php echo $ays_sccp_bc_cont_border_width; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_cont_border_width' data-alpha="true" name='ays_sccp_bc_cont_border_width' value="<?php echo $ays_sccp_bc_cont_border_width; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_cont_border_width_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_cont_border_width_mobile' data-alpha="true" name='ays_sccp_bc_cont_border_width_mobile' value="<?php echo $ays_sccp_bc_cont_border_width_mobile; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_cont_border_width_mobile' data-alpha="true" name='ays_sccp_bc_cont_border_width_mobile' value="<?php echo $ays_sccp_bc_cont_border_width_mobile; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_cont_border_width_mobile" name="enable_ays_sccp_bc_cont_border_width_mobile" <?php echo $enable_ays_sccp_bc_cont_border_width_mobile ? 'checked' : '' ?>>
@@ -2411,28 +2475,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
-                                    <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-		                                		<input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width' data-alpha="true" name='ays_sccp_bc_input_width' value="<?php echo $ays_sccp_bc_input_width; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
-                                    </div>
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+			                                		<input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width' data-alpha="true" name='ays_sccp_bc_input_width' value="<?php echo $ays_sccp_bc_input_width; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_input_width_mobile ) ? '' : 'display:none'; ?>">
-                                        <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-                                        <div class="ays_sccp_display_flex">
-			                                <div>
-			                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width_mobile' data-alpha="true" name='ays_sccp_bc_input_width_mobile' value="<?php echo $ays_sccp_bc_input_width_mobile; ?>"/>
-			                                </div>
-			                                <div class="ays_sccp_dropdown_max_width">
-			                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-			                                </div>
-			                            </div>
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width_mobile' data-alpha="true" name='ays_sccp_bc_input_width_mobile' value="<?php echo $ays_sccp_bc_input_width_mobile; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_input_width_mobile" name="enable_ays_sccp_bc_input_width_mobile" <?php echo $enable_ays_sccp_bc_input_width_mobile ? 'checked' : '' ?>>
@@ -2651,28 +2719,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="col-sm-7 ays_divider_left ays_sccp_display_flex">
                                         	<div class="ays_toggle_mobile_parent">
-			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-						                                <input type="number" name="ays_sccp_bc_btn_radius" id="ays_sccp_bc_btn_radius" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius; ?>">
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
-			                                    </div>
+                                        		<label>
+				                                    <div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+							                                <input type="number" name="ays_sccp_bc_btn_radius" id="ays_sccp_bc_btn_radius" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius; ?>">
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+				                                    </div>
+			                                    </label>
+			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_bc_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display:none'; ?>">
-			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-						                                   <input type="number" name="ays_sccp_bc_btn_radius_mobile" id="ays_sccp_bc_btn_radius_mobile" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius_mobile; ?>">
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
+			                                        <label>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+							                                   <input type="number" name="ays_sccp_bc_btn_radius_mobile" id="ays_sccp_bc_btn_radius_mobile" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius_mobile; ?>">
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+						                            </label>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_radius_mobile" name="enable_ays_sccp_bc_btn_radius_mobile" <?php echo $enable_ays_sccp_bc_btn_radius_mobile ? 'checked' : '' ?>>
@@ -2693,28 +2765,32 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="col-sm-7 ays_divider_left ays_sccp_display_flex">
                                         	<div class="ays_toggle_mobile_parent">
-			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-					                                		<input type="number" class="ays-text-input" id='ays_sccp_bc_btn_border_width' data-alpha="true" name='ays_sccp_bc_btn_border_width' value="<?php echo $ays_sccp_bc_btn_border_width; ?>"/>
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
-			                                    </div>
+                                        		<label>
+				                                    <div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+						                                		<input type="number" class="ays-text-input" id='ays_sccp_bc_btn_border_width' data-alpha="true" name='ays_sccp_bc_btn_border_width' value="<?php echo $ays_sccp_bc_btn_border_width; ?>"/>
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+				                                    </div>
+			                                    </label>
+			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_bc_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_border_width_mobile ) ? '' : 'display:none'; ?>">
-			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-			                                        <div class="ays_sccp_display_flex">
-						                                <div>
-						                                	<input type="number" class="ays-text-input" id='ays_sccp_bc_btn_border_width_mobile' data-alpha="true" name='ays_sccp_bc_btn_border_width_mobile' value="<?php echo $ays_sccp_bc_btn_border_width_mobile; ?>"/>
-						                                </div>
-						                                <div class="ays_sccp_dropdown_max_width">
-						                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
-						                                </div>
-						                            </div>
+			                                        <label>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_display_flex">
+							                                <div>
+							                                	<input type="number" class="ays-text-input" id='ays_sccp_bc_btn_border_width_mobile' data-alpha="true" name='ays_sccp_bc_btn_border_width_mobile' value="<?php echo $ays_sccp_bc_btn_border_width_mobile; ?>"/>
+							                                </div>
+							                                <div class="ays_sccp_dropdown_max_width">
+							                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+							                                </div>
+							                            </div>
+						                            </label>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_border_width_mobile" name="enable_ays_sccp_bc_btn_border_width_mobile" <?php echo $enable_ays_sccp_bc_btn_border_width_mobile ? 'checked' : '' ?>>
@@ -2735,38 +2811,42 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
-			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
-			                                        <div>
-			                                        	<select id="ays_sccp_bc_btn_border_style" name="ays_sccp_bc_btn_border_style" class="ays-text-input ays-text-input-short">
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                            </select>
-			                                        </div>                                        
-			                                    </div>
+                                        		<label>
+				                                    <div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div>
+				                                        	<select id="ays_sccp_bc_btn_border_style" name="ays_sccp_bc_btn_border_style" class="ays-text-input ays-text-input-short">
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                            </select>
+				                                        </div>                                        
+				                                    </div>
+			                                    </label>
+			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_bc_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_border_style_mobile ) ? '' : 'display:none'; ?>">
-			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
-			                                        <div>
-			                                        	<select id="ays_sccp_bc_btn_border_style_mobile" name="ays_sccp_bc_btn_border_style_mobile" class="ays-text-input ays-text-input-short">
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
-			                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
-			                                            </select>
-			                                        </div>    
+			                                        <label>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div>
+				                                        	<select id="ays_sccp_bc_btn_border_style_mobile" name="ays_sccp_bc_btn_border_style_mobile" class="ays-text-input ays-text-input-short">
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'dashed') ? 'selected' : ''; ?> value="dashed">Dashed</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'dotted') ? 'selected' : ''; ?> value="dotted">Dotted</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'double') ? 'selected' : ''; ?> value="double">Double</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'groove') ? 'selected' : ''; ?> value="groove">Groove</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'ridge') ? 'selected' : ''; ?> value="ridge">Ridge</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'inset') ? 'selected' : ''; ?> value="inset">Inset</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'outset') ? 'selected' : ''; ?> value="outset">Outset</option>
+				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'none') ? 'selected' : ''; ?> value="none">None</option>
+				                                            </select>
+				                                        </div>
+			                                        </label>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_border_style_mobile" name="enable_ays_sccp_bc_btn_border_style_mobile" <?php echo $enable_ays_sccp_bc_btn_border_style_mobile ? 'checked' : '' ?>>
@@ -2816,12 +2896,16 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="col-sm-7 ays_divider_left">
                                             <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
-                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
-                                                <input type="number" class="ays-text-input" id='ays_bc_btn_left_right_padding' name='ays_bc_btn_left_right_padding' value="<?php echo $ays_bc_buttons_left_right_padding; ?>" style="width: 100px;" />
+                                            	<label>
+	                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+	                                                <input type="number" class="ays-text-input" id='ays_bc_btn_left_right_padding' name='ays_bc_btn_left_right_padding' value="<?php echo $ays_bc_buttons_left_right_padding; ?>" style="width: 100px;" />
+                                                </label>
                                             </div>
                                             <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
-                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
-                                                <input type="number" class="ays-text-input" id='ays_bc_btn_top_bottom_padding' name='ays_bc_btn_top_bottom_padding' value="<?php echo $ays_bc_buttons_top_bottom_padding; ?>" style="width: 100px;" />
+                                            	<label>
+	                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+	                                                <input type="number" class="ays-text-input" id='ays_bc_btn_top_bottom_padding' name='ays_bc_btn_top_bottom_padding' value="<?php echo $ays_bc_buttons_top_bottom_padding; ?>" style="width: 100px;" />
+                                                </label>
                                             </div>
                                         </div>
                                     </div>

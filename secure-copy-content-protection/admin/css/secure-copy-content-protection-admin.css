@@ -1737,6 +1737,7 @@ div.ays-top-menu-wrapper div.ays-top-menu div.ays-top-tab-wrapper a.nav-tab {
     font-size: 15px;
     border: none;
     background: revert;
+    transition-property: background, color;
 }
 
 div.ays-top-menu-wrapper div.ays-top-menu div.ays-top-tab-wrapper a.nav-tab-active {
