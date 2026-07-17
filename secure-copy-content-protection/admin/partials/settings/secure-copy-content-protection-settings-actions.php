@@ -494,6 +494,14 @@ class Sccp_Settings_Actions {
             // Block content Buttons Top / Bottom padding
             $bc_buttons_top_bottom_padding = (isset($data['ays_bc_btn_top_bottom_padding']) && $data['ays_bc_btn_top_bottom_padding'] != "") ? $data['ays_bc_btn_top_bottom_padding'] : '10';
 
+            // Enable Block content Buttons padding Mobile
+            $enable_bc_buttons_padding_mobile = isset( $data['enable_ays_bc_btn_padding_mobile'] ) && $data['enable_ays_bc_btn_padding_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content Buttons padding Mobile
+            $bc_buttons_left_right_padding_mobile = isset( $data['ays_bc_btn_left_right_padding_mobile'] ) && $data['ays_bc_btn_left_right_padding_mobile'] != '' ? sanitize_text_field( $data['ays_bc_btn_left_right_padding_mobile'] ) : '10';
+
+            $bc_buttons_top_bottom_padding_mobile = isset( $data['ays_bc_btn_top_bottom_padding_mobile'] ) && $data['ays_bc_btn_top_bottom_padding_mobile'] != '' ? sanitize_text_field( $data['ays_bc_btn_top_bottom_padding_mobile'] ) : '10';
+
             $block_content = array(
                 "sccp_bc_width"                             => $ays_sccp_bc_width,
                 "sccp_bc_width_mobile"                      => $ays_sccp_bc_width_mobile,
@@ -554,6 +562,9 @@ class Sccp_Settings_Actions {
                 "bc_btn_border_color_mobile"                => $bc_btn_border_color_mobile,
                 "bc_btn_left_right_padding"                 => $bc_buttons_left_right_padding,
                 "bc_btn_top_bottom_padding"                 => $bc_buttons_top_bottom_padding,
+                "enable_bc_btn_padding_mobile"              => $enable_bc_buttons_padding_mobile,
+                "bc_btn_left_right_padding_mobile"          => $bc_buttons_left_right_padding_mobile,
+                "bc_btn_top_bottom_padding_mobile"          => $bc_buttons_top_bottom_padding_mobile,
             );
 
             $result = $this->ays_update_setting('mailchimp', json_encode($mailchimp));

@@ -1045,9 +1045,23 @@ class Secure_Copy_Content_Protection_Public {
         $sccp_bc_btn_top_bottom_padding = '10px';
         if(isset($block_content_settings['bc_btn_top_bottom_padding']) && $block_content_settings['bc_btn_top_bottom_padding'] != ''){
             $sccp_bc_btn_top_bottom_padding = $block_content_settings['bc_btn_top_bottom_padding'] . 'px';
+        }        
+
+        // Enable Block content Buttons padding Mobile
+        $block_content_settings['enable_bc_btn_padding_mobile'] = ( isset( $block_content_settings['enable_bc_btn_padding_mobile'] ) && $block_content_settings['enable_bc_btn_padding_mobile'] == 'off') ? false : true;
+        
+        // Block content Container border width Mobile
+        if ( $block_content_settings['enable_bc_btn_padding_mobile'] ) {
+            $sccp_bc_btn_left_right_padding_mobile = ( isset( $block_content_settings['bc_btn_left_right_padding_mobile'] ) && $block_content_settings['bc_btn_left_right_padding_mobile'] != '' ) ?  $block_content_settings['bc_btn_left_right_padding_mobile'] .'px' : $sccp_bc_btn_left_right_padding;
+            $sccp_bc_btn_top_bottom_padding_mobile = ( isset( $block_content_settings['bc_btn_top_bottom_padding_mobile'] ) && $block_content_settings['bc_btn_top_bottom_padding_mobile'] != '' ) ?  $block_content_settings['bc_btn_top_bottom_padding_mobile'] .'px' : $sccp_bc_btn_top_bottom_padding;
+        } else {
+            $sccp_bc_btn_left_right_padding_mobile = $sccp_bc_btn_left_right_padding;
+            $sccp_bc_btn_top_bottom_padding_mobile = $sccp_bc_btn_top_bottom_padding;
         }
 
         $sccp_bc_btn_padding = $ays_sccp_enable_bc_btn_style ? 'padding:'.$sccp_bc_btn_top_bottom_padding.' '.$sccp_bc_btn_left_right_padding.';' : '';
+
+        $sccp_bc_btn_padding_mobile = $ays_sccp_enable_bc_btn_style ? 'padding:'.$sccp_bc_btn_top_bottom_padding_mobile.' '.$sccp_bc_btn_left_right_padding_mobile.' !important;' : '';
 
 		if ($bc_schedule_from && $bc_schedule_to) {
 			if ($bc_schedule_from < $current_time && $bc_schedule_to > $current_time) {
@@ -1179,6 +1193,7 @@ class Secure_Copy_Content_Protection_Public {
 	                        		'. $sccp_bc_btn_border_width_mobile .'
 	                        		'. $sccp_bc_btn_border_style_mobile .'
 	                        		'. $sccp_bc_btn_border_color_mobile .'
+	                        		'. $sccp_bc_btn_padding_mobile .'
 	                        	}
 	                        	
 	                        }

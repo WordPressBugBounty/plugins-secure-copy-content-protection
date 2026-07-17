@@ -623,6 +623,9 @@
 
             $(document).find('#ays_bc_btn_left_right_padding').val('10').change();
             $(document).find('#ays_bc_btn_top_bottom_padding').val('10').change();
+            $(document).find('#ays_bc_btn_left_right_padding_mobile').val('10').change();
+            $(document).find('#ays_bc_btn_top_bottom_padding_mobile').val('10').change();
+            $(document).find("#enable_ays_bc_btn_padding_mobile").prop('checked', true).change();
 
             $(document).find("#tab6").goToNormal();
         });
