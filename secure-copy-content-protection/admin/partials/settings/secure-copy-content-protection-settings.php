@@ -477,7 +477,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
         <div class="ays-sccp-wordpress-user-manual-box">
             <a href="https://ays-pro.com/wordpress-copy-content-protection-user-manual" target="_blank" style="text-decoration: none;font-size: 13px;">
                 <i class="ays_fa ays_fa_file_text"></i>
-                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", 'secure-copy-content-protection'); ?></span>
+                <span style="margin-left: 3px;text-decoration: underline;"><?php echo esc_html__("View Documentation", 'secure-copy-content-protection'); ?></span>
             </a>
         </div>
     </div>
@@ -486,7 +486,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
             <input type="hidden" name="ays_sccp_tab" value="<?php echo htmlentities($ays_sccp_tab); ?>">
             <h1 class="wp-heading-inline">
 				<?php
-				echo __('Settings', 'secure-copy-content-protection');
+				echo esc_html__('Settings', 'secure-copy-content-protection');
 				?>
             </h1>
 			<?php
@@ -500,41 +500,41 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                     <div class="nav-tab-wrapper" style="position:sticky; top:35px;">
                         <a href="#tab1" data-tab="tab1"
                            class="nav-tab <?php echo ($ays_sccp_tab == 'tab1') ? 'nav-tab-active' : ''; ?>">                           
-							<?php echo __("General", 'secure-copy-content-protection'); ?>
+							<?php echo esc_html__("General", 'secure-copy-content-protection'); ?>
                         </a>  
                         <a href="#tab2" data-tab="tab2"
                            class="nav-tab <?php echo ($ays_sccp_tab == 'tab2') ? 'nav-tab-active' : ''; ?>">                                                                                                    
-                            <?php echo __("Integrations", 'secure-copy-content-protection'); ?>
+                            <?php echo esc_html__("Integrations", 'secure-copy-content-protection'); ?>
                         </a>
                         <a href="#tab3" data-tab="tab3" class="nav-tab <?php echo ($ays_sccp_tab == 'tab3') ? 'nav-tab-active' : ''; ?>">
-                            <?php echo __("Message variables", 'secure-copy-content-protection');?>
+                            <?php echo esc_html__("Message variables", 'secure-copy-content-protection'); ?>
                         </a>
                         <a href="#tab4" data-tab="tab4" class="nav-tab <?php echo ($ays_sccp_tab == 'tab4') ? 'nav-tab-active' : ''; ?>">
-                            <?php echo __("Shortcodes", 'secure-copy-content-protection');?>
+                            <?php echo esc_html__("Shortcodes", 'secure-copy-content-protection'); ?>
                         </a> 
                         <a href="#tab5" data-tab="tab5" class="nav-tab <?php echo ($ays_sccp_tab == 'tab5') ? 'nav-tab-active' : ''; ?>">
-                            <?php echo __("Subscribe to view settings", 'secure-copy-content-protection');?>
+                            <?php echo esc_html__("Subscribe to view settings", 'secure-copy-content-protection'); ?>
                         </a>   
                         <a href="#tab6" data-tab="tab6" class="nav-tab <?php echo ($ays_sccp_tab == 'tab6') ? 'nav-tab-active' : ''; ?>">
-                            <?php echo __("Block content to view settings", 'secure-copy-content-protection');?>
+                            <?php echo esc_html__("Block content to view settings", 'secure-copy-content-protection'); ?>
                         </a>                 
                     </div>
                 </div>
                 <div class="ays-sccp-tabs-wrapper">
                     <div id="tab1"
                          class="ays-sccp-tab-content <?php echo ($ays_sccp_tab == 'tab1') ? 'ays-sccp-tab-content-active' : ''; ?>">
-                        <p class="ays-subtitle"><?php echo __('General Settings','secure-copy-content-protection')?></p>
+                        <p class="ays-subtitle"><?php echo esc_html__('General Settings','secure-copy-content-protection'); ?></p>
                         <hr/>                        
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;"><i class="ays_fa ays_fa_question_circle"></i></strong>
-                                <h5><?php echo __('Default parameters for copy protection','secure-copy-content-protection')?></h5>
+                                <h5><?php echo esc_html__('Default parameters for copy protection','secure-copy-content-protection'); ?></h5>
                             </legend>
                            <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_sccp_wp_editor_height">
-                                        <?php echo __( "WP Editor height", 'secure-copy-content-protection' ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Give the default value to the height of the WP Editor. It will apply to all WP Editors within the plugin on the dashboard.','secure-copy-content-protection'); ?>">
+                                        <?php echo esc_html__( "WP Editor height", 'secure-copy-content-protection' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Give the default value to the height of the WP Editor. It will apply to all WP Editors within the plugin on the dashboard.','secure-copy-content-protection'); ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </label>
@@ -548,13 +548,13 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;"><i class="ays_fa ays_fa_user_ip"></i></strong>
-                                <h5><?php echo __('Users IP adressess','secure-copy-content-protection')?></h5>
+                                <h5><?php echo esc_html__('Users IP adressess','secure-copy-content-protection'); ?></h5>
                             </legend>
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_sccp_disable_user_ip">
-                                        <?php echo __( "Do not store IP adressess", 'secure-copy-content-protection' ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('After enabling this option, IP address of the users will not be stored in database.','secure-copy-content-protection')?>">
+                                        <?php echo esc_html__( "Do not store IP adressess", 'secure-copy-content-protection' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('After enabling this option, IP address of the users will not be stored in database.','secure-copy-content-protection'); ?>">
                                             <i class="ays_fa ays_fa_info_circle"></i>
                                         </a>
                                     </label>
@@ -567,19 +567,19 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                     </div>                    
                     <div id="tab2"
                          class="ays-sccp-tab-content <?php echo ($ays_sccp_tab == 'tab2') ? 'ays-sccp-tab-content-active' : ''; ?>">
-                         <p class="ays-subtitle"><?php echo __('Integrations','secure-copy-content-protection')?></p>
+                         <p class="ays-subtitle"><?php echo esc_html__('Integrations','secure-copy-content-protection'); ?></p>
                         <hr/>                            
                         <fieldset>
                             <legend>
                                 <img class="ays_integration_logo" src="<?php echo SCCP_ADMIN_URL; ?>/images/integrations/mailchimp_logo.png" alt="">
-                                <h5><?php echo __('Mailchimp','secure-copy-content-protection')?></h5>
+                                <h5><?php echo esc_html__('Mailchimp','secure-copy-content-protection'); ?></h5>
                             </legend>
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <div class="form-group row" aria-describedby="aaa">
                                         <div class="col-sm-3">
                                             <label for="ays_mailchimp_username">
-                                                <?php echo __('Mailchimp Username','secure-copy-content-protection')?>
+                                                <?php echo esc_html__('Mailchimp Username','secure-copy-content-protection'); ?>
                                             </label>
                                         </div>
                                         <div class="col-sm-9">
@@ -595,7 +595,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row" aria-describedby="aaa">
                                         <div class="col-sm-3">
                                             <label for="ays_mailchimp_api_key">
-                                                <?php echo __('Mailchimp API Key','secure-copy-content-protection')?>
+                                                <?php echo esc_html__('Mailchimp API Key','secure-copy-content-protection'); ?>
                                             </label>
                                         </div>
                                         <div class="col-sm-9">
@@ -616,15 +616,15 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                     </div>
                      <div id="tab3" class="ays-sccp-tab-content <?php echo ($ays_sccp_tab == 'tab3') ? 'ays-sccp-tab-content-active' : ''; ?>">
                         <p class="ays-subtitle">
-                            <?php echo __('Message variables','secure-copy-content-protection')?>
-                            <a class="ays_help" data-toggle="tooltip" data-html="true" title="<p style='margin-bottom:3px;'><?php echo __( 'You can copy these variables and paste them in the following options from the copy protection settings', 'secure-copy-content-protection' ); ?>:</p>
-                                <p style='padding-left:10px;margin:0;'>- <?php echo __( 'Notification text', 'secure-copy-content-protection' ); ?></p>">
+                            <?php echo esc_html__('Message variables','secure-copy-content-protection'); ?>
+                            <a class="ays_help" data-toggle="tooltip" data-html="true" title="<p style='margin-bottom:3px;'><?php echo esc_attr__( 'You can copy these variables and paste them in the following options from the copy protection settings', 'secure-copy-content-protection' ); ?>:</p>
+                                <p style='padding-left:10px;margin:0;'>- <?php echo esc_attr__( 'Notification text', 'secure-copy-content-protection' ); ?></p>">
                                 <i class="ays_fa ays_fa_info_circle"></i>
                             </a>
                         </p>
                         <blockquote>
-                            <p><?php echo __( "You can copy these variables and paste them in the following options from the copy protection settings", 'secure-copy-content-protection' ); ?>:</p>
-                            <p style="text-indent:10px;margin:0;">- <?php echo __( "Notification text", 'secure-copy-content-protection' ); ?></p>                            
+                            <p><?php echo esc_html__( "You can copy these variables and paste them in the following options from the copy protection settings", 'secure-copy-content-protection' ); ?>:</p>
+                            <p style="text-indent:10px;margin:0;">- <?php echo esc_html__( "Notification text", 'secure-copy-content-protection' ); ?></p>                            
                         </blockquote>
                         <hr>
                         <div class="form-group row">
@@ -635,7 +635,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's first name that was filled in their WordPress site during registration.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's first name that was filled in their WordPress site during registration.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -644,7 +644,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's last name that was filled in their WordPress site during registration.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's last name that was filled in their WordPress site during registration.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p> 
                                 <p class="vmessage">
@@ -653,7 +653,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's email that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's email that was filled in their WordPress profile.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -662,7 +662,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's display name that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's display name that was filled in their WordPress profile.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p> 
                                 <p class="vmessage">
@@ -671,7 +671,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's nickname that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's nickname that was filled in their WordPress profile.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -680,7 +680,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -689,7 +689,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's website url that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's website url that was filled in their WordPress profile.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -698,7 +698,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's ID when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's ID when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -707,7 +707,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The user's registration date when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The user's registration date when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -716,7 +716,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "Shows the admin's email that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "Shows the admin's email that was filled in their WordPress profile.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -725,7 +725,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "Shows the post author's nickname that was filled in their WordPress profile.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "Shows the post author's nickname that was filled in their WordPress profile.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -734,7 +734,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The Email of the author of the post.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The Email of the author of the post.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -743,7 +743,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The Display name of the author of the post.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The Display name of the author of the post.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -752,7 +752,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The Last name of the author of the post.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The Last name of the author of the post.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -761,7 +761,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The Last name of the author of the post.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The Last name of the author of the post.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -770,7 +770,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The website URL of the author of the post.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The website URL of the author of the post.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -779,7 +779,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The role(s) of the author of the post when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The role(s) of the author of the post when logged-in. In case the user is not logged-in, the field will be empty.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -788,7 +788,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The ID of the current post.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The ID of the current post.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -797,7 +797,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The Post title of the current post.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The Post title of the current post.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -806,7 +806,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "It will show the current date.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "It will show the current date.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -815,7 +815,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "It will show the current time.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "It will show the current time.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -824,7 +824,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "It will show the current day.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "It will show the current day.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -833,7 +833,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "It will show the current month.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "It will show the current month.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -842,7 +842,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "Prints a title to the web page on which the tooltip is running.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "Prints a title to the web page on which the tooltip is running.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -851,7 +851,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The title of the website.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The title of the website.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -860,7 +860,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The description of the website.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The description of the website.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -869,7 +869,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The URL of the home page.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "The URL of the home page.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -878,27 +878,27 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "Shows the current user's IP no matter whether they are a logged-in user or a guest. Please note, that this message variable will return empty, if 'Do not store IP addresses' is ticked from General Settings>General>Users IP addresses.", 'secure-copy-content-protection') ); ?>
+                                        <?php echo esc_html__( "Shows the current user's IP no matter whether they are a logged-in user or a guest. Please note, that this message variable will return empty, if 'Do not store IP addresses' is ticked from General Settings>General>Users IP addresses.", 'secure-copy-content-protection' ); ?>
                                     </span>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div id="tab4" class="ays-sccp-tab-content <?php echo ($ays_sccp_tab == 'tab4') ? 'ays-sccp-tab-content-active' : ''; ?>">
-                        <p class="ays-subtitle"><?php echo __('Shortcodes','secure-copy-content-protection')?></p>
+                        <p class="ays-subtitle"><?php echo esc_html__('Shortcodes','secure-copy-content-protection'); ?></p>
                         <hr/>
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;">[ ]</strong>
-                                <h5><?php echo __('Extra shortcodes','secure-copy-content-protection'); ?></h5>
+                                <h5><?php echo esc_html__('Extra shortcodes','secure-copy-content-protection'); ?></h5>
                             </legend>
                             <div class="form-group row" style="padding:0px;margin:0;">
                                 <div class="col-sm-12" style="padding:20px;">
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_sccp_subs_count">
-                                                <?php echo __( "Subscribers count", 'secure-copy-content-protection' ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Copy the following shortcode and paste it into any posts. Insert the Block ID to receive the current number of subscribers of the block.','secure-copy-content-protection'); ?>">
+                                                <?php echo esc_html__( "Subscribers count", 'secure-copy-content-protection' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Copy the following shortcode and paste it into any posts. Insert the Block ID to receive the current number of subscribers of the block.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -915,8 +915,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_sccp_user_first_name">
-                                                <?php echo __( "Show User First Name", 'secure-copy-content-protection' ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's First Name. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection') ); ?>">
+                                                <?php echo esc_html__( "Show User First Name", 'secure-copy-content-protection' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Shows the logged-in user's First Name. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection' ); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -933,8 +933,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_sccp_user_last_name">
-                                                <?php echo __( "Show User Last Name", 'secure-copy-content-protection' ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Last Name. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection') ); ?>">
+                                                <?php echo esc_html__( "Show User Last Name", 'secure-copy-content-protection' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Shows the logged-in user's Last Name. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection' ); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -951,8 +951,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_sccp_user_email">
-                                                <?php echo __( "Show User Email", 'secure-copy-content-protection' ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Email. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection') ); ?>">
+                                                <?php echo esc_html__( "Show User Email", 'secure-copy-content-protection' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Shows the logged-in user's Email. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection' ); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -969,8 +969,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_sccp_user_roles">
-                                                <?php echo __( "Show User roles", 'secure-copy-content-protection' ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's role(s). If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection') ); ?>">
+                                                <?php echo esc_html__( "Show User roles", 'secure-copy-content-protection' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Shows the logged-in user's role(s). If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection' ); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -987,8 +987,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_sccp_user_display_name">
-                                                <?php echo __( "Show User Display name", 'secure-copy-content-protection' ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Display name. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection') ); ?>">
+                                                <?php echo esc_html__( "Show User Display name", 'secure-copy-content-protection' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Shows the logged-in user's Display name. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection' ); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1005,8 +1005,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_sccp_user_nickname">
-                                                <?php echo __( "Show User Nickname", 'secure-copy-content-protection' ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Nickname. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection') ); ?>">
+                                                <?php echo esc_html__( "Show User Nickname", 'secure-copy-content-protection' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Shows the logged-in user's Nickname. If the user is not logged-in, the shortcode will be empty.",'secure-copy-content-protection' ); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1020,13 +1020,13 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         </fieldset>
                     </div>
                     <div id="tab5" class="ays-sccp-tab-content <?php echo ($ays_sccp_tab == 'tab5') ? 'ays-sccp-tab-content-active' : ''; ?>">
-                        <p class="ays-subtitle"><?php echo __('Styles','secure-copy-content-protection')?></p>
+                        <p class="ays-subtitle"><?php echo esc_html__('Styles','secure-copy-content-protection'); ?></p>
                         <hr>
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_sub_width">
-                                    <?php echo __( "Subscribe box width", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value for the width of the subscription field in pixels or as a percentage. This will apply to all subscription boxes in the frontend plugin.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Subscribe box width", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value for the width of the subscription field in pixels or as a percentage. This will apply to all subscription boxes in the frontend plugin.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1035,8 +1035,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <label for='ays_sccp_sub_width'>
-                                            <?php echo __('On PC', 'secure-copy-content-protection'); ?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the width for desktop devices. If you put 0 or leave it blank, the width will be 100%. It accepts only numerical values and you can choose whether to define the value by percentage or in pixels.','secure-copy-content-protection'); ?>">
+                                            <?php echo esc_html__('On PC', 'secure-copy-content-protection'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the width for desktop devices. If you put 0 or leave it blank, the width will be 100%. It accepts only numerical values and you can choose whether to define the value by percentage or in pixels.','secure-copy-content-protection'); ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1047,8 +1047,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="ays_sccp_dropdown_max_width">
                                             <select id="sccp_sub_width_by_percentage_px" name="ays_sccp_sub_width_by_percentage_px" class="ays-text-input ays-text-input-short" style="display:inline-block; width: 60px;">
-                                                <option value="pixels" <?php echo $sccp_sub_width_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo __( "px", 'secure-copy-content-protection' ); ?></option>
-                                                <option value="percentage" <?php echo $sccp_sub_width_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo __( "%", 'secure-copy-content-protection' ); ?></option>
+                                                <option value="pixels" <?php echo $sccp_sub_width_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo esc_html__( "px", 'secure-copy-content-protection' ); ?></option>
+                                                <option value="percentage" <?php echo $sccp_sub_width_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo esc_html__( "%", 'secure-copy-content-protection' ); ?></option>
                                             </select>
                                         </div>
                                     </div>
@@ -1057,8 +1057,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <label for='ays_sccp_sub_width_mobile'>
-                                            <?php echo __('On Mobile', 'secure-copy-content-protection'); ?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the width for mobile devices in percentage. Note: This option works for the screens with less than 768 pixels width.','secure-copy-content-protection'); ?>">
+                                            <?php echo esc_html__('On Mobile', 'secure-copy-content-protection'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the width for mobile devices in percentage. Note: This option works for the screens with less than 768 pixels width.','secure-copy-content-protection'); ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -1069,8 +1069,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="ays_sccp_dropdown_max_width">
                                             <select id="sccp_sub_width_mobile_by_percentage_px" name="ays_sccp_sub_width_mobile_by_percentage_px" class="ays-text-input ays-text-input-short" style="display:inline-block; width: 60px;">
-                                                <option value="pixels" <?php echo $sccp_sub_width_mobile_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo __( "px", 'secure-copy-content-protection' ); ?></option>
-                                                <option value="percentage" <?php echo $sccp_sub_width_mobile_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo __( "%", 'secure-copy-content-protection' ); ?></option>
+                                                <option value="pixels" <?php echo $sccp_sub_width_mobile_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo esc_html__( "px", 'secure-copy-content-protection' ); ?></option>
+                                                <option value="percentage" <?php echo $sccp_sub_width_mobile_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo esc_html__( "%", 'secure-copy-content-protection' ); ?></option>
                                             </select>
                                         </div>
                                     </div>
@@ -1082,26 +1082,26 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <hr/>
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <label for="sub_text_color"><?= __('Subscribe text color', 'secure-copy-content-protection'); ?></label>
+                                <label for="sub_text_color"><?php echo esc_html__('Subscribe text color', 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Set the default text color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo esc_attr__('Set the default text color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.', 'secure-copy-content-protection'); ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="sub_text_color" name="sub_text_color" data-alpha="true" value="<?php echo $ays_sccp_sub_text_color; ?>">
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_text_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_text_color_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="sub_text_color_mobile" name="sub_text_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_sub_text_color_mobile; ?>">
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_sub_text_color_mobile" name="enable_sub_text_color_mobile" <?php echo $enable_ays_sccp_sub_text_color_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_sub_text_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_sub_text_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -1109,26 +1109,26 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <hr/>
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <label for="sub_bg_color"><?= __('Subscribe box background color', 'secure-copy-content-protection'); ?></label>
+                                <label for="sub_bg_color"><?php echo esc_html__('Subscribe box background color', 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Set the default background color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo esc_attr__('Set the default background color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.', 'secure-copy-content-protection'); ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_bg_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_bg_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="sub_bg_color" name="sub_bg_color" data-alpha="true" value="<?php echo $ays_sccp_sub_bg_color; ?>">
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_bg_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_bg_color_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="sub_bg_color_mobile" name="sub_bg_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_sub_bg_color_mobile; ?>">
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_sub_bg_color_mobile" name="enable_sub_bg_color_mobile" <?php echo $enable_ays_sccp_sub_bg_color_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_sub_bg_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_sub_bg_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>                            
@@ -1137,14 +1137,14 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row copy_protection_container">
 						    <div class="col-sm-4">
 						        <label for="sccp_sub_bg_image">
-						            <?php echo __('Subscribe box background image','secure-copy-content-protection')?>
-						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add background image for Subscribe Box.','secure-copy-content-protection')?>">
+						            <?php echo esc_html__('Subscribe box background image','secure-copy-content-protection'); ?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Add background image for Subscribe Box.','secure-copy-content-protection'); ?>">
 						                <i class="ays_fa ays_fa_info_circle"></i>
 						            </a>
 						        </label>
 						    </div>                                    
 						    <div class="col-sm-8 ays_divider_left">
-						        <a href="javascript:void(0)" id="sccp_sub_bg_image" style="<?php echo empty($sccp_sub_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-bg-image"><?php echo $sub_bg_image_text; ?></a>
+						        <a href="javascript:void(0)" id="sccp_sub_bg_image" style="<?php echo empty($sccp_sub_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-bg-image"><?php echo esc_html( $sub_bg_image_text ); ?></a>
 						        <input type="hidden" id="ays_sccp_sub_bg_image" name="ays_sccp_sub_bg_image"
 						               value="<?php echo esc_attr($sccp_sub_bg_image); ?>"/>
 						        <div id="sccp_sub_bg-image_container" class="ays-sccp-sub-bg-image-container" style="<?php echo empty($sccp_sub_bg_image) ? 'display:none' : 'display:block'; ?>">
@@ -1161,8 +1161,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row ays-sub-bg-pos-block <?php echo ! isset( $sccp_sub_bg_image ) || empty( $sccp_sub_bg_image ) ? '' : 'active'; ?>">
                             <div class="col-sm-4">
                                 <label for="ays_sub_bg_image_position">
-                                    <?php echo __( "Subscribe box background image position", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('The position of background image for Subscribe Box','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__( "Subscribe box background image position", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('The position of background image for Subscribe Box','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1170,7 +1170,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             <div class="sccp_position_block col-sm-8 ays_divider_left ays_toggle_mobile_parent">
                             	<div class="ays_sccp_img_position_tables_container" style="display: flex;">
 	                                <div>
-	                                    <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_sub_bg_image_position_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                    <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_sub_bg_image_position_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                    <table id="ays-sccp-position-table" data-flag="sccp_image_position">
 	                                        <tr>
 	                                            <td data-value="left top" data-id='1' title="Left Top"></td>
@@ -1191,7 +1191,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 	                                	<input type="hidden" name="ays_sub_bg_image_position" id="ays-sccp-position-val" value="<?php echo $sccp_sub_bg_image_position; ?>" class="ays-sccp-position-val-class">
 	                                </div>
 	                                <div class="ays_toggle_target ays_divider_left ays_sccp_sub_bg_image_position_mobile_container" style=" <?php echo ( $enable_sccp_sub_bg_image_position_mobile ) ? '' : 'display:none'; ?>">
-	                                	<div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                	<div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                    <table id="ays-sccp-position-table-mobile" data-flag="sccp_image_position_mobile">
 	                                        <tr>
 	                                            <td data-value="left top" data-id='1'></td>
@@ -1214,7 +1214,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </div>
                                 <div class="ays_sccp_mobile_settings_container">
                                     <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sub_bg_image_position_mobile" name="enable_ays_sub_bg_image_position_mobile" <?php echo $enable_sccp_sub_bg_image_position_mobile ? 'checked' : '' ?>>
-                                    <label for="enable_ays_sub_bg_image_position_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    <label for="enable_ays_sub_bg_image_position_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                 </div>
                             </div>
                         </div>
@@ -1222,26 +1222,26 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <hr/>
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <label for="sub_desc_text_color"><?= __('Subscribe description text color', 'secure-copy-content-protection'); ?></label>
+                                <label for="sub_desc_text_color"><?php echo esc_html__('Subscribe description text color', 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Set the default description text color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo esc_attr__('Set the default description text color of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.', 'secure-copy-content-protection'); ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_desc_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_desc_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="sub_desc_text_color" name="sub_desc_text_color" data-alpha="true" value="<?php echo $ays_sccp_sub_desc_text_color; ?>">
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_sub_desc_text_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_desc_text_color_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="sub_desc_text_color_mobile" name="sub_desc_text_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_sub_desc_text_color_mobile; ?>">
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_sub_desc_text_color_mobile" name="enable_sub_desc_text_color_mobile" <?php echo $enable_ays_sccp_sub_desc_text_color_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_sub_desc_text_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_sub_desc_text_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -1250,13 +1250,13 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sub_title_transformation">
-                                    <?php echo __('Subscribe title transformation', 'secure-copy-content-protection' ); ?>
+                                    <?php echo esc_html__('Subscribe title transformation', 'secure-copy-content-protection' ); ?>
                                     <a class="ays_help" data-toggle="tooltip" data-html="true" data-placement="top" title="<?php
-                                        echo __("Specify how to capitalize a title text of your Subscribe box.", 'secure-copy-content-protection') .
+                                        echo esc_attr__("Specify how to capitalize a title text of your Subscribe box.", 'secure-copy-content-protection') .
                                             "<ul style='list-style-type: circle;padding-left: 20px;'>".
-                                                "<li>". __('Uppercase – Transforms all characters to uppercase','secure-copy-content-protection') ."</li>".
-                                                "<li>". __('Lowercase – Transforms all characters to lowercase','secure-copy-content-protection') ."</li>".
-                                                "<li>". __('Capitalize – Transforms the first character of each word to uppercase','secure-copy-content-protection') ."</li>".
+                                                "<li>". esc_attr__('Uppercase – Transforms all characters to uppercase','secure-copy-content-protection') ."</li>".
+                                                "<li>". esc_attr__('Lowercase – Transforms all characters to lowercase','secure-copy-content-protection') ."</li>".
+                                                "<li>". esc_attr__('Capitalize – Transforms the first character of each word to uppercase','secure-copy-content-protection') ."</li>".
                                             "</ul>";
                                         ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
@@ -1267,13 +1267,13 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sub_title_transformation_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sub_title_transformation_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div>
 	                                        	<select name="ays_sub_title_transformation" id="ays_sub_title_transformation" class="ays-text-input ays-text-input-short" style="display:block;">
-				                                    <option value="uppercase" <?php echo $sub_title_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", 'secure-copy-content-protection' ); ?></option>
-				                                    <option value="lowercase" <?php echo $sub_title_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", 'secure-copy-content-protection' ); ?></option>
-				                                    <option value="capitalize" <?php echo $sub_title_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", 'secure-copy-content-protection' ); ?></option>
-				                                    <option value="none" <?php echo $sub_title_transformation == 'none' ? 'selected' : ''; ?>><?php echo __( "None", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="uppercase" <?php echo $sub_title_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Uppercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="lowercase" <?php echo $sub_title_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Lowercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="capitalize" <?php echo $sub_title_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo esc_html__( "Capitalize", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="none" <?php echo $sub_title_transformation == 'none' ? 'selected' : ''; ?>><?php echo esc_html__( "None", 'secure-copy-content-protection' ); ?></option>
 				                                </select>
 	                                        </div>                                        
 	                                    </div>
@@ -1281,20 +1281,20 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_desc_text_color_mobile_container" style=" <?php echo ( $enable_sub_title_transformation_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection') ?></div>
 	                                        <div>
 	                                        	<select name="ays_sub_title_transformation_mobile" id="ays_sub_title_transformation_mobile" class="ays-text-input ays-text-input-short" style="display:block;">
-				                                    <option value="uppercase" <?php echo $sub_title_transformation_mobile == 'uppercase' ? 'selected' : ''; ?>><?php echo __( "Uppercase", 'secure-copy-content-protection' ); ?></option>
-				                                    <option value="lowercase" <?php echo $sub_title_transformation_mobile == 'lowercase' ? 'selected' : ''; ?>><?php echo __( "Lowercase", 'secure-copy-content-protection' ); ?></option>
-				                                    <option value="capitalize" <?php echo $sub_title_transformation_mobile == 'capitalize' ? 'selected' : ''; ?>><?php echo __( "Capitalize", 'secure-copy-content-protection' ); ?></option>
-				                                    <option value="none" <?php echo $sub_title_transformation_mobile == 'none' ? 'selected' : ''; ?>><?php echo __( "None", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="uppercase" <?php echo $sub_title_transformation_mobile == 'uppercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Uppercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="lowercase" <?php echo $sub_title_transformation_mobile == 'lowercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Lowercase", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="capitalize" <?php echo $sub_title_transformation_mobile == 'capitalize' ? 'selected' : ''; ?>><?php echo esc_html__( "Capitalize", 'secure-copy-content-protection' ); ?></option>
+				                                    <option value="none" <?php echo $sub_title_transformation_mobile == 'none' ? 'selected' : ''; ?>><?php echo esc_html__( "None", 'secure-copy-content-protection' ); ?></option>
 				                                </select>
 	                                        </div>
                                         </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sub_title_transformation_mobile" name="enable_ays_sub_title_transformation_mobile" <?php echo $enable_sub_title_transformation_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sub_title_transformation_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sub_title_transformation_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -1303,8 +1303,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_sub_cont_border_style'>
-                                    <?php echo __('Subscribe container border style', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify container border style.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Subscribe container border style', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify container border style.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1313,7 +1313,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div>
 	                                        	<select id="ays_sccp_sub_cont_border_style" name="ays_sccp_sub_cont_border_style" class="ays-text-input ays-text-input-short">
 				                                    <option <?php echo ($ays_sccp_sub_cont_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -1332,7 +1332,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_cont_border_style_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div>
 	                                        	<select id="ays_sccp_sub_cont_border_style_mobile" name="ays_sccp_sub_cont_border_style_mobile" class="ays-text-input ays-text-input-short">
 				                                    <option <?php echo ($ays_sccp_sub_cont_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -1350,7 +1350,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_cont_border_style_mobile" name="enable_ays_sccp_sub_cont_border_style_mobile" <?php echo $enable_ays_sccp_sub_cont_border_style_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_cont_border_style_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_cont_border_style_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>                            
@@ -1359,8 +1359,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_sub_cont_border_color'>
-                                    <?php echo __('Subscribe container border color', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify container border color.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Subscribe container border color', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify container border color.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1368,17 +1368,17 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             <div class="col-sm-8 ays_divider_left">
                                 <div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" class="ays-text-input" id='ays_sccp_sub_cont_border_color' data-alpha="true" name='ays_sccp_sub_cont_border_color' value="<?php echo $ays_sccp_sub_cont_border_color; ?>"/>
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_cont_border_color_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" class="ays-text-input" id='ays_sccp_sub_cont_border_color_mobile' data-alpha="true" name='ays_sccp_sub_cont_border_color_mobile' value="<?php echo $ays_sccp_sub_cont_border_color_mobile; ?>"/>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_cont_border_color_mobile" name="enable_ays_sccp_sub_cont_border_color_mobile" <?php echo $enable_ays_sccp_sub_cont_border_color_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_cont_border_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_cont_border_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>                            
@@ -1387,8 +1387,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_sub_cont_border_width'>
-                                    <?php echo __('Subscribe container border width', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Subscribe container border width in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Subscribe container border width', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Subscribe container border width in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1397,7 +1397,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_width' data-alpha="true" name='ays_sccp_sub_cont_border_width' value="<?php echo $ays_sccp_sub_cont_border_width; ?>"/>
@@ -1411,7 +1411,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_cont_border_width_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_width_mobile' data-alpha="true" name='ays_sccp_sub_cont_border_width_mobile' value="<?php echo $ays_sccp_sub_cont_border_width_mobile; ?>"/>
@@ -1424,7 +1424,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_cont_border_width_mobile" name="enable_ays_sccp_sub_cont_border_width_mobile" <?php echo $enable_ays_sccp_sub_cont_border_width_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_cont_border_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_cont_border_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -1433,8 +1433,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_sub_input_width'>
-                                    <?php echo __('Subscribe container input width', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Subscribe container input width in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Subscribe container input width', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Subscribe container input width in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1443,7 +1443,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>			                                   
 				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_input_width' data-alpha="true" name='ays_sccp_sub_input_width' value="<?php echo $ays_sccp_sub_input_width; ?>"/>
@@ -1457,7 +1457,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_input_width_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_input_width_mobile' data-alpha="true" name='ays_sccp_sub_input_width_mobile' value="<?php echo $ays_sccp_sub_input_width_mobile; ?>"/>
@@ -1470,7 +1470,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_input_width_mobile" name="enable_ays_sccp_sub_input_width_mobile" <?php echo $enable_ays_sccp_sub_input_width_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_input_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_input_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>                                                       
@@ -1479,8 +1479,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_sub_button_text">
-                                    <?php echo __( "Subscribe button text", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value to the button text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Subscribe button text", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value to the button text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1489,20 +1489,20 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             	<div class="ays_toggle_mobile_parent">
                             		<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <input type="text" name="ays_sccp_sub_button_text" id="ays_sccp_sub_button_text" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_button_text; ?>">
 	                                    </div>
                                     </label>
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_button_text_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <input type="text" name="ays_sccp_sub_button_text_mobile" id="ays_sccp_sub_button_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_button_text_mobile; ?>">
                                         </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_button_text_mobile" name="enable_ays_sccp_sub_button_text_mobile" <?php echo $enable_ays_sccp_sub_button_text_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_button_text_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_button_text_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                
                             </div>
@@ -1511,14 +1511,14 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row copy_protection_container">
 						    <div class="col-sm-4">
 						        <label for="sccp_sub_icon_image">
-						            <?php echo __('Subscribe Icon','secure-copy-content-protection')?>
-						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add icon image for Subscribe Box. Advisable size for image is 50x50.','secure-copy-content-protection'); ?>">
+						            <?php echo esc_html__('Subscribe Icon','secure-copy-content-protection'); ?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Add icon image for Subscribe Box. Advisable size for image is 50x50.','secure-copy-content-protection'); ?>">
 						                <i class="ays_fa ays_fa_info_circle"></i>
 						            </a>
 						        </label>
 						    </div>                                    
 						    <div class="col-sm-8 ays_divider_left">
-						        <a href="javascript:void(0)" id="sccp_sub_icon_image" style="<?php echo empty($sccp_sub_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-icon-image"><?php echo $sub_icon_image_text; ?></a>
+						        <a href="javascript:void(0)" id="sccp_sub_icon_image" style="<?php echo empty($sccp_sub_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-sub-icon-image"><?php echo esc_html( $sub_icon_image_text ); ?></a>
 						        <input type="hidden" id="ays_sccp_sub_icon_image" name="ays_sccp_sub_icon_image"
 						               value="<?php echo esc_attr($sccp_sub_icon_image); ?>"/>
 						        <div id="sccp_sub_image_container" class="ays-sccp-sub-image-container" style="<?php echo empty($sccp_sub_icon_image) ? 'display:none' : 'display:block'; ?>">
@@ -1534,8 +1534,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_sub_email_place_text">
-                                    <?php echo __( "Subscribe email placeholder text", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value to the email placeholder text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Subscribe email placeholder text", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value to the email placeholder text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1548,8 +1548,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_sub_name_place_text">
-                                    <?php echo __( "Subscribe name placeholder text", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value to the name placeholder text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Subscribe name placeholder text", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value to the name placeholder text of the Subscribe Box. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1562,8 +1562,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_sub_title_size">
-                                    <?php echo __( "Subscribe title Font size", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value to the Font size of the Subscribe Box title in pixels. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Subscribe title Font size", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value to the Font size of the Subscribe Box title in pixels. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1572,7 +1572,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_title_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_title_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>			                                   
 				                                   <input type="number" name="ays_sccp_sub_title_size" id="ays_sccp_sub_title_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_title_size; ?>">
@@ -1586,7 +1586,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_sccp_sub_title_size_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" name="ays_sccp_sub_title_size_mobile" id="ays_sccp_sub_title_size_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_title_size_mobile; ?>">
@@ -1599,7 +1599,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_title_size_mobile" name="enable_ays_sccp_sub_title_size_mobile" <?php echo $enable_sccp_sub_title_size_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_title_size_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_title_size_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>                            
@@ -1608,8 +1608,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_sub_desc_size">
-                                    <?php echo __( "Subscribe description Font size", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value to the Font size of the Subscribe Box description in pixels. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Subscribe description Font size", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value to the Font size of the Subscribe Box description in pixels. It will apply to all Subscribe Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1618,7 +1618,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             	<div class="ays_toggle_mobile_parent">
                             		<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                <input type="number" name="ays_sccp_sub_desc_size" id="ays_sccp_sub_desc_size" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size; ?>">
@@ -1632,7 +1632,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_sccp_sub_desc_size_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" name="ays_sccp_sub_desc_size_mobile" id="ays_sccp_sub_desc_size_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_sub_desc_size_mobile; ?>">
@@ -1645,7 +1645,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_desc_size_mobile" name="enable_ays_sccp_sub_desc_size_mobile" <?php echo $enable_sccp_sub_desc_size_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_desc_size_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_desc_size_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                
                             </div>                            
@@ -1654,8 +1654,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_sub_text_alignment">
-                                    <?php echo __( "Subscribe box text alignment", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Align the text of Subscribe box to the left, center, or right.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Subscribe box text alignment", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Align the text of Subscribe box to the left, center, or right.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1664,43 +1664,43 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 
                             	<div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_text_alignment_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_text_alignment_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <div class="ays_sccp_display_flex">
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_sub_text_alignment_left" class="form-check-input" name="ays_sccp_sub_text_alignment" value="left" <?php echo ( $ays_sccp_sub_text_alignment == 'left' ) ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_left"><?php echo __( 'Left', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_left"><?php echo esc_html__( 'Left', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_sub_text_alignment_center" class="form-check-input" name="ays_sccp_sub_text_alignment" value="center" <?php echo ($ays_sccp_sub_text_alignment == 'center') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_center"><?php echo __( 'Center', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_center"><?php echo esc_html__( 'Center', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_sub_text_alignment_right" class="form-check-input" name="ays_sccp_sub_text_alignment" value="right" <?php echo ($ays_sccp_sub_text_alignment == 'right') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_right"><?php echo __( 'Right', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_right"><?php echo esc_html__( 'Right', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                            </div>
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_text_alignment_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <div class="ays_sccp_display_flex">
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_sub_text_alignment_left_mobile" class="form-check-input" name="ays_sccp_sub_text_alignment_mobile" value="left" <?php echo ( $ays_sccp_sub_text_alignment_mobile == 'left') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_left_mobile"><?php echo __( 'Left', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_left_mobile"><?php echo esc_html__( 'Left', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_sub_text_alignment_center_mobile" class="form-check-input" name="ays_sccp_sub_text_alignment_mobile" value="center" <?php echo ( $ays_sccp_sub_text_alignment_mobile == 'center') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_center_mobile"><?php echo __( 'Center', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_center_mobile"><?php echo esc_html__( 'Center', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_sub_text_alignment_right_mobile" class="form-check-input" name="ays_sccp_sub_text_alignment_mobile" value="right" <?php echo ( $ays_sccp_sub_text_alignment_mobile == 'right' ) ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_right_mobile"><?php echo __( 'Right', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_sub_text_alignment_right_mobile"><?php echo esc_html__( 'Right', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                            </div>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_text_alignment_mobile" name="enable_ays_sccp_sub_text_alignment_mobile" <?php echo $enable_ays_sccp_sub_text_alignment_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_sub_text_alignment_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_sub_text_alignment_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                                                
                             </div>
@@ -1709,8 +1709,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_enable_sub_btn_style">
-                                    <?php echo __('Subscribe button style','secure-copy-content-protection')?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Change Subscribe button  styles.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Subscribe button style','secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Change Subscribe button  styles.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -1722,8 +1722,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_color'>
-                                                <?php echo __('Button color', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button color.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button color', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button color.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1732,18 +1732,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_btn_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_btn_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_color' data-alpha="true" name='ays_sccp_sub_btn_color' value="<?php echo $ays_sccp_sub_btn_color; ?>"/>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_color_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_color_mobile' data-alpha="true" name='ays_sccp_sub_btn_color_mobile' value="<?php echo $ays_sccp_sub_btn_color_mobile; ?>"/>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_color_mobile" name="enable_ays_sccp_sub_btn_color_mobile" <?php echo $enable_ays_sccp_sub_btn_color_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_sub_btn_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_sub_btn_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>
@@ -1752,8 +1752,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_text_color'>
-                                                <?php echo __('Button text color', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button text color.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button text color', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button text color.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1761,18 +1761,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_text_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_text_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_text_color' data-alpha="true" name='ays_sccp_sub_btn_text_color' value="<?php echo $ays_sccp_sub_btn_text_color; ?>"/>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_text_color_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_text_color_mobile' data-alpha="true" name='ays_sccp_sub_btn_text_color_mobile' value="<?php echo $ays_sccp_sub_btn_text_color_mobile; ?>"/>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_text_color_mobile" name="enable_ays_sccp_sub_btn_text_color_mobile" <?php echo $enable_ays_sccp_sub_btn_text_color_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_sub_btn_text_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_sub_btn_text_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>
@@ -1781,8 +1781,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_font_size'>
-                                                <?php echo __('Button size', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button size.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button size', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button size.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1791,8 +1791,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                             <div class="row">
                                                 <div class="col-sm-5">
                                                     <label for='ays_sccp_sub_btn_size'>
-                                                        <?php echo __('On PC', 'secure-copy-content-protection'); ?>
-                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the button font size for PC devices.','secure-copy-content-protection'); ?>">
+                                                        <?php echo esc_html__('On PC', 'secure-copy-content-protection'); ?>
+                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the button font size for PC devices.','secure-copy-content-protection'); ?>">
                                                             <i class="ays_fa ays_fa_info_circle"></i>
                                                         </a>
                                                     </label>
@@ -1810,8 +1810,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                             <div class="row">
                                                 <div class="col-sm-5">
                                                     <label for='ays_sccp_sub_mobile_btn_size'>
-                                                        <?php echo __('On mobile', 'secure-copy-content-protection'); ?>
-                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the button font size for mobile devices.','secure-copy-content-protection'); ?>">
+                                                        <?php echo esc_html__('On mobile', 'secure-copy-content-protection'); ?>
+                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the button font size for mobile devices.','secure-copy-content-protection'); ?>">
                                                             <i class="ays_fa ays_fa_info_circle"></i>
                                                         </a>
                                                     </label>
@@ -1831,8 +1831,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_radius'>
-                                                <?php echo __('Button border-radius', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Subscribe buttons border-radius in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border-radius', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Subscribe buttons border-radius in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1842,7 +1842,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         	<div class="ays_toggle_mobile_parent">
                                         		<label>
 				                                    <div>
-				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 							                                <input type="number" name="ays_sccp_sub_btn_radius" id="ays_sccp_sub_btn_radius" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_btn_radius; ?>">
@@ -1856,7 +1856,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_radius_mobile ) ? '' : 'display:none'; ?>">
 			                                        <label>
-				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 							                                   <input type="number" name="ays_sccp_sub_btn_radius_mobile" id="ays_sccp_sub_btn_radius_mobile" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_sub_btn_radius_mobile; ?>">
@@ -1869,7 +1869,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_radius_mobile" name="enable_ays_sccp_sub_btn_radius_mobile" <?php echo $enable_ays_sccp_sub_btn_radius_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_sub_btn_radius_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_sub_btn_radius_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>
                                         </div>                                        
@@ -1878,8 +1878,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_border_width'>
-                                                <?php echo __('Button border width', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Subscribe buttons border width in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border width', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Subscribe buttons border width in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1889,7 +1889,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         	<div class="ays_toggle_mobile_parent">
                                         		<label>
 				                                    <div>
-				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 						                                		<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width' data-alpha="true" name='ays_sccp_sub_btn_border_width' value="<?php echo $ays_sccp_sub_btn_border_width; ?>"/>
@@ -1903,7 +1903,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_sub_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_width_mobile ) ? '' : 'display:none'; ?>">
 			                                        <label>
-				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 							                                	<input type="number" class="ays-text-input" id='ays_sccp_sub_btn_border_width_mobile' data-alpha="true" name='ays_sccp_sub_btn_border_width_mobile' value="<?php echo $ays_sccp_sub_btn_border_width_mobile; ?>"/>
@@ -1916,7 +1916,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_width_mobile" name="enable_ays_sccp_sub_btn_border_width_mobile" <?php echo $enable_ays_sccp_sub_btn_border_width_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_sub_btn_border_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_sub_btn_border_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>
                                        	</div>                                        
@@ -1925,8 +1925,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_border_style'>
-                                                <?php echo __('Button border style', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button border style.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border style', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button border style.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1935,7 +1935,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         	<div class="ays_toggle_mobile_parent">
                                         		<label>
 				                                    <div>
-				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 				                                        <div>
 				                                        	<select id="ays_sccp_sub_btn_border_style" name="ays_sccp_sub_btn_border_style" class="ays-text-input ays-text-input-short">
 				                                                <option <?php echo ($ays_sccp_sub_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -1954,7 +1954,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_style_mobile ) ? '' : 'display:none'; ?>">
 			                                        <label>
-				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 				                                        <div>
 				                                        	<select id="ays_sccp_sub_btn_border_style_mobile" name="ays_sccp_sub_btn_border_style_mobile" class="ays-text-input ays-text-input-short">
 				                                                <option <?php echo ($ays_sccp_sub_btn_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -1972,7 +1972,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_style_mobile" name="enable_ays_sccp_sub_btn_border_style_mobile" <?php echo $enable_ays_sccp_sub_btn_border_style_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_sub_btn_border_style_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_sub_btn_border_style_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>
@@ -1981,8 +1981,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_border_color'>
-                                                <?php echo __('Button border color', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button border color.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border color', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button border color.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -1991,18 +1991,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_sub_btn_border_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_border_color' data-alpha="true" name='ays_sccp_sub_btn_border_color' value="<?php echo $ays_sccp_sub_btn_border_color; ?>"/>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_btn_border_color_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_sub_btn_border_color_mobile' data-alpha="true" name='ays_sccp_sub_btn_border_color_mobile' value="<?php echo $ays_sccp_sub_btn_border_color_mobile; ?>"/>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_btn_border_color_mobile" name="enable_ays_sccp_sub_btn_border_color_mobile" <?php echo $enable_ays_sccp_sub_btn_border_color_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_sub_btn_border_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_sub_btn_border_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>
@@ -2011,8 +2011,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_sub_btn_padding'>
-                                                <?php echo __('Button padding', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Padding of buttons in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button padding', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Padding of buttons in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2020,40 +2020,40 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_buttons_padding_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_buttons_padding_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 
 			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
 			                                        	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Left / Right','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding' name='ays_sub_btn_left_right_padding' value="<?php echo $buttons_left_right_padding; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
 		                                            	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Top / Bottom','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding' name='ays_sub_btn_top_bottom_padding' value="<?php echo $buttons_top_bottom_padding; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_color_mobile_container" style=" <?php echo ( $enable_buttons_padding_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
 			                                        	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Left / Right','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_left_right_padding_mobile' name='ays_sub_btn_left_right_padding_mobile' value="<?php echo $buttons_left_right_padding_mobile; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
 		                                            	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Top / Bottom','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_sub_btn_top_bottom_padding_mobile' name='ays_sub_btn_top_bottom_padding_mobile' value="<?php echo $buttons_top_bottom_padding_mobile; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sub_btn_padding_mobile" name="enable_ays_sub_btn_padding_mobile" <?php echo $enable_buttons_padding_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sub_btn_padding_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sub_btn_padding_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>
@@ -2065,28 +2065,28 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="sub_reset_to_default">
-                                    <?php echo __('Subscribe reset styles', 'secure-copy-content-protection') ?>
+                                    <?php echo esc_html__('Subscribe reset styles', 'secure-copy-content-protection'); ?>
                                     <a class="ays_help" data-toggle="tooltip"
-                                       title="<?php echo __('Reset tooltip styles to default values', 'secure-copy-content-protection') ?>">
+                                       title="<?php echo esc_attr__('Reset tooltip styles to default values', 'secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <button type="button" class="ays-button button-secondary"
-                                        id="sub_reset_to_default"><?php echo __("Reset", 'secure-copy-content-protection') ?>
+                                        id="sub_reset_to_default"><?php echo esc_html__("Reset", 'secure-copy-content-protection'); ?>
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div id="tab6" class="ays-sccp-tab-content <?php echo ($ays_sccp_tab == 'tab6') ? 'ays-sccp-tab-content-active' : ''; ?>">
-                        <p class="ays-subtitle"><?php echo __('Styles','secure-copy-content-protection')?></p>
+                        <p class="ays-subtitle"><?php echo esc_html__('Styles','secure-copy-content-protection'); ?></p>
                         <hr>
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_bc_width">
-                                    <?php echo __( "Block content box width", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value for the width of the block content field in pixels or as a percentage. This will apply to all block content boxes in the frontend plugin.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Block content box width", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value for the width of the block content field in pixels or as a percentage. This will apply to all block content boxes in the frontend plugin.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2095,8 +2095,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <label for='ays_sccp_bc_width'>
-                                            <?php echo __('On PC', 'secure-copy-content-protection'); ?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the width for desktop devices. If you put 0 or leave it blank, the width will be 100%. It accepts only numerical values and you can choose whether to define the value by percentage or in pixels.','secure-copy-content-protection'); ?>">
+                                            <?php echo esc_html__('On PC', 'secure-copy-content-protection'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the width for desktop devices. If you put 0 or leave it blank, the width will be 100%. It accepts only numerical values and you can choose whether to define the value by percentage or in pixels.','secure-copy-content-protection'); ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -2107,8 +2107,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="ays_sccp_dropdown_max_width">
                                         	<select id="sccp_bc_width_by_percentage_px" name="ays_sccp_bc_width_by_percentage_px" class="ays-text-input ays-text-input-short" style="display:inline-block; width: 60px;">
-		                                        <option value="pixels" <?php echo $sccp_bc_width_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo __( "px", 'secure-copy-content-protection' ); ?></option>
-		                                        <option value="percentage" <?php echo $sccp_bc_width_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo __( "%", 'secure-copy-content-protection' ); ?></option>
+		                                        <option value="pixels" <?php echo $sccp_bc_width_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo esc_html__( "px", 'secure-copy-content-protection' ); ?></option>
+		                                        <option value="percentage" <?php echo $sccp_bc_width_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo esc_html__( "%", 'secure-copy-content-protection' ); ?></option>
 		                                    </select>
                                         </div>
                                     </div>
@@ -2117,8 +2117,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <label for='ays_sccp_bc_width_mobile'>
-                                            <?php echo __('On Mobile', 'secure-copy-content-protection'); ?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the width for mobile devices in percentage. Note: This option works for the screens with less than 768 pixels width.','secure-copy-content-protection'); ?>">
+                                            <?php echo esc_html__('On Mobile', 'secure-copy-content-protection'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the width for mobile devices in percentage. Note: This option works for the screens with less than 768 pixels width.','secure-copy-content-protection'); ?>">
                                                 <i class="ays_fa ays_fa_info_circle"></i>
                                             </a>
                                         </label>
@@ -2129,8 +2129,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         </div>
                                         <div class="ays_sccp_dropdown_max_width">
                                         	<select id="sccp_bc_width_mobile_by_percentage_px" name="ays_sccp_bc_width_mobile_by_percentage_px" class="ays-text-input ays-text-input-short" style="display:inline-block; width: 60px;">
-		                                        <option value="pixels" <?php echo $sccp_bc_width_mobile_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo __( "px", 'secure-copy-content-protection' ); ?></option>
-		                                        <option value="percentage" <?php echo $sccp_bc_width_mobile_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo __( "%", 'secure-copy-content-protection' ); ?></option>
+		                                        <option value="pixels" <?php echo $sccp_bc_width_mobile_by_percentage_px == "pixels" ? "selected" : ""; ?>><?php echo esc_html__( "px", 'secure-copy-content-protection' ); ?></option>
+		                                        <option value="percentage" <?php echo $sccp_bc_width_mobile_by_percentage_px == "percentage" ? "selected" : ""; ?>><?php echo esc_html__( "%", 'secure-copy-content-protection' ); ?></option>
 		                                    </select>
                                         </div>
                                     </div>
@@ -2140,26 +2140,26 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <hr>
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <label for="bc_text_color"><?= __('Block content text color', 'secure-copy-content-protection'); ?></label>
+                                <label for="bc_text_color"><?php echo  esc_html__('Block content text color', 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Set the default text color of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo  esc_attr__('Set the default text color of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end.', 'secure-copy-content-protection') ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                             	<div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_text_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="bc_text_color" name="bc_text_color" data-alpha="true" value="<?php echo $ays_sccp_bc_text_color; ?>">
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_text_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_text_color_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="bc_text_color_mobile" name="bc_text_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_bc_text_color_mobile; ?>">
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_bc_text_color_mobile" name="enable_bc_text_color_mobile" <?php echo $enable_ays_sccp_bc_text_color_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_bc_text_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_bc_text_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                
                             </div>
@@ -2167,9 +2167,9 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <hr>
                         <div class="form-group row">
                             <div class="col-sm-4">
-                                <label for="bc_bg_color"><?= __('Block content box background color', 'secure-copy-content-protection'); ?></label>
+                                <label for="bc_bg_color"><?php echo esc_html__('Block content box background color', 'secure-copy-content-protection'); ?></label>
                                 <a class="ays_help" data-toggle="tooltip"
-                                   title="<?= __('Set the default background color of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end.', 'secure-copy-content-protection') ?>">
+                                   title="<?php echo esc_attr__('Set the default background color of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end.', 'secure-copy-content-protection'); ?>">
                                     <i class="ays_fa ays_fa_info_circle"></i>
                                 </a>
                             </div>
@@ -2177,17 +2177,17 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             <div class="col-sm-8 ays_divider_left">
                             	<div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_bg_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_bg_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="bc_bg_color" data-alpha="true" name="bc_bg_color" value="<?php echo $ays_sccp_bc_bg_color; ?>"/>
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_bg_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_bg_color_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" id="bc_bg_color_mobile" name="bc_bg_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_bc_bg_color_mobile; ?>">
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_bc_bg_color_mobile" name="enable_bc_bg_color_mobile" <?php echo $enable_ays_sccp_bc_bg_color_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_bc_bg_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_bc_bg_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                
                             </div>
@@ -2196,14 +2196,14 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row copy_protection_container">
 						    <div class="col-sm-4">
 						        <label for="sccp_bc_bg_image">
-						            <?php echo __('Block content box background image', 'secure-copy-content-protection')?>
-						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add background image for Block content Box.','secure-copy-content-protection')?>">
+						            <?php echo esc_html__('Block content box background image', 'secure-copy-content-protection'); ?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Add background image for Block content Box.','secure-copy-content-protection'); ?>">
 						                <i class="ays_fa ays_fa_info_circle"></i>
 						            </a>
 						        </label>
 						    </div>                                    
 						    <div class="col-sm-8 ays_divider_left">
-						        <a href="javascript:void(0)" id="sccp_bc_bg_image" style="<?php echo empty($sccp_bc_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-bg-image"><?php echo $bc_bg_image_text; ?></a>
+						        <a href="javascript:void(0)" id="sccp_bc_bg_image" style="<?php echo empty($sccp_bc_bg_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-bg-image"><?php echo esc_html( $bc_bg_image_text ); ?></a>
 						        <input type="hidden" id="ays_sccp_bc_bg_image" name="ays_sccp_bc_bg_image"
 						               value="<?php echo esc_attr($sccp_bc_bg_image); ?>"/>
 						        <div id="sccp_bc_bg-image_container" class="ays-sccp-bc-bg-image-container" style="<?php echo empty($sccp_bc_bg_image) ? 'display:none' : 'display:block'; ?>">
@@ -2220,8 +2220,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row ays-bc-bg-pos-block <?php echo !isset( $sccp_bc_bg_image ) || empty( $sccp_bc_bg_image ) ? '' : 'active'; ?>">
                             <div class="col-sm-4">
                                 <label for="ays_bc_bg_image_position">
-                                    <?php echo __( "Block content box background image position", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('The position of background image for Block content Box','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__( "Block content box background image position", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('The position of background image for Block content Box','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2229,7 +2229,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             <div class="sccp_position_block col-sm-8 ays_divider_left ays_toggle_mobile_parent">
                             	<div class="ays_sccp_img_position_tables_container" style="display: flex;">
 	                                <div>
-	                                    <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_bc_bg_image_position_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                    <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_bc_bg_image_position_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                    <table id="ays-sccp-bc-position-table" data-flag="sccp_image_position">
 	                                        <tr>
 	                                            <td data-value="left top" data-id='1' title="Left Top"></td>
@@ -2250,7 +2250,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 	                                	<input type="hidden" name="ays_bc_bg_image_position" id="ays-sccp-bc-position-val" value="<?php echo $sccp_bc_bg_image_position; ?>" class="ays-sccp-position-val-class">
 	                                </div>
 	                                <div class="ays_toggle_target ays_divider_left ays_sccp_bc_bg_image_position_mobile_container" style=" <?php echo ( $enable_sccp_bc_bg_image_position_mobile ) ? '' : 'display:none'; ?>">
-	                                	<div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                	<div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                    <table id="ays-sccp-bc-position-table-mobile" data-flag="sccp_image_position_mobile">
 	                                        <tr>
 	                                            <td data-value="left top" data-id='1'></td>
@@ -2273,7 +2273,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </div>
                                 <div class="ays_sccp_mobile_settings_container">
                                     <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_bc_bg_image_position_mobile" name="enable_ays_bc_bg_image_position_mobile" <?php echo $enable_sccp_bc_bg_image_position_mobile ? 'checked' : '' ?>>
-                                    <label for="enable_ays_bc_bg_image_position_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                    <label for="enable_ays_bc_bg_image_position_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                 </div>
                             </div>                            
                         </div>
@@ -2282,8 +2282,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_bc_button_text">
-                                    <?php echo __( "Block content button text", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value to the button text of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Block content button text", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value to the button text of the Block content Box. It will apply to all Block content Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2292,20 +2292,20 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             	<div class="ays_toggle_mobile_parent">
                             		<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_button_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <input type="text" name="ays_sccp_bc_button_text" id="ays_sccp_bc_button_text" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_button_text; ?>">                                        
 	                                    </div>
                                     </label>
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_button_text_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <input type="text" name="ays_sccp_bc_button_text_mobile" id="ays_sccp_bc_button_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_button_text_mobile; ?>">
                                         </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_button_text_mobile" name="enable_ays_sccp_bc_button_text_mobile" <?php echo $enable_ays_sccp_bc_button_text_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_bc_button_text_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_bc_button_text_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                
                             </div>
@@ -2314,8 +2314,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_bc_psw_place_text">
-                                    <?php echo __( "Block content password placeholder text", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Set the default value to the password placeholder text of the Block content Box. It will apply to all Block contents Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Block content password placeholder text", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set the default value to the password placeholder text of the Block content Box. It will apply to all Block contents Boxes within the plugin on the front-end.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2324,20 +2324,20 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             	<div class="ays_toggle_mobile_parent">
                             		<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_bc_psw_place_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_sccp_bc_psw_place_text_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <input type="text" name="ays_sccp_bc_psw_place_text" id="ays_sccp_bc_psw_place_text" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text; ?>">
 	                                    </div>
                                     </label>
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_button_text_mobile_container" style=" <?php echo ( $enable_sccp_bc_psw_place_text_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <input type="text" name="ays_sccp_bc_psw_place_text_mobile" id="ays_sccp_bc_psw_place_text_mobile" class="ays-text-input ays-text-input-short" value="<?php echo $sccp_bc_psw_place_text_mobile; ?>">
                                         </label>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_psw_place_text_mobile" name="enable_ays_sccp_bc_psw_place_text_mobile" <?php echo $enable_sccp_bc_psw_place_text_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_bc_psw_place_text_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_bc_psw_place_text_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                
                             </div>
@@ -2346,8 +2346,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_bc_cont_border_style'>
-                                    <?php echo __('Block content container border style', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify container border style.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Block content container border style', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify container border style.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2356,7 +2356,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div>
 	                                        	<select id="ays_sccp_bc_cont_border_style" name="ays_sccp_bc_cont_border_style" class="ays-text-input ays-text-input-short">
 				                                    <option <?php echo ($ays_sccp_bc_cont_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -2375,7 +2375,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_bc_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_cont_border_style_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div>
 	                                        	<select id="ays_sccp_bc_cont_border_style_mobile" name="ays_sccp_bc_cont_border_style_mobile" class="ays-text-input ays-text-input-short">
 				                                    <option <?php echo ($ays_sccp_bc_cont_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -2393,7 +2393,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_cont_border_style_mobile" name="enable_ays_sccp_bc_cont_border_style_mobile" <?php echo $enable_ays_sccp_bc_cont_border_style_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_bc_cont_border_style_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_bc_cont_border_style_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>                            
@@ -2402,8 +2402,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_bc_cont_border_color'>
-                                    <?php echo __('Block content container border color', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify container border color.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Block content container border color', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify container border color.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2411,17 +2411,17 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             <div class="col-sm-8 ays_divider_left">
                             	<div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" class="ays-text-input" id='ays_sccp_bc_cont_border_color' data-alpha="true" name='ays_sccp_bc_cont_border_color' value="<?php echo $ays_sccp_bc_cont_border_color; ?>"/>
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_bg_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_cont_border_color_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <input type="text" class="ays-text-input" id='ays_sccp_bc_cont_border_color_mobile' data-alpha="true" name='ays_sccp_bc_cont_border_color_mobile' value="<?php echo $ays_sccp_bc_cont_border_color_mobile; ?>"/>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_cont_border_color_mobile" name="enable_ays_sccp_bc_cont_border_color_mobile" <?php echo $enable_ays_sccp_bc_cont_border_color_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_bc_cont_border_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_bc_cont_border_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                
                             </div>
@@ -2430,8 +2430,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_bc_cont_border_width'>
-                                    <?php echo __('Block content container border width', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Block content container border width in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Block content container border width', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Block content container border width in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2440,7 +2440,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_cont_border_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_cont_border_width' data-alpha="true" name='ays_sccp_bc_cont_border_width' value="<?php echo $ays_sccp_bc_cont_border_width; ?>"/>
@@ -2454,7 +2454,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_cont_border_width_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_cont_border_width_mobile' data-alpha="true" name='ays_sccp_bc_cont_border_width_mobile' value="<?php echo $ays_sccp_bc_cont_border_width_mobile; ?>"/>
@@ -2467,7 +2467,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_cont_border_width_mobile" name="enable_ays_sccp_bc_cont_border_width_mobile" <?php echo $enable_ays_sccp_bc_cont_border_width_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_bc_cont_border_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_bc_cont_border_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>                      
@@ -2476,8 +2476,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for='ays_sccp_bc_input_width'>
-                                    <?php echo __('Block content container input width', 'secure-copy-content-protection'); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Block content container input width in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Block content container input width', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Block content container input width in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2486,7 +2486,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 <div class="ays_toggle_mobile_parent">
                                 	<label>
 	                                    <div>
-	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_input_width_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 			                                		<input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width' data-alpha="true" name='ays_sccp_bc_input_width' value="<?php echo $ays_sccp_bc_input_width; ?>"/>
@@ -2500,7 +2500,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <hr>
                                     <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_input_width_mobile ) ? '' : 'display:none'; ?>">
                                         <label>
-	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 	                                        <div class="ays_sccp_display_flex">
 				                                <div>
 				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_bc_input_width_mobile' data-alpha="true" name='ays_sccp_bc_input_width_mobile' value="<?php echo $ays_sccp_bc_input_width_mobile; ?>"/>
@@ -2513,7 +2513,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_input_width_mobile" name="enable_ays_sccp_bc_input_width_mobile" <?php echo $enable_ays_sccp_bc_input_width_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_bc_input_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_bc_input_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -2522,14 +2522,14 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row copy_protection_container">
 						    <div class="col-sm-4">
 						        <label for="sccp_bc_icon_image">
-						            <?php echo __('Block content Icon','secure-copy-content-protection')?>
-						            <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Add icon image for Block content Box. Advisable size for image is 50x50.','secure-copy-content-protection')?>">
+						            <?php echo esc_html__('Block content Icon','secure-copy-content-protection'); ?>
+						            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Add icon image for Block content Box. Advisable size for image is 50x50.','secure-copy-content-protection'); ?>">
 						                <i class="ays_fa ays_fa_info_circle"></i>
 						            </a>
 						        </label>
 						    </div>
 						    <div class="col-sm-8 ays_divider_left">
-						        <a href="javascript:void(0)" id="sccp_bc_icon_image" style="<?php echo empty($sccp_bc_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-icon-image"><?php echo $bc_icon_image_text; ?></a>
+						        <a href="javascript:void(0)" id="sccp_bc_icon_image" style="<?php echo empty($sccp_bc_icon_image) ? 'display:inline-block;' : 'display:none;'; ?>" class="add-sccp-bc-icon-image"><?php echo esc_html( $bc_icon_image_text ); ?></a>
 						        <input type="hidden" id="ays_sccp_bc_icon_image" name="ays_sccp_bc_icon_image"
 						               value="<?php echo esc_attr($sccp_bc_icon_image); ?>"/>
 						        <div id="sccp_bc_image_container" class="ays-sccp-bc-image-container" style="<?php echo empty($sccp_bc_icon_image) ? 'display:none' : 'display:block'; ?>">
@@ -2545,8 +2545,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_bc_text_alignment">
-                                    <?php echo __( "Block content box text alignment", 'secure-copy-content-protection' ); ?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Align the text of Block content box to the left, center, or right.','secure-copy-content-protection'); ?>">
+                                    <?php echo esc_html__( "Block content box text alignment", 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Align the text of Block content box to the left, center, or right.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2555,43 +2555,43 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                             <div class="col-sm-8 ays_divider_left">
                             	<div class="ays_toggle_mobile_parent">
                                     <div>
-                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_text_alignment_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_text_alignment_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
                                         <div class="ays_sccp_display_flex">
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_bc_text_alignment_left" class="form-check-input" name="ays_sccp_bc_text_alignment" value="left" <?php echo ( $ays_sccp_bc_text_alignment == 'left' ) ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_left"><?php echo __( 'Left', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_left"><?php echo esc_html__( 'Left', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_bc_text_alignment_center" class="form-check-input" name="ays_sccp_bc_text_alignment" value="center" <?php echo ($ays_sccp_bc_text_alignment == 'center') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_center"><?php echo __( 'Center', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_center"><?php echo esc_html__( 'Center', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_bc_text_alignment_right" class="form-check-input" name="ays_sccp_bc_text_alignment" value="right" <?php echo ($ays_sccp_bc_text_alignment == 'right') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_right"><?php echo __( 'Right', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_right"><?php echo esc_html__( 'Right', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                            </div>
                                     </div>
                                     <div class="ays_toggle_target ays_sccp_bc_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_text_alignment_mobile ) ? '' : 'display:none'; ?>">
                                         <hr>
-                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
                                         <div class="ays_sccp_display_flex">
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_bc_text_alignment_left_mobile" class="form-check-input" name="ays_sccp_bc_text_alignment_mobile" value="left" <?php echo ( $ays_sccp_bc_text_alignment_mobile == 'left') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_left_mobile"><?php echo __( 'Left', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_left_mobile"><?php echo esc_html__( 'Left', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_bc_text_alignment_center_mobile" class="form-check-input" name="ays_sccp_bc_text_alignment_mobile" value="center" <?php echo ( $ays_sccp_bc_text_alignment_mobile == 'center') ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_center_mobile"><?php echo __( 'Center', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_center_mobile"><?php echo esc_html__( 'Center', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                                <div class="form-check form-check-inline checkbox_ays">
 			                                    <input type="radio" id="ays_sccp_bc_text_alignment_right_mobile" class="form-check-input" name="ays_sccp_bc_text_alignment_mobile" value="right" <?php echo ( $ays_sccp_bc_text_alignment_mobile == 'right' ) ? 'checked' : ''; ?>/>
-			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_right_mobile"><?php echo __( 'Right', 'secure-copy-content-protection' ); ?></label>
+			                                    <label class="form-check-label" for="ays_sccp_bc_text_alignment_right_mobile"><?php echo esc_html__( 'Right', 'secure-copy-content-protection' ); ?></label>
 			                                </div>
 			                            </div>
                                     </div>
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_text_alignment_mobile" name="enable_ays_sccp_bc_text_alignment_mobile" <?php echo $enable_ays_sccp_bc_text_alignment_mobile ? 'checked' : '' ?>>
-                                        <label for="enable_ays_sccp_bc_text_alignment_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+                                        <label for="enable_ays_sccp_bc_text_alignment_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>                                                               
                             </div>
@@ -2600,8 +2600,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="ays_sccp_enable_bc_btn_style">
-                                    <?php echo __('Block content button style','secure-copy-content-protection')?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Change Block content button  styles.','secure-copy-content-protection')?>">
+                                    <?php echo esc_html__('Block content button style','secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Change Block content button  styles.','secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
@@ -2613,8 +2613,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_color'>
-                                                <?php echo __('Button background color', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button background color.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button background color', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button background color.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2622,18 +2622,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
 			                            	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_btn_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_btn_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_bc_btn_color' data-alpha="true" name='ays_sccp_bc_btn_color' value="<?php echo $ays_sccp_bc_btn_color; ?>"/>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_bg_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_bg_color_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <input type="text" id="ays_sccp_bc_btn_color_mobile" name="ays_sccp_bc_btn_color_mobile" data-alpha="true" value="<?php echo $ays_sccp_bc_btn_color_mobile; ?>">
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_color_mobile" name="enable_ays_sccp_bc_btn_color_mobile" <?php echo $enable_ays_sccp_bc_btn_color_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_bc_btn_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_bc_btn_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                
 			                            </div>
@@ -2642,8 +2642,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_text_color'>
-                                                <?php echo __('Button text color', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button text color.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button text color', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button text color.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2651,17 +2651,17 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_text_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_text_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_bc_btn_text_color' data-alpha="true" name='ays_sccp_bc_btn_text_color' value="<?php echo $ays_sccp_bc_btn_text_color; ?>"/>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_bc_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_text_color_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_bc_btn_text_color_mobile' data-alpha="true" name='ays_sccp_bc_btn_text_color_mobile' value="<?php echo $ays_sccp_bc_btn_text_color_mobile; ?>"/>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_text_color_mobile" name="enable_ays_sccp_bc_btn_text_color_mobile" <?php echo $enable_ays_sccp_bc_btn_text_color_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_bc_btn_text_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_bc_btn_text_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>
@@ -2670,8 +2670,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_font_size'>
-                                                <?php echo __('Button size', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button size.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button size', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button size.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2680,8 +2680,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                             <div class="row">
                                                 <div class="col-sm-5">
                                                     <label for='ays_sccp_bc_btn_size'>
-                                                        <?php echo __('On PC', 'secure-copy-content-protection'); ?>
-                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the button font size for PC devices.','secure-copy-content-protection'); ?>">
+                                                        <?php echo esc_html__('On PC', 'secure-copy-content-protection'); ?>
+                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the button font size for PC devices.','secure-copy-content-protection'); ?>">
                                                             <i class="ays_fa ays_fa_info_circle"></i>
                                                         </a>
                                                     </label>
@@ -2699,8 +2699,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                             <div class="row">
                                                 <div class="col-sm-5">
                                                     <label for='ays_sccp_bc_mobile_btn_size'>
-                                                        <?php echo __('On mobile', 'secure-copy-content-protection'); ?>
-                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Define the button font size for mobile devices.','secure-copy-content-protection'); ?>">
+                                                        <?php echo esc_html__('On mobile', 'secure-copy-content-protection'); ?>
+                                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Define the button font size for mobile devices.','secure-copy-content-protection'); ?>">
                                                             <i class="ays_fa ays_fa_info_circle"></i>
                                                         </a>
                                                     </label>
@@ -2720,8 +2720,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_radius'>
-                                                <?php echo __('Button border-radius', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Block content buttons border-radius in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border-radius', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Block content buttons border-radius in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2730,7 +2730,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         	<div class="ays_toggle_mobile_parent">
                                         		<label>
 				                                    <div>
-				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 							                                <input type="number" name="ays_sccp_bc_btn_radius" id="ays_sccp_bc_btn_radius" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius; ?>">
@@ -2744,7 +2744,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_bc_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_radius_mobile ) ? '' : 'display:none'; ?>">
 			                                        <label>
-				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 							                                   <input type="number" name="ays_sccp_bc_btn_radius_mobile" id="ays_sccp_bc_btn_radius_mobile" data-alpha="true" class="ays-text-input ays-text-input-short" value="<?php echo $ays_sccp_bc_btn_radius_mobile; ?>">
@@ -2757,7 +2757,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_radius_mobile" name="enable_ays_sccp_bc_btn_radius_mobile" <?php echo $enable_ays_sccp_bc_btn_radius_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_bc_btn_radius_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_bc_btn_radius_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>
                                         </div>
@@ -2766,8 +2766,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_border_width'>
-                                                <?php echo __('Button border width', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Block content buttons border width in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border width', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Block content buttons border width in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2776,7 +2776,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         	<div class="ays_toggle_mobile_parent">
                                         		<label>
 				                                    <div>
-				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_border_width_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 						                                		<input type="number" class="ays-text-input" id='ays_sccp_bc_btn_border_width' data-alpha="true" name='ays_sccp_bc_btn_border_width' value="<?php echo $ays_sccp_bc_btn_border_width; ?>"/>
@@ -2790,7 +2790,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_bc_input_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_border_width_mobile ) ? '' : 'display:none'; ?>">
 			                                        <label>
-				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 				                                        <div class="ays_sccp_display_flex">
 							                                <div>
 							                                	<input type="number" class="ays-text-input" id='ays_sccp_bc_btn_border_width_mobile' data-alpha="true" name='ays_sccp_bc_btn_border_width_mobile' value="<?php echo $ays_sccp_bc_btn_border_width_mobile; ?>"/>
@@ -2803,7 +2803,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_border_width_mobile" name="enable_ays_sccp_bc_btn_border_width_mobile" <?php echo $enable_ays_sccp_bc_btn_border_width_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_bc_btn_border_width_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_bc_btn_border_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>
                                        	</div>                                        
@@ -2812,8 +2812,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_border_style'>
-                                                <?php echo __('Button border style', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button border style.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border style', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button border style.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2822,7 +2822,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         	<div class="ays_toggle_mobile_parent">
                                         		<label>
 				                                    <div>
-				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_btn_border_style_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 				                                        <div>
 				                                        	<select id="ays_sccp_bc_btn_border_style" name="ays_sccp_bc_btn_border_style" class="ays-text-input ays-text-input-short">
 				                                                <option <?php echo ($ays_sccp_bc_btn_border_style == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -2841,7 +2841,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    <hr>
 			                                    <div class="ays_toggle_target ays_sccp_bc_cont_border_style_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_border_style_mobile ) ? '' : 'display:none'; ?>">
 			                                        <label>
-				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+				                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 				                                        <div>
 				                                        	<select id="ays_sccp_bc_btn_border_style_mobile" name="ays_sccp_bc_btn_border_style_mobile" class="ays-text-input ays-text-input-short">
 				                                                <option <?php echo ($ays_sccp_bc_btn_border_style_mobile == 'solid') ? 'selected' : ''; ?> value="solid">Solid</option>
@@ -2859,7 +2859,7 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_border_style_mobile" name="enable_ays_sccp_bc_btn_border_style_mobile" <?php echo $enable_ays_sccp_bc_btn_border_style_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_bc_btn_border_style_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_bc_btn_border_style_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>                                        
@@ -2868,8 +2868,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_border_color'>
-                                                <?php echo __('Button border color', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Specify button border color.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button border color', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Specify button border color.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2877,18 +2877,18 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_border_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_sccp_bc_btn_border_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_bc_btn_border_color' data-alpha="true" name='ays_sccp_bc_btn_border_color' value="<?php echo $ays_sccp_bc_btn_border_color; ?>"/>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_bc_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_btn_border_color_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <input type="text" class="ays-text-input" id='ays_sccp_bc_btn_border_color_mobile' data-alpha="true" name='ays_sccp_bc_btn_border_color_mobile' value="<?php echo $ays_sccp_bc_btn_border_color_mobile; ?>"/>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_btn_border_color_mobile" name="enable_ays_sccp_bc_btn_border_color_mobile" <?php echo $enable_ays_sccp_bc_btn_border_color_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sccp_bc_btn_border_color_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sccp_bc_btn_border_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>                                        
@@ -2897,8 +2897,8 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="form-group row">
                                         <div class="col-sm-5">
                                             <label for='ays_sccp_bc_btn_padding'>
-                                                <?php echo __('Button padding', 'secure-copy-content-protection'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Padding of buttons in pixels. It accepts only numeric values.','secure-copy-content-protection')?>">
+                                                <?php echo esc_html__('Button padding', 'secure-copy-content-protection'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Padding of buttons in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
                                                     <i class="ays_fa ays_fa_info_circle"></i>
                                                 </a>
                                             </label>
@@ -2906,40 +2906,40 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                         <div class="col-sm-7 ays_divider_left">
                                         	<div class="ays_toggle_mobile_parent">
 			                                    <div>
-			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_bc_btn_padding_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('PC', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_bc_btn_padding_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
 
 			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
 			                                        	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Left / Right','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_bc_btn_left_right_padding' name='ays_bc_btn_left_right_padding' value="<?php echo $ays_bc_buttons_left_right_padding; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
 		                                            	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Top / Bottom','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_bc_btn_top_bottom_padding' name='ays_bc_btn_top_bottom_padding' value="<?php echo $ays_bc_buttons_top_bottom_padding; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 			                                    </div>
 			                                    <div class="ays_toggle_target ays_sccp_bc_cont_border_color_mobile_container" style=" <?php echo ( $enable_ays_bc_btn_padding_mobile ) ? '' : 'display:none'; ?>">
 			                                        <hr>
-			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo __('Mobile', 'secure-copy-content-protection') ?></div>
+			                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 270px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
 			                                        <div class="col-sm-3" style="display: inline-flex; flex-direction: column; padding-left: 0;">
 			                                        	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Left / Right','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Left / Right','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_bc_btn_left_right_padding_mobile' name='ays_bc_btn_left_right_padding_mobile' value="<?php echo $ays_bc_buttons_left_right_padding_mobile; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 		                                            <div class="col-sm-3 ays_divider_left ays-buttons-top-bottom-padding-box" style="display: inline-flex;flex-direction: column;">
 		                                            	<label>
-			                                                <span class="ays_sccp_small_hint_text"><?php echo __('Top / Bottom','secure-copy-content-protection')?></span>
+			                                                <span class="ays_sccp_small_hint_text"><?php echo esc_html__('Top / Bottom','secure-copy-content-protection'); ?></span>
 			                                                <input type="number" class="ays-text-input" id='ays_bc_btn_top_bottom_padding_mobile' name='ays_bc_btn_top_bottom_padding_mobile' value="<?php echo $ays_bc_buttons_top_bottom_padding_mobile; ?>" style="width: 100px;" />
 		                                                </label>
 		                                            </div>
 			                                    </div>
 			                                    <div class="ays_sccp_mobile_settings_container">
 			                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_bc_btn_padding_mobile" name="enable_ays_bc_btn_padding_mobile" <?php echo $enable_ays_bc_btn_padding_mobile ? 'checked' : '' ?>>
-			                                        <label for="enable_ays_sub_btn_padding_mobile" ><?php echo __('Use a different setting for Mobile', 'secure-copy-content-protection') ?></label>
+			                                        <label for="enable_ays_sub_btn_padding_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
 			                                    </div>
 			                                </div>                                            
                                         </div>
@@ -2951,16 +2951,16 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="bc_reset_to_default">
-                                    <?php echo __('Block content reset styles', 'secure-copy-content-protection') ?>
+                                    <?php echo esc_html__('Block content reset styles', 'secure-copy-content-protection'); ?>
                                     <a class="ays_help" data-toggle="tooltip"
-                                       title="<?php echo __('Reset tooltip styles to default values', 'secure-copy-content-protection') ?>">
+                                       title="<?php echo esc_attr__('Reset tooltip styles to default values', 'secure-copy-content-protection'); ?>">
                                         <i class="ays_fa ays_fa_info_circle"></i>
                                     </a>
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
                                 <button type="button" class="ays-button button-secondary"
-                                        id="bc_reset_to_default"><?php echo __("Reset", 'secure-copy-content-protection') ?>
+                                        id="bc_reset_to_default"><?php echo esc_html__("Reset", 'secure-copy-content-protection'); ?>
                                 </button>
                             </div>
                         </div>                       
