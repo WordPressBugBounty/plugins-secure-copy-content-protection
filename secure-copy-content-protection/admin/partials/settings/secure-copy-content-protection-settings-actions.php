@@ -502,6 +502,9 @@ class Sccp_Settings_Actions {
 
             $bc_buttons_top_bottom_padding_mobile = isset( $data['ays_bc_btn_top_bottom_padding_mobile'] ) && $data['ays_bc_btn_top_bottom_padding_mobile'] != '' ? sanitize_text_field( $data['ays_bc_btn_top_bottom_padding_mobile'] ) : '10';
 
+            // Block content password input font size
+            $ays_sccp_bc_input_font_size = isset( $data['ays_sccp_bc_input_font_size'] ) && $data['ays_sccp_bc_input_font_size'] !== '' ? absint( $data['ays_sccp_bc_input_font_size'] ) : '';
+
             $block_content = array(
                 "sccp_bc_width"                             => $ays_sccp_bc_width,
                 "sccp_bc_width_mobile"                      => $ays_sccp_bc_width_mobile,
@@ -536,6 +539,7 @@ class Sccp_Settings_Actions {
                 "bc_cont_input_width"                       => $ays_sccp_bc_input_width,
                 "enable_bc_cont_input_width_mobile"         => $enable_ays_sccp_bc_input_width_mobile,
                 "bc_cont_input_width_mobile"                => $ays_sccp_bc_input_width_mobile,
+                "bc_cont_input_font_size"                   => $ays_sccp_bc_input_font_size,
                 "bc_text_alignment"                         => $sccp_bc_text_alignment,
                 "enable_bc_text_alignment_mobile"           => $enable_sccp_bc_text_alignment_mobile,
                 "bc_text_alignment_mobile"                  => $sccp_bc_text_alignment_mobile,

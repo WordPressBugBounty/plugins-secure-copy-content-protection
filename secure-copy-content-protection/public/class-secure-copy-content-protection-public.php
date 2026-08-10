@@ -898,6 +898,9 @@ class Secure_Copy_Content_Protection_Public {
 		// Block content input width
 		$bc_cont_input_width = (isset($block_content_settings['bc_cont_input_width']) && $block_content_settings['bc_cont_input_width'] != '' && $block_content_settings['bc_cont_input_width'] != 0) ? 'max-width: '. $block_content_settings['bc_cont_input_width'] .'px;': '';
 
+		// Block content password input font size
+		$bc_cont_input_font_size = isset( $block_content_settings['bc_cont_input_font_size'] ) && $block_content_settings['bc_cont_input_font_size'] !== '' ? 'font-size:'. absint( $block_content_settings['bc_cont_input_font_size'] ) .'px;' : '';
+
 		// Enable Block content input width Mobile
         $block_content_settings['enable_bc_cont_input_width_mobile'] = ( isset( $block_content_settings['enable_bc_cont_input_width_mobile'] ) && $block_content_settings['enable_bc_cont_input_width_mobile'] == 'off') ? false : true;
         
@@ -1205,7 +1208,7 @@ class Secure_Copy_Content_Protection_Public {
 							</div>
 							<form action="" method="post" class="conblock_block_form" style="'.$bc_button_style.'">
 								<div class="ays_sccp_bc_form_fields">
-									<input type="password" class="ays_sccp_place_text" required name="pass_form" data-mobile-placeholder="'.$bc_psw_place_text_mobile.'" data-desktop-placeholder="'.$bc_psw_place_text.'" placeholder="'.$bc_psw_place_text.'" style="'.$bc_cont_input_width.'">
+									<input type="password" class="ays_sccp_place_text" required name="pass_form" data-mobile-placeholder="'.$bc_psw_place_text_mobile.'" data-desktop-placeholder="'.$bc_psw_place_text.'" placeholder="'.$bc_psw_place_text.'" style="'.$bc_cont_input_width.' '.$bc_cont_input_font_size.'">
 								</div>
 								<div class="ays_sccp_bc_form_fields">
 								<input type="submit" class="ays_sccp_bc_sbm" name="sub_form_'.$id.'" value="'.$bc_button_text.'" data-mobile-value="'.$bc_button_text_mobile.'" data-desktop-value="'.$bc_button_text.'" style="'.$sccp_bc_btn_color.' '.$sccp_bc_btn_text_color.' '.$sccp_bc_btn_size.' '.$sccp_bc_btn_radius.' '.$sccp_bc_btn_border_width.' '.$sccp_bc_btn_border_style.' '.$sccp_bc_btn_border_color.' '.$sccp_bc_btn_padding.'">

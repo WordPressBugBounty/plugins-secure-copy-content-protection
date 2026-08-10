@@ -139,6 +139,9 @@ $enable_ays_sccp_bc_input_width_mobile = $block_content['enable_bc_cont_input_wi
 // Block content input width Mobile
 $ays_sccp_bc_input_width_mobile = isset( $block_content['bc_cont_input_width_mobile'] ) && $block_content['bc_cont_input_width_mobile'] != '' ? esc_attr( $block_content['bc_cont_input_width_mobile'] ) : $ays_sccp_bc_input_width;
 
+// Block content password input font size
+$ays_sccp_bc_input_font_size = isset( $block_content['bc_cont_input_font_size'] ) && $block_content['bc_cont_input_font_size'] !== '' ? absint( $block_content['bc_cont_input_font_size'] ) : '';
+
 // Block content box text alignment
 $ays_sccp_bc_text_alignment = (isset($block_content['bc_text_alignment']) && sanitize_text_field( $block_content['bc_text_alignment'] ) != '') ? sanitize_text_field( $block_content['bc_text_alignment'] ) : 'center';
 
@@ -2514,6 +2517,27 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_input_width_mobile" name="enable_ays_sccp_bc_input_width_mobile" <?php echo $enable_ays_sccp_bc_input_width_mobile ? 'checked' : '' ?>>
                                         <label for="enable_ays_sccp_bc_input_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <label for="ays_sccp_bc_input_font_size">
+                                    <?php echo esc_html__( 'Password input font size', 'secure-copy-content-protection' ); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__( 'Set the password input font size in pixels. Leave blank to use the website theme default.', 'secure-copy-content-protection' ); ?>">
+                                        <i class="ays_fa ays_fa_info_circle"></i>
+                                    </a>
+                                </label>
+                            </div>
+                            <div class="col-sm-8 ays_divider_left">
+                                <div class="ays_sccp_display_flex">
+                                    <div>
+                                        <input type="number" min="0" class="ays-text-input ays-text-input-short" id="ays_sccp_bc_input_font_size" name="ays_sccp_bc_input_font_size" value="<?php echo esc_attr( $ays_sccp_bc_input_font_size ); ?>"/>
+                                    </div>
+                                    <div class="ays_sccp_dropdown_max_width">
+                                        <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
                                     </div>
                                 </div>
                             </div>
