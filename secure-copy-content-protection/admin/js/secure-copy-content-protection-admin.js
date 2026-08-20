@@ -1844,6 +1844,16 @@
             $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'text-transform': $(this).val() });
         });
 
+        var font_weight_value = $(document).find('#ays_sccp_tooltip_font_weight');
+
+        if( font_weight_value.val() != '' ){
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'font-weight': font_weight_value.val() });
+        }
+
+        $(document).on('change', '#ays_sccp_tooltip_font_weight', function (e) {
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'font-weight': $(this).val() });
+        });
+
         $(document).on('mouseover', '.ays-dashicons', function(){
             var allRateStars = $(document).find('.ays-dashicons');
             var index = allRateStars.index(this);

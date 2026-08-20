@@ -200,6 +200,9 @@ if($enable_sccp_title_text_shadow){
 // Tooltip text transformation
 $tooltip_text_transformation = (isset($data["styles"]['tooltip_text_transformation']) && sanitize_text_field($data["styles"]['tooltip_text_transformation']) != "") ? sanitize_text_field($data["styles"]['tooltip_text_transformation']) : 'none';
 
+// Tooltip font weight
+$tooltip_font_weight = (isset($data["styles"]['tooltip_font_weight']) && sanitize_text_field($data["styles"]['tooltip_font_weight']) != "") ? sanitize_text_field($data["styles"]['tooltip_font_weight']) : 'normal';
+
 // Font size | On Desktop
 $font_size = (isset($data["styles"]['font_size']) && sanitize_text_field($data["styles"]['font_size']) != "") ? absint( sanitize_text_field($data["styles"]['font_size']) ) : 12;
 // Font size | On mobile
@@ -1942,6 +1945,41 @@ $temporarily_do_not_show_fox_lms_popup = false;
                                                     <option value="uppercase" <?php echo $tooltip_text_transformation == 'uppercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Uppercase", 'secure-copy-content-protection' ); ?></option>
                                                     <option value="lowercase" <?php echo $tooltip_text_transformation == 'lowercase' ? 'selected' : ''; ?>><?php echo esc_html__( "Lowercase", 'secure-copy-content-protection' ); ?></option>
                                                     <option value="capitalize" <?php echo $tooltip_text_transformation == 'capitalize' ? 'selected' : ''; ?>><?php echo esc_html__( "Capitalize", 'secure-copy-content-protection' ); ?></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <label for="ays_sccp_tooltip_font_weight">
+                                                    <?php echo esc_html__('Tooltip font weight', 'secure-copy-content-protection' ); ?>
+                                                    <a class="ays_help" data-toggle="tooltip" data-html="true" data-placement="top" title="<?php
+                                                        echo esc_attr__("Specify the font weight of your tooltip text.", 'secure-copy-content-protection') .
+                                                            "<ul style='list-style-type: circle;padding-left: 20px;'>".
+                                                                "<li>". __('Normal – Default font weight','secure-copy-content-protection') ."</li>".
+                                                                "<li>". __('Bold – Bold font weight','secure-copy-content-protection') ."</li>".
+                                                                "<li>". __('Bolder – Bolder than parent element','secure-copy-content-protection') ."</li>".
+                                                                "<li>". __('100-900 – Numeric font weights (100 is lightest, 900 is heaviest)','secure-copy-content-protection') ."</li>".
+                                                            "</ul>";
+                                                        ?>">
+                                                        <i class="ays_fa ays_fa_info_circle"></i>
+                                                    </a>
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-6 ays_divider_left">
+                                                <select name="ays_sccp_tooltip_font_weight" id="ays_sccp_tooltip_font_weight" class="ays-text-input" style="display:block;">
+                                                    <option value="normal" <?php echo $tooltip_font_weight == 'normal' ? 'selected' : ''; ?>><?php echo esc_html__( "Normal", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="bold" <?php echo $tooltip_font_weight == 'bold' ? 'selected' : ''; ?>><?php echo esc_html__( "Bold", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="bolder" <?php echo $tooltip_font_weight == 'bolder' ? 'selected' : ''; ?>><?php echo esc_html__( "Bolder", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="100" <?php echo $tooltip_font_weight == '100' ? 'selected' : ''; ?>><?php echo esc_html__( "100", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="200" <?php echo $tooltip_font_weight == '200' ? 'selected' : ''; ?>><?php echo esc_html__( "200", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="300" <?php echo $tooltip_font_weight == '300' ? 'selected' : ''; ?>><?php echo esc_html__( "300", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="400" <?php echo $tooltip_font_weight == '400' ? 'selected' : ''; ?>><?php echo esc_html__( "400", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="500" <?php echo $tooltip_font_weight == '500' ? 'selected' : ''; ?>><?php echo esc_html__( "500", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="600" <?php echo $tooltip_font_weight == '600' ? 'selected' : ''; ?>><?php echo esc_html__( "600", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="700" <?php echo $tooltip_font_weight == '700' ? 'selected' : ''; ?>><?php echo esc_html__( "700", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="800" <?php echo $tooltip_font_weight == '800' ? 'selected' : ''; ?>><?php echo esc_html__( "800", 'secure-copy-content-protection' ); ?></option>
+                                                    <option value="900" <?php echo $tooltip_font_weight == '900' ? 'selected' : ''; ?>><?php echo esc_html__( "900", 'secure-copy-content-protection' ); ?></option>
                                                 </select>
                                             </div>
                                         </div>

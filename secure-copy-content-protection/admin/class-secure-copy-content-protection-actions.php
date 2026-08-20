@@ -77,6 +77,9 @@ class Secure_Copy_Content_Protection_Actions {
 			// Tooltip text transformation
 			$tooltip_text_transformation = (isset($data['ays_sccp_tooltip_text_transformation']) && sanitize_text_field( $data['ays_sccp_tooltip_text_transformation'] ) != "") ? sanitize_text_field( $data['ays_sccp_tooltip_text_transformation'] ) : 'none';
 
+			// Tooltip font weight
+			$tooltip_font_weight = (isset($data['ays_sccp_tooltip_font_weight']) && sanitize_text_field( $data['ays_sccp_tooltip_font_weight'] ) != "") ? sanitize_text_field( $data['ays_sccp_tooltip_font_weight'] ) : 'normal';
+
 			// Background gradient
 			$enable_background_gradient = ( isset( $data['ays_sccp_enable_background_gradient'] ) && $data['ays_sccp_enable_background_gradient'] == 'on' ) ? 'on' : 'off';
 			$sccp_background_gradient_color_1 = !isset($data['ays_sccp_background_gradient_color_1']) ? '' : $data['ays_sccp_background_gradient_color_1'];
@@ -227,6 +230,7 @@ class Secure_Copy_Content_Protection_Actions {
 				"tooltip_bg_image_position"   => $tooltip_bg_image_position,
 				"tooltip_bg_image_object_fit" => $tooltip_bg_image_object_fit,
 				"tooltip_text_transformation" => $tooltip_text_transformation,
+				"tooltip_font_weight"         => $tooltip_font_weight,
 				"enable_background_gradient"  => $enable_background_gradient,
 				"background_gradient_color_1" => $sccp_background_gradient_color_1,
 				"background_gradient_color_2" => $sccp_background_gradient_color_2,

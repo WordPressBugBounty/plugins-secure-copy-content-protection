@@ -1481,6 +1481,9 @@ class Secure_Copy_Content_Protection_Public {
 			// Tooltip text transformation
 			$tooltip_text_transformation = (isset($style['tooltip_text_transformation']) && sanitize_text_field( $style['tooltip_text_transformation'] ) != "") ? sanitize_text_field( $style['tooltip_text_transformation'] ) : 'none';
 
+			// Tooltip font weight
+			$tooltip_font_weight = (isset($style['tooltip_font_weight']) && sanitize_text_field( $style['tooltip_font_weight'] ) != "") ? sanitize_text_field( $style['tooltip_font_weight'] ) : 'normal';
+
 			// Do not store IP adressess 
         	$sccp_disable_user_ip = (isset($settings_options['sccp_disable_user_ip']) && $settings_options['sccp_disable_user_ip'] == 'on') ? true : false;
 
@@ -1621,6 +1624,7 @@ class Secure_Copy_Content_Protection_Public {
                             color: ' . esc_attr($styles["text_color"]) . ';
                             padding: ' . esc_attr($styles["tooltip_padding_top_bottom"]) . 'px ' . esc_attr($styles["tooltip_padding_left_right"]) . 'px;
                             text-transform: ' . esc_attr($tooltip_text_transformation) . ';
+                            font-weight: ' . esc_attr($tooltip_font_weight) . ';
 							'. esc_attr($tooltip_title_shadow) .';
                         }
                         
