@@ -3,8 +3,8 @@ Contributors: ays-pro
 Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
-Tested up to: 7.0
-Stable tag: 5.2.4
+Tested up to: 7.1
+Stable tag: 5.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -262,6 +262,11 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 
 == Changelog ==
+
+= 5.2.5 ( August 27, 2026 ) =
+* Added: Tooltip line height
+* Updated: POT file
+* Tested: Compatible up to WordPress 7.1
 
 = 5.2.4 ( August 19, 2026 ) =
 * Added: Tooltip font weight option in the Styles tab

@@ -1348,6 +1348,7 @@ class Secure_Copy_Content_Protection_Public {
 			    'sccp_text_shadow_z_offset' => 3,
 				"border_width"     => "1",
 				"letter_spacing"   => "0",
+				"line_height"      => "0",
 				"border_radius"    => "3",
 				"border_style"     => "solid",
 				"tooltip_position" => "mouse",
@@ -1383,6 +1384,7 @@ class Secure_Copy_Content_Protection_Public {
 				"sccp_text_shadow_z_offset"  	=> isset($style['sccp_text_shadow_z_offset']) ? $style['sccp_text_shadow_z_offset'] : 3,
 
 				"letter_spacing"     	=> isset($style['letter_spacing']) ? $style['letter_spacing'] : "0",
+				"line_height"         	=> isset($style['line_height']) ? absint($style['line_height']) : "0",
 				"border_width"     		=> isset($style['border_width']) ? $style['border_width'] : "1",
 				"border_radius"    		=> isset($style['border_radius']) ? $style['border_radius'] : "3",
 				"border_style"     		=> isset($style['border_style']) ? $style['border_style'] : "solid",
@@ -1625,6 +1627,7 @@ class Secure_Copy_Content_Protection_Public {
                             padding: ' . esc_attr($styles["tooltip_padding_top_bottom"]) . 'px ' . esc_attr($styles["tooltip_padding_left_right"]) . 'px;
                             text-transform: ' . esc_attr($tooltip_text_transformation) . ';
                             font-weight: ' . esc_attr($tooltip_font_weight) . ';
+                            line-height: ' . (isset($styles["line_height"]) && esc_attr($styles["line_height"]) != "0" ? esc_attr($styles["line_height"]) . 'px' : 'normal') . ';
 							'. esc_attr($tooltip_title_shadow) .';
                         }
                         
@@ -1632,10 +1635,12 @@ class Secure_Copy_Content_Protection_Public {
                             color: ' . esc_attr($styles["text_color"]) . ';
                             font-size: ' . (isset($styles["font_size"]) ? esc_attr($styles["font_size"]) : "12") . 'px;
                             letter-spacing:' . esc_attr($styles["letter_spacing"]) . 'px;
+                            line-height: ' . (isset($styles["line_height"]) && esc_attr($styles["line_height"]) != "0" ? esc_attr($styles["line_height"]) . 'px' : 'normal') . ';
                         }
 
                         #ays_tooltip_block {
                             font-size: ' . (isset($styles["font_size"]) ? esc_attr($styles["font_size"]) : "12") . 'px;
+                            line-height: ' . (isset($styles["line_height"]) && esc_attr($styles["line_height"]) != "0" ? esc_attr($styles["line_height"]) . 'px' : 'normal') . ';
                             backdrop-filter: blur('. esc_attr($styles["bg_blur"]) .'px);
                         }
 

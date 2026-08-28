@@ -374,9 +374,16 @@
             }, 100);
 
             $(document).find('#ays_tooltip').css({
-                "background-image": "unset", 
-                "padding": "5", 
-                "opacity": "1"
+                "background-image": "unset",
+                "padding": "5",
+                "opacity": "1",
+                "line-height": "normal",
+                "letter-spacing": "0px"
+            });
+
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({
+                "line-height": "normal",
+                "letter-spacing": "0px"
             });
 
             $(document).find('#ays_tooltip_block').css('backdrop-filter', 'blur(0px)');
@@ -394,6 +401,7 @@
             $(document).find('#font_size').val(12).change();
             $(document).find('#border_width').val(1).change();
             $(document).find('#tooltip_letter_spacing').val(0).change();
+            $(document).find('#tooltip_line_height').val(0).change();
             $(document).find('#border_radius').val(3).change();
             $(document).find('#border_style').val('solid').change();
             $(document).find('#tooltip_position').val('mouse').change();
@@ -799,7 +807,15 @@
         });
         $('#tooltip_letter_spacing').on('change', function () {
             let val = $(this).val();
-            $('#ays_tooltip').css('letter-spacing', val + 'px')
+            $('#ays_tooltip, #ays_tooltip > *').css('letter-spacing', val + 'px')
+        });
+        $('#tooltip_line_height').on('change', function () {
+            let val = $(this).val();
+            if (val != 0) {
+                $('#ays_tooltip, #ays_tooltip > *').css('line-height', val + 'px')
+            } else {
+                $('#ays_tooltip, #ays_tooltip > *').css('line-height', 'normal')
+            }
         });
         $('#border_radius').on('change', function () {
             let val = $(this).val();
@@ -871,6 +887,12 @@
         })
 
         $('#ays_tooltip_block').children().css('font-size', $('#font_size').val() + 'px');
+        $('#ays_tooltip, #ays_tooltip > *').css('letter-spacing', $('#tooltip_letter_spacing').val() + 'px');
+        if ($('#tooltip_line_height').val() != 0) {
+            $('#ays_tooltip, #ays_tooltip > *').css('line-height', $('#tooltip_line_height').val() + 'px');
+        } else {
+            $('#ays_tooltip, #ays_tooltip > *').css('line-height', 'normal');
+        }
         $('#ays_tooltip').children().css('margin', "0");
 
 
@@ -1852,6 +1874,32 @@
 
         $(document).on('change', '#ays_sccp_tooltip_font_weight', function (e) {
             $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'font-weight': $(this).val() });
+        });
+
+        var letter_spacing_value = $(document).find('#tooltip_letter_spacing');
+
+        if( letter_spacing_value.val() != '' ){
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'letter-spacing': letter_spacing_value.val() + 'px' });
+        }
+
+        $(document).on('change', '#tooltip_letter_spacing', function (e) {
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'letter-spacing': $(this).val() + 'px' });
+        });
+
+        var line_height_value = $(document).find('#tooltip_line_height');
+
+        if( line_height_value.val() != '' && line_height_value.val() != '0' ){
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container, #ays_tooltip_block, #ays_tooltip_block > *').css({'line-height': line_height_value.val() + 'px' });
+        } else {
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container, #ays_tooltip_block, #ays_tooltip_block > *').css({'line-height': 'normal' });
+        }
+
+        $(document).on('change', '#tooltip_line_height', function (e) {
+            if ($(this).val() != '0') {
+                $(document).find('.ays_tooltip_container .ays-tooltip-live-container, #ays_tooltip_block, #ays_tooltip_block > *').css({'line-height': $(this).val() + 'px' });
+            } else {
+                $(document).find('.ays_tooltip_container .ays-tooltip-live-container, #ays_tooltip_block, #ays_tooltip_block > *').css({'line-height': 'normal' });
+            }
         });
 
         $(document).on('mouseover', '.ays-dashicons', function(){
