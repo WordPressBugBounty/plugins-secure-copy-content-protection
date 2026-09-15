@@ -142,6 +142,13 @@ $ays_sccp_bc_input_width_mobile = isset( $block_content['bc_cont_input_width_mob
 // Block content password input font size
 $ays_sccp_bc_input_font_size = isset( $block_content['bc_cont_input_font_size'] ) && $block_content['bc_cont_input_font_size'] !== '' ? absint( $block_content['bc_cont_input_font_size'] ) : '';
 
+// Enable Block content password input font size Mobile
+$block_content['enable_bc_cont_input_font_size_mobile'] = isset( $block_content['enable_bc_cont_input_font_size_mobile'] ) && $block_content['enable_bc_cont_input_font_size_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_bc_input_font_size_mobile = $block_content['enable_bc_cont_input_font_size_mobile'] == 'on' ?  true : false;
+
+// Block content password input font size Mobile
+$ays_sccp_bc_input_font_size_mobile = isset( $block_content['bc_cont_input_font_size_mobile'] ) && $block_content['bc_cont_input_font_size_mobile'] != '' ? esc_attr( $block_content['bc_cont_input_font_size_mobile'] ) : $ays_sccp_bc_input_font_size;
+
 // Block content box text alignment
 $ays_sccp_bc_text_alignment = (isset($block_content['bc_text_alignment']) && sanitize_text_field( $block_content['bc_text_alignment'] ) != '') ? sanitize_text_field( $block_content['bc_text_alignment'] ) : 'center';
 
@@ -2532,12 +2539,37 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </label>
                             </div>
                             <div class="col-sm-8 ays_divider_left">
-                                <div class="ays_sccp_display_flex">
-                                    <div>
-                                        <input type="number" min="0" class="ays-text-input ays-text-input-short" id="ays_sccp_bc_input_font_size" name="ays_sccp_bc_input_font_size" value="<?php echo esc_attr( $ays_sccp_bc_input_font_size ); ?>"/>
+                                <div class="ays_toggle_mobile_parent">
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_bc_input_font_size_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                	<input type="number" min="0" class="ays-text-input ays-text-input-short" id="ays_sccp_bc_input_font_size" name="ays_sccp_bc_input_font_size" value="<?php echo esc_attr( $ays_sccp_bc_input_font_size ); ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
+                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_width_mobile_container" style=" <?php echo ( $enable_ays_sccp_bc_input_font_size_mobile ) ? '' : 'display:none'; ?>">
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" min="0" class="ays-text-input ays-text-input-short" id="ays_sccp_bc_input_font_size_mobile" name="ays_sccp_bc_input_font_size_mobile" value="<?php echo esc_attr( $ays_sccp_bc_input_font_size_mobile ); ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
                                     </div>
-                                    <div class="ays_sccp_dropdown_max_width">
-                                        <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_bc_input_font_size_mobile" name="enable_ays_sccp_bc_input_font_size_mobile" <?php echo $enable_ays_sccp_bc_input_font_size_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_bc_input_font_size_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>

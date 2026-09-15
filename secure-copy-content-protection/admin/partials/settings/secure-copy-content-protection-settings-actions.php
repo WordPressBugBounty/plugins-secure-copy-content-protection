@@ -505,6 +505,12 @@ class Sccp_Settings_Actions {
             // Block content password input font size
             $ays_sccp_bc_input_font_size = isset( $data['ays_sccp_bc_input_font_size'] ) && $data['ays_sccp_bc_input_font_size'] !== '' ? absint( $data['ays_sccp_bc_input_font_size'] ) : '';
 
+            // Enable Block content password input font size Mobile
+            $enable_ays_sccp_bc_input_font_size_mobile = isset( $data['enable_ays_sccp_bc_input_font_size_mobile'] ) && $data['enable_ays_sccp_bc_input_font_size_mobile'] == 'on' ? 'on' : 'off';
+
+            // Block content password input font size Mobile
+            $ays_sccp_bc_input_font_size_mobile = isset( $data['ays_sccp_bc_input_font_size_mobile'] ) && $data['ays_sccp_bc_input_font_size_mobile'] != '' ? absint( $data['ays_sccp_bc_input_font_size_mobile'] ) : '';
+
             $block_content = array(
                 "sccp_bc_width"                             => $ays_sccp_bc_width,
                 "sccp_bc_width_mobile"                      => $ays_sccp_bc_width_mobile,
@@ -540,6 +546,8 @@ class Sccp_Settings_Actions {
                 "enable_bc_cont_input_width_mobile"         => $enable_ays_sccp_bc_input_width_mobile,
                 "bc_cont_input_width_mobile"                => $ays_sccp_bc_input_width_mobile,
                 "bc_cont_input_font_size"                   => $ays_sccp_bc_input_font_size,
+                "enable_bc_cont_input_font_size_mobile"     => $enable_ays_sccp_bc_input_font_size_mobile,
+                "bc_cont_input_font_size_mobile"            => $ays_sccp_bc_input_font_size_mobile,
                 "bc_text_alignment"                         => $sccp_bc_text_alignment,
                 "enable_bc_text_alignment_mobile"           => $enable_sccp_bc_text_alignment_mobile,
                 "bc_text_alignment_mobile"                  => $sccp_bc_text_alignment_mobile,

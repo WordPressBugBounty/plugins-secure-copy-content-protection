@@ -426,7 +426,7 @@ class Secure_Copy_Content_Protection_Admin {
 			array(
 			$this,
 			'display_plugin_setup_page'
-		), SCCP_ADMIN_URL . '/images/icons/icon-sccp-128x128.svg', 6);
+		), SCCP_ADMIN_URL . '/images/icons/icon-sccp-128x128.svg', 25.20);
 		add_action( "load-$hook_sccp", array( $this, 'add_tabs' ));
 
 		$hook_subscribe_to_view = add_submenu_page( $this->plugin_name,

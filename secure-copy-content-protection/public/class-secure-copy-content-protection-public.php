@@ -901,6 +901,16 @@ class Secure_Copy_Content_Protection_Public {
 		// Block content password input font size
 		$bc_cont_input_font_size = isset( $block_content_settings['bc_cont_input_font_size'] ) && $block_content_settings['bc_cont_input_font_size'] !== '' ? 'font-size:'. absint( $block_content_settings['bc_cont_input_font_size'] ) .'px;' : '';
 
+		// Block Block content password input font size Mobile
+        $block_content_settings['enable_bc_cont_input_font_size_mobile'] = ( isset( $block_content_settings['enable_bc_cont_input_font_size_mobile'] ) && $block_content_settings['enable_bc_cont_input_font_size_mobile'] == 'off') ? false : true;
+        
+        // Block content password input font size Mobile
+        if ( $block_content_settings['enable_bc_cont_input_font_size_mobile'] ) {
+            $bc_cont_input_font_size_mobile = ( isset( $block_content_settings['bc_cont_input_font_size_mobile'] ) && $block_content_settings['bc_cont_input_font_size_mobile'] != '' ) ?  'font-size:'. absint( $block_content_settings['bc_cont_input_font_size_mobile'] ) .'px !important;' : $bc_cont_input_font_size;
+        } else {
+            $bc_cont_input_font_size_mobile = $bc_cont_input_font_size;
+        }
+
 		// Enable Block content input width Mobile
         $block_content_settings['enable_bc_cont_input_width_mobile'] = ( isset( $block_content_settings['enable_bc_cont_input_width_mobile'] ) && $block_content_settings['enable_bc_cont_input_width_mobile'] == 'off') ? false : true;
         
@@ -1188,6 +1198,7 @@ class Secure_Copy_Content_Protection_Public {
 								}
 	                        	.conblock_div input[type="password"] {
 	                        		'. $bc_cont_input_width_mobile .'
+	                        		'. $bc_cont_input_font_size_mobile .'
 	                        	}
 	                        	input[type="submit"].ays_sccp_bc_sbm {
 	                        		'. $sccp_bc_btn_color_mobile .'
