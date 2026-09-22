@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
 Tested up to: 7.1
-Stable tag: 5.2.7
+Stable tag: 5.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -263,6 +263,10 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 == Changelog ==
 
+= 5.2.8 ( Sep 22, 2026 ) =
+* Added: User IP Address message variable on the general settings
+* Tested: Compatible up to WordPress 7.1.1
+
 = 5.2.7 ( Sep 15, 2026 ) =
 * Added: Mobile Password input font size option for Block content to view box on the general settings
 * Improved: Some changes on the admin dashboard
@@ -277,7 +281,6 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 = 5.2.4 ( August 19, 2026 ) =
 * Added: Tooltip font weight option in the Styles tab
-
 
 = 5.2.3 ( August 06, 2026 ) =
 * Added: Password input font size option for Block content to view box on the general settings

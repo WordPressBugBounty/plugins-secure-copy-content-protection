@@ -1507,6 +1507,7 @@ class Secure_Copy_Content_Protection_Public {
 	        $user_email 	 	  = '';
 	        $user_website_url     = '';
 	        $user_wordpress_roles = '';
+	        $user_ip_address      = '';
 	        $user_data = wp_get_current_user();
 	        $user_id = get_current_user_id();
 	        $current_date = date_i18n( 'M d, Y', current_time('timestamp') );
@@ -1537,6 +1538,8 @@ class Secure_Copy_Content_Protection_Public {
 	                }
 
 	                $user_website_url = ( isset( $current_user_data->user_url ) && ! empty( $current_user_data->user_url ) ) ? $current_user_data->user_url : "";
+
+	                $user_ip_address = $this->ays_sccp_get_user_ip();
 	            }
 	    	}else{
 	    		$user_id = '';
@@ -1585,34 +1588,35 @@ class Secure_Copy_Content_Protection_Public {
 	        }
 	        
 			$message_data = array(                    
-                'user_first_name' 			=> $user_first_name,
-                'user_last_name' 			=> $user_last_name,                   
-                'user_wordpress_email' 		=> $user_email,                  
-                'user_display_name' 		=> $user_display_name,
-                'user_nickname'     		=> $user_nickname,
-                'user_wordpress_roles' 		=> $user_wordpress_roles,
-                'user_website_url' 			=> $user_website_url,
-                'current_user_ip'       	=> $current_user_ip,
-                'admin_email'       		=> $super_admin_email,
-                'post_author_nickname'  	=> $post_author_nickname,
-                'post_author_email'			=> $post_author_email,
-                'post_author_display_name'	=> $post_author_display_name,
-                'post_author_first_name'	=> $post_author_first_name,
-                'post_author_last_name'		=> $post_author_last_name,
-                'post_author_website_url'	=> $post_author_website_url,
-                'post_author_roles'			=> $post_author_roles,
-                'user_id'              		=> $user_id,
-                'user_registered'           => $user_registered,
-                'current_date'          	=> $current_date,
-                'current_time'          	=> $current_time,
-                'current_day'          		=> $current_day,
-                'current_month'          	=> $current_month,
-                'current_page_title'		=> $current_page_title,
-                'site_title'				=> $get_site_title,
-                'site_description'			=> $get_site_description,
-                'post_id'					=> $current_post_id,
-                'post_title'                => $post_title,
-                'home_page_url'             => $home_page_url,
+                'user_first_name' 				=> $user_first_name,
+                'user_last_name' 				=> $user_last_name,                   
+                'user_wordpress_email' 			=> $user_email,                  
+                'user_display_name' 			=> $user_display_name,
+                'user_nickname'     			=> $user_nickname,
+                'user_wordpress_roles' 			=> $user_wordpress_roles,
+                'user_website_url' 				=> $user_website_url,
+                'current_user_ip'       		=> $current_user_ip,
+                'admin_email'       			=> $super_admin_email,
+                'post_author_nickname'  		=> $post_author_nickname,
+                'post_author_email'				=> $post_author_email,
+                'post_author_display_name'		=> $post_author_display_name,
+                'post_author_first_name'		=> $post_author_first_name,
+                'post_author_last_name'			=> $post_author_last_name,
+                'post_author_website_url'		=> $post_author_website_url,
+                'post_author_roles'				=> $post_author_roles,
+                'user_ip_address'           	=> $user_ip_address,
+                'user_id'              			=> $user_id,
+                'user_registered'           	=> $user_registered,
+                'current_date'          		=> $current_date,
+                'current_time'          		=> $current_time,
+                'current_day'          			=> $current_day,
+                'current_month'          		=> $current_month,
+                'current_page_title'			=> $current_page_title,
+                'site_title'					=> $get_site_title,
+                'site_description'				=> $get_site_description,
+                'post_id'						=> $current_post_id,
+                'post_title'                	=> $post_title,
+                'home_page_url'             	=> $home_page_url,
             );
 
 			$notf_text = $this->sccp_replace_message_variables($notf_text, $message_data);
@@ -1829,6 +1833,27 @@ class Secure_Copy_Content_Protection_Public {
 			return $response;
 		}
 	}
+
+	private static function ays_sccp_get_user_ip() {
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP')) {
+            $ipaddress = getenv('HTTP_CLIENT_IP');
+        } else if (getenv('HTTP_X_FORWARDED_FOR')) {
+            $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        } else if (getenv('HTTP_X_FORWARDED')) {
+            $ipaddress = getenv('HTTP_X_FORWARDED');
+        } else if (getenv('HTTP_FORWARDED_FOR')) {
+            $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        } else if (getenv('HTTP_FORWARDED')) {
+            $ipaddress = getenv('HTTP_FORWARDED');
+        } else if (getenv('REMOTE_ADDR')) {
+            $ipaddress = getenv('REMOTE_ADDR');
+        } else {
+            $ipaddress = 'UNKNOWN';
+        }
+
+        return sanitize_text_field($ipaddress);
+    }
 
 	// All Page block
 	// public function ays_block_all_page(){

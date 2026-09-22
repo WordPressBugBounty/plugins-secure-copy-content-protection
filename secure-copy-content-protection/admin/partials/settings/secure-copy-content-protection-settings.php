@@ -704,6 +704,15 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                 </p>
                                 <p class="vmessage">
                                     <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%user_ip_address%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo esc_html__( "The user's IP address.", 'secure-copy-content-protection' ); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
                                         <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%user_id%%" />
                                     </strong>
                                     <span> - </span>
