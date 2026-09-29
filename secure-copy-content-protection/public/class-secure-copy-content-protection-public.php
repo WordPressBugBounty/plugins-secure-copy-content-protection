@@ -1835,7 +1835,9 @@ class Secure_Copy_Content_Protection_Public {
 	}
 
 	private static function ays_sccp_get_user_ip() {
-        $ipaddress = '';
+
+        $ipaddress = false;
+        
         if (getenv('HTTP_CLIENT_IP')) {
             $ipaddress = getenv('HTTP_CLIENT_IP');
         } else if (getenv('HTTP_X_FORWARDED_FOR')) {
@@ -1846,99 +1848,19 @@ class Secure_Copy_Content_Protection_Public {
             $ipaddress = getenv('HTTP_FORWARDED_FOR');
         } else if (getenv('HTTP_FORWARDED')) {
             $ipaddress = getenv('HTTP_FORWARDED');
-        } else if (getenv('REMOTE_ADDR')) {
-            $ipaddress = getenv('REMOTE_ADDR');
-        } else {
-            $ipaddress = 'UNKNOWN';
         }
 
-        return sanitize_text_field($ipaddress);
+        if ( $ipaddress !== false && filter_var( $ipaddress, FILTER_VALIDATE_IP ) !== false ) {
+            return $ipaddress;
+        }
+
+        $remote_address = getenv('REMOTE_ADDR');
+        if ( $remote_address !== false && filter_var( $remote_address, FILTER_VALIDATE_IP ) !== false ) {
+            return $remote_address;
+        }
+
+        return 'UNKNOWN';
     }
-
-	// All Page block
-	// public function ays_block_all_page(){
-	// 	if( is_admin()) {
-	// 		return;
-	// 	}
-	// 	$is_login_page = $this->is_login_page();
-
-	// 	$ayc_sccp = $this->ays_get_sccp();
-	// 	$ayc_sccp_optons = isset($ayc_sccp["options"]) && $ayc_sccp["options"] != "" ? json_decode($ayc_sccp["options"] , true) : array();
-	// 	$ays_sccp_password_check = isset($ayc_sccp_optons['sccp_web_password_check']) && $ayc_sccp_optons['sccp_web_password_check'] == "on" ? true : false;
-	// 	$ays_sccp_password = isset($ayc_sccp_optons['sccp_web_password']) && $ayc_sccp_optons['sccp_web_password'] != "" ? esc_attr($ayc_sccp_optons['sccp_web_password']) : "";
-	// 	$message = "";
-	// 	if($ays_sccp_password_check && !$is_login_page){
-	// 		session_start();
-	// 		$current_pass = isset($_SESSION['ays_sccp_web_passowrd']) ? $_SESSION['ays_sccp_web_passowrd'] : "";
-	// 		$check_pass_once = isset($_SESSION['ays_sccp_web_passowrd_once']) ? $_SESSION['ays_sccp_web_passowrd_once'] : false;
-	// 		if(isset($_POST['ays_sccp_password_submit'])){
-	// 			if($ays_sccp_password == $_POST['ays_sccp_password_field']){
-	// 				$_SESSION['ays_sccp_web_passowrd_once'] = true;
-	// 				if(!isset($_SESSION['ays_sccp_web_passowrd'])){
-	// 					$_SESSION['ays_sccp_web_passowrd'] = $ays_sccp_password;
-	// 					$current_pass = $_SESSION['ays_sccp_web_passowrd'];
-	// 				}
-	// 			}
-	// 			else{
-	// 				$message = "<div class='ays_sccp_pass_box'><span style='color: red;'>Wrong Password</span></div>";
-	// 			}
-		
-	// 		}
-	// 		$content = "<style>
-	// 						div#ays_sccp_website_password{
-	// 							height: 100%;
-	// 							display: flex;
-	// 							justify-content: center;
-	// 							align-items: center;
-	// 						}
-	// 						div.ays_sccp_pass_box{
-	// 							text-align: center;
-	// 						}
-	// 						div.ays_sccp_pass_box input[type='password']{
-	// 							width: 100%;
-	// 							padding: 10px 7px;
-	// 							font-size: 18px;
-	// 						}
-	// 						div.ays_sccp_pass_box{
-	// 							margin-top: 15px;
-	// 						}
-	// 						div.ays_sccp_pass_box input[name='ays_sccp_password_submit']{
-	// 							background-color: #0073aa;
-	// 							padding: 10px;
-	// 							border: 0;
-	// 							outline: none;
-	// 							border-radius: 4px;
-	// 							color: white;
-	// 							font-size: 17px;
-	// 							cursor: pointer;
-	// 						}
-	// 						label[for='ays_sccp_password_field']{
-	// 							font-size: 20px;
-	// 						}
-	// 					</style>";
-	// 			if($current_pass != $ays_sccp_password && !$check_pass_once){
-	// 				$content .= "<div id='ays_sccp_website_password'>
-	// 								<form method='post'>
-	// 									<div class='ays_sccp_pass_box'>
-	// 										<label for='ays_sccp_password_field'>You need to Enter right password</label>					
-	// 									</div>";
-	// 						$content .= $message;
-	// 						$content .= "<div class='conblock_icon ays_sccp_pass_box'>
-	// 										<img src='".SCCP_PUBLIC_URL."/images/lock.png' class='ays_sccp_lock' alt='Lock'>
-	// 									</div>
-	// 									<div class='ays_sccp_pass_box'>
-	// 										<input type='password' name='ays_sccp_password_field'>					
-	// 									</div>
-	// 									<div class='ays_sccp_pass_box'>
-	// 										<input type='submit' name='ays_sccp_password_submit'>
-	// 									</div>
-	// 								</form>
-	// 							</div>";
-	// 					echo $content;
-	// 				die();
-	// 		}
-	// 	}
-	// }
 
 	public static function ays_autoembed( $content ) {
         global $wp_embed;
