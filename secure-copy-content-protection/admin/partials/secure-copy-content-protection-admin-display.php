@@ -217,6 +217,9 @@ $loader_iamge = "<span class='ays_display_none ays_sccp_loader_box'><img src='".
 // Tooltip letter spacing
 $tooltip_letter_spacing = (isset($data["styles"][ 'letter_spacing' ]) && $data["styles"][ 'letter_spacing' ] != '') ? stripslashes ( absint( $data["styles"][ 'letter_spacing' ] ) ) : 0;
 
+// Tooltip word spacing
+$tooltip_word_spacing = (isset($data["styles"][ 'word_spacing' ]) && $data["styles"][ 'word_spacing' ] != '') ? stripslashes ( absint( $data["styles"][ 'word_spacing' ] ) ) : 0;
+
 // Tooltip line height
 $tooltip_line_height = (isset($data["styles"][ 'line_height' ]) && $data["styles"][ 'line_height' ] != '') ? stripslashes ( absint( $data["styles"][ 'line_height' ] ) ) : 0;
 
@@ -2009,6 +2012,25 @@ $temporarily_do_not_show_fox_lms_popup = false;
                                         <hr>
                                         <div class="copy_protection_container form-group row">
                                             <div class="col-sm-6">
+                                                <label for="tooltip_word_spacing"><?php echo  esc_html__('Tooltip word spacing', 'secure-copy-content-protection'); ?></label>
+                                                <a class="ays_help" data-toggle="tooltip"
+                                                   title="<?php echo  esc_attr__('Define the space between the words of the tooltip text in pixels. Note: The default value for this option is 0.', 'secure-copy-content-protection') ?>">
+                                                    <i class="ays_fa ays_fa_info_circle"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 ays_divider_left ays_sccp_display_flex">
+                                                <div>
+                                                   <input type="number" id="tooltip_word_spacing" name="tooltip_word_spacing" class="form-control"
+                                                       value="<?php echo $tooltip_word_spacing; ?>"/>
+                                                </div>
+                                                <div class="ays_sccp_dropdown_max_width">
+                                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="copy_protection_container form-group row">
+                                            <div class="col-sm-6">
                                                 <label for="tooltip_line_height"><?php echo  esc_html__('Tooltip line height', 'secure-copy-content-protection'); ?></label>
                                                 <a class="ays_help" data-toggle="tooltip"
                                                    title="<?php echo  esc_attr__('Define the line height of the tooltip text in pixels. Note: The default value for this option is 0.', 'secure-copy-content-protection') ?>">
@@ -2344,6 +2366,7 @@ $temporarily_do_not_show_fox_lms_popup = false;
                                                     border-color: <?php echo  isset($data["styles"]["border_color"]) ? stripslashes( esc_attr($data["styles"]["border_color"] ) ) : '#b7b7b7' ?>;
                                                     box-shadow: <?php echo  isset($data["styles"]["boxshadow_color"]) ? stripslashes( esc_attr(  $data["styles"]["boxshadow_color"] ) ). ' ' . $box_shadow_offsets .' 1px' : 'rgba(0,0,0,0)' ?>;
                                                     letter-spacing: <?php echo  isset($data["styles"]["letter_spacing"]) ? $data["styles"]["letter_spacing"].'px' : '0' ?>;
+                                                    word-spacing: <?php echo  isset($data["styles"]["word_spacing"]) ? $data["styles"]["word_spacing"].'px' : '0' ?>;
                                                     line-height: <?php echo  isset($data["styles"]["line_height"]) && $data["styles"]["line_height"] != '0' ? $data["styles"]["line_height"].'px' : 'normal' ?>;
                                                     border-width: <?php echo  isset($data["styles"]["border_width"]) ? $data["styles"]["border_width"].'px' : '1px' ?>;
                                                     border-radius: <?php echo  isset($data["styles"]["border_radius"]) ? $data["styles"]["border_radius"].'px' : '3px' ?>;
@@ -2359,6 +2382,7 @@ $temporarily_do_not_show_fox_lms_popup = false;
                                                 #ays_tooltip > * {
                                                     color: <?php echo  !empty($data["styles"]["text_color"]) ? stripslashes(esc_attr( $data["styles"]["text_color"] ) ) : '#ff0000' ?>;
                                                     letter-spacing: <?php echo  isset($data["styles"]["letter_spacing"]) ? $data["styles"]["letter_spacing"].'px' : '0' ?>;
+                                                    word-spacing: <?php echo  isset($data["styles"]["word_spacing"]) ? $data["styles"]["word_spacing"].'px' : '0' ?>;
                                                     line-height: <?php echo  isset($data["styles"]["line_height"]) && $data["styles"]["line_height"] != '0' ? $data["styles"]["line_height"].'px' : 'normal' ?>;
                                                 }
 

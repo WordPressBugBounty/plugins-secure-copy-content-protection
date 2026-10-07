@@ -378,12 +378,14 @@
                 "padding": "5",
                 "opacity": "1",
                 "line-height": "normal",
-                "letter-spacing": "0px"
+                "letter-spacing": "0px",
+                "word-spacing": "0px"
             });
 
             $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({
                 "line-height": "normal",
-                "letter-spacing": "0px"
+                "letter-spacing": "0px",
+                "word-spacing": "0px"
             });
 
             $(document).find('#ays_tooltip_block').css('backdrop-filter', 'blur(0px)');
@@ -401,6 +403,7 @@
             $(document).find('#font_size').val(12).change();
             $(document).find('#border_width').val(1).change();
             $(document).find('#tooltip_letter_spacing').val(0).change();
+            $(document).find('#tooltip_word_spacing').val(0).change();
             $(document).find('#tooltip_line_height').val(0).change();
             $(document).find('#border_radius').val(3).change();
             $(document).find('#border_style').val('solid').change();
@@ -812,6 +815,10 @@
             let val = $(this).val();
             $('#ays_tooltip, #ays_tooltip > *').css('letter-spacing', val + 'px')
         });
+        $('#tooltip_word_spacing').on('change', function () {
+            let val = $(this).val();
+            $('#ays_tooltip, #ays_tooltip > *').css('word-spacing', val + 'px')
+        });
         $('#tooltip_line_height').on('change', function () {
             let val = $(this).val();
             if (val != 0) {
@@ -891,6 +898,7 @@
 
         $('#ays_tooltip_block').children().css('font-size', $('#font_size').val() + 'px');
         $('#ays_tooltip, #ays_tooltip > *').css('letter-spacing', $('#tooltip_letter_spacing').val() + 'px');
+        $('#ays_tooltip, #ays_tooltip > *').css('word-spacing', $('#tooltip_word_spacing').val() + 'px');
         if ($('#tooltip_line_height').val() != 0) {
             $('#ays_tooltip, #ays_tooltip > *').css('line-height', $('#tooltip_line_height').val() + 'px');
         } else {
@@ -1887,6 +1895,16 @@
 
         $(document).on('change', '#tooltip_letter_spacing', function (e) {
             $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'letter-spacing': $(this).val() + 'px' });
+        });
+
+        var word_spacing_value = $(document).find('#tooltip_word_spacing');
+
+        if( word_spacing_value.val() != '' ){
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'word-spacing': word_spacing_value.val() + 'px' });
+        }
+
+        $(document).on('change', '#tooltip_word_spacing', function (e) {
+            $(document).find('.ays_tooltip_container .ays-tooltip-live-container').css({'word-spacing': $(this).val() + 'px' });
         });
 
         var line_height_value = $(document).find('#tooltip_line_height');

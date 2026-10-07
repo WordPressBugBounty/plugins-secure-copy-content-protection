@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/secure-copy-content-protection
 Tags: content copy protection, content protection, copy protection, copyright, disable right click
 Requires at least: 4.0
 Tested up to: 7.1
-Stable tag: 5.2.9
+Stable tag: 5.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -262,6 +262,9 @@ Sure, you can! You can add your preferred CSS selector(s) and they will not be p
 
 
 == Changelog ==
+
+= 5.3.0 ( Oct 06, 2026 ) =
+* Added: Tooltip word spacing option in the Styles tab
 
 = 5.2.9 ( Sep 29, 2026 ) =
 * Tested: Compatible up to WordPress 7.1.2

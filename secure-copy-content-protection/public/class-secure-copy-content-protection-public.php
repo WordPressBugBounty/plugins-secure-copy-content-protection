@@ -1342,31 +1342,32 @@ class Secure_Copy_Content_Protection_Public {
 			$enable_protection = 0;
 			$except_types      = array();
 			$styles            = array(
-				"bg_color"         => "#ffffff",
-				"bg_image"         => "",
-				"tooltip_opacity"  => "1",
-				"bg_blur"  		   => "0",
-				"text_color"       => "#ff0000",
-				"font_size"        => "12",
-				"mobile_font_size" => "12",
-				"border_color"     => "#b7b7b7",
-				"boxshadow_color"  => "rgba(0,0,0,0)",
-				'sccp_box_shadow_x_offset' => 0,
-			    'sccp_box_shadow_y_offset' => 0,
-			    'sccp_box_shadow_z_offset' => 15,
+				"bg_color"         	=> "#ffffff",
+				"bg_image"         	=> "",
+				"tooltip_opacity"  	=> "1",
+				"bg_blur"  		   	=> "0",
+				"text_color"       	=> "#ff0000",
+				"font_size"        	=> "12",
+				"mobile_font_size" 	=> "12",
+				"border_color"     	=> "#b7b7b7",
+				"boxshadow_color"  	=> "rgba(0,0,0,0)",
+				'sccp_box_shadow_x_offset' 	=> 0,
+			    'sccp_box_shadow_y_offset' 	=> 0,
+			    'sccp_box_shadow_z_offset' 	=> 15,
 				'sccp_text_shadow_x_offset' => 2,
 			    'sccp_text_shadow_y_offset' => 2,
 			    'sccp_text_shadow_z_offset' => 3,
-				"border_width"     => "1",
-				"letter_spacing"   => "0",
-				"line_height"      => "0",
-				"border_radius"    => "3",
-				"border_style"     => "solid",
-				"tooltip_position" => "mouse",
-				"tooltip_padding_top_bottom"  => "5",
-				"tooltip_padding_left_right"  => "5",
-				"tooltip_bg_image_position" => "center center",
-				"tooltip_bg_image_object_fit" => "cover",
+				"border_width"     	=> "1",
+				"letter_spacing"   	=> "0",
+				"word_spacing"   	=> "0",
+				"line_height"      	=> "0",
+				"border_radius"    	=> "3",
+				"border_style"     	=> "solid",
+				"tooltip_position" 	=> "mouse",
+				"tooltip_padding_top_bottom"  	=> "5",
+				"tooltip_padding_left_right"  	=> "5",
+				"tooltip_bg_image_position" 	=> "center center",
+				"tooltip_bg_image_object_fit" 	=> "cover",
 			);
 			$notf_text         = __('You cannot copy content of this page', 'secure-copy-content-protection');
 			$audio             = '';
@@ -1395,6 +1396,7 @@ class Secure_Copy_Content_Protection_Public {
 				"sccp_text_shadow_z_offset"  	=> isset($style['sccp_text_shadow_z_offset']) ? $style['sccp_text_shadow_z_offset'] : 3,
 
 				"letter_spacing"     	=> isset($style['letter_spacing']) ? $style['letter_spacing'] : "0",
+				"word_spacing"     		=> isset($style['word_spacing']) ? $style['word_spacing'] : "0",
 				"line_height"         	=> isset($style['line_height']) ? absint($style['line_height']) : "0",
 				"border_width"     		=> isset($style['border_width']) ? $style['border_width'] : "1",
 				"border_radius"    		=> isset($style['border_radius']) ? $style['border_radius'] : "3",
@@ -1650,6 +1652,7 @@ class Secure_Copy_Content_Protection_Public {
                             color: ' . esc_attr($styles["text_color"]) . ';
                             font-size: ' . (isset($styles["font_size"]) ? esc_attr($styles["font_size"]) : "12") . 'px;
                             letter-spacing:' . esc_attr($styles["letter_spacing"]) . 'px;
+                            word-spacing:' . esc_attr($styles["word_spacing"]) . 'px;
                             line-height: ' . (isset($styles["line_height"]) && esc_attr($styles["line_height"]) != "0" ? esc_attr($styles["line_height"]) . 'px' : 'normal') . ';
                         }
 
