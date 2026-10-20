@@ -422,6 +422,11 @@
             $(document).find("#ays_sccp_enable_background_gradient").prop('checked' , false).change();
             $(document).find("#ays_sccp_enable_title_text_shadow").prop('checked' , false).change();
 
+            $(document).find('#ays-sccp-tooltip-position-val').val('center center').change();            
+            $(document).find('#ays-sccp-tooltip-position-mobile-val').val('center center').change();           
+            aysSccpTooltipImagePosition();
+            $(document).find('.ays-tooltip-bg-pos-block').removeClass('active');
+
             $(document).find("#tab5").goToNormal();
         });
 
@@ -1310,6 +1315,7 @@
             $(this).parent().parent().find('a.add-sccp-bg-image').show();
             $(document).find('#ays_tooltip').css({'background-image': 'none'});
             toggleBackgrounGradient();
+            $(document).find('.ays-tooltip-bg-pos-block').removeClass('active');
         });
 
         $(document).on('click', '.ays-remove-sccp-sub-img', function () {
@@ -1379,11 +1385,13 @@
                     element.next().val(attachment.url);
                     $(document).find('.ays-tooltip-live-container').css({'background-image': 'url("'+attachment.url+'")'});
                     element.hide();
+                    $(document).find('.ays-tooltip-bg-pos-block').addClass('active');
                 }else if(element.hasClass('ays-edit-sccp-bg-img')){
                     element.parent().find('.ays-sccp-bg-image-container').fadeIn();
                     element.parent().find('img#ays-sccp-bg-img').attr('src', attachment.url);
                     $(document).find('#ays_sccp_bg_image').val(attachment.url);
                     $(document).find('.ays-tooltip-live-container').css({'background-image': 'url("'+attachment.url+'")'});
+                    $(document).find('.ays-tooltip-bg-pos-block').addClass('active');
                 }else{
                     element.text('Edit Image');
                     element.parent().parent().find('.ays-sccp-image-container').fadeIn();
@@ -1993,6 +2001,46 @@
                     parent.find('.ays-sccp-accordion-options-main-container').attr('data-collapsed', 'true');
                 }, 150);
             }
+        }
+
+        // Tooltip Position tables start
+        $(document).find('table#ays-sccp-tooltip-position-table tr td, table#ays-sccp-tooltip-position-table-mobile tr td').on('click', function(e) {
+            var val = $(this).data('value');
+            var flag = $(this).parents('table').data('flag');
+
+            if (flag == 'sccp_image_position') {
+                $(this).parents('.sccp_position_block').find('.ays-sccp-tooltip-position-val-class').val(val).trigger('change');
+                $('#ays_tooltip').css('background-position', val);
+            } else {
+                $(this).parents('.sccp_position_block').find('.ays-sccp-tooltip- position-mobile-val-class').val(val).trigger('change');
+            }
+
+            aysSccpTooltipImagePosition();
+            
+        });
+        // Tooltip Position tables end
+
+        aysSccpTooltipImagePosition();
+        function aysSccpTooltipImagePosition() {
+            var hiddenVal = $(document).find('.sccp_position_block #ays-sccp-tooltip-position-val').val();
+            var hiddenValMobile = $(document).find('.sccp_position_block #ays-sccp-tooltip-position-mobile-val').val();
+
+            if (hiddenVal == '') {
+                var $this = $(document).find('table#ays-sccp-tooltip-position-table tr td[data-value="center-center"]');
+            }else{
+                var $this = $(document).find('table#ays-sccp-tooltip-position-table tr td[data-value="' + hiddenVal + '"]');
+            }
+
+            if (hiddenValMobile == '') {
+                var $thisMobile = $(document).find('table#ays-sccp-tooltip-position-table-mobile tr td[data-value="center-center"]');
+            }else{
+                var $thisMobile = $(document).find('table#ays-sccp-tooltip-position-table-mobile tr td[data-value="' + hiddenValMobile + '"]');
+            }
+
+            $(document).find('table#ays-sccp-tooltip-position-table td').removeAttr('style');
+            $(document).find('table#ays-sccp-tooltip-position-table-mobile td').removeAttr('style');
+            $this.css('background-color','#3d89e0');
+            $thisMobile.css('background-color','#9964b3');
         }
 
         // Position tables start

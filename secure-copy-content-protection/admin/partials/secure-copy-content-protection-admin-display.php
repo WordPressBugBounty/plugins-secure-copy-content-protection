@@ -1876,7 +1876,7 @@ $temporarily_do_not_show_fox_lms_popup = false;
                                         <!-- AV BG Image End -->
                                         <hr/>
                                         <!-- Tooltip BG Image Position Start -->
-                                        <div class="form-group row">
+                                        <div class="form-group row ays-tooltip-bg-pos-block <?php echo ! isset( $data["styles"]["bg_image"] ) || empty( $data["styles"]["bg_image"] ) ? '' : 'active'; ?>">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_tooltip_bg_image_position">
                                                     <?php echo esc_html__( "Tooltip background image position", 'secure-copy-content-protection' ); ?>
@@ -1885,23 +1885,31 @@ $temporarily_do_not_show_fox_lms_popup = false;
                                                     </a>
                                                 </label>
                                             </div>
-                                            <div class="col-sm-6 ays_divider_left">
-                                                <select id="ays_sccp_tooltip_bg_image_position" name="ays_sccp_tooltip_bg_image_position" class="ays-text-input" style="display:inline-block;">
-                                                    <option value="left top" <?php echo $tooltip_bg_image_position == "left top" ? "selected" : ""; ?>><?php echo esc_html__( "Left Top", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="left center" <?php echo $tooltip_bg_image_position == "left center" ? "selected" : ""; ?>><?php echo esc_html__( "Left Center", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="left bottom" <?php echo $tooltip_bg_image_position == "left bottom" ? "selected" : ""; ?>><?php echo esc_html__( "Left Bottom", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="center top" <?php echo $tooltip_bg_image_position == "center top" ? "selected" : ""; ?>><?php echo esc_html__( "Center Top", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="center center" <?php echo $tooltip_bg_image_position == "center center" ? "selected" : ""; ?>><?php echo esc_html__( "Center Center", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="center bottom" <?php echo $tooltip_bg_image_position == "center bottom" ? "selected" : ""; ?>><?php echo esc_html__( "Center Bottom", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="right top" <?php echo $tooltip_bg_image_position == "right top" ? "selected" : ""; ?>><?php echo esc_html__( "Right Top", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="right center" <?php echo $tooltip_bg_image_position == "right center" ? "selected" : ""; ?>><?php echo esc_html__( "Right Center", 'secure-copy-content-protection' ); ?></option>
-                                                    <option value="right bottom" <?php echo $tooltip_bg_image_position == "right bottom" ? "selected" : ""; ?>><?php echo esc_html__( "Right Bottom", 'secure-copy-content-protection' ); ?></option>
-                                                </select>
+                                            <div class="sccp_position_block col-sm-6 ays_divider_left">
+                                                <table id="ays-sccp-tooltip-position-table" data-flag="sccp_image_position">
+                                                    <tr>
+                                                        <td data-value="left top" data-id='1' title="Left Top"></td>
+                                                        <td data-value="top center"data-id='2' title="Top Center"></td>
+                                                        <td data-value="right top" data-id='3' title="Right Top"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-value="left center" data-id='4' title="Left Center"></td>
+                                                        <td data-value="center center" data-id='5' title="Center Center"></td>
+                                                        <td data-value="right center" data-id='6' title="Right Center"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td data-value="left bottom" data-id='7' title="Left Bottom"></td>
+                                                        <td data-value="center bottom" data-id='8' title="Center Bottom"></td>
+                                                        <td data-value="right bottom" data-id='9' title="Right Bottom"></td>
+                                                    </tr>
+                                                </table>
+                                                <input type="hidden" name="ays_sccp_tooltip_bg_image_position" id="ays-sccp-tooltip-position-val" value="<?php echo $tooltip_bg_image_position; ?>" class="ays-sccp-tooltip-position-val-class">
+                                                
                                             </div>
                                         </div>
                                         <!-- Tooltip BG Image Position End -->
                                         <hr>
-                                        <div class="form-group row">
+                                        <div class="form-group row ays-tooltip-bg-pos-block <?php echo ! isset( $data["styles"]["bg_image"] ) || empty( $data["styles"]["bg_image"] ) ? '' : 'active'; ?>">
                                             <div class="col-sm-6">
                                                 <label for="ays_sccp_tooltip_bg_image_object_fit">
                                                     <?php echo esc_html__( "Tooltip background image object-fit", 'secure-copy-content-protection' ); ?>
