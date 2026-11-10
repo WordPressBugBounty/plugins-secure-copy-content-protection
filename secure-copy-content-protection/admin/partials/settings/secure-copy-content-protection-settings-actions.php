@@ -188,6 +188,15 @@ class Sccp_Settings_Actions {
             // Subscribe Container border width Mobile
             $sub_cont_border_width_mobile = isset( $data['ays_sccp_sub_cont_border_width_mobile'] ) && $data['ays_sccp_sub_cont_border_width_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_cont_border_width_mobile'] ) : '1';
 
+            // Container border radius
+            $sub_cont_border_radius = (isset($data['ays_sccp_sub_cont_border_radius']) && sanitize_text_field( $data['ays_sccp_sub_cont_border_radius'] ) != "") ? sanitize_text_field( $data['ays_sccp_sub_cont_border_radius'] ) : '0';
+
+            // Enable Subscribe Container border radius Mobile
+            $enable_sub_cont_border_radius_mobile = isset( $data['enable_ays_sccp_sub_cont_border_radius_mobile'] ) && $data['enable_ays_sccp_sub_cont_border_radius_mobile'] == 'on' ? 'on' : 'off';
+
+            // Subscribe Container border radius Mobile
+            $sub_cont_border_radius_mobile = isset( $data['ays_sccp_sub_cont_border_radius_mobile'] ) && $data['ays_sccp_sub_cont_border_radius_mobile'] != '' ? sanitize_text_field( $data['ays_sccp_sub_cont_border_radius_mobile'] ) : '0';
+
             // Buttons border style
             $sub_btn_border_style = (isset($data['ays_sccp_sub_btn_border_style']) && $data['ays_sccp_sub_btn_border_style'] != '') ? sanitize_text_field( $data['ays_sccp_sub_btn_border_style'] ) : 'solid';
 
@@ -302,6 +311,9 @@ class Sccp_Settings_Actions {
                 "sub_cont_border_width"                     => $sub_cont_border_width,
                 "enable_sub_cont_border_width_mobile"       => $enable_sub_cont_border_width_mobile,
                 "sub_cont_border_width_mobile"              => $sub_cont_border_width_mobile,
+                "sub_cont_border_radius"                    => $sub_cont_border_radius,
+                "enable_sub_cont_border_radius_mobile"      => $enable_sub_cont_border_radius_mobile,
+                "sub_cont_border_radius_mobile"             => $sub_cont_border_radius_mobile,
                 "sub_btn_border_style"                      => $sub_btn_border_style,
                 "enable_sub_btn_border_style_mobile"        => $enable_sub_btn_border_style_mobile,
                 "sub_btn_border_style_mobile"               => $sub_btn_border_style_mobile,

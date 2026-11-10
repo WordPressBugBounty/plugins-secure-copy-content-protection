@@ -410,6 +410,16 @@ $enable_ays_sccp_sub_cont_border_width_mobile = $subscribe['enable_sub_cont_bord
 // Subscribe box Container border width Mobile
 $ays_sccp_sub_cont_border_width_mobile = isset( $subscribe['sub_cont_border_width_mobile'] ) && $subscribe['sub_cont_border_width_mobile'] != '' ? esc_attr( $subscribe['sub_cont_border_width_mobile'] ) : $ays_sccp_sub_cont_border_width;
 
+// Container border radius
+$ays_sccp_sub_cont_border_radius = (isset($subscribe['sub_cont_border_radius']) && $subscribe['sub_cont_border_radius'] != '') ? $subscribe['sub_cont_border_radius'] : '0';
+
+// Enable Subscribe Container border radius Mobile
+$subscribe['enable_sub_cont_border_radius_mobile'] = isset( $subscribe['enable_sub_cont_border_radius_mobile'] ) && $subscribe['enable_sub_cont_border_radius_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_sccp_sub_cont_border_radius_mobile = $subscribe['enable_sub_cont_border_radius_mobile'] == 'on' ?  true : false;
+
+// Subscribe box Container border radius Mobile
+$ays_sccp_sub_cont_border_radius_mobile = isset( $subscribe['sub_cont_border_radius_mobile'] ) && $subscribe['sub_cont_border_radius_mobile'] != '' ? esc_attr( $subscribe['sub_cont_border_radius_mobile'] ) : $ays_sccp_sub_cont_border_radius;
+
 // Subscribe Container input width
 $ays_sccp_sub_input_width = (isset($subscribe['sub_cont_input_width']) && $subscribe['sub_cont_input_width'] != '' && $subscribe['sub_cont_input_width'] != 0) ? absint( sanitize_text_field($subscribe['sub_cont_input_width'])) : '';
 
@@ -1444,6 +1454,52 @@ $sccp_sub_bg_image_position_mobile = isset( $subscribe['sub_bg_image_position_mo
                                     <div class="ays_sccp_mobile_settings_container">
                                         <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_cont_border_width_mobile" name="enable_ays_sccp_sub_cont_border_width_mobile" <?php echo $enable_ays_sccp_sub_cont_border_width_mobile ? 'checked' : '' ?>>
                                         <label for="enable_ays_sccp_sub_cont_border_width_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <label for='ays_sccp_sub_cont_border_radius'>
+                                    <?php echo esc_html__('Subscribe container border radius', 'secure-copy-content-protection'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Subscribe container border radius in pixels. It accepts only numeric values.','secure-copy-content-protection'); ?>">
+                                        <i class="ays_fa ays_fa_info_circle"></i>
+                                    </a>
+                                </label>
+                            </div>
+                            <div class="col-sm-8 ays_divider_left">
+                                <div class="ays_toggle_mobile_parent">
+                                	<label>
+	                                    <div>
+	                                        <div class="ays_sccp_current_device_name ays_sccp_current_device_name_pc_default_on ays_sccp_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_sccp_sub_cont_border_radius_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'secure-copy-content-protection'); ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_radius' data-alpha="true" name='ays_sccp_sub_cont_border_radius' value="<?php echo $ays_sccp_sub_cont_border_radius; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+	                                    </div>
+                                    </label>
+                                    <hr>
+                                    <div class="ays_toggle_target ays_sccp_sub_cont_border_radius_mobile_container" style=" <?php echo ( $enable_ays_sccp_sub_cont_border_radius_mobile ) ? '' : 'display:none'; ?>">
+                                        <label>
+	                                        <div class="ays_sccp_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'secure-copy-content-protection'); ?></div>
+	                                        <div class="ays_sccp_display_flex">
+				                                <div>
+				                                   <input type="number" class="ays-text-input ays-text-input-short" id='ays_sccp_sub_cont_border_radius_mobile' data-alpha="true" name='ays_sccp_sub_cont_border_radius_mobile' value="<?php echo $ays_sccp_sub_cont_border_radius_mobile; ?>"/>
+				                                </div>
+				                                <div class="ays_sccp_dropdown_max_width">
+				                                    <input type="text" value="px" class="ays-sccp-form-hint-for-size" disabled="">
+				                                </div>
+				                            </div>
+			                            </label>
+                                    </div>
+                                    <div class="ays_sccp_mobile_settings_container">
+                                        <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_sccp_sub_cont_border_radius_mobile" name="enable_ays_sccp_sub_cont_border_radius_mobile" <?php echo $enable_ays_sccp_sub_cont_border_radius_mobile ? 'checked' : '' ?>>
+                                        <label for="enable_ays_sccp_sub_cont_border_radius_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'secure-copy-content-protection'); ?></label>
                                     </div>
                                 </div>
                             </div>

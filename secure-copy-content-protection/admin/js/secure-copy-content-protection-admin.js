@@ -474,6 +474,10 @@
             $(document).find('#ays_sccp_sub_cont_border_width').val('1').change();
             $(document).find('#ays_sccp_sub_cont_border_width_mobile').val('1').change();
             $(document).find("#enable_ays_sccp_sub_cont_border_width_mobile").prop('checked', true).change();
+            
+            $(document).find('#ays_sccp_sub_cont_border_radius').val('0').change();
+            $(document).find('#ays_sccp_sub_cont_border_radius_mobile').val('0').change();
+            $(document).find("#enable_ays_sccp_sub_cont_border_radius_mobile").prop('checked', true).change();
 
             $(document).find('#ays_sccp_sub_input_width').val('').change();
             $(document).find('#ays_sccp_sub_input_width_mobile').val('').change();

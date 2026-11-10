@@ -406,6 +406,19 @@ class Secure_Copy_Content_Protection_Public {
             $sub_cont_border_width_mobile = $sub_cont_border_width;
         }
 
+		// Container border radius
+		$sub_cont_border_radius = (isset($subscribe_settings['sub_cont_border_radius']) && $subscribe_settings['sub_cont_border_radius'] != '') ? 'border-radius: '. $subscribe_settings['sub_cont_border_radius'] .'px;': '';
+
+		// Subscribe box Enable Container border radius Mobile
+        $subscribe_settings['enable_sub_cont_border_radius_mobile'] = ( isset( $subscribe_settings['enable_sub_cont_border_radius_mobile'] ) && $subscribe_settings['enable_sub_cont_border_radius_mobile'] == 'off') ? false : true;
+        
+        // Subscribe box Container border radius Mobile
+        if ( $subscribe_settings['enable_sub_cont_border_radius_mobile'] ) {
+            $sub_cont_border_radius_mobile = ( isset( $subscribe_settings['sub_cont_border_radius_mobile'] ) && $subscribe_settings['sub_cont_border_radius_mobile'] != '' ) ?  'border-radius: '. $subscribe_settings['sub_cont_border_radius_mobile'] .'px !important;' : $sub_cont_border_radius;
+        } else {
+            $sub_cont_border_radius_mobile = $sub_cont_border_radius;
+        }
+
 		// Container input width
 		$sub_cont_input_width = (isset($subscribe_settings['sub_cont_input_width']) && $subscribe_settings['sub_cont_input_width'] != '' && $subscribe_settings['sub_cont_input_width'] != 0) ? 'max-width: '. $subscribe_settings['sub_cont_input_width'] .'px;': '';
 
@@ -504,7 +517,7 @@ class Secure_Copy_Content_Protection_Public {
             $sccp_sub_text_alignment_mobile = $sccp_sub_text_alignment;
         }
 
-		$consub_div = 'style="'.$sub_width.' '.$sub_text_color.' '.$sub_bg_color.' '.$sub_cont_border_style.' '.$sub_cont_border_width.' '.$sccp_sub_cont_border_color.' '.$sccp_sub_bg_image.' '.$sccp_sub_bg_image_position.'"';
+		$consub_div = 'style="'.$sub_width.' '.$sub_text_color.' '.$sub_bg_color.' '.$sub_cont_border_style.' '.$sub_cont_border_width.' '.$sub_cont_border_radius.' '.$sccp_sub_cont_border_color.' '.$sccp_sub_bg_image.' '.$sccp_sub_bg_image_position.'"';
 
 		$subs_to_view_header_text = isset($ays_sccp_data["subs_to_view_header_text"]) && !empty($ays_sccp_data["subs_to_view_header_text"]) ? stripslashes($ays_sccp_data["subs_to_view_header_text"]) : __('Subscribe', 'secure-copy-content-protection');
 
@@ -571,6 +584,7 @@ class Secure_Copy_Content_Protection_Public {
 					    '. $sub_bg_color_mobile .'
 					    '. $sub_bg_image_position_mobile .'
 					    '. $sub_cont_border_width_mobile .'
+					    '. $sub_cont_border_radius_mobile .'
 					    '. $sub_cont_border_style_mobile .'
 					    '. $sccp_sub_cont_border_color_mobile .'
 					}
