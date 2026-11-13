@@ -291,10 +291,113 @@ class Ays_Sccp_Data {
                 // self::ays_sccp_new_mega_bundle_message_2026($ays_sccp_ishmar);
                 // self::ays_sccp_footer_sale_banner_2026($ays_sccp_ishmar);
                 // self::ays_sccp_back_to_school_banner_2026($ays_sccp_ishmar);
-                self::ays_sccp_halloween_sale_banner_2026($ays_sccp_ishmar);
+                // self::ays_sccp_halloween_sale_banner_2026($ays_sccp_ishmar);
+                self::ays_sccp_black_friday_sale_banner_2026($ays_sccp_ishmar);
             }
         }
-    } 
+    }
+
+    // Black Friday Sale top banner
+    public static function ays_sccp_black_friday_sale_banner_2026($ishmar){
+        if($ishmar == 0 ){
+            $content = array();
+            $sccp_cta_button_link = esc_url('https://ays-pro.com/wordpress/secure-copy-content-protection/?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=black-friday-sale-banner-' . SCCP_NAME_VERSION);
+            $sccp_coupon_code = 'BLACKFRIDAY33';
+            $content[] = '<div id="ays-sccp-black-friday-sale-banner-2026" class="ays-sccp-black-friday-sale-banner-2026 ays-sccp-admin-notice notice notice-success is-dismissible ays_sccp_dicount_info" role="region" aria-label="'. esc_attr__('Black Friday offer', 'secure-copy-content-protection') .'">';
+                $content[] = '<div class="ays-sccp-black-friday-sale-decor" aria-hidden="true">';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-blob ays-sccp-black-friday-sale-blob-dark ays-sccp-black-friday-sale-blob-l3"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-blob ays-sccp-black-friday-sale-blob-gold ays-sccp-black-friday-sale-blob-l1"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-blob ays-sccp-black-friday-sale-blob-gold ays-sccp-black-friday-sale-blob-l2"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-lines ays-sccp-black-friday-sale-lines-a"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-dots ays-sccp-black-friday-sale-dots-a"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-blob ays-sccp-black-friday-sale-blob-dark ays-sccp-black-friday-sale-blob-r2"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-blob ays-sccp-black-friday-sale-blob-gold ays-sccp-black-friday-sale-blob-r1"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-blob ays-sccp-black-friday-sale-blob-gold ays-sccp-black-friday-sale-blob-r3"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-lines ays-sccp-black-friday-sale-lines-b"></span>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-dots ays-sccp-black-friday-sale-dots-b"></span>';
+                $content[] = '</div>';
+                $content[] = '<div class="ays-sccp-black-friday-sale-content">';
+                    $content[] = '<p class="ays-sccp-black-friday-sale-headline"><a href="'. esc_url($sccp_cta_button_link) .'" class="ays-sccp-black-friday-sale-headline-link" target="_blank" rel="noopener noreferrer">'. esc_html__('Black Friday', 'secure-copy-content-protection') .'</a></p>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-divider" aria-hidden="true"></span>';
+                    $content[] = '<p class="ays-sccp-black-friday-sale-discount">'. esc_html__('33% OFF', 'secure-copy-content-protection') .'</p>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-divider" aria-hidden="true"></span>';
+                    $content[] = '<div class="ays-sccp-black-friday-sale-code">';
+                        $content[] = '<span class="ays-sccp-black-friday-sale-code-label">'. esc_html__('Use code:', 'secure-copy-content-protection') .'</span>';
+                        /* translators: %s: coupon code */
+                        $content[] = '<button type="button" class="ays-sccp-black-friday-sale-coupon" data-coupon="'. esc_attr($sccp_coupon_code) .'" title="'. esc_attr__('Click to copy', 'secure-copy-content-protection') .'" aria-label="'. esc_attr( sprintf( __('Copy coupon code %s', 'secure-copy-content-protection'), $sccp_coupon_code ) ) .'"><span class="ays-sccp-black-friday-sale-coupon-code">'. esc_html($sccp_coupon_code) .'</span><svg class="ays-sccp-black-friday-sale-copy-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>';
+                    $content[] = '</div>';
+                    $content[] = '<span class="ays-sccp-black-friday-sale-divider" aria-hidden="true"></span>';
+                    $content[] = '<a href="'. esc_url($sccp_cta_button_link) .'" class="ays-sccp-black-friday-sale-cta" target="_blank" rel="noopener noreferrer">'. esc_html__('Get the Deal', 'secure-copy-content-protection') .'</a>';
+                $content[] = '</div>';
+                $content[] = '<div class="ays-sccp-black-friday-sale-dismiss"><form action="" method="POST"><div id="ays-sccp-dismiss-buttons-content">';
+                    if( current_user_can( 'manage_options' ) ){
+                        $content[] = '<button class="btn btn-link ays-button" name="ays_sccp_sale_btn">'. esc_html__('Dismiss ad', 'secure-copy-content-protection') .'</button>';
+                        $content[] = wp_nonce_field( SCCP_NAME . '-sale-banner', SCCP_NAME . '-sale-banner', true, false );
+                    }
+                $content[] = '</div></form></div>';
+            $content[] = '</div>';
+            $content[] = '<style id="ays-sccp-black-friday-sale-banner-2026-inline-css">';
+            $content[] = '#ays-sccp-black-friday-sale-banner-2026{box-sizing:border-box;position:relative;isolation:isolate;width:100%;max-width:none;height:114px;margin:20px 20px 16px 0;padding:0 30px 0 110px;overflow:hidden;border:0;border-radius:10px;background:radial-gradient(260px 120px at 50% 50%,rgba(255,255,255,0.04),transparent 70%),linear-gradient(90deg,#121212 0%,#1c1c1c 50%,#141414 100%);box-shadow:inset 0 1px rgba(255,255,255,0.06);color:#fff;font-family:Montserrat,"Segoe UI",Arial,sans-serif}.ays-sccp-black-friday-sale-decor{position:absolute;inset:0;z-index:0;pointer-events:none}.ays-sccp-black-friday-sale-blob{position:absolute;display:block;border-radius:50%}.ays-sccp-black-friday-sale-blob-gold{background:radial-gradient(circle at 35% 30%,#ffd84d 0%,#ffc21a 45%,#f0a000 100%)}.ays-sccp-black-friday-sale-blob-dark{background:#2a2a2a}.ays-sccp-black-friday-sale-blob-l1{top:-24px;left:-82px;width:152px;height:162px}.ays-sccp-black-friday-sale-blob-l2{bottom:-30px;left:40px;width:56px;height:56px}.ays-sccp-black-friday-sale-blob-l3{top:-72px;left:58px;width:126px;height:126px}.ays-sccp-black-friday-sale-blob-r1{top:-64px;right:-54px;width:128px;height:128px}.ays-sccp-black-friday-sale-blob-r2{right:-24px;bottom:-66px;width:116px;height:116px}.ays-sccp-black-friday-sale-blob-r3{top:9px;right:330px;width:17px;height:17px;box-shadow:0 0 10px rgba(255,194,26,0.45)}.ays-sccp-black-friday-sale-lines{position:absolute;display:block;background:repeating-linear-gradient(135deg,rgba(255,255,255,0.14) 0 1px,transparent 1px 7px)}.ays-sccp-black-friday-sale-lines-a{top:0;left:300px;width:142px;height:52px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent)}.ays-sccp-black-friday-sale-lines-b{right:466px;bottom:0;width:132px;height:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent)}.ays-sccp-black-friday-sale-dots{position:absolute;display:block;background-image:radial-gradient(circle,rgba(255,255,255,0.2) 1px,transparent 1.5px);background-size:9px 9px}.ays-sccp-black-friday-sale-dots-a{top:2px;left:512px;width:116px;height:20px}.ays-sccp-black-friday-sale-dots-b{right:346px;bottom:2px;width:120px;height:20px}.ays-sccp-black-friday-sale-content{position:relative;z-index:2;display:flex;width:100%;height:114px;align-items:center;justify-content:space-between;gap:16px}#ays-sccp-black-friday-sale-banner-2026 .ays-sccp-black-friday-sale-headline{margin:0!important;padding:0!important;color:#fff!important;font-family:Montserrat,"Segoe UI",Arial,sans-serif;font-size:28px!important;font-weight:800;line-height:1.1!important;letter-spacing:3px;text-transform:uppercase;white-space:nowrap}.ays-sccp-black-friday-sale-headline-link{color:inherit!important;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;letter-spacing:inherit;text-decoration:none!important;box-shadow:none!important}.ays-sccp-black-friday-sale-headline-link:hover,.ays-sccp-black-friday-sale-headline-link:focus{color:#ffc21a!important}.ays-sccp-black-friday-sale-divider{display:block;width:2px;height:54px;flex:0 0 auto;border-radius:2px;background:linear-gradient(180deg,#ffd84d,#f0a000)}#ays-sccp-black-friday-sale-banner-2026 .ays-sccp-black-friday-sale-discount{margin:0!important;padding:0!important;background:linear-gradient(180deg,#ffe066 0%,#ffc21a 45%,#e89400 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;font-family:"Bebas Neue",Oswald,Impact,"Arial Narrow",sans-serif;font-size:66px!important;font-weight:400;line-height:1!important;letter-spacing:1px;white-space:nowrap;filter:drop-shadow(0 0 12px rgba(255,178,0,0.45))}.ays-sccp-black-friday-sale-code{display:flex;flex:0 0 auto;align-items:center;gap:10px}.ays-sccp-black-friday-sale-code-label{color:#d8d8d8;font-size:14px;font-weight:600;white-space:nowrap}.ays-sccp-black-friday-sale-coupon{box-sizing:border-box;display:inline-flex;height:42px;align-items:center;gap:9px;padding:0 14px 0 18px;border:2px dashed #f5b400;border-radius:3px;background:transparent;color:#ffc21a;font-family:Montserrat,"Segoe UI",Arial,sans-serif;font-size:15px;font-weight:800;letter-spacing:1.6px;cursor:pointer;transition:background-color 150ms,border-color 150ms}.ays-sccp-black-friday-sale-coupon:hover,.ays-sccp-black-friday-sale-coupon:focus{border-color:#ffd84d;background:rgba(255,194,26,0.08);color:#ffd84d}.ays-sccp-black-friday-sale-coupon:active{transform:translateY(1px)}.ays-sccp-black-friday-sale-copy-icon{width:16px;height:16px;flex:0 0 auto;opacity:0.85;transition:opacity 150ms}.ays-sccp-black-friday-sale-coupon:hover .ays-sccp-black-friday-sale-copy-icon,.ays-sccp-black-friday-sale-coupon:focus .ays-sccp-black-friday-sale-copy-icon{opacity:1}.ays-sccp-black-friday-sale-cta{display:inline-flex;height:44px;flex:0 0 auto;align-items:center;justify-content:center;padding:0 28px;border:0;border-radius:999px;background:linear-gradient(180deg,#ffd84d 0%,#ffc21a 50%,#f5a800 100%);box-shadow:inset 0 1px rgba(255,255,255,0.5),0 0 18px rgba(255,186,0,0.35);color:#161616!important;font-family:Montserrat,"Segoe UI",Arial,sans-serif;font-size:16px;font-weight:800;text-decoration:none!important;white-space:nowrap;transition:transform 120ms,filter 150ms,box-shadow 150ms}.ays-sccp-black-friday-sale-cta:hover,.ays-sccp-black-friday-sale-cta:focus{border-radius:999px!important;color:#161616!important;filter:brightness(1.06);box-shadow:inset 0 1px rgba(255,255,255,0.5),0 0 24px rgba(255,186,0,0.5)}.ays-sccp-black-friday-sale-cta:active{border-radius:999px!important;transform:translateY(2px)}.ays-sccp-black-friday-sale-coupon:focus-visible,.ays-sccp-black-friday-sale-cta:focus-visible,.ays-sccp-black-friday-sale-headline-link:focus-visible{outline:3px solid #fff;outline-offset:3px}#ays-sccp-black-friday-sale-banner-2026 .notice-dismiss{top:1px;right:1px;z-index:3;color:#fff}#ays-sccp-black-friday-sale-banner-2026 .notice-dismiss:before{color:#1a1a1a!important;font-size:18px}.ays-sccp-black-friday-sale-dismiss{position:absolute;right:34px;bottom:0;z-index:3}.ays-sccp-black-friday-sale-dismiss form{margin:0}.ays-sccp-black-friday-sale-dismiss #ays-sccp-dismiss-buttons-content .ays-button{height:22px!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:rgba(255,255,255,0.6)!important;font-size:10px!important;line-height:22px!important;text-decoration:underline;box-shadow:none!important}.ays-sccp-black-friday-sale-copy-notification{position:fixed;top:50%;left:50%;z-index:10000;padding:12px 24px;border-radius:8px;background:rgba(0,0,0,0.82);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;opacity:0;transform:translate(-50%,-50%);transition:opacity 250ms}.ays-sccp-black-friday-sale-copy-notification.ays-sccp-black-friday-sale-show{opacity:1}@media screen and (max-width:1500px){#ays-sccp-black-friday-sale-banner-2026 .ays-sccp-black-friday-sale-headline{font-size:24px!important;letter-spacing:2px}#ays-sccp-black-friday-sale-banner-2026 .ays-sccp-black-friday-sale-discount{font-size:58px!important}.ays-sccp-black-friday-sale-blob-r3,.ays-sccp-black-friday-sale-lines-b,.ays-sccp-black-friday-sale-dots-b{display:none}}@media screen and (max-width:1280px){#ays-sccp-black-friday-sale-banner-2026{padding-left:96px}#ays-sccp-black-friday-sale-banner-2026 .ays-sccp-black-friday-sale-headline{font-size:20px!important;letter-spacing:1.5px}#ays-sccp-black-friday-sale-banner-2026 .ays-sccp-black-friday-sale-discount{font-size:50px!important}.ays-sccp-black-friday-sale-code-label{display:none}.ays-sccp-black-friday-sale-coupon{gap:7px;padding:0 10px 0 12px;font-size:14px}.ays-sccp-black-friday-sale-copy-icon{width:14px;height:14px}.ays-sccp-black-friday-sale-cta{padding:0 18px;font-size:15px}.ays-sccp-black-friday-sale-lines-a,.ays-sccp-black-friday-sale-dots-a{display:none}}@media screen and (max-width:1024px){#ays-sccp-black-friday-sale-banner-2026{display:none!important}}';
+            $content[] = '</style>';
+            $content[] = '<script>
+                (function() {
+                    "use strict";
+                    function initBlackFridaySaleBanner() {
+                        var banner = document.getElementById("ays-sccp-black-friday-sale-banner-2026");
+                        if (!banner) {
+                            return;
+                        }
+                        var couponButton = banner.querySelector(".ays-sccp-black-friday-sale-coupon");
+                        if (!couponButton) {
+                            return;
+                        }
+                        couponButton.addEventListener("click", function() {
+                            var couponCode = couponButton.getAttribute("data-coupon");
+                            var textarea = document.createElement("textarea");
+                            textarea.value = couponCode;
+                            textarea.style.position = "fixed";
+                            textarea.style.opacity = "0";
+                            document.body.appendChild(textarea);
+                            textarea.focus();
+                            textarea.select();
+                            try {
+                                document.execCommand("copy");
+                                showCopyNotification();
+                            } catch (error) {
+                                // Keep the banner usable when clipboard access is unavailable.
+                            }
+                            document.body.removeChild(textarea);
+                        });
+                    }
+                    function showCopyNotification() {
+                        var notification = document.createElement("div");
+                        notification.className = "ays-sccp-black-friday-sale-copy-notification";
+                        notification.setAttribute("role", "status");
+                        notification.setAttribute("aria-live", "polite");
+                        notification.textContent = "'. esc_js(__('Coupon code copied', 'secure-copy-content-protection')) .'";
+                        document.body.appendChild(notification);
+                        setTimeout(function() {
+                            notification.classList.add("ays-sccp-black-friday-sale-show");
+                        }, 10);
+                        setTimeout(function() {
+                            notification.classList.remove("ays-sccp-black-friday-sale-show");
+                            setTimeout(function() {
+                                if (notification.parentNode) {
+                                    notification.parentNode.removeChild(notification);
+                                }
+                            }, 250);
+                        }, 2000);
+                    }
+                    if (document.readyState === "loading") {
+                        document.addEventListener("DOMContentLoaded", initBlackFridaySaleBanner);
+                    } else {
+                        initBlackFridaySaleBanner();
+                    }
+                })();
+            </script>';
+            echo implode('', $content); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static banner markup; dynamic values are escaped above.
+        }
+    }
 
     // Halloween Sale top banner
     public static function ays_sccp_halloween_sale_banner_2026($ishmar){
@@ -2481,7 +2584,7 @@ class Ays_Sccp_Data {
             $remaining_licenses = $total_licenses - $used_licenses;
             $progress_percentage = ($used_licenses / $total_licenses) * 100;
 
-            $ays_sccp_cta_button_link = esc_url('https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-maker-license-banner-' . SCCP_NAME_VERSION);
+            $ays_sccp_cta_button_link = esc_url('https://ays-pro.com/wordpress/secure-copy-content-protection?utm_source=dashboard&utm_medium=sccp-free&utm_campaign=sccp-license-banner-' . SCCP_NAME_VERSION);
 
             $content[] = '<div id="ays-sccp-progress-banner-main" class="ays-sccp-progress-banner-main ays_sccp_dicount_info ays-sccp-admin-notice notice notice-success is-dismissible" ' . $style_attr . '>';
                 $content[] = '<div class="ays-sccp-progress-banner-content">';
